@@ -1,0 +1,75 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Andrew Poelstra,apoelstra,https://github.com/apoelstra
+Author,-,Jonas Nick,jonasnick,https://github.com/jonasnick
+************************************
+event,timestamp,downloads
+Downloads,-,16208495
+************************************
+event,timestamp,total,flagged
+Side Effects,-,125,81
+************************************
+Rudra,timestamp
+"2024-06-21 17:54:29.845685 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:54:33.228618 |INFO | [rudra-progress] Running rudra for target lib:secp256k1
+2024-06-21 17:54:44.448179 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:54:44.452225 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:54:44.475045 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:54:44.475068 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:54:44.521702 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:54:44.521728 |INFO | [rudra-progress] Rudra finished
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/lib.rs:424:1: 424:49
+unsafe impl<C: Context> Send for Secp256k1<C> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/lib.rs:426:1: 426:49
+unsafe impl<C: Context> Sync for Secp256k1<C> {}
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `ecdsa::<impl Secp256k1<C>>::sign_grind_with_check`
+-> src/ecdsa/mod.rs:357:5: 391:6
+fn sign_grind_with_check(
+        &self, msg: &Message,
+        sk: &SecretKey,
+        check: impl Fn(&ffi::Signature) -> bool) -> Signature {
+            let mut entropy_p : *const ffi::types::c_void = ptr::null();
+            let mut counter : u32 = 0;
+            let mut extra_entropy = [0u8; 32];
+            loop {
+                unsafe {
+                    let mut ret = ffi::Signature::new();
+                    // We can assume the return value because it's not possible to construct
+                    // an invalid signature from a valid `Message` and `SecretKey`
+                    assert_eq!(ffi::secp256k1_ecdsa_sign(self.ctx, &mut ret, msg.as_c_ptr(),
+                                                        sk.as_c_ptr(), ffi::secp256k1_nonce_function_rfc6979,
+                                                        entropy_p), 1);
+                    if [0m[36mcheck(&ret)[0m {
+                        return Signature::from(ret);
+                    }
+
+                    counter += 1;
+                    // From 1.32 can use `to_le_bytes` instead
+                    let le_counter = counter.to_le();
+                    let le_counter_bytes : [u8; 4] = [0m[33mmem::transmute(le_counter)[0m;
+                    for (i, b) in le_counter_bytes.iter().enumerate() {
+                        extra_entropy[i] = *b;
+                    }
+
+                    entropy_p = extra_entropy.as_ptr() as *const ffi::types::c_void;
+
+                    // When fuzzing, these checks will usually spinloop forever, so just short-circuit them.
+                    #[cfg(fuzzing)]
+                    return Signature::from(ret);
+                }
+            }
+    }
+[0m
+2024-06-21 17:54:45.872867 |WARN | [cargo_rudra] Target example:sign_verify_recovery is not supported
+2024-06-21 17:54:45.872953 |WARN | [cargo_rudra] Target example:sign_verify is not supported
+2024-06-21 17:54:45.872965 |WARN | [cargo_rudra] Target example:generate_keys is not supported
+2024-06-21 17:54:45.873068 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

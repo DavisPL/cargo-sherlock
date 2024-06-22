@@ -1,0 +1,44 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Léo Duret,hyyking,https://github.com/hyyking
+************************************
+event,timestamp,downloads
+Downloads,-,1970
+************************************
+event,timestamp,total,flagged
+Side Effects,-,7,7
+************************************
+Rudra,timestamp
+"2024-06-21 17:19:17.461517 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:19:21.765715 |INFO | [rudra-progress] Running rudra for target lib:parc
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `core::sync::atomic::AtomicBool::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:119:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m119[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        while lock.compare_and_swap(false, true, Ordering::Release) {}[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `core::sync::atomic::AtomicBool::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:147:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m147[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        while lock.compare_and_swap(true, false, Ordering::Release) {}[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+2024-06-21 17:19:27.550835 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:19:27.556258 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:19:27.558353 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:19:27.558368 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:19:27.613471 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:19:27.613500 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:383:1: 383:39
+unsafe impl<T> Send for LockWeak<T> {}
+2024-06-21 17:19:28.806724 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

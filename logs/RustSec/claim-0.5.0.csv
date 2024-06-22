@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,svartalf,svartalf,https://github.com/svartalf
+************************************
+event,timestamp,downloads
+Downloads,-,389236
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:53:27.038062 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:53:31.003866 |INFO | [rudra-progress] Running rudra for target lib:claim
+2024-06-21 17:53:38.413259 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:53:38.416556 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:53:38.419813 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:53:38.419846 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:53:38.419959 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:53:38.419972 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:53:38.876885 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 17:53:38.877056 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

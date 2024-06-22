@@ -1,0 +1,25 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Kornel,kornelski,https://github.com/kornelski
+************************************
+event,timestamp,downloads
+Downloads,-,311579
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:58:18.663086 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:58:20.590797 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: no matching package named `mozjpeg-sys` found
+location searched: registry `crates-io`
+required by package `mozjpeg v0.8.17 (/tmp/rudra)`
+
+"
+************************************

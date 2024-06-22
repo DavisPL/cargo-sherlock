@@ -1,0 +1,36 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,mozilla,safe-to-deploy,0.1.44 -> 0.1.45,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.1.45 -> 0.3.17,,,
+audits,-,Critical,mozilla,safe-to-run,0.3.9 -> 0.3.17,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.3.17 -> 0.3.23,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.3.23 -> 0.3.36,,There's a bit of new unsafe code that is self-imposed because they now assert\nthat ordinals are non-zero. All unsafe code was checked to ensure that the\ninvariants claimed were true.\n,
+audits,-,Critical,zcash,safe-to-deploy,0.3.20 -> 0.3.22,,"Fixes alignment (by using `#[repr(C)]`) of some `union`s that are used in\n`unsafe` blocks to const convert between `UtcOffset`, and a trait type that is\neither `UtcOffset` or `()`.\n",
+audits,-,Critical,zcash,safe-to-deploy,0.3.30 -> 0.3.31,,Removes one `unsafe` block by repurposing a constructor containing a more\ngeneral invocation of the same `unsafe` function.\n,
+audits,-,Critical,zcash,safe-to-deploy,0.3.31 -> 0.3.36,,Some use of `unsafe` code but its safety requirements are documented and look okay.,
+************************************
+event,timestamp,name,username,url
+Author,-,Jacob Pratt,jhpratt,https://github.com/jhpratt
+************************************
+event,timestamp,downloads
+Downloads,-,252626966
+************************************
+event,timestamp,total,flagged
+Side Effects,-,32,4
+************************************
+Rudra,timestamp
+"2024-06-21 18:47:34.067475 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:47:38.446497 |INFO | [rudra-progress] Running rudra for target lib:time
+2024-06-21 18:47:56.505142 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:47:56.509498 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:47:56.509893 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:47:56.509911 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:47:56.542772 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:47:56.542802 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:47:58.327021 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 18:47:58.327559 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

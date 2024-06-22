@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,does-not-implement-crypto,,0.7.7,,
+audits,-,Critical,google,safe-to-run,,0.7.7,,
+audits,-,Critical,google,"[ ""ub-risk-1"", ""does-not-implement-crypto"",]",,0.7.8,Reviewed in CL 603523557,
+************************************
+event,timestamp,name,username,url
+Author,-,Maja Kądziołka,meithecatte,https://github.com/meithecatte
+************************************
+event,timestamp,downloads
+Downloads,-,16747929
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:46:45.911967 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:46:49.688170 |INFO | [rudra-progress] Running rudra for target lib:enumflags2
+2024-06-21 17:47:05.101073 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:47:05.105057 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:47:05.105433 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:47:05.105446 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:47:05.147847 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:47:05.147871 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:47:06.201074 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

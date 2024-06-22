@@ -1,0 +1,21 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Szymon Wieloch,szymonwieloch,https://github.com/szymonwieloch
+************************************
+event,timestamp,downloads
+Downloads,-,2311499
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:43:58.814735 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:44:01.042310 |WARN | [cargo_rudra] Target proc-macro:dlopen_derive is not supported
+2024-06-21 17:44:01.042500 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

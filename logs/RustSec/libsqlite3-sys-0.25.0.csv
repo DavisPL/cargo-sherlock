@@ -1,0 +1,32 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,mozilla,safe-to-deploy,0.25.2 -> 0.26.0,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.26.0 -> 0.27.0,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.27.0 -> 0.28.0,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Thom Chiovoloni,thomcc,https://github.com/thomcc
+Author,-,gwenn,gwenn,https://github.com/gwenn
+************************************
+event,timestamp,downloads
+Downloads,-,30700043
+************************************
+event,timestamp,total,flagged
+Side Effects,-,3,3
+************************************
+Rudra,timestamp
+"2024-06-21 16:46:57.119233 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:47:06.921445 |INFO | [rudra-progress] Running rudra for target lib:libsqlite3-sys
+2024-06-21 16:47:29.446645 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:47:29.457198 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:47:29.459219 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:47:29.459323 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:47:29.561245 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:47:29.561377 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:47:33.203359 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 16:47:33.204126 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

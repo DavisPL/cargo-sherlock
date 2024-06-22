@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tony Arcieri,tarcieri,https://github.com/tarcieri
+************************************
+event,timestamp,downloads
+Downloads,-,74435
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:11:13.682379 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:11:16.659020 |INFO | [rudra-progress] Running rudra for target lib:miscreant
+[0m[1m[38;5;9merror[0m[0m[1m: Please migrate to the `aes-siv` or `aes-gcm-siv` crates[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:1[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0mcompile_error!(""Please migrate to the `aes-siv` or `aes-gcm-siv` crates"");[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `miscreant` due to previous error
+2024-06-21 18:11:20.220505 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,61 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Dirkjan Ochtman,djc,https://github.com/djc
+Author,-,Benjamin Saunders,Ralith,https://github.com/Ralith
+************************************
+event,timestamp,downloads
+Downloads,-,6440129
+************************************
+event,timestamp,total,flagged
+Side Effects,-,83,34
+************************************
+Rudra,timestamp
+"2024-06-21 17:06:06.160548 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:06:09.987000 |INFO | [rudra-progress] Running rudra for target lib:quinn
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/connection.rs:203:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m203[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn poll(mut self: Pin<&mut Self>, cx: &mut Context) -> Poll<Self::Output> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_mut)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/endpoint.rs:136:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m136[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn poll(mut self: Pin<&mut Self>, cx: &mut Context) -> Poll<Self::Output> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/endpoint.rs:354:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m354[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn poll_next(mut self: Pin<&mut Self>, cx: &mut Context) -> Poll<Option<Self::Item>> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+
+2024-06-21 17:06:45.445341 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:06:45.449296 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:06:45.449688 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:06:45.449699 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:06:45.510233 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:06:45.510263 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:06:47.110561 |WARN | [cargo_rudra] Target example:server is not supported
+2024-06-21 17:06:47.110749 |WARN | [cargo_rudra] Target example:client is not supported
+2024-06-21 17:06:47.110928 |WARN | [cargo_rudra] Target example:insecure_connection is not supported
+2024-06-21 17:06:47.111000 |WARN | [cargo_rudra] Target example:single_socket is not supported
+2024-06-21 17:06:47.111034 |WARN | [cargo_rudra] Target example:connection is not supported
+2024-06-21 17:06:47.111038 |WARN | [cargo_rudra] Target test:many_connections is not supported
+2024-06-21 17:06:47.111044 |WARN | [cargo_rudra] Target bench:bench is not supported
+2024-06-21 17:06:47.111550 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

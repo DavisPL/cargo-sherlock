@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Konstantin V. Salikhov,Koka,https://github.com/Koka
+************************************
+event,timestamp,downloads
+Downloads,-,155876
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:00:22.970883 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:00:26.809792 |INFO | [rudra-progress] Running rudra for target lib:odbc
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 18:00:30.230850 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,zeta12ti,https://github.com/zeta12ti
+************************************
+event,timestamp,downloads
+Downloads,-,1691340
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:05:08.360349 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:05:12.031198 |INFO | [rudra-progress] Running rudra for target lib:parse_duration
+2024-06-21 17:05:28.459924 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:05:28.463856 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:05:28.464215 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:05:28.464227 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:05:28.495706 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:05:28.495730 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:05:29.513083 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

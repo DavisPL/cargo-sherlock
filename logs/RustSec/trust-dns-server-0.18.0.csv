@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Benjamin Fry,bluejekyll,https://github.com/bluejekyll
+************************************
+event,timestamp,downloads
+Downloads,-,876981
+************************************
+event,timestamp,total,flagged
+Side Effects,-,51,6
+************************************
+Rudra,timestamp
+"2024-06-21 17:36:07.120957 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:36:12.132891 |INFO | [rudra-progress] Running rudra for target lib:trust_dns_server
+[0m[0m[1m[31merror[0m[1m:[0m package `cc v1.0.99` cannot be built because it requires rustc 1.63 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:36:15.669194 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

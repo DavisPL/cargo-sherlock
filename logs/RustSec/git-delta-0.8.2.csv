@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Dan Davison,dandavison,https://github.com/dandavison
+************************************
+event,timestamp,downloads
+Downloads,-,113400
+************************************
+event,timestamp,total,flagged
+Side Effects,-,134,77
+************************************
+Rudra,timestamp
+"2024-06-21 16:59:53.917304 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:59:55.730203 |INFO | [rudra-progress] Running rudra for target bin:delta
+2024-06-21 17:00:43.579810 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:00:43.583957 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:00:43.584310 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:00:43.584319 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:00:43.649109 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:00:43.649144 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:00:43.956864 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

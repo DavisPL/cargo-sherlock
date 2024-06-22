@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jingkai Mao,kaisc,https://github.com/kaisc
+************************************
+event,timestamp,downloads
+Downloads,-,13927
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:32:18.166473 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:32:22.111770 |INFO | [rudra-progress] Running rudra for target lib:crayon
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:32:25.626457 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

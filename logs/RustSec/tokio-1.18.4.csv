@@ -1,0 +1,144 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,1.18.1 -> 1.18.4,,This looks to be a minor release primarily to fix a security-related Windows\nissue plus some reorganization around lazy initialization. Altogether nothing\namiss here.\n,
+audits,-,Critical,google,safe-to-run,,1.2.0,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,1.29.1,,
+audits,-,Critical,google,"[ ""safe-to-deploy"", ""ub-risk-2"",]",1.19.2 -> 1.20.5,,Reviewed on http://fxrev.dev/904806,
+audits,-,Critical,google,"[ ""safe-to-deploy"", ""ub-risk-2"",]",1.20.5 -> 1.25.2,,Reviewed at https://fxrev.dev/906324,
+audits,-,Critical,zcash,safe-to-deploy,1.35.0 -> 1.35.1,,,
+audits,-,Critical,zcash,safe-to-deploy,1.35.1 -> 1.37.0,,"Cursory review, but new and changed uses of `unsafe` code look fine, as far as I can see.",
+************************************
+event,timestamp,name,username,url
+Author,-,Carl Lerche,carllerche,https://github.com/carllerche
+Author,-,Alice Ryhl,Darksonn,https://github.com/Darksonn
+Author,-,Core,github:tokio-rs:core,https://github.com/tokio-rs
+************************************
+event,timestamp,downloads
+Downloads,-,191321296
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:52:24.803186 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:52:30.096724 |INFO | [rudra-progress] Running rudra for target lib:tokio
+2024-06-21 17:52:35.222744 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:52:35.226734 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:52:35.229820 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:52:35.229831 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:52:35.266424 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:52:35.266450 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:52:36.446272 |WARN | [cargo_rudra] Target test:io_chain is not supported
+2024-06-21 17:52:36.446328 |WARN | [cargo_rudra] Target test:signal_no_rt is not supported
+2024-06-21 17:52:36.446333 |WARN | [cargo_rudra] Target test:task_local is not supported
+2024-06-21 17:52:36.446336 |WARN | [cargo_rudra] Target test:signal_usr1 is not supported
+2024-06-21 17:52:36.446351 |WARN | [cargo_rudra] Target test:task_abort is not supported
+2024-06-21 17:52:36.446356 |WARN | [cargo_rudra] Target test:process_arg0 is not supported
+2024-06-21 17:52:36.446363 |WARN | [cargo_rudra] Target test:fs_link is not supported
+2024-06-21 17:52:36.446366 |WARN | [cargo_rudra] Target test:task_join_set is not supported
+2024-06-21 17:52:36.446373 |WARN | [cargo_rudra] Target test:tcp_socket is not supported
+2024-06-21 17:52:36.446376 |WARN | [cargo_rudra] Target test:time_sleep is not supported
+2024-06-21 17:52:36.446380 |WARN | [cargo_rudra] Target test:io_driver is not supported
+2024-06-21 17:52:36.446382 |WARN | [cargo_rudra] Target test:io_read_buf is not supported
+2024-06-21 17:52:36.446395 |WARN | [cargo_rudra] Target test:io_read is not supported
+2024-06-21 17:52:36.446397 |WARN | [cargo_rudra] Target test:process_issue_2174 is not supported
+2024-06-21 17:52:36.446403 |WARN | [cargo_rudra] Target test:tcp_split is not supported
+2024-06-21 17:52:36.446406 |WARN | [cargo_rudra] Target test:signal_drop_recv is not supported
+2024-06-21 17:52:36.446411 |WARN | [cargo_rudra] Target test:time_pause is not supported
+2024-06-21 17:52:36.446413 |WARN | [cargo_rudra] Target test:sync_errors is not supported
+2024-06-21 17:52:36.446415 |WARN | [cargo_rudra] Target test:tcp_accept is not supported
+2024-06-21 17:52:36.446421 |WARN | [cargo_rudra] Target test:uds_split is not supported
+2024-06-21 17:52:36.446427 |WARN | [cargo_rudra] Target test:macros_rename_test is not supported
+2024-06-21 17:52:36.446429 |WARN | [cargo_rudra] Target test:io_read_to_end is not supported
+2024-06-21 17:52:36.446431 |WARN | [cargo_rudra] Target test:task_local_set is not supported
+2024-06-21 17:52:36.446436 |WARN | [cargo_rudra] Target test:sync_semaphore_owned is not supported
+2024-06-21 17:52:36.446439 |WARN | [cargo_rudra] Target test:signal_notify_both is not supported
+2024-06-21 17:52:36.446446 |WARN | [cargo_rudra] Target test:io_driver_drop is not supported
+2024-06-21 17:52:36.446448 |WARN | [cargo_rudra] Target test:signal_ctrl_c is not supported
+2024-06-21 17:52:36.446451 |WARN | [cargo_rudra] Target test:sync_once_cell is not supported
+2024-06-21 17:52:36.446461 |WARN | [cargo_rudra] Target test:process_issue_42 is not supported
+2024-06-21 17:52:36.446463 |WARN | [cargo_rudra] Target test:io_write_int is not supported
+2024-06-21 17:52:36.446477 |WARN | [cargo_rudra] Target test:signal_drop_rt is not supported
+2024-06-21 17:52:36.446479 |WARN | [cargo_rudra] Target test:time_rt is not supported
+2024-06-21 17:52:36.446493 |WARN | [cargo_rudra] Target test:time_interval is not supported
+2024-06-21 17:52:36.446497 |WARN | [cargo_rudra] Target test:io_take is not supported
+2024-06-21 17:52:36.446499 |WARN | [cargo_rudra] Target test:tcp_connect is not supported
+2024-06-21 17:52:36.446508 |WARN | [cargo_rudra] Target test:fs_dir is not supported
+2024-06-21 17:52:36.446510 |WARN | [cargo_rudra] Target test:tcp_into_std is not supported
+2024-06-21 17:52:36.446521 |WARN | [cargo_rudra] Target test:sync_semaphore is not supported
+2024-06-21 17:52:36.446533 |WARN | [cargo_rudra] Target test:macros_select is not supported
+2024-06-21 17:52:36.446540 |WARN | [cargo_rudra] Target test:fs_copy is not supported
+2024-06-21 17:52:36.446548 |WARN | [cargo_rudra] Target test:io_write is not supported
+2024-06-21 17:52:36.446559 |WARN | [cargo_rudra] Target test:buffered is not supported
+2024-06-21 17:52:36.446567 |WARN | [cargo_rudra] Target test:no_rt is not supported
+2024-06-21 17:52:36.446575 |WARN | [cargo_rudra] Target test:sync_mutex_owned is not supported
+2024-06-21 17:52:36.446577 |WARN | [cargo_rudra] Target test:sync_mpsc is not supported
+2024-06-21 17:52:36.446582 |WARN | [cargo_rudra] Target test:net_bind_resource is not supported
+2024-06-21 17:52:36.446584 |WARN | [cargo_rudra] Target test:io_util_empty is not supported
+2024-06-21 17:52:36.446585 |WARN | [cargo_rudra] Target test:rt_common is not supported
+2024-06-21 17:52:36.446590 |WARN | [cargo_rudra] Target test:task_blocking is not supported
+2024-06-21 17:52:36.446592 |WARN | [cargo_rudra] Target test:tcp_echo is not supported
+2024-06-21 17:52:36.446594 |WARN | [cargo_rudra] Target test:rt_handle_block_on is not supported
+2024-06-21 17:52:36.446596 |WARN | [cargo_rudra] Target test:fs_file is not supported
+2024-06-21 17:52:36.446598 |WARN | [cargo_rudra] Target test:io_poll_aio is not supported
+2024-06-21 17:52:36.446600 |WARN | [cargo_rudra] Target test:sync_notify is not supported
+2024-06-21 17:52:36.446602 |WARN | [cargo_rudra] Target test:io_buf_writer is not supported
+2024-06-21 17:52:36.446606 |WARN | [cargo_rudra] Target test:time_timeout is not supported
+2024-06-21 17:52:36.446608 |WARN | [cargo_rudra] Target test:unwindsafe is not supported
+2024-06-21 17:52:36.446610 |WARN | [cargo_rudra] Target test:io_fill_buf is not supported
+2024-06-21 17:52:36.446612 |WARN | [cargo_rudra] Target test:io_write_buf is not supported
+2024-06-21 17:52:36.446614 |WARN | [cargo_rudra] Target test:io_buf_reader is not supported
+2024-06-21 17:52:36.446616 |WARN | [cargo_rudra] Target test:process_raw_handle is not supported
+2024-06-21 17:52:36.446618 |WARN | [cargo_rudra] Target test:io_copy is not supported
+2024-06-21 17:52:36.446619 |WARN | [cargo_rudra] Target test:sync_oneshot is not supported
+2024-06-21 17:52:36.446626 |WARN | [cargo_rudra] Target test:io_read_until is not supported
+2024-06-21 17:52:36.446632 |WARN | [cargo_rudra] Target test:process_kill_on_drop is not supported
+2024-06-21 17:52:36.446634 |WARN | [cargo_rudra] Target test:task_builder is not supported
+2024-06-21 17:52:36.446636 |WARN | [cargo_rudra] Target test:rt_metrics is not supported
+2024-06-21 17:52:36.446639 |WARN | [cargo_rudra] Target test:uds_stream is not supported
+2024-06-21 17:52:36.446646 |WARN | [cargo_rudra] Target test:test_clock is not supported
+2024-06-21 17:52:36.446649 |WARN | [cargo_rudra] Target test:io_write_all_buf is not supported
+2024-06-21 17:52:36.446651 |WARN | [cargo_rudra] Target test:async_send_sync is not supported
+2024-06-21 17:52:36.446653 |WARN | [cargo_rudra] Target test:io_read_exact is not supported
+2024-06-21 17:52:36.446675 |WARN | [cargo_rudra] Target test:tcp_stream is not supported
+2024-06-21 17:52:36.446678 |WARN | [cargo_rudra] Target test:sync_barrier is not supported
+2024-06-21 17:52:36.446680 |WARN | [cargo_rudra] Target test:io_read_line is not supported
+2024-06-21 17:52:36.446682 |WARN | [cargo_rudra] Target test:io_copy_bidirectional is not supported
+2024-06-21 17:52:36.446684 |WARN | [cargo_rudra] Target test:macros_try_join is not supported
+2024-06-21 17:52:36.446686 |WARN | [cargo_rudra] Target test:sync_mutex is not supported
+2024-06-21 17:52:36.446689 |WARN | [cargo_rudra] Target test:rt_threaded is not supported
+2024-06-21 17:52:36.446691 |WARN | [cargo_rudra] Target test:io_lines is not supported
+2024-06-21 17:52:36.446693 |WARN | [cargo_rudra] Target test:io_mem_stream is not supported
+2024-06-21 17:52:36.446702 |WARN | [cargo_rudra] Target test:uds_cred is not supported
+2024-06-21 17:52:36.446704 |WARN | [cargo_rudra] Target test:signal_drop_signal is not supported
+2024-06-21 17:52:36.446706 |WARN | [cargo_rudra] Target test:io_read_to_string is not supported
+2024-06-21 17:52:36.446708 |WARN | [cargo_rudra] Target test:uds_datagram is not supported
+2024-06-21 17:52:36.446710 |WARN | [cargo_rudra] Target test:fs is not supported
+2024-06-21 17:52:36.446712 |WARN | [cargo_rudra] Target test:process_smoke is not supported
+2024-06-21 17:52:36.446714 |WARN | [cargo_rudra] Target test:macros_join is not supported
+2024-06-21 17:52:36.446716 |WARN | [cargo_rudra] Target test:_require_full is not supported
+2024-06-21 17:52:36.446719 |WARN | [cargo_rudra] Target test:tcp_peek is not supported
+2024-06-21 17:52:36.446721 |WARN | [cargo_rudra] Target test:io_async_read is not supported
+2024-06-21 17:52:36.446723 |WARN | [cargo_rudra] Target test:signal_multi_rt is not supported
+2024-06-21 17:52:36.446730 |WARN | [cargo_rudra] Target test:net_lookup_host is not supported
+2024-06-21 17:52:36.446733 |WARN | [cargo_rudra] Target test:io_split is not supported
+2024-06-21 17:52:36.446735 |WARN | [cargo_rudra] Target test:macros_test is not supported
+2024-06-21 17:52:36.446737 |WARN | [cargo_rudra] Target test:rt_basic is not supported
+2024-06-21 17:52:36.446739 |WARN | [cargo_rudra] Target test:signal_twice is not supported
+2024-06-21 17:52:36.446741 |WARN | [cargo_rudra] Target test:macros_pin is not supported
+2024-06-21 17:52:36.446749 |WARN | [cargo_rudra] Target test:sync_rwlock is not supported
+2024-06-21 17:52:36.446761 |WARN | [cargo_rudra] Target test:join_handle_panic is not supported
+2024-06-21 17:52:36.446763 |WARN | [cargo_rudra] Target test:sync_broadcast is not supported
+2024-06-21 17:52:36.446765 |WARN | [cargo_rudra] Target test:named_pipe is not supported
+2024-06-21 17:52:36.446767 |WARN | [cargo_rudra] Target test:tcp_into_split is not supported
+2024-06-21 17:52:36.446770 |WARN | [cargo_rudra] Target test:sync_watch is not supported
+2024-06-21 17:52:36.446772 |WARN | [cargo_rudra] Target test:tcp_shutdown is not supported
+2024-06-21 17:52:36.446774 |WARN | [cargo_rudra] Target test:udp is not supported
+2024-06-21 17:52:36.446776 |WARN | [cargo_rudra] Target test:io_write_all is not supported
+2024-06-21 17:52:36.446778 |WARN | [cargo_rudra] Target test:io_async_fd is not supported
+2024-06-21 17:52:36.446900 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

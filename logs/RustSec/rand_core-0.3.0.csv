@@ -1,0 +1,181 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,safe-to-run,,0.6.1,,
+audits,-,Critical,google,safe-to-run,,0.6.4,,
+audits,-,Critical,isrg,safe-to-deploy,,0.6.3,,
+audits,-,Critical,isrg,safe-to-run,0.6.1 -> 0.5.1,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.6.3 -> 0.6.4,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Crichton,alexcrichton,https://github.com/alexcrichton
+Author,-,Diggory Hardy,dhardy,https://github.com/dhardy
+Author,-,maintainers,github:rust-random:maintainers,https://github.com/rust-random
+************************************
+event,timestamp,downloads
+Downloads,-,332040939
+************************************
+event,timestamp,total,flagged
+Side Effects,-,10,9
+************************************
+Rudra,timestamp
+"2024-06-21 16:42:22.119021 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:42:31.357304 |INFO | [rudra-progress] Running rudra for target lib:rand_core
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:95:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m95[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    cause: Option<Box<stdError + Send + Sync>>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn stdError + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:120:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m120[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        where E: Into<Box<stdError + Send + Sync>>[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn stdError + Send + Sync`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:137:48[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m137[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn take_cause(&mut self) -> Option<Box<stdError + Send + Sync>> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn stdError + Send + Sync`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:160:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m160[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&stdError> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn stdError`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:161:52[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m161[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.cause.as_ref().map(|e| e.as_ref() as &stdError)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                   [0m[0m[1m[33m^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn stdError`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:431:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m431[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl std::io::Read for RngCore {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn RngCore`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+2024-06-21 16:42:43.225767 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:42:43.240057 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:42:43.240767 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:42:43.240796 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:42:43.411746 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:42:43.411823 |INFO | [rudra-progress] Rudra finished
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `impls::fill_bytes_via_next`
+-> src/impls.rs:42:1: 64:2
+pub fn fill_bytes_via_next<R: RngCore + ?Sized>(rng: &mut R, dest: &mut [u8]) {
+    let mut left = dest;
+    while left.len() >= 8 {
+        let (l, r) = {left}.split_at_mut(8);
+        left = r;
+        let chunk: [u8; 8] = unsafe {
+            [0m[33mtransmute([0m[36mrng.next_u64()[0m[33m.to_le())[0m
+        };
+        l.copy_from_slice(&chunk);
+    }
+    let n = left.len();
+    if n > 4 {
+        let chunk: [u8; 8] = unsafe {
+            [0m[33mtransmute([0m[36mrng.next_u64()[0m[33m.to_le())[0m
+        };
+        left.copy_from_slice(&chunk[..n]);
+    } else if n > 0 {
+        let chunk: [u8; 4] = unsafe {
+            [0m[33mtransmute([0m[36mrng.next_u32()[0m[33m.to_le())[0m
+        };
+        left.copy_from_slice(&chunk[..n]);
+    }
+}
+[0m
+Warning (UnsafeDataflow:/CopyFlow): Potential unsafe dataflow issue in `SeedableRng::seed_from_u64`
+-> src/lib.rs:315:5: 338:6
+fn seed_from_u64(mut state: u64) -> Self {
+        // We use PCG32 to generate a u32 sequence, and copy to the seed
+        const MUL: u64 = 6364136223846793005;
+        const INC: u64 = 11634580027462260723;
+        
+        let mut seed = [0m[36mSelf::Seed::default()[0m;
+        for chunk in [0m[36mseed.as_mut()[0m.chunks_mut(4) {
+            // We advance the state first (to get away from the input value,
+            // in case it has low Hamming Weight).
+            state = state.wrapping_mul(MUL).wrapping_add(INC);
+            
+            // Use PCG output function with to_le to generate x:
+            let xorshifted = (((state >> 18) ^ state) >> 27) as u32;
+            let rot = (state >> 59) as u32;
+            let x = xorshifted.rotate_right(rot).to_le();
+            
+            unsafe {
+                let p = &x as *const u32 as *const u8;
+                [0m[31mcopy_nonoverlapping(p, chunk.as_mut_ptr(), chunk.len())[0m;
+            }
+        }
+        
+        [0m[36mSelf::from_seed(seed)[0m
+    }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `<block::BlockRng64<R> as RngCore>::fill_bytes`
+-> src/block.rs:431:5: 466:6
+fn fill_bytes(&mut self, dest: &mut [u8]) {
+        let mut filled = 0;
+        self.half_used = false;
+
+        // Continue filling from the current set of results
+        if self.index < [0m[36mself.results.as_ref()[0m.len() {
+            let (consumed_u64, filled_u8) =
+                fill_via_u64_chunks(&[0m[36mself.results.as_ref()[0m[self.index..],
+                                    dest);
+
+            self.index += consumed_u64;
+            filled += filled_u8;
+        }
+
+        let len_remainder =
+            (dest.len() - filled) % ([0m[36mself.results.as_ref()[0m.len() * 8);
+        let end_direct = dest.len() - len_remainder;
+
+        while filled < end_direct {
+            let dest_u64: &mut R::Results = unsafe {
+                [0m[33m::core::mem::transmute(dest[filled..].as_mut_ptr())[0m
+            };
+            [0m[36mself.core.generate(dest_u64)[0m;
+            filled += [0m[36mself.results.as_ref()[0m.len() * 8;
+            self.index = [0m[36mself.results.as_ref()[0m.len();
+        }
+
+        if len_remainder > 0 {
+            [0m[36mself.core.generate(&mut self.results)[0m;
+            let (consumed_u64, _) =
+                fill_via_u64_chunks(&mut [0m[36mself.results.as_ref()[0m,
+                                    &mut dest[filled..]);
+
+            self.index = consumed_u64;
+        }
+    }
+[0m
+2024-06-21 16:42:46.692509 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

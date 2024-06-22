@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ruben De Smet,rubdos,https://github.com/rubdos
+Author,-,,Raincal,https://github.com/Raincal
+Author,-,core,github:whisperfish:core,https://github.com/whisperfish
+************************************
+event,timestamp,downloads
+Downloads,-,92161
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 16:44:04.488761 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:44:12.767471 |INFO | [rudra-progress] Running rudra for target lib:blurhash
+2024-06-21 16:44:24.001115 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:44:24.008958 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:44:24.011573 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:44:24.011613 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:44:24.015560 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:44:24.015595 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:44:26.423896 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

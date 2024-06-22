@@ -1,0 +1,71 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Low,bytecode-alliance,safe-to-run,,0.9.4,"I've verified the contents of this crate and that while they contain `unsafe`\nit's exclusively around implementing atomic primitive where some `unsafe` is to\nbe expected. Otherwise this crate does not unduly access ambient capabilities\nand does what it says on the tin, providing spin-based synchronization\nprimitives.\n",
+audits,-,Low,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.9.8,,
+************************************
+event,timestamp,name,username,url
+Author,-,Mathijs van de Nes,mvdnes,https://github.com/mvdnes
+Author,-,Joshua Barretto,zesterer,https://github.com/zesterer
+************************************
+event,timestamp,downloads
+Downloads,-,158521147
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:47:36.231685 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:47:39.751568 |INFO | [rudra-progress] Running rudra for target lib:spin
+2024-06-21 17:47:45.324367 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:47:45.328232 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:47:45.350740 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:47:45.350766 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:47:45.376819 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:47:45.376840 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/rwlock.rs:114:1: 114:79
+unsafe impl<T: ?Sized + Send + Sync, R> Send for RwLockWriteGuard<'_, T, R> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/rwlock.rs:115:1: 115:79
+unsafe impl<T: ?Sized + Send + Sync, R> Sync for RwLockWriteGuard<'_, T, R> {}
+Warning (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/mutex.rs:118:1: 118:57
+unsafe impl<T: ?Sized + Send, R> Send for Mutex<T, R> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/mutex.rs:117:1: 117:57
+unsafe impl<T: ?Sized + Send, R> Sync for Mutex<T, R> {}
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/rwlock.rs:111:1: 111:58
+unsafe impl<T: ?Sized + Send, R> Send for RwLock<T, R> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/rwlock.rs:112:1: 112:65
+unsafe impl<T: ?Sized + Send + Sync, R> Sync for RwLock<T, R> {}
+Warning (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/rwlock.rs:120:1: 120:84
+unsafe impl<T: ?Sized + Send + Sync, R> Send for RwLockUpgradableGuard<'_, T, R> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/rwlock.rs:121:1: 121:84
+unsafe impl<T: ?Sized + Send + Sync, R> Sync for RwLockUpgradableGuard<'_, T, R> {}
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/mutex/spin.rs:88:1: 88:61
+unsafe impl<T: ?Sized + Send, R> Send for SpinMutex<T, R> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/mutex/spin.rs:87:1: 87:61
+unsafe impl<T: ?Sized + Send, R> Sync for SpinMutex<T, R> {}
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/once.rs:54:1: 54:47
+unsafe impl<T: Send, R> Send for Once<T, R> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/once.rs:53:1: 53:54
+unsafe impl<T: Send + Sync, R> Sync for Once<T, R> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lazy.rs:60:1: 60:67
+unsafe impl<T, F: Send> Sync for Lazy<T, F> where Once<T>: Sync {}
+2024-06-21 17:47:46.518154 |WARN | [cargo_rudra] Target example:debug is not supported
+2024-06-21 17:47:46.518225 |WARN | [cargo_rudra] Target bench:mutex is not supported
+2024-06-21 17:47:46.518347 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,70 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Casper,CasperN,https://github.com/CasperN
+Author,-,Robert Winslow,rw,https://github.com/rw
+Author,-,Derek Bailey,dbaileychess,https://github.com/dbaileychess
+Author,-,Rust-publish,github:flatbuffers:rust-publish,https://github.com/flatbuffers
+************************************
+event,timestamp,downloads
+Downloads,-,11919963
+************************************
+event,timestamp,total,flagged
+Side Effects,-,38,38
+************************************
+Rudra,timestamp
+"2024-06-21 16:11:00.312814 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:11:03.735872 |INFO | [rudra-progress] Running rudra for target lib:flatbuffers
+2024-06-21 16:11:20.779839 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:11:20.784562 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:11:20.785207 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:11:20.785239 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:11:20.845038 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:11:20.845075 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/CopyFlow): Potential unsafe dataflow issue in `array::emplace_scalar_array`
+-> src/array.rs:91:1: 108:2
+pub fn emplace_scalar_array<T: EndianScalar, const N: usize>(
+    buf: &mut [u8],
+    loc: usize,
+    src: &[T; N],
+) {
+    let mut buf_ptr = buf[loc..].as_mut_ptr();
+    for item in src.iter() {
+        let item_le = [0m[36mitem.to_little_endian()[0m;
+        unsafe {
+            [0m[31mcore::ptr::copy_nonoverlapping(
+                &item_le as *const T as *const u8,
+                buf_ptr,
+                size_of::<T>(),
+            )[0m;
+            buf_ptr = buf_ptr.add(size_of::<T>());
+        }
+    }
+}
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `array::array_init`
+-> src/array.rs:120:1: 135:2
+pub fn array_init<F, T, const N: usize>(mut initializer: F) -> [T; N]
+where
+    F: FnMut(usize) -> T,
+{
+    let mut array: core::mem::MaybeUninit<[T; N]> = core::mem::MaybeUninit::uninit();
+    let mut ptr_i = array.as_mut_ptr() as *mut T;
+
+    unsafe {
+        for i in 0..N {
+            let value_i = [0m[36minitializer(i)[0m;
+            [0m[33mptr_i.write(value_i)[0m;
+            ptr_i = ptr_i.add(1);
+        }
+        array.assume_init()
+    }
+}
+[0m
+2024-06-21 16:11:22.376904 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

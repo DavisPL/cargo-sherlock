@@ -1,0 +1,25 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Steven Allen,Stebalien,https://github.com/Stebalien
+Author,-,Friedel Ziegelmayer,dignifiedquire,https://github.com/dignifiedquire
+Author,-,Volker Mische,vmx,https://github.com/vmx
+Author,-,Max Inden,mxinden,https://github.com/mxinden
+************************************
+event,timestamp,downloads
+Downloads,-,11526347
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:29:02.796275 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:29:06.336265 |INFO | [rudra-progress] Running rudra for target lib:multihash
+[0m[0m[1m[31merror[0m[1m:[0m package `byteorder v1.5.0` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:29:09.869223 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

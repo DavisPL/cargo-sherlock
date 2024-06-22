@@ -1,0 +1,23 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Crichton,alexcrichton,https://github.com/alexcrichton
+Author,-,Carl Lerche,carllerche,https://github.com/carllerche
+************************************
+event,timestamp,downloads
+Downloads,-,1516103
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:04:29.850380 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:04:33.950465 |INFO | [rudra-progress] Running rudra for target lib:tokio-proto
+[0m[0m[1m[31merror[0m[1m:[0m package `byteorder v1.5.0` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 18:04:37.495889 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

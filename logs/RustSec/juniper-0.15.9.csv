@@ -1,0 +1,25 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Magnus Hallin,mhallin,https://github.com/mhallin
+Author,-,Christoph Herzog,theduke,https://github.com/theduke
+Author,-,Christian Legnitto,LegNeato,https://github.com/LegNeato
+Author,-,Kai Ren,tyranron,https://github.com/tyranron
+************************************
+event,timestamp,downloads
+Downloads,-,1541917
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:57:46.717120 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:57:59.138670 |INFO | [rudra-progress] Running rudra for target lib:juniper
+[0m[0m[1m[31merror[0m[1m:[0m package `byteorder v1.5.0` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:58:10.865367 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

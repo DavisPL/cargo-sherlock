@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Chris Morgan,chris-morgan,https://github.com/chris-morgan
+************************************
+event,timestamp,downloads
+Downloads,-,806541
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:10:14.699202 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:10:17.682947 |INFO | [rudra-progress] Running rudra for target lib:mopa
+2024-06-21 18:10:21.585623 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:10:21.589447 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:10:21.589799 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:10:21.589808 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:10:21.610240 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:10:21.610260 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:10:22.320597 |WARN | [cargo_rudra] Target example:no_std is not supported
+2024-06-21 18:10:22.320646 |WARN | [cargo_rudra] Target example:simple is not supported
+2024-06-21 18:10:22.320652 |WARN | [cargo_rudra] Target example:no_std_or_alloc is not supported
+2024-06-21 18:10:22.320772 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,39 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,0.7.1 -> 0.8.0,,"This was a small update to the crate which has to do with Rust language features and compiler versions, no substantial changes.",
+audits,-,Critical,bytecode-alliance,safe-to-deploy,0.8.0 -> 0.9.0,,"No major changes in the crate, mostly updates to use new nightly Rust features.",
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.6.5,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",0.6.5 -> 0.7.1,,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",0.7.1 -> 0.8.0,,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",0.8.0 -> 0.9.0,,,
+audits,-,Critical,google,ub-risk-3,,0.9.0,Reviewed in CL 555491937,
+audits,-,Critical,mozilla,safe-to-deploy,0.6.5 -> 0.7.1,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.8.0 -> 0.9.0,,,
+audits,-,Critical,zcash,safe-to-deploy,0.8.0 -> 0.9.0,,Refactors the `offset_of` macros to optionally replace their existing `unsafe`\nimplementations with the unstable internal `core::mem::offset_of` macro. The\nexisting `unsafe` implementations are unaltered.\n,
+************************************
+event,timestamp,name,username,url
+Author,-,Gilad Naaman,Gilnaa,https://github.com/Gilnaa
+Author,-,Ralf Jung,RalfJung,https://github.com/RalfJung
+************************************
+event,timestamp,downloads
+Downloads,-,206423829
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:32:28.582304 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:32:31.901923 |INFO | [rudra-progress] Running rudra for target lib:memoffset
+2024-06-21 17:32:39.958761 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:32:39.962110 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:32:39.965246 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:32:39.965271 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:32:39.965532 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:32:39.965541 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:32:40.409283 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 17:32:40.409416 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

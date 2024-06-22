@@ -1,0 +1,24 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,mozilla,safe-to-deploy,,0.11.1,,
+audits,-,Critical,mozilla,safe-to-deploy,0.11.1 -> 0.11.2,,,
+************************************
+event,timestamp,name,username,url
+Author,-,,pyfisch,https://github.com/pyfisch
+************************************
+event,timestamp,downloads
+Downloads,-,30844327
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:33:40.640829 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:33:43.955671 |INFO | [rudra-progress] Running rudra for target lib:serde_cbor
+[0m[0m[1m[31merror[0m[1m:[0m package `byteorder v1.5.0` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:33:47.257740 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

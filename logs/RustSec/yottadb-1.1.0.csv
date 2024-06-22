@@ -1,0 +1,51 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,jyn,jyn514,https://github.com/jyn514
+Author,-,K.S. Bhaskar,ksbhaskar,https://github.com/ksbhaskar
+Author,-,Narayanan Iyer,nars1,https://github.com/nars1
+Author,-,Sam Habiel,shabiel,https://github.com/shabiel
+************************************
+event,timestamp,downloads
+Downloads,-,5020
+************************************
+event,timestamp,total,flagged
+Side Effects,-,58,36
+************************************
+Rudra,timestamp
+"2024-06-21 16:15:09.993617 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:15:13.603405 |INFO | [rudra-progress] Running rudra for target lib:yottadb
+[0m[0m[1m[31merror[0m[1m:[0m failed to run custom build command for `yottadb v1.1.0 (/tmp/rudra)`
+
+Caused by:
+  process didn't exit successfully: `/tmp/rudra/target/debug/build/yottadb-bcb2adb3e2af61ef/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-env-changed=YOTTADB_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=YOTTADB_STATIC
+  cargo:rerun-if-env-changed=YOTTADB_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+
+  --- stderr
+  thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Failure { command: ""\""pkg-config\"" \""--libs\"" \""--cflags\"" \""yottadb\"""", output: Output { status: ExitStatus(unix_wait_status(256)), stdout: """", stderr: ""Package yottadb was not found in the pkg-config search path.\nPerhaps you should add the directory containing `yottadb.pc'\nto the PKG_CONFIG_PATH environment variable\nNo package 'yottadb' found\n"" } }', build.rs:20:56
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2024-06-21 16:15:35.912943 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,189 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nikolay Volf,NikVolf,https://github.com/NikVolf
+Author,-,Core devs,github:paritytech:core-devs,https://github.com/paritytech
+************************************
+event,timestamp,downloads
+Downloads,-,682930
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 16:20:11.480107 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:20:14.889147 |INFO | [rudra-progress] Running rudra for target lib:bigint
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:146:71[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m146[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        uint_full_mul_reg!($name, $n_words, $self_expr, $other, |_, _| true);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                            [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m975[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U128, 2);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(semicolon_in_expressions_from_macros)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: macro invocations at the end of a block are treated as expressions[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: to ignore the value produced by the macro, add a semicolon after the invocation of `uint_full_mul_reg`[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `uint_full_mul_reg` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:951:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m951[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(write!(f, ""0x""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m975[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U128, 2);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:958:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m958[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                            try!(write!(f, ""{:x}"", nibble));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m975[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U128, 2);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:146:71[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m146[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        uint_full_mul_reg!($name, $n_words, $self_expr, $other, |_, _| true);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                            [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m976[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U256, 4);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: macro invocations at the end of a block are treated as expressions[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: to ignore the value produced by the macro, add a semicolon after the invocation of `uint_full_mul_reg`[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `uint_full_mul_reg` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:951:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m951[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(write!(f, ""0x""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m976[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U256, 4);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:958:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m958[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                            try!(write!(f, ""{:x}"", nibble));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m976[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U256, 4);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:143:76[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m143[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        uint_full_mul_reg!($name, 8, $self_expr, $other, |a, b| a != 0 || b != 0);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                 [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m977[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U512, 8);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: macro invocations at the end of a block are treated as expressions[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: to ignore the value produced by the macro, add a semicolon after the invocation of `uint_full_mul_reg`[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `uint_full_mul_reg` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:951:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m951[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(write!(f, ""0x""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m977[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U512, 8);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:958:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m958[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                            try!(write!(f, ""{:x}"", nibble));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m977[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U512, 8);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:146:71[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m146[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        uint_full_mul_reg!($name, $n_words, $self_expr, $other, |_, _| true);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                            [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m984[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        U512(uint_full_mul_reg!(U256, 4, self, other))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[38;5;12m----------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `uint_full_mul_reg` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:85:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        let mut ret = unsafe { ::core::mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m975[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U128, 2);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `uint_overflowing_binop` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:85:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        let mut ret = unsafe { ::core::mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m976[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U256, 4);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `uint_overflowing_binop` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/uint.rs:85:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        let mut ret = unsafe { ::core::mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m977[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconstruct_uint!(U512, 8);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `uint_overflowing_binop` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+2024-06-21 16:20:23.103123 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:20:23.107374 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:20:23.107718 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:20:23.107731 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:20:23.166375 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:20:23.166413 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:20:24.952011 |WARN | [cargo_rudra] Target example:modular is not supported
+2024-06-21 16:20:24.952114 |WARN | [cargo_rudra] Target bench:bigint is not supported
+2024-06-21 16:20:24.952283 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

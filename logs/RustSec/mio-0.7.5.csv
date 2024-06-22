@@ -1,0 +1,43 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,0.8.6 -> 0.8.8,,Mostly OS portability updates along with some minor bugfixes.,
+audits,-,Critical,google,safe-to-run,,0.7.7,,
+audits,-,Critical,google,safe-to-run,,0.7.14,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.8.8,,
+audits,-,Critical,google,"[ ""safe-to-deploy"", ""ub-risk-2"",]",0.8.5 -> 0.8.9,,Audited at https://fxrev.dev/946305,
+audits,-,Critical,mozilla,safe-to-run,0.6.21 -> 0.6.23,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.8.0 -> 0.8.6,,,
+trusted,-,Critical,mozilla,safe-to-deploy,,,,3
+audits,-,Critical,zcash,safe-to-deploy,0.8.2 -> 0.8.4,,"Migrates from winapi to windows-sys. The changes to API usage look reasonable\nbased on what I've seen in other uses of the windows-sys crate. Unsafe code\nfalls into two categories:\n- Usage of `mem::zeroed()`, which doesn't look obviously wrong. The\n  `..unsafe { mem::zeroed() }` in `sys::unix::selector::kqueue` looks weird\n  but AFAICT is saying \""take any unspecified fields from an instance of this\n  struct that has been zero-initialized\"", which is fine for integer fields. It\n  would be nice if there was documentation to this effect (explaining why this\n  is done instead of `..Default::default()`).\n- Calls to Windows API methods. These are either pre-existing (and altered for\n  the differences in the crate abstractions), or newly added in logic that\n  appears to be copied from miow 0.3.6 (I scanned this by eye and didn't see\n  any noteworthy changes other than handling windows-sys API differences).\n",
+audits,-,Critical,zcash,safe-to-deploy,0.8.4 -> 0.8.5,,"The only unsafe changes are in epoll_create1 failure cases. Usage of epoll_create and fcntl looks fine; it is vulnerable to a race condition in multithreaded programs that fork child processes, but epoll_create1 is how you avoid this problem. See the discussion of the O_CLOEXEC flag in the open(2) man page for details.",
+audits,-,Critical,zcash,safe-to-deploy,0.8.5 -> 0.8.6,,New `unsafe` usages:\n- `NonZeroU8::new_unchecked`: I verified the constant is non-zero.\n- Additional `syscall!(close(socket))` calls before returning errors.\n,
+audits,-,Critical,zcash,safe-to-deploy,0.8.6 -> 0.8.8,,,
+audits,-,Critical,zcash,safe-to-deploy,0.8.10 -> 0.8.11,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Carl Lerche,carllerche,https://github.com/carllerche
+Author,-,mio-core,github:tokio-rs:mio-core,https://github.com/tokio-rs
+************************************
+event,timestamp,downloads
+Downloads,-,193442130
+************************************
+event,timestamp,total,flagged
+Side Effects,-,363,165
+************************************
+Rudra,timestamp
+"2024-06-21 18:45:14.053055 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:45:17.239751 |INFO | [rudra-progress] Running rudra for target lib:mio
+2024-06-21 18:45:24.602406 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:45:24.606834 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:45:24.607220 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:45:24.607235 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:45:24.635858 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:45:24.635877 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:45:25.660260 |WARN | [cargo_rudra] Target example:tcp_server is not supported
+2024-06-21 18:45:25.660333 |WARN | [cargo_rudra] Target example:udp_server is not supported
+2024-06-21 18:45:25.660440 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

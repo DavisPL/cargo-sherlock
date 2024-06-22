@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tupshin Harper,tupshin,https://github.com/tupshin
+************************************
+event,timestamp,downloads
+Downloads,-,82485
+************************************
+event,timestamp,total,flagged
+Side Effects,-,594,594
+************************************
+Rudra,timestamp
+"2024-06-21 18:18:11.828492 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:18:15.803443 |INFO | [rudra-progress] Running rudra for target lib:cassandra
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 18:18:19.300477 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

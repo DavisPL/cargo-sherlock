@@ -1,0 +1,23 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nikolay Kim,fafhrd91,https://github.com/fafhrd91
+Author,-,Core,github:actix:core,https://github.com/actix
+************************************
+event,timestamp,downloads
+Downloads,-,19969308
+************************************
+event,timestamp,total,flagged
+Side Effects,-,15,15
+************************************
+Rudra,timestamp
+"2024-06-21 16:21:04.988303 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:21:16.056098 |INFO | [rudra-progress] Running rudra for target lib:actix_utils
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:21:25.606547 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

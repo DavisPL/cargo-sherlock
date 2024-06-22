@@ -1,0 +1,32 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,6.3.0,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,6.4.1,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",6.4.1 -> 6.5.1,,,
+audits,-,Critical,mozilla,safe-to-deploy,6.1.0 -> 6.3.0,,,
+audits,-,Critical,mozilla,safe-to-deploy,6.3.0 -> 6.4.1,,,
+************************************
+event,timestamp,name,username,url
+Author,-,,dylni,https://github.com/dylni
+************************************
+event,timestamp,downloads
+Downloads,-,77131567
+************************************
+event,timestamp,total,flagged
+Side Effects,-,25,10
+************************************
+Rudra,timestamp
+"2024-06-21 17:30:47.244447 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:30:50.514369 |INFO | [rudra-progress] Running rudra for target lib:os_str_bytes
+2024-06-21 17:30:54.461313 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:30:54.465173 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:30:54.465529 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:30:54.465539 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:30:54.498341 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:30:54.498396 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:30:55.330928 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

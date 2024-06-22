@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,David Irvine,dirvine,https://github.com/dirvine
+Author,-,MaidSafe-QA,MaidSafe-QA,https://github.com/MaidSafe-QA
+************************************
+event,timestamp,downloads
+Downloads,-,75603
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:13:34.509367 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:13:36.717737 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `mpid_messaging = ""~0.2.0""`
+candidate versions found which didn't match: 0.1.0, 0.0.4, 0.0.3, ...
+location searched: crates.io index
+required by package `safe_core v0.9.0 (/tmp/rudra)`
+
+"
+************************************

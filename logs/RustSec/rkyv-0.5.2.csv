@@ -1,0 +1,121 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,David Koloski,djkoloski,https://github.com/djkoloski
+************************************
+event,timestamp,downloads
+Downloads,-,17457758
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:03:00.705308 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:03:05.274870 |INFO | [rudra-progress] Running rudra for target lib:rkyv
+[0m[1m[33mwarning[0m[0m[1m: unused attribute `inline`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/core_impl/mod.rs:497:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m497[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[inline][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_attributes)]` on by default[0m
+[0m[1m[38;5;10mnote[0m[0m: the built-in attribute `inline` will be ignored, since it's applied to the macro invocation `default`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/core_impl/mod.rs:498:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m498[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    default! {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;10m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused attribute `inline`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/core_impl/mod.rs:518:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m518[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[inline][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the built-in attribute `inline` will be ignored, since it's applied to the macro invocation `default`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/core_impl/mod.rs:519:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m519[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    default! {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;10m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused attribute `inline`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/core_impl/mod.rs:553:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m553[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[inline][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the built-in attribute `inline` will be ignored, since it's applied to the macro invocation `default`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/core_impl/mod.rs:554:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m554[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    default! {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;10m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused attribute `inline`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/core_impl/mod.rs:570:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m570[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[inline][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the built-in attribute `inline` will be ignored, since it's applied to the macro invocation `default`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/core_impl/mod.rs:571:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m571[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    default! {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;10m^^^^^^^[0m
+
+2024-06-21 17:03:23.451991 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:03:23.456117 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:03:23.456491 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:03:23.456506 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:03:23.551661 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:03:23.551702 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `core_impl::<impl Serialize<S> for [T; N]>::serialize`
+-> src/core_impl/mod.rs:420:5: 429:6
+fn serialize(&self, serializer: &mut S) -> Result<Self::Resolver, S::Error> {
+        let mut result = core::mem::MaybeUninit::<Self::Resolver>::uninit();
+        let result_ptr = result.as_mut_ptr().cast::<T::Resolver>();
+        for (i, value) in self.iter().enumerate() {
+            unsafe {
+                [0m[33mresult_ptr.add(i).write([0m[36mvalue.serialize(serializer)[0m[33m?)[0m;
+            }
+        }
+        unsafe { Ok(result.assume_init()) }
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `core_impl::<impl Archive for [T; N]>::resolve`
+-> src/core_impl/mod.rs:400:5: 414:6
+fn resolve(&self, pos: usize, resolver: Self::Resolver) -> Self::Archived {
+        let mut resolvers = core::mem::MaybeUninit::new(resolver);
+        let resolvers_ptr = resolvers.as_mut_ptr().cast::<T::Resolver>();
+        let mut result = core::mem::MaybeUninit::<Self::Archived>::uninit();
+        let result_ptr = result.as_mut_ptr().cast::<T::Archived>();
+        for (i, value) in self.iter().enumerate() {
+            unsafe {
+                [0m[33mresult_ptr.add(i).write([0m[36mvalue.resolve(
+                    pos + i * core::mem::size_of::<T::Archived>(),
+                    resolvers_ptr.add(i).read(),
+                )[0m[33m)[0m;
+            }
+        }
+        unsafe { result.assume_init() }
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `core_impl::<impl Deserialize<[T; N], D> for [<T as Archive>::Archived; N]>::deserialize`
+-> src/core_impl/mod.rs:438:5: 447:6
+fn deserialize(&self, deserializer: &mut D) -> Result<[T; N], D::Error> {
+        let mut result = core::mem::MaybeUninit::<[T; N]>::uninit();
+        let result_ptr = result.as_mut_ptr().cast::<T>();
+        for (i, value) in self.iter().enumerate() {
+            unsafe {
+                [0m[33mresult_ptr.add(i).write([0m[36mvalue.deserialize(deserializer)[0m[33m?)[0m;
+            }
+        }
+        unsafe { Ok(result.assume_init()) }
+    }
+[0m
+2024-06-21 17:03:25.526238 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 17:03:25.526538 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

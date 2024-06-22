@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,,0.100.1,,
+audits,-,Critical,bytecode-alliance,safe-to-deploy,0.100.1 -> 0.101.4,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Joe Birr-Pixton,ctz,https://github.com/ctz
+Author,-,Dirkjan Ochtman,djc,https://github.com/djc
+Author,-,publishers,github:rustls:publishers,https://github.com/rustls
+************************************
+event,timestamp,downloads
+Downloads,-,58375304
+************************************
+event,timestamp,total,flagged
+Side Effects,-,3,0
+************************************
+Rudra,timestamp
+"2024-06-21 16:46:31.650656 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:46:40.907529 |INFO | [rudra-progress] Running rudra for target lib:webpki
+[0m[0m[1m[31merror[0m[1m:[0m package `cc v1.0.99` cannot be built because it requires rustc 1.63 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:46:51.395058 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

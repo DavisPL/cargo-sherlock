@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Peter Todd,petertodd,https://github.com/petertodd
+************************************
+event,timestamp,downloads
+Downloads,-,5291
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:34:12.361799 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:34:15.740334 |INFO | [rudra-progress] Running rudra for target lib:obstack
+2024-06-21 17:34:19.819203 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:34:19.822976 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:34:19.823338 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:34:19.823355 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:34:19.876157 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:34:19.876181 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:34:20.830197 |WARN | [cargo_rudra] Target bench:bench is not supported
+2024-06-21 17:34:20.830320 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

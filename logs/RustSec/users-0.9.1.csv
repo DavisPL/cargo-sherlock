@@ -1,0 +1,60 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Benjamin Sago,ogham,https://github.com/ogham
+************************************
+event,timestamp,downloads
+Downloads,-,7478961
+************************************
+event,timestamp,total,flagged
+Side Effects,-,63,54
+************************************
+Rudra,timestamp
+"2024-06-21 17:46:02.670917 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:46:06.921477 |INFO | [rudra-progress] Running rudra for target lib:users
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/switch.rs:222:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m222[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    try!(set_effective_gid(gid));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/switch.rs:223:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m223[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    try!(set_effective_uid(uid));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trivial numeric cast: `u32` as `u32`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/base.rs:716:46[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m716[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            .filter_map(|i| get_group_by_gid(i as gid_t))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[33m^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:7:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m#![warn(trivial_casts, trivial_numeric_casts)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;10m^^^^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: cast can be replaced by coercion; this might require a temporary variable[0m
+
+2024-06-21 17:46:14.300466 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:46:14.304245 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:46:14.304609 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:46:14.304619 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:46:14.385737 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:46:14.385766 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:46:15.427073 |WARN | [cargo_rudra] Target example:os is not supported
+2024-06-21 17:46:15.427123 |WARN | [cargo_rudra] Target example:switching is not supported
+2024-06-21 17:46:15.427127 |WARN | [cargo_rudra] Target example:groups is not supported
+2024-06-21 17:46:15.427148 |WARN | [cargo_rudra] Target example:list is not supported
+2024-06-21 17:46:15.427152 |WARN | [cargo_rudra] Target example:threading is not supported
+2024-06-21 17:46:15.427160 |WARN | [cargo_rudra] Target example:example is not supported
+2024-06-21 17:46:15.427249 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

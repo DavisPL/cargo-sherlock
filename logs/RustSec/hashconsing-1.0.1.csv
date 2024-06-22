@@ -1,0 +1,33 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Adrien Champion,AdrienChampion,https://github.com/AdrienChampion
+************************************
+event,timestamp,downloads
+Downloads,-,97062
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-21 17:25:35.368306 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:25:38.501021 |INFO | [rudra-progress] Running rudra for target lib:hashconsing
+2024-06-21 17:25:43.091160 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:25:43.094928 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:25:43.099072 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:25:43.099083 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:25:43.109889 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:25:43.109901 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:355:1: 355:38
+unsafe impl<T> Send for HConsed<T> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:354:1: 354:38
+unsafe impl<T> Sync for HConsed<T> {}
+2024-06-21 17:25:44.119763 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

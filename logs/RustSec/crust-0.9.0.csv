@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,David Irvine,dirvine,https://github.com/dirvine
+************************************
+event,timestamp,downloads
+Downloads,-,213258
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:30:17.536662 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:30:19.072066 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `xml-rs = ""^0.1.25""`
+candidate versions found which didn't match: 0.8.20, 0.8.19, 0.8.18, ...
+location searched: crates.io index
+required by package `igd v0.4.2`
+    ... which satisfies dependency `igd = ""~0.4.2""` of package `nat_traversal v0.2.0`
+    ... which satisfies dependency `nat_traversal = ""~0.2.0""` of package `crust v0.9.0 (/tmp/rudra)`
+
+"
+************************************

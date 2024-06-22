@@ -1,0 +1,52 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Johann Tuffe,tafia,https://github.com/tafia
+************************************
+event,timestamp,downloads
+Downloads,-,1342503
+************************************
+event,timestamp,total,flagged
+Side Effects,-,25,18
+************************************
+Rudra,timestamp
+"2024-06-21 16:16:18.968357 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:16:22.326346 |INFO | [rudra-progress] Running rudra for target lib:calamine
+2024-06-21 16:16:40.890029 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:16:40.894035 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:16:40.894427 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:16:40.894441 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:16:40.954799 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:16:40.954830 |INFO | [rudra-progress] Rudra finished
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `cfb::Sectors::get`
+-> src/cfb.rs:243:5: 261:6
+fn get<R: Read>(&mut self, id: u32, r: &mut R) -> Result<&[u8], CfbError> {
+        let start = id as usize * self.size;
+        let end = start + self.size;
+        if end > self.data.len() {
+            let mut len = self.data.len();
+            unsafe {
+                [0m[31mself.data.set_len(end)[0m;
+            }
+            // read_exact or stop if EOF
+            while len < end {
+                let read = [0m[36mr.read(&mut self.data[len..end])[0m.map_err(CfbError::Io)?;
+                if read == 0 {
+                    return Ok(&self.data[start..len]);
+                }
+                len += read;
+            }
+        }
+        Ok(&self.data[start..end])
+    }
+[0m
+2024-06-21 16:16:42.798556 |WARN | [cargo_rudra] Target example:search_errors is not supported
+2024-06-21 16:16:42.798686 |WARN | [cargo_rudra] Target example:excel_to_csv is not supported
+2024-06-21 16:16:42.798698 |WARN | [cargo_rudra] Target bench:basic is not supported
+2024-06-21 16:16:42.798879 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

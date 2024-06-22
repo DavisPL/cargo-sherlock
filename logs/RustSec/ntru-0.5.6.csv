@@ -1,0 +1,1344 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Iban Eguia Moraza,Razican,https://github.com/Razican
+Author,-,,FractalMatt,https://github.com/FractalMatt
+************************************
+event,timestamp,downloads
+Downloads,-,49300
+************************************
+event,timestamp,total,flagged
+Side Effects,-,90,38
+************************************
+Rudra,timestamp
+"2024-06-21 17:47:13.929030 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:47:17.724187 |INFO | [rudra-progress] Running rudra for target lib:ntru
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated type alias `gcc::Config`: gcc::Config has been renamed to gcc::Build[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mbuild.rs:124:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m124[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut config = gcc::Config::new();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `gcc::Build::new`: crate has been renamed to `cc`, the `gcc` name is not maintained[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mbuild.rs:124:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m124[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut config = gcc::Config::new();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(deprecated) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:45:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![deny(deprecated, improper_ctypes, non_shorthand_field_patterns, overflowing_literals,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(forbidden_lint_groups)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(improper_ctypes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:45:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![deny(deprecated, improper_ctypes, non_shorthand_field_patterns, overflowing_literals,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(non_shorthand_field_patterns) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:45:38[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![deny(deprecated, improper_ctypes, non_shorthand_field_patterns, overflowing_literals,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: lint `plugin_as_library` has been removed: plugins have been deprecated and retired[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:46:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    plugin_as_library, private_no_mangle_fns, private_no_mangle_statics, stable_features,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:44:25[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[forbid(renamed_and_removed_lints)]` implied by `#[forbid(warnings)]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: lint `private_no_mangle_fns` has been removed: no longer a warning, `#[no_mangle]` functions always exported[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:46:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    plugin_as_library, private_no_mangle_fns, private_no_mangle_statics, stable_features,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: lint `private_no_mangle_statics` has been removed: no longer a warning, `#[no_mangle]` statics always exported[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:46:47[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    plugin_as_library, private_no_mangle_fns, private_no_mangle_statics, stable_features,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                              [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(stable_features) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:46:74[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![deny(deprecated, improper_ctypes, non_shorthand_field_patterns, overflowing_literals,[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    plugin_as_library, private_no_mangle_fns, private_no_mangle_statics, stable_features,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                         [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(unconditional_recursion) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:47:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unconditional_recursion, unknown_lints, unused, unused_allocation, unused_attributes,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(unknown_lints) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:47:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unconditional_recursion, unknown_lints, unused, unused_allocation, unused_attributes,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(unused) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:47:45[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unconditional_recursion, unknown_lints, unused, unused_allocation, unused_attributes,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(unused_comparisons) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:48:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unused_comparisons, unused_features, unused_parens, while_true)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(while_true) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:48:57[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unused_comparisons, unused_features, unused_parens, while_true)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                        [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: warn(unused_extern_crates) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:49:55[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m49[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![warn(trivial_casts, trivial_numeric_casts, unused, unused_extern_crates, unused_import_braces,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unnecessary parentheses around assigned value[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:14:31[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub const MAX_DEGREE: usize = (1499 + 1);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^[0m[0m        [0m[0m[1m[38;5;9m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:44:25[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[forbid(unused_parens)]` implied by `#[forbid(warnings)]`[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[38;5;9m- [0m[0mpub const MAX_DEGREE: usize = [0m[0m[38;5;9m([0m[0m1499 + 1[0m[0m[38;5;9m)[0m[0m;[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[38;5;10m+ [0m[0mpub const MAX_DEGREE: usize = 1499 + 1;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unnecessary parentheses around assigned value[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:16:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconst INT_POLY_SIZE: usize = ((MAX_DEGREE + 16 + 7) & 0xFFF8);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^[0m[0m                              [0m[0m[1m[38;5;9m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[38;5;9m- [0m[0mconst INT_POLY_SIZE: usize = [0m[0m[38;5;9m([0m[0m(MAX_DEGREE + 16 + 7) & 0xFFF8[0m[0m[38;5;9m)[0m[0m;[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[38;5;10m+ [0m[0mconst INT_POLY_SIZE: usize = (MAX_DEGREE + 16 + 7) & 0xFFF8;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:410:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m410[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:410:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m410[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `PartialEq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:410:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m410[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:557:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m557[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:656:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m656[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:656:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m656[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `PartialEq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:656:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m656[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:713:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m713[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:713:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m713[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `PartialEq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:713:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m713[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:758:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m758[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:758:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m758[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `PartialEq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:758:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m758[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:801:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m801[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone, Copy)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:801:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m801[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone, Copy)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `PartialEq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:801:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m801[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone, Copy)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:801:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m801[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, PartialEq, Clone, Copy)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:44:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![forbid(missing_docs, warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Copy` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::int16_t`: Use i16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:8:12[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m  [0m[0m[1m[38;5;12m| [0m[0muse libc::{int16_t, uint8_t, uint16_t};[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:45:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![deny(deprecated, improper_ctypes, non_shorthand_field_patterns, overflowing_literals,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;10m^^^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:8:21[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse libc::{int16_t, uint8_t, uint16_t};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:8:30[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse libc::{int16_t, uint8_t, uint16_t};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:24:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    n: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::int16_t`: Use i16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:26:14[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    coeffs: [int16_t; INT_POLY_SIZE],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:281:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m281[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    n: uint16_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:282:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m282[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    num_ones: uint16_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:283:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m283[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    num_neg_ones: uint16_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:284:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m284[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    ones: [uint16_t; MAX_ONES],[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:285:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m285[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    neg_ones: [uint16_t; MAX_ONES],[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:414:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m414[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    n: uint16_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:501:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m501[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    data: [uint16_t; PRIVUNION_SIZE],[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:562:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m562[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    prod_flag: uint8_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:659:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m659[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    q: uint16_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:716:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m716[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    q: uint16_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:833:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m833[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<uint8_t> for Error {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:523:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m523[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let arr: &[uint16_t; 3004] = mem::transmute(&poly);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:535:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m535[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let arr: &[uint16_t; 1001] = mem::transmute(&poly);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:834:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m834[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(error: uint8_t) -> Error {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/rand.rs:9:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse libc::{uint8_t, uint16_t, c_void};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/rand.rs:9:21[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse libc::{uint8_t, uint16_t, c_void};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/rand.rs:19:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub seed: *const uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/rand.rs:21:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub seed_len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/rand.rs:63:42[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/rand.rs:66:55[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m66[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    generate_fn: unsafe extern ""C"" fn(rand_data: *mut uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                      [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/rand.rs:67:48[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/rand.rs:69:46[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/rand.rs:71:69[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    release_fn: unsafe extern ""C"" fn(rand_ctx: *mut RandContext) -> uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                    [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rand.rs:153:82[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m153[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        ffi::ntru_rand_init_det(&mut rand_ctx, rand_gen, &seed[0], seed.len() as uint16_t)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                 [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:13:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse libc::{c_char, uint16_t, uint8_t};[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:13:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse libc::{c_char, uint16_t, uint8_t};[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:23:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    n: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:25:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    q: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:27:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    prod_flag: uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:29:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    df1: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:31:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m31[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    df2: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:33:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    df3: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:35:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    dg: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:38:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    dm0: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:40:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m40[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    db: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:42:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m42[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    c: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:44:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    min_calls_r: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:46:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    min_calls_mask: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:48:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    hash_seed: uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:50:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    oid: [uint8_t; 3],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:52:46[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    hash: unsafe extern ""C"" fn(input: *const uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:53:47[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   input_len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:54:49[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m54[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   digest: *mut uint8_t),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:56:58[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m56[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    hash_4way: unsafe extern ""C"" fn(input: *const *const uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:57:52[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m57[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   input_len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:58:59[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   digest: *mut *mut uint8_t),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:60:58[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    hash_8way: unsafe extern ""C"" fn(input: *const *const uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:61:52[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   input_len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:62:59[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   digest: *mut *mut uint8_t),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:64:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m64[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    hlen: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/encparams.rs:66:12[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m66[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pklen: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:1:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse libc::{uint16_t, int16_t, uint8_t};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::int16_t`: Use i16 instead.[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:1:22[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse libc::{uint16_t, int16_t, uint8_t};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:1:31[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse libc::{uint16_t, int16_t, uint8_t};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:12:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:18:39[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:23:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:24:37[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_encrypt(msg: *const uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:25:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        msg_len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:29:35[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        enc: *mut uint8_t)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:30:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:31:37[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m31[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_decrypt(enc: *const uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:34:35[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        dec: *mut uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:35:39[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        dec_len: *mut uint16_t)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:36:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:39:36[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_sha1(input: *const uint8_t, input_len: uint16_t, digest: *mut uint8_t);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:39:56[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_sha1(input: *const uint8_t, input_len: uint16_t, digest: *mut uint8_t);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                       [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:39:79[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_sha1(input: *const uint8_t, input_len: uint16_t, digest: *mut uint8_t);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                              [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:40:48[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m40[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_sha1_4way(input: *const *const uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:41:38[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          input_len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:42:45[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m42[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          digest: *mut *mut uint8_t);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:43:48[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_sha1_8way(input: *const *const uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:44:38[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          input_len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:45:45[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          digest: *mut *mut uint8_t);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:46:38[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_sha256(input: *const uint8_t, input_len: uint16_t, digest: *mut uint8_t);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:46:58[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_sha256(input: *const uint8_t, input_len: uint16_t, digest: *mut uint8_t);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:46:81[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_sha256(input: *const uint8_t, input_len: uint16_t, digest: *mut uint8_t);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:47:50[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_sha256_4way(input: *const *const uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:48:40[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   input_len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:49:47[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m49[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   digest: *mut *mut uint8_t);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:50:50[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_sha256_8way(input: *const *const uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:51:40[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m51[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   input_len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:52:47[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   digest: *mut *mut uint8_t);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:55:84[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m55[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_init(rand_ctx: *mut RandContext, rand_gen: *const RandGen) -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                                   [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:58:44[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   seed: *const uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:59:41[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   seed_len: uint16_t)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:60:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:61:47[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_generate(rand_data: *mut uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                              [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:62:36[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:64:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m64[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:65:61[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m65[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_release(rand_ctx: *mut RandContext) -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                            [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:82:40[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m82[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:84:57[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m84[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_devrandom_generate(rand_data: *mut uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                        [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:85:46[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:87:44[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:89:71[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m89[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_devrandom_release(rand_ctx: *mut RandContext) -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                      [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:94:41[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m94[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:96:58[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m96[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_devurandom_generate(rand_data: *mut uint8_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:97:47[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   len: uint16_t,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:99:45[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m99[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:101:72[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_devurandom_release(rand_ctx: *mut RandContext) -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                       [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:103:92[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_default_init(rand_ctx: *mut RandContext, rand_gen: *const RandGen) -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                           [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:104:55[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_default_generate(rand_data: *mut uint8_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                      [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:105:44[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m105[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   len: uint16_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:107:42[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m107[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:108:69[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m108[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_default_release(rand_ctx: *mut RandContext) -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                    [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:112:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m112[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:113:56[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m113[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_ctr_drbg_generate(rand_data: *mut uint8_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                       [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:114:45[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m114[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   len: uint16_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:116:43[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m116[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:117:70[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m117[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_ctr_drbg_release(rand_ctx: *mut RandContext) -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                     [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:120:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m120[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_rand_tern(n: uint16_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:121:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m121[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          num_ones: uint16_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:122:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m122[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          num_neg_ones: uint16_t,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:125:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m125[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:129:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m129[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          mod_mask: uint16_t)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:130:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m130[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:134:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m134[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          mod_mask: uint16_t)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:135:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m135[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:139:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m139[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          mod_mask: uint16_t)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:140:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m140[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                          -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:144:36[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m144[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                         mod_mask: uint16_t)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:145:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m145[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                         -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:148:53[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m148[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_mod_mask(p: *mut IntPoly, mod_mask: uint16_t);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                    [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::int16_t`: Use i16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:149:51[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m149[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_mult_fac(a: *mut IntPoly, factor: int16_t);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:150:54[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m150[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_mod_center(p: *mut IntPoly, modulus: uint16_t);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                     [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:152:46[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m152[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_to_arr(p: *const IntPoly, q: uint16_t, a: *mut uint8_t);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:152:64[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m152[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_to_arr(p: *const IntPoly, q: uint16_t, a: *mut uint8_t);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                               [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:153:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m153[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_from_arr(arr: *const uint8_t, n: uint16_t, q: uint16_t, p: *mut IntPoly);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:153:50[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m153[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_from_arr(arr: *const uint8_t, n: uint16_t, q: uint16_t, p: *mut IntPoly);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:153:63[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m153[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_from_arr(arr: *const uint8_t, n: uint16_t, q: uint16_t, p: *mut IntPoly);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                              [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:154:54[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m154[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_invert(a: *const PrivPoly, mod_mask: uint16_t, fq: *mut IntPoly) -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                     [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:154:85[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m154[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_invert(a: *const PrivPoly, mod_mask: uint16_t, fq: *mut IntPoly) -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                    [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:157:61[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m157[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_export_pub(key: *const PublicKey, arr: *mut uint8_t);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                            [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:158:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m158[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_import_pub(arr: *const uint8_t, key: *mut PublicKey) -> uint16_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:158:73[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m158[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_import_pub(arr: *const uint8_t, key: *mut PublicKey) -> uint16_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                        [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:160:63[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m160[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_export_priv(key: *const PrivateKey, arr: *mut uint8_t) -> uint16_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                              [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint16_t`: Use u16 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:160:75[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m160[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_export_priv(key: *const PrivateKey, arr: *mut uint8_t) -> uint16_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                          [0m[0m[1m[38;5;9m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:161:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m161[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_import_priv(arr: *const uint8_t, key: *mut PrivateKey);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated type alias `libc::uint8_t`: Use u8 instead.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ffi.rs:163:89[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m163[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn ntru_params_from_priv_key(key: *const PrivateKey, params: *mut EncParams) -> uint8_t;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                        [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+The following warnings were emitted during compilation:
+
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `ntru` due to 150 previous errors; 27 warnings emitted
+2024-06-21 17:47:32.709596 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

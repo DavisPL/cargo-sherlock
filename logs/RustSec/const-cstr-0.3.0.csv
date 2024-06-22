@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Austin Bonander,abonander,https://github.com/abonander
+************************************
+event,timestamp,downloads
+Downloads,-,1745748
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-21 17:48:43.742494 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:48:46.722556 |INFO | [rudra-progress] Running rudra for target lib:const-cstr
+2024-06-21 17:48:50.636936 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:48:50.640692 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:48:50.641027 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:48:50.641041 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:48:50.688772 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:48:50.688796 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:48:51.538885 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,169 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Friedel Ziegelmayer,dignifiedquire,https://github.com/dignifiedquire
+Author,-,Volker Mische,vmx,https://github.com/vmx
+************************************
+event,timestamp,downloads
+Downloads,-,101527
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:26:08.584394 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:26:11.823872 |INFO | [rudra-progress] Running rudra for target lib:fil-ocl
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/standard/event.rs:293:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m293[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        array = mem::uninitialized();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-21 17:26:35.109291 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:26:35.113417 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:26:35.117283 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:26:35.117297 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:26:35.200133 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:26:35.200167 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `<standard::event::EventList as std::convert::From<[E; 1]>>::from`
+-> src/standard/event.rs:1038:13: 1049:14
+fn from(events: [E; $len]) -> EventList {
+                let mut el = EventList::with_capacity(events.len());
+                for idx in 0..events.len() {
+                    let event = unsafe { [0m[31mptr::read([0m[33mevents.get_unchecked(idx)[0m[31m)[0m };
+                    el.push([0m[36mevent.into()[0m);
+                }
+                // Ownership has been unsafely transfered to the new event
+                // list without modifying the event reference count. Not
+                // forgetting the source array would cause a double drop.
+                mem::forget(events);
+                el
+            }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `<standard::event::EventList as std::convert::From<[E; 7]>>::from`
+-> src/standard/event.rs:1038:13: 1049:14
+fn from(events: [E; $len]) -> EventList {
+                let mut el = EventList::with_capacity(events.len());
+                for idx in 0..events.len() {
+                    let event = unsafe { [0m[31mptr::read([0m[33mevents.get_unchecked(idx)[0m[31m)[0m };
+                    el.push([0m[36mevent.into()[0m);
+                }
+                // Ownership has been unsafely transfered to the new event
+                // list without modifying the event reference count. Not
+                // forgetting the source array would cause a double drop.
+                mem::forget(events);
+                el
+            }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `<standard::event::EventList as std::convert::From<[E; 6]>>::from`
+-> src/standard/event.rs:1038:13: 1049:14
+fn from(events: [E; $len]) -> EventList {
+                let mut el = EventList::with_capacity(events.len());
+                for idx in 0..events.len() {
+                    let event = unsafe { [0m[31mptr::read([0m[33mevents.get_unchecked(idx)[0m[31m)[0m };
+                    el.push([0m[36mevent.into()[0m);
+                }
+                // Ownership has been unsafely transfered to the new event
+                // list without modifying the event reference count. Not
+                // forgetting the source array would cause a double drop.
+                mem::forget(events);
+                el
+            }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `<standard::event::EventList as std::convert::From<[E; 4]>>::from`
+-> src/standard/event.rs:1038:13: 1049:14
+fn from(events: [E; $len]) -> EventList {
+                let mut el = EventList::with_capacity(events.len());
+                for idx in 0..events.len() {
+                    let event = unsafe { [0m[31mptr::read([0m[33mevents.get_unchecked(idx)[0m[31m)[0m };
+                    el.push([0m[36mevent.into()[0m);
+                }
+                // Ownership has been unsafely transfered to the new event
+                // list without modifying the event reference count. Not
+                // forgetting the source array would cause a double drop.
+                mem::forget(events);
+                el
+            }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `<standard::event::EventList as std::convert::From<[E; 2]>>::from`
+-> src/standard/event.rs:1038:13: 1049:14
+fn from(events: [E; $len]) -> EventList {
+                let mut el = EventList::with_capacity(events.len());
+                for idx in 0..events.len() {
+                    let event = unsafe { [0m[31mptr::read([0m[33mevents.get_unchecked(idx)[0m[31m)[0m };
+                    el.push([0m[36mevent.into()[0m);
+                }
+                // Ownership has been unsafely transfered to the new event
+                // list without modifying the event reference count. Not
+                // forgetting the source array would cause a double drop.
+                mem::forget(events);
+                el
+            }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `<standard::event::EventList as std::convert::From<[E; 3]>>::from`
+-> src/standard/event.rs:1038:13: 1049:14
+fn from(events: [E; $len]) -> EventList {
+                let mut el = EventList::with_capacity(events.len());
+                for idx in 0..events.len() {
+                    let event = unsafe { [0m[31mptr::read([0m[33mevents.get_unchecked(idx)[0m[31m)[0m };
+                    el.push([0m[36mevent.into()[0m);
+                }
+                // Ownership has been unsafely transfered to the new event
+                // list without modifying the event reference count. Not
+                // forgetting the source array would cause a double drop.
+                mem::forget(events);
+                el
+            }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `<standard::event::EventList as std::convert::From<[E; 8]>>::from`
+-> src/standard/event.rs:1038:13: 1049:14
+fn from(events: [E; $len]) -> EventList {
+                let mut el = EventList::with_capacity(events.len());
+                for idx in 0..events.len() {
+                    let event = unsafe { [0m[31mptr::read([0m[33mevents.get_unchecked(idx)[0m[31m)[0m };
+                    el.push([0m[36mevent.into()[0m);
+                }
+                // Ownership has been unsafely transfered to the new event
+                // list without modifying the event reference count. Not
+                // forgetting the source array would cause a double drop.
+                mem::forget(events);
+                el
+            }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `<standard::event::EventList as std::convert::From<[E; 5]>>::from`
+-> src/standard/event.rs:1038:13: 1049:14
+fn from(events: [E; $len]) -> EventList {
+                let mut el = EventList::with_capacity(events.len());
+                for idx in 0..events.len() {
+                    let event = unsafe { [0m[31mptr::read([0m[33mevents.get_unchecked(idx)[0m[31m)[0m };
+                    el.push([0m[36mevent.into()[0m);
+                }
+                // Ownership has been unsafely transfered to the new event
+                // list without modifying the event reference count. Not
+                // forgetting the source array would cause a double drop.
+                mem::forget(events);
+                el
+            }
+[0m
+2024-06-21 17:26:37.452620 |WARN | [cargo_rudra] Target example:async_menagerie is not supported
+2024-06-21 17:26:37.452741 |WARN | [cargo_rudra] Target example:async_cycles is not supported
+2024-06-21 17:26:37.452753 |WARN | [cargo_rudra] Target example:device_check is not supported
+2024-06-21 17:26:37.452761 |WARN | [cargo_rudra] Target example:async_process is not supported
+2024-06-21 17:26:37.452771 |WARN | [cargo_rudra] Target example:info_core is not supported
+2024-06-21 17:26:37.452773 |WARN | [cargo_rudra] Target example:trivial is not supported
+2024-06-21 17:26:37.452775 |WARN | [cargo_rudra] Target example:img_formats is not supported
+2024-06-21 17:26:37.452777 |WARN | [cargo_rudra] Target example:timed is not supported
+2024-06-21 17:26:37.452780 |WARN | [cargo_rudra] Target example:buffer_sink is not supported
+2024-06-21 17:26:37.452799 |WARN | [cargo_rudra] Target example:event_callbacks is not supported
+2024-06-21 17:26:37.452807 |WARN | [cargo_rudra] Target example:info is not supported
+2024-06-21 17:26:37.452817 |WARN | [cargo_rudra] Target example:basics is not supported
+2024-06-21 17:26:37.452823 |WARN | [cargo_rudra] Target example:threads is not supported
+2024-06-21 17:26:37.452985 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

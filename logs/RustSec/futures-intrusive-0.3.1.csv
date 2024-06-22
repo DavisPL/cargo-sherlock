@@ -1,0 +1,77 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Matthias Einwag,Matthias247,https://github.com/Matthias247
+************************************
+event,timestamp,downloads
+Downloads,-,17228458
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:47:15.112616 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:47:18.729414 |INFO | [rudra-progress] Running rudra for target lib:futures_intrusive
+2024-06-21 18:47:27.787799 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:47:27.791729 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:47:27.813989 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:47:27.814007 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:47:27.852223 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:47:27.852243 |INFO | [rudra-progress] Rudra finished
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/channel/state_broadcast.rs:331:1: 334:2
+unsafe impl<MutexType: RawMutex + Sync, T: Send> Sync
+    for GenericStateBroadcastChannel<MutexType, T>
+{
+}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/channel/oneshot_broadcast.rs:163:1: 166:2
+unsafe impl<MutexType: RawMutex + Sync, T: Send> Sync
+    for GenericOneshotBroadcastChannel<MutexType, T>
+{
+}
+Warning (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/sync/mutex.rs:325:1: 328:2
+unsafe impl<'a, MutexType: RawMutex + Sync, T: 'a> Send
+    for GenericMutexLockFuture<'a, MutexType, T>
+{
+}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/channel/oneshot.rs:159:1: 162:2
+unsafe impl<MutexType: RawMutex + Sync, T: Send> Sync
+    for GenericOneshotChannel<MutexType, T>
+{
+}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/channel/mpmc.rs:378:1: 383:2
+unsafe impl<MutexType: RawMutex + Sync, T: Send, A> Sync
+    for GenericChannel<MutexType, T, A>
+where
+    A: RingBuf<Item = T>,
+{
+}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/sync/mutex.rs:410:1: 413:2
+unsafe impl<T: Send, MutexType: RawMutex + Sync> Sync
+    for GenericMutex<MutexType, T>
+{
+}
+2024-06-21 18:47:29.322187 |WARN | [cargo_rudra] Target example:cancellation is not supported
+2024-06-21 18:47:29.322246 |WARN | [cargo_rudra] Target example:philosophers is not supported
+2024-06-21 18:47:29.322252 |WARN | [cargo_rudra] Target test:timer is not supported
+2024-06-21 18:47:29.322267 |WARN | [cargo_rudra] Target test:semaphore is not supported
+2024-06-21 18:47:29.322270 |WARN | [cargo_rudra] Target test:manual_reset_event is not supported
+2024-06-21 18:47:29.322278 |WARN | [cargo_rudra] Target test:mutex is not supported
+2024-06-21 18:47:29.322285 |WARN | [cargo_rudra] Target test:state_broadcast_channel is not supported
+2024-06-21 18:47:29.322288 |WARN | [cargo_rudra] Target test:oneshot_channel is not supported
+2024-06-21 18:47:29.322293 |WARN | [cargo_rudra] Target test:mpmc_channel is not supported
+2024-06-21 18:47:29.322297 |WARN | [cargo_rudra] Target bench:mpmc_channel is not supported
+2024-06-21 18:47:29.322300 |WARN | [cargo_rudra] Target bench:mutex is not supported
+2024-06-21 18:47:29.322303 |WARN | [cargo_rudra] Target bench:semaphore is not supported
+2024-06-21 18:47:29.322405 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

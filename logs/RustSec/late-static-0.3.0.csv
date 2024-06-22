@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Richard Wiedenhöft,Richard-W,https://github.com/Richard-W
+************************************
+event,timestamp,downloads
+Downloads,-,6169
+************************************
+event,timestamp,total,flagged
+Side Effects,-,6,6
+************************************
+Rudra,timestamp
+"2024-06-21 17:25:15.019160 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:25:17.874046 |INFO | [rudra-progress] Running rudra for target lib:late-static
+2024-06-21 17:25:21.601060 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:25:21.604796 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:25:21.623218 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:25:21.623245 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:25:21.637257 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:25:21.637270 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:30:1: 30:61
+unsafe impl<T: Send> core::marker::Sync for LateStatic<T> {}
+2024-06-21 17:25:22.360775 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

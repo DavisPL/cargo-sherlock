@@ -1,0 +1,71 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Bennett Hardwick,bennetthardwick,https://github.com/bennetthardwick
+************************************
+event,timestamp,downloads
+Downloads,-,4274
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-21 16:14:47.649190 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:14:50.731289 |INFO | [rudra-progress] Running rudra for target lib:nano_arena
+2024-06-21 16:14:54.803970 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:14:54.807891 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:14:54.808287 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:14:54.808300 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:14:54.858540 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:14:54.858566 |INFO | [rudra-progress] Rudra finished
+Info (UnsafeDataflow:/PtrAsRef): Potential unsafe dataflow issue in `split::ArenaSplit::<'_, T, A>::split_at`
+-> src/split.rs:11:5: 31:6
+pub fn split_at<'a, I: Borrow<Idx>>(
+        &'a mut self,
+        selected: I,
+    ) -> Option<(&mut T, ArenaSplit<'a, T, Self>)> {
+        if [0m[36mselected.borrow()[0m == &self.selected {
+            None
+        } else {
+            if let Some(value) = [0m[36mself.arena.get_mut([0m[36mselected.borrow()[0m[36m)[0m {
+                Some((
+                    unsafe { [0m[33m(value as *mut T).as_mut()[0m.unwrap() },
+                    ArenaSplit {
+                        selected: [0m[36mselected.borrow()[0m.clone(),
+                        arena: self,
+                        __type: Default::default(),
+                    },
+                ))
+            } else {
+                None
+            }
+        }
+    }
+[0m
+Info (UnsafeDataflow:/PtrAsRef): Potential unsafe dataflow issue in `Arena::<T>::split_at`
+-> src/lib.rs:215:5: 231:6
+pub fn split_at<'a, I: Borrow<Idx>>(
+        &'a mut self,
+        selected: I,
+    ) -> Option<(&mut T, ArenaSplit<'a, T, Self>)> {
+        if let Some(value) = self.get_mut([0m[36mselected.borrow()[0m) {
+            Some((
+                unsafe { [0m[33m(value as *mut T).as_mut()[0m.unwrap() },
+                ArenaSplit {
+                    selected: [0m[36mselected.borrow()[0m.clone(),
+                    arena: self,
+                    __type: Default::default(),
+                },
+            ))
+        } else {
+            None
+        }
+    }
+[0m
+2024-06-21 16:14:55.899406 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

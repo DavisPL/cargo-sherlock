@@ -1,0 +1,50 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Eric Huss,ehuss,https://github.com/ehuss
+Author,-,Dylan DPC,Dylan-DPC,https://github.com/Dylan-DPC
+Author,-,,rust-lang-owner,https://github.com/rust-lang-owner
+************************************
+event,timestamp,downloads
+Downloads,-,4539708
+************************************
+event,timestamp,total,flagged
+Side Effects,-,323,70
+************************************
+Rudra,timestamp
+"2024-06-21 18:42:10.455346 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:42:14.231463 |INFO | [rudra-progress] Running rudra for target lib:mdbook
+2024-06-21 18:43:13.728752 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:43:13.733048 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:43:13.733424 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:43:13.733442 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:43:13.795209 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:43:13.795237 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:43:16.398333 |INFO | [rudra-progress] Running rudra for target bin:mdbook
+2024-06-21 18:43:29.333804 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:43:29.337926 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:43:29.338307 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:43:29.338321 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:43:29.398504 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:43:29.398539 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:43:31.911683 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:43:31.915383 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:43:31.916650 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:43:31.916662 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:43:32.071992 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:43:32.072020 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:43:32.139158 |WARN | [cargo_rudra] Target example:nop-preprocessor is not supported
+2024-06-21 18:43:32.139212 |WARN | [cargo_rudra] Target test:parse_existing_summary_files is not supported
+2024-06-21 18:43:32.139227 |WARN | [cargo_rudra] Target test:build_process is not supported
+2024-06-21 18:43:32.139231 |WARN | [cargo_rudra] Target test:testing is not supported
+2024-06-21 18:43:32.139237 |WARN | [cargo_rudra] Target test:custom_preprocessors is not supported
+2024-06-21 18:43:32.139241 |WARN | [cargo_rudra] Target test:init is not supported
+2024-06-21 18:43:32.139248 |WARN | [cargo_rudra] Target test:alternative_backends is not supported
+2024-06-21 18:43:32.139251 |WARN | [cargo_rudra] Target test:rendered_output is not supported
+2024-06-21 18:43:32.139406 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

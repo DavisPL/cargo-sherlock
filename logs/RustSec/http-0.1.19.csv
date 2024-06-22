@@ -1,0 +1,31 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,0.2.9 -> 1.0.0,,Minor changes leading up to the 1.0.0 release and nothing fundamentally new here.,
+audits,-,Critical,google,safe-to-run,,0.2.8,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.2.9,,
+audits,-,Critical,google,ub-risk-2,,1.49.0,Reviewed in CL 588379811,
+audits,-,Critical,mozilla,safe-to-run,0.2.8 -> 0.2.9,,,
+audits,-,Critical,zcash,safe-to-deploy,0.2.8 -> 0.2.9,,,
+audits,-,Critical,zcash,safe-to-deploy,0.2.11 -> 0.2.12,,,
+audits,-,Critical,zcash,safe-to-deploy,1.0.0 -> 0.2.11,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Carl Lerche,carllerche,https://github.com/carllerche
+Author,-,Sean McArthur,seanmonstar,https://github.com/seanmonstar
+************************************
+event,timestamp,downloads
+Downloads,-,159196898
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:36:18.473400 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:36:21.829960 |INFO | [rudra-progress] Running rudra for target lib:http
+[0m[0m[1m[31merror[0m[1m:[0m package `byteorder v1.5.0` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:36:25.163291 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

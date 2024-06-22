@@ -1,0 +1,34 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,,0.1.59,I also manually ran windows-bindgen and confirmed that the output matches\nthe bindings checked into the repo.\n,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.1.53,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",0.1.53 -> 0.1.56,,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",0.1.56 -> 0.1.57,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Andrew Straw,astraw,https://github.com/astraw
+Author,-,René Kijewski,Kijewski,https://github.com/Kijewski
+************************************
+event,timestamp,downloads
+Downloads,-,100337264
+************************************
+event,timestamp,total,flagged
+Side Effects,-,79,35
+************************************
+Rudra,timestamp
+"2024-06-21 17:59:14.680421 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:59:17.979283 |INFO | [rudra-progress] Running rudra for target lib:iana-time-zone
+2024-06-21 17:59:22.061044 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:59:22.064914 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:59:22.065319 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:59:22.065348 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:59:22.085897 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:59:22.085918 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:59:22.964042 |WARN | [cargo_rudra] Target example:get_timezone is not supported
+2024-06-21 17:59:22.964099 |WARN | [cargo_rudra] Target example:stress-test is not supported
+2024-06-21 17:59:22.964196 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

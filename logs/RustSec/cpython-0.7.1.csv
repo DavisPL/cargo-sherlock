@@ -1,0 +1,38 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Daniel Grunwald,dgrunwald,https://github.com/dgrunwald
+Author,-,Mark Juggurnauth-Thomas,markbt,https://github.com/markbt
+Author,-,Georges Racinet,gracinet,https://github.com/gracinet
+************************************
+event,timestamp,downloads
+Downloads,-,796855
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:41:47.776289 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:41:50.998299 |INFO | [rudra-progress] Running rudra for target lib:cpython
+2024-06-21 17:42:07.226535 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:42:07.230857 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:42:07.265829 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:42:07.265861 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:42:07.369576 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:42:07.369617 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/pythonrun.rs:167:1: 167:49
+unsafe impl<T: Send> Sync for GILProtected<T> {}
+2024-06-21 17:42:09.392367 |WARN | [cargo_rudra] Target example:hello is not supported
+2024-06-21 17:42:09.392510 |WARN | [cargo_rudra] Target test:test_class is not supported
+2024-06-21 17:42:09.392525 |WARN | [cargo_rudra] Target test:test_sharedref is not supported
+2024-06-21 17:42:09.392534 |WARN | [cargo_rudra] Target test:test_thread_exit is not supported
+2024-06-21 17:42:09.392551 |WARN | [cargo_rudra] Target test:test_function is not supported
+2024-06-21 17:42:09.392559 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 17:42:09.392743 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,41 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Low,embark-studios,safe-to-deploy,,0.4.5,No unsafe usage or ambient capabilities,
+************************************
+event,timestamp,name,username,url
+Author,-,Chen Yuheng,chyh1990,https://github.com/chyh1990
+Author,-,yaml-rust,github:dtolnay-contrib:yaml-rust,https://github.com/dtolnay-contrib
+************************************
+event,timestamp,downloads
+Downloads,-,58825730
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:38:22.932711 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:38:26.219629 |INFO | [rudra-progress] Running rudra for target lib:yaml-rust
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `marks`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:70:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    marks: Vec<Marker>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+2024-06-21 17:38:31.515932 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:38:31.519896 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:38:31.520251 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:38:31.520262 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:38:31.544508 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:38:31.544528 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:38:32.891135 |WARN | [cargo_rudra] Target example:dump_yaml is not supported
+2024-06-21 17:38:32.891184 |WARN | [cargo_rudra] Target test:test_round_trip is not supported
+2024-06-21 17:38:32.891189 |WARN | [cargo_rudra] Target test:spec_test is not supported
+2024-06-21 17:38:32.891191 |WARN | [cargo_rudra] Target test:quickcheck is not supported
+2024-06-21 17:38:32.891273 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

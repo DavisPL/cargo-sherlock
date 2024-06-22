@@ -1,0 +1,88 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Dzmitry Malyshau,kvark,https://github.com/kvark
+Author,-,Thomas Schaller,torkleyy,https://github.com/torkleyy
+Author,-,Coraline Sherratt,csherratt,https://github.com/csherratt
+************************************
+event,timestamp,downloads
+Downloads,-,812348
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:54:05.351424 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:54:08.355832 |INFO | [rudra-progress] Running rudra for target lib:atom
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicPtr::<T>::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:94:14[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m94[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            .compare_and_swap(ptr::null_mut(), new, Ordering::Release);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicPtr::<T>::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:124:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m124[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let last = self.inner.compare_and_swap(pcurrent, raw, Ordering::AcqRel);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+2024-06-21 18:54:12.289068 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:54:12.292978 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:54:12.296837 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:54:12.296849 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:54:12.330192 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:54:12.330208 |INFO | [rudra-progress] Rudra finished
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/lib.rs:154:1: 158:2
+unsafe impl<P> Send for Atom<P>
+where
+    P: IntoRawPtr + FromRawPtr,
+{
+}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/lib.rs:159:1: 163:2
+unsafe impl<P> Sync for Atom<P>
+where
+    P: IntoRawPtr + FromRawPtr,
+{
+}
+Warning (UnsafeDataflow:/ReadFlow/WriteFlow): Potential unsafe dataflow issue in `Atom::<P>::replace_and_set_next`
+-> src/lib.rs:106:5: 130:6
+pub fn replace_and_set_next(&self, mut value: P) -> bool
+    where
+        P: GetNextMut<NextPtr = Option<P>>,
+    {
+        unsafe {
+            let next = [0m[36mvalue.get_next()[0m as *mut Option<P>;
+            let raw = [0m[36mvalue.into_raw()[0m;
+            // Iff next was set to Some(P) we want to
+            // assert that it was droppeds
+            drop([0m[31mptr::read(next)[0m);
+            loop {
+                let pcurrent = self.inner.load(Ordering::Relaxed);
+                let current = if pcurrent.is_null() {
+                    None
+                } else {
+                    Some([0m[36mFromRawPtr::from_raw(pcurrent)[0m)
+                };
+                [0m[33mptr::write(next, current)[0m;
+                let last = self.inner.compare_and_swap(pcurrent, raw, Ordering::AcqRel);
+                if last == pcurrent {
+                    return last.is_null();
+                }
+            }
+        }
+    }
+[0m
+2024-06-21 18:54:13.232713 |WARN | [cargo_rudra] Target example:fifo is not supported
+2024-06-21 18:54:13.232757 |WARN | [cargo_rudra] Target example:simple is not supported
+2024-06-21 18:54:13.232769 |WARN | [cargo_rudra] Target test:atom is not supported
+2024-06-21 18:54:13.232884 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

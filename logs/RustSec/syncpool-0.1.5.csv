@@ -1,0 +1,41 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jacob Zuo,Chopinsky,https://github.com/Chopinsky
+************************************
+event,timestamp,downloads
+Downloads,-,6243
+************************************
+event,timestamp,total,flagged
+Side Effects,-,21,12
+************************************
+Rudra,timestamp
+"2024-06-21 17:08:25.958952 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:08:28.876798 |INFO | [rudra-progress] Running rudra for target lib:syncpool
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/utils.rs:26:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        atomic::spin_loop_hint()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-21 17:08:32.892880 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:08:32.896744 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:08:32.898209 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:08:32.898222 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:08:32.922222 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:08:32.922243 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/bucket.rs:334:1: 334:38
+unsafe impl<T> Send for Bucket2<T> {}
+2024-06-21 17:08:33.925919 |WARN | [cargo_rudra] Target example:complex_bench is not supported
+2024-06-21 17:08:33.925957 |WARN | [cargo_rudra] Target example:with_tools is not supported
+2024-06-21 17:08:33.925962 |WARN | [cargo_rudra] Target example:basic is not supported
+2024-06-21 17:08:33.926073 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

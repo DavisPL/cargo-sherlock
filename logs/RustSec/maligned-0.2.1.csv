@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tyler Hawkes,tylerhawkes,https://github.com/tylerhawkes
+************************************
+event,timestamp,downloads
+Downloads,-,43610
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:51:38.174214 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:51:41.240830 |INFO | [rudra-progress] Running rudra for target lib:maligned
+2024-06-21 17:51:45.515957 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:51:45.519931 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:51:45.520282 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:51:45.520293 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:51:45.563410 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:51:45.563434 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:51:46.690059 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Xudong Huang,Xudong-Huang,https://github.com/Xudong-Huang
+************************************
+event,timestamp,downloads
+Downloads,-,33265
+************************************
+event,timestamp,total,flagged
+Side Effects,-,192,192
+************************************
+Rudra,timestamp
+"2024-06-21 18:40:09.542944 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:40:14.224737 |INFO | [rudra-progress] Running rudra for target lib:may_queue
+[0m[0m[1m[31merror[0m[1m:[0m package `crossbeam-epoch v0.9.18` cannot be built because it requires rustc 1.61 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 18:40:17.599192 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

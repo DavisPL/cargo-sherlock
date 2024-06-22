@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Artyom Pavlov,newpavlov,https://github.com/newpavlov
+Author,-,traits,github:rustcrypto:traits,https://github.com/rustcrypto
+************************************
+event,timestamp,downloads
+Downloads,-,2045093
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:18:37.259670 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:18:40.282769 |INFO | [rudra-progress] Running rudra for target lib:block-cipher-trait
+[0m[1m[38;5;9merror[0m[0m[1m: Please migrate to the `cipher` crate[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:1[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0mcompile_error!(""Please migrate to the `cipher` crate"");[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `block-cipher-trait` due to previous error
+2024-06-21 18:18:43.925084 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.23.14,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",0.23.14 -> 0.24.8,,,
+audits,-,Critical,google,ub-risk-2,,0.24.6,Reviewed in CL 559198279,
+************************************
+event,timestamp,name,username,url
+Author,-,,theotherphil,https://github.com/theotherphil
+Author,-,Jonathan Behrens,fintelia,https://github.com/fintelia
+Author,-,Andreas Molzer,HeroicKatora,https://github.com/HeroicKatora
+Author,-,Publish,github:image-rs:publish,https://github.com/image-rs
+************************************
+event,timestamp,downloads
+Downloads,-,29037752
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:22:05.522750 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:22:14.442867 |INFO | [rudra-progress] Running rudra for target lib:image
+[0m[0m[1m[31merror[0m[1m:[0m package `crossbeam-utils v0.8.20` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:22:23.566929 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

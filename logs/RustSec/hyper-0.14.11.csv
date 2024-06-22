@@ -1,0 +1,53 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Low,bytecode-alliance,safe-to-deploy,1.0.0-rc.3 -> 1.0.1,,Quite a few changes here relative to the last RC but everything is related to\nrefactorings and such. No new fundamental addition of functionality or\nsubstantially new unsafe code.\n,
+audits,-,Low,google,safe-to-run,,0.14.20,,
+audits,-,Low,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.14.27,,
+audits,-,Low,google,ub-risk-4,,1.0.1,Reviewed in CL 588384310\nIssues found:\n - https://github.com/hyperium/hyper/pull/3498\n - https://github.com/hyperium/hyper/issues/3556\n - https://github.com/hyperium/hyper/issues/3500 \n(probably not a real issue)\n - https://github.com/hyperium/hyper/issues/3554 (documentation)\n,
+audits,-,Low,mozilla,safe-to-run,0.14.19 -> 0.14.20,,,
+audits,-,Low,mozilla,safe-to-run,0.14.20 -> 0.14.22,,,
+audits,-,Low,mozilla,safe-to-run,0.14.22 -> 0.14.23,,,
+audits,-,Low,mozilla,safe-to-run,0.14.23 -> 0.14.24,,,
+audits,-,Low,zcash,safe-to-deploy,0.14.23 -> 0.14.24,,"Fixes a bug where memory was reserved based on an adversary-controllable size, before the\ncorresponding data was received.\n",
+audits,-,Low,zcash,safe-to-deploy,0.14.25 -> 0.14.26,,,
+audits,-,Low,zcash,safe-to-deploy,0.14.26 -> 0.14.27,,,
+audits,-,Low,zcash,safe-to-deploy,0.14.27 -> 0.14.28,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Sean McArthur,seanmonstar,https://github.com/seanmonstar
+Author,-,Core,github:hyperium:core,https://github.com/hyperium
+************************************
+event,timestamp,downloads
+Downloads,-,161338424
+************************************
+event,timestamp,total,flagged
+Side Effects,-,63,42
+************************************
+Rudra,timestamp
+"2024-06-21 18:03:17.763687 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:03:19.448042 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`: error: failed to download `libc v0.2.98`
+
+Caused by:
+  unable to get packages from source
+
+Caused by:
+  failed to unpack package `libc v0.2.98`
+
+Caused by:
+  failed to unpack entry at `libc-0.2.98/src/unix/linux_like/linux/gnu/b32/mips/mod.rs`
+
+Caused by:
+  failed to unpack `/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/libc-0.2.98/src/unix/linux_like/linux/gnu/b32/mips/mod.rs`
+
+Caused by:
+  failed to unpack `libc-0.2.98/src/unix/linux_like/linux/gnu/b32/mips/mod.rs` into `/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/libc-0.2.98/src/unix/linux_like/linux/gnu/b32/mips/mod.rs`
+
+Caused by:
+  unexpected end of file
+
+"
+************************************

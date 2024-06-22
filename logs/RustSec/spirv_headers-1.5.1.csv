@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Dzmitry Malyshau,kvark,https://github.com/kvark
+Author,-,Lei Zhang,antiagainst,https://github.com/antiagainst
+Author,-,Jasper Bekkers,Jasper-Bekkers,https://github.com/Jasper-Bekkers
+Author,-,Marijn Suijten,MarijnS95,https://github.com/MarijnS95
+************************************
+event,timestamp,downloads
+Downloads,-,908843
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:07:53.322167 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:07:57.096574 |INFO | [rudra-progress] Running rudra for target lib:spirv_headers
+2024-06-21 18:08:10.412065 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:08:10.416181 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:08:10.416532 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:08:10.416547 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:08:10.437454 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:08:10.437475 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:08:12.162860 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

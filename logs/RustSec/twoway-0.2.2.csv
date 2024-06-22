@@ -1,0 +1,110 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,bluss,bluss,https://github.com/bluss
+************************************
+event,timestamp,downloads
+Downloads,-,16334006
+************************************
+event,timestamp,total,flagged
+Side Effects,-,115,114
+************************************
+Rudra,timestamp
+"2024-06-21 17:53:11.952169 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:53:15.825728 |INFO | [rudra-progress] Running rudra for target lib:twoway
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:800:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m800[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn rejecting(usize, usize) -> Self::Output;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: usize`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(anonymous_parameters)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:800:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m800[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn rejecting(usize, usize) -> Self::Output;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: usize`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:801:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m801[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn matching(usize, usize) -> Self::Output;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: usize`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:801:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m801[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn matching(usize, usize) -> Self::Output;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: usize`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `haystack`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:156:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m156[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    haystack: &'a str,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `needle`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:157:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m157[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    needle: &'b str,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `searcher`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:159:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m159[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    searcher: StrSearcherImpl,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `position`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:170:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m170[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    position: usize,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `end`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:171:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m171[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    end: usize,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `is_match_fw`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:172:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m172[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    is_match_fw: bool,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `is_match_bw`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:173:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m173[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    is_match_bw: bool,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m
+
+2024-06-21 17:53:22.825559 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:53:22.829383 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:53:22.829758 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:53:22.829786 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:53:22.868415 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:53:22.868443 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:53:23.938071 |WARN | [cargo_rudra] Target test:quick is not supported
+2024-06-21 17:53:23.938138 |WARN | [cargo_rudra] Target bench:pathology is not supported
+2024-06-21 17:53:23.938252 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

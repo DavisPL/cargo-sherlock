@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Simon Sawert,bombsimon,https://github.com/bombsimon
+Author,-,Axel Kappel,Kl4rry,https://github.com/Kl4rry
+************************************
+event,timestamp,downloads
+Downloads,-,3672
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:52:39.369752 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:52:40.616210 |INFO | [rudra-progress] Running rudra for target bin:personnummer
+2024-06-21 17:52:44.324579 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:52:44.328305 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:52:44.329836 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:52:44.329847 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:52:44.331139 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:52:44.331149 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:52:44.391493 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

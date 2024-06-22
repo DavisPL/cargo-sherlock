@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Onur Aslan,onur,https://github.com/onur
+Author,-,Pietro Albini,pietroalbini,https://github.com/pietroalbini
+Author,-,,rust-lang-owner,https://github.com/rust-lang-owner
+Author,-,jyn,jyn514,https://github.com/jyn514
+************************************
+event,timestamp,downloads
+Downloads,-,66650
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:56:26.813889 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:56:30.629675 |INFO | [rudra-progress] Running rudra for target lib:badge
+2024-06-21 17:56:37.056378 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:56:37.060380 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:56:37.060764 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:56:37.060777 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:56:37.096547 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:56:37.096568 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:56:38.097491 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,58 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Marius S,winding-lines,https://github.com/winding-lines
+Author,-,Vincent Prouillet,Keats,https://github.com/Keats
+************************************
+event,timestamp,downloads
+Downloads,-,159096
+************************************
+event,timestamp,total,flagged
+Side Effects,-,42,37
+************************************
+Rudra,timestamp
+"2024-06-21 18:00:33.041027 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:00:36.694157 |INFO | [rudra-progress] Running rudra for target lib:sass_rs
+[0m[1m[33mwarning[0m[0m[1m: unnecessary trailing semicolon[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/bindings/context.rs:41:87[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn make_sass_context(c_sass_context: *mut sass_sys::Sass_Context) -> SassContext {;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                                      [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: remove this semicolon[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(redundant_semicolons)]` on by default[0m
+
+2024-06-21 18:01:07.082233 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:01:07.086379 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:01:07.122077 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:01:07.122110 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:01:07.163530 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:01:07.163549 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:01:08.221866 |INFO | [rudra-progress] Running rudra for target bin:sass-rs
+[0m[1m[33mwarning[0m[0m[1m: unnecessary trailing semicolon[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/bindings/context.rs:41:87[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn make_sass_context(c_sass_context: *mut sass_sys::Sass_Context) -> SassContext {;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                                      [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: remove this semicolon[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(redundant_semicolons)]` on by default[0m
+
+2024-06-21 18:01:33.172848 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:01:33.176993 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:01:33.212089 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:01:33.212126 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:01:33.252189 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:01:33.252213 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:01:34.481489 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:01:34.485074 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:01:34.486864 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:01:34.486875 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:01:34.488157 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:01:34.488165 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:01:34.536700 |WARN | [cargo_rudra] Target example:compile_sass is not supported
+2024-06-21 18:01:34.537054 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

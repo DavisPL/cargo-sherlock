@@ -1,0 +1,99 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,sundyli,sundy-li,https://github.com/sundy-li
+************************************
+event,timestamp,downloads
+Downloads,-,1516631
+************************************
+event,timestamp,total,flagged
+Side Effects,-,9,9
+************************************
+Rudra,timestamp
+"2024-06-21 17:51:49.550374 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:51:53.115014 |INFO | [rudra-progress] Running rudra for target lib:partial_sort
+2024-06-21 17:51:57.183670 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:51:57.187708 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:51:57.188732 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:51:57.188745 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:51:57.254028 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:51:57.254056 |INFO | [rudra-progress] Rudra finished
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `partial_sort`
+-> src/lib.rs:54:1: 72:2
+pub fn partial_sort<T, F>(v: &mut [T], last: usize, mut is_less: F)
+where
+    F: FnMut(&T, &T) -> bool,
+{
+    debug_assert!(last <= v.len());
+
+    make_heap(v, last, &mut is_less);
+
+    unsafe {
+        for i in last..v.len() {
+            if [0m[36mis_less([0m[33mv.get_unchecked(i)[0m[36m, [0m[33mv.get_unchecked(0)[0m[36m)[0m {
+                v.swap(0, i);
+                adjust_heap(v, 0, last, &mut is_less);
+            }
+        }
+
+        sort_heap(v, last, &mut is_less);
+    }
+}
+[0m
+Warning (UnsafeDataflow:/ReadFlow/CopyFlow/SliceUnchecked): Potential unsafe dataflow issue in `adjust_heap`
+-> src/lib.rs:97:1: 143:2
+fn adjust_heap<T, F>(v: &mut [T], hole_index: usize, len: usize, is_less: &mut F)
+where
+    F: FnMut(&T, &T) -> bool,
+{
+    let mut left_child = hole_index * 2 + 1;
+
+    unsafe {
+        // All methods were benchmarked, and the 3rd showed best results. So we chose that one.
+        let mut tmp = mem::ManuallyDrop::new([0m[31mptr::read(&v[hole_index])[0m);
+        let mut hole = InsertionHole {
+            src: &mut *tmp,
+            dest: &mut v[hole_index],
+        };
+
+        while left_child < len {
+            if left_child + 1 < len
+                && [0m[36mis_less([0m[33mv.get_unchecked(left_child)[0m[36m, [0m[33mv.get_unchecked(left_child + 1)[0m[36m)[0m
+            {
+                left_child += 1;
+            }
+
+            if [0m[36mis_less(&*tmp, [0m[33mv.get_unchecked(left_child)[0m[36m)[0m {
+                [0m[31mptr::copy_nonoverlapping(&v[left_child], hole.dest, 1)[0m;
+                hole.dest = &mut v[left_child];
+            } else {
+                break;
+            }
+
+            left_child = left_child * 2 + 1;
+        }
+    }
+
+    // COPY From std::sort_by
+    // When dropped, copies from `src` into `dest`.
+    struct InsertionHole<T> {
+        src: *mut T,
+        dest: *mut T,
+    }
+
+    impl<T> Drop for InsertionHole<T> {
+        fn drop(&mut self) {
+            unsafe {
+                ptr::copy_nonoverlapping(self.src, self.dest, 1);
+            }
+        }
+    }
+}
+[0m
+2024-06-21 17:51:58.087372 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

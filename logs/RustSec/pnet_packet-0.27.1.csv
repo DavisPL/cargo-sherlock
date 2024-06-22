@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Robert Clipsham,mrmonday,https://github.com/mrmonday
+Author,-,Linus Färnstrand,faern,https://github.com/faern
+Author,-,Juxhin,JuxhinDB,https://github.com/JuxhinDB
+Author,-,Kunihiro Ishiguro,kishiguro,https://github.com/kishiguro
+Author,-,Owners,github:libpnet:owners,https://github.com/libpnet
+************************************
+event,timestamp,downloads
+Downloads,-,4710939
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:32:01.866755 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:32:05.371698 |INFO | [rudra-progress] Running rudra for target lib:pnet_packet
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 18:32:08.763585 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

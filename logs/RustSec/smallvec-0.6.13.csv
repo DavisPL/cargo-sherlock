@@ -1,0 +1,131 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,1.8.0 -> 1.11.0,,"The main change is the switch to use `NonNull<T>` internally instead of\n`*mut T`. This seems reasonable, as `Vec` also never stores a null pointer,\nand in particular the new `NonNull::new_unchecked`s look ok.\n\nMost of the rest of the changes are adding some new unstable features which\naren't enabled by default.\n",
+audits,-,Critical,google,safe-to-run,,1.6.1,,
+audits,-,Critical,google,"[ ""ub-risk-3"", ""does-not-implement-crypto"",]",,1.11.0,Reviewed in CL 552492992,
+audits,-,Critical,mozilla,safe-to-deploy,1.8.0 -> 1.9.0,,,
+audits,-,Critical,mozilla,safe-to-deploy,1.9.0 -> 1.10.0,,,
+trusted,-,Critical,mozilla,safe-to-deploy,,,,3
+audits,-,Critical,zcash,safe-to-deploy,1.11.1 -> 1.13.2,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Simon Sapin,SimonSapin,https://github.com/SimonSapin
+Author,-,,Ms2ger,https://github.com/Ms2ger
+Author,-,cargo publish,github:servo:cargo-publish,https://github.com/servo
+************************************
+event,timestamp,downloads
+Downloads,-,248198112
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:17:49.155725 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:17:52.598925 |INFO | [rudra-progress] Running rudra for target lib:smallvec
+2024-06-21 16:17:59.678528 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:17:59.682466 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:17:59.703983 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:17:59.704010 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:17:59.755301 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:17:59.755330 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> lib.rs:1460:1: 1460:66
+unsafe impl<A: Array> Send for SmallVec<A> where A::Item: Send {}
+Warning (UnsafeDataflow:/CopyFlow/WriteFlow): Potential unsafe dataflow issue in `SmallVec::<A>::insert_many`
+-> lib.rs:825:5: 867:6
+pub fn insert_many<I: IntoIterator<Item=A::Item>>(&mut self, index: usize, iterable: I) {
+        let iter = [0m[36miterable.into_iter()[0m;
+        if index == self.len() {
+            return self.extend(iter);
+        }
+
+        let (lower_size_bound, _) = [0m[36miter.size_hint()[0m;
+        assert!(lower_size_bound <= std::isize::MAX as usize);  // Ensure offset is indexable
+        assert!(index + lower_size_bound >= index);  // Protect against overflow
+        self.reserve(lower_size_bound);
+
+        unsafe {
+            let old_len = self.len();
+            assert!(index <= old_len);
+            let mut ptr = self.as_mut_ptr().offset(index as isize);
+
+            // Move the trailing elements.
+            [0m[31mptr::copy(ptr, ptr.offset(lower_size_bound as isize), old_len - index)[0m;
+
+            // In case the iterator panics, don't double-drop the items we just copied above.
+            self.set_len(index);
+
+            let mut num_added = 0;
+            for element in [0m[36miter[0m {
+                let mut cur = ptr.offset(num_added as isize);
+                if num_added >= lower_size_bound {
+                    // Iterator provided more elements than the hint.  Move trailing items again.
+                    self.reserve(1);
+                    ptr = self.as_mut_ptr().offset(index as isize);
+                    cur = ptr.offset(num_added as isize);
+                    [0m[31mptr::copy(cur, cur.offset(1), old_len - index)[0m;
+                }
+                [0m[33mptr::write(cur, element)[0m;
+                num_added += 1;
+            }
+            if num_added < lower_size_bound {
+                // Iterator provided fewer elements than the hint
+                [0m[31mptr::copy(ptr.offset(lower_size_bound as isize), ptr.offset(num_added as isize), old_len - index)[0m;
+            }
+
+            self.set_len(old_len + num_added);
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `SmallVec::<A>::from_elem`
+-> lib.rs:1126:5: 1142:6
+pub fn from_elem(elem: A::Item, n: usize) -> Self {
+        if n > [0m[36mA::size()[0m {
+            vec![elem; n].into()
+        } else {
+            let mut v = SmallVec::<A>::new();
+            unsafe {
+                let (ptr, len_ptr, _) = v.triple_mut();
+                let mut local_len = SetLenOnDrop::new(len_ptr);
+
+                for i in 0..n as isize {
+                    [0m[33m::std::ptr::write(ptr.offset(i), [0m[36melem.clone()[0m[33m)[0m;
+                    local_len.increment_len(1);
+                }
+            }
+            v
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<SmallVec<A> as std::iter::Extend<<A as Array>::Item>>::extend`
+-> lib.rs:1355:5: 1376:6
+fn extend<I: IntoIterator<Item=A::Item>>(&mut self, iterable: I) {
+        let mut iter = [0m[36miterable.into_iter()[0m;
+        let (lower_size_bound, _) = [0m[36miter.size_hint()[0m;
+        self.reserve(lower_size_bound);
+
+        unsafe {
+            let (ptr, len_ptr, cap) = self.triple_mut();
+            let mut len = SetLenOnDrop::new(len_ptr);
+            while len.get() < cap {
+                if let Some(out) = [0m[36miter.next()[0m {
+                    [0m[33mptr::write(ptr.offset(len.get() as isize), out)[0m;
+                    len.increment_len(1);
+                } else {
+                    return;
+                }
+            }
+        }
+
+        for elem in [0m[36miter[0m {
+            self.push(elem);
+        }
+    }
+[0m
+2024-06-21 16:18:00.898847 |WARN | [cargo_rudra] Target bench:bench is not supported
+2024-06-21 16:18:00.899006 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

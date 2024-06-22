@@ -1,0 +1,59 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Yota Toyama,raviqqe,https://github.com/raviqqe
+************************************
+event,timestamp,downloads
+Downloads,-,5446
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:53:25.867730 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:53:30.029549 |INFO | [rudra-progress] Running rudra for target lib:array-queue
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/array_queue.rs:1:39[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::mem::{drop, forget, replace, uninitialized, ManuallyDrop};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/array_queue.rs:17:29[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            array: unsafe { uninitialized() },[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/array_queue.rs:99:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m99[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            uninitialized()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/array_queue.rs:111:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m111[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            uninitialized()[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/array_queue.rs:165:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m165[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            drop(replace(x, unsafe { uninitialized() }));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+2024-06-21 18:53:37.589038 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:53:37.592885 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:53:37.593212 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:53:37.593223 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:53:37.618527 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:53:37.618541 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:53:38.609010 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

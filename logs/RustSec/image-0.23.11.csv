@@ -1,0 +1,119 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Low,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.23.14,,
+audits,-,Low,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",0.23.14 -> 0.24.8,,,
+audits,-,Low,google,ub-risk-2,,0.24.6,Reviewed in CL 559198279,
+************************************
+event,timestamp,name,username,url
+Author,-,,theotherphil,https://github.com/theotherphil
+Author,-,Jonathan Behrens,fintelia,https://github.com/fintelia
+Author,-,Andreas Molzer,HeroicKatora,https://github.com/HeroicKatora
+Author,-,Publish,github:image-rs:publish,https://github.com/image-rs
+************************************
+event,timestamp,downloads
+Downloads,-,29050628
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:46:44.798309 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:46:48.415612 |INFO | [rudra-progress] Running rudra for target lib:image
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `flags`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/dds.rs:60:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    flags: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `pitch_or_linear_size`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/dds.rs:63:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pitch_or_linear_size: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `depth`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/dds.rs:64:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m64[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    depth: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `mipmap_count`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/dds.rs:65:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m65[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    mipmap_count: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `caps`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/dds.rs:67:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    caps: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `caps2`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/dds.rs:68:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    caps2: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `rgb_bit_count`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/dds.rs:76:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    rgb_bit_count: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `r_bit_mask`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/dds.rs:77:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m77[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    r_bit_mask: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `g_bit_mask`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/dds.rs:78:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    g_bit_mask: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `b_bit_mask`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/dds.rs:79:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m79[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    b_bit_mask: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `a_bit_mask`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/dds.rs:80:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m80[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    a_bit_mask: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: panic message is not a string literal[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/codecs/webp/vp8.rs:1439:29[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1439[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                c => panic!(format!(""unknown token: {}"", c)),[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_fmt_panics)]` on by default[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this usage of panic!() is deprecated; it will be a hard error in Rust 2021[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the panic!() macro supports formatting, so there's no need for the format!() macro here[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove the `format!(..)` macro call[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1439[0m[0m [0m[0m[38;5;9m- [0m[0m                c => panic!([0m[0m[38;5;9mformat!([0m[0m""unknown token: {}"", c[0m[0m[38;5;9m)[0m[0m),[0m
+[0m[1m[38;5;12m1439[0m[0m [0m[0m[38;5;10m+ [0m[0m                c => panic!(""unknown token: {}"", c),[0m
+[0m     [0m[0m[1m[38;5;12m| [0m
+
+2024-06-21 18:47:09.008611 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:47:09.013134 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:47:09.013512 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:47:09.013524 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:47:09.069519 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:47:09.069550 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:47:12.407260 |WARN | [cargo_rudra] Target bench:decode is not supported
+2024-06-21 18:47:12.407373 |WARN | [cargo_rudra] Target bench:encode is not supported
+2024-06-21 18:47:12.407561 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

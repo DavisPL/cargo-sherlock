@@ -1,0 +1,61 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,0.1.34 -> 0.1.37,,"A routine set of updates for the tracing crate this includes minor refactorings,\naddition of benchmarks, some test updates, but overall nothing out of the\nordinary.\n",
+audits,-,Critical,google,safe-to-run,,0.1.35,,
+audits,-,Critical,google,ub-risk-4,,0.1.39,Reviewed in CL 573852894\nIssues found:\n - https://github.com/tokio-rs/tracing/pull/2765\n,
+audits,-,Critical,mozilla,safe-to-run,0.1.35 -> 0.1.36,,,
+audits,-,Critical,mozilla,safe-to-run,0.1.36 -> 0.1.37,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Carl Lerche,carllerche,https://github.com/carllerche
+Author,-,Publish tracing,github:tokio-rs:publish-tracing,https://github.com/tokio-rs
+************************************
+event,timestamp,downloads
+Downloads,-,163904921
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,4
+************************************
+Rudra,timestamp
+"2024-06-21 17:40:57.862836 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:41:02.000430 |INFO | [rudra-progress] Running rudra for target lib:tracing
+2024-06-21 17:41:19.162106 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:41:19.166383 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:41:19.169169 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:41:19.169181 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:41:19.200742 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:41:19.200768 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:41:20.306222 |WARN | [cargo_rudra] Target test:max_level_hint is not supported
+2024-06-21 17:41:20.306351 |WARN | [cargo_rudra] Target test:filter_caching_is_lexically_scoped is not supported
+2024-06-21 17:41:20.306364 |WARN | [cargo_rudra] Target test:register_callsite_deadlock is not supported
+2024-06-21 17:41:20.306367 |WARN | [cargo_rudra] Target test:filters_dont_leak is not supported
+2024-06-21 17:41:20.306377 |WARN | [cargo_rudra] Target test:subscriber is not supported
+2024-06-21 17:41:20.306389 |WARN | [cargo_rudra] Target test:no_subscriber is not supported
+2024-06-21 17:41:20.306401 |WARN | [cargo_rudra] Target test:future_send is not supported
+2024-06-21 17:41:20.306404 |WARN | [cargo_rudra] Target test:filters_are_reevaluated_for_different_call_sites is not supported
+2024-06-21 17:41:20.306410 |WARN | [cargo_rudra] Target test:enabled is not supported
+2024-06-21 17:41:20.306440 |WARN | [cargo_rudra] Target test:event is not supported
+2024-06-21 17:41:20.306451 |WARN | [cargo_rudra] Target test:multiple_max_level_hints is not supported
+2024-06-21 17:41:20.306454 |WARN | [cargo_rudra] Target test:filters_are_not_reevaluated_for_the_same_span is not supported
+2024-06-21 17:41:20.306457 |WARN | [cargo_rudra] Target test:span is not supported
+2024-06-21 17:41:20.306459 |WARN | [cargo_rudra] Target test:macro_imports is not supported
+2024-06-21 17:41:20.306461 |WARN | [cargo_rudra] Target test:instrument is not supported
+2024-06-21 17:41:20.306470 |WARN | [cargo_rudra] Target test:macros is not supported
+2024-06-21 17:41:20.306473 |WARN | [cargo_rudra] Target test:macros_incompatible_concat is not supported
+2024-06-21 17:41:20.306476 |WARN | [cargo_rudra] Target test:scoped_clobbers_default is not supported
+2024-06-21 17:41:20.306486 |WARN | [cargo_rudra] Target bench:baseline is not supported
+2024-06-21 17:41:20.306488 |WARN | [cargo_rudra] Target bench:dispatch_get_clone is not supported
+2024-06-21 17:41:20.306491 |WARN | [cargo_rudra] Target bench:dispatch_get_ref is not supported
+2024-06-21 17:41:20.306499 |WARN | [cargo_rudra] Target bench:empty_span is not supported
+2024-06-21 17:41:20.306503 |WARN | [cargo_rudra] Target bench:enter_span is not supported
+2024-06-21 17:41:20.306511 |WARN | [cargo_rudra] Target bench:event is not supported
+2024-06-21 17:41:20.306523 |WARN | [cargo_rudra] Target bench:span_fields is not supported
+2024-06-21 17:41:20.306542 |WARN | [cargo_rudra] Target bench:span_no_fields is not supported
+2024-06-21 17:41:20.306550 |WARN | [cargo_rudra] Target bench:span_repeated is not supported
+2024-06-21 17:41:20.306553 |WARN | [cargo_rudra] Target bench:shared is not supported
+2024-06-21 17:41:20.306759 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

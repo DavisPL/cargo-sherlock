@@ -1,0 +1,61 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,safe-to-run,,0.11.0,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.12.3,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",0.12.3 -> 0.12.4,,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",0.12.4 -> 0.12.6,,No concerning changes for safe-to-run.,
+audits,-,Critical,mozilla,safe-to-deploy,0.8.0 -> 0.11.9,,"Mostly internal refactorings. Minimal new unsafe code, but with the invariants explicitly checked in code",
+audits,-,Critical,mozilla,safe-to-deploy,0.11.9 -> 0.12.1,,,
+audits,-,Critical,zcash,safe-to-deploy,0.12.1 -> 0.12.3,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Dan Burkert,danburkert,https://github.com/danburkert
+Author,-,prost-core,github:tokio-rs:prost-core,https://github.com/tokio-rs
+************************************
+event,timestamp,downloads
+Downloads,-,80471251
+************************************
+event,timestamp,total,flagged
+Side Effects,-,17,17
+************************************
+Rudra,timestamp
+"2024-06-21 16:28:06.053834 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:28:16.332983 |INFO | [rudra-progress] Running rudra for target lib:prost
+2024-06-21 16:29:06.901487 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:29:06.910223 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:29:06.912283 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:29:06.912358 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:29:07.063814 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:29:07.063879 |INFO | [rudra-progress] Rudra finished
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `encoding::decode_varint`
+-> src/encoding.rs:56:1: 77:2
+pub fn decode_varint<B>(buf: &mut B) -> Result<u64, DecodeError>
+where
+    B: Buf,
+{
+    let bytes = buf.bytes();
+    let len = bytes.len();
+    if len == 0 {
+        return Err(DecodeError::new(""invalid varint""));
+    }
+
+    let byte = unsafe { *[0m[33mbytes.get_unchecked(0)[0m };
+    if byte < 0x80 {
+        [0m[36mbuf.advance(1)[0m;
+        Ok(u64::from(byte))
+    } else if len > 10 || bytes[len - 1] < 0x80 {
+        let (value, advance) = unsafe { decode_varint_slice(bytes) }?;
+        [0m[36mbuf.advance(advance)[0m;
+        Ok(value)
+    } else {
+        decode_varint_slow(buf)
+    }
+}
+[0m
+2024-06-21 16:29:10.765515 |WARN | [cargo_rudra] Target bench:varint is not supported
+2024-06-21 16:29:10.767128 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

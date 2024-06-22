@@ -1,0 +1,32 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,"[ ""ub-risk-1"", ""does-not-implement-crypto"",]",,0.7.0,Reviewed in CL 562503105,
+************************************
+event,timestamp,name,username,url
+Author,-,Lucy,Absolucy,https://github.com/Absolucy
+************************************
+event,timestamp,downloads
+Downloads,-,15641274
+************************************
+event,timestamp,total,flagged
+Side Effects,-,9,7
+************************************
+Rudra,timestamp
+"2024-06-21 18:44:32.148728 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:44:35.950654 |INFO | [rudra-progress] Running rudra for target lib:nanorand
+2024-06-21 18:44:40.172241 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:44:40.176530 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:44:40.176884 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:44:40.176898 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:44:40.206548 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:44:40.206570 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:44:41.256102 |WARN | [cargo_rudra] Target test:time_entropy is not supported
+2024-06-21 18:44:41.256142 |WARN | [cargo_rudra] Target test:pcg64 is not supported
+2024-06-21 18:44:41.256147 |WARN | [cargo_rudra] Target test:wyrand is not supported
+2024-06-21 18:44:41.256157 |WARN | [cargo_rudra] Target bench:speed is not supported
+2024-06-21 18:44:41.256252 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

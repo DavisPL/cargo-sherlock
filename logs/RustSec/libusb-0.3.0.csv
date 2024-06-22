@@ -1,0 +1,52 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,David Cuddeback,dcuddeback,https://github.com/dcuddeback
+************************************
+event,timestamp,downloads
+Downloads,-,263965
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:29:47.673791 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:29:51.894079 |INFO | [rudra-progress] Running rudra for target lib:libusb
+[0m[0m[1m[31merror[0m[1m:[0m failed to run custom build command for `libusb-sys v0.2.3`
+
+Caused by:
+  process didn't exit successfully: `/tmp/rudra/target/debug/build/libusb-sys-29328a57a2f568dc/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-env-changed=LIBUSB_1.0_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=LIBUSB_1.0_STATIC
+  cargo:rerun-if-env-changed=LIBUSB_1.0_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+
+  --- stderr
+  thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: ""\npkg-config exited with status code 1\n> PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags libusb-1.0\n\nThe system library `libusb-1.0` required by crate `libusb-sys` was not found.\nThe file `libusb-1.0.pc` needs to be installed and the PKG_CONFIG_PATH environment variable must contain its parent directory.\nThe PKG_CONFIG_PATH environment variable is not set.\n\nHINT: if you have installed the library, try setting PKG_CONFIG_PATH to the directory containing `libusb-1.0.pc`.\n""', /tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/libusb-sys-0.2.3/build.rs:4:42
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+[0m[0m[1m[31merror[0m[1m:[0m build failed
+2024-06-21 18:29:58.403839 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

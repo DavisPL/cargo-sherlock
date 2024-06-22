@@ -1,0 +1,50 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Phoenix Kahlo,gretchenfrage,https://github.com/gretchenfrage
+************************************
+event,timestamp,downloads
+Downloads,-,1751
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,4
+************************************
+Rudra,timestamp
+"2024-06-21 16:12:35.192862 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:12:38.213961 |INFO | [rudra-progress] Running rudra for target lib:through
+2024-06-21 16:12:42.071849 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:12:42.075788 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:12:42.077474 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:12:42.077502 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:12:42.106847 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:12:42.106868 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/ReadFlow): Potential unsafe dataflow issue in `through`
+-> src/lib.rs:5:1: 12:2
+pub fn through<T>(elem: &mut T, func: impl FnOnce(T) -> T) {
+    unsafe {
+        let elem_ref = elem;
+        let elem = [0m[31mptr::read(elem_ref)[0m;
+        let elem = [0m[36mfunc(elem)[0m;
+        [0m[33mptr::write(elem_ref, elem)[0m;
+    }
+}
+[0m
+Warning (UnsafeDataflow:/ReadFlow): Potential unsafe dataflow issue in `through_and`
+-> src/lib.rs:16:1: 24:2
+pub fn through_and<T, O>(elem: &mut T, func: impl FnOnce(T) -> (T, O)) -> O {
+    unsafe {
+        let elem_ref = elem;
+        let elem = [0m[31mptr::read(elem_ref)[0m;
+        let (elem, out) = [0m[36mfunc(elem)[0m;
+        [0m[33mptr::write(elem_ref, elem)[0m;
+        out
+    }
+}
+[0m
+2024-06-21 16:12:42.755664 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

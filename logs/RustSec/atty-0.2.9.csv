@@ -1,0 +1,31 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,,0.2.14,Contains only unsafe code for what this crate's purpose is and only accesses\nthe environment's terminal information when asked. Does its stated purpose and\nno more.\n,
+audits,-,Critical,google,safe-to-run,,0.2.14,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.2.14,,
+************************************
+event,timestamp,name,username,url
+Author,-,Doug Tangren,softprops,https://github.com/softprops
+************************************
+event,timestamp,downloads
+Downloads,-,154895742
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-21 17:54:48.744779 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:54:52.478527 |INFO | [rudra-progress] Running rudra for target lib:atty
+2024-06-21 17:54:59.479214 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:54:59.483102 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:54:59.483456 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:54:59.483469 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:54:59.539311 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:54:59.539338 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:55:00.288848 |WARN | [cargo_rudra] Target example:atty is not supported
+2024-06-21 17:55:00.289006 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,RustyYato,https://github.com/RustyYato
+************************************
+event,timestamp,downloads
+Downloads,-,2477
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,5
+************************************
+Rudra,timestamp
+"2024-06-21 17:57:27.838942 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:57:31.697450 |INFO | [rudra-progress] Running rudra for target lib:cell-project
+2024-06-21 17:57:35.548344 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:57:35.552131 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:57:35.553625 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:57:35.553634 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:57:35.554921 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:57:35.554931 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:57:36.180645 |WARN | [cargo_rudra] Target test:pass is not supported
+2024-06-21 17:57:36.180702 |WARN | [cargo_rudra] Target test:compile_fail is not supported
+2024-06-21 17:57:36.180794 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

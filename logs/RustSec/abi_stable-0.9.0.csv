@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,rodrimati1992,https://github.com/rodrimati1992
+************************************
+event,timestamp,downloads
+Downloads,-,728122
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:26:40.710635 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:26:45.615038 |INFO | [rudra-progress] Running rudra for target lib:abi_stable
+[0m[0m[1m[31merror[0m[1m:[0m package `crossbeam-utils v0.8.20` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:26:49.008914 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

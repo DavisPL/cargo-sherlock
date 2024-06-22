@@ -1,0 +1,39 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Robert Clipsham,mrmonday,https://github.com/mrmonday
+Author,-,Linus Färnstrand,faern,https://github.com/faern
+Author,-,Juxhin,JuxhinDB,https://github.com/JuxhinDB
+Author,-,Kunihiro Ishiguro,kishiguro,https://github.com/kishiguro
+Author,-,Owners,github:libpnet:owners,https://github.com/libpnet
+************************************
+event,timestamp,downloads
+Downloads,-,3187536
+************************************
+event,timestamp,total,flagged
+Side Effects,-,8,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:51:13.870716 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:51:17.255436 |INFO | [rudra-progress] Running rudra for target lib:pnet
+2024-06-21 18:51:42.578344 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:51:42.581724 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:51:42.585027 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:51:42.585041 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:51:42.585137 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:51:42.585147 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:51:43.048054 |WARN | [cargo_rudra] Target example:arp_packet is not supported
+2024-06-21 18:51:43.048195 |WARN | [cargo_rudra] Target example:fanout is not supported
+2024-06-21 18:51:43.048201 |WARN | [cargo_rudra] Target example:packetdump is not supported
+2024-06-21 18:51:43.048204 |WARN | [cargo_rudra] Target example:list_interfaces is not supported
+2024-06-21 18:51:43.048207 |WARN | [cargo_rudra] Target example:transport_echo_server is not supported
+2024-06-21 18:51:43.048215 |WARN | [cargo_rudra] Target bench:rs_receiver is not supported
+2024-06-21 18:51:43.048245 |WARN | [cargo_rudra] Target bench:rs_sender is not supported
+2024-06-21 18:51:43.048258 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 18:51:43.048456 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

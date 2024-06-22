@@ -1,0 +1,66 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Keziah Biermann,KizzyCode,https://github.com/KizzyCode
+************************************
+event,timestamp,downloads
+Downloads,-,4052352
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-21 17:29:39.671914 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:29:42.967236 |INFO | [rudra-progress] Running rudra for target lib:asn1_der
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/der/length.rs:19:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b @ 0...127 => Ok(Self{ len: b }),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(ellipsis_inclusive_range_patterns)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/der/length.rs:43:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            0...127 => 1,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/der/length.rs:55:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m55[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            len @ 0...127 => *buf.next().ok_or(Asn1DerError::LengthMismatch)? = len as u8,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+2024-06-21 17:29:57.168597 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:29:57.172393 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:29:57.172739 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:29:57.172751 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:29:57.213165 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:29:57.213193 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:29:58.337944 |WARN | [cargo_rudra] Target test:types_utf8_string is not supported
+2024-06-21 17:29:58.337984 |WARN | [cargo_rudra] Target test:der_value is not supported
+2024-06-21 17:29:58.337989 |WARN | [cargo_rudra] Target test:der_tag is not supported
+2024-06-21 17:29:58.337992 |WARN | [cargo_rudra] Target test:types_integer is not supported
+2024-06-21 17:29:58.337999 |WARN | [cargo_rudra] Target test:types_null is not supported
+2024-06-21 17:29:58.338007 |WARN | [cargo_rudra] Target test:types_sequence is not supported
+2024-06-21 17:29:58.338010 |WARN | [cargo_rudra] Target test:types_octet_string is not supported
+2024-06-21 17:29:58.338013 |WARN | [cargo_rudra] Target test:der_length is not supported
+2024-06-21 17:29:58.338021 |WARN | [cargo_rudra] Target test:der is not supported
+2024-06-21 17:29:58.338023 |WARN | [cargo_rudra] Target test:types_boolean is not supported
+2024-06-21 17:29:58.338028 |WARN | [cargo_rudra] Target test:asn1_der_derive is not supported
+2024-06-21 17:29:58.338127 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

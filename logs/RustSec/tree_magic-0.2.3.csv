@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Allison Hancock,aahancoc,https://github.com/aahancoc
+************************************
+event,timestamp,downloads
+Downloads,-,173456
+************************************
+event,timestamp,total,flagged
+Side Effects,-,28,10
+************************************
+Rudra,timestamp
+"2024-06-21 17:46:28.522529 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:46:31.812805 |INFO | [rudra-progress] Running rudra for target lib:tree_magic
+2024-06-21 17:46:41.443164 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:46:41.447256 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:46:41.447644 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:46:41.447662 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:46:41.469590 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:46:41.469610 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:46:42.747952 |INFO | [rudra-progress] Running rudra for target bin:tmagic
+[0m[0m[1m[31merror[0m[1m:[0m target `tmagic` in package `tree_magic` requires the features: `cli`
+Consider enabling them by passing, e.g., `--features=""cli""`
+2024-06-21 17:46:43.049905 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

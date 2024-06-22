@@ -1,0 +1,44 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Xudong Huang,Xudong-Huang,https://github.com/Xudong-Huang
+************************************
+event,timestamp,downloads
+Downloads,-,13608
+************************************
+event,timestamp,total,flagged
+Side Effects,-,6,5
+************************************
+Rudra,timestamp
+"2024-06-21 17:19:51.094148 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:19:54.063545 |INFO | [rudra-progress] Running rudra for target lib:rcu_cell
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:117:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m117[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    atomic::spin_loop_hint()[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:171:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m171[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    atomic::spin_loop_hint();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+2024-06-21 17:19:58.102167 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:19:58.106280 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:19:58.110803 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:19:58.110817 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:19:58.139599 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:19:58.139617 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/ApiSendForSync): Suspicious impl of `Sync` found
+-> src/lib.rs:376:1: 376:44
+unsafe impl<T: Sync> Sync for RcuCell<T> {}
+2024-06-21 17:19:59.062537 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

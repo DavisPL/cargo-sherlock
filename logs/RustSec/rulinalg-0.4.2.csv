@@ -1,0 +1,1225 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,James Lucas,AtheMathmo,https://github.com/AtheMathmo
+************************************
+event,timestamp,downloads
+Downloads,-,529230
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:11:23.283014 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:11:41.752421 |INFO | [rudra-progress] Running rudra for target lib:rulinalg
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/bidiagonal.rs:41:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                h_holder = try!(Matrix::make_householder(&lower_slice.iter()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/bidiagonal.rs:69:36[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let row_h_holder = try!(Matrix::make_householder(row).map_err(|_| {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/svd.rs:124:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m124[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (b, u, v) = try!(self.svd_unordered());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/svd.rs:129:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m129[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (b, u, v) = try!(self.svd_golub_reinsch());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/svd.rs:149:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m149[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (mut b, mut u, mut v) = try!(self.bidiagonal_decomp()[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/svd.rs:214:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m214[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(Matrix::<T>::golub_kahan_svd_step(&mut b, &mut u, &mut v, p, q)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/svd.rs:254:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m254[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let c_eigs = try!(c.clone().eigenvalues());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/hessenberg.rs:47:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                h_holder_vec = try!(Matrix::make_householder_vec(&lower_slice.iter()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/hessenberg.rs:126:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m126[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                h_holder_vec = try!(Matrix::make_householder_vec(&lower_slice.iter()[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/hessenberg.rs:141:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m141[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        Ok((transform, try!(self.upper_hessenberg())))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/lu.rs:277:23[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m277[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let col = try!(self.solve(e));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/eigen.rs:85:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut h = try!(self[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/eigen.rs:107:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m107[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let householder = try!(Matrix::make_householder(&[x, y, z]).map_err(|_| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/eigen.rs:199:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m199[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let eigenvalues = try!(self.direct_2_by_2_eigenvalues());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/eigen.rs:226:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m226[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (u, mut h) = try!(self.upper_hess_decomp().map_err(|_| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/decomposition/eigen.rs:250:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m250[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let householder = try!(Matrix::make_householder(&[x, y, z]).map_err(|_| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/base/mod.rs:1579:28[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1579[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn apply(mut self, f: &Fn(T) -> T) -> Self[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Fn(T) -> T`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/impl_mat.rs:449:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m449[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(write!(f, ""{}"", left_delimiter));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/impl_mat.rs:453:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m453[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        try!(write!(f, ""{:1$.2$}"", datum, width, places));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/impl_mat.rs:456:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m456[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        try!(write!(f, ""{:1$}"", datum, width));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/impl_mat.rs:460:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m460[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(f, "" ""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/impl_mat.rs:469:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m469[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(write_row(f,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/impl_mat.rs:474:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m474[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(f.write_str(""\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/impl_mat.rs:476:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m476[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write_row(f,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/impl_mat.rs:481:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m481[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(f.write_str(""\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/convert.rs:89:35[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m89[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        Ok(Matrix::<U>::new(m, n, try!(converted_data)))[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:13:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    error: Box<error::Error + Send + Sync>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn error::Error + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:39:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        where E: Into<Box<error::Error + Send + Sync>>[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn error::Error + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/vector/impl_vec.rs:138:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m138[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(write!(f, ""[""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/vector/impl_vec.rs:142:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m142[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(f, "" {:.*}"", places, datum));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/vector/impl_vec.rs:145:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m145[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(f, "" {}"", datum));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/vector/impl_vec.rs:149:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m149[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(write!(f, "",""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/vector/impl_vec.rs:185:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m185[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn apply(mut self, f: &Fn(T) -> T) -> Vector<T> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Fn(T) -> T`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `core::str::<impl str>::trim_right`: superseded by `trim_end`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros/matrix_eq.rs:94:61[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m94[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                formatted_mismatches = formatted_mismatches.trim_right().to_string();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                            [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: replace the use of the deprecated associated function: `trim_end`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `core::str::<impl str>::trim_right`: superseded by `trim_end`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/macros/matrix_eq.rs:187:61[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m187[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                formatted_mismatches = formatted_mismatches.trim_right().to_string();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                            [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: replace the use of the deprecated associated function: `trim_end`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:55:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m55[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.error.description()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/utils.rs:105:34[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m105[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub fn in_place_vec_bin_op<F, T>(mut u: &mut [T], v: &[T], mut f: F)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_mut)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: panic message is not a string literal[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/base/mod.rs:990:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m990[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m                format!(""Vector size {0} != {1} Matrix column count."",[0m
+[0m[1m[38;5;12m991[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                        y.size(),[0m
+[0m[1m[38;5;12m992[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                        self.cols()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|____________________________________^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_fmt_panics)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this usage of assert!() is deprecated; it will be a hard error in Rust 2021[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the assert!() macro supports formatting, so there's no need for the format!() macro here[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove the `format!(..)` macro call[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m990[0m[0m [0m[0m[38;5;10m~ [0m[0m                ""Vector size {0} != {1} Matrix column count."",[0m
+[0m[1m[38;5;12m991[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        y.size(),[0m
+[0m[1m[38;5;12m992[0m[0m [0m[0m[38;5;10m~ [0m[0m                        self.cols());[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+
+[0m[1m[33mwarning[0m[0m[1m: panic message is not a string literal[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/base/mod.rs:1033:17[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1033[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m                format!(""Vector size {0} != {1} Matrix column count."",[0m
+[0m[1m[38;5;12m1034[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                        y.size(),[0m
+[0m[1m[38;5;12m1035[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                        self.cols()));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|____________________________________^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this usage of assert!() is deprecated; it will be a hard error in Rust 2021[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the assert!() macro supports formatting, so there's no need for the format!() macro here[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove the `format!(..)` macro call[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1033[0m[0m [0m[0m[38;5;10m~ [0m[0m                ""Vector size {0} != {1} Matrix column count."",[0m
+[0m[1m[38;5;12m1034[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        y.size(),[0m
+[0m[1m[38;5;12m1035[0m[0m [0m[0m[38;5;10m~ [0m[0m                        self.cols());[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+
+[0m[1m[33mwarning[0m[0m[1m: panic message is not a string literal[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/base/mod.rs:1336:17[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1336[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                format!(""Row index {0} larger than row count {1}"", a, self.rows()));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this usage of assert!() is deprecated; it will be a hard error in Rust 2021[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the assert!() macro supports formatting, so there's no need for the format!() macro here[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove the `format!(..)` macro call[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1336[0m[0m [0m[0m[38;5;9m- [0m[0m                [0m[0m[38;5;9mformat!([0m[0m""Row index {0} larger than row count {1}"", a, self.rows()[0m[0m[38;5;9m)[0m[0m);[0m
+[0m[1m[38;5;12m1336[0m[0m [0m[0m[38;5;10m+ [0m[0m                ""Row index {0} larger than row count {1}"", a, self.rows());[0m
+[0m     [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: panic message is not a string literal[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/base/mod.rs:1338:17[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1338[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                format!(""Row index {0} larger than row count {1}"", b, self.rows()));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this usage of assert!() is deprecated; it will be a hard error in Rust 2021[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the assert!() macro supports formatting, so there's no need for the format!() macro here[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove the `format!(..)` macro call[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1338[0m[0m [0m[0m[38;5;9m- [0m[0m                [0m[0m[38;5;9mformat!([0m[0m""Row index {0} larger than row count {1}"", b, self.rows()[0m[0m[38;5;9m)[0m[0m);[0m
+[0m[1m[38;5;12m1338[0m[0m [0m[0m[38;5;10m+ [0m[0m                ""Row index {0} larger than row count {1}"", b, self.rows());[0m
+[0m     [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: panic message is not a string literal[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/base/mod.rs:1388:17[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1388[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                format!(""Row index {0} larger than row count {1}"", a, self.rows()));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this usage of assert!() is deprecated; it will be a hard error in Rust 2021[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the assert!() macro supports formatting, so there's no need for the format!() macro here[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove the `format!(..)` macro call[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1388[0m[0m [0m[0m[38;5;9m- [0m[0m                [0m[0m[38;5;9mformat!([0m[0m""Row index {0} larger than row count {1}"", a, self.rows()[0m[0m[38;5;9m)[0m[0m);[0m
+[0m[1m[38;5;12m1388[0m[0m [0m[0m[38;5;10m+ [0m[0m                ""Row index {0} larger than row count {1}"", a, self.rows());[0m
+[0m     [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: panic message is not a string literal[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix/base/mod.rs:1390:17[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1390[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                format!(""Row index {0} larger than row count {1}"", b, self.rows()));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this usage of assert!() is deprecated; it will be a hard error in Rust 2021[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the assert!() macro supports formatting, so there's no need for the format!() macro here[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove the `format!(..)` macro call[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1390[0m[0m [0m[0m[38;5;9m- [0m[0m                [0m[0m[38;5;9mformat!([0m[0m""Row index {0} larger than row count {1}"", b, self.rows()[0m[0m[38;5;9m)[0m[0m);[0m
+[0m[1m[38;5;12m1390[0m[0m [0m[0m[38;5;10m+ [0m[0m                ""Row index {0} larger than row count {1}"", b, self.rows());[0m
+[0m     [0m[0m[1m[38;5;12m| [0m
+
+2024-06-21 18:11:58.251363 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:11:58.255488 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:11:58.255846 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:11:58.255856 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:11:58.358657 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:11:58.358692 |INFO | [rudra-progress] Rudra finished
+Error (UnsafeDataflow:/SliceUnchecked/VecSetLen): Potential unsafe dataflow issue in `matrix::base::BaseMatrix::transpose`
+-> src/matrix/base/mod.rs:901:5: 920:6
+fn transpose(&self) -> Matrix<T>
+        where T: Copy
+    {
+        let mut new_data = Vec::with_capacity([0m[36mself.rows()[0m * [0m[36mself.cols()[0m);
+
+        unsafe {
+            [0m[31mnew_data.set_len([0m[36mself.rows()[0m[31m * [0m[36mself.cols()[0m[31m)[0m;
+            for i in 0..[0m[36mself.cols()[0m {
+                for j in 0..[0m[36mself.rows()[0m {
+                    *[0m[33mnew_data.get_unchecked_mut(i * [0m[36mself.rows()[0m[33m + j)[0m = *[0m[36mself.get_unchecked([j, i])[0m;
+                }
+            }
+        }
+
+        Matrix {
+            cols: [0m[36mself.rows()[0m,
+            rows: [0m[36mself.cols()[0m,
+            data: new_data,
+        }
+    }
+[0m
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `utils::vec_bin_op`
+-> src/utils.rs:135:1: 159:2
+pub fn vec_bin_op<F, T>(u: &[T], v: &[T], f: F) -> Vec<T>
+    where F: Fn(T, T) -> T,
+          T: Copy
+{
+    debug_assert_eq!(u.len(), v.len());
+    let len = cmp::min(u.len(), v.len());
+
+    let xs = &u[..len];
+    let ys = &v[..len];
+
+    let mut out_vec = Vec::with_capacity(len);
+    unsafe {
+        [0m[31mout_vec.set_len(len)[0m;
+    }
+
+    {
+        let out_slice = &mut out_vec[..len];
+
+        for i in 0..len {
+            out_slice[i] = [0m[36mf(xs[i], ys[i])[0m;
+        }
+    }
+
+    out_vec
+}
+[0m
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `matrix::mat_mul::<impl std::ops::Mul<&'c matrix::MatrixSliceMut<'a, T>> for &'b matrix::Matrix<T>>::mul`
+-> src/matrix/mat_mul.rs:20:5: 100:6
+fn mul(self, m: &$mat<T>) -> Matrix<T> {
+        assert!(self.cols == m.rows, ""Matrix dimensions do not agree."");
+
+        let p = self.rows;
+        let q = self.cols;
+        let r = m.cols;
+
+        if same_type::<T, f32>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::sgemm(
+                    p, q, r,
+                    1f32,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f32,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+        } else if same_type::<T, f64>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::dgemm(
+                    p, q, r,
+                    1f64,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f64,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+
+        } else {
+            let mut new_data = vec![[0m[36mT::zero()[0m; p * r];
+
+            unsafe {
+                for i in 0..p
+                {
+                    for k in 0..q
+                    {
+                        for j in 0..r
+                        {
+                            new_data[i*r + j] = [0m[36m*[0m[33mnew_data.get_unchecked(i*r + j)[0m[36m +
+                                                [0m[36m*self.get_unchecked([i,k]) *
+                                                *m.get_unchecked([k,j])[0m[36m[0m;
+                        }
+                    }
+                }
+            }
+
+            Matrix {
+                rows: self.rows,
+                cols: m.cols,
+                data: new_data
+            }
+        }
+    }
+[0m
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `matrix::mat_mul::<impl std::ops::Mul<&'c matrix::Matrix<T>> for &'b matrix::MatrixSliceMut<'a, T>>::mul`
+-> src/matrix/mat_mul.rs:20:5: 100:6
+fn mul(self, m: &$mat<T>) -> Matrix<T> {
+        assert!(self.cols == m.rows, ""Matrix dimensions do not agree."");
+
+        let p = self.rows;
+        let q = self.cols;
+        let r = m.cols;
+
+        if same_type::<T, f32>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::sgemm(
+                    p, q, r,
+                    1f32,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f32,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+        } else if same_type::<T, f64>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::dgemm(
+                    p, q, r,
+                    1f64,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f64,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+
+        } else {
+            let mut new_data = vec![[0m[36mT::zero()[0m; p * r];
+
+            unsafe {
+                for i in 0..p
+                {
+                    for k in 0..q
+                    {
+                        for j in 0..r
+                        {
+                            new_data[i*r + j] = [0m[36m*[0m[33mnew_data.get_unchecked(i*r + j)[0m[36m +
+                                                [0m[36m*self.get_unchecked([i,k]) *
+                                                *m.get_unchecked([k,j])[0m[36m[0m;
+                        }
+                    }
+                }
+            }
+
+            Matrix {
+                rows: self.rows,
+                cols: m.cols,
+                data: new_data
+            }
+        }
+    }
+[0m
+Error (UnsafeDataflow:/SliceUnchecked/VecSetLen): Potential unsafe dataflow issue in `matrix::impl_mat::<impl matrix::Matrix<T>>::variance`
+-> src/matrix/impl_mat.rs:263:5: 310:6
+pub fn variance(&self, axis: Axes) -> Result<Vector<T>, Error> {
+        let mean = self.mean(axis);
+
+        let n: usize;
+        let m: usize;
+
+        match axis {
+            Axes::Row => {
+                n = self.rows;
+                m = self.cols;
+            }
+            Axes::Col => {
+                n = self.cols;
+                m = self.rows;
+            }
+        }
+
+        if n < 2 {
+            return Err(Error::new(ErrorKind::InvalidArg,
+                                  ""There must be at least two rows or columns in the working \
+                                   axis.""));
+        }
+
+        let mut variance = Vector::zeros(m);
+
+        for i in 0..n {
+            let mut t = Vec::<T>::with_capacity(m);
+
+            unsafe {
+                [0m[31mt.set_len(m)[0m;
+
+                for j in 0..m {
+                    t[j] = match axis {
+                        Axes::Row => *[0m[33mself.data.get_unchecked(i * m + j)[0m,
+                        Axes::Col => *[0m[33mself.data.get_unchecked(j * n + i)[0m,
+                    }
+
+                }
+            }
+
+            let v = Vector::new(t);
+
+            variance = variance + &(&v - &mean).elemul(&(&v - &mean));
+        }
+
+        let var_size: T = [0m[36mFromPrimitive::from_usize(n - 1)[0m.unwrap();
+        Ok(variance / var_size)
+    }
+[0m
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `matrix::mat_mul::<impl std::ops::Mul<&'d matrix::MatrixSliceMut<'b, T>> for &'c matrix::MatrixSlice<'a, T>>::mul`
+-> src/matrix/mat_mul.rs:20:5: 100:6
+fn mul(self, m: &$mat<T>) -> Matrix<T> {
+        assert!(self.cols == m.rows, ""Matrix dimensions do not agree."");
+
+        let p = self.rows;
+        let q = self.cols;
+        let r = m.cols;
+
+        if same_type::<T, f32>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::sgemm(
+                    p, q, r,
+                    1f32,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f32,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+        } else if same_type::<T, f64>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::dgemm(
+                    p, q, r,
+                    1f64,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f64,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+
+        } else {
+            let mut new_data = vec![[0m[36mT::zero()[0m; p * r];
+
+            unsafe {
+                for i in 0..p
+                {
+                    for k in 0..q
+                    {
+                        for j in 0..r
+                        {
+                            new_data[i*r + j] = [0m[36m*[0m[33mnew_data.get_unchecked(i*r + j)[0m[36m +
+                                                [0m[36m*self.get_unchecked([i,k]) *
+                                                *m.get_unchecked([k,j])[0m[36m[0m;
+                        }
+                    }
+                }
+            }
+
+            Matrix {
+                rows: self.rows,
+                cols: m.cols,
+                data: new_data
+            }
+        }
+    }
+[0m
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `matrix::mat_mul::<impl std::ops::Mul<&'b matrix::Matrix<T>> for &'a matrix::Matrix<T>>::mul`
+-> src/matrix/mat_mul.rs:20:5: 100:6
+fn mul(self, m: &$mat<T>) -> Matrix<T> {
+        assert!(self.cols == m.rows, ""Matrix dimensions do not agree."");
+
+        let p = self.rows;
+        let q = self.cols;
+        let r = m.cols;
+
+        if same_type::<T, f32>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::sgemm(
+                    p, q, r,
+                    1f32,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f32,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+        } else if same_type::<T, f64>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::dgemm(
+                    p, q, r,
+                    1f64,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f64,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+
+        } else {
+            let mut new_data = vec![[0m[36mT::zero()[0m; p * r];
+
+            unsafe {
+                for i in 0..p
+                {
+                    for k in 0..q
+                    {
+                        for j in 0..r
+                        {
+                            new_data[i*r + j] = [0m[36m*[0m[33mnew_data.get_unchecked(i*r + j)[0m[36m +
+                                                [0m[36m*self.get_unchecked([i,k]) *
+                                                *m.get_unchecked([k,j])[0m[36m[0m;
+                        }
+                    }
+                }
+            }
+
+            Matrix {
+                rows: self.rows,
+                cols: m.cols,
+                data: new_data
+            }
+        }
+    }
+[0m
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `matrix::mat_mul::<impl std::ops::Mul<&'d matrix::MatrixSliceMut<'b, T>> for &'c matrix::MatrixSliceMut<'a, T>>::mul`
+-> src/matrix/mat_mul.rs:20:5: 100:6
+fn mul(self, m: &$mat<T>) -> Matrix<T> {
+        assert!(self.cols == m.rows, ""Matrix dimensions do not agree."");
+
+        let p = self.rows;
+        let q = self.cols;
+        let r = m.cols;
+
+        if same_type::<T, f32>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::sgemm(
+                    p, q, r,
+                    1f32,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f32,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+        } else if same_type::<T, f64>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::dgemm(
+                    p, q, r,
+                    1f64,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f64,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+
+        } else {
+            let mut new_data = vec![[0m[36mT::zero()[0m; p * r];
+
+            unsafe {
+                for i in 0..p
+                {
+                    for k in 0..q
+                    {
+                        for j in 0..r
+                        {
+                            new_data[i*r + j] = [0m[36m*[0m[33mnew_data.get_unchecked(i*r + j)[0m[36m +
+                                                [0m[36m*self.get_unchecked([i,k]) *
+                                                *m.get_unchecked([k,j])[0m[36m[0m;
+                        }
+                    }
+                }
+            }
+
+            Matrix {
+                rows: self.rows,
+                cols: m.cols,
+                data: new_data
+            }
+        }
+    }
+[0m
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `matrix::mat_mul::<impl std::ops::Mul<&'c matrix::MatrixSlice<'a, T>> for &'b matrix::Matrix<T>>::mul`
+-> src/matrix/mat_mul.rs:20:5: 100:6
+fn mul(self, m: &$mat<T>) -> Matrix<T> {
+        assert!(self.cols == m.rows, ""Matrix dimensions do not agree."");
+
+        let p = self.rows;
+        let q = self.cols;
+        let r = m.cols;
+
+        if same_type::<T, f32>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::sgemm(
+                    p, q, r,
+                    1f32,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f32,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+        } else if same_type::<T, f64>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::dgemm(
+                    p, q, r,
+                    1f64,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f64,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+
+        } else {
+            let mut new_data = vec![[0m[36mT::zero()[0m; p * r];
+
+            unsafe {
+                for i in 0..p
+                {
+                    for k in 0..q
+                    {
+                        for j in 0..r
+                        {
+                            new_data[i*r + j] = [0m[36m*[0m[33mnew_data.get_unchecked(i*r + j)[0m[36m +
+                                                [0m[36m*self.get_unchecked([i,k]) *
+                                                *m.get_unchecked([k,j])[0m[36m[0m;
+                        }
+                    }
+                }
+            }
+
+            Matrix {
+                rows: self.rows,
+                cols: m.cols,
+                data: new_data
+            }
+        }
+    }
+[0m
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `matrix::mat_mul::<impl std::ops::Mul<&'c matrix::Matrix<T>> for &'b matrix::MatrixSlice<'a, T>>::mul`
+-> src/matrix/mat_mul.rs:20:5: 100:6
+fn mul(self, m: &$mat<T>) -> Matrix<T> {
+        assert!(self.cols == m.rows, ""Matrix dimensions do not agree."");
+
+        let p = self.rows;
+        let q = self.cols;
+        let r = m.cols;
+
+        if same_type::<T, f32>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::sgemm(
+                    p, q, r,
+                    1f32,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f32,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+        } else if same_type::<T, f64>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::dgemm(
+                    p, q, r,
+                    1f64,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f64,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+
+        } else {
+            let mut new_data = vec![[0m[36mT::zero()[0m; p * r];
+
+            unsafe {
+                for i in 0..p
+                {
+                    for k in 0..q
+                    {
+                        for j in 0..r
+                        {
+                            new_data[i*r + j] = [0m[36m*[0m[33mnew_data.get_unchecked(i*r + j)[0m[36m +
+                                                [0m[36m*self.get_unchecked([i,k]) *
+                                                *m.get_unchecked([k,j])[0m[36m[0m;
+                        }
+                    }
+                }
+            }
+
+            Matrix {
+                rows: self.rows,
+                cols: m.cols,
+                data: new_data
+            }
+        }
+    }
+[0m
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `matrix::mat_mul::<impl std::ops::Mul<&'d matrix::MatrixSlice<'b, T>> for &'c matrix::MatrixSlice<'a, T>>::mul`
+-> src/matrix/mat_mul.rs:20:5: 100:6
+fn mul(self, m: &$mat<T>) -> Matrix<T> {
+        assert!(self.cols == m.rows, ""Matrix dimensions do not agree."");
+
+        let p = self.rows;
+        let q = self.cols;
+        let r = m.cols;
+
+        if same_type::<T, f32>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::sgemm(
+                    p, q, r,
+                    1f32,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f32,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+        } else if same_type::<T, f64>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::dgemm(
+                    p, q, r,
+                    1f64,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f64,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+
+        } else {
+            let mut new_data = vec![[0m[36mT::zero()[0m; p * r];
+
+            unsafe {
+                for i in 0..p
+                {
+                    for k in 0..q
+                    {
+                        for j in 0..r
+                        {
+                            new_data[i*r + j] = [0m[36m*[0m[33mnew_data.get_unchecked(i*r + j)[0m[36m +
+                                                [0m[36m*self.get_unchecked([i,k]) *
+                                                *m.get_unchecked([k,j])[0m[36m[0m;
+                        }
+                    }
+                }
+            }
+
+            Matrix {
+                rows: self.rows,
+                cols: m.cols,
+                data: new_data
+            }
+        }
+    }
+[0m
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `matrix::mat_mul::<impl std::ops::Mul<&'d matrix::MatrixSlice<'b, T>> for &'c matrix::MatrixSliceMut<'a, T>>::mul`
+-> src/matrix/mat_mul.rs:20:5: 100:6
+fn mul(self, m: &$mat<T>) -> Matrix<T> {
+        assert!(self.cols == m.rows, ""Matrix dimensions do not agree."");
+
+        let p = self.rows;
+        let q = self.cols;
+        let r = m.cols;
+
+        if same_type::<T, f32>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::sgemm(
+                    p, q, r,
+                    1f32,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f32,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+        } else if same_type::<T, f64>() {
+            let mut new_data = Vec::with_capacity(p * r);
+
+            unsafe {
+                [0m[31mnew_data.set_len(p * r)[0m;
+
+                matrixmultiply::dgemm(
+                    p, q, r,
+                    1f64,
+                    self.as_ptr() as *const _,
+                    self.row_stride() as isize, 1,
+                    m.as_ptr() as *const _,
+                    m.row_stride() as isize, 1,
+                    0f64,
+                    new_data.as_mut_ptr() as *mut _,
+                    r as isize, 1
+                    );
+            }
+
+            Matrix {
+                rows: p,
+                cols: r,
+                data: new_data
+            }
+
+        } else {
+            let mut new_data = vec![[0m[36mT::zero()[0m; p * r];
+
+            unsafe {
+                for i in 0..p
+                {
+                    for k in 0..q
+                    {
+                        for j in 0..r
+                        {
+                            new_data[i*r + j] = [0m[36m*[0m[33mnew_data.get_unchecked(i*r + j)[0m[36m +
+                                                [0m[36m*self.get_unchecked([i,k]) *
+                                                *m.get_unchecked([k,j])[0m[36m[0m;
+                        }
+                    }
+                }
+            }
+
+            Matrix {
+                rows: self.rows,
+                cols: m.cols,
+                data: new_data
+            }
+        }
+    }
+[0m
+2024-06-21 18:12:00.541607 |WARN | [cargo_rudra] Target test:lib is not supported
+2024-06-21 18:12:00.541729 |WARN | [cargo_rudra] Target bench:lib is not supported
+2024-06-21 18:12:00.541894 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

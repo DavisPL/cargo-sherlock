@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tobin C. Harding,tcharding,https://github.com/tcharding
+************************************
+event,timestamp,downloads
+Downloads,-,10900
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,3
+************************************
+Rudra,timestamp
+"2024-06-21 17:36:32.166412 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:36:36.073794 |INFO | [rudra-progress] Running rudra for target lib:libp2p-tokio-socks5
+2024-06-21 17:37:41.039263 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:37:41.043472 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:37:41.043852 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:37:41.043866 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:37:41.128048 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:37:41.128078 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:37:42.514921 |WARN | [cargo_rudra] Target example:ping is not supported
+2024-06-21 17:37:42.515221 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

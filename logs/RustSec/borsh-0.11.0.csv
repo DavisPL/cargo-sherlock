@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,nearprotocol-ci,https://github.com/nearprotocol-ci
+************************************
+event,timestamp,downloads
+Downloads,-,16234605
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:47:09.146122 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:47:11.033497 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `time = ""^0.3.9""`
+candidate versions found which didn't match: 0.3.15, 0.3.14, 0.3.13, ...
+location searched: crates.io index
+required by package `bson v2.6.1`
+    ... which satisfies dependency `bson = ""^2""` (locked to 2.6.1) of package `borsh v0.11.0 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,78 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Low,google,safe-to-run,,0.3.14,,
+audits,-,Low,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.3.28,"There's a custom xorshift-based `random::shuffle` implementation in\nsrc/async_await/random.rs. This is `doc(hidden)` and seems to exist just so\nthat `futures-macro::select` can be unbiased. Sicne xorshift is explicitly not\nintended to be a cryptographically secure algorithm, it is not considered\ncrypto.\n",
+audits,-,Low,mozilla,safe-to-deploy,0.3.21 -> 0.3.23,,,
+audits,-,Low,mozilla,safe-to-deploy,0.3.23 -> 0.3.25,,,
+audits,-,Low,mozilla,safe-to-deploy,0.3.25 -> 0.3.26,,,
+audits,-,Low,mozilla,safe-to-deploy,0.3.26 -> 0.3.28,,,
+audits,-,Low,zcash,safe-to-deploy,0.3.25 -> 0.3.26,,"Changes to `unsafe` usage are to split `Either::project` into `Either::as_pin_ref` and\n`Either::as_pin_mut`. The new code follows the old code's pattern, and also now has SAFETY\ndocumentation.\n",
+audits,-,Low,zcash,safe-to-deploy,0.3.27 -> 0.3.28,,"- MSRV bumped to 1.56.\n- Changes to `unsafe` code are to move a function call outside an `unsafe fn`,\n  and to call the `unsafe fn` earlier. The safety requirement of being in the\n  `POLLING` state appears to be preserved.\n",
+audits,-,Low,zcash,safe-to-deploy,0.3.28 -> 0.3.29,,Only change to `unsafe` code is to add a `Fut: Send` bound to the\n`unsafe impl Sync for FuturesUnordered<Fut>`.\n,
+audits,-,Low,zcash,safe-to-deploy,0.3.29 -> 0.3.30,,"- Removes `build.rs` now that it can rely on the `target_has_atomic` attribute.\n- Almost all changes to `unsafe` blocks are to either move them around, or\n  replace them with safe method calls.\n- One new `unsafe` block is added for a slice lifetime transmutation. The slice\n  reconstruction is obviously correct. AFAICT the lifetime transmutation is also\n  correct; the slice's lifetime logically comes from the `AsyncBufRead` reader\n  inside `FillBuf`, rather than the `Context`.\n",
+************************************
+event,timestamp,name,username,url
+Author,-,Taylor Cramer,cramertj,https://github.com/cramertj
+Author,-,Taiki Endo,taiki-e,https://github.com/taiki-e
+************************************
+event,timestamp,downloads
+Downloads,-,172502027
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:49:13.409389 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:49:17.890784 |INFO | [rudra-progress] Running rudra for target lib:futures-util
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `futures_core::core_reexport`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:55:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m55[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub use futures_core::core_reexport;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno `core_reexport` in the root[0m
+
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `futures_macro::_proc_macro_hack_join_internal`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/async_await/join_mod.rs:86:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub use futures_macro::join_internal;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno `_proc_macro_hack_join_internal` in the root[0m
+
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `futures_macro::_proc_macro_hack_try_join_internal`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/async_await/join_mod.rs:90:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m90[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub use futures_macro::try_join_internal;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno `_proc_macro_hack_try_join_internal` in the root[0m
+
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `futures_macro::_proc_macro_hack_select_internal`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/async_await/select_mod.rs:314:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m314[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub use futures_macro::select_internal;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno `_proc_macro_hack_select_internal` in the root[0m
+
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `futures_macro::_proc_macro_hack_select_biased_internal`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/async_await/select_mod.rs:318:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m318[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub use futures_macro::select_biased_internal;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno `_proc_macro_hack_select_biased_internal` in the root[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/future/future/shared.rs:194:36[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m194[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match inner.notifier.state.compare_and_swap(IDLE, POLLING, SeqCst) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/future/future/shared.rs:239:48[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m239[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    match inner.notifier.state.compare_and_swap(POLLING, IDLE, SeqCst) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0432`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `futures-util` due to 5 previous errors; 2 warnings emitted
+2024-06-21 18:49:38.587047 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

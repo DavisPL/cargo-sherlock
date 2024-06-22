@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,rust-lang-owner,https://github.com/rust-lang-owner
+Author,-,website,github:rust-lang:website,https://github.com/rust-lang
+************************************
+event,timestamp,downloads
+Downloads,-,382212
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-21 17:41:23.288369 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:41:27.146738 |INFO | [rudra-progress] Running rudra for target lib:ferris_says
+[0m[1m[38;5;9merror[E0658][0m[0m[1m: deriving `Default` on enums is experimental[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/unicode-width-0.1.13/src/lib.rs:204:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m204[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: see issue #86985 <https://github.com/rust-lang/rust/issues/86985> for more information[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: add `#![feature(derive_default_enum)]` to the crate attributes to enable[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Default` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0658`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `unicode-width` due to previous error
+[0m[0m[1m[31merror[0m[1m:[0m build failed
+2024-06-21 17:41:31.288586 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

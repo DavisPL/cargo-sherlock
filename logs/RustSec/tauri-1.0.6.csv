@@ -1,0 +1,59 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,tauri,tauri-bot,https://github.com/tauri-bot
+************************************
+event,timestamp,downloads
+Downloads,-,2164035
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:54:44.481947 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:54:55.294138 |INFO | [rudra-progress] Running rudra for target lib:tauri
+[0m[0m[1m[31merror[0m[1m:[0m failed to run custom build command for `gdk-sys v0.15.1`
+
+Caused by:
+  process didn't exit successfully: `/tmp/rudra/target/debug/build/gdk-sys-6ff872dfa7793bd4/build-script-build` (exit status: 1)
+  --- stdout
+  cargo:rerun-if-env-changed=GDK_3.0_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+
+  --- stderr
+  `""pkg-config"" ""--libs"" ""--cflags"" ""gdk-3.0"" ""gdk-3.0 >= 3.22""` did not exit successfully: exit status: 1
+  error: could not find system library 'gdk-3.0' required by the 'gdk-sys' crate
+
+  --- stderr
+  Package gdk-3.0 was not found in the pkg-config search path.
+  Perhaps you should add the directory containing `gdk-3.0.pc'
+  to the PKG_CONFIG_PATH environment variable
+  No package 'gdk-3.0' found
+  Package gdk-3.0 was not found in the pkg-config search path.
+  Perhaps you should add the directory containing `gdk-3.0.pc'
+  to the PKG_CONFIG_PATH environment variable
+  No package 'gdk-3.0' found
+
+[0m[0m[1m[31merror[0m[1m:[0m build failed
+2024-06-21 18:57:04.501774 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

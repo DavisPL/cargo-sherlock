@@ -1,0 +1,84 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.8.3,,
+audits,-,Critical,mozilla,safe-to-deploy,0.8.1 -> 0.8.2,,,
+audits,-,Critical,zcash,safe-to-deploy,0.8.2 -> 0.8.3,,No new code.,
+audits,-,Critical,zcash,safe-to-deploy,0.8.3 -> 0.8.4,,,
+audits,-,Critical,zcash,safe-to-deploy,0.8.4 -> 0.8.5,,Changes to `unsafe` code look okay.,
+************************************
+event,timestamp,name,username,url
+Author,-,Jeehoon Kang,jeehoonkang,https://github.com/jeehoonkang
+Author,-,Amanieu d'Antras,Amanieu,https://github.com/Amanieu
+Author,-,Taiki Endo,taiki-e,https://github.com/taiki-e
+Author,-,admins,github:crossbeam-rs:admins,https://github.com/crossbeam-rs
+************************************
+event,timestamp,downloads
+Downloads,-,138328270
+************************************
+event,timestamp,total,flagged
+Side Effects,-,115,114
+************************************
+Rudra,timestamp
+"2024-06-21 16:11:25.640076 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:11:30.046634 |INFO | [rudra-progress] Running rudra for target lib:crossbeam-deque
+2024-06-21 16:11:41.345658 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:11:41.349462 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:11:41.369531 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:11:41.369553 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:11:41.407239 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:11:41.407259 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:1258:1: 1258:45
+unsafe impl<T: Send> Sync for Injector<T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:132:1: 132:37
+unsafe impl<T> Send for Buffer<T> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:648:1: 648:44
+unsafe impl<T: Send> Sync for Stealer<T> {}
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `<Injector<T> as std::ops::Drop>::drop`
+-> src/lib.rs:1794:5: 1826:6
+fn drop(&mut self) {
+        let mut head = self.head.index.load(Ordering::Relaxed);
+        let mut tail = self.tail.index.load(Ordering::Relaxed);
+        let mut block = self.head.block.load(Ordering::Relaxed);
+
+        // Erase the lower bits.
+        head &= !((1 << SHIFT) - 1);
+        tail &= !((1 << SHIFT) - 1);
+
+        unsafe {
+            // Drop all values between `head` and `tail` and deallocate the heap-allocated blocks.
+            while head != tail {
+                let offset = (head >> SHIFT) % LAP;
+
+                if offset < BLOCK_CAP {
+                    // Drop the task in the slot.
+                    let slot = [0m[33m(*block).slots.get_unchecked(offset)[0m;
+                    let p = &mut *slot.task.get();
+                    [0m[36mp.as_mut_ptr().drop_in_place()[0m;
+                } else {
+                    // Deallocate the block and move to the next one.
+                    let next = (*block).next.load(Ordering::Relaxed);
+                    drop(Box::from_raw(block));
+                    block = next;
+                }
+
+                head = head.wrapping_add(1 << SHIFT);
+            }
+
+            // Deallocate the last remaining block.
+            drop(Box::from_raw(block));
+        }
+    }
+[0m
+2024-06-21 16:11:42.439487 |WARN | [cargo_rudra] Target test:injector is not supported
+2024-06-21 16:11:42.439533 |WARN | [cargo_rudra] Target test:fifo is not supported
+2024-06-21 16:11:42.439538 |WARN | [cargo_rudra] Target test:lifo is not supported
+2024-06-21 16:11:42.439540 |WARN | [cargo_rudra] Target test:steal is not supported
+2024-06-21 16:11:42.439623 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

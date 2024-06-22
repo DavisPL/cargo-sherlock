@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jeremy Soller,jackpot51,https://github.com/jackpot51
+Author,-,Florian Blasius,FloVanGH,https://github.com/FloVanGH
+************************************
+event,timestamp,downloads
+Downloads,-,172970
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:55:26.364986 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:55:30.042329 |INFO | [rudra-progress] Running rudra for target lib:orbtk
+2024-06-21 17:56:06.973597 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:56:06.976954 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:56:06.980889 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:56:06.980910 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:56:06.980984 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:56:06.980989 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:56:07.488448 |WARN | [cargo_rudra] Target example:grid is not supported
+2024-06-21 17:56:07.488564 |WARN | [cargo_rudra] Target example:image is not supported
+2024-06-21 17:56:07.488573 |WARN | [cargo_rudra] Target example:canvas is not supported
+2024-06-21 17:56:07.488586 |WARN | [cargo_rudra] Target example:calculator is not supported
+2024-06-21 17:56:07.488589 |WARN | [cargo_rudra] Target example:minimal is not supported
+2024-06-21 17:56:07.488596 |WARN | [cargo_rudra] Target example:messages is not supported
+2024-06-21 17:56:07.488610 |WARN | [cargo_rudra] Target example:widgets is not supported
+2024-06-21 17:56:07.488797 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

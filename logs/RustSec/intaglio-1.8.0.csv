@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ryan Lopopolo,lopopolo,https://github.com/lopopolo
+Author,-,crates.io publishers,github:artichoke:crates-io-publishers,https://github.com/artichoke
+************************************
+event,timestamp,downloads
+Downloads,-,119868
+************************************
+event,timestamp,total,flagged
+Side Effects,-,19,17
+************************************
+Rudra,timestamp
+"2024-06-21 17:44:34.127778 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:44:38.409023 |INFO | [rudra-progress] Running rudra for target lib:intaglio
+2024-06-21 17:44:42.947225 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:44:42.951091 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:44:42.951440 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:44:42.951450 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:44:43.003222 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:44:43.003245 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:44:44.299461 |WARN | [cargo_rudra] Target test:leak_drop is not supported
+2024-06-21 17:44:44.299513 |WARN | [cargo_rudra] Target test:version_numbers is not supported
+2024-06-21 17:44:44.299606 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

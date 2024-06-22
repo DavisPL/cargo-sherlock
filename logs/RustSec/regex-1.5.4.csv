@@ -1,0 +1,64 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+trusted,-,Critical,bytecode-alliance,safe-to-deploy,,,,3
+audits,-,Critical,google,safe-to-run,,1.5.4,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,1.10.4,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,1.10.2,Reviewed in https://crrev.com/c/5171063\n\nPreviously reviewed during security review and the audit is grandparented in.\n,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.10.2 -> 1.10.3,,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.10.3 -> 1.10.4,,Docs changes only.,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.10.4 -> 1.10.5,,,
+trusted,-,Critical,isrg,safe-to-deploy,,,,3
+audits,-,Critical,mozilla,safe-to-deploy,1.5.6 -> 1.6.0,,,
+audits,-,Critical,mozilla,safe-to-deploy,1.6.0 -> 1.7.0,,,
+audits,-,Critical,mozilla,safe-to-deploy,1.7.0 -> 1.7.1,,,
+trusted,-,Critical,mozilla,safe-to-deploy,,,,3
+audits,-,Critical,zcash,safe-to-deploy,1.7.0 -> 1.7.1,,,
+audits,-,Critical,zcash,safe-to-deploy,1.7.1 -> 1.7.3,,,
+audits,-,Critical,zcash,safe-to-deploy,1.9.5 -> 1.10.2,,,
+audits,-,Critical,zcash,safe-to-deploy,1.10.2 -> 1.10.4,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Crichton,alexcrichton,https://github.com/alexcrichton
+Author,-,Andrew Gallant,BurntSushi,https://github.com/BurntSushi
+Author,-,libs,github:rust-lang:libs,https://github.com/rust-lang
+Author,-,regex-owners,github:rust-lang-nursery:regex-owners,https://github.com/rust-lang-nursery
+************************************
+event,timestamp,downloads
+Downloads,-,266259737
+************************************
+event,timestamp,total,flagged
+Side Effects,-,18,14
+************************************
+Rudra,timestamp
+"2024-06-21 16:58:16.703831 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:58:26.538750 |INFO | [rudra-progress] Running rudra for target lib:regex
+2024-06-21 16:58:55.369257 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:58:55.387257 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:58:55.472065 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:58:55.472170 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:58:55.584566 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:58:55.584733 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/pool.rs:154:1: 154:41
+unsafe impl<T: Send> Sync for Pool<T> {}
+2024-06-21 16:59:03.744543 |WARN | [cargo_rudra] Target example:shootout-regex-dna-bytes is not supported
+2024-06-21 16:59:03.744904 |WARN | [cargo_rudra] Target example:shootout-regex-dna-cheat is not supported
+2024-06-21 16:59:03.745032 |WARN | [cargo_rudra] Target example:shootout-regex-dna is not supported
+2024-06-21 16:59:03.745064 |WARN | [cargo_rudra] Target example:shootout-regex-dna-replace is not supported
+2024-06-21 16:59:03.745083 |WARN | [cargo_rudra] Target example:shootout-regex-dna-single-cheat is not supported
+2024-06-21 16:59:03.745119 |WARN | [cargo_rudra] Target example:shootout-regex-dna-single is not supported
+2024-06-21 16:59:03.745132 |WARN | [cargo_rudra] Target test:default is not supported
+2024-06-21 16:59:03.745139 |WARN | [cargo_rudra] Target test:default-bytes is not supported
+2024-06-21 16:59:03.745145 |WARN | [cargo_rudra] Target test:nfa is not supported
+2024-06-21 16:59:03.745151 |WARN | [cargo_rudra] Target test:nfa-utf8bytes is not supported
+2024-06-21 16:59:03.745166 |WARN | [cargo_rudra] Target test:nfa-bytes is not supported
+2024-06-21 16:59:03.745173 |WARN | [cargo_rudra] Target test:backtrack is not supported
+2024-06-21 16:59:03.745187 |WARN | [cargo_rudra] Target test:backtrack-utf8bytes is not supported
+2024-06-21 16:59:03.745196 |WARN | [cargo_rudra] Target test:backtrack-bytes is not supported
+2024-06-21 16:59:03.745202 |WARN | [cargo_rudra] Target test:crates-regex is not supported
+2024-06-21 16:59:03.745763 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Artyom Pavlov,newpavlov,https://github.com/newpavlov
+Author,-,utils,github:rustcrypto:utils,https://github.com/rustcrypto
+************************************
+event,timestamp,downloads
+Downloads,-,17069082
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:10:35.186751 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:10:38.169557 |INFO | [rudra-progress] Running rudra for target lib:cpuid-bool
+[0m[1m[38;5;9merror[0m[0m[1m: `cpuid-bool` is deprecated. Please switch to `cpufeatures`: https://github.com/RustCrypto/utils/tree/master/cpufeatures[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:1[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0mcompile_error!(""`cpuid-bool` is deprecated. Please switch to `cpufeatures`: https://github.com/RustCrypto/utils/tree/master/cpufeatures"");[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `cpuid-bool` due to previous error
+2024-06-21 18:10:41.749191 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

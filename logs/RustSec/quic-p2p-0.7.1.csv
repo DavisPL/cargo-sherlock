@@ -1,0 +1,2026 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,David Irvine,dirvine,https://github.com/dirvine
+Author,-,Spandan Sharma,ustulation,https://github.com/ustulation
+Author,-,,S-Coyle,https://github.com/S-Coyle
+Author,-,MaidSafe-QA,MaidSafe-QA,https://github.com/MaidSafe-QA
+************************************
+event,timestamp,downloads
+Downloads,-,45840
+************************************
+event,timestamp,total,flagged
+Side Effects,-,33,3
+************************************
+Rudra,timestamp
+"2024-06-21 18:14:43.681874 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:14:47.490343 |INFO | [rudra-progress] Running rudra for target lib:quic-p2p
+[0m[1m[33mwarning[0m[0m[1m: deny(bad_style) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:21:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    bad_style,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(forbidden_lint_groups)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(deprecated) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:22:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    deprecated,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(improper_ctypes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:23:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    improper_ctypes,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(non_shorthand_field_patterns) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:25:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    non_shorthand_field_patterns,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(stable_features) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:27:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    stable_features,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(unconditional_recursion) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:28:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m28[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unconditional_recursion,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(unknown_lints) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:29:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unknown_lints,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(unused_allocation) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:31:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m31[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unused_allocation,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(unused_attributes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:32:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unused_attributes,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(unused_comparisons) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:33:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unused_comparisons,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(unused_features) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:34:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unused_features,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(unused_parens) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:35:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unused_parens,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: deny(while_true) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:36:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    while_true,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: warn(unused) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:44:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unused,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: warn(unused_extern_crates) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:45:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unused_extern_crates,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_mut) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:150:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m150[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        #[allow(unused_mut)] // Needs to be mutable when `upnp` is enabled[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Default` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:44[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:44[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:44[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:44[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:57[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                        [0m[0m[1m[33m^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Eq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:61[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                            [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `PartialEq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_variables) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:72[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                       [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `StructOpt` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(dead_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:72[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                       [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `StructOpt` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:24:72[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone, Debug, Default, Serialize, Deserialize, Eq, PartialEq, StructOpt)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                       [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `StructOpt` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:97:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:97:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:97:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:97:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:97:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:97:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:97:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:97:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:97:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:97:41[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Eq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:97:45[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Clone, Eq, PartialEq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `PartialEq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:48[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Copy` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:54[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                     [0m[0m[1m[33m^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Eq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:164:58[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, Copy, Eq, PartialEq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `PartialEq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(dead_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/connect.rs:78:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m                select! {[0m
+[0m[1m[38;5;12m79[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                    // Terminator leaf[0m
+[0m[1m[38;5;12m80[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                    _ = terminator_rx.recv().fuse() => {[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                        handle_connect_err(node_addr, &QuicP2pError::ConnectionCancelled);[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[33m|[0m
+[0m[1m[38;5;12m89[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                    },[0m
+[0m[1m[38;5;12m90[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `$crate::select_internal` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/connection/to_peer.rs:52:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[allow(unused)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_unsafe) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/context.rs:19:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0mthread_local! {[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    pub static CTX: RefCell<Option<Context>> = RefCell::new(None);[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m}[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `$crate::__thread_local_inner` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/context.rs:37:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m37[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[allow(unused)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/dirs.rs:28:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m28[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[allow(unused)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/dirs.rs:40:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m40[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[allow(unused)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/dirs.rs:87:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[allow(unused)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:15:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Error)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:15:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Error)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Error` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/event.rs:7:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/event_loop.rs:96:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m96[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[allow(unused)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:41[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:48[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `PartialEq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:59[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                          [0m[0m[1m[33m^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Eq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer.rs:14:63[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                              [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Hash` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/utils.rs:39:14[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #![allow(unused)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:17:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:17:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:17:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:17:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:17:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:17:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:17:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:17:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:17:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:17:41[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:73:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone, Copy)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:73:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone, Copy)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:73:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone, Copy)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:73:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone, Copy)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_attributes) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:73:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone, Copy)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:73:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone, Copy)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(rust_2018_idioms) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:73:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone, Copy)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_macros) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:73:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone, Copy)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:73:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone, Copy)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:73:41[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone, Copy)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:73:48[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Serialize, Deserialize, Debug, Clone, Copy)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Copy` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unused_qualifications) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:101:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[derive(Clone)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/bootstrap_cache.rs:50:44[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            || Ok::<_, QuicP2pError>(path(&utils::project_dir()?)),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/bootstrap_cache.rs:49:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m49[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        let cache_path = user_override.map_or_else([0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m__________________________^[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m            || Ok::<_, QuicP2pError>(path(&utils::project_dir()?)),[0m
+[0m[1m[38;5;12m51[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m            |d| Ok(path(d)),[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        )?;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|__________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/bootstrap_cache.rs:55:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m55[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            utils::read_from_disk(&cache_path)?[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/bootstrap_cache.rs:57:29[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m57[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            let cache_dir = cache_path[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m_____________________________^[0m
+[0m[1m[38;5;12m58[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                .parent()[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                .ok_or_else(|| io::ErrorKind::NotFound.into())[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                .map_err(QuicP2pError::Io)?;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|___________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/bootstrap_cache.rs:61:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            fs::create_dir_all(&cache_dir)?;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/communicate.rs:78:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        connect::connect_to(node_addr, connect_and_send, None)?;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:75:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m75[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let config_path = config_path(user_override)?;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:79:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m79[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            Ok(utils::read_from_disk(&config_path)?)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:81:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            let config_dir = config_path[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m______________________________^[0m
+[0m[1m[38;5;12m82[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                .parent()[0m
+[0m[1m[38;5;12m83[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                .ok_or_else(|| io::ErrorKind::NotFound.into())[0m
+[0m[1m[38;5;12m84[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                .map_err(QuicP2pError::Io)?;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|___________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:85:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            fs::create_dir_all(&config_dir)?;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:88:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            utils::write_to_disk(&config_path, &cfg)?;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:113:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m113[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m            quinn::PrivateKey::from_der(&self.key_der)[0m
+[0m[1m[38;5;12m114[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                .map_err(|_| QuicP2pError::CertificateParseError)?,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|__________________________________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:115:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m115[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m            quinn::Certificate::from_der(&self.cert_der)[0m
+[0m[1m[38;5;12m116[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                .map_err(|_| QuicP2pError::CertificateParseError)?,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|__________________________________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:139:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m139[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let cert = base64::decode(s)?;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:140:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m140[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (cert_der, key_der) = bincode::deserialize(&cert)?;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:201:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m201[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        || Ok::<_, QuicP2pError>(path(&utils::project_dir()?)),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:200:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    let cfg_path = user_override.map_or_else([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m____________________^[0m
+[0m[1m[38;5;12m201[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        || Ok::<_, QuicP2pError>(path(&utils::project_dir()?)),[0m
+[0m[1m[38;5;12m202[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        |d| Ok(path(d)),[0m
+[0m[1m[38;5;12m203[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    )?;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|______^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/connect.rs:74:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m                c.quic_ep()[0m
+[0m[1m[38;5;12m75[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                    .connect_with(c.quic_client_cfg.clone(), &node_addr, ""MaidSAFE.net"")?;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_________________________________________________________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer_config.rs:38:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    cfg.transport = Arc::new(new_transport_cfg([0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m______________________________^[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        idle_timeout_msec,[0m
+[0m[1m[38;5;12m40[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        keep_alive_interval_msec,[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    )?);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|______^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer_config.rs:53:38[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        our_cfg.transport = Arc::new(new_transport_cfg([0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m______________________________________^[0m
+[0m[1m[38;5;12m54[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m            idle_timeout_msec,[0m
+[0m[1m[38;5;12m55[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m            keep_alive_interval_msec,[0m
+[0m[1m[38;5;12m56[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        )?);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|__________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer_config.rs:60:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    let _ = our_cfg_builder[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m_____________^[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        .certificate(quinn::CertificateChain::from_certs(vec![our_cert]), our_key)?[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|___________________________________________________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/peer_config.rs:72:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    let _ = transport_config[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m_____________^[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        .max_idle_timeout(Some(Duration::from_millis(idle_timeout_msec)))[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        .map_err(|e| QuicP2pError::Configuration { e: e.to_string() })?;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_______________________________________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/utils.rs:127:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m127[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    let dirs = directories::ProjectDirs::from(""net"", ""MaidSafe"", ""quic-p2p"")[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m________________^[0m
+[0m[1m[38;5;12m128[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        .ok_or_else(|| QuicP2pError::Io(::std::io::ErrorKind::NotFound.into()))?;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|________________________________________________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/utils.rs:206:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m206[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    Ok(File::open(file_path)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m________^[0m
+[0m[1m[38;5;12m207[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        .map_err(Into::into)[0m
+[0m[1m[38;5;12m208[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        .map(BufReader::new)[0m
+[0m[1m[38;5;12m209[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        .and_then(|mut rdr| bincode::deserialize_from(&mut rdr))?)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_________________________________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/utils.rs:217:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m    File::create(file_path)[0m
+[0m[1m[38;5;12m218[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        .map_err(Into::into)[0m
+[0m[1m[38;5;12m219[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        .map(BufWriter::new)[0m
+[0m[1m[38;5;12m220[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        .and_then(|mut rdr| bincode::serialize_into(&mut rdr, s))?;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|__________________________________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wire_msg.rs:45:56[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            Some(flag) if flag == !USER_MSG_FLAG => Ok(bincode::deserialize(&raw)?),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                       [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:154:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m154[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            Config::read_or_construct_default(None)?[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:172:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m172[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        QuicP2p::activate(&qp2p.event_tx, &mut qp2p.el, &qp2p.cfg)?;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:370:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m370[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m                let addr = self[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m____________________________^[0m
+[0m[1m[38;5;12m371[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                    .el[0m
+[0m[1m[38;5;12m372[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                    .post_and_return(move || ctx(|c| c.quic_ep().local_addr()))??;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|________________________________________________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:370:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m370[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m                let addr = self[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m____________________________^[0m
+[0m[1m[38;5;12m371[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                    .el[0m
+[0m[1m[38;5;12m372[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                    .post_and_return(move || ctx(|c| c.quic_ep().local_addr()))??;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_________________________________________________________________________________^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:395:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m395[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let cache = rx.recv()?;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:432:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m432[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            our_complete_cert.obtain_priv_key_and_cert()?[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: allow(unreachable_code) incompatible with previous forbid[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:438:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    warnings[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12m`forbid` level set here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m438[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let bootstrap_cache = BootstrapCache::new(hard_coded_contacts, custom_dirs.as_ref())?;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33moverruled by previous forbid[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #81670 <https://github.com/rust-lang/rust/issues/81670>[0m
+
+2024-06-21 18:15:40.038726 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:15:40.042680 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:15:40.043046 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:15:40.043057 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:15:40.119090 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:15:40.119118 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:15:42.368520 |WARN | [cargo_rudra] Target example:bootstrap_node is not supported
+2024-06-21 18:15:42.368676 |WARN | [cargo_rudra] Target example:client_node is not supported
+2024-06-21 18:15:42.368696 |WARN | [cargo_rudra] Target example:chat is not supported
+2024-06-21 18:15:42.368700 |WARN | [cargo_rudra] Target test:quic_p2p is not supported
+2024-06-21 18:15:42.368980 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

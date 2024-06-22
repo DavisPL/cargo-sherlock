@@ -1,0 +1,60 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nikolay Kim,fafhrd91,https://github.com/fafhrd91
+Author,-,Core,github:actix:core,https://github.com/actix
+************************************
+event,timestamp,downloads
+Downloads,-,19567228
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:50:28.447214 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:50:32.962426 |INFO | [rudra-progress] Running rudra for target lib:actix_service
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `pin_project::project`: consider naming projected type by passing `project` argument to #[pin_project] attribute instead, see release note <https://github.com/taiki-e/pin-project/releases/tag/v0.4.21> for details[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/and_then.rs:87:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[pin_project::project][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![deny(rust_2018_idioms, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[deny(deprecated)]` implied by `#[deny(warnings)]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `pin_project::project`: consider naming projected type by passing `project` argument to #[pin_project] attribute instead, see release note <https://github.com/taiki-e/pin-project/releases/tag/v0.4.21> for details[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/and_then_apply_fn.rs:126:7[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m126[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[pin_project::project][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `pin_project::project`: consider naming projected type by passing `project` argument to #[pin_project] attribute instead, see release note <https://github.com/taiki-e/pin-project/releases/tag/v0.4.21> for details[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/apply_cfg.rs:203:7[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m203[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[pin_project::project][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `pin_project::project`: consider naming projected type by passing `project` argument to #[pin_project] attribute instead, see release note <https://github.com/taiki-e/pin-project/releases/tag/v0.4.21> for details[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/then.rs:87:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[pin_project::project][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `pin_project::project`: consider naming projected type by passing `project` argument to #[pin_project] attribute instead, see release note <https://github.com/taiki-e/pin-project/releases/tag/v0.4.21> for details[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/transform.rs:231:7[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m231[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[pin_project::project][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `actix-service` due to 5 previous errors
+2024-06-21 18:50:52.190771 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

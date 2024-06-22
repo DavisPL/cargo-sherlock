@@ -1,0 +1,73 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,qwertz19281,https://github.com/qwertz19281
+************************************
+event,timestamp,downloads
+Downloads,-,3896
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:38:20.004570 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:38:24.265989 |INFO | [rudra-progress] Running rudra for target lib:qwutils
+[0m[1m[33mwarning[0m[0m[1m: unused import: `std::ops::Range`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/imp/range.rs:1:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::ops::Range;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused import: `std::ops::Sub`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/imp/range.rs:2:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::ops::Sub;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused import: `super::*`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/imp/numext.rs:1:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse super::*;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^[0m
+
+2024-06-21 18:38:29.569552 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:38:29.573966 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:38:29.574359 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:38:29.574372 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:38:29.633362 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:38:29.633393 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/CopyFlow/WriteFlow): Potential unsafe dataflow issue in `<std::vec::Vec<T> as imp::vec::VecExt<T>>::insert_slice_clone`
+-> src/imp/vec.rs:72:5: 94:6
+fn insert_slice_clone(&mut self, index: usize, slice: &[T]) where T: Clone {
+        let vlen = self.len();
+        let slen = slice.len();
+        assert!(index <= vlen);
+        assert!(slice.len() <= isize::MAX as usize); //no UB plz
+        let dlen = vlen+slen;
+
+        if dlen > self.capacity() {
+            self.reserve(slice.len());
+        }
+
+        unsafe {
+            {
+                let mut p = self.as_mut_ptr().add(index);
+                [0m[31mptr::copy(p, p.add(slen), vlen - index)[0m;
+                for v in slice {
+                    [0m[33mptr::write(p,[0m[36mv.clone()[0m[33m)[0m;
+                    p = p.offset(1);
+                }
+            }
+            [0m[31mself.set_len(dlen)[0m;
+        }
+    }
+[0m
+2024-06-21 18:38:31.191173 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

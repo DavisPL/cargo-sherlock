@@ -1,0 +1,169 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jeremy Letang,jeremyletang,https://github.com/jeremyletang
+Author,-,,mitchmindtree,https://github.com/mitchmindtree
+************************************
+event,timestamp,downloads
+Downloads,-,255409
+************************************
+event,timestamp,total,flagged
+Side Effects,-,75,33
+************************************
+Rudra,timestamp
+"2024-06-21 18:51:48.138746 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:51:52.747675 |INFO | [rudra-progress] Running rudra for target lib:portaudio
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/stream.rs:88:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0mtype CallbackFn = FnMut(*const libc::c_void,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[33m___________________^[0m
+[0m[1m[38;5;12m89[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                        *mut libc::c_void,[0m
+[0m[1m[38;5;12m90[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                        libc::c_ulong,[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                        *const ffi::C_PaStreamCallbackTimeInfo,[0m
+[0m[1m[38;5;12m92[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                        ffi::StreamCallbackFlags) -> CallbackResult;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|___________________________________________________________________^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m[1m[38;5;14mhelp[0m[0m: use `dyn`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[38;5;10m~ [0m[0mtype CallbackFn = [0m[0m[38;5;10mdyn FnMut(*const libc::c_void,[0m
+[0m[1m[38;5;12m89[0m[0m [0m[0m[38;5;10m+                         *mut libc::c_void,[0m
+[0m[1m[38;5;12m90[0m[0m [0m[0m[38;5;10m+                         libc::c_ulong,[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[38;5;10m+                         *const ffi::C_PaStreamCallbackTimeInfo,[0m
+[0m[1m[38;5;12m92[0m[0m [0m[0m[38;5;10m~                         ffi::StreamCallbackFlags) -> CallbackResult[0m[0m;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/stream.rs:672:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m672[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m    bitflags! {[0m
+[0m[1m[38;5;12m673[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        /// Flags used to control the behaviour of a stream. They are passed as parameters to[0m
+[0m[1m[38;5;12m674[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        /// Stream::open or Stream::open_default. Multiple flags may be used together.[0m
+[0m[1m[38;5;12m675[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        ///[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[33m|[0m
+[0m[1m[38;5;12m693[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        }[0m
+[0m[1m[38;5;12m694[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_____^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `bitflags` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/stream.rs:672:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m672[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m    bitflags! {[0m
+[0m[1m[38;5;12m673[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        /// Flags used to control the behaviour of a stream. They are passed as parameters to[0m
+[0m[1m[38;5;12m674[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        /// Stream::open or Stream::open_default. Multiple flags may be used together.[0m
+[0m[1m[38;5;12m675[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        ///[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[33m|[0m
+[0m[1m[38;5;12m693[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        }[0m
+[0m[1m[38;5;12m694[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_____^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `bitflags` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/stream.rs:726:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m726[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m    bitflags! {[0m
+[0m[1m[38;5;12m727[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        /// Flag bit constants for the status flags passed to the stream's callback function.[0m
+[0m[1m[38;5;12m728[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        pub flags CallbackFlags: u64 {[0m
+[0m[1m[38;5;12m729[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m            /// No flags.[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[33m|[0m
+[0m[1m[38;5;12m749[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        }[0m
+[0m[1m[38;5;12m750[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_____^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `bitflags` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:187:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m187[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m    bitflags! {[0m
+[0m[1m[38;5;12m188[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        /// A type used to specify one or more sample formats. Each value indicates a possible[0m
+[0m[1m[38;5;12m189[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        /// format for sound data passed to and from the stream callback, Pa_ReadStream and[0m
+[0m[1m[38;5;12m190[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        /// Pa_WriteStream.[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[33m|[0m
+[0m[1m[38;5;12m220[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        }[0m
+[0m[1m[38;5;12m221[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_____^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `bitflags` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:198:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m198[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            total: try!(self.device_count()),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:494:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m494[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let device = try!(self.default_input_device());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:495:23[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m495[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let latency = try!(self.device_info(device)).default_low_input_latency;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:508:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m508[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let device = try!(self.default_output_device());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:509:23[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m509[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let latency = try!(self.device_info(device)).default_low_output_latency;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:525:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m525[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let params = try!(self.default_input_stream_params(channels));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:541:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m541[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let params = try!(self.default_output_stream_params(channels));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:558:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m558[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let in_params = try!(self.default_input_stream_params(in_channels));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:559:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m559[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let out_params = try!(self.default_output_stream_params(out_channels));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+
+2024-06-21 18:53:21.412011 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:53:21.416082 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:53:21.417070 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:53:21.417082 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:53:21.483157 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:53:21.483195 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:53:22.862019 |WARN | [cargo_rudra] Target example:sine is not supported
+2024-06-21 18:53:22.862150 |WARN | [cargo_rudra] Target example:hosts is not supported
+2024-06-21 18:53:22.862166 |WARN | [cargo_rudra] Target example:non_blocking is not supported
+2024-06-21 18:53:22.862169 |WARN | [cargo_rudra] Target example:saw is not supported
+2024-06-21 18:53:22.862179 |WARN | [cargo_rudra] Target example:devices is not supported
+2024-06-21 18:53:22.862195 |WARN | [cargo_rudra] Target example:blocking is not supported
+2024-06-21 18:53:22.862203 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 18:53:22.862370 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,376 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Stefan Bühler,stbuehler,https://github.com/stbuehler
+************************************
+event,timestamp,downloads
+Downloads,-,2250464
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:48:54.315068 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:48:57.306531 |INFO | [rudra-progress] Running rudra for target lib:boxfnonce
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/no_send.rs:50:55[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct BoxFnOnce<'a, Arguments, Result = ()> (Box<FnBox<Arguments, Result> + 'a>);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<Arguments, Result> + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/no_send.rs:72:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(BoxFnOnce[]: );[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/no_send.rs:73:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(BoxFnOnce[]: a1: A1);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/no_send.rs:74:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(BoxFnOnce[]: a1: A1, a2: A2);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/no_send.rs:75:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m75[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(BoxFnOnce[]: a1: A1, a2: A2, a3: A3);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/no_send.rs:76:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(BoxFnOnce[]: a1: A1, a2: A2, a3: A3, a4: A4);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/no_send.rs:77:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m77[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(BoxFnOnce[]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/no_send.rs:78:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(BoxFnOnce[]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5, a6: A6);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/no_send.rs:79:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m79[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(BoxFnOnce[]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5, a6: A6, a7: A7);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/no_send.rs:80:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m80[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(BoxFnOnce[]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5, a6: A6, a7: A7, a8: A8);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/no_send.rs:81:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(BoxFnOnce[]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5, a6: A6, a7: A7, a8: A8, a9: A9);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/no_send.rs:82:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m82[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(BoxFnOnce[]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5, a6: A6, a7: A7, a8: A8, a9: A9, a10: A10);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/send.rs:41:70[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct SendBoxFnOnce<'a, Arguments, Result = ()> (pub(crate) Box<FnBox<Arguments, Result> + Send + 'a>);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                     [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<Arguments, Result> + Send + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/send.rs:63:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(SendBoxFnOnce[+Send]: );[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/send.rs:64:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m64[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(SendBoxFnOnce[+Send]: a1: A1);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/send.rs:65:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m65[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(SendBoxFnOnce[+Send]: a1: A1, a2: A2);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m---------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/send.rs:66:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m66[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(SendBoxFnOnce[+Send]: a1: A1, a2: A2, a3: A3);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/send.rs:67:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(SendBoxFnOnce[+Send]: a1: A1, a2: A2, a3: A3, a4: A4);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/send.rs:68:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(SendBoxFnOnce[+Send]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m---------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/send.rs:69:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(SendBoxFnOnce[+Send]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5, a6: A6);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/send.rs:70:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(SendBoxFnOnce[+Send]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5, a6: A6, a7: A7);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/send.rs:71:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(SendBoxFnOnce[+Send]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5, a6: A6, a7: A7, a8: A8);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m---------------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/send.rs:72:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(SendBoxFnOnce[+Send]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5, a6: A6, a7: A7, a8: A8, a9: A9);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/macros.rs:24:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                $name(Box::new(func) as Box<FnBox<($($typevar,)*), Result> $($add)* + 'a>)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnBox<($($typevar,)*), Result> $($add)* + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/send.rs:73:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0mbuild_n_args!(SendBoxFnOnce[+Send]: a1: A1, a2: A2, a3: A3, a4: A4, a5: A5, a6: A6, a7: A7, a8: A8, a9: A9, a10: A10);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m---------------------------------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `build_n_args` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+2024-06-21 17:49:01.287375 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:49:01.291178 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:49:01.291511 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:49:01.291519 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:49:01.311122 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:49:01.311137 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:49:02.167103 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

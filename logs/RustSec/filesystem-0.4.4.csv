@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Isobel Redelmeier,iredelmeier,https://github.com/iredelmeier
+************************************
+event,timestamp,downloads
+Downloads,-,475746
+************************************
+event,timestamp,total,flagged
+Side Effects,-,153,11
+************************************
+Rudra,timestamp
+"2024-06-21 17:39:26.606317 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:39:30.503895 |INFO | [rudra-progress] Running rudra for target lib:filesystem
+2024-06-21 17:39:39.295340 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:39:39.299291 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:39:39.299661 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:39:39.299672 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:39:39.320532 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:39:39.320553 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:39:40.455052 |WARN | [cargo_rudra] Target test:fs is not supported
+2024-06-21 17:39:40.455223 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

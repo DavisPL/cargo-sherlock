@@ -1,0 +1,65 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Eduardo Pinho,Enet4,https://github.com/Enet4
+************************************
+event,timestamp,downloads
+Downloads,-,1770
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,4
+************************************
+Rudra,timestamp
+"2024-06-21 16:17:26.021882 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:17:28.980590 |INFO | [rudra-progress] Running rudra for target lib:bra
+[0m[1m[33mwarning[0m[0m[1m: unused borrow that must be used[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:217:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        &mut buf[..len].copy_from_slice(&self.buf[self.consumed..self.consumed + len]);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mthe borrow produces a value[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_must_use)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: use `let _ = ...` to ignore the resulting value[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[38;5;10mlet _ = [0m[0m&mut buf[..len].copy_from_slice(&self.buf[self.consumed..self.consumed + len]);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[38;5;10m+++++++[0m
+
+2024-06-21 16:17:32.935004 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:17:32.938726 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:17:32.939037 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:17:32.939046 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:17:32.990478 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:17:32.990509 |INFO | [rudra-progress] Rudra finished
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `<GreedyBufReader<R> as std::io::BufRead>::fill_buf`
+-> src/lib.rs:227:5: 249:6
+fn fill_buf(&mut self) -> IoResult<&[u8]> {
+        if self.buf.capacity() == self.consumed {
+            self.reserve_up_to(self.buf.capacity() + 16);
+        }
+
+        let b = self.buf.len();
+        unsafe {
+            // safe because it's within the buffer's limits
+            // and we won't be reading uninitialized memory
+            [0m[31mself.buf.set_len(self.buf.capacity())[0m;
+        }
+        let buf = &mut self.buf[b..];
+
+        match [0m[36mself.inner.read(buf)[0m {
+            Ok(o) => {
+                // take off the unwritten portion
+                self.buf.truncate(b + o);
+
+                Ok(&self.buf[self.consumed..])
+            }
+            Err(e) => Err(e),
+        }
+    }
+[0m
+2024-06-21 16:17:33.864122 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

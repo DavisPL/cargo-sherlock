@@ -1,0 +1,41 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Steffen Butzer,steffengy,https://github.com/steffengy
+Author,-,Julius de Bruijn,pimeys,https://github.com/pimeys
+Author,-,Tom Houlé,tomhoule,https://github.com/tomhoule
+Author,-,Flavian Desverne,Weakky,https://github.com/Weakky
+Author,-,Miguel Fernández,miguelff,https://github.com/miguelff
+************************************
+event,timestamp,downloads
+Downloads,-,2280974
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:19:00.475589 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:19:04.802161 |INFO | [rudra-progress] Running rudra for target lib:tiberius
+2024-06-21 18:29:38.376145 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:29:38.380822 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:29:38.381229 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:29:38.381242 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:29:38.607726 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:29:38.607761 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:29:43.230780 |WARN | [cargo_rudra] Target example:bulk is not supported
+2024-06-21 18:29:43.230928 |WARN | [cargo_rudra] Target example:tokio is not supported
+2024-06-21 18:29:43.230941 |WARN | [cargo_rudra] Target example:aad-auth is not supported
+2024-06-21 18:29:43.230962 |WARN | [cargo_rudra] Target example:async-std is not supported
+2024-06-21 18:29:43.230972 |WARN | [cargo_rudra] Target test:query is not supported
+2024-06-21 18:29:43.230987 |WARN | [cargo_rudra] Target test:named-instance-async is not supported
+2024-06-21 18:29:43.230998 |WARN | [cargo_rudra] Target test:named-instance-tokio is not supported
+2024-06-21 18:29:43.231000 |WARN | [cargo_rudra] Target test:named-instance-smol is not supported
+2024-06-21 18:29:43.231002 |WARN | [cargo_rudra] Target test:bulk is not supported
+2024-06-21 18:29:43.231008 |WARN | [cargo_rudra] Target test:custom-cert is not supported
+2024-06-21 18:29:43.231198 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

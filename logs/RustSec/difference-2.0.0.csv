@@ -1,0 +1,47 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Johann Hofmann,johannhof,https://github.com/johannhof
+************************************
+event,timestamp,downloads
+Downloads,-,20605428
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:12:57.158142 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:13:00.947934 |INFO | [rudra-progress] Running rudra for target lib:difference
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/display.rs:11:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m11[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(f, ""{}{}"", x, self.split));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:37:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m37[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![deny(warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[deny(deprecated)]` implied by `#[deny(warnings)]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/display.rs:14:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(f, ""\x1b[92m{}\x1b[0m{}"", x, self.split));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/display.rs:17:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(f, ""\x1b[91m{}\x1b[0m{}"", x, self.split));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `difference` due to 3 previous errors
+2024-06-21 18:13:04.920823 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

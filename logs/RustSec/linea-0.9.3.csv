@@ -1,0 +1,180 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,M Farkas-Dyck,strake,https://github.com/strake
+************************************
+event,timestamp,downloads
+Downloads,-,21581
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:25:43.945406 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:25:55.772822 |INFO | [rudra-progress] Running rudra for target lib:linea
+[0m[1m[38;5;9merror[E0557][0m[0m[1m: feature has been removed[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:3:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![feature(const_fn)][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mfeature has been removed[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: split into finer-grained feature gates[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unknown lint: `unions_with_drop_fields`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:96:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m96[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        #[allow(unions_with_drop_fields)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unknown_lints)]` on by default[0m
+
+[0m[1m[38;5;9merror[E0659][0m[0m[1m: `Zero` is ambiguous (glob import vs glob import in the same module)[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/projective.rs:8:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  where A: Zero + One,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mambiguous name[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: `Zero` could refer to the trait imported here[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/projective.rs:2:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse typenum::*;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;10m^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: consider adding an explicit import of `Zero` to disambiguate[0m
+[0m[1m[38;5;10mnote[0m[0m: `Zero` could also refer to the trait imported here[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/projective.rs:4:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse super::*;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: consider adding an explicit import of `Zero` to disambiguate[0m
+
+[0m[1m[38;5;9merror[E0659][0m[0m[1m: `Zero` is ambiguous (glob import vs glob import in the same module)[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/projective.rs:29:12[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  where A: Zero + One,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mambiguous name[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: `Zero` could refer to the trait imported here[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/projective.rs:2:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m  [0m[0m[1m[38;5;12m| [0m[0muse typenum::*;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;10m^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: consider adding an explicit import of `Zero` to disambiguate[0m
+[0m[1m[38;5;10mnote[0m[0m: `Zero` could also refer to the trait imported here[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/projective.rs:4:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m  [0m[0m[1m[38;5;12m| [0m[0muse super::*;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: consider adding an explicit import of `Zero` to disambiguate[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:192:68[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m192[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut c: GenericArray<GenericArray<C, M>, N> = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                   [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:107:72[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m107[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut c: GenericArray<GenericArray<A, M>, M> = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:133:72[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m133[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut c: GenericArray<GenericArray<A, N>, M> = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:150:67[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m150[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut c: GenericArray<GenericArray<A, M>, N> = mem::uninitialized();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                  [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:176:72[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m176[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut c: GenericArray<GenericArray<B, M>, N> = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:202:72[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m202[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut c: GenericArray<GenericArray<A, M>, N> = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:248:72[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m248[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut c: GenericArray<GenericArray<A, N>, N> = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:261:80[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m261[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut c: GenericArray<GenericArray<A::Output, M>, N> = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                               [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/projective.rs:11:66[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m11[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut c: Array<Array<A, Add1<N>>, Add1<N>> = unsafe { mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                 [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/projective.rs:33:66[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut c: Array<Array<A, Add1<N>>, Add1<N>> = unsafe { mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                 [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[E0740][0m[0m[1m: unions may not contain fields that need dropping[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:97:77[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        union U<A, M: ArrayLength<A>, N: ArrayLength<GenericArray<A, M>>> { a: Matrix<A, M, N> }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: `std::mem::ManuallyDrop` can be used to wrap the type[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:97:77[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        union U<A, M: ArrayLength<A>, N: ArrayLength<GenericArray<A, M>>> { a: Matrix<A, M, N> }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                            [0m[0m[1m[38;5;10m^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no function or associated item named `zero` found for type parameter `A` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/projective.rs:19:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                A::zero[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mfunction or associated item not found in `A`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the type parameter is bounded by the trait[0m
+[0m[1m[38;5;14mhelp[0m[0m: the following traits define an item `zero`, perhaps you need to restrict type parameter `A` with one of them:[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mpub fn translate<[0m[0m[38;5;10mA: idem::Zero + [0m[0mCopy, N>(a: Matrix<A, N>) -> Matrix<A, Add1<N>, Add1<N>>[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[38;5;10m~~~~~~~~~~~~~~~[0m
+[0m[1m[38;5;12m7[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mpub fn translate<[0m[0m[38;5;10mA: num_traits::identities::Zero + [0m[0mCopy, N>(a: Matrix<A, N>) -> Matrix<A, Add1<N>, Add1<N>>[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[38;5;10m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no function or associated item named `zero` found for type parameter `A` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/projective.rs:41:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                A::zero[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mfunction or associated item not found in `A`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the type parameter is bounded by the trait[0m
+[0m[1m[38;5;14mhelp[0m[0m: the following traits define an item `zero`, perhaps you need to restrict type parameter `A` with one of them:[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m28[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub fn transform_linear<[0m[0m[38;5;10mA: idem::Zero + [0m[0mCopy, N>(a: Matrix<A, N, N>) -> Matrix<A, Add1<N>, Add1<N>>[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[38;5;10m~~~~~~~~~~~~~~~[0m
+[0m[1m[38;5;12m28[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub fn transform_linear<[0m[0m[38;5;10mA: num_traits::identities::Zero + [0m[0mCopy, N>(a: Matrix<A, N, N>) -> Matrix<A, Add1<N>, Add1<N>>[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[38;5;10m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[0m[1mSome errors have detailed explanations: E0557, E0599, E0659, E0740.[0m
+[0m[1mFor more information about an error, try `rustc --explain E0557`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `linea` due to 6 previous errors; 11 warnings emitted
+2024-06-21 16:26:32.426115 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

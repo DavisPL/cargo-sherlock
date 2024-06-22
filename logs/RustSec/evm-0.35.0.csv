@@ -1,0 +1,23 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Wei Tang,sorpaas,https://github.com/sorpaas
+Author,-,Core devs,github:paritytech:core-devs,https://github.com/paritytech
+************************************
+event,timestamp,downloads
+Downloads,-,735160
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-21 16:53:57.236933 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:54:07.501349 |INFO | [rudra-progress] Running rudra for target lib:evm
+[0m[0m[1m[31merror[0m[1m:[0m package `scale-info-derive v2.11.2` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:54:18.364169 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

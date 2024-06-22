@@ -1,0 +1,36 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jeremy Soller,jackpot51,https://github.com/jackpot51
+Author,-,,ticki,https://github.com/ticki
+Author,-,Tom Almeida,Tommoa,https://github.com/Tommoa
+************************************
+event,timestamp,downloads
+Downloads,-,128119
+************************************
+event,timestamp,total,flagged
+Side Effects,-,12,11
+************************************
+Rudra,timestamp
+"2024-06-21 18:17:37.990508 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:17:41.695310 |INFO | [rudra-progress] Running rudra for target lib:lz4-compress
+2024-06-21 18:17:46.465818 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:17:46.469482 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:17:46.469812 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:17:46.469823 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:17:46.489377 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:17:46.489408 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:17:47.540635 |INFO | [rudra-progress] Running rudra for target bin:lz4-compress
+2024-06-21 18:17:48.324450 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:17:48.328157 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:17:48.329625 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:17:48.329635 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:17:48.330849 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:17:48.330857 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:17:48.376339 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

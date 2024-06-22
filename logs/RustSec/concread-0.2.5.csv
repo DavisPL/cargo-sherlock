@@ -1,0 +1,1222 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Firstyear,Firstyear,https://github.com/Firstyear
+************************************
+event,timestamp,downloads
+Downloads,-,170798
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:43:38.767540 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:43:42.168215 |INFO | [rudra-progress] Running rudra for target lib:concread
+[0m[1m[33mwarning[0m[0m[1m: type `u64x8` should have an upper camel case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:43:12[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct u64x8 {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to upper camel case (notice the capitalization): `U64x8`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_camel_case_types)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/macros.rs:15:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        unsafe { &mut *($x as *mut Meta) }[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0msrc/hashmap/cursor.rs:996:1[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m996[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0munsafe fn path_get_slot_mut_ref<'a, K: Clone + Hash + Eq + Debug, V: Clone>([0m
+[0m[1m[38;5;12m997[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    node: *mut Node<K, V>,[0m
+[0m[1m[38;5;12m998[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    h: u64,[0m
+[0m[1m[38;5;12m999[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m) -> Option<&'a mut [Datum<K, V>]>[0m
+[0m[1m[38;5;12m1000[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m1001[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    K: 'a,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m1002[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m{[0m
+[0m[1m[38;5;12m1003[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    if self_meta!(node).is_leaf() {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;12m----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_unsafe)]` on by default[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `self_meta` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/macros.rs:21:23[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        debug_assert!(unsafe { (*$x).meta.is_branch() });[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0msrc/hashmap/cursor.rs:996:1[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m996[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0munsafe fn path_get_slot_mut_ref<'a, K: Clone + Hash + Eq + Debug, V: Clone>([0m
+[0m[1m[38;5;12m997[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    node: *mut Node<K, V>,[0m
+[0m[1m[38;5;12m998[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    h: u64,[0m
+[0m[1m[38;5;12m999[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m) -> Option<&'a mut [Datum<K, V>]>[0m
+[0m[1m[38;5;12m1000[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m1001[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    K: 'a,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1007[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        let nmref = branch_ref!(node, K, V);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;12m-----------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `branch_ref` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/macros.rs:22:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m22[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        unsafe { &mut *($x as *mut Branch<$k, $v>) }[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0msrc/hashmap/cursor.rs:996:1[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m996[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0munsafe fn path_get_slot_mut_ref<'a, K: Clone + Hash + Eq + Debug, V: Clone>([0m
+[0m[1m[38;5;12m997[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    node: *mut Node<K, V>,[0m
+[0m[1m[38;5;12m998[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    h: u64,[0m
+[0m[1m[38;5;12m999[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m) -> Option<&'a mut [Datum<K, V>]>[0m
+[0m[1m[38;5;12m1000[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m1001[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    K: 'a,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1007[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        let nmref = branch_ref!(node, K, V);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;12m-----------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `branch_ref` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/macros.rs:28:23[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m28[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        debug_assert!(unsafe { (*$x).meta.is_leaf() });[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0msrc/hashmap/cursor.rs:996:1[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m996[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0munsafe fn path_get_slot_mut_ref<'a, K: Clone + Hash + Eq + Debug, V: Clone>([0m
+[0m[1m[38;5;12m997[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    node: *mut Node<K, V>,[0m
+[0m[1m[38;5;12m998[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    h: u64,[0m
+[0m[1m[38;5;12m999[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m) -> Option<&'a mut [Datum<K, V>]>[0m
+[0m[1m[38;5;12m1000[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m1001[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    K: 'a,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1004[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        leaf_ref!(node, K, V).get_slot_mut_ref(h)[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;12m---------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `leaf_ref` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/macros.rs:29:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        unsafe { &mut *($x as *mut Leaf<$k, $v>) }[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0msrc/hashmap/cursor.rs:996:1[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m996[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0munsafe fn path_get_slot_mut_ref<'a, K: Clone + Hash + Eq + Debug, V: Clone>([0m
+[0m[1m[38;5;12m997[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    node: *mut Node<K, V>,[0m
+[0m[1m[38;5;12m998[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    h: u64,[0m
+[0m[1m[38;5;12m999[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m) -> Option<&'a mut [Datum<K, V>]>[0m
+[0m[1m[38;5;12m1000[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m1001[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    K: 'a,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1004[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        leaf_ref!(node, K, V).get_slot_mut_ref(h)[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;12m---------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `leaf_ref` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `tree_density`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/cursor.rs:477:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m477[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn tree_density(&self) -> (usize, usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `get_txid`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/node.rs:255:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m255[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn get_txid(&self) -> u64 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `is_branch`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/node.rs:265:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m265[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn is_branch(&self) -> bool {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `tree_density`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/node.rs:269:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m269[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn tree_density(&self) -> (usize, usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `set_count`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/node.rs:489:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m489[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn set_count(&mut self, c: usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `set_count`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/node.rs:824:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m824[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn set_count(&mut self, c: usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `pin`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/mod.rs:61:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pin: Arc<SuperBlock<K, V>>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `get_txid`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/mod.rs:269:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m269[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn get_txid(&self) -> u64 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `get_txid`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/mod.rs:436:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m436[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn get_txid(&self) -> u64 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `tree_density`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/cursor.rs:424:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m424[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn tree_density(&self) -> (usize, usize, usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `pin`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/map.rs:73:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pin: Arc<SuperBlock<K, V>>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `data`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:44:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    data: [u64; 8],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `get_txid`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:287:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m287[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn get_txid(&self) -> u64 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `is_branch`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:297:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m297[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn is_branch(&self) -> bool {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `tree_density`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:301:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m301[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn tree_density(&self) -> (usize, usize, usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `set_slots`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:523:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m523[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn set_slots(&mut self, c: usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `set_slots`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:961:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m961[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn set_slots(&mut self, c: usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+2024-06-21 18:43:59.368897 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:43:59.372936 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:43:59.396802 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:43:59.396829 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:43:59.496686 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:43:59.496717 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/arcache/mod.rs:199:1: 199:103
+unsafe impl<K: Hash + Eq + Ord + Clone + Debug, V: Clone + Debug> Send for ARCacheReadTxn<'_, K, V> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/arcache/mod.rs:200:1: 200:103
+unsafe impl<K: Hash + Eq + Ord + Clone + Debug, V: Clone + Debug> Sync for ARCacheReadTxn<'_, K, V> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/arcache/mod.rs:167:1: 167:92
+unsafe impl<K: Hash + Eq + Ord + Clone + Debug, V: Clone + Debug> Send for ARCache<K, V> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/arcache/mod.rs:168:1: 168:92
+unsafe impl<K: Hash + Eq + Ord + Clone + Debug, V: Clone + Debug> Sync for ARCache<K, V> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/bptree/mod.rs:49:1: 49:74
+unsafe impl<K: Clone + Ord + Debug, V: Clone> Send for BptreeMap<K, V> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/bptree/mod.rs:50:1: 50:74
+unsafe impl<K: Clone + Ord + Debug, V: Clone> Sync for BptreeMap<K, V> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/hashmap/map.rs:61:1: 61:78
+unsafe impl<K: Hash + Eq + Clone + Debug, V: Clone> Send for HashMap<K, V> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/hashmap/map.rs:62:1: 62:78
+unsafe impl<K: Hash + Eq + Clone + Debug, V: Clone> Sync for HashMap<K, V> {}
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `bptree::node::Leaf::<K, V>::req_clone`
+-> src/bptree/node.rs:562:5: 594:6
+pub(crate) fn req_clone(&self, txid: u64) -> Option<*mut Node<K, V>> {
+        debug_assert_leaf!(self);
+        debug_assert!(txid < (TXID_MASK >> TXID_SHF));
+        if self.get_txid() == txid {
+            // Same txn, no action needed.
+            None
+        } else {
+            // println!(""Req clone leaf"");
+            // debug_assert!(false);
+            // Diff txn, must clone.
+            let new_txid = (self.meta.0 & (FLAG_MASK | COUNT_MASK)) | (txid << TXID_SHF);
+            let mut x: Box<CachePadded<Leaf<K, V>>> = Box::new(CachePadded::new(Leaf {
+                // Need to preserve count.
+                meta: Meta(new_txid),
+                key: unsafe { MaybeUninit::uninit().assume_init() },
+                values: unsafe { MaybeUninit::uninit().assume_init() },
+                #[cfg(all(test, not(miri)))]
+                nid: alloc_nid(),
+            }));
+
+            // Copy in the values to the correct location.
+            for idx in 0..self.count() {
+                unsafe {
+                    let lkey = [0m[36m(*self.key[idx].as_ptr()).clone()[0m;
+                    [0m[33mx.key[idx].as_mut_ptr().write(lkey)[0m;
+                    let lvalue = [0m[36m(*self.values[idx].as_ptr()).clone()[0m;
+                    [0m[33mx.values[idx].as_mut_ptr().write(lvalue)[0m;
+                }
+            }
+
+            Some(Box::into_raw(x) as *mut Node<K, V>)
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `bptree::node::Branch::<K, V>::req_clone`
+-> src/bptree/node.rs:867:5: 894:6
+pub(crate) fn req_clone(&self, txid: u64) -> Option<*mut Node<K, V>> {
+        debug_assert_branch!(self);
+        if self.get_txid() == txid {
+            // Same txn, no action needed.
+            None
+        } else {
+            // println!(""Req clone branch"");
+            // Diff txn, must clone.
+            let new_txid = (self.meta.0 & (FLAG_MASK | COUNT_MASK)) | (txid << TXID_SHF);
+            let mut x: Box<CachePadded<Branch<K, V>>> = Box::new(CachePadded::new(Branch {
+                // Need to preserve count.
+                meta: Meta(new_txid),
+                key: unsafe { MaybeUninit::uninit().assume_init() },
+                // We can simply clone the pointers.
+                nodes: self.nodes.clone(),
+                #[cfg(all(test, not(miri)))]
+                nid: alloc_nid(),
+            }));
+            // Copy in the keys to the correct location.
+            for idx in 0..self.count() {
+                unsafe {
+                    let lkey = [0m[36m(*self.key[idx].as_ptr()).clone()[0m;
+                    [0m[33mx.key[idx].as_mut_ptr().write(lkey)[0m;
+                }
+            }
+            Some(Box::into_raw(x) as *mut Node<K, V>)
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `bptree::node::Branch::<K, V>::add_node`
+-> src/bptree/node.rs:945:5: 1090:6
+pub(crate) fn add_node(&mut self, node: *mut Node<K, V>) -> BranchInsertState<K, V> {
+        debug_assert_branch!(self);
+        // do we have space?
+        if self.count() == L_CAPACITY {
+            // if no space ->
+            //    split and send two nodes back for new branch
+            // There are three possible states that this causes.
+            // 1 * The inserted node is the greater than all current values, causing l(max, node)
+            //     to be returned.
+            // 2 * The inserted node is between max - 1 and max, causing l(node, max) to be returned.
+            // 3 * The inserted node is a low/middle value, causing max and max -1 to be returned.
+            //
+            let kr = unsafe { (*node).min() };
+            let r = key_search!(self, kr);
+            let ins_idx = r.unwrap_err();
+            // Everything will pop max.
+            let max = unsafe { *[0m[33m(self.nodes.get_unchecked(BV_CAPACITY - 1))[0m };
+            let res = match ins_idx {
+                // Case 1
+                L_CAPACITY => {
+                    // println!(""case 1"");
+                    // Greater than all current values, so we'll just return max and node.
+                    let _kdrop =
+                        unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                    // Now setup the ret val NOTICE compared to case 2 that we swap node and max?
+                    BranchInsertState::Split(max, node)
+                }
+                // Case 2
+                L_CAPACITY_N1 => {
+                    // println!(""case 2"");
+                    // Greater than all but max, so we return max and node in the correct order.
+                    // Drop the key between them.
+                    let _kdrop =
+                        unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                    // Now setup the ret val NOTICE compared to case 1 that we swap node and max?
+                    BranchInsertState::Split(node, max)
+                }
+                // Case 3
+                ins_idx => {
+                    // Get the max - 1 and max nodes out.
+                    let maxn1 = unsafe { *[0m[33m(self.nodes.get_unchecked(BV_CAPACITY - 2))[0m };
+                    // Drop the key between them.
+                    let _kdrop =
+                        unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                    // Drop the key before us that we are about to replace.
+                    let _kdrop =
+                        unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 2)[0m[31m)[0m.assume_init() };
+                    // Add node and it's key to the correct location.
+                    let k: K = [0m[36mkr.clone()[0m;
+                    let leaf_ins_idx = ins_idx + 1;
+                    unsafe {
+                        slice_insert(&mut self.key, MaybeUninit::new(k), ins_idx);
+                        slice_insert(&mut self.nodes, node, leaf_ins_idx);
+                    }
+
+                    BranchInsertState::Split(maxn1, max)
+                }
+            };
+            // Dec count as we always reduce branch by one as we split return
+            // two.
+            self.dec_count();
+            res
+        } else {
+            // if space ->
+            // Get the nodes min-key - we clone it because we'll certainly be inserting it!
+            let k: K = unsafe { [0m[36m(*node).min().clone()[0m };
+            // bst and find when min-key < key[idx]
+            let r = key_search!(self, &k);
+            // if r is ever found, I think this is a bug, because we should never be able to
+            // add a node with an existing min.
+            //
+            //       [ 5 ]
+            //        / \
+            //    [0,]   [5,]
+            //
+            // So if we added here to [0, ], and it had to overflow to split, then everything
+            // must be < 5. Why? Because to get to [0,] as your insert target, you must be < 5.
+            // if we added to [5,] then a split must be greater than, or the insert would replace 5.
+            //
+            // if we consider
+            //
+            //       [ 5 ]
+            //        / \
+            //    [0,]   [7,]
+            //
+            // Now we insert 5, and 7, splits. 5 would remain in the tree and we'd split 7 to the right
+            //
+            // As a result, any ""Ok(idx)"" must represent a corruption of the tree.
+            // debug_assert!(r.is_err());
+            let ins_idx = r.unwrap_err();
+            let leaf_ins_idx = ins_idx + 1;
+            // So why do we only need to insert right? Because the left-most
+            // leaf when it grows, it splits to the right. That importantly
+            // means that we only need to insert to replace the min and it's
+            // right leaf, or anything higher. As a result, we are always
+            // targetting ins_idx and leaf_ins_idx = ins_idx + 1.
+            //
+            // We have a situation like:
+            //
+            //   [1, 3, 9, 18]
+            //
+            // and ins_idx is 2. IE:
+            //
+            //   [1, 3, 9, 18]
+            //          ^-- k=6
+            //
+            // So this we need to shift those r-> and insert.
+            //
+            //   [1, 3, x, 9, 18]
+            //          ^-- k=6
+            //
+            //   [1, 3, 6, 9, 18]
+            //
+            // Now we need to consider the leaves too:
+            //
+            //   [1, 3, 9, 18]
+            //   | |  |  |   |
+            //   v v  v  v   v
+            //   0 1  3  9   18
+            //
+            // So that means we need to move leaf_ins_idx = (ins_idx + 1)
+            // right also
+            //
+            //   [1, 3, x, 9, 18]
+            //   | |  |  |  |   |
+            //   v v  v  v  v   v
+            //   0 1  3  x  9   18
+            //           ^-- leaf for k=6 will go here.
+            //
+            // Now to talk about the right expand issue - lets say 0 conducted
+            // a split, it returns the new right node - which would push
+            // 3 to the right to insert a new right hand side as required. So we
+            // really never need to consider the left most leaf to have to be
+            // replaced in any conditions.
+            //
+            // Magic!
+            unsafe {
+                slice_insert(&mut self.key, MaybeUninit::new(k), ins_idx);
+                slice_insert(&mut self.nodes, node, leaf_ins_idx);
+            }
+            // finally update the count
+            self.inc_count();
+            // Return that we are okay to go!
+            BranchInsertState::Ok
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `bptree::node::Branch::<K, V>::add_node_left`
+-> src/bptree/node.rs:1092:5: 1221:6
+pub(crate) fn add_node_left(
+        &mut self,
+        lnode: *mut Node<K, V>,
+        sibidx: usize,
+    ) -> BranchInsertState<K, V> {
+        debug_assert_branch!(self);
+        if self.count() == L_CAPACITY {
+            if sibidx == self.count() {
+                // If sibidx == self.count, then we must be going into max - 1.
+                //    [   k1, k2, k3, k4, k5, k6   ]
+                //    [ v1, v2, v3, v4, v5, v6, v7 ]
+                //                            ^ ^-- sibidx
+                //                             \---- where left should go
+                //
+                //    [   k1, k2, k3, k4, k5, xx   ]
+                //    [ v1, v2, v3, v4, v5, v6, xx ]
+                //
+                //    [   k1, k2, k3, k4, k5, xx   ]    [   k6   ]
+                //    [ v1, v2, v3, v4, v5, v6, xx ] -> [ ln, v7 ]
+                //
+                // So in this case we drop k6, and return a split.
+                let max = self.nodes[BV_CAPACITY - 1];
+                let _kdrop =
+                    unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                self.dec_count();
+                BranchInsertState::Split(lnode, max)
+            } else if sibidx == (self.count() - 1) {
+                // If sibidx == (self.count - 1), then we must be going into max - 2
+                //    [   k1, k2, k3, k4, k5, k6   ]
+                //    [ v1, v2, v3, v4, v5, v6, v7 ]
+                //                         ^ ^-- sibidx
+                //                          \---- where left should go
+                //
+                //    [   k1, k2, k3, k4, dd, xx   ]
+                //    [ v1, v2, v3, v4, v5, xx, xx ]
+                //
+                //
+                // This means that we need to return v6,v7 in a split, and
+                // just append node after v5.
+                let maxn1 = self.nodes[BV_CAPACITY - 2];
+                let max = self.nodes[BV_CAPACITY - 1];
+                let _kdrop =
+                    unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                let _kdrop =
+                    unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 2)[0m[31m)[0m.assume_init() };
+                self.dec_count();
+                self.dec_count();
+                //    [   k1, k2, k3, k4, dd, xx   ]    [   k6   ]
+                //    [ v1, v2, v3, v4, v5, xx, xx ] -> [ v6, v7 ]
+                let k: K = unsafe { [0m[36m(*lnode).min().clone()[0m };
+
+                unsafe {
+                    slice_insert(&mut self.key, MaybeUninit::new(k), sibidx - 1);
+                    slice_insert(&mut self.nodes, lnode, sibidx);
+                    // slice_insert(&mut self.node, MaybeUninit::new(node), sibidx);
+                }
+                self.inc_count();
+                //
+                //    [   k1, k2, k3, k4, nk, xx   ]    [   k6   ]
+                //    [ v1, v2, v3, v4, v5, ln, xx ] -> [ v6, v7 ]
+
+                BranchInsertState::Split(maxn1, max)
+            } else {
+                // All other cases;
+                //    [   k1, k2, k3, k4, k5, k6   ]
+                //    [ v1, v2, v3, v4, v5, v6, v7 ]
+                //                 ^ ^-- sibidx
+                //                  \---- where left should go
+                //
+                //    [   k1, k2, k3, k4, dd, xx   ]
+                //    [ v1, v2, v3, v4, v5, xx, xx ]
+                //
+                //    [   k1, k2, k3, nk, k4, dd   ]    [   k6   ]
+                //    [ v1, v2, v3, ln, v4, v5, xx ] -> [ v6, v7 ]
+                //
+                // This means that we need to return v6,v7 in a split,, drop k5,
+                // then insert
+
+                // Setup the nodes we intend to split away.
+                let maxn1 = self.nodes[BV_CAPACITY - 2];
+                let max = self.nodes[BV_CAPACITY - 1];
+                let _kdrop =
+                    unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                let _kdrop =
+                    unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 2)[0m[31m)[0m.assume_init() };
+                self.dec_count();
+                self.dec_count();
+
+                // println!(""pre-fixup -> {:?}"", self);
+
+                let sibnode = self.nodes[sibidx];
+                let nkey: K = unsafe { [0m[36m(*sibnode).min().clone()[0m };
+
+                unsafe {
+                    slice_insert(&mut self.key, MaybeUninit::new(nkey), sibidx);
+                    slice_insert(&mut self.nodes, lnode, sibidx);
+                }
+
+                self.inc_count();
+                // println!(""post fixup -> {:?}"", self);
+
+                BranchInsertState::Split(maxn1, max)
+            }
+        } else {
+            // We have space, so just put it in!
+            //    [   k1, k2, k3, k4, xx, xx   ]
+            //    [ v1, v2, v3, v4, v5, xx, xx ]
+            //                 ^ ^-- sibidx
+            //                  \---- where left should go
+            //
+            //    [   k1, k2, k3, k4, xx, xx   ]
+            //    [ v1, v2, v3, ln, v4, v5, xx ]
+            //
+            //    [   k1, k2, k3, nk, k4, xx   ]
+            //    [ v1, v2, v3, ln, v4, v5, xx ]
+            //
+
+            let sibnode = self.nodes[sibidx];
+            let nkey: K = unsafe { [0m[36m(*sibnode).min().clone()[0m };
+
+            unsafe {
+                slice_insert(&mut self.nodes, lnode, sibidx);
+                slice_insert(&mut self.key, MaybeUninit::new(nkey), sibidx);
+            }
+
+            self.inc_count();
+            // println!(""post fixup -> {:?}"", self);
+            BranchInsertState::Ok
+        }
+    }
+[0m
+2024-06-21 18:44:01.330863 |INFO | [rudra-progress] Running rudra for target bin:unsound
+[0m[1m[33mwarning[0m[0m[1m: type `u64x8` should have an upper camel case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:43:12[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct u64x8 {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to upper camel case (notice the capitalization): `U64x8`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_camel_case_types)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/macros.rs:15:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        unsafe { &mut *($x as *mut Meta) }[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0msrc/hashmap/cursor.rs:996:1[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m996[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0munsafe fn path_get_slot_mut_ref<'a, K: Clone + Hash + Eq + Debug, V: Clone>([0m
+[0m[1m[38;5;12m997[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    node: *mut Node<K, V>,[0m
+[0m[1m[38;5;12m998[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    h: u64,[0m
+[0m[1m[38;5;12m999[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m) -> Option<&'a mut [Datum<K, V>]>[0m
+[0m[1m[38;5;12m1000[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m1001[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    K: 'a,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m1002[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m{[0m
+[0m[1m[38;5;12m1003[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    if self_meta!(node).is_leaf() {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;12m----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_unsafe)]` on by default[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `self_meta` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/macros.rs:21:23[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        debug_assert!(unsafe { (*$x).meta.is_branch() });[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0msrc/hashmap/cursor.rs:996:1[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m996[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0munsafe fn path_get_slot_mut_ref<'a, K: Clone + Hash + Eq + Debug, V: Clone>([0m
+[0m[1m[38;5;12m997[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    node: *mut Node<K, V>,[0m
+[0m[1m[38;5;12m998[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    h: u64,[0m
+[0m[1m[38;5;12m999[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m) -> Option<&'a mut [Datum<K, V>]>[0m
+[0m[1m[38;5;12m1000[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m1001[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    K: 'a,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1007[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        let nmref = branch_ref!(node, K, V);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;12m-----------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `branch_ref` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/macros.rs:22:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m22[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        unsafe { &mut *($x as *mut Branch<$k, $v>) }[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0msrc/hashmap/cursor.rs:996:1[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m996[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0munsafe fn path_get_slot_mut_ref<'a, K: Clone + Hash + Eq + Debug, V: Clone>([0m
+[0m[1m[38;5;12m997[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    node: *mut Node<K, V>,[0m
+[0m[1m[38;5;12m998[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    h: u64,[0m
+[0m[1m[38;5;12m999[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m) -> Option<&'a mut [Datum<K, V>]>[0m
+[0m[1m[38;5;12m1000[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m1001[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    K: 'a,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1007[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        let nmref = branch_ref!(node, K, V);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;12m-----------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `branch_ref` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/macros.rs:28:23[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m28[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        debug_assert!(unsafe { (*$x).meta.is_leaf() });[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0msrc/hashmap/cursor.rs:996:1[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m996[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0munsafe fn path_get_slot_mut_ref<'a, K: Clone + Hash + Eq + Debug, V: Clone>([0m
+[0m[1m[38;5;12m997[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    node: *mut Node<K, V>,[0m
+[0m[1m[38;5;12m998[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    h: u64,[0m
+[0m[1m[38;5;12m999[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m) -> Option<&'a mut [Datum<K, V>]>[0m
+[0m[1m[38;5;12m1000[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m1001[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    K: 'a,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1004[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        leaf_ref!(node, K, V).get_slot_mut_ref(h)[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;12m---------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `leaf_ref` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/macros.rs:29:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        unsafe { &mut *($x as *mut Leaf<$k, $v>) }[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0msrc/hashmap/cursor.rs:996:1[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m996[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0munsafe fn path_get_slot_mut_ref<'a, K: Clone + Hash + Eq + Debug, V: Clone>([0m
+[0m[1m[38;5;12m997[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    node: *mut Node<K, V>,[0m
+[0m[1m[38;5;12m998[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    h: u64,[0m
+[0m[1m[38;5;12m999[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m) -> Option<&'a mut [Datum<K, V>]>[0m
+[0m[1m[38;5;12m1000[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m1001[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    K: 'a,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1004[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        leaf_ref!(node, K, V).get_slot_mut_ref(h)[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;12m---------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `leaf_ref` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `tree_density`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/cursor.rs:477:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m477[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn tree_density(&self) -> (usize, usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `get_txid`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/node.rs:255:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m255[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn get_txid(&self) -> u64 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `is_branch`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/node.rs:265:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m265[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn is_branch(&self) -> bool {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `tree_density`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/node.rs:269:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m269[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn tree_density(&self) -> (usize, usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `set_count`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/node.rs:489:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m489[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn set_count(&mut self, c: usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `set_count`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/node.rs:824:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m824[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn set_count(&mut self, c: usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `pin`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/mod.rs:61:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pin: Arc<SuperBlock<K, V>>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `get_txid`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/mod.rs:269:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m269[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn get_txid(&self) -> u64 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `get_txid`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/bptree/mod.rs:436:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m436[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn get_txid(&self) -> u64 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `tree_density`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/cursor.rs:424:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m424[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn tree_density(&self) -> (usize, usize, usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `pin`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/map.rs:73:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pin: Arc<SuperBlock<K, V>>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `data`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:44:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    data: [u64; 8],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `get_txid`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:287:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m287[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn get_txid(&self) -> u64 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `is_branch`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:297:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m297[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn is_branch(&self) -> bool {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `tree_density`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:301:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m301[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub(crate) fn tree_density(&self) -> (usize, usize, usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `set_slots`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:523:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m523[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn set_slots(&mut self, c: usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `set_slots`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/hashmap/node.rs:961:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m961[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn set_slots(&mut self, c: usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+2024-06-21 18:44:09.250033 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:44:09.253919 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:44:09.277012 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:44:09.277035 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:44:09.353641 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:44:09.353667 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/arcache/mod.rs:199:1: 199:103
+unsafe impl<K: Hash + Eq + Ord + Clone + Debug, V: Clone + Debug> Send for ARCacheReadTxn<'_, K, V> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/arcache/mod.rs:200:1: 200:103
+unsafe impl<K: Hash + Eq + Ord + Clone + Debug, V: Clone + Debug> Sync for ARCacheReadTxn<'_, K, V> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/arcache/mod.rs:167:1: 167:92
+unsafe impl<K: Hash + Eq + Ord + Clone + Debug, V: Clone + Debug> Send for ARCache<K, V> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/arcache/mod.rs:168:1: 168:92
+unsafe impl<K: Hash + Eq + Ord + Clone + Debug, V: Clone + Debug> Sync for ARCache<K, V> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/bptree/mod.rs:49:1: 49:74
+unsafe impl<K: Clone + Ord + Debug, V: Clone> Send for BptreeMap<K, V> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/bptree/mod.rs:50:1: 50:74
+unsafe impl<K: Clone + Ord + Debug, V: Clone> Sync for BptreeMap<K, V> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/hashmap/map.rs:61:1: 61:78
+unsafe impl<K: Hash + Eq + Clone + Debug, V: Clone> Send for HashMap<K, V> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/hashmap/map.rs:62:1: 62:78
+unsafe impl<K: Hash + Eq + Clone + Debug, V: Clone> Sync for HashMap<K, V> {}
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `bptree::node::Leaf::<K, V>::req_clone`
+-> src/bptree/node.rs:562:5: 594:6
+pub(crate) fn req_clone(&self, txid: u64) -> Option<*mut Node<K, V>> {
+        debug_assert_leaf!(self);
+        debug_assert!(txid < (TXID_MASK >> TXID_SHF));
+        if self.get_txid() == txid {
+            // Same txn, no action needed.
+            None
+        } else {
+            // println!(""Req clone leaf"");
+            // debug_assert!(false);
+            // Diff txn, must clone.
+            let new_txid = (self.meta.0 & (FLAG_MASK | COUNT_MASK)) | (txid << TXID_SHF);
+            let mut x: Box<CachePadded<Leaf<K, V>>> = Box::new(CachePadded::new(Leaf {
+                // Need to preserve count.
+                meta: Meta(new_txid),
+                key: unsafe { MaybeUninit::uninit().assume_init() },
+                values: unsafe { MaybeUninit::uninit().assume_init() },
+                #[cfg(all(test, not(miri)))]
+                nid: alloc_nid(),
+            }));
+
+            // Copy in the values to the correct location.
+            for idx in 0..self.count() {
+                unsafe {
+                    let lkey = [0m[36m(*self.key[idx].as_ptr()).clone()[0m;
+                    [0m[33mx.key[idx].as_mut_ptr().write(lkey)[0m;
+                    let lvalue = [0m[36m(*self.values[idx].as_ptr()).clone()[0m;
+                    [0m[33mx.values[idx].as_mut_ptr().write(lvalue)[0m;
+                }
+            }
+
+            Some(Box::into_raw(x) as *mut Node<K, V>)
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `bptree::node::Branch::<K, V>::req_clone`
+-> src/bptree/node.rs:867:5: 894:6
+pub(crate) fn req_clone(&self, txid: u64) -> Option<*mut Node<K, V>> {
+        debug_assert_branch!(self);
+        if self.get_txid() == txid {
+            // Same txn, no action needed.
+            None
+        } else {
+            // println!(""Req clone branch"");
+            // Diff txn, must clone.
+            let new_txid = (self.meta.0 & (FLAG_MASK | COUNT_MASK)) | (txid << TXID_SHF);
+            let mut x: Box<CachePadded<Branch<K, V>>> = Box::new(CachePadded::new(Branch {
+                // Need to preserve count.
+                meta: Meta(new_txid),
+                key: unsafe { MaybeUninit::uninit().assume_init() },
+                // We can simply clone the pointers.
+                nodes: self.nodes.clone(),
+                #[cfg(all(test, not(miri)))]
+                nid: alloc_nid(),
+            }));
+            // Copy in the keys to the correct location.
+            for idx in 0..self.count() {
+                unsafe {
+                    let lkey = [0m[36m(*self.key[idx].as_ptr()).clone()[0m;
+                    [0m[33mx.key[idx].as_mut_ptr().write(lkey)[0m;
+                }
+            }
+            Some(Box::into_raw(x) as *mut Node<K, V>)
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `bptree::node::Branch::<K, V>::add_node`
+-> src/bptree/node.rs:945:5: 1090:6
+pub(crate) fn add_node(&mut self, node: *mut Node<K, V>) -> BranchInsertState<K, V> {
+        debug_assert_branch!(self);
+        // do we have space?
+        if self.count() == L_CAPACITY {
+            // if no space ->
+            //    split and send two nodes back for new branch
+            // There are three possible states that this causes.
+            // 1 * The inserted node is the greater than all current values, causing l(max, node)
+            //     to be returned.
+            // 2 * The inserted node is between max - 1 and max, causing l(node, max) to be returned.
+            // 3 * The inserted node is a low/middle value, causing max and max -1 to be returned.
+            //
+            let kr = unsafe { (*node).min() };
+            let r = key_search!(self, kr);
+            let ins_idx = r.unwrap_err();
+            // Everything will pop max.
+            let max = unsafe { *[0m[33m(self.nodes.get_unchecked(BV_CAPACITY - 1))[0m };
+            let res = match ins_idx {
+                // Case 1
+                L_CAPACITY => {
+                    // println!(""case 1"");
+                    // Greater than all current values, so we'll just return max and node.
+                    let _kdrop =
+                        unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                    // Now setup the ret val NOTICE compared to case 2 that we swap node and max?
+                    BranchInsertState::Split(max, node)
+                }
+                // Case 2
+                L_CAPACITY_N1 => {
+                    // println!(""case 2"");
+                    // Greater than all but max, so we return max and node in the correct order.
+                    // Drop the key between them.
+                    let _kdrop =
+                        unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                    // Now setup the ret val NOTICE compared to case 1 that we swap node and max?
+                    BranchInsertState::Split(node, max)
+                }
+                // Case 3
+                ins_idx => {
+                    // Get the max - 1 and max nodes out.
+                    let maxn1 = unsafe { *[0m[33m(self.nodes.get_unchecked(BV_CAPACITY - 2))[0m };
+                    // Drop the key between them.
+                    let _kdrop =
+                        unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                    // Drop the key before us that we are about to replace.
+                    let _kdrop =
+                        unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 2)[0m[31m)[0m.assume_init() };
+                    // Add node and it's key to the correct location.
+                    let k: K = [0m[36mkr.clone()[0m;
+                    let leaf_ins_idx = ins_idx + 1;
+                    unsafe {
+                        slice_insert(&mut self.key, MaybeUninit::new(k), ins_idx);
+                        slice_insert(&mut self.nodes, node, leaf_ins_idx);
+                    }
+
+                    BranchInsertState::Split(maxn1, max)
+                }
+            };
+            // Dec count as we always reduce branch by one as we split return
+            // two.
+            self.dec_count();
+            res
+        } else {
+            // if space ->
+            // Get the nodes min-key - we clone it because we'll certainly be inserting it!
+            let k: K = unsafe { [0m[36m(*node).min().clone()[0m };
+            // bst and find when min-key < key[idx]
+            let r = key_search!(self, &k);
+            // if r is ever found, I think this is a bug, because we should never be able to
+            // add a node with an existing min.
+            //
+            //       [ 5 ]
+            //        / \
+            //    [0,]   [5,]
+            //
+            // So if we added here to [0, ], and it had to overflow to split, then everything
+            // must be < 5. Why? Because to get to [0,] as your insert target, you must be < 5.
+            // if we added to [5,] then a split must be greater than, or the insert would replace 5.
+            //
+            // if we consider
+            //
+            //       [ 5 ]
+            //        / \
+            //    [0,]   [7,]
+            //
+            // Now we insert 5, and 7, splits. 5 would remain in the tree and we'd split 7 to the right
+            //
+            // As a result, any ""Ok(idx)"" must represent a corruption of the tree.
+            // debug_assert!(r.is_err());
+            let ins_idx = r.unwrap_err();
+            let leaf_ins_idx = ins_idx + 1;
+            // So why do we only need to insert right? Because the left-most
+            // leaf when it grows, it splits to the right. That importantly
+            // means that we only need to insert to replace the min and it's
+            // right leaf, or anything higher. As a result, we are always
+            // targetting ins_idx and leaf_ins_idx = ins_idx + 1.
+            //
+            // We have a situation like:
+            //
+            //   [1, 3, 9, 18]
+            //
+            // and ins_idx is 2. IE:
+            //
+            //   [1, 3, 9, 18]
+            //          ^-- k=6
+            //
+            // So this we need to shift those r-> and insert.
+            //
+            //   [1, 3, x, 9, 18]
+            //          ^-- k=6
+            //
+            //   [1, 3, 6, 9, 18]
+            //
+            // Now we need to consider the leaves too:
+            //
+            //   [1, 3, 9, 18]
+            //   | |  |  |   |
+            //   v v  v  v   v
+            //   0 1  3  9   18
+            //
+            // So that means we need to move leaf_ins_idx = (ins_idx + 1)
+            // right also
+            //
+            //   [1, 3, x, 9, 18]
+            //   | |  |  |  |   |
+            //   v v  v  v  v   v
+            //   0 1  3  x  9   18
+            //           ^-- leaf for k=6 will go here.
+            //
+            // Now to talk about the right expand issue - lets say 0 conducted
+            // a split, it returns the new right node - which would push
+            // 3 to the right to insert a new right hand side as required. So we
+            // really never need to consider the left most leaf to have to be
+            // replaced in any conditions.
+            //
+            // Magic!
+            unsafe {
+                slice_insert(&mut self.key, MaybeUninit::new(k), ins_idx);
+                slice_insert(&mut self.nodes, node, leaf_ins_idx);
+            }
+            // finally update the count
+            self.inc_count();
+            // Return that we are okay to go!
+            BranchInsertState::Ok
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/SliceUnchecked): Potential unsafe dataflow issue in `bptree::node::Branch::<K, V>::add_node_left`
+-> src/bptree/node.rs:1092:5: 1221:6
+pub(crate) fn add_node_left(
+        &mut self,
+        lnode: *mut Node<K, V>,
+        sibidx: usize,
+    ) -> BranchInsertState<K, V> {
+        debug_assert_branch!(self);
+        if self.count() == L_CAPACITY {
+            if sibidx == self.count() {
+                // If sibidx == self.count, then we must be going into max - 1.
+                //    [   k1, k2, k3, k4, k5, k6   ]
+                //    [ v1, v2, v3, v4, v5, v6, v7 ]
+                //                            ^ ^-- sibidx
+                //                             \---- where left should go
+                //
+                //    [   k1, k2, k3, k4, k5, xx   ]
+                //    [ v1, v2, v3, v4, v5, v6, xx ]
+                //
+                //    [   k1, k2, k3, k4, k5, xx   ]    [   k6   ]
+                //    [ v1, v2, v3, v4, v5, v6, xx ] -> [ ln, v7 ]
+                //
+                // So in this case we drop k6, and return a split.
+                let max = self.nodes[BV_CAPACITY - 1];
+                let _kdrop =
+                    unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                self.dec_count();
+                BranchInsertState::Split(lnode, max)
+            } else if sibidx == (self.count() - 1) {
+                // If sibidx == (self.count - 1), then we must be going into max - 2
+                //    [   k1, k2, k3, k4, k5, k6   ]
+                //    [ v1, v2, v3, v4, v5, v6, v7 ]
+                //                         ^ ^-- sibidx
+                //                          \---- where left should go
+                //
+                //    [   k1, k2, k3, k4, dd, xx   ]
+                //    [ v1, v2, v3, v4, v5, xx, xx ]
+                //
+                //
+                // This means that we need to return v6,v7 in a split, and
+                // just append node after v5.
+                let maxn1 = self.nodes[BV_CAPACITY - 2];
+                let max = self.nodes[BV_CAPACITY - 1];
+                let _kdrop =
+                    unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                let _kdrop =
+                    unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 2)[0m[31m)[0m.assume_init() };
+                self.dec_count();
+                self.dec_count();
+                //    [   k1, k2, k3, k4, dd, xx   ]    [   k6   ]
+                //    [ v1, v2, v3, v4, v5, xx, xx ] -> [ v6, v7 ]
+                let k: K = unsafe { [0m[36m(*lnode).min().clone()[0m };
+
+                unsafe {
+                    slice_insert(&mut self.key, MaybeUninit::new(k), sibidx - 1);
+                    slice_insert(&mut self.nodes, lnode, sibidx);
+                    // slice_insert(&mut self.node, MaybeUninit::new(node), sibidx);
+                }
+                self.inc_count();
+                //
+                //    [   k1, k2, k3, k4, nk, xx   ]    [   k6   ]
+                //    [ v1, v2, v3, v4, v5, ln, xx ] -> [ v6, v7 ]
+
+                BranchInsertState::Split(maxn1, max)
+            } else {
+                // All other cases;
+                //    [   k1, k2, k3, k4, k5, k6   ]
+                //    [ v1, v2, v3, v4, v5, v6, v7 ]
+                //                 ^ ^-- sibidx
+                //                  \---- where left should go
+                //
+                //    [   k1, k2, k3, k4, dd, xx   ]
+                //    [ v1, v2, v3, v4, v5, xx, xx ]
+                //
+                //    [   k1, k2, k3, nk, k4, dd   ]    [   k6   ]
+                //    [ v1, v2, v3, ln, v4, v5, xx ] -> [ v6, v7 ]
+                //
+                // This means that we need to return v6,v7 in a split,, drop k5,
+                // then insert
+
+                // Setup the nodes we intend to split away.
+                let maxn1 = self.nodes[BV_CAPACITY - 2];
+                let max = self.nodes[BV_CAPACITY - 1];
+                let _kdrop =
+                    unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 1)[0m[31m)[0m.assume_init() };
+                let _kdrop =
+                    unsafe { [0m[31mptr::read([0m[33mself.key.get_unchecked(L_CAPACITY - 2)[0m[31m)[0m.assume_init() };
+                self.dec_count();
+                self.dec_count();
+
+                // println!(""pre-fixup -> {:?}"", self);
+
+                let sibnode = self.nodes[sibidx];
+                let nkey: K = unsafe { [0m[36m(*sibnode).min().clone()[0m };
+
+                unsafe {
+                    slice_insert(&mut self.key, MaybeUninit::new(nkey), sibidx);
+                    slice_insert(&mut self.nodes, lnode, sibidx);
+                }
+
+                self.inc_count();
+                // println!(""post fixup -> {:?}"", self);
+
+                BranchInsertState::Split(maxn1, max)
+            }
+        } else {
+            // We have space, so just put it in!
+            //    [   k1, k2, k3, k4, xx, xx   ]
+            //    [ v1, v2, v3, v4, v5, xx, xx ]
+            //                 ^ ^-- sibidx
+            //                  \---- where left should go
+            //
+            //    [   k1, k2, k3, k4, xx, xx   ]
+            //    [ v1, v2, v3, ln, v4, v5, xx ]
+            //
+            //    [   k1, k2, k3, nk, k4, xx   ]
+            //    [ v1, v2, v3, ln, v4, v5, xx ]
+            //
+
+            let sibnode = self.nodes[sibidx];
+            let nkey: K = unsafe { [0m[36m(*sibnode).min().clone()[0m };
+
+            unsafe {
+                slice_insert(&mut self.nodes, lnode, sibidx);
+                slice_insert(&mut self.key, MaybeUninit::new(nkey), sibidx);
+            }
+
+            self.inc_count();
+            // println!(""post fixup -> {:?}"", self);
+            BranchInsertState::Ok
+        }
+    }
+[0m
+2024-06-21 18:44:10.966287 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:44:10.970430 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:44:10.972167 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:44:10.972178 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:44:10.992029 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:44:10.992054 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:44:11.040941 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,48 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,umanwizard,https://github.com/umanwizard
+Author,-,Crate owners,github:materializeinc:crate-owners,https://github.com/materializeinc
+************************************
+event,timestamp,downloads
+Downloads,-,2918
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:59:25.959965 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:59:29.363880 |INFO | [rudra-progress] Running rudra for target lib:mz-avro
+2024-06-21 17:59:56.148125 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:59:56.152385 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:59:56.152779 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:59:56.152793 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:59:56.225257 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:59:56.225295 |INFO | [rudra-progress] Rudra finished
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `reader::Reader::<R>::fill_buf`
+-> src/reader.rs:199:5: 212:6
+fn fill_buf(&mut self, n: usize) -> Result<(), Error> {
+        // We don't have enough space in the buffer, need to grow it.
+        if n >= self.buf.capacity() {
+            self.buf.reserve(n);
+        }
+
+        unsafe {
+            [0m[31mself.buf.set_len(n)[0m;
+        }
+        // TODO[btv] This is UB if `self.inner` looks at the contents of the buf before writing them.
+        [0m[36mself.inner.read_exact(&mut self.buf[..n])[0m?;
+        self.buf_idx = 0;
+        Ok(())
+    }
+[0m
+2024-06-21 17:59:58.119128 |WARN | [cargo_rudra] Target example:benchmark is not supported
+2024-06-21 17:59:58.119266 |WARN | [cargo_rudra] Target test:io is not supported
+2024-06-21 17:59:58.119288 |WARN | [cargo_rudra] Target test:schema is not supported
+2024-06-21 17:59:58.119502 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

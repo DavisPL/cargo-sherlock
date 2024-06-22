@@ -1,0 +1,34 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,ub-risk-3,,0.12.1,Reviewed in CL 556862067\nIssues found:\n - https://github.com/rust-vmm/vm-memory/issues/250\n,
+audits,-,Critical,google,ub-risk-2,,0.12.1,Reviewed in CL 556862067\nIssues from previous review fixed\n,
+audits,-,Critical,google,"[ ""ub-risk-4"", ""does-not-implement-crypto"",]",,0.13.1,Reviewed in CL 595684339\nIssues found:\n- https://github.com/rust-vmm/vm-memory/issues/281\n,
+************************************
+event,timestamp,name,username,url
+Author,-,Andreea Florescu,andreeaflorescu,https://github.com/andreeaflorescu
+Author,-,Jiang Liu,jiangliu,https://github.com/jiangliu
+Author,-,Laura Loghin,lauralt,https://github.com/lauralt
+Author,-,Patrick Roy,roypat,https://github.com/roypat
+Author,-,gatekeepers,github:rust-vmm:gatekeepers,https://github.com/rust-vmm
+************************************
+event,timestamp,downloads
+Downloads,-,2066823
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:59:10.376943 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:59:20.603709 |INFO | [rudra-progress] Running rudra for target lib:vm-memory
+2024-06-21 16:59:43.923172 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:59:43.935297 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:59:43.936135 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:59:43.936166 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:59:44.093325 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:59:44.093476 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:59:48.755430 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

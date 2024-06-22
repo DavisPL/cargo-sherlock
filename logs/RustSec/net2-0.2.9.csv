@@ -1,0 +1,118 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,mozilla,safe-to-run,0.2.37 -> 0.2.38,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Crichton,alexcrichton,https://github.com/alexcrichton
+Author,-,Patrick Mooney,pfmooney,https://github.com/pfmooney
+Author,-,libs,github:rust-lang:libs,https://github.com/rust-lang
+Author,-,libs,github:rust-lang-nursery:libs,https://github.com/rust-lang-nursery
+Author,-,crates,github:deprecrated:crates,https://github.com/deprecrated
+************************************
+event,timestamp,downloads
+Downloads,-,42267359
+************************************
+event,timestamp,total,flagged
+Side Effects,-,40,28
+************************************
+Rudra,timestamp
+"2024-06-21 18:30:31.053675 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:30:34.200190 |INFO | [rudra-progress] Running rudra for target lib:net2
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/tcp.rs:54:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m54[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let addr = try!(::one_addr(addr));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:40:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m40[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![deny(missing_docs, warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[deny(deprecated)]` implied by `#[deny(warnings)]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/tcp.rs:88:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(addr.to_socket_addrs()).fold(Err(err), |prev, addr| {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/udp.rs:53:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.with_socket(|sock| {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/udp.rs:54:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m54[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let addr = try!(::one_addr(addr));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/socket.rs:25:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        Ok(Socket { inner: try!(sys::Socket::new(family, ty)) })[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ext.rs:65:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m65[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(::cvt(libc::setsockopt(sock, opt, val, payload,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ext.rs:75:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m75[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(::cvt(getsockopt(sock, opt, val, &mut slot as *mut _ as *mut _,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ext.rs:465:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m465[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(setopt(self.as_sock(), libc::SOL_SOCKET, libc::SO_KEEPALIVE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ext.rs:468:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m468[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(setopt(self.as_sock(), libc::IPPROTO_TCP, KEEPALIVE_OPTION,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ext.rs:476:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m476[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let keepalive = try!(getopt::<c_int>(self.as_sock(), libc::SOL_SOCKET,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ext.rs:481:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m481[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let secs = try!(getopt::<c_int>(self.as_sock(), libc::IPPROTO_TCP,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ext.rs:594:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m594[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let addrs = try!(addr.to_socket_addrs());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/unix/mod.rs:38:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let fd = try!(::cvt(libc::socket(family, ty, 0)));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:68:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut addrs = try!(tsa.to_socket_addrs());[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `net2` due to 14 previous errors
+2024-06-21 18:30:41.830214 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.1.11,,
+************************************
+event,timestamp,name,username,url
+Author,-,David Tolnay,dtolnay,https://github.com/dtolnay
+************************************
+event,timestamp,downloads
+Downloads,-,17160389
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-21 17:43:19.695404 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:43:22.833452 |INFO | [rudra-progress] Running rudra for target lib:inventory
+2024-06-21 17:43:39.423040 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:43:39.427064 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:43:39.427459 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:43:39.427474 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:43:39.465441 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:43:39.465465 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:43:40.384708 |WARN | [cargo_rudra] Target example:flags is not supported
+2024-06-21 17:43:40.384829 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 17:43:40.385038 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

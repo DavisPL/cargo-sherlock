@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Konstantin V. Salikhov,Koka,https://github.com/Koka
+************************************
+event,timestamp,downloads
+Downloads,-,7899
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:01:37.626363 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:01:40.966336 |INFO | [rudra-progress] Running rudra for target lib:r2d2_odbc
+2024-06-21 18:01:51.356530 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:01:51.360599 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:01:51.363372 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:01:51.363383 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:01:51.389011 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:01:51.389038 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:25:1: 25:68
+unsafe impl Send for ODBCConnection<'static, safe::AutocommitOn> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:26:1: 26:69
+unsafe impl Send for ODBCConnection<'static, safe::AutocommitOff> {}
+2024-06-21 18:01:52.377348 |WARN | [cargo_rudra] Target example:connect is not supported
+2024-06-21 18:01:52.377484 |WARN | [cargo_rudra] Target test:test is not supported
+2024-06-21 18:01:52.377623 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

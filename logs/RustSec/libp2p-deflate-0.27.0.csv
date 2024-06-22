@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Pierre Krieger,tomaka,https://github.com/tomaka
+Author,-,Max Inden,mxinden,https://github.com/mxinden
+Author,-,Libp2p devs,github:paritytech:libp2p-devs,https://github.com/paritytech
+Author,-,Repos - Rust,github:libp2p:repos-rust,https://github.com/libp2p
+Author,-,rust-libp2p Maintainers,github:libp2p:rust-libp2p-maintainers,https://github.com/libp2p
+************************************
+event,timestamp,downloads
+Downloads,-,1740765
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-21 16:16:46.132653 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:16:51.519678 |INFO | [rudra-progress] Running rudra for target lib:libp2p-deflate
+[0m[0m[1m[31merror[0m[1m:[0m package `cc v1.0.99` cannot be built because it requires rustc 1.63 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:16:55.312085 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

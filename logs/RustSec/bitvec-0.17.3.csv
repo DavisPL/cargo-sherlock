@@ -1,0 +1,86 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,safe-to-run,,0.19.5,,
+************************************
+event,timestamp,name,username,url
+Author,-,Alexander Payne,myrrlyn,https://github.com/myrrlyn
+Author,-,Maintainers,github:ferrilab:maintainers,https://github.com/ferrilab
+************************************
+event,timestamp,downloads
+Downloads,-,52702115
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:40:03.480671 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:40:12.294409 |INFO | [rudra-progress] Running rudra for target lib:bitvec
+2024-06-21 16:40:29.790743 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:40:29.803844 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:40:29.896174 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:40:29.896252 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:40:30.093128 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:40:30.093204 |INFO | [rudra-progress] Rudra finished
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/slice/traits.rs:421:1: 422:34
+unsafe impl<O, T> Send for BitSlice<O, T>
+where O: BitOrder, T: BitStore {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/slice/traits.rs:430:1: 431:34
+unsafe impl<O, T> Sync for BitSlice<O, T>
+where O: BitOrder, T: BitStore {}
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/boxed/traits.rs:251:1: 252:34
+unsafe impl<O, T> Send for BitBox<O, T>
+where O: BitOrder, T: BitStore {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/boxed/traits.rs:255:1: 256:34
+unsafe impl<O, T> Sync for BitBox<O, T>
+where O: BitOrder, T: BitStore {}
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/vec/traits.rs:539:1: 540:34
+unsafe impl<O, T> Send for BitVec<O, T>
+where O: BitOrder, T: BitStore {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/vec/traits.rs:543:1: 544:34
+unsafe impl<O, T> Sync for BitVec<O, T>
+where O: BitOrder, T: BitStore {}
+Error (UnsafeDataflow:/VecFromRaw): Potential unsafe dataflow issue in `vec::BitVec::<O, T>::with_vec`
+-> src/vec.rs:814:2: 829:3
+fn with_vec<F, R>(&mut self, func: F) -> R
+	where F: FnOnce(&mut Vec<T>) -> R {
+		let slice = self.pointer.as_mut_slice();
+		let mut v = unsafe {
+			[0m[31mVec::from_raw_parts(slice.as_mut_ptr(), slice.len(), self.capacity)[0m
+		};
+		let out = [0m[36mfunc(&mut v)[0m;
+		//  The only change is that the pointer might relocate. The region data
+		//  will remain untouched. Vec guarantees it will never produce an
+		//  invalid pointer.
+		unsafe { self.pointer.set_pointer(v.as_ptr()); }
+		// self.pointer = unsafe { BitPtr::new_unchecked(v.as_ptr(), e, h, t) };
+		self.capacity = v.capacity();
+		mem::forget(v);
+		out
+	}
+[0m
+Error (UnsafeDataflow:/VecFromRaw): Potential unsafe dataflow issue in `boxed::BitBox::<O, T>::do_with_box`
+-> src/boxed.rs:364:2: 374:3
+fn do_with_box<F, R>(&self, func: F) -> R
+	where F: FnOnce(&Box<[T]>) -> R {
+		let slice = self.pointer.as_mut_slice();
+		let (data, elts) = (slice.as_mut_ptr(), slice.len());
+		let b: Box<[T]> = unsafe {
+			[0m[31mVec::from_raw_parts(data, elts, elts)[0m
+		}.into_boxed_slice();
+		let out = [0m[36mfunc(&b)[0m;
+		mem::forget(b);
+		out
+	}
+[0m
+2024-06-21 16:40:36.507524 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

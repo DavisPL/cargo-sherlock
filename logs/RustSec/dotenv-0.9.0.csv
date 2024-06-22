@@ -1,0 +1,78 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Noemi Lapresta,purpliminal,https://github.com/purpliminal
+Author,-,Sage Griffin,sgrif,https://github.com/sgrif
+Author,-,dotenv,github:dotenv-rs:dotenv,https://github.com/dotenv-rs
+************************************
+event,timestamp,downloads
+Downloads,-,17635328
+************************************
+event,timestamp,total,flagged
+Side Effects,-,14,4
+************************************
+Rudra,timestamp
+"2024-06-21 17:58:02.336194 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:58:06.100283 |INFO | [rudra-progress] Running rudra for target lib:dotenv
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:87:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Error`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:188:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m188[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let line_regex = try!(Regex::new(concat!(r""^(\s*("",[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:205:50[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m205[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   let parsed_value = try!(parse_value(&value));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:221:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m221[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let line = try!(line);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:222:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m222[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let parsed = try!(parse_line(line));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::ONCE_INIT`: the `new` function is now preferred[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:18:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::sync::{Once, ONCE_INIT};[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::ONCE_INIT`: the `new` function is now preferred[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:21:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0mstatic START: Once = ONCE_INIT;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: replace the use of the deprecated constant: `Once::new()`[0m
+
+2024-06-21 17:58:14.593279 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:58:14.597121 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:58:14.597475 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:58:14.597485 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:58:14.600112 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:58:14.600139 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:58:15.598076 |WARN | [cargo_rudra] Target example:simple is not supported
+2024-06-21 17:58:15.598232 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

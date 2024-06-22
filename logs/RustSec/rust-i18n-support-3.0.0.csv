@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Yan Li,eyeplum,https://github.com/eyeplum
+Author,-,Jason Lee,huacnlee,https://github.com/huacnlee
+Author,-,rust,github:longbridgeapp:rust,https://github.com/longbridgeapp
+************************************
+event,timestamp,downloads
+Downloads,-,241138
+************************************
+event,timestamp,total,flagged
+Side Effects,-,20,7
+************************************
+Rudra,timestamp
+"2024-06-21 17:39:56.102627 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:39:57.915562 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `toml = ""^0.7.4""`
+candidate versions found which didn't match: 0.5.11, 0.5.10, 0.5.9, ...
+location searched: crates.io index
+required by package `rust-i18n-support v3.0.0 (/tmp/rudra)`
+
+"
+************************************

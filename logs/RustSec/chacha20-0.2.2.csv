@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,"[ ""safe-to-deploy"", ""ub-risk-2"",]",0.8.1 -> 0.9.0,,,
+audits,-,Critical,zcash,"[ ""crypto-reviewed"", ""safe-to-deploy"",]",0.8.1 -> 0.8.2,,Unpins zeroize.,
+audits,-,Critical,zcash,safe-to-deploy,0.8.2 -> 0.9.0,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Artyom Pavlov,newpavlov,https://github.com/newpavlov
+Author,-,stream-ciphers,github:rustcrypto:stream-ciphers,https://github.com/rustcrypto
+************************************
+event,timestamp,downloads
+Downloads,-,17785046
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:30:01.749100 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:30:03.235747 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: no matching package named `salsa20-core` found
+location searched: registry `crates-io`
+required by package `chacha20 v0.2.2 (/tmp/rudra)`
+
+"
+************************************

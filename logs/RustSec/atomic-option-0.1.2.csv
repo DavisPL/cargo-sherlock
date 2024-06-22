@@ -1,0 +1,38 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jonathan Reem,reem,https://github.com/reem
+************************************
+event,timestamp,downloads
+Downloads,-,314845
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,4
+************************************
+Rudra,timestamp
+"2024-06-21 18:39:57.152626 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:40:00.261180 |INFO | [rudra-progress] Running rudra for target lib:atomic-option
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:149:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m149[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match self.inner.compare_and_swap(NULL, raw_new, ordering) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-21 18:40:04.325914 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:40:04.329925 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:40:04.333718 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:40:04.333734 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:40:04.352469 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:40:04.352485 |INFO | [rudra-progress] Rudra finished
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/lib.rs:23:1: 23:43
+unsafe impl<T> Sync for AtomicOption<T> {}
+2024-06-21 18:40:05.223202 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

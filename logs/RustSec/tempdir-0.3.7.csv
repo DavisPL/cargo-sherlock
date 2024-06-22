@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Crichton,alexcrichton,https://github.com/alexcrichton
+Author,-,Huon Wilson,huonw,https://github.com/huonw
+Author,-,libs,github:rust-lang-nursery:libs,https://github.com/rust-lang-nursery
+************************************
+event,timestamp,downloads
+Downloads,-,19374707
+************************************
+event,timestamp,total,flagged
+Side Effects,-,10,2
+************************************
+Rudra,timestamp
+"2024-06-21 18:17:51.437576 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:17:55.136919 |INFO | [rudra-progress] Running rudra for target lib:tempdir
+2024-06-21 18:18:03.252918 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:18:03.256871 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:18:03.257252 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:18:03.257289 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:18:03.277465 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:18:03.277486 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:18:04.167230 |WARN | [cargo_rudra] Target test:smoke is not supported
+2024-06-21 18:18:04.167363 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

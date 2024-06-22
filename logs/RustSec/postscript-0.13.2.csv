@@ -1,0 +1,210 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ivan Ukhov,IvanUkhov,https://github.com/IvanUkhov
+************************************
+event,timestamp,downloads
+Downloads,-,146025
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,5
+************************************
+Rudra,timestamp
+"2024-06-21 17:19:04.506914 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:19:07.724922 |INFO | [rudra-progress] Running rudra for target lib:postscript
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/tape.rs:43:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn read<T: Tape>(&mut T) -> Result<Self>;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &mut T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(anonymous_parameters)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/tape.rs:52:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn read<T: Tape>(&mut T, Self::Parameter) -> Result<Self>;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &mut T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/tape.rs:52:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn read<T: Tape>(&mut T, Self::Parameter) -> Result<Self>;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: Self::Parameter`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/compact1/number.rs:8:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        0x20...0xf6 => (first as i32 - 139) as f32,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(ellipsis_inclusive_range_patterns)]` on by default[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/compact1/number.rs:9:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        0xf7...0xfa => ((first as i32 - 247) * 256 + tape.take::<u8>()? as i32 + 108) as f32,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/compact1/number.rs:10:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        0xfb...0xfe => (-(first as i32 - 251) * 256 - tape.take::<u8>()? as i32 - 108) as f32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/compact1/number.rs:32:14[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            0...9 => buffer.push(('0' as u8 + nibble) as char),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/compact1/operation.rs:23:42[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                0x1c | 0x1d | 0x1e | 0x20...0xfe => operands.push(number::read(tape)?),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/type2/number.rs:8:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        0x20...0xf6 => (first as i32 - 139) as f32,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/type2/number.rs:9:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        0xf7...0xfa => ((first as i32 - 247) * 256 + tape.take::<u8>()? as i32 + 108) as f32,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/type2/number.rs:10:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        0xfb...0xfe => (-(first as i32 - 251) * 256 - tape.take::<u8>()? as i32 - 108) as f32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/type2/program.rs:82:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m82[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                0x1c | 0x20...0xff => push!(self.routine.take_operand()?),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/tape.rs:59:51[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut buffer: [u8; $size] = ::std::mem::uninitialized();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m92[0m[0m [0m[0m[1m[38;5;12m| [0m[0mvalue!(u8, 1);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `read` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/tape.rs:59:51[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut buffer: [u8; $size] = ::std::mem::uninitialized();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m93[0m[0m [0m[0m[1m[38;5;12m| [0m[0mvalue!(u16, 2);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `read` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/tape.rs:59:51[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut buffer: [u8; $size] = ::std::mem::uninitialized();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m94[0m[0m [0m[0m[1m[38;5;12m| [0m[0mvalue!(u32, 4);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `read` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/tape.rs:59:51[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut buffer: [u8; $size] = ::std::mem::uninitialized();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m95[0m[0m [0m[0m[1m[38;5;12m| [0m[0mvalue!([u8; 3], 1);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `read` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused return value of `std::mem::replace` that must be used[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/type2/program.rs:163:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m163[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    mem::replace(&mut self.routine, *caller);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_must_use)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: if you don't need the old value, you can just assign the new value directly[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused return value of `std::mem::replace` that must be used[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/type2/program.rs:278:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m278[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                mem::replace(&mut self.routine, *caller);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: if you don't need the old value, you can just assign the new value directly[0m
+
+2024-06-21 17:19:12.674317 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:19:12.678697 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:19:12.679071 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:19:12.679082 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:19:12.705438 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:19:12.705453 |INFO | [rudra-progress] Rudra finished
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `<std::vec::Vec<u8> as tape::Walue>::read`
+-> src/tape.rs:102:13: 107:14
+fn read<T: Tape>(tape: &mut T, count: usize) -> Result<Self> {
+                let mut buffer = Vec::with_capacity(count);
+                unsafe { [0m[31mbuffer.set_len(count)[0m };
+                [0m[36m::std::io::Read::read_exact(tape, &mut buffer)[0m?;
+                Ok(buffer)
+            }
+[0m
+2024-06-21 17:19:14.063177 |WARN | [cargo_rudra] Target test:postscript is not supported
+2024-06-21 17:19:14.063267 |WARN | [cargo_rudra] Target bench:postscript is not supported
+2024-06-21 17:19:14.063449 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,65 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Pierre-Henri Symoneaux,phsym,https://github.com/phsym
+Author,-,pinkforest(she/her),pinkforest,https://github.com/pinkforest
+************************************
+event,timestamp,downloads
+Downloads,-,8468162
+************************************
+event,timestamp,total,flagged
+Side Effects,-,35,30
+************************************
+Rudra,timestamp
+"2024-06-21 17:53:43.793624 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:53:47.105347 |INFO | [rudra-progress] Running rudra for target lib:prettytable
+[0m[1m[33mwarning[0m[0m[1m: unnecessary trailing semicolon[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/cell.rs:271:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m271[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: remove this semicolon[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(redundant_semicolons)]` on by default[0m
+
+2024-06-21 17:53:57.302867 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:53:57.306858 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:53:57.307237 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:53:57.307250 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:53:57.331186 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:53:57.331203 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:53:58.747339 |INFO | [rudra-progress] Running rudra for target bin:main
+[0m[1m[33mwarning[0m[0m[1m: unnecessary trailing semicolon[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/cell.rs:271:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m271[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: remove this semicolon[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(redundant_semicolons)]` on by default[0m
+
+2024-06-21 17:54:03.136525 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:54:03.140534 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:54:03.140906 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:54:03.140920 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:54:03.165134 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:54:03.165153 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:54:04.541329 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:54:04.544889 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:54:04.546409 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:54:04.546423 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:54:04.547701 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:54:04.547714 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:54:04.592018 |WARN | [cargo_rudra] Target example:formatting is not supported
+2024-06-21 17:54:04.592071 |WARN | [cargo_rudra] Target example:style is not supported
+2024-06-21 17:54:04.592076 |WARN | [cargo_rudra] Target example:span is not supported
+2024-06-21 17:54:04.592079 |WARN | [cargo_rudra] Target example:tictactoe is not supported
+2024-06-21 17:54:04.592081 |WARN | [cargo_rudra] Target example:slices is not supported
+2024-06-21 17:54:04.592083 |WARN | [cargo_rudra] Target example:csv is not supported
+2024-06-21 17:54:04.592086 |WARN | [cargo_rudra] Target example:multiline is not supported
+2024-06-21 17:54:04.592088 |WARN | [cargo_rudra] Target example:basic is not supported
+2024-06-21 17:54:04.592287 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

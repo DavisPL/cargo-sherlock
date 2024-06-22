@@ -1,0 +1,139 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Frank McSherry,frankmcsherry,https://github.com/frankmcsherry
+************************************
+event,timestamp,downloads
+Downloads,-,19338
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:08:15.470120 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:08:18.487452 |INFO | [rudra-progress] Running rudra for target lib:columnar
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `std::old_io`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:10:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::old_io::{IoResult, MemReader, MemWriter};[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `old_io` in `std`[0m
+
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `std::marker::PhantomFn`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:11:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m11[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::marker::PhantomFn;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno `PhantomFn` in `marker`[0m
+
+[0m[1m[38;5;9merror[E0405][0m[0m[1m: cannot find trait `Writer` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:30:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn write<W: Writer>(&mut self, writer: &mut W) -> IoResult<Vec<Vec<u8>>> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0405][0m[0m[1m: cannot find trait `Reader` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:43:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn read<R: Reader>(&mut self, reader: &mut R, mut bytes: Vec<Vec<u8>>) -> IoResult<()> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:23:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn push(&mut self, T);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(anonymous_parameters)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:26:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn encode(&mut self, &mut Vec<Vec<u8>>);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &mut Vec<Vec<u8>>`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:27:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn decode(&mut self, &mut Vec<Vec<u8>>);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &mut Vec<Vec<u8>>`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:35:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(writer.write_le_u64(vec.len() as u64));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:36:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(writer.write_all(&vec[..]));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:47:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(reader.push(veclen as usize, vec));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:46:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let veclen = try!(reader.read_le_u64());[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `for` iterator expression[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:105:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m105[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            for _ in (0..count) { vector.push(self.1.pop().unwrap()); }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^[0m[0m        [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_parens)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m105[0m[0m [0m[0m[38;5;9m- [0m[0m            for _ in [0m[0m[38;5;9m([0m[0m0..count[0m[0m[38;5;9m)[0m[0m { vector.push(self.1.pop().unwrap()); }[0m
+[0m[1m[38;5;12m105[0m[0m [0m[0m[38;5;10m+ [0m[0m            for _ in 0..count { vector.push(self.1.pop().unwrap()); }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `for` iterator expression[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:186:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m186[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            for _ in (0..count) { vector.push(self.1.pop().unwrap()); }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^[0m[0m        [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m186[0m[0m [0m[0m[38;5;9m- [0m[0m            for _ in [0m[0m[38;5;9m([0m[0m0..count[0m[0m[38;5;9m)[0m[0m { vector.push(self.1.pop().unwrap()); }[0m
+[0m[1m[38;5;12m186[0m[0m [0m[0m[38;5;10m+ [0m[0m            for _ in 0..count { vector.push(self.1.pop().unwrap()); }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `for` iterator expression[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:273:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m273[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    for index in (0..elements.len()) { stack1.push(elements[index].clone()); }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^[0m[0m                 [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m273[0m[0m [0m[0m[38;5;9m- [0m[0m    for index in [0m[0m[38;5;9m([0m[0m0..elements.len()[0m[0m[38;5;9m)[0m[0m { stack1.push(elements[index].clone()); }[0m
+[0m[1m[38;5;12m273[0m[0m [0m[0m[38;5;10m+ [0m[0m    for index in 0..elements.len() { stack1.push(elements[index].clone()); }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m
+
+[0m[1mSome errors have detailed explanations: E0405, E0432.[0m
+[0m[1mFor more information about an error, try `rustc --explain E0405`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `columnar` due to 4 previous errors; 10 warnings emitted
+2024-06-21 18:08:22.271555 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

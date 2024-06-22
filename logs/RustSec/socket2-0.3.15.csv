@@ -1,0 +1,39 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,0.4.7 -> 0.4.9,,Minor OS compat updates but otherwise nothing major here.,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.4.9,,
+audits,-,Critical,google,"[ ""safe-to-deploy"", ""ub-risk-2"",]",0.4.4 -> 0.5.5,,Reviewed at https://fxrev.dev/946307,
+audits,-,Critical,mozilla,safe-to-deploy,0.4.4 -> 0.4.7,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.5.5 -> 0.5.7,,,
+audits,-,Critical,zcash,safe-to-deploy,0.5.6 -> 0.5.7,,The new uses of unsafe to access getsockopt/setsockopt look reasonable.,
+audits,-,Critical,zcash,safe-to-deploy,0.4.9 -> 0.4.10,,Adds support for ESP-IDF and Sony Vita targets. New `unsafe` blocks are for a\nVita-specific `libc` call to `setsockopt` for non-blocking behaviour.\n,
+audits,-,Critical,zcash,safe-to-deploy,0.5.4 -> 0.5.5,,Adds support for Sony Vita targets. New `unsafe` blocks are for Vita-specific\n`libc` calls to `getsockopt` and `setsockopt` for non-blocking behaviour.\n,
+audits,-,Critical,zcash,safe-to-deploy,0.5.5 -> 0.5.6,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Crichton,alexcrichton,https://github.com/alexcrichton
+Author,-,Steven Fackler,sfackler,https://github.com/sfackler
+Author,-,Thomas de Zeeuw,Thomasdezeeuw,https://github.com/Thomasdezeeuw
+Author,-,Socket2,github:tokio-rs:socket2,https://github.com/tokio-rs
+************************************
+event,timestamp,downloads
+Downloads,-,204969493
+************************************
+event,timestamp,total,flagged
+Side Effects,-,368,303
+************************************
+Rudra,timestamp
+"2024-06-21 18:45:28.631387 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:45:32.916033 |INFO | [rudra-progress] Running rudra for target lib:socket2
+2024-06-21 18:45:40.398533 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:45:40.402514 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:45:40.402856 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:45:40.402873 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:45:40.481728 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:45:40.481763 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:45:41.583759 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

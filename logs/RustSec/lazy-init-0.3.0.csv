@@ -1,0 +1,42 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Kyle Huey,khuey,https://github.com/khuey
+************************************
+event,timestamp,downloads
+Downloads,-,195617
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-21 18:41:20.951560 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:41:24.601509 |INFO | [rudra-progress] Running rudra for target lib:lazy-init
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:119:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m119[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match unsafe { self.value.into_inner().unwrap() } {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_unsafe)]` on by default[0m
+
+2024-06-21 18:41:28.565830 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:41:28.569731 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:41:28.592102 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:41:28.592121 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:41:28.623537 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:41:28.623556 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/ApiSendForSync): Suspicious impl of `Sync` found
+-> src/lib.rs:126:1: 130:2
+unsafe impl<T, U> Sync for LazyTransform<T, U>
+    where T: Sync,
+          U: Sync
+{
+}
+2024-06-21 18:41:29.443451 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

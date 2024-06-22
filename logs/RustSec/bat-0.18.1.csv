@@ -1,0 +1,55 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,David Peter,sharkdp,https://github.com/sharkdp
+Author,-,Martin Nordholts,Enselic,https://github.com/Enselic
+************************************
+event,timestamp,downloads
+Downloads,-,1052172
+************************************
+event,timestamp,total,flagged
+Side Effects,-,183,43
+************************************
+Rudra,timestamp
+"2024-06-21 17:00:47.442408 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:00:51.243344 |INFO | [rudra-progress] Running rudra for target lib:bat
+[0m[1m[38;5;9merror[E0495][0m[0m[1m: cannot infer an appropriate lifetime due to conflicting requirements[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/git2-0.13.19/src/attr.rs:74:15[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match (self, other) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: first, the lifetime cannot outlive the anonymous lifetime defined here...[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/git2-0.13.19/src/attr.rs:73:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn eq(&self, other: &AttrValue<'_>) -> bool {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: ...so that the types are compatible[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/git2-0.13.19/src/attr.rs:74:15[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match (self, other) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: expected `([0m[0m[1m&AttrValue<'_>[0m[0m, [0m[0m[1m&AttrValue<'_>[0m[0m)`[0m
+[0m              found `([0m[0m[1m&AttrValue<'_>[0m[0m, [0m[0m[1m&AttrValue<'_>[0m[0m)`[0m
+[0m[1m[38;5;10mnote[0m[0m: but, the lifetime must be valid for the lifetime `'_` as defined here...[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/git2-0.13.19/src/attr.rs:72:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl PartialEq for AttrValue<'_> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;10m^^[0m
+[0m[1m[38;5;10mnote[0m[0m: ...so that the types are compatible[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/git2-0.13.19/src/attr.rs:79:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m79[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            | (Self::Bytes(bytes), AttrValue::String(string)) => string.as_bytes() == *bytes,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;10m^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: expected `AttrValue<[0m[0m[1m'_[0m[0m>`[0m
+[0m              found `AttrValue<[0m[0m[1m'_[0m[0m>`[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0495`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `git2` due to previous error
+2024-06-21 17:01:39.071170 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

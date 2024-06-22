@@ -1,0 +1,194 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,annie,hinaria,https://github.com/hinaria
+************************************
+event,timestamp,downloads
+Downloads,-,121763
+************************************
+event,timestamp,total,flagged
+Side Effects,-,109,109
+************************************
+Rudra,timestamp
+"2024-06-21 18:09:50.273070 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:09:53.288221 |INFO | [rudra-progress] Running rudra for target lib:bite
+[0m[1m[33mwarning[0m[0m[1m: the feature `i128_type` has been stable since 1.26.0 and no longer requires an attribute to enable[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![feature(i128_type)][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(stable_features)]` on by default[0m
+
+2024-06-21 18:09:57.412174 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:09:57.416054 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:09:57.416379 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:09:57.416395 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:09:57.487792 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:09:57.487820 |INFO | [rudra-progress] Rudra finished
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_f32`
+-> src/bite/endian.rs:80:15: 80:158
+fn write_f32         (stream: &mut [u8], value: f32)                { [0m[36mSelf::write_u32    (stream, unsafe { [0m[33mstd::mem::transmute(value)[0m[36m })[0m      }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_f64`
+-> src/bite/endian.rs:81:15: 81:158
+fn write_f64         (stream: &mut [u8], value: f64)                { [0m[36mSelf::write_u64    (stream, unsafe { [0m[33mstd::mem::transmute(value)[0m[36m })[0m      }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_i16`
+-> src/bite/endian.rs:83:15: 83:158
+fn read_slice_i16    (stream: &[u8], values: &mut [i16])            { [0m[36mSelf::read_slice_u16 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_i32`
+-> src/bite/endian.rs:84:15: 84:158
+fn read_slice_i32    (stream: &[u8], values: &mut [i32])            { [0m[36mSelf::read_slice_u32 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_i64`
+-> src/bite/endian.rs:85:15: 85:158
+fn read_slice_i64    (stream: &[u8], values: &mut [i64])            { [0m[36mSelf::read_slice_u64 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_i128`
+-> src/bite/endian.rs:86:15: 86:158
+fn read_slice_i128   (stream: &[u8], values: &mut [i128])           { [0m[36mSelf::read_slice_u128(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_f32_unchecked`
+-> src/bite/endian.rs:88:15: 88:158
+fn read_slice_f32_unchecked(stream: &[u8], values: &mut [f32])      { [0m[36mSelf::read_slice_u32(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;   }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_f64_unchecked`
+-> src/bite/endian.rs:89:15: 89:158
+fn read_slice_f64_unchecked(stream: &[u8], values: &mut [f64])      { [0m[36mSelf::read_slice_u64(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;   }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_i16`
+-> src/bite/endian.rs:91:15: 91:158
+fn write_slice_i16   (stream: &mut [u8], values: &[i16])            { [0m[36mSelf::write_slice_u16 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m; }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_i32`
+-> src/bite/endian.rs:92:15: 92:158
+fn write_slice_i32   (stream: &mut [u8], values: &[i32])            { [0m[36mSelf::write_slice_u32 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m; }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_i64`
+-> src/bite/endian.rs:93:15: 93:158
+fn write_slice_i64   (stream: &mut [u8], values: &[i64])            { [0m[36mSelf::write_slice_u64 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m; }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_i128`
+-> src/bite/endian.rs:94:15: 94:158
+fn write_slice_i128  (stream: &mut [u8], values: &[i128])           { [0m[36mSelf::write_slice_u128(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m; }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_f32`
+-> src/bite/endian.rs:96:15: 96:158
+fn write_slice_f32   (stream: &mut [u8], values: &[f32])            { [0m[36mSelf::write_slice_u32(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_f64`
+-> src/bite/endian.rs:97:15: 97:158
+fn write_slice_f64   (stream: &mut [u8], values: &[f64])            { [0m[36mSelf::write_slice_u64(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::convert_slice_i16`
+-> src/bite/endian.rs:99:15: 99:158
+fn convert_slice_i16 (values: &mut [i16])                           { [0m[36mSelf::convert_slice_u16 (unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;       }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::convert_slice_i32`
+-> src/bite/endian.rs:100:15: 100:158
+fn convert_slice_i32 (values: &mut [i32])                           { [0m[36mSelf::convert_slice_u32 (unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;       }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::convert_slice_i64`
+-> src/bite/endian.rs:101:15: 101:158
+fn convert_slice_i64 (values: &mut [i64])                           { [0m[36mSelf::convert_slice_u64 (unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;       }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::convert_slice_i128`
+-> src/bite/endian.rs:102:15: 102:158
+fn convert_slice_i128(values: &mut [i128])                          { [0m[36mSelf::convert_slice_u128(unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;       }
+[0m
+2024-06-21 18:09:58.615335 |INFO | [rudra-progress] Running rudra for target bin:bite
+[0m[1m[33mwarning[0m[0m[1m: the feature `i128_type` has been stable since 1.26.0 and no longer requires an attribute to enable[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![feature(i128_type)][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(stable_features)]` on by default[0m
+
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_f32`
+-> src/bite/endian.rs:80:15: 80:158
+fn write_f32         (stream: &mut [u8], value: f32)                { [0m[36mSelf::write_u32    (stream, unsafe { [0m[33mstd::mem::transmute(value)[0m[36m })[0m      }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_f64`
+-> src/bite/endian.rs:81:15: 81:158
+fn write_f64         (stream: &mut [u8], value: f64)                { [0m[36mSelf::write_u64    (stream, unsafe { [0m[33mstd::mem::transmute(value)[0m[36m })[0m      }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_i16`
+-> src/bite/endian.rs:83:15: 83:158
+fn read_slice_i16    (stream: &[u8], values: &mut [i16])            { [0m[36mSelf::read_slice_u16 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_i32`
+-> src/bite/endian.rs:84:15: 84:158
+fn read_slice_i32    (stream: &[u8], values: &mut [i32])            { [0m[36mSelf::read_slice_u32 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_i64`
+-> src/bite/endian.rs:85:15: 85:158
+fn read_slice_i64    (stream: &[u8], values: &mut [i64])            { [0m[36mSelf::read_slice_u64 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_i128`
+-> src/bite/endian.rs:86:15: 86:158
+fn read_slice_i128   (stream: &[u8], values: &mut [i128])           { [0m[36mSelf::read_slice_u128(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_f32_unchecked`
+-> src/bite/endian.rs:88:15: 88:158
+fn read_slice_f32_unchecked(stream: &[u8], values: &mut [f32])      { [0m[36mSelf::read_slice_u32(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;   }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::read_slice_f64_unchecked`
+-> src/bite/endian.rs:89:15: 89:158
+fn read_slice_f64_unchecked(stream: &[u8], values: &mut [f64])      { [0m[36mSelf::read_slice_u64(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;   }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_i16`
+-> src/bite/endian.rs:91:15: 91:158
+fn write_slice_i16   (stream: &mut [u8], values: &[i16])            { [0m[36mSelf::write_slice_u16 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m; }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_i32`
+-> src/bite/endian.rs:92:15: 92:158
+fn write_slice_i32   (stream: &mut [u8], values: &[i32])            { [0m[36mSelf::write_slice_u32 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m; }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_i64`
+-> src/bite/endian.rs:93:15: 93:158
+fn write_slice_i64   (stream: &mut [u8], values: &[i64])            { [0m[36mSelf::write_slice_u64 (stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m; }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_i128`
+-> src/bite/endian.rs:94:15: 94:158
+fn write_slice_i128  (stream: &mut [u8], values: &[i128])           { [0m[36mSelf::write_slice_u128(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m; }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_f32`
+-> src/bite/endian.rs:96:15: 96:158
+fn write_slice_f32   (stream: &mut [u8], values: &[f32])            { [0m[36mSelf::write_slice_u32(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::write_slice_f64`
+-> src/bite/endian.rs:97:15: 97:158
+fn write_slice_f64   (stream: &mut [u8], values: &[f64])            { [0m[36mSelf::write_slice_u64(stream, unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;  }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::convert_slice_i16`
+-> src/bite/endian.rs:99:15: 99:158
+fn convert_slice_i16 (values: &mut [i16])                           { [0m[36mSelf::convert_slice_u16 (unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;       }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::convert_slice_i32`
+-> src/bite/endian.rs:100:15: 100:158
+fn convert_slice_i32 (values: &mut [i32])                           { [0m[36mSelf::convert_slice_u32 (unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;       }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::convert_slice_i64`
+-> src/bite/endian.rs:101:15: 101:158
+fn convert_slice_i64 (values: &mut [i64])                           { [0m[36mSelf::convert_slice_u64 (unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;       }
+[0m
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `bite::endian::Endianness::convert_slice_i128`
+-> src/bite/endian.rs:102:15: 102:158
+fn convert_slice_i128(values: &mut [i128])                          { [0m[36mSelf::convert_slice_u128(unsafe { [0m[33mstd::mem::transmute(values)[0m[36m })[0m;       }
+[0m
+2024-06-21 18:09:59.391831 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:09:59.395892 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:09:59.397429 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:09:59.397444 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:09:59.398949 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:09:59.398964 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:09:59.441582 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

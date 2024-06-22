@@ -1,0 +1,500 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,"[ ""ub-risk-3"", ""does-not-implement-crypto"",]",,1.0.0-beta2,Reviewed in CL 558118223,
+************************************
+event,timestamp,name,username,url
+Author,-,Chris Morgan,chris-morgan,https://github.com/chris-morgan
+************************************
+event,timestamp,downloads
+Downloads,-,5100799
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:10:25.489942 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:10:28.505365 |INFO | [rudra-progress] Running rudra for target lib:anymap
+[0m[1m[33mwarning[0m[0m[1m: unknown lint: `unused_typecasts`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:4:35[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        variant_size_differences, unused_typecasts,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unknown_lints)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unknown lint: `unstable`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:6:10[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m6[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![allow(unstable)][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:137:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m137[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:145:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m145[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:154:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m154[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:163:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m163[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:176:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m176[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:185:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m185[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:195:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m195[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:207:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m207[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:221:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m221[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:229:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m229[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:237:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m237[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:246:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m246[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:254:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m254[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:261:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m261[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:267:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m267[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:277:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m277[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:284:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m284[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `unstable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:295:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m295[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[unstable = ""matches collection reform specification, waiting for dust to settle""][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[unstable(feature = ""name"", reason = ""..."", issue = ""N"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:304:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m304[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:311:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m311[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:317:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m317[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:323:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m323[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `unstable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:332:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m332[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[unstable = ""matches collection reform v2 specification, waiting for dust to settle""][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[unstable(feature = ""name"", reason = ""..."", issue = ""N"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:343:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m343[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:349:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m349[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:355:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m355[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:362:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m362[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:368:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m368[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:376:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m376[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:385:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m385[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:392:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m392[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `unstable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:398:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m398[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[unstable = ""matches collection reform specification, waiting for dust to settle""][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[unstable(feature = ""name"", reason = ""..."", issue = ""N"")]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: malformed `stable` attribute input[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:404:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m404[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[stable][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: must be of the form: `#[stable(feature = ""name"", since = ""version"")]`[0m
+
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `std::hash::Writer`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:15:25[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::hash::{Hasher, Writer};[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mno `Writer` in `hash`[0m
+
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `std::collections::hash_state`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:16:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::collections::hash_state::HashState;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `hash_state` in `collections`[0m
+
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `std::raw`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:18:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::raw::TraitObject;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `raw` in `std`[0m
+
+[0m[1m[38;5;9merror[E0437][0m[0m[1m: type `Output` is not a member of trait `Hasher`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:48:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    type Output = u64;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot a member of trait `Hasher`[0m
+
+[0m[1m[38;5;9merror[E0407][0m[0m[1m: method `reset` is not a member of trait `Hasher`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:50:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn reset(&mut self) { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot a member of trait `Hasher`[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function `copy_nonoverlapping_memory` in module `std::ptr`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:40:23[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m40[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m            std::ptr::copy_nonoverlapping_memory(&mut self.value,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a function with a similar name exists: `copy_nonoverlapping`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of unstable library feature 'test': `bench` is a part of custom test frameworks which are unstable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:461:3[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m461[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[bench][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[38;5;9m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[deny(soft_unstable)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #64266 <https://github.com/rust-lang/rust/issues/64266>[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of unstable library feature 'test': `bench` is a part of custom test frameworks which are unstable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:471:3[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m471[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[bench][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[38;5;9m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #64266 <https://github.com/rust-lang/rust/issues/64266>[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of unstable library feature 'test': `bench` is a part of custom test frameworks which are unstable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:481:3[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m481[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#[bench][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[38;5;9m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #64266 <https://github.com/rust-lang/rust/issues/64266>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:62:41[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl<'a> UncheckedAnyRefExt<'a> for &'a Any {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:80:48[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m80[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl<'a> UncheckedAnyMutRefExt<'a> for &'a mut Any {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:98:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m98[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl UncheckedBoxAny for Box<Any + 'static> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:102:49[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m102[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let to: TraitObject = *transmute::<&Box<Any>, &TraitObject>(&self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:139:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m139[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    data: HashMap<TypeId, Box<Any + 'static>, TypeIdState>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:248:68[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m248[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.data.insert(TypeId::of::<T>(), Box::new(value) as Box<Any>)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                   [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:313:52[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m313[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    entry: hash_map::OccupiedEntry<'a, TypeId, Box<Any + 'static>>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                   [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:319:50[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m319[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    entry: hash_map::VacantEntry<'a, TypeId, Box<Any + 'static>>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:365:60[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m365[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        unsafe { *self.entry.insert(Box::new(value) as Box<Any + 'static>).downcast_unchecked() }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                           [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:380:59[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m380[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        unsafe { self.entry.insert(Box::new(value) as Box<Any + 'static>).downcast_mut_unchecked() }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                          [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:388:43[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m388[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    inner: hash_map::Iter<'a, TypeId, Box<Any + 'static>>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                          [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:394:46[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m394[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    inner: hash_map::IterMut<'a, TypeId, Box<Any + 'static>>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:400:44[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m400[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    inner: hash_map::Drain<'a, TypeId, Box<Any + 'static>>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:406:43[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m406[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    inner: hash_map::IntoIter<TypeId, Box<Any + 'static>>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                          [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:411:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m411[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    type Item = &'a Any;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:414:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m414[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn next(&mut self) -> Option<&'a Any> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:424:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m424[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    type Item = &'a mut Any;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:427:42[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m427[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn next(&mut self) -> Option<&'a mut Any> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:437:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m437[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    type Item = Box<Any + 'static>;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:440:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m440[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn next(&mut self) -> Option<Box<Any + 'static>> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:450:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m450[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    type Item = Box<Any + 'static>;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:453:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m453[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn next(&mut self) -> Option<Box<Any + 'static>> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Any + 'static`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1mSome errors have detailed explanations: E0407, E0425, E0432, E0437.[0m
+[0m[1mFor more information about an error, try `rustc --explain E0407`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `anymap` due to 42 previous errors; 24 warnings emitted
+2024-06-21 18:10:32.214932 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

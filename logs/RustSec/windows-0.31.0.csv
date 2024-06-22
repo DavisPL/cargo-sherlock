@@ -1,0 +1,38 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+trusted,-,Critical,bytecode-alliance,safe-to-deploy,,,,3
+trusted,-,Critical,mozilla,safe-to-deploy,,,,3
+************************************
+event,timestamp,name,username,url
+Author,-,Kenny Kerr,kennykerr,https://github.com/kennykerr
+************************************
+event,timestamp,downloads
+Downloads,-,39390132
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:04:46.569320 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:04:50.327179 |INFO | [rudra-progress] Running rudra for target lib:windows
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `windows` in `os`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/core/bindings.rs:1517:22[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1517[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        use std::os::windows::ffi::OsStrExt;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `windows` in `os`[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `encode_wide` found for reference `&std::ffi::OsStr` in the current scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/core/bindings.rs:1518:104[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1518[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0malloc::boxed::Box::<[u16]>::into_raw(self.encode_wide().chain(::core::iter::once(0)).collect::<::windows::core::alloc::vec::Vec<u16>>([0m[0m[1m[38;5;12m...[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&std::ffi::OsStr`[0m
+
+[0m[1mSome errors have detailed explanations: E0433, E0599.[0m
+[0m[1mFor more information about an error, try `rustc --explain E0433`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `windows` due to 2 previous errors
+2024-06-21 18:04:54.880209 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Martens,newAM,https://github.com/newAM
+************************************
+event,timestamp,downloads
+Downloads,-,16173
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:05:12.290597 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:05:15.576222 |INFO | [rudra-progress] Running rudra for target lib:ftd2xx-embedded-hal
+2024-06-21 18:05:24.309898 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:05:24.313986 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:05:24.314356 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:05:24.314372 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:05:24.316558 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:05:24.316570 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:05:25.514372 |WARN | [cargo_rudra] Target example:bme280 is not supported
+2024-06-21 18:05:25.514491 |WARN | [cargo_rudra] Target example:blink is not supported
+2024-06-21 18:05:25.514517 |WARN | [cargo_rudra] Target test:version-numbers is not supported
+2024-06-21 18:05:25.514645 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

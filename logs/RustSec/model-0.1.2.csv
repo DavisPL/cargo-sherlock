@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tyler Neely,spacejam,https://github.com/spacejam
+************************************
+event,timestamp,downloads
+Downloads,-,295032
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:22:10.131222 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:22:14.534853 |INFO | [rudra-progress] Running rudra for target lib:model
+[0m[0m[1m[31merror[0m[1m:[0m package `rustix v0.38.9` cannot be built because it requires rustc 1.63 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:22:17.854579 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

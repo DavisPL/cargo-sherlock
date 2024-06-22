@@ -1,0 +1,43 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Bodil Stokke,bodil,https://github.com/bodil
+************************************
+event,timestamp,downloads
+Downloads,-,14020009
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:34:58.624369 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:35:02.472989 |INFO | [rudra-progress] Running rudra for target lib:sized-chunks
+2024-06-21 17:35:13.730626 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:35:13.734492 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:35:13.734847 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:35:13.734857 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:35:13.813391 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:35:13.813418 |INFO | [rudra-progress] Rudra finished
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `<inline_array::InlineArray<A, T> as std::clone::Clone>::clone`
+-> src/inline_array/mod.rs:303:5: 314:6
+fn clone(&self) -> Self {
+        let mut copy = Self::new();
+        for i in 0..self.len() {
+            unsafe {
+                copy.write_at(i, [0m[33m[0m[36mself.get_unchecked(i)[0m[36m.clone()[0m);
+            }
+        }
+        unsafe {
+            *copy.len_mut() = self.len();
+        }
+        copy
+    }
+[0m
+2024-06-21 17:35:14.949195 |WARN | [cargo_rudra] Target bench:sized_chunk is not supported
+2024-06-21 17:35:14.949363 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

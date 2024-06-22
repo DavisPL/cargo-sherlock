@@ -1,0 +1,36 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Steven Fackler,sfackler,https://github.com/sfackler
+Author,-,Alex Gaynor,alex,https://github.com/alex
+************************************
+event,timestamp,downloads
+Downloads,-,100145247
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:32:43.387012 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:32:44.908889 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to get `openssl-sys` as a dependency of package `openssl v0.8.3 (/tmp/rudra)`
+
+Caused by:
+  failed to load source for dependency `openssl-sys`
+
+Caused by:
+  Unable to update /tmp/openssl-sys
+
+Caused by:
+  failed to read `/tmp/openssl-sys/Cargo.toml`
+
+Caused by:
+  No such file or directory (os error 2)
+
+"
+************************************

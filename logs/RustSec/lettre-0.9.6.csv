@@ -1,0 +1,37 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alexis Mousset,amousset,https://github.com/amousset
+Author,-,release,github:lettre:release,https://github.com/lettre
+************************************
+event,timestamp,downloads
+Downloads,-,2493773
+************************************
+event,timestamp,total,flagged
+Side Effects,-,79,56
+************************************
+Rudra,timestamp
+"2024-06-21 18:48:01.415004 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:48:04.839187 |INFO | [rudra-progress] Running rudra for target lib:lettre
+2024-06-21 18:48:27.379497 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:48:27.383607 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:48:27.383995 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:48:27.384008 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:48:27.421616 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:48:27.421651 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:48:29.462261 |WARN | [cargo_rudra] Target example:smtp is not supported
+2024-06-21 18:48:29.462381 |WARN | [cargo_rudra] Target example:smtp_gmail is not supported
+2024-06-21 18:48:29.462388 |WARN | [cargo_rudra] Target test:transport_stub is not supported
+2024-06-21 18:48:29.462397 |WARN | [cargo_rudra] Target test:transport_smtp is not supported
+2024-06-21 18:48:29.462401 |WARN | [cargo_rudra] Target test:transport_file is not supported
+2024-06-21 18:48:29.462413 |WARN | [cargo_rudra] Target test:r2d2_smtp is not supported
+2024-06-21 18:48:29.462421 |WARN | [cargo_rudra] Target test:transport_sendmail is not supported
+2024-06-21 18:48:29.462423 |WARN | [cargo_rudra] Target test:skeptic is not supported
+2024-06-21 18:48:29.462426 |WARN | [cargo_rudra] Target bench:transport_smtp is not supported
+2024-06-21 18:48:29.462609 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

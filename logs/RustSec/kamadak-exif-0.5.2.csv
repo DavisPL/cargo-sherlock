@@ -1,0 +1,31 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,KAMADA Ken'ichi,kamadak,https://github.com/kamadak
+************************************
+event,timestamp,downloads
+Downloads,-,3132907
+************************************
+event,timestamp,total,flagged
+Side Effects,-,115,98
+************************************
+Rudra,timestamp
+"2024-06-21 18:33:59.658884 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:34:02.857484 |INFO | [rudra-progress] Running rudra for target lib:exif
+2024-06-21 18:34:08.480634 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:34:08.484725 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:34:08.485093 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:34:08.485104 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:34:08.535159 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:34:08.535192 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:34:10.166626 |WARN | [cargo_rudra] Target example:reading is not supported
+2024-06-21 18:34:10.166668 |WARN | [cargo_rudra] Target example:dumpexif is not supported
+2024-06-21 18:34:10.166682 |WARN | [cargo_rudra] Target test:rwrcmp is not supported
+2024-06-21 18:34:10.166687 |WARN | [cargo_rudra] Target test:platform is not supported
+2024-06-21 18:34:10.166806 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,43 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Anselm Eickhoff,aeplay,https://github.com/aeplay
+************************************
+event,timestamp,downloads
+Downloads,-,13521
+************************************
+event,timestamp,total,flagged
+Side Effects,-,51,28
+************************************
+Rudra,timestamp
+"2024-06-21 17:34:00.893589 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:34:04.428289 |INFO | [rudra-progress] Running rudra for target lib:chunky
+[0m[1m[33mwarning[0m[0m[1m: unnecessary trailing semicolon[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/queue.rs:79:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m79[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: remove this semicolon[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(redundant_semicolons)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary trailing semicolon[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/queue.rs:135:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m135[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: remove this semicolon[0m
+
+[0m[1m[38;5;9merror[E0635][0m[0m[1m: unknown feature `vec_resize_default`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:10:12[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![feature(vec_resize_default)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0635`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `chunky` due to previous error; 2 warnings emitted
+2024-06-21 17:34:08.648801 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,218 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,charles-r-earp,https://github.com/charles-r-earp
+************************************
+event,timestamp,downloads
+Downloads,-,2285
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:12:58.233735 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:13:02.707555 |INFO | [rudra-progress] Running rudra for target lib:adtensor
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/vector.rs:34:42[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut v: Self = unsafe { std::mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/vector.rs:68:42[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut v: Self = unsafe { std::mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/vector.rs:110:50[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m110[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut v: Vector<T, N> = unsafe { std::mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix.rs:51:42[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m51[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut m: Self = unsafe { std::mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix.rs:69:55[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut out: Matrix<T, M, N> = unsafe { std::mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                      [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/tensor.rs:181:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m181[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut tn =  Self{a: unsafe { mem::uninitialized() }, [0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/tensor.rs:199:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m199[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut tn =  Self{a: unsafe { mem::uninitialized() }, [0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/tensor.rs:225:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut tn: Self =  unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/tensor.rs:227:61[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m227[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut ra: GenericArray<T, Quot<S, K>> = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                            [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/tensor_ops.rs:13:46[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut tn: Self::Output = unsafe { mem::uninitialized() };  [0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+2024-06-21 16:13:13.855574 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:13:13.859489 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:13:13.859801 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:13:13.859812 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:13:13.903529 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:13:13.903557 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<matrix::Matrix<T, R, C> as std::iter::FromIterator<T>>::from_iter`
+-> src/matrix.rs:49:3: 59:4
+fn from_iter<I>(i: I) -> Self
+    where I: IntoIterator<Item=T> {
+    let mut m: Self = unsafe { std::mem::uninitialized() };
+    let mut i = [0m[36mi.into_iter()[0m;
+    for v in &mut m[..] {
+      for p in &mut v[..] {
+        unsafe { [0m[33mstd::ptr::write(p, [0m[36mi.next()[0m[33m.unwrap())[0m };
+      }
+    }
+    m
+  }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<vector::Vector<T, N> as std::iter::FromIterator<T>>::from_iter`
+-> src/vector.rs:66:3: 74:4
+fn from_iter<I>(i: I) -> Self
+    where I: IntoIterator<Item=T> {
+    let mut v: Self = unsafe { std::mem::uninitialized() };
+    let mut i = [0m[36mi.into_iter()[0m;
+    for p in &mut v[..] {
+      unsafe { [0m[33mstd::ptr::write(p, [0m[36mi.next()[0m[33m.unwrap())[0m };
+    }
+    v
+  }
+[0m
+2024-06-21 16:13:15.126772 |INFO | [rudra-progress] Running rudra for target bin:adtensor
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/vector.rs:34:42[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut v: Self = unsafe { std::mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/vector.rs:68:42[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut v: Self = unsafe { std::mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/vector.rs:110:50[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m110[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut v: Vector<T, N> = unsafe { std::mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix.rs:51:42[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m51[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut m: Self = unsafe { std::mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/matrix.rs:69:55[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut out: Matrix<T, M, N> = unsafe { std::mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                      [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/tensor.rs:181:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m181[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut tn =  Self{a: unsafe { mem::uninitialized() }, [0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/tensor.rs:199:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m199[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut tn =  Self{a: unsafe { mem::uninitialized() }, [0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/tensor.rs:225:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut tn: Self =  unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/tensor.rs:227:61[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m227[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut ra: GenericArray<T, Quot<S, K>> = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                            [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/tensor_ops.rs:13:46[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut tn: Self::Output = unsafe { mem::uninitialized() };  [0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+2024-06-21 16:13:20.851856 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:13:20.855740 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:13:20.856133 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:13:20.856156 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:13:20.897266 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:13:20.897285 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<matrix::Matrix<T, R, C> as std::iter::FromIterator<T>>::from_iter`
+-> src/matrix.rs:49:3: 59:4
+fn from_iter<I>(i: I) -> Self
+    where I: IntoIterator<Item=T> {
+    let mut m: Self = unsafe { std::mem::uninitialized() };
+    let mut i = [0m[36mi.into_iter()[0m;
+    for v in &mut m[..] {
+      for p in &mut v[..] {
+        unsafe { [0m[33mstd::ptr::write(p, [0m[36mi.next()[0m[33m.unwrap())[0m };
+      }
+    }
+    m
+  }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<vector::Vector<T, N> as std::iter::FromIterator<T>>::from_iter`
+-> src/vector.rs:66:3: 74:4
+fn from_iter<I>(i: I) -> Self
+    where I: IntoIterator<Item=T> {
+    let mut v: Self = unsafe { std::mem::uninitialized() };
+    let mut i = [0m[36mi.into_iter()[0m;
+    for p in &mut v[..] {
+      unsafe { [0m[33mstd::ptr::write(p, [0m[36mi.next()[0m[33m.unwrap())[0m };
+    }
+    v
+  }
+[0m
+2024-06-21 16:13:22.244426 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:13:22.248122 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:13:22.249141 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:13:22.249153 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:13:22.259105 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:13:22.259126 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:13:22.305140 |WARN | [cargo_rudra] Target bench:bench_vector is not supported
+2024-06-21 16:13:22.305194 |WARN | [cargo_rudra] Target bench:bench_matrix is not supported
+2024-06-21 16:13:22.305303 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

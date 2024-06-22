@@ -1,0 +1,36 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Florian Blasius,FloVanGH,https://github.com/FloVanGH
+************************************
+event,timestamp,downloads
+Downloads,-,23526
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:21:57.513998 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:22:00.533394 |INFO | [rudra-progress] Running rudra for target lib:dces
+2024-06-21 17:22:05.917207 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:22:05.920978 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:22:05.922427 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:22:05.922440 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:22:05.960344 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:22:05.960369 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/world.rs:35:1: 35:67
+unsafe impl<E, Ctx> Send for World<E, Ctx> where E: EntityStore {}
+2024-06-21 17:22:07.018447 |WARN | [cargo_rudra] Target example:minimal is not supported
+2024-06-21 17:22:07.018492 |WARN | [cargo_rudra] Target example:init_cleanup is not supported
+2024-06-21 17:22:07.018497 |WARN | [cargo_rudra] Target example:shared is not supported
+2024-06-21 17:22:07.018499 |WARN | [cargo_rudra] Target example:basic is not supported
+2024-06-21 17:22:07.018501 |WARN | [cargo_rudra] Target example:context is not supported
+2024-06-21 17:22:07.018503 |WARN | [cargo_rudra] Target test:tests is not supported
+2024-06-21 17:22:07.018590 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,31 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Adrian Brink,adrianbrink,https://github.com/adrianbrink
+Author,-,Tony Arcieri (iqlusion),tony-iqlusion,https://github.com/tony-iqlusion
+Author,-,Justin Kilpatrick,jkilpatr,https://github.com/jkilpatr
+Author,-,Greg Szabo,greg-szabo,https://github.com/greg-szabo
+************************************
+event,timestamp,downloads
+Downloads,-,5942
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:07:43.678608 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:07:46.694292 |INFO | [rudra-progress] Running rudra for target lib:cosmos_sdk
+[0m[1m[38;5;9merror[0m[0m[1m: this crate has been renamed to `cosmrs`. please update Cargo.toml to use the new name[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:1[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0mcompile_error!(""this crate has been renamed to `cosmrs`. please update Cargo.toml to use the new name"");[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `cosmos_sdk` due to previous error
+2024-06-21 18:07:50.242124 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,110 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,0.5.4 -> 0.5.8,,"This diff does what it says on the tin for this version range, notably fixing a\nrace condition, improving handling of durations, and additionally swapping out a\nspin lock with a lock from the standard library. Minor bits of `unsafe` code\nare modified but that's expected given the nature of this crate.\n",
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.5.7,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",0.5.7 -> 0.5.8,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.5.4 -> 0.5.6,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.5.7 -> 0.5.8,,"Reviewed the fix, previous versions indeed had were able to trigger a race condition",
+audits,-,Critical,mozilla,safe-to-deploy,0.5.8 -> 0.5.11,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.5.11 -> 0.5.12,,Minimal change fixing a memory leak.,
+audits,-,Critical,zcash,safe-to-deploy,0.5.6 -> 0.5.7,,Fixes wrapping overflows for large timeouts.,
+audits,-,Critical,zcash,safe-to-deploy,0.5.8 -> 0.5.9,,,
+audits,-,Critical,zcash,safe-to-deploy,0.5.9 -> 0.5.10,,Changes to `unsafe` code are to use `MaybeUninit::assume_init_drop` (which is\nnow usable with the new MSRV) instead of dropping via casting.\n,
+************************************
+event,timestamp,name,username,url
+Author,-,Jeehoon Kang,jeehoonkang,https://github.com/jeehoonkang
+Author,-,Amanieu d'Antras,Amanieu,https://github.com/Amanieu
+Author,-,Taiki Endo,taiki-e,https://github.com/taiki-e
+Author,-,admins,github:crossbeam-rs:admins,https://github.com/crossbeam-rs
+************************************
+event,timestamp,downloads
+Downloads,-,150914928
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:03:22.485723 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:03:25.718877 |INFO | [rudra-progress] Running rudra for target lib:crossbeam-channel
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicPtr::<T>::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/flavors/list.rs:235:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m235[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    .compare_and_swap(block, new, Ordering::Release)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-21 18:03:36.093980 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:03:36.098376 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:03:36.102288 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:03:36.102303 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:03:36.141168 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:03:36.141189 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/channel.rs:321:1: 321:43
+unsafe impl<T: Send> Sync for Sender<T> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/channel.rs:636:1: 636:45
+unsafe impl<T: Send> Sync for Receiver<T> {}
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `<flavors::list::Channel<T> as std::ops::Drop>::drop`
+-> src/flavors/list.rs:564:5: 598:6
+fn drop(&mut self) {
+        let mut head = self.head.index.load(Ordering::Relaxed);
+        let mut tail = self.tail.index.load(Ordering::Relaxed);
+        let mut block = self.head.block.load(Ordering::Relaxed);
+
+        // Erase the lower bits.
+        head &= !((1 << SHIFT) - 1);
+        tail &= !((1 << SHIFT) - 1);
+
+        unsafe {
+            // Drop all messages between head and tail and deallocate the heap-allocated blocks.
+            while head != tail {
+                let offset = (head >> SHIFT) % LAP;
+
+                if offset < BLOCK_CAP {
+                    // Drop the message in the slot.
+                    let slot = [0m[33m(*block).slots.get_unchecked(offset)[0m;
+                    let p = &mut *slot.msg.get();
+                    [0m[36mp.as_mut_ptr().drop_in_place()[0m;
+                } else {
+                    // Deallocate the block and move to the next one.
+                    let next = (*block).next.load(Ordering::Relaxed);
+                    drop(Box::from_raw(block));
+                    block = next;
+                }
+
+                head = head.wrapping_add(1 << SHIFT);
+            }
+
+            // Deallocate the last remaining block.
+            if !block.is_null() {
+                drop(Box::from_raw(block));
+            }
+        }
+    }
+[0m
+2024-06-21 18:03:37.581933 |WARN | [cargo_rudra] Target example:fibonacci is not supported
+2024-06-21 18:03:37.582047 |WARN | [cargo_rudra] Target example:matching is not supported
+2024-06-21 18:03:37.582070 |WARN | [cargo_rudra] Target example:stopwatch is not supported
+2024-06-21 18:03:37.582079 |WARN | [cargo_rudra] Target test:same_channel is not supported
+2024-06-21 18:03:37.582081 |WARN | [cargo_rudra] Target test:zero is not supported
+2024-06-21 18:03:37.582087 |WARN | [cargo_rudra] Target test:after is not supported
+2024-06-21 18:03:37.582089 |WARN | [cargo_rudra] Target test:never is not supported
+2024-06-21 18:03:37.582091 |WARN | [cargo_rudra] Target test:list is not supported
+2024-06-21 18:03:37.582093 |WARN | [cargo_rudra] Target test:iter is not supported
+2024-06-21 18:03:37.582095 |WARN | [cargo_rudra] Target test:mpsc is not supported
+2024-06-21 18:03:37.582097 |WARN | [cargo_rudra] Target test:select_macro is not supported
+2024-06-21 18:03:37.582099 |WARN | [cargo_rudra] Target test:select is not supported
+2024-06-21 18:03:37.582101 |WARN | [cargo_rudra] Target test:array is not supported
+2024-06-21 18:03:37.582103 |WARN | [cargo_rudra] Target test:golang is not supported
+2024-06-21 18:03:37.582105 |WARN | [cargo_rudra] Target test:tick is not supported
+2024-06-21 18:03:37.582107 |WARN | [cargo_rudra] Target test:ready is not supported
+2024-06-21 18:03:37.582114 |WARN | [cargo_rudra] Target test:thread_locals is not supported
+2024-06-21 18:03:37.582117 |WARN | [cargo_rudra] Target bench:crossbeam is not supported
+2024-06-21 18:03:37.582254 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

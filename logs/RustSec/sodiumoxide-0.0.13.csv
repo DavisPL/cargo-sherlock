@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,dnaq,https://github.com/dnaq
+************************************
+event,timestamp,downloads
+Downloads,-,3065753
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:53:41.595616 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:53:43.026124 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to update path override `/tmp/rudra/libsodium-sys` (defined in `/tmp/rudra/.cargo/config`)
+
+Caused by:
+  failed to read directory `/tmp/rudra/libsodium-sys`
+
+Caused by:
+  No such file or directory (os error 2)
+
+"
+************************************

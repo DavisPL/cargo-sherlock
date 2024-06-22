@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,dvshapkin,dvshapkin,https://github.com/dvshapkin
+************************************
+event,timestamp,downloads
+Downloads,-,5157
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:27:39.572090 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:27:47.550672 |INFO | [rudra-progress] Running rudra for target lib:alg_ds
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated type alias `std::alloc::LayoutErr`: Name does not follow std convention, use LayoutError[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ds/matrix.rs:140:59[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m140[0m[0m [0m[0m[1m[38;5;12m| [0m[0mfn layout<T>(size: usize) -> Result<alloc::Layout, alloc::LayoutErr> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                          [0m[0m[1m[33m^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-21 16:27:57.737229 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:27:57.746591 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:27:57.747291 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:27:57.747318 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:27:57.806024 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:27:57.806102 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:28:00.381233 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

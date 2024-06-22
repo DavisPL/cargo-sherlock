@@ -1,0 +1,58 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Pierre Krieger,tomaka,https://github.com/tomaka
+Author,-,Max Inden,mxinden,https://github.com/mxinden
+Author,-,Core devs,github:paritytech:core-devs,https://github.com/paritytech
+Author,-,Libp2p devs,github:paritytech:libp2p-devs,https://github.com/paritytech
+Author,-,Repos - Rust,github:libp2p:repos-rust,https://github.com/libp2p
+Author,-,rust-libp2p Maintainers,github:libp2p:rust-libp2p-maintainers,https://github.com/libp2p
+************************************
+event,timestamp,downloads
+Downloads,-,5659551
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 16:47:39.996099 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:47:55.511302 |INFO | [rudra-progress] Running rudra for target lib:libp2p
+[0m[0m[1m[31merror[0m[1m:[0m failed to run custom build command for `prost-build v0.10.0`
+
+Caused by:
+  process didn't exit successfully: `/tmp/rudra/target/debug/build/prost-build-8933ff36b9a9231d/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-changed=/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/prost-build-0.10.0/third-party/protobuf/cmake
+  CMAKE_TOOLCHAIN_FILE_x86_64-unknown-linux-gnu = None
+  CMAKE_TOOLCHAIN_FILE_x86_64_unknown_linux_gnu = None
+  HOST_CMAKE_TOOLCHAIN_FILE = None
+  CMAKE_TOOLCHAIN_FILE = None
+  CMAKE_GENERATOR_x86_64-unknown-linux-gnu = None
+  CMAKE_GENERATOR_x86_64_unknown_linux_gnu = None
+  HOST_CMAKE_GENERATOR = None
+  CMAKE_GENERATOR = None
+  CMAKE_PREFIX_PATH_x86_64-unknown-linux-gnu = None
+  CMAKE_PREFIX_PATH_x86_64_unknown_linux_gnu = None
+  HOST_CMAKE_PREFIX_PATH = None
+  CMAKE_PREFIX_PATH = None
+  CMAKE_x86_64-unknown-linux-gnu = None
+  CMAKE_x86_64_unknown_linux_gnu = None
+  HOST_CMAKE = None
+  CMAKE = None
+  running: ""cmake"" ""/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/prost-build-0.10.0/third-party/protobuf/cmake"" ""-DCMAKE_INSTALL_PREFIX=/tmp/rudra/target/debug/build/prost-build-3633746d7f6f862c/out"" ""-DCMAKE_C_FLAGS= -ffunction-sections -fdata-sections -fPIC -m64"" ""-DCMAKE_C_COMPILER=/usr/bin/cc"" ""-DCMAKE_CXX_FLAGS= -ffunction-sections -fdata-sections -fPIC -m64"" ""-DCMAKE_CXX_COMPILER=/usr/bin/c++"" ""-DCMAKE_ASM_FLAGS= -ffunction-sections -fdata-sections -fPIC -m64"" ""-DCMAKE_ASM_COMPILER=/usr/bin/cc"" ""-DCMAKE_BUILD_TYPE=Debug""
+
+  --- stderr
+  thread 'main' panicked at '
+  failed to execute command: No such file or directory (os error 2)
+  is `cmake` not installed?
+
+  build script failed, must exit now', /tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/cmake-0.1.48/src/lib.rs:975:5
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+[0m[0m[1m[31merror[0m[1m:[0m build failed
+2024-06-21 16:53:23.245465 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,44 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Amelia Cuss,kivikakk,https://github.com/kivikakk
+Author,-,Garen Torikian,gjtorikian,https://github.com/gjtorikian
+************************************
+event,timestamp,downloads
+Downloads,-,1244260
+************************************
+event,timestamp,total,flagged
+Side Effects,-,125,117
+************************************
+Rudra,timestamp
+"2024-06-21 18:37:11.219050 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:37:14.582291 |INFO | [rudra-progress] Running rudra for target lib:comrak
+2024-06-21 18:37:37.110182 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:37:37.114661 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:37:37.115052 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:37:37.115069 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:37:37.172770 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:37:37.172805 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:37:53.099741 |INFO | [rudra-progress] Running rudra for target bin:comrak
+2024-06-21 18:38:01.389541 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:38:01.393606 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:38:01.393966 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:38:01.393980 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:38:01.448547 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:38:01.448573 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:38:16.475296 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:38:16.479129 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:38:16.480353 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:38:16.480373 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:38:16.481871 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:38:16.481886 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:38:16.543764 |WARN | [cargo_rudra] Target example:readme is not supported
+2024-06-21 18:38:16.543927 |WARN | [cargo_rudra] Target example:s-expr is not supported
+2024-06-21 18:38:16.543944 |WARN | [cargo_rudra] Target bench:progit is not supported
+2024-06-21 18:38:16.544360 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************
