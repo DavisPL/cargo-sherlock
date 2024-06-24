@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mat Jones,mrjones2014,https://github.com/mrjones2014
+************************************
+event,timestamp,downloads
+Downloads,-,7279
+************************************
+event,timestamp,total,flagged
+Side Effects,-,15,1
+************************************
+Rudra,timestamp
+"2024-06-23 14:30:55.158412 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:31:00.459880 |INFO | [rudra-progress] Running rudra for target bin:caniuse
+2024-06-23 14:35:31.076533 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:35:31.087505 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:35:31.091134 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:35:31.091197 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:35:31.158877 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:35:31.158999 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:35:31.433627 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

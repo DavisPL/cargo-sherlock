@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Simon Persson,SimonPersson,https://github.com/SimonPersson
+************************************
+event,timestamp,downloads
+Downloads,-,1201
+************************************
+event,timestamp,total,flagged
+Side Effects,-,65,20
+************************************
+Rudra,timestamp
+"2024-06-23 15:46:54.359928 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:46:55.840772 |INFO | [rudra-progress] Running rudra for target bin:davis
+2024-06-23 15:47:03.482365 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:47:03.486255 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:47:03.486622 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:47:03.486635 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:47:03.545218 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:47:03.545247 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:47:03.613147 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

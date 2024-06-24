@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,xzmeng,https://github.com/xzmeng
+************************************
+event,timestamp,downloads
+Downloads,-,417
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:38:19.119302 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:38:20.325989 |INFO | [rudra-progress] Running rudra for target bin:binance-data
+2024-06-23 15:38:24.064164 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:38:24.067769 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:38:24.069339 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:38:24.069353 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:38:24.070707 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:38:24.070718 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:38:24.111087 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

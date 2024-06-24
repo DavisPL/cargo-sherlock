@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alexandre Delattre,alexd6631,https://github.com/alexd6631
+************************************
+event,timestamp,downloads
+Downloads,-,1662
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 06:53:45.371231 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 06:53:48.751545 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `reqwest = ""^0.11""`
+candidate versions found which didn't match: 0.11.23, 0.11.22, 0.11.21, ...
+location searched: crates.io index
+required by package `apod_async_client v0.2.0 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mr.Robb,MrRobb,https://github.com/MrRobb
+************************************
+event,timestamp,downloads
+Downloads,-,1800
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:32:55.305430 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:32:58.274931 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `security-framework = ""^2.0.0""`
+candidate versions found which didn't match: 2.8.1, 2.8.0, 2.7.0, ...
+location searched: crates.io index
+required by package `native-tls v0.2.12`
+    ... which satisfies dependency `native-tls = ""^0.2""` (locked to 0.2.12) of package `reqwest v0.9.24`
+    ... which satisfies dependency `reqwest = ""^0.9.19""` (locked to 0.9.24) of package `canistreamit v0.2.0 (/tmp/rudra)`
+
+"
+************************************

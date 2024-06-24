@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Pascal Hertleif,killercup,https://github.com/killercup
+Author,-,Joakim Hulthe,hulthe,https://github.com/hulthe
+Author,-,crates-io,github:technocreatives:crates-io,https://github.com/technocreatives
+************************************
+event,timestamp,downloads
+Downloads,-,13928
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,5
+************************************
+Rudra,timestamp
+"2024-06-23 16:51:31.113946 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:51:32.555128 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `memchr = ""^2.3""`
+candidate versions found which didn't match: 2.5.0, 2.4.1, 2.4.0, ...
+location searched: crates.io index
+required by package `nom v7.1.3`
+    ... which satisfies dependency `nom = ""^7.1""` (locked to 7.1.3) of package `can-dbc v5.0.0`
+    ... which satisfies dependency `can-dbc = ""^5.0.0""` (locked to 5.0.0) of package `dbc-codegen v0.3.0 (/tmp/rudra)`
+
+"
+************************************

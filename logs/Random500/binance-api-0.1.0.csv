@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ivan L,tsionyx,https://github.com/tsionyx
+************************************
+event,timestamp,downloads
+Downloads,-,522
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:00:04.447873 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:00:13.949540 |INFO | [rudra-progress] Running rudra for target lib:binance-api
+2024-06-23 14:02:34.326137 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:02:34.344884 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:02:34.345691 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:02:34.345774 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:02:34.553872 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:02:34.553934 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:02:38.730295 |WARN | [cargo_rudra] Target example:direct-client-use is not supported
+2024-06-23 14:02:38.730768 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

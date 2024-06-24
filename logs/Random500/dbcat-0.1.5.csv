@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nishant Joshi,NishantJoshi00,https://github.com/NishantJoshi00
+************************************
+event,timestamp,downloads
+Downloads,-,2450
+************************************
+event,timestamp,total,flagged
+Side Effects,-,3,1
+************************************
+Rudra,timestamp
+"2024-06-23 13:41:31.198791 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:41:33.179753 |INFO | [rudra-progress] Running rudra for target bin:dbcat
+2024-06-23 13:42:26.082344 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:42:26.087696 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:42:26.089062 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:42:26.089077 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:42:26.117053 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:42:26.117081 |INFO | [rudra-progress] Rudra finished
+2024-06-23 13:42:26.197417 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

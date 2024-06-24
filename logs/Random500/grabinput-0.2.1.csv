@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,J/A,archer884,https://github.com/archer884
+************************************
+event,timestamp,downloads
+Downloads,-,15445
+************************************
+event,timestamp,total,flagged
+Side Effects,-,12,8
+************************************
+Rudra,timestamp
+"2024-06-23 15:44:27.906627 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:44:30.982121 |INFO | [rudra-progress] Running rudra for target lib:grabinput
+2024-06-23 15:44:34.855582 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:44:34.859334 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:44:34.859684 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:44:34.859695 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:44:34.877479 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:44:34.877499 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:44:35.656199 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

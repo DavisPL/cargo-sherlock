@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Edgars Baduns,kerhong,https://github.com/kerhong
+************************************
+event,timestamp,downloads
+Downloads,-,3344
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-23 14:37:19.235276 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:37:26.730555 |INFO | [rudra-progress] Running rudra for target lib:endianrw
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:145:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m145[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let read_len = try!(self.read(buf.as_mut()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-23 14:37:37.148031 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:37:37.155854 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:37:37.156634 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:37:37.156666 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:37:37.191308 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:37:37.191372 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:37:39.309655 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

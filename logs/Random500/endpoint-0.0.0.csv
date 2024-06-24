@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Vinod Patel,thevpatel,https://github.com/thevpatel
+************************************
+event,timestamp,downloads
+Downloads,-,739
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:39:38.393359 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:39:41.386139 |INFO | [rudra-progress] Running rudra for target bin:endpoint
+2024-06-23 14:39:51.400794 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:39:51.408318 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:39:51.411788 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:39:51.411840 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:39:51.416565 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:39:51.416607 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:39:51.521720 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

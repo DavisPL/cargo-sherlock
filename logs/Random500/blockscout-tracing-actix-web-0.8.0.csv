@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Rim Rakhimov,rimrakhimov,https://github.com/rimrakhimov
+Author,-,Rust,github:blockscout:rust,https://github.com/blockscout
+************************************
+event,timestamp,downloads
+Downloads,-,2262
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:46:32.490260 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:46:34.146211 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `actix-web = ""^4""`
+candidate versions found which didn't match: 4.5.1, 4.5.0, 4.4.1, ...
+location searched: crates.io index
+required by package `blockscout-tracing-actix-web v0.8.0 (/tmp/rudra)`
+
+"
+************************************

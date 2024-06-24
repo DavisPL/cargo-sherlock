@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Frank Schwidom,schwidom,https://github.com/schwidom
+************************************
+event,timestamp,downloads
+Downloads,-,4423
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,2
+************************************
+Rudra,timestamp
+"2024-06-23 15:43:35.461889 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:43:38.594685 |INFO | [rudra-progress] Running rudra for target lib:blockwise_reader
+2024-06-23 15:43:44.249252 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:43:44.253187 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:43:44.253541 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:43:44.253555 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:43:44.273453 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:43:44.273479 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:43:45.185376 |WARN | [cargo_rudra] Target test:tests is not supported
+2024-06-23 15:43:45.185492 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

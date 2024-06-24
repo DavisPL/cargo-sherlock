@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,messense,messense,https://github.com/messense
+************************************
+event,timestamp,downloads
+Downloads,-,1794
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-23 15:36:19.170086 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:36:22.494844 |INFO | [rudra-progress] Running rudra for target lib:dirty-json
+2024-06-23 15:36:27.910173 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:36:27.913647 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:36:27.915165 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:36:27.915179 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:36:27.989987 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:36:27.990012 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:36:28.683339 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

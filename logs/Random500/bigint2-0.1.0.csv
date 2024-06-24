@@ -1,0 +1,23 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Stewart Mackenzie,sjmackenzie,https://github.com/sjmackenzie
+Author,-,ETCDEV team,github:ethereumproject:etcdev-team,https://github.com/ethereumproject
+************************************
+event,timestamp,downloads
+Downloads,-,1030
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:41:48.170049 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:41:51.402875 |INFO | [rudra-progress] Running rudra for target lib:bigint2
+[0m[0m[1m[31merror[0m[1m:[0m package `byteorder v1.5.0` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-23 16:41:54.798784 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

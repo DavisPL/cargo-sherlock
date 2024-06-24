@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,jwnhy,jwnhy,https://github.com/jwnhy
+************************************
+event,timestamp,downloads
+Downloads,-,1747
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:39:06.922997 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:39:09.869256 |INFO | [rudra-progress] Running rudra for target lib:endiantype
+2024-06-23 15:39:14.103021 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:39:14.107017 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:39:14.107393 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:39:14.107412 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:39:14.129903 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:39:14.129930 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:39:15.267735 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

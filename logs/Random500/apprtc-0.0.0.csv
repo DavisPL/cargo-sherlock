@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Rusty Rain,rainliu,https://github.com/rainliu
+************************************
+event,timestamp,downloads
+Downloads,-,543
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:44:24.402345 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:44:27.377156 |INFO | [rudra-progress] Running rudra for target lib:apprtc
+2024-06-23 16:44:31.015698 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:44:31.018987 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:44:31.022098 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:44:31.022113 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:44:31.022188 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:44:31.022194 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:44:31.465216 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

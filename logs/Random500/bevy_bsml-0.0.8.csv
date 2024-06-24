@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jack Lee,PoOnesNerfect,https://github.com/PoOnesNerfect
+************************************
+event,timestamp,downloads
+Downloads,-,2381
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:02:08.432175 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:02:10.017048 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bevy = ""^0.13""`
+candidate versions found which didn't match: 0.11.3, 0.11.2, 0.11.1, ...
+location searched: crates.io index
+required by package `bevy_bsml v0.0.8 (/tmp/rudra)`
+
+"
+************************************

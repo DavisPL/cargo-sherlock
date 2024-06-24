@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Daniel Henry-Mantilla,danielhenrymantilla,https://github.com/danielhenrymantilla
+************************************
+event,timestamp,downloads
+Downloads,-,4302
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:11:35.630938 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:11:43.051427 |INFO | [rudra-progress] Running rudra for target lib:candy
+2024-06-23 14:11:52.154964 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:11:52.163728 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:11:52.173403 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:11:52.173452 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:11:52.173579 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:11:52.173592 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:11:53.370661 |WARN | [cargo_rudra] Target example:do_loop is not supported
+2024-06-23 14:11:53.370745 |WARN | [cargo_rudra] Target example:fallible is not supported
+2024-06-23 14:11:53.370767 |WARN | [cargo_rudra] Target example:catch is not supported
+2024-06-23 14:11:53.371356 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

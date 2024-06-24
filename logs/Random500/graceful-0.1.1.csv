@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Zhe Wang,0x1997,https://github.com/0x1997
+************************************
+event,timestamp,downloads
+Downloads,-,16707
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 18:10:26.124854 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 18:10:34.578683 |INFO | [rudra-progress] Running rudra for target lib:graceful
+2024-06-23 18:11:04.347638 |INFO | [rudra-progress] Rudra started
+2024-06-23 18:11:04.356935 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 18:11:04.357867 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 18:11:04.357901 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 18:11:04.360614 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 18:11:04.360647 |INFO | [rudra-progress] Rudra finished
+2024-06-23 18:11:06.197084 |WARN | [cargo_rudra] Target example:simple is not supported
+2024-06-23 18:11:06.197694 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Pascal Hertleif,killercup,https://github.com/killercup
+Author,-,crates-io,github:technocreatives:crates-io,https://github.com/technocreatives
+************************************
+event,timestamp,downloads
+Downloads,-,1422
+************************************
+event,timestamp,total,flagged
+Side Effects,-,9,4
+************************************
+Rudra,timestamp
+"2024-06-23 15:56:35.253995 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:56:36.863185 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `clap = ""^4.1""`
+candidate versions found which didn't match: 3.2.25, 3.2.24, 3.2.23, ...
+location searched: crates.io index
+required by package `dbc-codegen-cli v0.3.0 (/tmp/rudra)`
+
+"
+************************************

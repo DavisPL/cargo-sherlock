@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Creston Bunch,crestonbunch,https://github.com/crestonbunch
+************************************
+event,timestamp,downloads
+Downloads,-,3849
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:50:11.177392 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:50:14.752535 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `memchr = ""^2.2""`
+candidate versions found which didn't match: 2.5.0, 2.4.1, 2.4.0, ...
+location searched: crates.io index
+required by package `futures-util v0.3.30`
+    ... which satisfies dependency `futures-util = ""^0.3""` (locked to 0.3.30) of package `cylon v0.3.3 (/tmp/rudra)`
+
+"
+************************************

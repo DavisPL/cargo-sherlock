@@ -1,0 +1,56 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nyeogmi,nyeogmi,https://github.com/nyeogmi
+************************************
+event,timestamp,downloads
+Downloads,-,7482
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-23 15:29:59.700725 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:30:03.601243 |INFO | [rudra-progress] Running rudra for target lib:chiro
+[0m[0m[1m[31merror[0m[1m:[0m failed to run custom build command for `xkbcommon-sys v0.7.5`
+
+Caused by:
+  process didn't exit successfully: `/tmp/rudra/target/debug/build/xkbcommon-sys-66b53cfeeec5604f/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-env-changed=XKBCOMMON_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+
+  --- stderr
+  thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: `""pkg-config"" ""--libs"" ""--cflags"" ""xkbcommon""` did not exit successfully: exit status: 1
+  error: could not find system library 'xkbcommon' required by the 'xkbcommon-sys' crate
+
+  --- stderr
+  Package xkbcommon was not found in the pkg-config search path.
+  Perhaps you should add the directory containing `xkbcommon.pc'
+  to the PKG_CONFIG_PATH environment variable
+  No package 'xkbcommon' found
+  ', /tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/xkbcommon-sys-0.7.5/build.rs:43:14
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+[0m[0m[1m[31merror[0m[1m:[0m build failed
+2024-06-23 15:31:31.977980 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

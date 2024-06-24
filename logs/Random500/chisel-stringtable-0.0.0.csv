@@ -1,0 +1,19 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,JC,jonnycoombes,https://github.com/jonnycoombes
+************************************
+event,timestamp,downloads
+Downloads,-,2341
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"chisel-stringtable-0.0.0 is not a directory
+"
+************************************

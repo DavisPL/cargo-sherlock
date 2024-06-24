@@ -1,0 +1,65 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ivano Donadi,Sauro98,https://github.com/Sauro98
+************************************
+event,timestamp,downloads
+Downloads,-,1964
+************************************
+event,timestamp,total,flagged
+Side Effects,-,25,22
+************************************
+Rudra,timestamp
+"2024-06-23 16:47:17.311759 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:47:20.784229 |INFO | [rudra-progress] Running rudra for target lib:appr_dbscan
+[0m[1m[33mwarning[0m[0m[1m: the feature `min_const_generics` has been stable since 1.51.0 and no longer requires an attribute to enable[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![feature(min_const_generics)][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(stable_features)]` on by default[0m
+
+2024-06-23 16:47:42.242572 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:47:42.246689 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:47:42.247057 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:47:42.247075 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:47:42.267222 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:47:42.267244 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:47:43.532866 |INFO | [rudra-progress] Running rudra for target bin:appr_dbscan
+[0m[1m[33mwarning[0m[0m[1m: the feature `min_const_generics` has been stable since 1.51.0 and no longer requires an attribute to enable[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![feature(min_const_generics)][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(stable_features)]` on by default[0m
+
+2024-06-23 16:47:52.510007 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:47:52.513783 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:47:52.514129 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:47:52.514139 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:47:52.533223 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:47:52.533243 |INFO | [rudra-progress] Rudra finished
+[0m[1m[33mwarning[0m[0m[1m: the feature `min_const_generics` has been stable since 1.51.0 and no longer requires an attribute to enable[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/main.rs:1:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![feature(min_const_generics)][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(stable_features)]` on by default[0m
+
+2024-06-23 16:47:53.879468 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:47:53.882943 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:47:53.883894 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:47:53.883908 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:47:53.885241 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:47:53.885251 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:47:53.934545 |WARN | [cargo_rudra] Target test:int_tests is not supported
+2024-06-23 16:47:53.934769 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

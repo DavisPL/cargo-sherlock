@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Geoffroy Couprie,Geal,https://github.com/Geal
+************************************
+event,timestamp,downloads
+Downloads,-,898
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-23 16:48:12.427722 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:48:14.129347 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `memchr = ""^2.0""`
+candidate versions found which didn't match: 2.5.0, 2.4.1, 2.4.0, ...
+location searched: crates.io index
+required by package `nom v4.2.3`
+    ... which satisfies dependency `nom = ""^4.0""` (locked to 4.2.3) of package `grad v0.1.0 (/tmp/rudra)`
+
+"
+************************************

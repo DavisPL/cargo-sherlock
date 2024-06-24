@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mikkel Rasmussen,BlackPhlox,https://github.com/BlackPhlox
+************************************
+event,timestamp,downloads
+Downloads,-,2193
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 07:22:24.893866 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:22:26.361466 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bevy_internal = ""^0.9.0""`
+candidate versions found which didn't match: 0.7.0, 0.6.0, 0.5.0, ...
+location searched: crates.io index
+required by package `bevy v0.9.0`
+    ... which satisfies dependency `bevy = ""^0.9""` (locked to 0.9.0) of package `bevy_osc v0.5.0 (/tmp/rudra)`
+
+"
+************************************

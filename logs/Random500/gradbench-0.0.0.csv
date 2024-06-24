@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sam Estep,samestep,https://github.com/samestep
+************************************
+event,timestamp,downloads
+Downloads,-,300
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:56:39.330935 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:56:48.798736 |INFO | [rudra-progress] Running rudra for target lib:gradbench
+2024-06-23 13:56:59.690120 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:56:59.699601 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:56:59.707251 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:56:59.707297 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:56:59.707422 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:56:59.707435 |INFO | [rudra-progress] Rudra finished
+2024-06-23 13:57:00.778589 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

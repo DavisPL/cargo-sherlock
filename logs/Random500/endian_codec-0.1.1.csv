@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sylwester Rąpała,xoac,https://github.com/xoac
+************************************
+event,timestamp,downloads
+Downloads,-,12220
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:38:24.165078 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:38:27.399587 |INFO | [rudra-progress] Running rudra for target lib:endian_codec
+2024-06-23 16:38:41.567751 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:38:41.571369 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:38:41.573204 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:38:41.573220 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:38:41.575862 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:38:41.575875 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:38:42.427267 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

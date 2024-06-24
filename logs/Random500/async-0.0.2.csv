@@ -1,0 +1,62 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jonathan Reem,reem,https://github.com/reem
+************************************
+event,timestamp,downloads
+Downloads,-,3958
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 07:25:43.472310 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:25:50.682344 |INFO | [rudra-progress] Running rudra for target lib:async
+[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `license` in this scope[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:4[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![license = ""MIT""][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m   [0m[0m[1m[38;5;9m^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:10:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn invoke(self, T) -> O;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mhelp: try naming the parameter or explicitly ignoring it: `_: T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:3:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m#![deny(warnings)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[deny(anonymous_parameters)]` implied by `#[deny(warnings)]`[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:23:46[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn execute<Co, C: Callback<T, Co>>(self, C);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mhelp: try naming the parameter or explicitly ignoring it: `_: C`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[38;5;9merror[E0658][0m[0m[1m: use of unstable library feature 'fn_traits'[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:16:14[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.call_once((val,))[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[38;5;9m^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: see issue #29625 <https://github.com/rust-lang/rust/issues/29625> for more information[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: add `#![feature(fn_traits)]` to the crate attributes to enable[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0658`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `async` due to 4 previous errors
+2024-06-23 07:26:00.195440 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

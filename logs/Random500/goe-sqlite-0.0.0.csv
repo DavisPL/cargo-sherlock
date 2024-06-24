@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,GengTeng,gengteng,https://github.com/gengteng
+************************************
+event,timestamp,downloads
+Downloads,-,589
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:29:15.727186 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:29:18.655390 |INFO | [rudra-progress] Running rudra for target lib:goe-sqlite
+2024-06-23 15:29:22.332533 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:29:22.336142 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:29:22.339297 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:29:22.339310 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:29:22.339379 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:29:22.339385 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:29:22.772491 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

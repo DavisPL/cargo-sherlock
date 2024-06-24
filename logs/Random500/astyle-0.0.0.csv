@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,沐佑,muyz-sudo,https://github.com/muyz-sudo
+************************************
+event,timestamp,downloads
+Downloads,-,683
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:45:07.466763 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:45:08.685773 |INFO | [rudra-progress] Running rudra for target bin:astyle
+2024-06-23 16:45:12.567893 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:45:12.571312 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:45:12.572750 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:45:12.572760 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:45:12.574118 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:45:12.574134 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:45:12.614971 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

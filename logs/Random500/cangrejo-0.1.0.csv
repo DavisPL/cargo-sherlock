@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,morenol,morenol,https://github.com/morenol
+************************************
+event,timestamp,downloads
+Downloads,-,620
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:32:39.989942 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:32:42.886444 |INFO | [rudra-progress] Running rudra for target lib:cangrejo
+2024-06-23 15:32:46.455881 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:32:46.459109 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:32:46.462272 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:32:46.462290 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:32:46.462365 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:32:46.462371 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:32:46.891730 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

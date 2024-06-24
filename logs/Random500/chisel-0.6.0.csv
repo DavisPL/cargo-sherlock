@@ -1,0 +1,119 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Beregszaszi,axic,https://github.com/axic
+************************************
+event,timestamp,downloads
+Downloads,-,4546
+************************************
+event,timestamp,total,flagged
+Side Effects,-,41,1
+************************************
+Rudra,timestamp
+"2024-06-23 07:30:18.174136 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:30:20.650204 |INFO | [rudra-progress] Running rudra for target bin:chisel
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/logger.rs:6:81[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m6[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        crate::logger::Logger::with_global_level().log($lvl, &format!($($arg)*));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/cmd_run.rs:33:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        .for_each(|(k, v)| chisel_debug!(1, ""\t{}: {}"", k, v));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m----------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(semicolon_in_expressions_from_macros)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `chisel_debug` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/cmd_oneliner.rs:104:70[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    &format!(""failed to write output to file: {}"", e.description()),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                     [0m[0m[1m[33m^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/cmd_run.rs:48:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                e.description()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/cmd_run.rs:67:60[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            &format!(""failed to load configuration: {}"", e.description()),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                           [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/cmd_run.rs:74:61[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            &format!(""failed to parse configuration: {}"", e.description()),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                            [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/cmd_run.rs:140:23[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m140[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                error.description()[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/result.rs:162:71[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m162[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    Err(e) => Red.bold().paint(format!(""ERROR; {}"", e.description())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                      [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/result.rs:177:71[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m177[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    Err(e) => Red.bold().paint(format!(""ERROR; {}"", e.description())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                      [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/result.rs:192:71[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m192[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    Err(e) => Red.bold().paint(format!(""ERROR; {}"", e.description())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                      [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `rulesets`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:56:12[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m56[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn rulesets(&self) -> &VecDeque<(String, Ruleset)> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `modules`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:74:12[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn modules(&self) -> &VecDeque<(String, ModuleConfig)> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `Creator`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/result.rs:38:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Creator(String, Result<bool, ModuleError>),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `rulesets`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/result.rs:52:12[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn rulesets(&self) -> &Vec<RulesetResult> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^[0m
+
+2024-06-23 07:30:57.569484 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:30:57.574927 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:30:57.576447 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:30:57.576461 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:30:57.591503 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:30:57.591530 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:30:57.692338 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

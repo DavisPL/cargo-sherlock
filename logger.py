@@ -12,6 +12,8 @@ from packaging import version
 from pydriller import Repository
 import tarfile
 import shutil
+import random
+from tqdm import tqdm
 
 def read_dicts_from_txt(text_file, separator="\n---\n"):
     with open(text_file, "r") as file:
@@ -558,11 +560,10 @@ def rudra(crate_name, version):
     This function will run rudra on the crate and give the output.
     Run ./Users/hassnain/Desktop/Research/code-sherlock/Rudra/docker-helper/docker-cargo-rudra /crate_name-version
     '''
-    download_crate(crate_name, version)
-    extract_and_delete()
+    # download_crate(crate_name, version)
+    # extract_and_delete()
     path = f"/Users/hassnain/Desktop/SQ24/289C/project/Rudra/docker-helper/docker-cargo-rudra {crate_name}-{version}"
     result = subprocess.run(path, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    shutil.rmtree(f"{crate_name}-{version}")
     return result.stdout
 
 def version_audit(audit_info, target):
@@ -683,13 +684,36 @@ def repo_analysis(crate_name , target, last_audited_release):
         print("****************************")
         # print(commit)
 
-def logger(crate_name, version):
+def run_cargo_and_save(crate_name, crate_path):
+    original_directory = os.getcwd()
+    crate_name = crate_name.replace('-', '_')
+    output_file_path = os.path.join(original_directory, f"{crate_name}.csv")
+
+    cargo_scan_directory = os.path.join(original_directory, "cargo-scan")
+    os.chdir(cargo_scan_directory)
+
+    command = f'cargo run --bin scan ../{crate_path}'
+    # Combine stderr into stdout to capture all output
+    result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+
+    os.chdir(original_directory)
+
+    with open(output_file_path, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        # writer.writerow(['Directory', 'Output', 'Error'])
+        writer.writerow([result.stdout, result.stderr])
+    
+    return output_file_path
+
+def logger(crate_name, version , job_id):
     '''
     This function will log the results of solidifier in a file.
     '''
+    if not os.path.exists(f"logs/{job_id}"):
+        os.mkdir(f"logs/{job_id}")
 
     label = inRustSec(crate_name, version)
-    with open(f"logs/RustSec/{crate_name}-{version}.csv", "w", newline='') as file:
+    with open(f"logs/{job_id}/{crate_name}-{version}.csv", "w", newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["************************************"])
         writer.writerow(["event", "timestamp", "label"])
@@ -736,10 +760,10 @@ def logger(crate_name, version):
         ])
         writer.writerow(["************************************"])
         
-        # download_crate(crate_name, version)
-        # extract_and_delete()
-        # file_name = run_cargo_and_save(crate_name, f"{crate_name}-{version}")
-        file_name = f"cargo-scan/{crate_name}-{version}.csv"
+        download_crate(crate_name, version)
+        extract_and_delete()
+        file_name = run_cargo_and_save(crate_name, f"{crate_name}-{version}")
+        # file_name = f"cargo-scan/{crate_name}-{version}.csv"
         total,flagged = get_potential_functions(file_name)
         writer.writerow(["event", "timestamp", "total", "flagged"])
         writer.writerow([
@@ -755,6 +779,7 @@ def logger(crate_name, version):
             rud
         ])
         writer.writerow(["************************************"])
+        shutil.rmtree(f"{crate_name}-{version}")
         # flag,future = version_audit(audit_info[1], version)
         # # print(same_version_flag)
         # if flag: #means this version has been audited
@@ -777,55 +802,124 @@ def logger(crate_name, version):
         #         '''
                 # repo_analysis(crate_name, version , last_audit)
 
-
-
-
-
-codex = read_dicts_from_txt("data.txt")
-# print(codex[0])
-pattern = r'(>=|>)?(\d+\.\d+(\.\d+)?)'
-for data in codex:
-    # print(dict)
-    # data = dict(data)
-    # print(data)
-    # print(type(data))
-    try:  
-        data = parse_dict_string(data)
+def rust_sec_logs():
+    codex = read_dicts_from_txt("data.txt")
+    # print(codex[0])
+    pattern = r'(>=|>)?(\d+\.\d+(\.\d+)?)'
+    for data in codex:
+        # print(dict)
+        # data = dict(data)
         # print(data)
-        temp = data["package"]
-        package = temp["name"].split("(")[0]
-        # print(package)
-        temp = data["patched"]
-        versions = list()
-        target_version = str()
-        if temp == "no patched versions":
-            # print("just pick the latest one")
-            versions = get_versions(package)
-            # print(versions)
-            target_version = versions[-1]
-            # print(target_version)
-            # break
-        # print(temp)
-        else:
-            (_,ver,_) = re.findall(pattern, temp)[0]
-            # print(ver)
-            versions = get_versions(package)
-            if versions == "error":
+        # print(type(data))
+        try:  
+            data = parse_dict_string(data)
+            # print(data)
+            temp = data["package"]
+            package = temp["name"].split("(")[0]
+            # print(package)
+            temp = data["patched"]
+            versions = list()
+            target_version = str()
+            if temp == "no patched versions":
+                # print("just pick the latest one")
+                versions = get_versions(package)
+                # print(versions)
+                target_version = versions[-1]
+                # print(target_version)
+                # break
+            # print(temp)
+            else:
+                (_,ver,_) = re.findall(pattern, temp)[0]
+                # print(ver)
+                versions = get_versions(package)
+                if versions == "error":
+                    continue
+                # print(versions)
+                target_version = find_previous_version(ver, versions)
+                # print(target_version)
+
+            print(package, target_version)
+            logger(package, target_version , "RustSec")
+            # exit()
+            # download_crate(package,target_version)
+
+            # time.sleep(0.1)
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            with open(f"logs/RustSec/{package}-{target_version}.csv", "w", newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(["An error occurred: ", e])
+                writer.writerow(["************************************"])
+            continue
+
+def get_crate_names(page, per_page):
+    url = f'https://crates.io/api/v1/crates?page={page}&per_page={per_page}'
+    response = requests.get(url)
+    return response.json()['crates']
+
+def get_random_crates(count):
+    # Get all crate names from a random page
+    all_crate_names = []
+    per_page = 20
+    visited = []
+
+    while len(all_crate_names) < count:
+        while(1):
+            random_page = random.randint(200, 3000)
+            if random_page in visited:
                 continue
-            # print(versions)
-            target_version = find_previous_version(ver, versions)
-            # print(target_version)
+            visited.append(random_page)
+            break
+        crates = get_crate_names(random_page, per_page)
+        if not crates:
+            continue
+        all_crate_names.extend([crate['id'] for crate in crates])
 
-        print(package, target_version)
-        logger(package, target_version)
-        # exit()
-        # download_crate(package,target_version)
+    # Randomly select 1000 crate names
+    random_crates = random.sample(all_crate_names, count)
 
-        # time.sleep(0.1)
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        with open(f"logs/RustSec/{package}-{target_version}.csv", "w", newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(["An error occurred: ", e])
-            writer.writerow(["************************************"])
-        continue
+    # Function to get the latest version of a crate
+    def get_latest_version(crate_name):
+        url = f'https://crates.io/api/v1/crates/{crate_name}'
+        response = requests.get(url)
+        crate_info = response.json()['crate']
+        return crate_info['newest_version']
+
+    # Get the latest version of each selected crate
+    random_crates_info = [{'name': crate_name, 'latest_version': get_latest_version(crate_name)} for crate_name in random_crates]
+
+    # Write the results to a CSV file
+    with open('random_crates.csv', mode='w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=['name', 'latest_version'])
+        writer.writeheader()
+        for crate_info in random_crates_info:
+            writer.writerow(crate_info)
+    
+    return 'random_crates.csv'
+
+def random_logs(count):
+    print("Starting the random logs...")
+    # Get the latest version of a random set of 1000 crates
+    # file_path = get_random_crates(count)
+    print("Random crates have been selected.")
+    # Read the crate names and latest versions from the CSV file
+    random_crates = pd.read_csv("random_crates.csv")
+
+    # Log the results for each crate
+    print("Logging the results for each crate...")
+    for _, row in tqdm(random_crates.iterrows()):
+        try:
+            crate_name = row['name']
+            version = row['latest_version']
+            print(f"Logging the results for {crate_name} {version}")
+            logger(crate_name, version , "Random500")
+            # exit()
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            with open(f"logs/RustSec/{crate_name}-{version}.csv", "w", newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(["An error occurred: ", e])
+                writer.writerow(["************************************"])
+            continue
+      
+random_logs(500)

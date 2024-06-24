@@ -1,0 +1,32 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Kan-Ru Chen,kanru,https://github.com/kanru
+************************************
+event,timestamp,downloads
+Downloads,-,627
+************************************
+event,timestamp,total,flagged
+Side Effects,-,14,11
+************************************
+Rudra,timestamp
+"2024-06-23 15:47:12.649670 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:47:15.426531 |INFO | [rudra-progress] Running rudra for target bin:davif
+[0m[0m[1m[31merror[0m[1m:[0m failed to run custom build command for `libavif-sys v0.4.2`
+
+Caused by:
+  process didn't exit successfully: `/tmp/rudra/target/debug/build/libavif-sys-4f9c5219a9baa9ae/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rustc-link-lib=static=dav1d
+  cargo:rustc-link-search=native=/tmp/rudra/target/x86_64-unknown-linux-gnu/debug/build/libavif-sys-e2b38134454f97ae/out/dav1d
+
+  --- stderr
+  thread 'main' panicked at 'assertion failed: s.success()', /tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/libavif-sys-0.4.2/build.rs:67:13
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2024-06-23 15:47:27.808100 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

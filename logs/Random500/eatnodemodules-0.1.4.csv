@@ -1,0 +1,36 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,FrankKai,https://github.com/FrankKai
+************************************
+event,timestamp,downloads
+Downloads,-,1747
+************************************
+event,timestamp,total,flagged
+Side Effects,-,8,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:55:03.532402 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:55:04.777841 |INFO | [rudra-progress] Running rudra for target bin:eatnodemodules
+[0m[1m[33mwarning[0m[0m[1m: unused `std::result::Result` that must be used[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/main.rs:26:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                fs::remove_dir_all(opath);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_must_use)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this `Result` may be an `Err` variant, which should be handled[0m
+
+2024-06-23 15:55:09.327147 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:55:09.330541 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:55:09.331670 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:55:09.331702 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:55:09.390839 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:55:09.390867 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:55:09.441220 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,25 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Daniel Keep,DanielKeep,https://github.com/DanielKeep
+************************************
+event,timestamp,downloads
+Downloads,-,10605
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:56:42.722942 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:56:43.938411 |WARN | [cargo_rudra] Target dylib:grabbag_macros is not supported
+2024-06-23 15:56:43.938481 |WARN | [cargo_rudra] Target test:sequence_recurrence is not supported
+2024-06-23 15:56:43.938499 |WARN | [cargo_rudra] Target test:collect is not supported
+2024-06-23 15:56:43.938502 |WARN | [cargo_rudra] Target test:count_exprs is not supported
+2024-06-23 15:56:43.938505 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-23 15:56:43.938579 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

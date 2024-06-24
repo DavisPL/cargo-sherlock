@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tom Burdick,teburd,https://github.com/teburd
+************************************
+event,timestamp,downloads
+Downloads,-,5363
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:22:43.103874 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:22:51.122670 |INFO | [rudra-progress] Running rudra for target lib:dirty
+2024-06-23 14:23:01.232286 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:23:01.241055 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:23:01.241755 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:23:01.241775 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:23:01.300850 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:23:01.300941 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:23:03.178815 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

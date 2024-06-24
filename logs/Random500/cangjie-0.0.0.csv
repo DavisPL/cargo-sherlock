@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mathieu Bridon,bochecha,https://github.com/bochecha
+************************************
+event,timestamp,downloads
+Downloads,-,854
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:47:24.502090 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:47:28.928668 |INFO | [rudra-progress] Running rudra for target lib:cangjie
+2024-06-23 13:47:34.302872 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:47:34.307439 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:47:34.311752 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:47:34.311771 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:47:34.311863 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:47:34.311871 |INFO | [rudra-progress] Rudra finished
+2024-06-23 13:47:34.929464 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

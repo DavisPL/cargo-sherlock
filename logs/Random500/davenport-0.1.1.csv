@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Andreas Borgen Longva,Andlon,https://github.com/Andlon
+************************************
+event,timestamp,downloads
+Downloads,-,2027
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-23 07:18:07.929168 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:18:11.056139 |INFO | [rudra-progress] Running rudra for target lib:davenport
+2024-06-23 07:18:15.414774 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:18:15.418828 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:18:15.419170 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:18:15.419184 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:18:15.445382 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:18:15.445418 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:18:16.357507 |WARN | [cargo_rudra] Target test:unit is not supported
+2024-06-23 07:18:16.357666 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

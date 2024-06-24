@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Shawn T Amundson,vaporos,https://github.com/vaporos
+Author,-,Ryan Beck-Buysse,rbuysse,https://github.com/rbuysse
+************************************
+event,timestamp,downloads
+Downloads,-,87668
+************************************
+event,timestamp,total,flagged
+Side Effects,-,23,1
+************************************
+Rudra,timestamp
+"2024-06-23 16:25:33.760671 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:25:35.910028 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `once_cell = ""^1.5.2""`
+candidate versions found which didn't match: 1.17.2, 1.17.1, 1.17.0, ...
+location searched: crates.io index
+required by package `openssl v0.10.64`
+    ... which satisfies dependency `openssl = ""^0.10""` (locked to 0.10.64) of package `cylinder v0.3.1 (/tmp/rudra)`
+
+"
+************************************

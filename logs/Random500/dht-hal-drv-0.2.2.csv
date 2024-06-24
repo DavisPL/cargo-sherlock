@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Rumato Estorsky,rumatoest,https://github.com/rumatoest
+************************************
+event,timestamp,downloads
+Downloads,-,2341
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:51:44.322572 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:51:45.640286 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `nb = ""^1""`
+candidate versions found which didn't match: 1.0.0, 0.1.3, 0.1.2, ...
+location searched: crates.io index
+required by package `nb v0.1.3`
+    ... which satisfies dependency `nb = ""^0.1.3""` (locked to 0.1.3) of package `embedded-hal v0.2.7`
+    ... which satisfies dependency `embedded-hal = ""^0.2.3""` (locked to 0.2.7) of package `dht-hal-drv v0.2.2 (/tmp/rudra)`
+
+"
+************************************

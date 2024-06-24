@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jean-Philippe Bidegain,aeyoll,https://github.com/aeyoll
+************************************
+event,timestamp,downloads
+Downloads,-,563
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-23 06:55:10.163886 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 06:55:15.176102 |INFO | [rudra-progress] Running rudra for target bin:gitlab-version-bot
+2024-06-23 06:57:15.143353 |INFO | [rudra-progress] Rudra started
+2024-06-23 06:57:15.166133 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 06:57:15.172299 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 06:57:15.172379 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 06:57:15.249625 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 06:57:15.249722 |INFO | [rudra-progress] Rudra finished
+2024-06-23 06:57:15.450175 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

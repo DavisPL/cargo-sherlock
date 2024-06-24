@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alice Pote,alicewriteswrongs,https://github.com/alicewriteswrongs
+************************************
+event,timestamp,downloads
+Downloads,-,2137
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:27:29.430712 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:27:31.069429 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `regex = ""^1.6.0""`
+candidate versions found which didn't match: 1.8.4, 1.8.3, 1.8.2, ...
+location searched: crates.io index
+required by package `grab_github_permalink v0.2.0 (/tmp/rudra)`
+
+"
+************************************

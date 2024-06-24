@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jean-Louis Voiseux,jlvoiseux,https://github.com/jlvoiseux
+************************************
+event,timestamp,downloads
+Downloads,-,457
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:08:03.295004 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:08:07.887724 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bevy_internal = ""^0.8.0""`
+candidate versions found which didn't match: 0.7.0, 0.6.0, 0.5.0, ...
+location searched: crates.io index
+required by package `bevy v0.8.1`
+    ... which satisfies dependency `bevy = ""^0.8.1""` (locked to 0.8.1) of package `bevy_birdsong v0.1.0-dev (/tmp/rudra)`
+
+"
+************************************

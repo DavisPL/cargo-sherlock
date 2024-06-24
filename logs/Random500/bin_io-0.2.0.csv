@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Davide,Tazdevil971,https://github.com/Tazdevil971
+************************************
+event,timestamp,downloads
+Downloads,-,2417
+************************************
+event,timestamp,total,flagged
+Side Effects,-,7,4
+************************************
+Rudra,timestamp
+"2024-06-23 16:40:19.012127 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:40:22.042941 |INFO | [rudra-progress] Running rudra for target lib:bin_io
+[0m[0m[1m[31merror[0m[1m:[0m package `byteorder v1.5.0` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-23 16:40:25.362775 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

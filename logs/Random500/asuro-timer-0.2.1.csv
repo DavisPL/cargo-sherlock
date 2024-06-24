@@ -1,0 +1,1930 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Till W.,TheAsuro,https://github.com/TheAsuro
+************************************
+event,timestamp,downloads
+Downloads,-,1015
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,1
+************************************
+Rudra,timestamp
+"2024-06-23 14:08:35.125221 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:08:38.614589 |INFO | [rudra-progress] Running rudra for target bin:timer
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:12:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    um::{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `shared` in `winapi`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:74:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    shared::minwindef::MAX_PATH,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `shared` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:75:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m75[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    um::wincon::{GetConsoleProcessList, SetConsoleHistoryInfo, CONSOLE_HISTORY_INFO, GetConsoleHistoryInfo, GetConsoleCursorInfo, CONSOLE[0m[0m[1m[38;5;12m...[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:76:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    um::winnt::{HANDLE},[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `shared` in `winapi`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:77:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m77[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    shared::windef::RECT,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `shared` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:78:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    um::winuser::{MONITORINFO, GetMonitorInfoA, MonitorFromWindow, MONITOR_DEFAULTTOPRIMARY, GetWindowRect},[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `shared` in `winapi`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:79:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m79[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    shared::windef::HWND__,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `shared` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:80:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m80[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    um::utilapiset::Beep[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info.rs:2:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::CONSOLE_FONT_INFO;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info_ex.rs:2:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::CONSOLE_FONT_INFOEX;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info_ex.rs:3:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wingdi::LF_FACESIZE;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info.rs:2:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::CONSOLE_SCREEN_BUFFER_INFO;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info_ex.rs:2:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::CONSOLE_SCREEN_BUFFER_INFOEX;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_selection_info.rs:2:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::{CONSOLE_SELECTION_INFO};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_history_info.rs:1:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::{CONSOLE_HISTORY_INFO};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_cursor_info.rs:1:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::CONSOLE_CURSOR_INFO;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/small_rect.rs:4:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::SMALL_RECT;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/coord.rs:1:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::COORD;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `_core` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/coord.rs:3:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::_core::fmt::{Formatter, Error};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `_core` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/focus_event.rs:1:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::FOCUS_EVENT_RECORD;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/handle.rs:3:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    um::handleapi::{CloseHandle, INVALID_HANDLE_VALUE},[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/handle.rs:4:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    um::winnt::HANDLE[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:2:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::{FROM_LEFT_1ST_BUTTON_PRESSED, FROM_LEFT_2ND_BUTTON_PRESSED, FROM_LEFT_3RD_BUTTON_PRESSED, FROM_LEFT_4TH_BUTTON_P[0m[0m[1m[38;5;12m...[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:5:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::{INPUT_RECORD, KEY_EVENT_RECORD, MOUSE_EVENT_RECORD, WINDOW_BUFFER_SIZE_RECORD, MENU_EVENT_RECORD, FOCUS_EVENT_RE[0m[0m[1m[38;5;12m...[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:6:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m6[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincontypes::{[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/menu_event.rs:1:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::MENU_EVENT_RECORD;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/window_buffer_size_event.rs:2:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::WINDOW_BUFFER_SIZE_RECORD;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/char_info.rs:1:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::{ CHAR_INFO };[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `um` in `winapi`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_read_control.rs:2:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse winapi::um::wincon::CONSOLE_READCONSOLE_CONTROL;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mcould not find `um` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `winapi::ctypes`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:73:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    ctypes::c_void,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `ctypes` in `winapi`[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `STD_INPUT_HANDLE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:129:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m129[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Input = STD_INPUT_HANDLE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `STD_OUTPUT_HANDLE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:131:14[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m131[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Output = STD_OUTPUT_HANDLE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `STD_ERROR_HANDLE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:133:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m133[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Error = STD_ERROR_HANDLE[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `CONSOLE_FULLSCREEN` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:143:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m143[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    FullScreen = CONSOLE_FULLSCREEN,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `CONSOLE_FULLSCREEN_HARDWARE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:146:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m146[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    FullScreenHardware = CONSOLE_FULLSCREEN_HARDWARE[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `CONSOLE_FULLSCREEN_MODE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:154:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m154[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    FullScreen = CONSOLE_FULLSCREEN_MODE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `CONSOLE_WINDOWED_MODE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:156:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m156[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Windowed = CONSOLE_WINDOWED_MODE[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `GENERIC_READ` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:285:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m285[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.desired_access |= GENERIC_READ;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `GENERIC_WRITE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:291:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m291[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.desired_access |= GENERIC_WRITE;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FILE_SHARE_READ` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:297:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m297[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.share_mode |= FILE_SHARE_READ;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FILE_SHARE_WRITE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:303:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m303[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.share_mode |= FILE_SHARE_WRITE;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetStdHandle` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:321:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m321[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let raw_handle = GetStdHandle(handle_type as u32);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `INVALID_HANDLE_VALUE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:322:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m322[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if raw_handle == INVALID_HANDLE_VALUE {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetStdHandle` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:344:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m344[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetStdHandle(handle_type as u32, *handle) == 0 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `CreateFileW` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:373:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m373[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            CreateFileW([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `GENERIC_READ` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:375:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m375[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                GENERIC_READ | GENERIC_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `GENERIC_WRITE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:375:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m375[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                GENERIC_READ | GENERIC_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FILE_SHARE_READ` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:376:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m376[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                FILE_SHARE_READ | FILE_SHARE_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FILE_SHARE_WRITE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:376:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m376[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                FILE_SHARE_READ | FILE_SHARE_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `OPEN_EXISTING` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:378:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m378[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                OPEN_EXISTING,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `INVALID_HANDLE_VALUE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:384:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m384[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if raw_handle == INVALID_HANDLE_VALUE {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `CreateFileW` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:413:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m413[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            CreateFileW([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `GENERIC_READ` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:415:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m415[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                GENERIC_READ | GENERIC_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `GENERIC_WRITE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:415:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m415[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                GENERIC_READ | GENERIC_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FILE_SHARE_READ` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:416:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m416[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                FILE_SHARE_READ | FILE_SHARE_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FILE_SHARE_WRITE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:416:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m416[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                FILE_SHARE_READ | FILE_SHARE_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `OPEN_EXISTING` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:418:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m418[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                OPEN_EXISTING,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `INVALID_HANDLE_VALUE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:424:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m424[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if raw_handle == INVALID_HANDLE_VALUE {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `AllocConsole` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:529:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m529[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if AllocConsole() == 0 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `AttachConsole` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:552:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m552[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if AttachConsole(process_id) == 0 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `FreeConsole` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:568:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m568[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if FreeConsole() == 0 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleTitleW` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:615:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m615[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleTitleW(buffer.as_ptr()) == 0 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `MAX_PATH` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:652:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m652[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut buffer: [u16; MAX_PATH as usize] = unsafe { MaybeUninit::zeroed().assume_init() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleTitleW` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:655:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m655[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let length = GetConsoleTitleW(buffer.as_mut_ptr(), MAX_PATH as u32) as usize;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `MAX_PATH` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:655:64[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m655[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let length = GetConsoleTitleW(buffer.as_mut_ptr(), MAX_PATH as u32) as usize;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                               [0m[0m[1m[38;5;9m^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `MAX_PATH` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:682:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m682[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut buffer: [u16; MAX_PATH as usize] = unsafe { MaybeUninit::zeroed().assume_init() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleOriginalTitleW` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:685:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m685[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetConsoleOriginalTitleW(buffer.as_mut_ptr(), buffer.len() as u32) == 0 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleCP` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:704:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m704[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let code_page = GetConsoleCP();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleOutputCP` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:722:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let code_page = GetConsoleOutputCP();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleCP` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:737:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m737[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleCP(code_page) == 0 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleOutputCP` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:752:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m752[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleOutputCP(code_page) == 0 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleDisplayMode` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:766:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m766[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetConsoleDisplayMode(&mut mode) == 0{[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SELECTION_INFO` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:793:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m793[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut info: CONSOLE_SELECTION_INFO = std::mem::zeroed();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleSelectionInfo` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:795:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m795[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetConsoleSelectionInfo(&mut info) == 0 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `CreateConsoleScreenBuffer` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:835:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m835[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let raw_handle = CreateConsoleScreenBuffer([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `GENERIC_READ` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:836:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m836[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                GENERIC_READ | GENERIC_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `GENERIC_WRITE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:836:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m836[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                GENERIC_READ | GENERIC_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FILE_SHARE_READ` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:837:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m837[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                FILE_SHARE_READ | FILE_SHARE_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FILE_SHARE_WRITE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:837:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m837[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                FILE_SHARE_READ | FILE_SHARE_WRITE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `CONSOLE_TEXTMODE_BUFFER` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:839:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m839[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                CONSOLE_TEXTMODE_BUFFER,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `INVALID_HANDLE_VALUE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:843:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m843[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if raw_handle == INVALID_HANDLE_VALUE {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `CreateConsoleScreenBuffer` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:857:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m857[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let raw_handle = CreateConsoleScreenBuffer([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `CONSOLE_TEXTMODE_BUFFER` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:861:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m861[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                CONSOLE_TEXTMODE_BUFFER,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `INVALID_HANDLE_VALUE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:865:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m865[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if raw_handle == INVALID_HANDLE_VALUE {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleActiveScreenBuffer` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:881:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m881[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleActiveScreenBuffer(**handle) == 0 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleProcessList` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:909:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m909[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut process_count = GetConsoleProcessList(buffer.as_mut_ptr(), buffer.len() as u32);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleProcessList` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:918:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m918[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    process_count = GetConsoleProcessList(buffer.as_mut_ptr(), buffer.len() as u32);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleHistoryInfo` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:947:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m947[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleHistoryInfo(&mut (info.into())) == 0{[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_HISTORY_INFO` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:971:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m971[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut info : CONSOLE_HISTORY_INFO = unsafe { std::mem::zeroed() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleHistoryInfo` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:974:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m974[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetConsoleHistoryInfo(&mut info) == 0{[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleWindow` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:997:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m997[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let handle = GetConsoleWindow() as HANDLE;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `HANDLE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:997:48[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m997[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let handle = GetConsoleWindow() as HANDLE;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a struct with a similar name exists: `Handle`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/handle.rs:9:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m   [0m[0m[1m[38;5;12m| [0m[0mpub struct Handle(RawHandle);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Handle` defined here[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `RECT` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1032:34[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1032[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let mut window : RECT = unsafe { std::mem::zeroed() };[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MONITORINFO` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1033:40[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1033[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let mut monitor_info : MONITORINFO = unsafe { std::mem::zeroed() };[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MONITORINFO` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1034:59[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m518[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mimpl WinConsole {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<MONITORINFO>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1034[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                monitor_info.cbSize = std::mem::size_of::<MONITORINFO>() as u32;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                          [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetMonitorInfoA` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1037:24[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1037[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    if GetMonitorInfoA(MonitorFromWindow(**handle as *mut HWND__, MONITOR_DEFAULTTOPRIMARY), &mut monitor_info) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `MonitorFromWindow` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1037:40[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1037[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    if GetMonitorInfoA(MonitorFromWindow(**handle as *mut HWND__, MONITOR_DEFAULTTOPRIMARY), &mut monitor_info) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `HWND__` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1037:75[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1037[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    if GetMonitorInfoA(MonitorFromWindow(**handle as *mut HWND__, MONITOR_DEFAULTTOPRIMARY), &mut monitor_info) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                                          [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `MONITOR_DEFAULTTOPRIMARY` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1037:83[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1037[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    if GetMonitorInfoA(MonitorFromWindow(**handle as *mut HWND__, MONITOR_DEFAULTTOPRIMARY), &mut monitor_info) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                                                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetWindowRect` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1041:28[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1041[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        if GetWindowRect(**handle as *mut HWND__, &mut window) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `HWND__` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1041:59[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1041[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        if GetWindowRect(**handle as *mut HWND__, &mut window) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                          [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleMode` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1098:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m162[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mpub struct ConsoleMode;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named unit struct `ConsoleMode` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1098[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetConsoleMode(**handle, &mut mode) != 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a unit struct with a similar name exists: `ConsoleMode`[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleMode` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1130:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m162[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mpub struct ConsoleMode;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named unit struct `ConsoleMode` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1130[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleMode(**handle, mode) != 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a unit struct with a similar name exists: `ConsoleMode`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `COORD` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1174:52[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1174[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut new_screen_buffer_dimensions : COORD = std::mem::zeroed();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                   [0m[0m[1m[38;5;9m^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a struct with a similar name exists: `Coord`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/coord.rs:10:1[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m   [0m[0m[1m[38;5;12m| [0m[0mpub struct Coord {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Coord` defined here[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleDisplayMode` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1175:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1175[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleDisplayMode(**handle, mode as u32, &mut new_screen_buffer_dimensions) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetCurrentConsoleFontEx` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1216:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1216[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetCurrentConsoleFontEx(**handle, maximum_window.into(), &mut info) == 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_FONT_INFO` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1241:27[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1241[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut info: CONSOLE_FONT_INFO = std::mem::zeroed();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetCurrentConsoleFont` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1242:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1242[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetCurrentConsoleFont(**handle, maximum_window.into(), &mut info) == 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_FONT_INFOEX` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1272:27[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1272[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut info: CONSOLE_FONT_INFOEX = std::mem::zeroed();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_FONT_INFOEX` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1275:27[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1275[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let ptr: *mut CONSOLE_FONT_INFOEX = &mut info;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetCurrentConsoleFontEx` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1277:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1277[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetCurrentConsoleFontEx(**handle, maximum_window.into(), ptr) == 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleFontSize` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1304:25[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1304[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let coord = GetConsoleFontSize(**handle, font_index);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SCREEN_BUFFER_INFO` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1330:27[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1330[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut info: CONSOLE_SCREEN_BUFFER_INFO = std::mem::zeroed();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleScreenBufferInfo` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1331:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1331[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetConsoleScreenBufferInfo(**handle, &mut info) != 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SCREEN_BUFFER_INFOEX` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1362:34[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1362[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut buffer_info: CONSOLE_SCREEN_BUFFER_INFOEX = std::mem::zeroed();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SCREEN_BUFFER_INFOEX` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1363:54[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m518[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mimpl WinConsole {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_SCREEN_BUFFER_INFOEX>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1363[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            buffer_info.cbSize = std::mem::size_of::<CONSOLE_SCREEN_BUFFER_INFOEX>() as u32;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleScreenBufferInfoEx` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1365:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1365[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetConsoleScreenBufferInfoEx(**handle, &mut buffer_info) != 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleScreenBufferInfoEx` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1397:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1397[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleScreenBufferInfoEx(**handle, &mut buffer_info) == 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleScreenBufferSize` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1426:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1426[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleScreenBufferSize(**handle, size.into()) == 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `SMALL_RECT` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1459:26[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1459[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let small_rect: &SMALL_RECT = &(*window).into();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleWindowInfo` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1462:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1462[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleWindowInfo(**handle, absolute.into(), small_rect) == 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleCursorPosition` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1523:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1523[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleCursorPosition(**handle, coord.into()) != 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_CURSOR_INFO` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1601:28[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1601[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut info : CONSOLE_CURSOR_INFO = std::mem::zeroed();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleCursorInfo` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1603:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1603[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetConsoleCursorInfo(**handle, &mut info) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `FillConsoleOutputCharacterW` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1664:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1664[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if FillConsoleOutputCharacterW([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `FillConsoleOutputAttribute` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1711:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1711[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if FillConsoleOutputAttribute([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `SetConsoleTextAttribute` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1751:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m167[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mpub struct ConsoleTextAttribute;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named unit struct `ConsoleTextAttribute` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1751[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if SetConsoleTextAttribute(**handle, attribute) != 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a unit struct with a similar name exists: `ConsoleTextAttribute`[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetLargestConsoleWindowSize` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1798:32[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1798[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let coord: Coord = GetLargestConsoleWindowSize(**handle).into();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetNumberOfConsoleInputEvents` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1826:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1826[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetNumberOfConsoleInputEvents(**handle, &mut num_events) == 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetNumberOfConsoleMouseButtons` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1852:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1852[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if GetNumberOfConsoleMouseButtons(&mut num_buttons) == 0 {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `ScrollConsoleScreenBufferW` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:1883:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1883[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if ScrollConsoleScreenBufferW([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2016:56[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m518[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mimpl WinConsole {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<INPUT_RECORD>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m2016[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut buf = vec![unsafe { std::mem::zeroed::<INPUT_RECORD>() }; num_records];[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                       [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `ReadConsoleInputW` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2019:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2019[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if ReadConsoleInputW([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CHAR_INFO` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2048:58[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m518[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mimpl WinConsole {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CHAR_INFO>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m2048[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut buffer = vec![unsafe{ std::mem::zeroed::<CHAR_INFO>() }; length as usize];[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `ReadConsoleOutputW` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2052:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2052[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if ReadConsoleOutputW([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `ReadConsoleOutputAttribute` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2118:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2118[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if ReadConsoleOutputAttribute(**handle, buffer.as_mut_ptr(), buffer.len() as u32, read_coord.into(), &mut attributes_read) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `ReadConsoleOutputCharacterW` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2163:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2163[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m   if ReadConsoleOutputCharacterW(**handle, utf16_buffer.as_mut_ptr(), buffer.len() as u32, read_coord.into(), &mut chars_read) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2215:67[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m518[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mimpl WinConsole {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<INPUT_RECORD>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m2215[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut buf = iter::repeat_with(|| std::mem::zeroed::<INPUT_RECORD>())[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2217:32[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m518[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mimpl WinConsole {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<INPUT_RECORD>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m2217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                .collect::<Vec<INPUT_RECORD>>();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `PeekConsoleInputW` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2219:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2219[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if PeekConsoleInputW([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `CONSOLE_READCONSOLE_CONTROL` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2326:33[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2326[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut input_control = CONSOLE_READCONSOLE_CONTROL {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_READCONSOLE_CONTROL` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2327:42[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m518[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mimpl WinConsole {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_READCONSOLE_CONTROL>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m2327[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            nLength: std::mem::size_of::<CONSOLE_READCONSOLE_CONTROL>() as u32,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `ReadFile` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2343:20[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2343[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                if ReadFile([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `ReadConsoleW` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2359:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2359[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if ReadConsoleW([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `ReadFile` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2495:20[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2495[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                if ReadFile([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `ReadConsoleW` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2511:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2511[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if ReadConsoleW([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `FlushConsoleInputBuffer` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2543:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2543[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if FlushConsoleInputBuffer(**handle) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `WriteFile` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2584:20[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2584[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                if WriteFile([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `WriteConsoleA` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2599:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m112[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mpub struct WinConsole(Handle);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named tuple struct `WinConsole` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m2599[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if WriteConsoleA([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a tuple struct with a similar name exists: `WinConsole`[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `WriteFile` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2648:20[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2648[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                if WriteFile([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `WriteConsoleW` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2663:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m112[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mpub struct WinConsole(Handle);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named tuple struct `WinConsole` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m2663[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if WriteConsoleW([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a tuple struct with a similar name exists: `WinConsole`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `PSMALL_RECT` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2732:29[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2732[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let write_area_raw: PSMALL_RECT = &mut write_area.into();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CHAR_INFO` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2737:28[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m518[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mimpl WinConsole {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CHAR_INFO>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m2737[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            .collect::<Vec<CHAR_INFO>>();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `WriteConsoleOutputW` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2740:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2740[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if WriteConsoleOutputW([0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `PCHAR_INFO` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2742:33[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2742[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                buf.as_ptr() as PCHAR_INFO,[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2797:28[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m518[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mimpl WinConsole {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<INPUT_RECORD>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m2797[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            .collect::<Vec<INPUT_RECORD>>();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `WriteConsoleInputA` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2803:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2803[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if WriteConsoleInputA(**handle, buf.as_mut_ptr(), buf.len() as u32, &mut events_written) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `WriteConsoleOutputAttribute` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2840:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2840[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m   if WriteConsoleOutputAttribute(**handle, attributes.as_ptr(), attributes.len() as u32, write_coord.into(), &mut written_attributes)[0m[0m[1m[38;5;12m...[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `WriteConsoleOutputCharacterW` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2883:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2883[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m   if WriteConsoleOutputCharacterW(**handle, utf16_buffer.as_ptr(), utf16_buffer.len() as u32, write_coord.into(), &mut chars_written)[0m[0m[1m[38;5;12m...[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `GetConsoleMode` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:2896:18[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m162[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mpub struct ConsoleMode;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named unit struct `ConsoleMode` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m2896[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        unsafe { GetConsoleMode(**handle, &mut mode) != 0 }[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a unit struct with a similar name exists: `ConsoleMode`[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `Beep` in this scope[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/console.rs:3062:16[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3062[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if Beep(frequency, duration) == 0{[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_FONT_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info.rs:15:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<CONSOLE_FONT_INFO> for ConsoleFontInfo{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_FONT_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_FONT_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info.rs:17:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(info: CONSOLE_FONT_INFO) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_FONT_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info.rs:25:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<CONSOLE_FONT_INFO> for ConsoleFontInfo{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_FONT_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_FONT_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info.rs:27:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> CONSOLE_FONT_INFO {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `CONSOLE_FONT_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info.rs:28:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m28[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        CONSOLE_FONT_INFO{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `LF_FACESIZE` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info_ex.rs:27:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub face_name: [u16; LF_FACESIZE],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_FONT_INFOEX` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info_ex.rs:30:12[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<&CONSOLE_FONT_INFOEX> for ConsoleFontInfoEx {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m      [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_FONT_INFOEX>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_FONT_INFOEX` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info_ex.rs:32:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(info: &CONSOLE_FONT_INFOEX) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_FONT_INFOEX` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info_ex.rs:44:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<CONSOLE_FONT_INFOEX> for ConsoleFontInfoEx {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_FONT_INFOEX>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_FONT_INFOEX` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info_ex.rs:46:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> CONSOLE_FONT_INFOEX {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `CONSOLE_FONT_INFOEX` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_font_info_ex.rs:47:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        CONSOLE_FONT_INFOEX {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SCREEN_BUFFER_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info.rs:23:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<CONSOLE_SCREEN_BUFFER_INFO> for ConsoleScreenBufferInfo {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_SCREEN_BUFFER_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SCREEN_BUFFER_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info.rs:25:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(info: CONSOLE_SCREEN_BUFFER_INFO) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SCREEN_BUFFER_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info.rs:36:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<CONSOLE_SCREEN_BUFFER_INFO> for ConsoleScreenBufferInfo {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_SCREEN_BUFFER_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SCREEN_BUFFER_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info.rs:38:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> CONSOLE_SCREEN_BUFFER_INFO {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `CONSOLE_SCREEN_BUFFER_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info.rs:39:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        CONSOLE_SCREEN_BUFFER_INFO {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SCREEN_BUFFER_INFOEX` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info_ex.rs:39:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<CONSOLE_SCREEN_BUFFER_INFOEX> for ConsoleScreenBufferInfoEx {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_SCREEN_BUFFER_INFOEX>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SCREEN_BUFFER_INFOEX` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info_ex.rs:41:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(info: CONSOLE_SCREEN_BUFFER_INFOEX) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SCREEN_BUFFER_INFOEX` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info_ex.rs:56:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m56[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<CONSOLE_SCREEN_BUFFER_INFOEX> for ConsoleScreenBufferInfoEx {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_SCREEN_BUFFER_INFOEX>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SCREEN_BUFFER_INFOEX` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info_ex.rs:58:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> CONSOLE_SCREEN_BUFFER_INFOEX {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `CONSOLE_SCREEN_BUFFER_INFOEX` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_screen_buffer_info_ex.rs:59:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        CONSOLE_SCREEN_BUFFER_INFOEX {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SELECTION_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_selection_info.rs:77:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m77[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<CONSOLE_SELECTION_INFO> for ConsoleSelectionInfo {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_SELECTION_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SELECTION_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_selection_info.rs:79:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m79[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> CONSOLE_SELECTION_INFO {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `CONSOLE_SELECTION_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_selection_info.rs:80:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m80[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        CONSOLE_SELECTION_INFO {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SELECTION_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_selection_info.rs:88:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<CONSOLE_SELECTION_INFO> for ConsoleSelectionInfo {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_SELECTION_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_SELECTION_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_selection_info.rs:90:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m90[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(info: CONSOLE_SELECTION_INFO) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_HISTORY_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_history_info.rs:18:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<CONSOLE_HISTORY_INFO> for ConsoleHistoryInfo{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_HISTORY_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_HISTORY_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_history_info.rs:20:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> CONSOLE_HISTORY_INFO {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `CONSOLE_HISTORY_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_history_info.rs:21:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        CONSOLE_HISTORY_INFO{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_HISTORY_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_history_info.rs:30:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<CONSOLE_HISTORY_INFO> for ConsoleHistoryInfo{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_HISTORY_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_HISTORY_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_history_info.rs:32:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(info: CONSOLE_HISTORY_INFO) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_CURSOR_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_cursor_info.rs:15:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<CONSOLE_CURSOR_INFO> for ConsoleCursorInfo{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_CURSOR_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_CURSOR_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_cursor_info.rs:17:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> CONSOLE_CURSOR_INFO {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `CONSOLE_CURSOR_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_cursor_info.rs:18:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        CONSOLE_CURSOR_INFO{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_CURSOR_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_cursor_info.rs:25:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<CONSOLE_CURSOR_INFO> for ConsoleCursorInfo{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_CURSOR_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_CURSOR_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_cursor_info.rs:27:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(info: CONSOLE_CURSOR_INFO) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `SMALL_RECT` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/small_rect.rs:76:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<SMALL_RECT> for SmallRect {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<SMALL_RECT>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `SMALL_RECT` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/small_rect.rs:78:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(rect: SMALL_RECT) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `SMALL_RECT` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/small_rect.rs:88:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<SMALL_RECT> for SmallRect {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<SMALL_RECT>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `SMALL_RECT` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/small_rect.rs:90:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m90[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> SMALL_RECT {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `SMALL_RECT` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/small_rect.rs:91:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        SMALL_RECT {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Formatter` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/coord.rs:48:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing one of these items[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[38;5;10muse std::fmt::Formatter;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[38;5;10muse core::fmt::Formatter;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Error` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/coord.rs:48:56[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                       [0m[0m[1m[38;5;9m^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing one of these items[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[38;5;10muse std::error::Error;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[38;5;10muse std::fmt::Error;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[38;5;10muse std::io::Error;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m[38;5;10muse core::fmt::Error;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `COORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/coord.rs:53:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct Coord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Coord` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<COORD> for Coord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: a struct with a similar name exists[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<[0m[0m[38;5;10mCoord[0m[0m> for Coord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[38;5;10m~~~~~[0m
+[0m[1m[38;5;14mhelp[0m[0m: you might be missing a type parameter[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl[0m[0m[38;5;10m<COORD>[0m[0m From<COORD> for Coord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[38;5;10m+++++++[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `COORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/coord.rs:55:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct Coord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Coord` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m55[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(coord: COORD) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a struct with a similar name exists: `Coord`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `COORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/coord.rs:60:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct Coord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Coord` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<COORD> for Coord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: a struct with a similar name exists[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<[0m[0m[38;5;10mCoord[0m[0m> for Coord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[38;5;10m~~~~~[0m
+[0m[1m[38;5;14mhelp[0m[0m: you might be missing a type parameter[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl[0m[0m[38;5;10m<COORD>[0m[0m Into<COORD> for Coord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[38;5;10m+++++++[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `COORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/coord.rs:62:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct Coord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Coord` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> COORD {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a struct with a similar name exists: `Coord`[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `COORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/coord.rs:63:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct Coord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Coord` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m63[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        COORD {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a struct with a similar name exists: `Coord`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `FOCUS_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/focus_event.rs:13:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<FOCUS_EVENT_RECORD> for FocusEventRecord{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<FOCUS_EVENT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `FOCUS_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/focus_event.rs:14:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> FOCUS_EVENT_RECORD {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `FOCUS_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/focus_event.rs:15:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        FOCUS_EVENT_RECORD{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `FOCUS_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/focus_event.rs:21:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<FOCUS_EVENT_RECORD> for FocusEventRecord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<FOCUS_EVENT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `FOCUS_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/focus_event.rs:23:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(record: FOCUS_EVENT_RECORD) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `HANDLE` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/handle.rs:14:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mpub struct Handle(RawHandle);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Handle` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    handle: HANDLE,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a struct with a similar name exists: `Handle`[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find function, tuple struct or tuple variant `CloseHandle` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/handle.rs:34:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            assert!(unsafe { CloseHandle(**self) != 0 }, ""Cannot close the handle"")[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `HANDLE` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/handle.rs:54:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mpub struct Handle(RawHandle);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Handle` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m54[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn new(handle: HANDLE) -> Handle {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a struct with a similar name exists: `Handle`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `HANDLE` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/handle.rs:84:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mpub struct Handle(RawHandle);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Handle` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m84[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn new_owned(handle: HANDLE) -> Handle {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a struct with a similar name exists: `Handle`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `HANDLE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/handle.rs:105:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m   [0m[0m[1m[38;5;12m| [0m[0mpub struct Handle(RawHandle);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Handle` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m105[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn get_raw(&self) -> HANDLE {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a struct with a similar name exists: `Handle`[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `INVALID_HANDLE_VALUE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/handle.rs:124:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m124[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if self.0.handle == INVALID_HANDLE_VALUE {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `HANDLE` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/handle.rs:140:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m   [0m[0m[1m[38;5;12m| [0m[0mpub struct Handle(RawHandle);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-----------------------------[0m[0m [0m[0m[1m[38;5;12msimilarly named struct `Handle` defined here[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m140[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    type Target = HANDLE;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a struct with a similar name exists: `Handle`[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FROM_LEFT_1ST_BUTTON_PRESSED` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:195:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m195[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.0 as u32 & FROM_LEFT_1ST_BUTTON_PRESSED != 0[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `RIGHTMOST_BUTTON_PRESSED` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:202:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m202[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            & (RIGHTMOST_BUTTON_PRESSED[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FROM_LEFT_3RD_BUTTON_PRESSED` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:203:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m203[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                | FROM_LEFT_3RD_BUTTON_PRESSED[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FROM_LEFT_4TH_BUTTON_PRESSED` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:204:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m204[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                | FROM_LEFT_4TH_BUTTON_PRESSED)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FROM_LEFT_2ND_BUTTON_PRESSED` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:211:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m211[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.0 as u32 & FROM_LEFT_2ND_BUTTON_PRESSED != 0[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `KEY_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:233:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m233[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<KEY_EVENT_RECORD> for KeyEventRecord{[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<KEY_EVENT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `KEY_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:234:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m234[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> KEY_EVENT_RECORD {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `KEY_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:235:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m235[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        KEY_EVENT_RECORD{[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MOUSE_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:250:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m250[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<MOUSE_EVENT_RECORD> for MouseEventRecord{[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<MOUSE_EVENT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MOUSE_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:251:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m251[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> MOUSE_EVENT_RECORD {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `MOUSE_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:252:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m252[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        MOUSE_EVENT_RECORD{[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `KEY_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:261:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m261[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<KEY_EVENT_RECORD> for KeyEventRecord {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<KEY_EVENT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `KEY_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:263:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m263[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(record: KEY_EVENT_RECORD) -> Self {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MOUSE_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:288:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m288[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<MOUSE_EVENT_RECORD> for MouseEventRecord {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<MOUSE_EVENT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MOUSE_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_event.rs:290:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m290[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(event: MOUSE_EVENT_RECORD) -> Self {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:32:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<INPUT_RECORD> for InputRecord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<INPUT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:33:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(record: INPUT_RECORD) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:49:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m49[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<INPUT_RECORD> for InputRecord{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<INPUT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:50:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> INPUT_RECORD {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:61:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<INPUT_RECORD> for KeyEventRecord{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<INPUT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:62:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> INPUT_RECORD {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:63:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        INPUT_RECORD{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `KEY_EVENT` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:64:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m64[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            EventType: KEY_EVENT,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `KEY_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:66:29[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m66[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let event : KEY_EVENT_RECORD = self.into();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:73:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<INPUT_RECORD> for MouseEventRecord{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<INPUT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:74:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> INPUT_RECORD {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:75:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m75[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        INPUT_RECORD{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `MOUSE_EVENT` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:76:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            EventType: MOUSE_EVENT,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MOUSE_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:78:29[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let event : MOUSE_EVENT_RECORD = self.into();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:85:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<INPUT_RECORD> for WindowBufferSizeRecord{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<INPUT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:86:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> INPUT_RECORD {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:87:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        INPUT_RECORD{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `WINDOW_BUFFER_SIZE_EVENT` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:88:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            EventType: WINDOW_BUFFER_SIZE_EVENT,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `WINDOW_BUFFER_SIZE_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:90:29[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m90[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let event : WINDOW_BUFFER_SIZE_RECORD = self.into();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:97:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<INPUT_RECORD> for MenuEventRecord{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<INPUT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:98:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m98[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> INPUT_RECORD {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `INPUT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:99:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m99[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        INPUT_RECORD{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `MENU_EVENT` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:100:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m100[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            EventType: MENU_EVENT,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MENU_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:102:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m102[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let event : MENU_EVENT_RECORD = self.into();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:109:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m109[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<INPUT_RECORD> for FocusEventRecord{[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<INPUT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `INPUT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:110:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m110[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> INPUT_RECORD {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `INPUT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:111:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m111[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        INPUT_RECORD{[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0425][0m[0m[1m: cannot find value `FOCUS_EVENT` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:112:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m112[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            EventType: FOCUS_EVENT,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `FOCUS_EVENT_RECORD` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/input_record.rs:114:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m114[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let event : FOCUS_EVENT_RECORD = self.into();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MENU_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/menu_event.rs:13:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<MENU_EVENT_RECORD> for MenuEventRecord{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<MENU_EVENT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MENU_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/menu_event.rs:14:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> MENU_EVENT_RECORD {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `MENU_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/menu_event.rs:15:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        MENU_EVENT_RECORD{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MENU_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/menu_event.rs:21:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<MENU_EVENT_RECORD> for MenuEventRecord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<MENU_EVENT_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `MENU_EVENT_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/menu_event.rs:23:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(record: MENU_EVENT_RECORD) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `WINDOW_BUFFER_SIZE_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/window_buffer_size_event.rs:13:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<WINDOW_BUFFER_SIZE_RECORD> for WindowBufferSizeRecord{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<WINDOW_BUFFER_SIZE_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `WINDOW_BUFFER_SIZE_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/window_buffer_size_event.rs:14:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> WINDOW_BUFFER_SIZE_RECORD {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `WINDOW_BUFFER_SIZE_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/window_buffer_size_event.rs:15:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        WINDOW_BUFFER_SIZE_RECORD{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `WINDOW_BUFFER_SIZE_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/window_buffer_size_event.rs:21:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<WINDOW_BUFFER_SIZE_RECORD> for WindowBufferSizeRecord {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<WINDOW_BUFFER_SIZE_RECORD>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `WINDOW_BUFFER_SIZE_RECORD` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/window_buffer_size_event.rs:23:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(record: WINDOW_BUFFER_SIZE_RECORD) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CHAR_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/char_info.rs:26:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<CHAR_INFO> for CharInfo{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CHAR_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CHAR_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/char_info.rs:27:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(info: CHAR_INFO) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CHAR_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/char_info.rs:37:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m37[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<CHAR_INFO> for CharInfo{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CHAR_INFO>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CHAR_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/char_info.rs:38:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> CHAR_INFO {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `CHAR_INFO` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/char_info.rs:39:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        CHAR_INFO{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_READCONSOLE_CONTROL` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_read_control.rs:57:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m57[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl From<CONSOLE_READCONSOLE_CONTROL> for ConsoleReadControl{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_READCONSOLE_CONTROL>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_READCONSOLE_CONTROL` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_read_control.rs:59:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn from(control: CONSOLE_READCONSOLE_CONTROL) -> Self {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_READCONSOLE_CONTROL` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_read_control.rs:69:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl Into<CONSOLE_READCONSOLE_CONTROL> for ConsoleReadControl{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12mhelp: you might be missing a type parameter: `<CONSOLE_READCONSOLE_CONTROL>`[0m
+
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `CONSOLE_READCONSOLE_CONTROL` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_read_control.rs:71:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn into(self) -> CONSOLE_READCONSOLE_CONTROL {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1m[38;5;9merror[E0422][0m[0m[1m: cannot find struct, variant or union type `CONSOLE_READCONSOLE_CONTROL` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/win32console-0.1.4/src/structs/console_read_control.rs:72:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        CONSOLE_READCONSOLE_CONTROL{[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[0m[1mSome errors have detailed explanations: E0412, E0422, E0425, E0432, E0433.[0m
+[0m[1mFor more information about an error, try `rustc --explain E0412`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `win32console` due to 285 previous errors
+[0m[0m[1m[31merror[0m[1m:[0m build failed
+2024-06-23 14:09:06.357732 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

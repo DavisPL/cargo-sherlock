@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mike,michaelbeaumont,https://github.com/michaelbeaumont
+************************************
+event,timestamp,downloads
+Downloads,-,38417
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:11:40.096846 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:11:44.549408 |INFO | [rudra-progress] Running rudra for target lib:dht-sensor
+2024-06-23 15:11:51.386148 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:11:51.390056 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:11:51.390415 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:11:51.390422 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:11:51.408623 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:11:51.408646 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:11:52.322796 |WARN | [cargo_rudra] Target example:stm32f042 is not supported
+2024-06-23 15:11:52.322974 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

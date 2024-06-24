@@ -1,0 +1,60 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Marc-Antoine Perennou,Keruspe,https://github.com/Keruspe
+************************************
+event,timestamp,downloads
+Downloads,-,49300
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:06:29.243401 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:06:34.470419 |INFO | [rudra-progress] Running rudra for target lib:async-amqp
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated trait `async_lapin::LapinAsyncIoExt`: use async-reactor-trait directly instead[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:18[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse async_lapin::LapinAsyncIoExt;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated trait `LapinAsyncStdExt`: use async-executor-trait and async-reactor-trait directly instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:27:6[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl LapinAsyncStdExt for ConnectionProperties {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m     [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `LapinAsyncStdExt::with_async_std_executor`: use async-executor-trait directly instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:13:14[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.with_async_std_executor().with_async_std_reactor()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `LapinAsyncStdExt::with_async_std_reactor`: use async-reactor-trait directly instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:13:40[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.with_async_std_executor().with_async_std_reactor()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `async_lapin::LapinAsyncIoExt::with_async_io_reactor`: use async-reactor-trait directly instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:34:14[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.with_async_io_reactor()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^[0m
+
+2024-06-23 16:07:29.529899 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:07:29.533751 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:07:29.534873 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:07:29.534888 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:07:29.537250 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:07:29.537262 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:07:30.296106 |WARN | [cargo_rudra] Target example:pubsub-async-std is not supported
+2024-06-23 16:07:30.296483 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

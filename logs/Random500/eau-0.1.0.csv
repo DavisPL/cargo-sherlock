@@ -1,0 +1,45 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Drewry Pope,dezren39,https://github.com/dezren39
+************************************
+event,timestamp,downloads
+Downloads,-,590
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:55:36.853655 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:55:44.469552 |INFO | [rudra-progress] Running rudra for target lib:eau
+2024-06-23 13:55:50.457253 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:55:50.462832 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:55:50.463392 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:55:50.463412 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:55:50.499415 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:55:50.499453 |INFO | [rudra-progress] Rudra finished
+2024-06-23 13:55:51.898904 |INFO | [rudra-progress] Running rudra for target bin:eau
+[0m[1m[38;5;9merror[0m[0m[1m: there is no argument named `hash`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/main.rs:8:15[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    println!(""{hash:#?}"");[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[38;5;9m^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: if you intended to capture `hash` from the surrounding scope, add `#![feature(format_args_capture)]` to the crate attributes[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: there is no argument named `hash`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/main.rs:14:15[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    println!(""{hash:#?}"");[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[38;5;9m^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: if you intended to capture `hash` from the surrounding scope, add `#![feature(format_args_capture)]` to the crate attributes[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `eau` due to 2 previous errors
+2024-06-23 13:55:54.212039 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

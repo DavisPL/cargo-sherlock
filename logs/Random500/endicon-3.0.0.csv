@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nathaniel McCallum,npmccallum,https://github.com/npmccallum
+************************************
+event,timestamp,downloads
+Downloads,-,3303
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 18:35:29.903935 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 18:35:38.654966 |INFO | [rudra-progress] Running rudra for target lib:endicon
+2024-06-23 18:35:52.866427 |INFO | [rudra-progress] Rudra started
+2024-06-23 18:35:52.880558 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 18:35:52.881418 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 18:35:52.881460 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 18:35:52.931986 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 18:35:52.932078 |INFO | [rudra-progress] Rudra finished
+2024-06-23 18:35:55.170390 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

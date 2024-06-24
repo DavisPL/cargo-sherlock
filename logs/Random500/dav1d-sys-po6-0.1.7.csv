@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Fathy Boundjadj,fathyb,https://github.com/fathyb
+************************************
+event,timestamp,downloads
+Downloads,-,2557
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 06:47:25.015020 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 06:47:28.658595 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bindgen = ""^0.66.1""`
+candidate versions found which didn't match: 0.65.1, 0.64.0, 0.63.0, ...
+location searched: crates.io index
+required by package `dav1d-sys-po6 v0.1.7 (/tmp/rudra)`
+
+"
+************************************

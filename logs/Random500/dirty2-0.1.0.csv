@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Zoey Sheffield,zoeyfyi,https://github.com/zoeyfyi
+************************************
+event,timestamp,downloads
+Downloads,-,6051
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:29:42.580491 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:29:45.519027 |INFO | [rudra-progress] Running rudra for target lib:dirty2
+2024-06-23 15:29:49.416636 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:29:49.420443 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:29:49.420818 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:29:49.420830 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:29:49.441709 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:29:49.441736 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:29:50.265945 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nathan McCarty,nmccarty,https://github.com/nmccarty
+************************************
+event,timestamp,downloads
+Downloads,-,7395
+************************************
+event,timestamp,total,flagged
+Side Effects,-,22,4
+************************************
+Rudra,timestamp
+"2024-06-23 15:18:52.856623 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:18:56.471632 |INFO | [rudra-progress] Running rudra for target bin:asuran-cli
+2024-06-23 15:20:21.903723 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:20:21.907692 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:20:21.909050 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:20:21.909066 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:20:22.024908 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:20:22.024941 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:20:22.145243 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-23 15:20:22.145568 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

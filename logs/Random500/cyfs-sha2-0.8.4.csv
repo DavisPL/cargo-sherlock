@@ -1,0 +1,32 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,CYFS Core Dev,BDTDevTeam,https://github.com/BDTDevTeam
+************************************
+event,timestamp,downloads
+Downloads,-,7074
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,1
+************************************
+Rudra,timestamp
+"2024-06-23 13:36:22.645383 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:36:26.999926 |INFO | [rudra-progress] Running rudra for target lib:cyfs-sha2
+2024-06-23 13:37:40.656987 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:37:40.662349 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:37:40.662807 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:37:40.662824 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:37:40.714417 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:37:40.714464 |INFO | [rudra-progress] Rudra finished
+2024-06-23 13:37:42.503490 |WARN | [cargo_rudra] Target example:sha512sum is not supported
+2024-06-23 13:37:42.503547 |WARN | [cargo_rudra] Target example:sha256sum is not supported
+2024-06-23 13:37:42.503558 |WARN | [cargo_rudra] Target test:lib is not supported
+2024-06-23 13:37:42.503568 |WARN | [cargo_rudra] Target bench:sha256 is not supported
+2024-06-23 13:37:42.503571 |WARN | [cargo_rudra] Target bench:sha512 is not supported
+2024-06-23 13:37:42.503680 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

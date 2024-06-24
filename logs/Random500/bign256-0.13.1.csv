@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tony Arcieri,tarcieri,https://github.com/tarcieri
+Author,-,elliptic-curves,github:rustcrypto:elliptic-curves,https://github.com/rustcrypto
+************************************
+event,timestamp,downloads
+Downloads,-,840
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:22:19.055871 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:22:19.427502 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`: error: failed to parse manifest at `/tmp/rudra/Cargo.toml`
+
+Caused by:
+  namespaced features with the `dep:` prefix are only allowed on the nightly channel and requires the `-Z namespaced-features` flag on the command-line
+
+"
+************************************

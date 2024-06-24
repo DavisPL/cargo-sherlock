@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ang Ze Yu,ang-zeyu,https://github.com/ang-zeyu
+************************************
+event,timestamp,downloads
+Downloads,-,6376
+************************************
+event,timestamp,total,flagged
+Side Effects,-,14,13
+************************************
+Rudra,timestamp
+"2024-06-23 15:22:05.438508 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:22:06.846339 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `regex = ""^1""`
+candidate versions found which didn't match: 1.8.4, 1.8.3, 1.8.2, ...
+location searched: crates.io index
+required by package `infisearch_lang_ascii v0.10.1 (/tmp/rudra)`
+
+"
+************************************

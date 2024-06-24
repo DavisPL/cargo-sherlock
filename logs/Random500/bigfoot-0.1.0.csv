@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,Ideflop,https://github.com/Ideflop
+************************************
+event,timestamp,downloads
+Downloads,-,422
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:37:52.278734 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:37:54.285922 |INFO | [rudra-progress] Running rudra for target bin:bigfoot
+2024-06-23 13:37:59.540316 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:37:59.545242 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:37:59.547324 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:37:59.547354 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:37:59.549104 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:37:59.549117 |INFO | [rudra-progress] Rudra finished
+2024-06-23 13:37:59.606139 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

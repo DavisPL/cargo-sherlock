@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ryan Shang,ryqdev,https://github.com/ryqdev
+************************************
+event,timestamp,downloads
+Downloads,-,1097
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-23 16:01:00.320311 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:01:02.691292 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `reqwest = ""^0.12.2""`
+candidate versions found which didn't match: 0.11.23, 0.11.22, 0.11.21, ...
+location searched: crates.io index
+required by package `binance-rust v0.1.2 (/tmp/rudra)`
+
+"
+************************************

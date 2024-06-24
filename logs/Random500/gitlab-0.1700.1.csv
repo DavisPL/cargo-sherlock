@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ben Boeckel,mathstuf,https://github.com/mathstuf
+Author,-,Cyril Plisko,imp,https://github.com/imp
+Author,-,"Kitware, Inc.",kwrobot,https://github.com/kwrobot
+************************************
+event,timestamp,downloads
+Downloads,-,231680
+************************************
+event,timestamp,total,flagged
+Side Effects,-,97,1
+************************************
+Rudra,timestamp
+"2024-06-23 18:12:30.190107 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 18:12:34.125211 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bumpalo = ""^3.11.1""`
+candidate versions found which didn't match: 3.15.4, 3.15.3, 3.15.2, ...
+location searched: crates.io index
+required by package `gitlab v0.1700.1 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,19 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,cnYannuo,https://github.com/cnYannuo
+************************************
+event,timestamp,downloads
+Downloads,-,646
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"db_utils_dao-0.0.0 is not a directory
+"
+************************************

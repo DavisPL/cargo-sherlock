@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jeremy Soller,jackpot51,https://github.com/jackpot51
+Author,-,Michael Murphy,mmstick,https://github.com/mmstick
+************************************
+event,timestamp,downloads
+Downloads,-,874
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-23 06:45:34.323961 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 06:45:38.032152 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: no matching package named `github-rs` found
+location searched: registry `crates-io`
+required by package `gitrepoman v0.1.0 (/tmp/rudra)`
+
+"
+************************************

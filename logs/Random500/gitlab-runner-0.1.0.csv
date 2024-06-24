@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sjoerd Simons,sjoerdsimons,https://github.com/sjoerdsimons
+************************************
+event,timestamp,downloads
+Downloads,-,6356
+************************************
+event,timestamp,total,flagged
+Side Effects,-,18,11
+************************************
+Rudra,timestamp
+"2024-06-23 16:54:44.749499 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:54:47.022792 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `reqwest = ""^0.12.0""`
+candidate versions found which didn't match: 0.11.23, 0.11.22, 0.11.21, ...
+location searched: crates.io index
+required by package `gitlab-runner v0.1.0 (/tmp/rudra)`
+
+"
+************************************

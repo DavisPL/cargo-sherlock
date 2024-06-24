@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Konstantinos Lampropoulos,l-const,https://github.com/l-const
+************************************
+event,timestamp,downloads
+Downloads,-,1849
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 18:12:56.805265 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 18:13:03.870172 |INFO | [rudra-progress] Running rudra for target bin:dhref
+2024-06-23 18:29:07.624069 |INFO | [rudra-progress] Rudra started
+2024-06-23 18:29:07.634336 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 18:29:07.637279 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 18:29:07.637325 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 18:29:07.903877 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 18:29:07.904122 |INFO | [rudra-progress] Rudra finished
+2024-06-23 18:29:08.349547 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Andrew_Ryan,alenandry,https://github.com/alenandry
+Author,-,zinso,zinso,https://github.com/zinso
+************************************
+event,timestamp,downloads
+Downloads,-,13282
+************************************
+event,timestamp,total,flagged
+Side Effects,-,21,1
+************************************
+Rudra,timestamp
+"2024-06-23 18:29:59.640117 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 18:30:08.579642 |INFO | [rudra-progress] Running rudra for target bin:asu
+2024-06-23 18:34:28.499844 |INFO | [rudra-progress] Rudra started
+2024-06-23 18:34:28.510812 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 18:34:28.512318 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 18:34:28.512382 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 18:34:28.599980 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 18:34:28.600094 |INFO | [rudra-progress] Rudra finished
+2024-06-23 18:34:28.826687 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

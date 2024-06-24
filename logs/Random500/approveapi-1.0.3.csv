@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Kevin King,kcking,https://github.com/kcking
+************************************
+event,timestamp,downloads
+Downloads,-,7483
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:10:22.887872 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:10:26.562501 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `syn = ""^2.0.46""`
+candidate versions found which didn't match: 2.0.56, 2.0.55, 2.0.54, ...
+location searched: crates.io index
+required by package `serde_derive v1.0.203`
+    ... which satisfies dependency `serde_derive = ""^1.0""` (locked to 1.0.203) of package `approveapi_openapi v0.1.9`
+    ... which satisfies dependency `approveapi_openapi = ""^0.1.9""` (locked to 0.1.9) of package `approveapi v1.0.3 (/tmp/rudra)`
+
+"
+************************************

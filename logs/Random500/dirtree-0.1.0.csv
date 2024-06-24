@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Adam Gaia,adam-gaia,https://github.com/adam-gaia
+************************************
+event,timestamp,downloads
+Downloads,-,420
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 17:21:27.642356 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 17:21:28.829661 |INFO | [rudra-progress] Running rudra for target bin:dirtree
+2024-06-23 17:21:32.556949 |INFO | [rudra-progress] Rudra started
+2024-06-23 17:21:32.560402 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 17:21:32.561946 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 17:21:32.561960 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 17:21:32.563216 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 17:21:32.563228 |INFO | [rudra-progress] Rudra finished
+2024-06-23 17:21:32.602172 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

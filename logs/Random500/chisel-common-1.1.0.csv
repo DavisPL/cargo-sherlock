@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,JC,jonnycoombes,https://github.com/jonnycoombes
+************************************
+event,timestamp,downloads
+Downloads,-,2422
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:00:25.257120 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:00:28.162638 |INFO | [rudra-progress] Running rudra for target lib:chisel-common
+2024-06-23 16:00:32.125111 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:00:32.128896 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:00:32.129240 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:00:32.129252 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:00:32.149938 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:00:32.149956 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:00:32.984636 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

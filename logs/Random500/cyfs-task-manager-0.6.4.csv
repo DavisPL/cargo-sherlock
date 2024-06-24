@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,CYFS Core Dev,BDTDevTeam,https://github.com/BDTDevTeam
+************************************
+event,timestamp,downloads
+Downloads,-,2514
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-23 13:58:30.144003 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:58:33.716859 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `cyfs-base = ""^0.6""`
+candidate versions found which didn't match: 0.6.7, 0.6.6, 0.6.5, ...
+location searched: crates.io index
+required by package `cyfs-task-manager v0.6.4 (/tmp/rudra)`
+
+"
+************************************

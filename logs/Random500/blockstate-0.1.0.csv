@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Wei Tang,sorpaas,https://github.com/sorpaas
+************************************
+event,timestamp,downloads
+Downloads,-,452
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:51:05.246401 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:51:08.207162 |INFO | [rudra-progress] Running rudra for target lib:blockstate
+2024-06-23 16:51:11.965677 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:51:11.969289 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:51:11.972224 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:51:11.972241 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:51:11.973455 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:51:11.973470 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:51:12.527341 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

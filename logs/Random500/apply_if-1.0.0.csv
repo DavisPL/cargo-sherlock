@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Benjamin Valpey,bavalpey,https://github.com/bavalpey
+************************************
+event,timestamp,downloads
+Downloads,-,425
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:04:12.534948 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:04:15.475383 |INFO | [rudra-progress] Running rudra for target lib:apply_if
+2024-06-23 16:04:19.231419 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:04:19.234994 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:04:19.236684 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:04:19.236695 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:04:19.238725 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:04:19.238737 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:04:19.863906 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

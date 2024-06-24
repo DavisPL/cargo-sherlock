@@ -1,0 +1,36 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Clément Renault,Kerollmops,https://github.com/Kerollmops
+************************************
+event,timestamp,downloads
+Downloads,-,724
+************************************
+event,timestamp,total,flagged
+Side Effects,-,7,5
+************************************
+Rudra,timestamp
+"2024-06-23 14:49:28.603695 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:49:32.941258 |INFO | [rudra-progress] Running rudra for target bin:chunk-json-lite
+[0m[1m[33mwarning[0m[0m[1m: unused return value of `std::mem::replace` that must be used[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/main.rs:49:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m49[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            mem::replace(&mut writer, new);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_must_use)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: if you don't need the old value, you can just assign the new value directly[0m
+
+2024-06-23 14:49:49.878489 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:49:49.887385 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:49:49.889941 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:49:49.890014 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:49:49.892512 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:49:49.892551 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:49:50.013596 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

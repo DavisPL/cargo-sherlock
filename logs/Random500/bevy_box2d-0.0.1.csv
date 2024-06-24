@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Carter Anderson,cart,https://github.com/cart
+************************************
+event,timestamp,downloads
+Downloads,-,621
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:52:41.241016 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:52:45.555226 |INFO | [rudra-progress] Running rudra for target lib:bevy_box2d
+2024-06-23 13:52:56.017806 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:52:56.028396 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:52:56.037060 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:52:56.037138 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:52:56.037331 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:52:56.037354 |INFO | [rudra-progress] Rudra finished
+2024-06-23 13:52:57.542276 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

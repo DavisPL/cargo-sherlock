@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Vitaliy,kuviman,https://github.com/kuviman
+************************************
+event,timestamp,downloads
+Downloads,-,4556
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-23 15:53:23.975483 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:53:25.414772 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `cc = ""^1.0.97""`
+candidate versions found which didn't match: 1.0.99, 1.0.98, 1.0.97, ...
+location searched: crates.io index
+required by package `backtrace v0.3.73`
+    ... which satisfies dependency `backtrace = ""^0.3.51""` (locked to 0.3.73) of package `anyhow v1.0.86`
+    ... which satisfies dependency `anyhow = ""^1""` (locked to 1.0.86) of package `batbox-color v0.16.0 (/tmp/rudra)`
+
+"
+************************************

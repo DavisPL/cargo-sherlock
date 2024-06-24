@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,SalsaGal,SalsaGal,https://github.com/SalsaGal
+************************************
+event,timestamp,downloads
+Downloads,-,2581
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:16:30.304495 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:16:33.234927 |INFO | [rudra-progress] Running rudra for target lib:dirtytype
+2024-06-23 15:16:37.191361 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:16:37.195273 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:16:37.195635 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:16:37.195650 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:16:37.215645 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:16:37.215663 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:16:38.040294 |WARN | [cargo_rudra] Target test:test is not supported
+2024-06-23 15:16:38.040435 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

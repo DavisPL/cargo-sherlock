@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ben Evans,bencevans,https://github.com/bencevans
+************************************
+event,timestamp,downloads
+Downloads,-,1911
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:25:04.675219 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:25:12.246705 |INFO | [rudra-progress] Running rudra for target lib:chug
+2024-06-23 14:25:22.682165 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:25:22.690993 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:25:22.691734 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:25:22.691755 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:25:22.694555 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:25:22.694631 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:25:24.706993 |WARN | [cargo_rudra] Target example:tick is not supported
+2024-06-23 14:25:24.707281 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

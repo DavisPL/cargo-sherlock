@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,邱维东,Qiu-Weidong,https://github.com/Qiu-Weidong
+************************************
+event,timestamp,downloads
+Downloads,-,1644
+************************************
+event,timestamp,total,flagged
+Side Effects,-,81,6
+************************************
+Rudra,timestamp
+"2024-06-23 15:20:45.962822 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:20:47.427615 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `clap = ""^4.4.2""`
+candidate versions found which didn't match: 3.2.25, 3.2.24, 3.2.23, ...
+location searched: crates.io index
+required by package `chiru v0.7.0 (/tmp/rudra)`
+
+"
+************************************

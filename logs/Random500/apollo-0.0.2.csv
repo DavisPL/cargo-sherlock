@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,apollo-bot2,https://github.com/apollo-bot2
+************************************
+event,timestamp,downloads
+Downloads,-,1281
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:08:42.774272 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:08:45.734039 |INFO | [rudra-progress] Running rudra for target lib:apollo
+2024-06-23 16:08:49.587559 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:08:49.591097 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:08:49.594019 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:08:49.594029 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:08:49.595261 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:08:49.595270 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:08:50.160038 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

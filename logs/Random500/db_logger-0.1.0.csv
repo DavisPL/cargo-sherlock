@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Julio Merino,jmmv,https://github.com/jmmv
+************************************
+event,timestamp,downloads
+Downloads,-,792
+************************************
+event,timestamp,total,flagged
+Side Effects,-,3,0
+************************************
+Rudra,timestamp
+"2024-06-23 06:39:26.126061 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 06:39:29.726680 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `regex = ""^1""`
+candidate versions found which didn't match: 1.8.4, 1.8.3, 1.8.2, ...
+location searched: crates.io index
+required by package `db_logger v0.1.0 (/tmp/rudra)`
+
+"
+************************************

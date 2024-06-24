@@ -1,0 +1,52 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Rachel Simone Domagalski,domagalski,https://github.com/domagalski
+************************************
+event,timestamp,downloads
+Downloads,-,4395
+************************************
+event,timestamp,total,flagged
+Side Effects,-,17,7
+************************************
+Rudra,timestamp
+"2024-06-23 15:22:42.990721 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:22:46.793784 |INFO | [rudra-progress] Running rudra for target lib:dht-logger
+[0m[0m[1m[31merror[0m[1m:[0m failed to run custom build command for `libudev-sys v0.1.4`
+
+Caused by:
+  process didn't exit successfully: `/tmp/rudra/target/debug/build/libudev-sys-f774dfd73c1d74fa/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-env-changed=LIBUDEV_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=LIBUDEV_STATIC
+  cargo:rerun-if-env-changed=LIBUDEV_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+
+  --- stderr
+  thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: ""`\""pkg-config\"" \""--libs\"" \""--cflags\"" \""libudev\""` did not exit successfully: exit status: 1\nerror: could not find system library 'libudev' required by the 'libudev-sys' crate\n\n--- stderr\nPackage libudev was not found in the pkg-config search path.\nPerhaps you should add the directory containing `libudev.pc'\nto the PKG_CONFIG_PATH environment variable\nNo package 'libudev' found\n""', /tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/libudev-sys-0.1.4/build.rs:38:41
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+[0m[0m[1m[31merror[0m[1m:[0m build failed
+2024-06-23 15:23:01.054231 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

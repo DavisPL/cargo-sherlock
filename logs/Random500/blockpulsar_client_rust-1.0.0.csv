@@ -1,0 +1,434 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Artiom Baloian,baloian,https://github.com/baloian
+************************************
+event,timestamp,downloads
+Downloads,-,590
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:50:35.854204 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:50:46.545263 |INFO | [rudra-progress] Running rudra for target lib:blockpulsar_client_rust
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:12:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    if (json_obj.has_key(""bip9"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^[0m[0m                        [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_parens)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[38;5;9m- [0m[0m    if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""bip9"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[38;5;10m+ [0m[0m    if json_obj.has_key(""bip9"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:45:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      height: if (json_obj.has_key(""height"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^[0m[0m                          [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[38;5;9m- [0m[0m      height: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""height"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[38;5;10m+ [0m[0m      height: if json_obj.has_key(""height"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:33:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      if (json_obj[""scriptPubKey""].has_key(""address"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^[0m[0m                                           [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[38;5;9m- [0m[0m      if [0m[0m[38;5;9m([0m[0mjson_obj[""scriptPubKey""].has_key(""address"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[38;5;10m+ [0m[0m      if json_obj[""scriptPubKey""].has_key(""address"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:76:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      coinbase: if (json_obj.has_key(""coinbase"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^[0m[0m                            [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[38;5;9m- [0m[0m      coinbase: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""coinbase"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[38;5;10m+ [0m[0m      coinbase: if json_obj.has_key(""coinbase"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:81:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      txid: if (json_obj.has_key(""txid"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^[0m[0m                        [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[38;5;9m- [0m[0m      txid: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""txid"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[38;5;10m+ [0m[0m      txid: if json_obj.has_key(""txid"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:86:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      vout: if (json_obj.has_key(""vout"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^[0m[0m                        [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[38;5;9m- [0m[0m      vout: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""vout"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[38;5;10m+ [0m[0m      vout: if json_obj.has_key(""vout"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:91:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      scriptSig: if (json_obj.has_key(""scriptSig"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^[0m[0m                             [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[38;5;9m- [0m[0m      scriptSig: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""scriptSig"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[38;5;10m+ [0m[0m      scriptSig: if json_obj.has_key(""scriptSig"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:99:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m99[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      sequence: if (json_obj.has_key(""sequence"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^[0m[0m                            [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m99[0m[0m [0m[0m[38;5;9m- [0m[0m      sequence: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""sequence"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m99[0m[0m [0m[0m[38;5;10m+ [0m[0m      sequence: if json_obj.has_key(""sequence"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:104:23[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      txinwitness: if (json_obj.has_key(""txinwitness"")) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^[0m[0m                               [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[38;5;9m- [0m[0m      txinwitness: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""txinwitness"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[38;5;10m+ [0m[0m      txinwitness: if json_obj.has_key(""txinwitness"") {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused import: `crate::btc`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/client.rs:3:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse crate::btc;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `status`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:3:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  status: String,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `start_time`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:4:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  start_time: u32,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `timeout`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:5:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  timeout: u32,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `since`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:6:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m6[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  since: u32,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[33m^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `min_activation_height`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:7:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  min_activation_height: u32[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `scriptPubKey` should have a snake case name[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/address.rs:5:7[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub scriptPubKey: String,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `script_pub_key`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_snake_case)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `versionHex` should have a snake case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/block.rs:10:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub versionHex: String,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `version_hex`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `nTx` should have a snake case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/block.rs:18:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub nTx: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `n_tx`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `versionHex` should have a snake case name[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/block_header.rs:7:7[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub versionHex: String,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `version_hex`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `nTx` should have a snake case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/block_header.rs:15:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub nTx: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `n_tx`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `scriptPubKey` should have a snake case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:24:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub scriptPubKey: ScriptPubKey[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `script_pub_key`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `scriptSig` should have a snake case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:68:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub scriptSig: ScriptSig,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `script_sig`[0m
+
+2024-06-23 14:59:34.179579 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:59:34.189697 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:59:34.190600 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:59:34.190637 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:59:34.416107 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:59:34.416241 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:59:38.458499 |INFO | [rudra-progress] Running rudra for target bin:example
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:12:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    if (json_obj.has_key(""bip9"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^[0m[0m                        [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_parens)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[38;5;9m- [0m[0m    if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""bip9"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[38;5;10m+ [0m[0m    if json_obj.has_key(""bip9"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:45:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      height: if (json_obj.has_key(""height"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^[0m[0m                          [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[38;5;9m- [0m[0m      height: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""height"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[38;5;10m+ [0m[0m      height: if json_obj.has_key(""height"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:33:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      if (json_obj[""scriptPubKey""].has_key(""address"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^[0m[0m                                           [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[38;5;9m- [0m[0m      if [0m[0m[38;5;9m([0m[0mjson_obj[""scriptPubKey""].has_key(""address"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[38;5;10m+ [0m[0m      if json_obj[""scriptPubKey""].has_key(""address"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:76:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      coinbase: if (json_obj.has_key(""coinbase"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^[0m[0m                            [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[38;5;9m- [0m[0m      coinbase: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""coinbase"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[38;5;10m+ [0m[0m      coinbase: if json_obj.has_key(""coinbase"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:81:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      txid: if (json_obj.has_key(""txid"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^[0m[0m                        [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[38;5;9m- [0m[0m      txid: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""txid"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[38;5;10m+ [0m[0m      txid: if json_obj.has_key(""txid"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:86:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      vout: if (json_obj.has_key(""vout"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^[0m[0m                        [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[38;5;9m- [0m[0m      vout: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""vout"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[38;5;10m+ [0m[0m      vout: if json_obj.has_key(""vout"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:91:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      scriptSig: if (json_obj.has_key(""scriptSig"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^[0m[0m                             [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[38;5;9m- [0m[0m      scriptSig: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""scriptSig"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[38;5;10m+ [0m[0m      scriptSig: if json_obj.has_key(""scriptSig"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:99:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m99[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      sequence: if (json_obj.has_key(""sequence"")) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^[0m[0m                            [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m99[0m[0m [0m[0m[38;5;9m- [0m[0m      sequence: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""sequence"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m99[0m[0m [0m[0m[38;5;10m+ [0m[0m      sequence: if json_obj.has_key(""sequence"") {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around `if` condition[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:104:23[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[1m[38;5;12m| [0m[0m      txinwitness: if (json_obj.has_key(""txinwitness"")) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^[0m[0m                               [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[38;5;9m- [0m[0m      txinwitness: if [0m[0m[38;5;9m([0m[0mjson_obj.has_key(""txinwitness"")[0m[0m[38;5;9m)[0m[0m {[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[38;5;10m+ [0m[0m      txinwitness: if json_obj.has_key(""txinwitness"") {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused import: `crate::btc`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/client.rs:3:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse crate::btc;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `status`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:3:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  status: String,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `start_time`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:4:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  start_time: u32,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `timeout`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:5:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  timeout: u32,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `since`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:6:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m6[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  since: u32,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[33m^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `min_activation_height`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/blockchain_info.rs:7:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  min_activation_height: u32[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `scriptPubKey` should have a snake case name[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/address.rs:5:7[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub scriptPubKey: String,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `script_pub_key`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_snake_case)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `versionHex` should have a snake case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/block.rs:10:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub versionHex: String,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `version_hex`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `nTx` should have a snake case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/block.rs:18:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub nTx: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `n_tx`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `versionHex` should have a snake case name[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/block_header.rs:7:7[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub versionHex: String,[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `version_hex`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `nTx` should have a snake case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/block_header.rs:15:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub nTx: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `n_tx`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `scriptPubKey` should have a snake case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:24:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub scriptPubKey: ScriptPubKey[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `script_pub_key`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: structure field `scriptSig` should have a snake case name[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/btc/raw_transaction.rs:68:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  pub scriptSig: ScriptSig,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `script_sig`[0m
+
+2024-06-23 15:07:14.055078 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:07:14.076570 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:07:14.078491 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:07:14.078569 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:07:14.469719 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:07:14.470020 |INFO | [rudra-progress] Rudra finished
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `bp_client`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/bin/example.rs:5:7[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  let bp_client = bp::client::BlockpulsarClient::new(""hoUTrs47BF7EniYtGaUuQ2"", ""99993b3d8ab9c045486b69a2f96fc8383beafa1533487631ae"");[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_bp_client`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_variables)]` on by default[0m
+
+2024-06-23 15:07:19.185578 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:07:19.195326 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:07:19.201578 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:07:19.201640 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:07:19.204134 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:07:19.204163 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:07:19.407457 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

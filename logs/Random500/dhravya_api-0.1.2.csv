@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,kekda.py,kekda-py,https://github.com/kekda-py
+************************************
+event,timestamp,downloads
+Downloads,-,1183
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,2
+************************************
+Rudra,timestamp
+"2024-06-23 17:00:10.020495 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 17:00:11.875909 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `reqwest = ""^0.11""`
+candidate versions found which didn't match: 0.11.23, 0.11.22, 0.11.21, ...
+location searched: crates.io index
+required by package `dhravya_api v0.1.2 (/tmp/rudra)`
+
+"
+************************************

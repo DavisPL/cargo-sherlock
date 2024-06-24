@@ -1,0 +1,70 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Real Human,crpier,https://github.com/crpier
+************************************
+event,timestamp,downloads
+Downloads,-,807
+************************************
+event,timestamp,total,flagged
+Side Effects,-,3,2
+************************************
+Rudra,timestamp
+"2024-06-23 06:51:23.817300 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 06:51:34.586835 |INFO | [rudra-progress] Running rudra for target lib:blockstorm
+[0m[1m[33mwarning[0m[0m[1m: cannot borrow `*self` as mutable because it is also borrowed as immutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:496:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m495[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if let Some(ghost_piece) = &self.ghost_piece {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12mimmutable borrow occurs here[0m
+[0m[1m[38;5;12m496[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.clear_piece_points(&ghost_piece.clone()).unwrap();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m[1m[38;5;12m-------------------[0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m|[0m[0m                        [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m|[0m[0m                        [0m[0m[1m[38;5;12mimmutable borrow later used here[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33mmutable borrow occurs here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(mutable_borrow_reservation_conflict)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this borrowing pattern was not meant to be accepted, and may become a hard error in the future[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #59159 <https://github.com/rust-lang/rust/issues/59159>[0m
+
+2024-06-23 06:53:04.622043 |INFO | [rudra-progress] Rudra started
+2024-06-23 06:53:04.631031 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 06:53:04.631750 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 06:53:04.631778 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 06:53:04.711703 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 06:53:04.711784 |INFO | [rudra-progress] Rudra finished
+2024-06-23 06:53:09.002146 |INFO | [rudra-progress] Running rudra for target bin:blockstorm
+[0m[1m[33mwarning[0m[0m[1m: cannot borrow `*self` as mutable because it is also borrowed as immutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:496:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m495[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if let Some(ghost_piece) = &self.ghost_piece {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12mimmutable borrow occurs here[0m
+[0m[1m[38;5;12m496[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.clear_piece_points(&ghost_piece.clone()).unwrap();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m[1m[38;5;12m-------------------[0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m|[0m[0m                        [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m|[0m[0m                        [0m[0m[1m[38;5;12mimmutable borrow later used here[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33mmutable borrow occurs here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(mutable_borrow_reservation_conflict)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this borrowing pattern was not meant to be accepted, and may become a hard error in the future[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #59159 <https://github.com/rust-lang/rust/issues/59159>[0m
+
+2024-06-23 06:53:22.524272 |INFO | [rudra-progress] Rudra started
+2024-06-23 06:53:22.540035 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 06:53:22.540817 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 06:53:22.540846 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 06:53:22.622464 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 06:53:22.622547 |INFO | [rudra-progress] Rudra finished
+2024-06-23 06:53:26.781619 |INFO | [rudra-progress] Rudra started
+2024-06-23 06:53:26.797947 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 06:53:26.806112 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 06:53:26.806200 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 06:53:26.813458 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 06:53:26.813524 |INFO | [rudra-progress] Rudra finished
+2024-06-23 06:53:26.987593 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

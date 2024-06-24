@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Squirrel,gilescope,https://github.com/gilescope
+************************************
+event,timestamp,downloads
+Downloads,-,2250
+************************************
+event,timestamp,total,flagged
+Side Effects,-,16,1
+************************************
+Rudra,timestamp
+"2024-06-23 07:22:01.337369 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:22:03.707604 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `syn = ""^2.0.46""`
+candidate versions found which didn't match: 2.0.56, 2.0.55, 2.0.54, ...
+location searched: crates.io index
+required by package `serde_derive v1.0.203`
+    ... which satisfies dependency `serde_derive = ""^1.0""` (locked to 1.0.203) of package `gitlab_ci_parser v0.0.5 (/tmp/rudra)`
+
+"
+************************************

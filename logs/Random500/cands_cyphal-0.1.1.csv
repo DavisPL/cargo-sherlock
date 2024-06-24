@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,wcrvt,wcrvt,https://github.com/wcrvt
+************************************
+event,timestamp,downloads
+Downloads,-,223
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:39:22.384988 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:39:27.340088 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `async-lock = ""^3.0.0""`
+candidate versions found which didn't match: 3.3.0, 3.2.0, 3.1.2, ...
+location searched: crates.io index
+required by package `async-io v2.3.3`
+    ... which satisfies dependency `async-io = ""^2.3.1""` (locked to 2.3.3) of package `cands_interface v0.1.0`
+    ... which satisfies dependency `cands_interface = ""^0.1.0""` (locked to 0.1.0) of package `cands_cyphal v0.1.1 (/tmp/rudra)`
+
+"
+************************************

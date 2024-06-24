@@ -1,0 +1,21 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Vitaliy,kuviman,https://github.com/kuviman
+************************************
+event,timestamp,downloads
+Downloads,-,15171
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:32:03.940175 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:32:05.214795 |WARN | [cargo_rudra] Target proc-macro:batbox-derive is not supported
+2024-06-23 15:32:05.214935 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

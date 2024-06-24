@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,isaacbutz280,https://github.com/isaacbutz280
+************************************
+event,timestamp,downloads
+Downloads,-,432
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:58:58.947146 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:59:00.347262 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `time = ""^0.3.16""`
+candidate versions found which didn't match: 0.3.15, 0.3.14, 0.3.13, ...
+location searched: crates.io index
+required by package `simple_logger v4.3.3`
+    ... which satisfies dependency `simple_logger = ""^4.1.0""` (locked to 4.3.3) of package `dhust v0.1.0 (/tmp/rudra)`
+
+"
+************************************

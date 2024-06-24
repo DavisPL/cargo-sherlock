@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Oleh Mazur,Four-Velocity,https://github.com/Four-Velocity
+************************************
+event,timestamp,downloads
+Downloads,-,637
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 06:48:30.531648 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 06:48:33.370381 |INFO | [rudra-progress] Running rudra for target bin:chunin
+2024-06-23 06:48:42.012392 |INFO | [rudra-progress] Rudra started
+2024-06-23 06:48:42.019875 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 06:48:42.023254 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 06:48:42.023322 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 06:48:42.026044 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 06:48:42.026084 |INFO | [rudra-progress] Rudra finished
+2024-06-23 06:48:42.117835 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,19 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Hanif Ariffin,hbina,https://github.com/hbina
+************************************
+event,timestamp,downloads
+Downloads,-,1246
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"gits-0.0.0 is not a directory
+"
+************************************

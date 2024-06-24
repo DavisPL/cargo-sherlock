@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,apollo-bot2,https://github.com/apollo-bot2
+************************************
+event,timestamp,downloads
+Downloads,-,24649
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:34:24.603443 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:34:26.861919 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `assert_fs = ""^1""`
+candidate versions found which didn't match: 1.0.7, 1.0.6, 1.0.5, ...
+location searched: crates.io index
+required by package `apollo-federation-types v0.11.0 (/tmp/rudra)`
+
+"
+************************************

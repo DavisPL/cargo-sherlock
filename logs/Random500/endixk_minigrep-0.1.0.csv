@@ -1,0 +1,34 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Daniel DW Kim,endixk,https://github.com/endixk
+************************************
+event,timestamp,downloads
+Downloads,-,444
+************************************
+event,timestamp,total,flagged
+Side Effects,-,10,2
+************************************
+Rudra,timestamp
+"2024-06-23 16:24:48.267826 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:24:51.324914 |INFO | [rudra-progress] Running rudra for target lib:endixk_minigrep
+2024-06-23 16:24:55.449314 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:24:55.453145 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:24:55.453505 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:24:55.453517 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:24:55.454663 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:24:55.454674 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:24:56.366830 |INFO | [rudra-progress] Running rudra for target bin:endixk_minigrep
+2024-06-23 16:24:57.193864 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:24:57.197779 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:24:57.199284 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:24:57.199294 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:24:57.200587 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:24:57.200599 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:24:57.243229 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

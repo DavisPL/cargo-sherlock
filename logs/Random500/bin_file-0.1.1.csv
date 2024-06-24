@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,Zeppelin1979,https://github.com/Zeppelin1979
+************************************
+event,timestamp,downloads
+Downloads,-,1527
+************************************
+event,timestamp,total,flagged
+Side Effects,-,8,4
+************************************
+Rudra,timestamp
+"2024-06-23 15:10:10.026106 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:10:12.894139 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bytesize = ""^1.2.0""`
+candidate versions found which didn't match: 1.1.0, 1.0.1, 1.0.0, ...
+location searched: crates.io index
+required by package `bin_file v0.1.1 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Vitaliy,kuviman,https://github.com/kuviman
+************************************
+event,timestamp,downloads
+Downloads,-,2556
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:09:30.197106 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:09:31.609681 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `once_cell = ""^1""`
+candidate versions found which didn't match: 1.17.2, 1.17.1, 1.17.0, ...
+location searched: crates.io index
+required by package `batbox-i18n v0.16.0 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,25 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Orne Brocaar,brocaar,https://github.com/brocaar
+************************************
+event,timestamp,downloads
+Downloads,-,47515
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-23 13:47:16.404910 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:47:16.911659 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`: error: failed to parse manifest at `/tmp/rudra/Cargo.toml`
+
+Caused by:
+  namespaced features with the `dep:` prefix are only allowed on the nightly channel and requires the `-Z namespaced-features` flag on the command-line
+
+"
+************************************

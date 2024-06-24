@@ -1,0 +1,41 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Rohit Dandamudi,me-diru,https://github.com/me-diru
+************************************
+event,timestamp,downloads
+Downloads,-,901
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,1
+************************************
+Rudra,timestamp
+"2024-06-23 07:16:54.906570 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:16:58.175427 |INFO | [rudra-progress] Running rudra for target lib:diru_grrs
+2024-06-23 07:17:18.749950 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:17:18.753677 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:17:18.755429 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:17:18.755461 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:17:18.756863 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:17:18.756877 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:17:19.534465 |INFO | [rudra-progress] Running rudra for target bin:diru_grrs
+2024-06-23 07:17:33.806415 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:17:33.810114 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:17:33.811835 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:17:33.811852 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:17:33.813222 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:17:33.813240 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:17:35.084238 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:17:35.087926 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:17:35.090076 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:17:35.090105 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:17:35.110580 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:17:35.110605 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:17:35.158868 |WARN | [cargo_rudra] Target test:cli is not supported
+2024-06-23 07:17:35.158989 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

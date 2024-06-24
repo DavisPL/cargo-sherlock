@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jaden,JAD3N,https://github.com/JAD3N
+************************************
+event,timestamp,downloads
+Downloads,-,607
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,4
+************************************
+Rudra,timestamp
+"2024-06-23 15:55:17.608590 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:55:19.909311 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `regex = ""^1.3""`
+candidate versions found which didn't match: 1.8.4, 1.8.3, 1.8.2, ...
+location searched: crates.io index
+required by package `blocky-nbt v0.1.0 (/tmp/rudra)`
+
+"
+************************************

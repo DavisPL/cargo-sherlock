@@ -1,0 +1,34 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tyler Wolf Leonhardt,tyleo,https://github.com/tyleo
+************************************
+event,timestamp,downloads
+Downloads,-,2832
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-23 15:12:12.820003 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:12:13.928270 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`: error: failed to get `appscraps_dll_error` as a dependency of package `appscraps_dll v0.1.0 (/tmp/rudra)`
+
+Caused by:
+  failed to load source for dependency `appscraps_dll_error`
+
+Caused by:
+  Unable to update /tmp/rudra/..\appscraps_dll_error
+
+Caused by:
+  failed to read `/tmp/rudra/..\appscraps_dll_error/Cargo.toml`
+
+Caused by:
+  No such file or directory (os error 2)
+
+"
+************************************

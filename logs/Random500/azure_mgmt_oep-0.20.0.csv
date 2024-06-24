@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Cameron Taggart,cataggar,https://github.com/cataggar
+Author,-,azure-sdk-publish-rust,github:azure:azure-sdk-publish-rust,https://github.com/azure
+************************************
+event,timestamp,downloads
+Downloads,-,7121
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:09:19.204066 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:09:20.605505 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `azure_core = ""^0.20""`
+candidate versions found which didn't match: 0.17.0, 0.16.0, 0.15.0, ...
+location searched: crates.io index
+required by package `azure_mgmt_oep v0.20.0 (/tmp/rudra)`
+
+"
+************************************

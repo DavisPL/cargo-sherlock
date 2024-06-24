@@ -1,0 +1,25 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Krista,krista-chan,https://github.com/krista-chan
+************************************
+event,timestamp,downloads
+Downloads,-,1100
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-23 15:59:14.868190 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:59:15.252281 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`: error: failed to parse manifest at `/tmp/rudra/Cargo.toml`
+
+Caused by:
+  namespaced features with the `dep:` prefix are only allowed on the nightly channel and requires the `-Z namespaced-features` flag on the command-line
+
+"
+************************************

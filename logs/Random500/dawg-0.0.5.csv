@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tolumide Shopein,tolumide-ng,https://github.com/tolumide-ng
+************************************
+event,timestamp,downloads
+Downloads,-,1983
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:52:50.057931 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:52:53.437308 |INFO | [rudra-progress] Running rudra for target lib:dawg
+2024-06-23 16:53:21.366962 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:53:21.370972 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:53:21.371396 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:53:21.371408 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:53:21.392788 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:53:21.392811 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:53:22.601998 |WARN | [cargo_rudra] Target example:dawgie is not supported
+2024-06-23 16:53:22.602332 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

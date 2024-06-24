@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Simon Sapin,SimonSapin,https://github.com/SimonSapin
+Author,-,,apollo-bot2,https://github.com/apollo-bot2
+Author,-,Dariusz Kuc,dariuszkuc,https://github.com/dariuszkuc
+Author,-,Router,github:apollographql:router,https://github.com/apollographql
+Author,-,Atlas,github:apollographql:atlas,https://github.com/apollographql
+************************************
+event,timestamp,downloads
+Downloads,-,43108
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-23 16:40:50.001667 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:40:51.586848 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `time = ""^0.3.34""`
+candidate versions found which didn't match: 0.3.15, 0.3.14, 0.3.13, ...
+location searched: crates.io index
+required by package `apollo-federation v1.49.1 (/tmp/rudra)`
+
+"
+************************************

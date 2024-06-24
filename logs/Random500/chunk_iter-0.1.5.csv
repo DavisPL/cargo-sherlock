@@ -1,0 +1,55 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,frogtd,https://github.com/frogtd
+************************************
+event,timestamp,downloads
+Downloads,-,2438
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-23 15:21:21.458046 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:21:24.648317 |INFO | [rudra-progress] Running rudra for target lib:chunk_iter
+2024-06-23 15:21:28.957568 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:21:28.961477 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:21:28.961821 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:21:28.961833 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:21:29.011438 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:21:29.011474 |INFO | [rudra-progress] Rudra finished
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `<Chunks<T, I, N> as core::iter::Iterator>::next`
+-> src/lib.rs:93:5: 105:6
+fn next(&mut self) -> Option<Self::Item> {
+        // SAFETY:
+        // self.needs_dropping < N at all times [1]
+        // therefore this can never be out of bounds
+        for x in unsafe { [0m[33mself.buffer.get_unchecked_mut(self.needs_dropping..)[0m } {
+            *x = MaybeUninit::new([0m[36mself.iterator.next()[0m?);
+            // [1] except for here right before it sets it to zero
+            self.needs_dropping += 1;
+        }
+        self.needs_dropping = 0;
+        // SAFETY: MaybeUninit<T> has the same size, alignment, and ABI as T
+        unsafe { Some(core::mem::transmute_copy(&self.buffer)) }
+    }
+[0m
+Warning (UnsafeDataflow:/ReadFlow): Potential unsafe dataflow issue in `Chunks::<T, I, N>::into_stored`
+-> src/lib.rs:79:5: 87:6
+pub fn into_stored(self) -> [Option<T>; N] {
+        let mut this = ManuallyDrop::new(self);
+        let mut stored = [Self::NONE; N];
+        for (x, item) in stored.iter_mut().enumerate().take(this.needs_dropping) {
+            *item = unsafe { Some([0m[31mthis.buffer[x].as_ptr().read()[0m) };
+        }
+        unsafe { [0m[36mptr::drop_in_place(&mut this.iterator)[0m };
+        stored
+    }
+[0m
+2024-06-23 15:21:29.864342 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

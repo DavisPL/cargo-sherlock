@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Claire V. Hammond,cvhammond,https://github.com/cvhammond
+Author,-,Spencer Williams,SpencerTWilliams,https://github.com/SpencerTWilliams
+Author,-,chiron,github:biomechanics-foundation:chiron,https://github.com/biomechanics-foundation
+************************************
+event,timestamp,downloads
+Downloads,-,2057
+************************************
+event,timestamp,total,flagged
+Side Effects,-,53,1
+************************************
+Rudra,timestamp
+"2024-06-23 07:16:43.257901 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:16:44.877539 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bevy = ""^0.13""`
+candidate versions found which didn't match: 0.11.3, 0.11.2, 0.11.1, ...
+location searched: crates.io index
+required by package `chiron v0.1.0 (/tmp/rudra)`
+
+"
+************************************

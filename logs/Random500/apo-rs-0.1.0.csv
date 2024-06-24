@@ -1,0 +1,31 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,sabin chitrakar,sabinchitrakar,https://github.com/sabinchitrakar
+************************************
+event,timestamp,downloads
+Downloads,-,702
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:41:14.514058 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:41:17.700438 |INFO | [rudra-progress] Running rudra for target lib:apo-rs
+[0m[1m[38;5;9merror[E0557][0m[0m[1m: feature has been removed[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/ta-common-0.1.3/src/lib.rs:1:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![feature(external_doc)][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mfeature has been removed[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: use #[doc = include_str!(""filename"")] instead, which handles macro invocations[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0557`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `ta-common` due to previous error
+2024-06-23 16:41:21.505080 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

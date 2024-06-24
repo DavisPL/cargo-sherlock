@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ivan Torres Fally,bilbu,https://github.com/bilbu
+************************************
+event,timestamp,downloads
+Downloads,-,858
+************************************
+event,timestamp,total,flagged
+Side Effects,-,6,2
+************************************
+Rudra,timestamp
+"2024-06-23 15:10:48.384488 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:10:49.832742 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `libgit2-sys = ""^0.13.4""`
+candidate versions found which didn't match: 0.13.2+1.4.2, 0.13.1+1.4.2, 0.13.0+1.4.1, ...
+location searched: crates.io index
+required by package `git2 v0.14.4`
+    ... which satisfies dependency `git2 = ""^0.14.4""` (locked to 0.14.4) of package `gitscanr v0.2.1 (/tmp/rudra)`
+
+"
+************************************

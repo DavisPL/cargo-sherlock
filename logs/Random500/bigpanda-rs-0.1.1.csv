@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Scott Shields,scott-shields-github,https://github.com/scott-shields-github
+************************************
+event,timestamp,downloads
+Downloads,-,952
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 18:36:17.216982 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 18:36:21.466640 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `chrono = ""^0.4.19""`
+candidate versions found which didn't match: 0.4.31, 0.4.30, 0.4.29, ...
+location searched: crates.io index
+required by package `bigpanda-rs v0.1.1 (/tmp/rudra)`
+
+"
+************************************

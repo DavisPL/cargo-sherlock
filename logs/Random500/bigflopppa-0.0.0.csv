@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Vladimir,0xdeafbeef,https://github.com/0xdeafbeef
+************************************
+event,timestamp,downloads
+Downloads,-,440
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:22:26.899591 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:22:29.873672 |INFO | [rudra-progress] Running rudra for target lib:bigflopppa
+2024-06-23 16:22:33.931695 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:22:33.935229 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:22:33.938341 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:22:33.938373 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:22:33.939607 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:22:33.939621 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:22:34.501923 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

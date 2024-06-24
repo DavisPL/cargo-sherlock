@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,Popog,https://github.com/Popog
+************************************
+event,timestamp,downloads
+Downloads,-,1185
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 06:46:54.213151 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 06:47:01.792156 |INFO | [rudra-progress] Running rudra for target lib:dhltest_underscore
+2024-06-23 06:47:12.739757 |INFO | [rudra-progress] Rudra started
+2024-06-23 06:47:12.748287 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 06:47:12.757905 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 06:47:12.758033 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 06:47:12.758370 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 06:47:12.758399 |INFO | [rudra-progress] Rudra finished
+2024-06-23 06:47:14.115098 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

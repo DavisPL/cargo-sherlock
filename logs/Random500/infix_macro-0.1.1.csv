@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Izzy McDonald,PacificBird,https://github.com/PacificBird
+************************************
+event,timestamp,downloads
+Downloads,-,810
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:45:55.338316 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:45:59.451210 |INFO | [rudra-progress] Running rudra for target lib:infix_macro
+2024-06-23 13:46:04.797479 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:46:04.802000 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:46:04.806382 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:46:04.806402 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:46:04.806499 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:46:04.806507 |INFO | [rudra-progress] Rudra finished
+2024-06-23 13:46:05.420626 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

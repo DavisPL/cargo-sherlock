@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,CYFS Core Dev,BDTDevTeam,https://github.com/BDTDevTeam
+************************************
+event,timestamp,downloads
+Downloads,-,486
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 09:21:42.337187 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 09:21:46.541459 |INFO | [rudra-progress] Running rudra for target lib:cyfs-stack
+2024-06-23 09:21:51.929278 |INFO | [rudra-progress] Rudra started
+2024-06-23 09:21:51.933779 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 09:21:51.938099 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 09:21:51.938122 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 09:21:51.938214 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 09:21:51.938222 |INFO | [rudra-progress] Rudra finished
+2024-06-23 09:21:52.556015 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

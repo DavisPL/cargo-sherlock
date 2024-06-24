@@ -1,0 +1,37 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nicolas Kirchner,kompass,https://github.com/kompass
+************************************
+event,timestamp,downloads
+Downloads,-,1708
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:56:50.461674 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:56:53.381033 |INFO | [rudra-progress] Running rudra for target lib:bigmaths
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:189:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m189[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m   let (mut modulus, final_carry) = limb_pairs_iter.fold((Vec::with_capacity(self.len() + 1), false), |(mut limbs, carry), (&self_limb[0m[0m[1m[38;5;12m...[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_mut)]` on by default[0m
+
+2024-06-23 15:56:57.528458 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:56:57.532275 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:56:57.532644 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:56:57.532661 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:56:57.552885 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:56:57.552905 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:56:58.474573 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

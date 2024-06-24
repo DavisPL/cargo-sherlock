@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Amr Hesham,AmrDeveloper,https://github.com/AmrDeveloper
+************************************
+event,timestamp,downloads
+Downloads,-,10482
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:16:04.079166 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:16:05.621174 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `chrono = ""^0.4.38""`
+candidate versions found which didn't match: 0.4.31, 0.4.30, 0.4.29, ...
+location searched: crates.io index
+required by package `gitql-core v0.2.0`
+    ... which satisfies dependency `gitql-core = ""^0.2.0""` (locked to 0.2.0) of package `gitql-parser v0.23.0 (/tmp/rudra)`
+
+"
+************************************

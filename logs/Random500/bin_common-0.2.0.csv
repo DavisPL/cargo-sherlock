@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sophie Tauchert,999eagle,https://github.com/999eagle
+************************************
+event,timestamp,downloads
+Downloads,-,1091
+************************************
+event,timestamp,total,flagged
+Side Effects,-,37,1
+************************************
+Rudra,timestamp
+"2024-06-23 16:09:00.351329 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:09:01.758009 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `chrono = ""^0.4""`
+candidate versions found which didn't match: 0.4.31, 0.4.30, 0.4.29, ...
+location searched: crates.io index
+required by package `bin_common v0.2.0 (/tmp/rudra)`
+
+"
+************************************

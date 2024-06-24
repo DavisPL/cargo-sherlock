@@ -1,0 +1,34 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Peter Mikola,Mikopet,https://github.com/Mikopet
+************************************
+event,timestamp,downloads
+Downloads,-,406
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,3
+************************************
+Rudra,timestamp
+"2024-06-23 07:27:57.812446 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:28:07.137537 |INFO | [rudra-progress] Running rudra for target lib:ebase
+2024-06-23 07:28:13.080564 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:28:13.085060 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:28:13.086862 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:28:13.086879 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:28:13.088351 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:28:13.088377 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:28:13.839451 |INFO | [rudra-progress] Running rudra for target bin:ebase
+2024-06-23 07:28:14.609408 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:28:14.612889 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:28:14.614434 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:28:14.614464 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:28:14.615716 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:28:14.615727 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:28:14.660865 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

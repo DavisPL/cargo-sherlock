@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Keziah Biermann,KizzyCode,https://github.com/KizzyCode
+************************************
+event,timestamp,downloads
+Downloads,-,8390
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:39:56.801137 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:39:59.073074 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `cc = ""^1.0.97""`
+candidate versions found which didn't match: 1.0.99, 1.0.98, 1.0.97, ...
+location searched: crates.io index
+required by package `backtrace v0.3.73`
+    ... which satisfies dependency `backtrace = ""^0.3""` (locked to 0.3.73) of package `ebacktrace v0.5.1 (/tmp/rudra)`
+
+"
+************************************

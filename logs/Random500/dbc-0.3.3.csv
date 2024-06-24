@@ -1,0 +1,21 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Luis Pabón,lpabon,https://github.com/lpabon
+************************************
+event,timestamp,downloads
+Downloads,-,6157
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:25:14.801935 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:25:17.848717 |INFO | [rudra-progress] Running rudra for target lib:dbc
+2024-06-23 16:25:21.804376 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Daniël de Kok,danieldk,https://github.com/danieldk
+************************************
+event,timestamp,downloads
+Downloads,-,449
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:45:59.707170 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:46:01.093488 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `ordered-float = ""^4""`
+candidate versions found which didn't match: 3.6.0, 3.5.0, 3.4.0, ...
+location searched: crates.io index
+required by package `chu-liu-edmonds v0.1.0 (/tmp/rudra)`
+
+"
+************************************

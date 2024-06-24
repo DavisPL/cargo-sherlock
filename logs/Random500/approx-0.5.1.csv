@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sébastien Crozet,sebcrozet,https://github.com/sebcrozet
+Author,-,Brendan Zabarauskas,brendanzab,https://github.com/brendanzab
+************************************
+event,timestamp,downloads
+Downloads,-,30436101
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:57:50.471035 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:57:54.130936 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `num-complex = ""^0.4.0""`
+candidate versions found which didn't match: 0.4.5, 0.4.4, 0.4.3, ...
+location searched: crates.io index
+required by package `approx v0.5.1 (/tmp/rudra)`
+
+"
+************************************

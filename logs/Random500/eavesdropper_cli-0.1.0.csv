@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Thomas Bye,TBye101,https://github.com/TBye101
+************************************
+event,timestamp,downloads
+Downloads,-,564
+************************************
+event,timestamp,total,flagged
+Side Effects,-,8,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:46:09.414035 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:46:11.731957 |INFO | [rudra-progress] Running rudra for target bin:eavesdropper_cli
+2024-06-23 16:47:06.673987 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:47:06.678151 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:47:06.679340 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:47:06.679362 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:47:06.707038 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:47:06.707059 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:47:06.773208 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,snd,https://github.com/snd
+************************************
+event,timestamp,downloads
+Downloads,-,45401
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:57:35.138434 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:57:38.307392 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `num-traits = ""^0.2.0""`
+candidate versions found which didn't match: 0.2.18, 0.2.17, 0.2.16, ...
+location searched: crates.io index
+required by package `approx v0.3.2`
+    ... which satisfies dependency `approx = ""^0.3.2""` (locked to 0.3.2) of package `apodize v1.0.0 (/tmp/rudra)`
+
+"
+************************************

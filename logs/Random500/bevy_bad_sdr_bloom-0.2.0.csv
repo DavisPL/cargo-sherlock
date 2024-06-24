@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Rob Parrett,rparrett,https://github.com/rparrett
+************************************
+event,timestamp,downloads
+Downloads,-,800
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 18:09:45.254769 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 18:09:49.740376 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bevy_internal = ""^0.10.0""`
+candidate versions found which didn't match: 0.7.0, 0.6.0, 0.5.0, ...
+location searched: crates.io index
+required by package `bevy v0.10.0`
+    ... which satisfies dependency `bevy = ""^0.10""` (locked to 0.10.0) of package `bevy_bad_sdr_bloom v0.2.0 (/tmp/rudra)`
+
+"
+************************************

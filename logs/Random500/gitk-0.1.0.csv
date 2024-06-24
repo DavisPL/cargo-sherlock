@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alexander Korolev,kilork,https://github.com/kilork
+************************************
+event,timestamp,downloads
+Downloads,-,673
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 07:23:00.305046 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:23:01.578574 |INFO | [rudra-progress] Running rudra for target bin:gitk
+2024-06-23 07:23:05.413787 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:23:05.417363 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:23:05.420458 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:23:05.420480 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:23:05.421613 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:23:05.421625 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:23:05.461282 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

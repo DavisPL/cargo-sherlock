@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,TomSteu,https://github.com/TomSteu
+************************************
+event,timestamp,downloads
+Downloads,-,2363
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-23 15:11:26.752058 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:11:28.926430 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `fragile = ""^0.3""`
+candidate versions found which didn't match: 2.0.0, 1.2.2
+location searched: crates.io index
+required by package `gio v0.7.0`
+    ... which satisfies dependency `gio = ""^0.7.0""` of package `grade v0.3.0 (/tmp/rudra)`
+
+"
+************************************

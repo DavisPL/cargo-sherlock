@@ -1,0 +1,48 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Chris,ChristopherRabotin,https://github.com/ChristopherRabotin
+************************************
+event,timestamp,downloads
+Downloads,-,676
+************************************
+event,timestamp,total,flagged
+Side Effects,-,7,3
+************************************
+Rudra,timestamp
+"2024-06-23 16:24:05.092658 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:24:08.950359 |INFO | [rudra-progress] Running rudra for target lib:graco
+2024-06-23 16:24:34.166164 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:24:34.170257 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:24:34.170649 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:24:34.170661 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:24:34.236698 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:24:34.236738 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:24:35.480555 |INFO | [rudra-progress] Running rudra for target bin:main
+2024-06-23 16:24:38.508383 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:24:38.512186 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:24:38.512499 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:24:38.512512 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:24:38.576178 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:24:38.576210 |INFO | [rudra-progress] Rudra finished
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `visit_all`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/bin/main.rs:63:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    visit_all: bool,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+2024-06-23 16:24:40.202887 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:24:40.206673 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:24:40.207011 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:24:40.207020 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:24:40.227926 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:24:40.227951 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:24:40.290503 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

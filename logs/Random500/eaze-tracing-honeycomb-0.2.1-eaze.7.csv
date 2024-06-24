@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Chris Dickinson,chrisdickinson,https://github.com/chrisdickinson
+Author,-,Jeremiah Senkpiel,Fishrock123,https://github.com/Fishrock123
+************************************
+event,timestamp,downloads
+Downloads,-,3159
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:36:44.648119 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:36:50.294054 |INFO | [rudra-progress] Running rudra for target lib:eaze-tracing-honeycomb
+2024-06-23 15:37:54.818626 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:37:54.822820 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:37:54.823208 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:37:54.823219 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:37:54.863516 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:37:54.863542 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:37:56.089400 |WARN | [cargo_rudra] Target example:async_tracing is not supported
+2024-06-23 15:37:56.089697 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

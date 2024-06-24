@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Amr Hesham,AmrDeveloper,https://github.com/AmrDeveloper
+************************************
+event,timestamp,downloads
+Downloads,-,10467
+************************************
+event,timestamp,total,flagged
+Side Effects,-,7,4
+************************************
+Rudra,timestamp
+"2024-06-23 15:46:44.606320 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:46:46.003702 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `crossterm = ""^0.27""`
+candidate versions found which didn't match: 0.26.1, 0.26.0, 0.25.0, ...
+location searched: crates.io index
+required by package `comfy-table v7.1.1`
+    ... which satisfies dependency `comfy-table = ""^7.1.0""` (locked to 7.1.1) of package `gitql-cli v0.24.0 (/tmp/rudra)`
+
+"
+************************************

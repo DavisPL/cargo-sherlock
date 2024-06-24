@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Brian Caswell,demoray,https://github.com/demoray
+Author,-,azure-sdk-publish-rust,github:azure:azure-sdk-publish-rust,https://github.com/azure
+************************************
+event,timestamp,downloads
+Downloads,-,3391
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:34:51.907263 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:34:54.806106 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `azure_core = ""^0.20""`
+candidate versions found which didn't match: 0.17.0, 0.16.0, 0.15.0, ...
+location searched: crates.io index
+required by package `azure_mgmt_paloaltonetworks v0.20.0 (/tmp/rudra)`
+
+"
+************************************

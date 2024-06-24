@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,David Irvine,dirvine,https://github.com/dirvine
+************************************
+event,timestamp,downloads
+Downloads,-,8150
+************************************
+event,timestamp,total,flagged
+Side Effects,-,28,1
+************************************
+Rudra,timestamp
+"2024-06-23 15:59:45.481610 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:59:47.012909 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `num-traits = ""^0.2.0""`
+candidate versions found which didn't match: 0.2.18, 0.2.17, 0.2.16, ...
+location searched: crates.io index
+required by package `num-traits v0.1.43`
+    ... which satisfies dependency `num-traits = ""^0.1.32""` (locked to 0.1.43) of package `bincode v0.5.9`
+    ... which satisfies dependency `bincode = ""~0.5.6""` (locked to 0.5.9) of package `maidsafe_utilities v0.6.0`
+    ... which satisfies dependency `maidsafe_utilities = ""~0.6.0""` (locked to 0.6.0) of package `chunk_store v0.4.1 (/tmp/rudra)`
+
+"
+************************************

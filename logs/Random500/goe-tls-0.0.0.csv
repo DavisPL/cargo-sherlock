@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,GengTeng,gengteng,https://github.com/gengteng
+************************************
+event,timestamp,downloads
+Downloads,-,605
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 17:18:31.256838 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 17:18:34.170985 |INFO | [rudra-progress] Running rudra for target lib:goe-tls
+2024-06-23 17:18:37.708548 |INFO | [rudra-progress] Rudra started
+2024-06-23 17:18:37.711755 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 17:18:37.714864 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 17:18:37.714877 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 17:18:37.714952 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 17:18:37.714958 |INFO | [rudra-progress] Rudra finished
+2024-06-23 17:18:38.147771 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

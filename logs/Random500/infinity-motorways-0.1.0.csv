@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Chris Ohk,utilForever,https://github.com/utilForever
+************************************
+event,timestamp,downloads
+Downloads,-,582
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:48:56.948388 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:48:59.844115 |INFO | [rudra-progress] Running rudra for target lib:infinity-motorways
+2024-06-23 15:49:03.690415 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:49:03.693693 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:49:03.696807 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:49:03.696828 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:49:03.696887 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:49:03.696898 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:49:04.133696 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

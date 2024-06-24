@@ -1,0 +1,90 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ricky Taylor,ricky26,https://github.com/ricky26
+************************************
+event,timestamp,downloads
+Downloads,-,971
+************************************
+event,timestamp,total,flagged
+Side Effects,-,47,41
+************************************
+Rudra,timestamp
+"2024-06-23 15:51:55.712874 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:51:59.546565 |INFO | [rudra-progress] Running rudra for target lib:chunked
+2024-06-23 15:52:28.662373 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:52:28.666495 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:52:28.691348 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:52:28.691370 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:52:28.757195 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:52:28.757232 |INFO | [rudra-progress] Rudra finished
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `component::ComponentRegistration::new::default`
+-> src/component.rs:132:9: 137:10
+fn default<T: Component>(ptr: &mut [u8]) {
+            assert_eq!(ptr.len(), std::mem::size_of::<T>());
+            let ptr: &mut T = unsafe { [0m[33mstd::mem::transmute(ptr.as_ptr())[0m };
+            let d = [0m[36mT::default()[0m;
+            *ptr = d;
+        }
+[0m
+2024-06-23 15:52:30.477862 |INFO | [rudra-progress] Running rudra for target bin:bodies
+2024-06-23 15:52:39.161537 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:52:39.165456 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:52:39.188178 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:52:39.188203 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:52:39.248760 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:52:39.248783 |INFO | [rudra-progress] Rudra finished
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `component::ComponentRegistration::new::default`
+-> src/component.rs:132:9: 137:10
+fn default<T: Component>(ptr: &mut [u8]) {
+            assert_eq!(ptr.len(), std::mem::size_of::<T>());
+            let ptr: &mut T = unsafe { [0m[33mstd::mem::transmute(ptr.as_ptr())[0m };
+            let d = [0m[36mT::default()[0m;
+            *ptr = d;
+        }
+[0m
+2024-06-23 15:52:41.149964 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:52:41.153717 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:52:41.154080 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:52:41.154092 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:52:41.208800 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:52:41.208832 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:52:41.318280 |INFO | [rudra-progress] Running rudra for target bin:stress
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `component::ComponentRegistration::new::default`
+-> src/component.rs:132:9: 137:10
+fn default<T: Component>(ptr: &mut [u8]) {
+            assert_eq!(ptr.len(), std::mem::size_of::<T>());
+            let ptr: &mut T = unsafe { [0m[33mstd::mem::transmute(ptr.as_ptr())[0m };
+            let d = [0m[36mT::default()[0m;
+            *ptr = d;
+        }
+[0m
+2024-06-23 15:52:42.360179 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:52:42.363959 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:52:42.364286 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:52:42.364297 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:52:42.383492 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:52:42.383509 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:52:42.505711 |INFO | [rudra-progress] Running rudra for target bin:example
+Info (UnsafeDataflow:/Transmute): Potential unsafe dataflow issue in `component::ComponentRegistration::new::default`
+-> src/component.rs:132:9: 137:10
+fn default<T: Component>(ptr: &mut [u8]) {
+            assert_eq!(ptr.len(), std::mem::size_of::<T>());
+            let ptr: &mut T = unsafe { [0m[33mstd::mem::transmute(ptr.as_ptr())[0m };
+            let d = [0m[36mT::default()[0m;
+            *ptr = d;
+        }
+[0m
+2024-06-23 15:52:43.589849 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:52:43.593614 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:52:43.593971 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:52:43.593981 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:52:43.612833 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:52:43.612847 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:52:43.667643 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************
