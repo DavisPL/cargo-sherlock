@@ -922,4 +922,5 @@ def random_logs(count):
                 writer.writerow(["************************************"])
             continue
       
-random_logs(500)
+# random_logs(500)
+logger("anyhow", "1.0.82", "Experiment")

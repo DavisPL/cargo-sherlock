@@ -1,0 +1,44 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Safe,bytecode-alliance,safe-to-deploy,1.0.62 -> 1.0.66,,This update looks to be related to minor fixes and mostly integrating with a\nnightly feature in the standard library for backtrace integration. No undue\n`unsafe` is added and nothing unsurprising for the `anyhow` crate is happening\nhere.\n,
+audits,-,Safe,bytecode-alliance,safe-to-deploy,1.0.69 -> 1.0.71,,,
+trusted,-,Safe,bytecode-alliance,safe-to-deploy,,,,3
+audits,-,Safe,embark-studios,safe-to-deploy,,1.0.58,,
+audits,-,Safe,embark-studios,safe-to-deploy,1.0.58 -> 1.0.66,,"New unsafe usage, looks sane. Expert maintainer",
+audits,-,Safe,fermyon,safe-to-deploy,,1.0.65,,
+audits,-,Safe,fermyon,safe-to-deploy,1.0.65 -> 1.0.68,,CI and test updates plus minor Rust efficiency improvements.,
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,1.0.68,,
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.0.68 -> 1.0.70,,,
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.0.70 -> 1.0.71,,,
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.0.71 -> 1.0.72,,,
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.0.72 -> 1.0.75,,,
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.0.75 -> 1.0.79,,"1.0.75 has been previously audited as \""safe-to-run\"",\n\""does-not-implement-crypto\"" - see\nhttps://github.com/google/rust-crate-audits/blob/c2d49cb6e80bb817f569debecf846161dcebd88c/audits.toml#L277-L305\nThe \""1.0.75 -> 1.0.79\"" delta meets the same criteria.\n\nThis is an incremental/delta audit - we don't claim any particular `ub-risk-N`\nlevel for the baseline or for the final version.  OTOH note that additional\nuses of `unsafe` have been reviewed in https://crrev.com/c/5178771 and the\n**delta**  was evaluated as `ub-risk-3` - no known unsoundness but:\n* Little safety comments to explain why a particular usage of `unsafe`\n  is safe and/or necessary\n* Safety analysis couldn't be done locally, but required considering the\n  whole crate (e.g. checking if the public `Ref.ptr` is mutated anywhere)\n",
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.0.79 -> 1.0.80,,,
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.0.80 -> 1.0.81,,,
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.0.81 -> 1.0.82,,,
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.0.82 -> 1.0.83,,No change to UB-risk profile either.,
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.0.83 -> 1.0.86,,"Delta only updates the ensure macro implementation, still safe to run, no crypto",
+audits,-,Safe,mozilla,safe-to-deploy,1.0.57 -> 1.0.61,,,
+audits,-,Safe,mozilla,safe-to-deploy,1.0.58 -> 1.0.57,,"No functional differences, just CI config and docs.",
+audits,-,Safe,mozilla,safe-to-deploy,1.0.61 -> 1.0.62,,,
+audits,-,Safe,mozilla,safe-to-deploy,1.0.62 -> 1.0.68,,,
+audits,-,Safe,mozilla,safe-to-deploy,1.0.68 -> 1.0.69,,,
+audits,-,Safe,zcash,safe-to-deploy,1.0.82 -> 1.0.83,,,
+audits,-,Safe,zcash,safe-to-deploy,1.0.56 -> 1.0.61,,Update does not introduce new code. Minor build script changes look fine.,
+audits,-,Safe,zcash,safe-to-deploy,1.0.61 -> 1.0.65,,Build script changes just alter what it is probing for; no difference in side effects.,
+audits,-,Safe,zcash,safe-to-deploy,1.0.68 -> 1.0.69,,,
+audits,-,Safe,zcash,safe-to-deploy,1.0.69 -> 1.0.70,,,
+audits,-,Safe,zcash,safe-to-deploy,1.0.71 -> 1.0.75,,`unsafe` changes are migrating from `core::any::Demand` to `std::error::Request` when the\nnightly features are available.\n,
+audits,-,Safe,zcash,safe-to-deploy,1.0.75 -> 1.0.77,,"- Build script changes are to rerun cargo if the `RUSTC_BOOTSTRAP` env variable\n  changes, and enable a few more `rustc` config flags.\n- Some `unsafe fn`s were altered to add `unsafe` blocks, to make the safety\n  contracts in the code clearer (instead of using the `unsafe fn`'s implicit\n  `unsafe` block); no actual `unsafe` changes were made.\n",
+audits,-,Safe,zcash,safe-to-deploy,1.0.77 -> 1.0.79,,"Build script changes are to refactor the existing probe into a separate file\n(which removes a filesystem write), and adjust how it gets rerun in response to\nchanges in the build environment.\n",
+audits,-,Safe,zcash,safe-to-deploy,1.0.79 -> 1.0.82,,,
+************************************
+event,timestamp,name,username,url
+Author,-,David Tolnay,dtolnay,https://github.com/dtolnay
+************************************
+event,timestamp,downloads
+Downloads,-,204566852
+************************************
