@@ -14,6 +14,60 @@ import tarfile
 import shutil
 import random
 from tqdm import tqdm
+from bs4 import BeautifulSoup
+
+def get_github_repo_stats(username, repository, token_file='token.txt'):
+    if not os.path.exists(token_file):
+            print(f"Error: Token file '{token_file}' not found. Please generate a GitHub token and save it to a file named 'token.txt'.")
+            return None
+        
+    try:
+        with open(token_file, 'r') as file:
+            token = file.read().strip()
+    except Exception as e:
+        print(f"Error reading token file: {e}")
+        return None
+
+    url = f"https://api.github.com/repos/{username}/{repository}"
+
+    print(url)
+
+    response = requests.get(url, headers={"Authorization": f"token {token}"})
+
+    if response.status_code == 200:
+        data = response.json()
+        # print(data)
+        stars = data['stargazers_count']
+        forks = data['forks_count']
+        watchers = data['subscribers_count']
+        return {
+            "stars": stars,
+            "forks": forks,
+            "watchers": watchers
+        }
+    else:
+        print(f"Failed to retrieve data: {response.status_code}")
+        return None
+
+def get_stars_and_forks(crate_name):
+    # Get the repository URL for the crate
+    url = f"https://crates.io/api/v1/crates/{crate_name}"
+    response = requests.get(url)
+    data = response.json()
+    repository_url = data['crate']['repository']
+    # print(repository_url)
+
+    regex = r"https:\/\/github\.com\/([^\/]+)\/([^\/]+)";
+    match = re.match(regex, repository_url)
+    if match:
+        username = match.group(1)
+        repo_name = match.group(2)
+        # print(f"Username: {username}")
+        # print(f"Repository Name: {repo_name}")
+        return get_github_repo_stats(username, repo_name)
+    else:
+        # print("No match found for repository URL")
+        return None
 
 def read_dicts_from_txt(text_file, separator="\n---\n"):
     with open(text_file, "r") as file:
@@ -751,6 +805,15 @@ def logger(crate_name, version , job_id):
             ])
         writer.writerow(["************************************"])
 
+        information =  get_stars_and_forks("anyhow")
+        writer.writerow(["event", "timestamp", "stars", "forks" , "watchers"])
+        if information!=None:
+            # print(information)
+            writer.writerow("github_stats" , [information["stars"], information["forks"], information["watchers"]])
+        else:
+            writer.writerow(["github_stats", "-", "-", "-"])
+        writer.writerow(["************************************"])
+
         downloads = get_downloads(crate_name)
         writer.writerow(["event", "timestamp", "downloads"])
         writer.writerow([
@@ -923,4 +986,9 @@ def random_logs(count):
             continue
       
 # random_logs(500)
-logger("anyhow", "1.0.82", "Experiment")
+logger("anyhow" , "1.0.82" , "exp")
+
+
+
+
+

@@ -1,1 +1,5 @@
 cargo-scan/
+token.txt
+test.txt
+/logs/exp/
+*.csv
