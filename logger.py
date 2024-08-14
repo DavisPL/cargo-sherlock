@@ -809,7 +809,7 @@ def logger(crate_name, version , job_id):
         writer.writerow(["event", "timestamp", "stars", "forks" , "watchers"])
         if information!=None:
             # print(information)
-            writer.writerow("github_stats" , [information["stars"], information["forks"], information["watchers"]])
+            writer.writerow(["github_stats" ,information["stars"], information["forks"], information["watchers"]])
         else:
             writer.writerow(["github_stats", "-", "-", "-"])
         writer.writerow(["************************************"])
