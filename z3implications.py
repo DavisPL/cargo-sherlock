@@ -130,13 +130,13 @@ def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[
     return (
         [c, d, g], 
         [
-            Assumption("a0", c, 1700 + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a1", d, downloads_weight_function(metadata["downloads"]) + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a2", z3.Implies(d, c), 170 + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a3", z3.Implies(a, c), 100 + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a4", z3.Implies(s, c), 17 + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a5", g, github_stats_weight_function(metadata["stars"], metadata["forks"]) + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a6", z3.Implies(g, c), 11 + (10000 if metadata["in_rust_sec"] else 0))
+            Assumption("a0_{crate}", c, 1700 + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a1_{crate}", d, downloads_weight_function(metadata["downloads"]) + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a2_{crate}", z3.Implies(d, c), 170 + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a3_{crate}", z3.Implies(a, c), 100 + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a4_{crate}", z3.Implies(s, c), 17 + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a5_{crate}", g, github_stats_weight_function(metadata["stars"], metadata["forks"]) + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a6_{crate}", z3.Implies(g, c), 11 + (10000 if metadata["in_rust_sec"] else 0))
         ]
     )
 
