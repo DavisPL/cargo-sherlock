@@ -126,9 +126,9 @@ def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[
     d = z3.Bool(f"{crate}_high_downloads")  # crate has a 'good enough' number of downloads
     a = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
     s = z3.BoolVal(metadata["num_side_effects"] == 0)  # crate has no side effects
-    g = z3.BoolVal(f"{crate}_high_github_stats")  # crate has a 'good enough' number of stars and forks on GitHub
+    g = z3.Bool(f"{crate}_high_github_stats")  # crate has a 'good enough' number of stars and forks on GitHub
     return (
-        [c, d], 
+        [c, d, g], 
         [
             Assumption("a0", c, 1700 + (10000 if metadata["in_rust_sec"] else 0)),
             Assumption("a1", d, downloads_weight_function(metadata["downloads"]) + (10000 if metadata["in_rust_sec"] else 0)),
