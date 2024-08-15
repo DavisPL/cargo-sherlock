@@ -126,14 +126,17 @@ def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[
     d = z3.Bool(f"{crate}_high_downloads")  # crate has a 'good enough' number of downloads
     a = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
     s = z3.BoolVal(metadata["num_side_effects"] == 0)  # crate has no side effects
+    g = z3.BoolVal(f"{crate}_high_github_stats")  # crate has a 'good enough' number of stars and forks on GitHub
     return (
         [c, d], 
         [
-            Assumption("a0", c, 1700),
-            Assumption("a1", d, downloads_weight_function(metadata["downloads"])),
-            Assumption("a2", z3.Implies(d, c), 170),
-            Assumption("a3", z3.Implies(a, c), 100),
-            Assumption("a4", z3.Implies(s, c), 17)
+            Assumption("a0", c, 1700 + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a1", d, downloads_weight_function(metadata["downloads"]) + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a2", z3.Implies(d, c), 170 + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a3", z3.Implies(a, c), 100 + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a4", z3.Implies(s, c), 17 + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a5", g, github_stats_weight_function(metadata["stars"], metadata["forks"]) + (10000 if metadata["in_rust_sec"] else 0)),
+            Assumption("a6", z3.Implies(g, c), 11 + (10000 if metadata["in_rust_sec"] else 0))
         ]
     )
 
@@ -141,7 +144,8 @@ def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[
 def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]):
     """
     Finds the minimum weight of a set of assumptions that prove the crate is safe. This function
-    requires that the first element in variables is the variable representing the crate being safe.
+    requires that the first element in variables is the variable representing the crate being safe
+    (i.e. the variable being proven).
     """
     solver = z3.Solver()
     min_weight = z3.Int('min_weight')
@@ -177,7 +181,10 @@ def main():
     variables, assumptions = assumptions_for("anyhow", {
         "passed_audit": passed_audit,
         "num_side_effects": 0,
-        "downloads": downloads
+        "downloads": downloads,
+        "in_rust_sec": False,
+        "stars": 1000000000,
+        "forks": 1000000000
     })
     # assumptions_for(passed_audit, 0, downloads)
     solve_assumptions(variables, assumptions)
