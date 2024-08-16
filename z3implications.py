@@ -1,7 +1,6 @@
 import z3
 import math
 import csv
-import glob
 import os
 import sys
 
@@ -110,12 +109,26 @@ class Assumption:
         self.variable = z3.Bool(name)
         self.consequent = consequent
         self.weight = weight
+    def single_assumption_weight(self) -> z3.ArithRef:
+        """
+        Returns the weight of a single assumption. Weight is incurred if the assumption
+        is set to true.
+        """
+        return z3.If(self.variable, self.weight, 0)
     @staticmethod
     def assumptions_weight(assumptions: list['Assumption']) -> z3.ArithRef:
         """
         Returns the total weight of a set of assumptions.
         """
-        return z3.Sum([z3.If(a.variable, a.weight, 0) for a in assumptions])
+        return z3.Sum([a.single_assumption_weight() for a in assumptions])
+
+class NegativeAssumption(Assumption):
+    def single_assumption_weight(self) -> z3.ArithRef:
+        """
+        Returns the weight of a single negative assumption. Weight is incurred if the 
+        assumption is set to false.
+        """
+        return z3.If(self.variable, 0, self.weight)
 
 def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[Assumption]]:
     """
@@ -124,19 +137,22 @@ def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[
     """
     c = z3.Bool(f"{crate}_safe")  # crate is safe
     d = z3.Bool(f"{crate}_high_downloads")  # crate has a 'good enough' number of downloads
+    g = z3.Bool(f"{crate}_high_github_stats")  # crate has a 'good enough' number of stars and forks on GitHub
+
     a = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
     s = z3.BoolVal(metadata["num_side_effects"] == 0)  # crate has no side effects
-    g = z3.Bool(f"{crate}_high_github_stats")  # crate has a 'good enough' number of stars and forks on GitHub
+    r = z3.BoolVal(metadata["in_rust_sec"])  # crate is in RustSec
     return (
         [c, d, g], 
         [
-            Assumption("a0_{crate}", c, 1700 + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a1_{crate}", d, downloads_weight_function(metadata["downloads"]) + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a2_{crate}", z3.Implies(d, c), 170 + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a3_{crate}", z3.Implies(a, c), 100 + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a4_{crate}", z3.Implies(s, c), 17 + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a5_{crate}", g, github_stats_weight_function(metadata["stars"], metadata["forks"]) + (10000 if metadata["in_rust_sec"] else 0)),
-            Assumption("a6_{crate}", z3.Implies(g, c), 11 + (10000 if metadata["in_rust_sec"] else 0))
+            Assumption(f"a0_{crate}", c, 1700),
+            Assumption(f"a1_{crate}", d, downloads_weight_function(metadata["downloads"])),
+            Assumption(f"a2_{crate}", z3.Implies(d, c), 170),
+            Assumption(f"a3_{crate}", z3.Implies(a, c), 100),
+            Assumption(f"a4_{crate}", z3.Implies(s, c), 17),
+            Assumption(f"a5_{crate}", g, github_stats_weight_function(metadata["stars"], metadata["forks"])),
+            Assumption(f"a6_{crate}", z3.Implies(g, c), 11),
+            NegativeAssumption(f"na0_{crate}", z3.Implies(r, z3.Not(c)), 1000),
         ]
     )
 
@@ -150,13 +166,18 @@ def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]
     solver = z3.Solver()
     min_weight = z3.Int('min_weight')
     assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
-    F = z3.And(assumption_implications, z3.Not(variables[0]))
-    UNSAT = z3.Not(z3.Exists(variables, F))
+    implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(variables[0]))
+    # Define the UNSAT predicate. This checks if implications_with_neg_conclusion is unsatisfiable. 
+    # If it is, then the conclusion (i.e. the crate is safe) must be derivable from the assumptions.
+    UNSAT = z3.Not(z3.Exists(variables, implications_with_neg_conclusion))
+    # Define the CON predicate. This checks if the assumption_implications are consistent (i.e. satisfiable).
+    CON = z3.Exists(variables, assumption_implications)
     solver.add(UNSAT)
+    solver.add(CON)
     solver.add(min_weight == Assumption.assumptions_weight(assumptions))
     minimization_constraint = z3.ForAll(
         [a.variable for a in assumptions], 
-        z3.Implies(UNSAT, min_weight <= Assumption.assumptions_weight(assumptions))
+        z3.Implies(z3.And(UNSAT, CON), min_weight <= Assumption.assumptions_weight(assumptions))
     )
     solver.add(minimization_constraint)
     # Check for satisfiability
