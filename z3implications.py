@@ -135,24 +135,32 @@ def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[
     Returns a list of variables and a list of assumptions for a given crate. The first element
     in the returned list of assumptions is what is being proved (i.e. the crate is safe).
     """
-    c = z3.Bool(f"{crate}_safe")  # crate is safe
-    d = z3.Bool(f"{crate}_high_downloads")  # crate has a 'good enough' number of downloads
-    g = z3.Bool(f"{crate}_high_github_stats")  # crate has a 'good enough' number of stars and forks on GitHub
+    # Unknown variables
+    safe = z3.Bool(f"{crate}_safe")  # crate is safe
+    good_downloads = z3.Bool(f"{crate}_high_downloads")  # crate has a 'good enough' number of downloads
+    good_github_stats = z3.Bool(f"{crate}_high_github_stats")  # crate has a 'good enough' number of stars and forks on GitHub
+    dependency_safety = []
+    for d in metadata["dependencies"]:
+        dependency_safety.append(z3.Bool(f"{d}_safe")) # dependency is safe
 
-    a = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
-    s = z3.BoolVal(metadata["num_side_effects"] == 0)  # crate has no side effects
-    r = z3.BoolVal(metadata["in_rust_sec"])  # crate is in RustSec
+    # Known variables
+    passed_audit = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
+    no_side_effects = z3.BoolVal(metadata["num_side_effects"] == 0)  # crate has no side effects
+    in_rust_sec = z3.BoolVal(metadata["in_rust_sec"])  # crate is in RustSec
+    failed_rudra = z3.BoolVal(metadata["failed_rudra"])  # crate failed Rudra
+
     return (
-        [c, d, g], 
+        [safe, good_downloads, good_github_stats], 
         [
-            Assumption(f"a0_{crate}", c, 1700),
-            Assumption(f"a1_{crate}", d, downloads_weight_function(metadata["downloads"])),
-            Assumption(f"a2_{crate}", z3.Implies(d, c), 170),
-            Assumption(f"a3_{crate}", z3.Implies(a, c), 100),
-            Assumption(f"a4_{crate}", z3.Implies(s, c), 17),
-            Assumption(f"a5_{crate}", g, github_stats_weight_function(metadata["stars"], metadata["forks"])),
-            Assumption(f"a6_{crate}", z3.Implies(g, c), 11),
-            NegativeAssumption(f"na0_{crate}", z3.Implies(r, z3.Not(c)), 1000),
+            Assumption(f"a0_{crate}", safe, 1700),
+            Assumption(f"a1_{crate}", good_downloads, downloads_weight_function(metadata["downloads"])),
+            Assumption(f"a2_{crate}", z3.Implies(good_downloads, safe), 170),
+            Assumption(f"a3_{crate}", z3.Implies(passed_audit, safe), 100),
+            Assumption(f"a4_{crate}", z3.Implies(z3.And(no_side_effects, z3.And(dependency_safety)), safe), 8),
+            Assumption(f"a5_{crate}", good_github_stats, github_stats_weight_function(metadata["stars"], metadata["forks"])),
+            Assumption(f"a6_{crate}", z3.Implies(good_github_stats, safe), 11),
+            NegativeAssumption(f"na0_{crate}", z3.Implies(in_rust_sec, z3.Not(safe)), 1000),
+            NegativeAssumption(f"na1_{crate}", z3.Implies(failed_rudra, z3.Not(safe)), 500)
         ]
     )
 
@@ -186,29 +194,49 @@ def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]
         model = solver.model()
         print("Model:")
         print(model)
+        print(solver.statistics()) # Print statistics
     else:
         print("The formula is not satisfiable.")
 
 def main():
-    result = parser()
-    first_crate = result[0]
+    # result = parser()
+    # first_crate = result[0]
     # for i in first_crate:
     #    print(*i)
     # print(dict(*first_crate[3])['downloads']) # downloads
-    downloads = int(dict(*first_crate[3])['downloads'])
+    # downloads = int(dict(*first_crate[3])['downloads'])
     # print(dict(*first_crate[0])) # RustSec
     # print(first_crate[1] is not None) # Has a passed audit
-    passed_audit = first_crate[1] is not None
-    variables, assumptions = assumptions_for("anyhow", {
-        "passed_audit": passed_audit,
+    # passed_audit = first_crate[1] is not None
+    anyhow_metadata = {
+        "passed_audit": True,
         "num_side_effects": 0,
-        "downloads": downloads,
+        "downloads": 1_000_000,
         "in_rust_sec": False,
-        "stars": 1000000000,
-        "forks": 1000000000
-    })
-    # assumptions_for(passed_audit, 0, downloads)
-    solve_assumptions(variables, assumptions)
+        "stars": 125,
+        "forks": 3,
+        "failed_rudra": False,
+        "dependencies": []
+    }
+    backtrace_metadata = {
+        "passed_audit": True,
+        "num_side_effects": 5,
+        "downloads": 1_000_000,
+        "in_rust_sec": False,
+        "stars": 125,
+        "forks": 3,
+        "failed_rudra": False,
+        "dependencies": []
+    }
+    all_variables = []
+    all_assumptions = []
+    variables, assumptions = assumptions_for("anyhow", anyhow_metadata)
+    all_variables.extend(variables)
+    all_assumptions.extend(assumptions)
+    variables, assumptions = assumptions_for("backtrace", backtrace_metadata)
+    all_variables.extend(variables)
+    all_assumptions.extend(assumptions)
+    solve_assumptions(all_variables, all_assumptions)
 
 if __name__ == "__main__":
     main()
