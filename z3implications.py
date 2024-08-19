@@ -154,7 +154,7 @@ def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[
         [
             Assumption(f"a0_{crate}", safe, 1700),
             Assumption(f"a1_{crate}", good_downloads, downloads_weight_function(metadata["downloads"])),
-            Assumption(f"a2_{crate}", z3.Implies(good_downloads, safe), 170),
+            Assumption(f"a2_{crate}", z3.Implies(good_downloads, safe), 90),
             Assumption(f"a3_{crate}", z3.Implies(passed_audit, safe), 100),
             Assumption(f"a4_{crate}", z3.Implies(z3.And(no_side_effects, z3.And(dependency_safety)), safe), 8),
             Assumption(f"a5_{crate}", good_github_stats, github_stats_weight_function(metadata["stars"], metadata["forks"])),
@@ -190,13 +190,59 @@ def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]
     solver.add(minimization_constraint)
     # Check for satisfiability
     if solver.check() == z3.sat:
-        print("The formula is satisfiable.")
         model = solver.model()
-        print("Model:")
+        stats = solver.statistics()
+        print(f"Minimum Weight: {model[min_weight]}")
+        print(f"Z3 Solving Time: {stats.get_key_value('time')} sec") # time taken
+        print(f"Z3 Num Conflicts: {stats.get_key_value('conflicts')}") # approx. number of branches explored by Z3
+        print("==================================")
+        print("Full Model:")
         print(model)
-        print(solver.statistics()) # Print statistics
+    elif solver.check() == z3.unsat:
+        print("The formula is unsatisfiable.") # This should never happen
     else:
-        print("The formula is not satisfiable.")
+        print("The satisfiability of the formula could not be determined.") # Hopefully this never happens
+
+def get_metadata(crate: str) -> dict:
+    """
+    Returns the metadata for a given crate.
+    """
+    # TODO: Connect to Cargo Sherlock, implement this function
+    if crate == "anyhow":
+        return {
+            "passed_audit": True,
+            "num_side_effects": 0,
+            "downloads": 100,
+            "in_rust_sec": False,
+            "stars": 125,
+            "forks": 3,
+            "failed_rudra": False,
+            "dependencies": ["backtrace"]
+        }
+    elif crate == "backtrace":
+        return {
+            "passed_audit": True,
+            "num_side_effects": 5,
+            "downloads": 1_000_000,
+            "in_rust_sec": False,
+            "stars": 125,
+            "forks": 3,
+            "failed_rudra": False,
+            "dependencies": []
+        }
+
+def complete_analysis(crate: str):
+    """
+    Performs a complete analysis for a given crate.
+    """
+    metadata = get_metadata(crate)
+    variables, assumptions = assumptions_for(crate, metadata)
+    for d in metadata["dependencies"]:
+        dep_metadata = get_metadata(d)
+        dep_variables, dep_assumptions = assumptions_for(d, dep_metadata)
+        variables.extend(dep_variables)
+        assumptions.extend(dep_assumptions)
+    solve_assumptions(variables, assumptions)
 
 def main():
     # result = parser()
@@ -208,35 +254,7 @@ def main():
     # print(dict(*first_crate[0])) # RustSec
     # print(first_crate[1] is not None) # Has a passed audit
     # passed_audit = first_crate[1] is not None
-    anyhow_metadata = {
-        "passed_audit": True,
-        "num_side_effects": 0,
-        "downloads": 1_000_000,
-        "in_rust_sec": False,
-        "stars": 125,
-        "forks": 3,
-        "failed_rudra": False,
-        "dependencies": []
-    }
-    backtrace_metadata = {
-        "passed_audit": True,
-        "num_side_effects": 5,
-        "downloads": 1_000_000,
-        "in_rust_sec": False,
-        "stars": 125,
-        "forks": 3,
-        "failed_rudra": False,
-        "dependencies": []
-    }
-    all_variables = []
-    all_assumptions = []
-    variables, assumptions = assumptions_for("anyhow", anyhow_metadata)
-    all_variables.extend(variables)
-    all_assumptions.extend(assumptions)
-    variables, assumptions = assumptions_for("backtrace", backtrace_metadata)
-    all_variables.extend(variables)
-    all_assumptions.extend(assumptions)
-    solve_assumptions(all_variables, all_assumptions)
+    complete_analysis("anyhow")
 
 if __name__ == "__main__":
     main()
