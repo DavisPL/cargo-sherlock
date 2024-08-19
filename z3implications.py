@@ -203,6 +203,39 @@ def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]
     else:
         print("The satisfiability of the formula could not be determined.") # Hopefully this never happens
 
+def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]):
+    """
+    Alternative encoding of the solve_assumptions function.
+    TODO: does this encoding actually work?
+    """
+    optimizer = z3.Optimize()
+    min_weight = z3.Int('min_weight')
+    assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
+    implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(variables[0]))
+    # Define the UNSAT predicate. This checks if implications_with_neg_conclusion is unsatisfiable. 
+    # If it is, then the conclusion (i.e. the crate is safe) must be derivable from the assumptions.
+    UNSAT = z3.Not(z3.Exists(variables, implications_with_neg_conclusion))
+    # Define the CON predicate. This checks if the assumption_implications are consistent (i.e. satisfiable).
+    CON = z3.Exists(variables, assumption_implications)
+    optimizer.add(UNSAT)
+    optimizer.add(CON)
+    optimizer.add(min_weight == Assumption.assumptions_weight(assumptions))
+    optimizer.minimize(min_weight)
+    # Check for satisfiability
+    if optimizer.check() == z3.sat:
+        model = optimizer.model()
+        stats = optimizer.statistics()
+        print(f"Minimum Weight: {model[min_weight]}")
+        print(f"Z3 Solving Time: {stats.get_key_value('time')} sec") # time taken
+        print(f"Z3 Num Conflicts: {stats.get_key_value('conflicts')}") # approx. number of branches explored by Z3
+        print("==================================")
+        print("Full Model:")
+        print(model)
+    elif optimizer.check() == z3.unsat:
+        print("The formula is unsatisfiable.") # This should never happen
+    else:
+        print("The satisfiability of the formula could not be determined.") # Hopefully this never happens
+
 def get_metadata(crate: str) -> dict:
     """
     Returns the metadata for a given crate.
