@@ -30,65 +30,6 @@ def parser():
         result.append(temp)
     return result
 
-# def weight(
-#         assumptions: list[z3.BoolRef], 
-#         weights: list[int], 
-#         negative_cond: list[z3.BoolRef] = None, 
-#         negative_cond_weights: list[int] = None
-#     ) -> z3.IntNumRef:
-#     """
-#     Assigns a weight to a set of assumptions and negative conditions. Weight is incurred 
-#     if an assumption is made or if a negative condition is met. The weights of the assumptions
-#     are stored in weights, while the weights of the negative conditions are stored in 
-#     negative_cond_weights.
-#     """
-#     if (negative_cond is not None) and (negative_cond_weights is not None):
-#         return z3.Sum(
-#             z3.Sum([z3.If(a, wt, 0) for a, wt in zip(assumptions, weights)]),
-#             z3.Sum([z3.If(neg_cond, neg_wt, 0) for neg_cond, neg_wt in zip(negative_cond, negative_cond_weights)])
-#         )
-#     else:
-#         return z3.Sum([z3.If(a, wt, 0) for a, wt in zip(assumptions, weights)])
-
-# def assumptions_for(passed_audit: bool, num_side_effects: int, downloads: int):
-#     # Create a solver instance
-#     solver = z3.Solver()
-#     c = z3.Bool('c')  # crate is safe
-#     d = z3.Bool('d')  # crate has a good enough number of downloads
-#     a = z3.BoolVal(passed_audit)  # crate passed audit
-#     s = z3.BoolVal(num_side_effects == 0)  # crate has no side effects
-#     assumptions = z3.Bools('a0 a1 a2 a3 a4')
-#     variables = (c, d)
-#     weights = (
-#         1700,
-#         downloads_weight_function(downloads),
-#         170,
-#         100,
-#         17
-#     )
-#     min_weight = z3.Int('min_weight')
-#     assumption_implications = z3.And(
-#         z3.Implies(assumptions[0], c),
-#         z3.Implies(assumptions[1], d),
-#         z3.Implies(assumptions[2], z3.Implies(d, c)),
-#         z3.Implies(assumptions[3], z3.Implies(a, c)),
-#         z3.Implies(assumptions[4], z3.Implies(s, c)),
-#     )
-#     F = z3.And(assumption_implications, z3.Not(c))
-#     UNSAT = z3.Not(z3.Exists([c, d], F))
-#     solver.add(UNSAT)
-#     solver.add(min_weight == weight(assumptions, weights))
-#     minimization_constraint = z3.ForAll(assumptions, z3.Implies(UNSAT, min_weight <= weight(assumptions, weights)))
-#     solver.add(minimization_constraint)
-#     # Check for satisfiability
-#     if solver.check() == z3.sat:
-#         print("The formula is satisfiable.")
-#         model = solver.model()
-#         print("Model:")
-#         print(model)
-#     else:
-#         print("The formula is not satisfiable.")
-
 def downloads_weight_function(downloads: int) -> int:
     """
     Assigns a weight to the assumption "the crate has a good enough number of downloads" 
@@ -164,6 +105,29 @@ def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[
         ]
     )
 
+def get_substituted_clauses(variables: list[z3.BoolRef], expression: z3.BoolRef) -> list[z3.BoolRef]:
+    """
+    Returns a list of clauses, composed of the substitution of all occurrences of the given variables 
+    in the given expression with True and False. Each clause is a possible assignment of the boolean 
+    variables.
+    """
+    clauses = []
+    def gen(i=0, clause=expression):
+        if i == len(variables):
+            clauses.append(clause)
+        else:
+            gen(i+1, z3.substitute(clause, (variables[i], z3.BoolVal(False))))
+            gen(i+1, z3.substitute(clause, (variables[i], z3.BoolVal(True))))
+    gen()
+    return clauses
+
+def exists_bool_expr(variables: list[z3.BoolRef], expression: z3.BoolRef) -> z3.BoolRef:
+    """
+    Returns the existential quantification of the given expression with respect to the given boolean
+    variables. This is equivalent to the disjunction of all possible substitutions of the variables.
+    """
+    clauses = get_substituted_clauses(variables, expression)
+    return z3.Or(clauses)
 
 def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]):
     """
@@ -205,8 +169,8 @@ def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]
 
 def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]):
     """
-    Alternative encoding of the solve_assumptions function.
-    TODO: does this encoding actually work?
+    Alternative encoding of the solve_assumptions function. This function uses Z3 Optimize
+    and seems to be much more efficient than the original solve_assumptions function.
     """
     optimizer = z3.Optimize()
     min_weight = z3.Int('min_weight')
@@ -214,9 +178,9 @@ def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumpt
     implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(variables[0]))
     # Define the UNSAT predicate. This checks if implications_with_neg_conclusion is unsatisfiable. 
     # If it is, then the conclusion (i.e. the crate is safe) must be derivable from the assumptions.
-    UNSAT = z3.Not(z3.Exists(variables, implications_with_neg_conclusion))
+    UNSAT = z3.Not(exists_bool_expr(variables, implications_with_neg_conclusion))
     # Define the CON predicate. This checks if the assumption_implications are consistent (i.e. satisfiable).
-    CON = z3.Exists(variables, assumption_implications)
+    CON = exists_bool_expr(variables, assumption_implications)
     optimizer.add(UNSAT)
     optimizer.add(CON)
     optimizer.add(min_weight == Assumption.assumptions_weight(assumptions))
@@ -227,7 +191,7 @@ def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumpt
         stats = optimizer.statistics()
         print(f"Minimum Weight: {model[min_weight]}")
         print(f"Z3 Solving Time: {stats.get_key_value('time')} sec") # time taken
-        print(f"Z3 Num Conflicts: {stats.get_key_value('conflicts')}") # approx. number of branches explored by Z3
+        print(f"Z3 Num Conflicts: {stats.get_key_value('sat conflicts')}") # approx. number of branches explored by Z3
         print("==================================")
         print("Full Model:")
         print(model)
@@ -241,7 +205,7 @@ def get_metadata(crate: str) -> dict:
     Returns the metadata for a given crate.
     """
     # TODO: Connect to Cargo Sherlock, implement this function
-    if crate == "anyhow":
+    if crate == "anyhow_v1.0.82":
         return {
             "passed_audit": True,
             "num_side_effects": 0,
@@ -250,9 +214,9 @@ def get_metadata(crate: str) -> dict:
             "stars": 125,
             "forks": 3,
             "failed_rudra": False,
-            "dependencies": ["backtrace"]
+            "dependencies": ["backtrace_v0.3.63"]
         }
-    elif crate == "backtrace":
+    elif crate == "backtrace_v0.3.63":
         return {
             "passed_audit": True,
             "num_side_effects": 5,
@@ -275,7 +239,7 @@ def complete_analysis(crate: str):
         dep_variables, dep_assumptions = assumptions_for(d, dep_metadata)
         variables.extend(dep_variables)
         assumptions.extend(dep_assumptions)
-    solve_assumptions(variables, assumptions)
+    alt_solve_assumptions(variables, assumptions)
 
 def main():
     # result = parser()
@@ -287,7 +251,7 @@ def main():
     # print(dict(*first_crate[0])) # RustSec
     # print(first_crate[1] is not None) # Has a passed audit
     # passed_audit = first_crate[1] is not None
-    complete_analysis("anyhow")
+    complete_analysis("anyhow_v1.0.82")
 
 if __name__ == "__main__":
     main()
