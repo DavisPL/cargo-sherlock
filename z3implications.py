@@ -37,10 +37,17 @@ def downloads_weight_function(downloads: int) -> int:
     """
     return round(1000*math.exp(-downloads/100000))
 
-def github_stats_weight_function(stars: int, forks: int) -> int:
+def repo_stats_weight_function(stars: int, forks: int) -> int:
     """
-    Assigns a weight to the assumption "the crate has a good enough number of stars and forks on GitHub" 
+    Assigns a weight to the assumption "the crate repo has a good enough number of stars and forks" 
     as a function of the number of stars and forks the crate actually has.
+    """
+    return round(1000*math.exp(-stars/10000) + 1000*math.exp(-forks/10000))
+
+def user_stats_weight_function(stars: int, forks: int) -> int:
+    """
+    Assigns a weight to the assumption "the user has a good enough number of stars and forks on GitHub" 
+    as a function of the number of stars and forks the user actually has.
     """
     return round(1000*math.exp(-stars/10000) + 1000*math.exp(-forks/10000))
 
@@ -73,17 +80,20 @@ class NegativeAssumption(Assumption):
 
 def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[Assumption]]:
     """
-    Returns a list of variables and a list of assumptions for a given crate. The first element
-    in the returned list of assumptions is what is being proved (i.e. the crate is safe).
+    Returns a list of variables and a list of assumptions to prove that a given crate is safe.
+    The first element in the returned list of assumptions is what is being proved (i.e. the crate is safe).
     """
     # Unknown variables
     safe = z3.Bool(f"{crate}_safe")  # crate is safe
     good_downloads = z3.Bool(f"{crate}_high_downloads")  # crate has a 'good enough' number of downloads
-    good_github_stats = z3.Bool(f"{crate}_high_github_stats")  # crate has a 'good enough' number of stars and forks on GitHub
+    good_repo_stats = z3.Bool(f"{crate}_high_repo_stats")  # crate repo has a 'good enough' number of stars and forks
     dependency_safety = []
+    user_safety = []
     for d in metadata["dependencies"]:
         dependency_safety.append(z3.Bool(f"{d}_safe")) # dependency is safe
-
+    for u in metadata["developers"]:
+        user_safety.append(z3.Bool(f"{u}_trusted")) # user is trusted
+    
     # Known variables
     passed_audit = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
     no_side_effects = z3.BoolVal(metadata["num_side_effects"] == 0)  # crate has no side effects
@@ -91,17 +101,36 @@ def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[
     failed_rudra = z3.BoolVal(metadata["failed_rudra"])  # crate failed Rudra
 
     return (
-        [safe, good_downloads, good_github_stats], 
+        [safe, good_downloads, good_repo_stats], 
         [
-            Assumption(f"a0_{crate}", safe, 1700),
+            Assumption(f"a0_{crate}", safe, 1500),
             Assumption(f"a1_{crate}", good_downloads, downloads_weight_function(metadata["downloads"])),
             Assumption(f"a2_{crate}", z3.Implies(good_downloads, safe), 90),
             Assumption(f"a3_{crate}", z3.Implies(passed_audit, safe), 100),
             Assumption(f"a4_{crate}", z3.Implies(z3.And(no_side_effects, z3.And(dependency_safety)), safe), 8),
-            Assumption(f"a5_{crate}", good_github_stats, github_stats_weight_function(metadata["stars"], metadata["forks"])),
-            Assumption(f"a6_{crate}", z3.Implies(good_github_stats, safe), 11),
+            Assumption(f"a5_{crate}", good_repo_stats, repo_stats_weight_function(metadata["stars"], metadata["forks"])),
+            Assumption(f"a6_{crate}", z3.Implies(good_repo_stats, safe), 11),
+            Assumption(f"a7_{crate}", z3.Implies(z3.And(user_safety), safe), 5),
             NegativeAssumption(f"na0_{crate}", z3.Implies(in_rust_sec, z3.Not(safe)), 1000),
             NegativeAssumption(f"na1_{crate}", z3.Implies(failed_rudra, z3.Not(safe)), 500)
+        ]
+    )
+
+def reputable_user(user: str, metadata: dict) -> tuple[list[z3.BoolRef], list[Assumption]]:
+    """
+    Returns a list of assumptions for a reputable user.
+    """
+    # TODO: Expand this function to include more assumptions about reputable users.
+    # Unknown variables
+    trusted = z3.Bool(f"{user}_trusted")  # user is trusted
+    good_profile_stats = z3.Bool(f"{user}_high_profile_stats")  # user has a 'good enough' total number of stars and forks on GitHub
+
+    return (
+        [trusted, good_profile_stats], 
+        [
+            Assumption(f"ua0_{user}", trusted, 100),
+            Assumption(f"ua1_{user}", good_profile_stats, user_stats_weight_function(metadata["stars"], metadata["forks"])),
+            Assumption(f"ua2_{user}", z3.Implies(good_profile_stats, trusted), 10),
         ]
     )
 
@@ -112,13 +141,13 @@ def get_substituted_clauses(variables: list[z3.BoolRef], expression: z3.BoolRef)
     variables.
     """
     clauses = []
-    def gen(i=0, clause=expression):
+    def sub(i=0, clause=expression):
         if i == len(variables):
             clauses.append(clause)
         else:
-            gen(i+1, z3.substitute(clause, (variables[i], z3.BoolVal(False))))
-            gen(i+1, z3.substitute(clause, (variables[i], z3.BoolVal(True))))
-    gen()
+            sub(i+1, z3.substitute(clause, (variables[i], z3.BoolVal(False))))
+            sub(i+1, z3.substitute(clause, (variables[i], z3.BoolVal(True))))
+    sub()
     return clauses
 
 def exists_bool_expr(variables: list[z3.BoolRef], expression: z3.BoolRef) -> z3.BoolRef:
@@ -153,7 +182,8 @@ def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]
     )
     solver.add(minimization_constraint)
     # Check for satisfiability
-    if solver.check() == z3.sat:
+    result = solver.check()
+    if result == z3.sat:
         model = solver.model()
         stats = solver.statistics()
         print(f"Minimum Weight: {model[min_weight]}")
@@ -162,7 +192,7 @@ def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]
         print("==================================")
         print("Full Model:")
         print(model)
-    elif solver.check() == z3.unsat:
+    elif result == z3.unsat:
         print("The formula is unsatisfiable.") # This should never happen
     else:
         print("The satisfiability of the formula could not be determined.") # Hopefully this never happens
@@ -176,17 +206,15 @@ def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumpt
     min_weight = z3.Int('min_weight')
     assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
     implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(variables[0]))
-    # Define the UNSAT predicate. This checks if implications_with_neg_conclusion is unsatisfiable. 
-    # If it is, then the conclusion (i.e. the crate is safe) must be derivable from the assumptions.
     UNSAT = z3.Not(exists_bool_expr(variables, implications_with_neg_conclusion))
-    # Define the CON predicate. This checks if the assumption_implications are consistent (i.e. satisfiable).
     CON = exists_bool_expr(variables, assumption_implications)
     optimizer.add(UNSAT)
     optimizer.add(CON)
     optimizer.add(min_weight == Assumption.assumptions_weight(assumptions))
     optimizer.minimize(min_weight)
     # Check for satisfiability
-    if optimizer.check() == z3.sat:
+    result = optimizer.check()
+    if result == z3.sat:
         model = optimizer.model()
         stats = optimizer.statistics()
         print(f"Minimum Weight: {model[min_weight]}")
@@ -195,12 +223,12 @@ def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumpt
         print("==================================")
         print("Full Model:")
         print(model)
-    elif optimizer.check() == z3.unsat:
+    elif result == z3.unsat:
         print("The formula is unsatisfiable.") # This should never happen
     else:
         print("The satisfiability of the formula could not be determined.") # Hopefully this never happens
 
-def get_metadata(crate: str) -> dict:
+def get_crate_metadata(crate: str) -> dict:
     """
     Returns the metadata for a given crate.
     """
@@ -214,7 +242,8 @@ def get_metadata(crate: str) -> dict:
             "stars": 125,
             "forks": 3,
             "failed_rudra": False,
-            "dependencies": ["backtrace_v0.3.63"]
+            "dependencies": ["backtrace_v0.3.63"],
+            "developers": ["dtolnay"]
         }
     elif crate == "backtrace_v0.3.63":
         return {
@@ -225,20 +254,52 @@ def get_metadata(crate: str) -> dict:
             "stars": 125,
             "forks": 3,
             "failed_rudra": False,
-            "dependencies": []
+            "dependencies": [],
+            "developers": ["alexcrichton"]
+        }
+
+def get_user_metadata(user: str) -> dict:
+    """
+    Returns the metadata for a given user.
+    """
+    # TODO: Connect to Cargo Sherlock, implement this function
+    if user == "dtolnay":
+        return {
+            "stars": 100,
+            "forks": 10
+        }
+    elif user == "alexcrichton":
+        return {
+            "stars": 125,
+            "forks": 3
         }
 
 def complete_analysis(crate: str):
     """
     Performs a complete analysis for a given crate.
     """
-    metadata = get_metadata(crate)
+    metadata = get_crate_metadata(crate)
+    # add main crate assumptions
     variables, assumptions = assumptions_for(crate, metadata)
+    for u in metadata["developers"]:
+        user_metadata = get_user_metadata(u)
+        # add main crate developer assumptions
+        user_variables, user_assumptions = reputable_user(u, user_metadata)
+        variables.extend(user_variables)
+        assumptions.extend(user_assumptions)
     for d in metadata["dependencies"]:
-        dep_metadata = get_metadata(d)
-        dep_variables, dep_assumptions = assumptions_for(d, dep_metadata)
+        dep_metadata = get_crate_metadata(d)
+        # add dependency crate assumptions
+        dep_variables, dep_assumptions = assumptions_for(d, dep_metadata) 
         variables.extend(dep_variables)
         assumptions.extend(dep_assumptions)
+        for u in dep_metadata["developers"]:
+            # add dependency crate developer assumptions
+            user_metadata = get_user_metadata(u)
+            user_variables, user_assumptions = reputable_user(u, user_metadata)
+            variables.extend(user_variables)
+            assumptions.extend(user_assumptions)
+    # solve the assumptions, find the minimum weight
     alt_solve_assumptions(variables, assumptions)
 
 def main():
