@@ -59,8 +59,7 @@ class Assumption:
         self.weight = weight
     def single_assumption_weight(self) -> z3.ArithRef:
         """
-        Returns the weight of a single assumption. Weight is incurred if the assumption
-        is set to true.
+        Returns the weight of a single assumption. Weight is incurred if the assumption is set to true.
         """
         return z3.If(self.variable, self.weight, 0)
     @staticmethod
@@ -73,8 +72,8 @@ class Assumption:
 class NegativeAssumption(Assumption):
     def single_assumption_weight(self) -> z3.ArithRef:
         """
-        Returns the weight of a single negative assumption. Weight is incurred if the 
-        assumption is set to false.
+        Returns the weight of a single negative assumption. Weight is incurred if the assumption is 
+        set to false.
         """
         return z3.If(self.variable, 0, self.weight)
 
