@@ -57,6 +57,14 @@ class Assumption:
         self.variable = z3.Bool(name)
         self.consequent = consequent
         self.weight = weight
+    def __repr__(self) -> str:
+        return f"Assumption({self.name}, {self.consequent}, {self.weight})"
+    def default_assignment(self) -> z3.BoolRef:
+        """
+        Returns the default assignment of the negative assumption. This is true for
+        positive assumptions.
+        """
+        return z3.BoolVal(True)
     def single_assumption_weight(self) -> z3.ArithRef:
         """
         Returns the weight of a single assumption. Weight is incurred if the assumption is set to true.
@@ -70,6 +78,14 @@ class Assumption:
         return z3.Sum([a.single_assumption_weight() for a in assumptions])
 
 class NegativeAssumption(Assumption):
+    def __repr__(self) -> str:
+        return f"Neg{super().__repr__()}"
+    def default_assignment(self) -> z3.BoolRef:
+        """
+        Returns the default assignment of the negative assumption. This is false for
+        negative assumptions.
+        """
+        return z3.BoolVal(False)
     def single_assumption_weight(self) -> z3.ArithRef:
         """
         Returns the weight of a single negative assumption. Weight is incurred if the assumption is 
@@ -189,6 +205,11 @@ def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]
         print(f"Z3 Solving Time: {stats.get_key_value('time')} sec") # time taken
         print(f"Z3 Num Conflicts: {stats.get_key_value('conflicts')}") # approx. number of branches explored by Z3
         print("==================================")
+        assumptions_made = ((a.name, a.weight) for a in assumptions if model[a.variable] == a.default_assignment())
+        print("Assumptions Made:")
+        for pair in assumptions_made:
+            print(f"{pair[0]}: {pair[1]} wt")
+        print("==================================")
         print("Full Model:")
         print(model)
     elif result == z3.unsat:
@@ -220,6 +241,11 @@ def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumpt
         print(f"Z3 Solving Time: {stats.get_key_value('time')} sec") # time taken
         print(f"Z3 Num Conflicts: {stats.get_key_value('sat conflicts')}") # approx. number of branches explored by Z3
         print("==================================")
+        assumptions_made = ((a.name, a.weight) for a in assumptions if model[a.variable] == a.default_assignment())
+        print("Assumptions Made:")
+        for pair in assumptions_made:
+            print(f"{pair[0]}: {pair[1]} wt")
+        print("==================================")
         print("Full Model:")
         print(model)
     elif result == z3.unsat:
@@ -232,7 +258,7 @@ def get_crate_metadata(crate: str) -> dict:
     Returns the metadata for a given crate.
     """
     # TODO: Connect to Cargo Sherlock, implement this function
-    if crate == "anyhow_v1.0.82":
+    if crate == "anyhow-v1.0.82":
         return {
             "passed_audit": True,
             "num_side_effects": 0,
@@ -241,10 +267,10 @@ def get_crate_metadata(crate: str) -> dict:
             "stars": 125,
             "forks": 3,
             "failed_rudra": False,
-            "dependencies": ["backtrace_v0.3.63"],
+            "dependencies": ["backtrace-v0.3.63"],
             "developers": ["dtolnay"]
         }
-    elif crate == "backtrace_v0.3.63":
+    elif crate == "backtrace-v0.3.63":
         return {
             "passed_audit": True,
             "num_side_effects": 5,
@@ -273,13 +299,22 @@ def get_user_metadata(user: str) -> dict:
             "forks": 3
         }
 
-def complete_analysis(crate: str):
+def get_all_assumptions(
+        crate: str,
+        max_depth: None | int = None,
+        variables: list[z3.BoolRef] = [], 
+        assumptions: list[Assumption] = []
+    ) -> tuple[list[z3.BoolRef], list[Assumption]]:
     """
-    Performs a complete analysis for a given crate.
+    Returns all variables and assumptions (including dependency and user variables/assumptions)
+    for a given crate. If max_depth is not None, then the function will only return variables
+    and assumptions for dependency crates up to the given depth.
     """
     metadata = get_crate_metadata(crate)
     # add main crate assumptions
-    variables, assumptions = assumptions_for(crate, metadata)
+    crate_variables, crate_assumptions = assumptions_for(crate, metadata)
+    variables.extend(crate_variables)
+    assumptions.extend(crate_assumptions)
     for u in metadata["developers"]:
         user_metadata = get_user_metadata(u)
         # add main crate developer assumptions
@@ -287,18 +322,17 @@ def complete_analysis(crate: str):
         variables.extend(user_variables)
         assumptions.extend(user_assumptions)
     for d in metadata["dependencies"]:
-        dep_metadata = get_crate_metadata(d)
-        # add dependency crate assumptions
-        dep_variables, dep_assumptions = assumptions_for(d, dep_metadata) 
-        variables.extend(dep_variables)
-        assumptions.extend(dep_assumptions)
-        for u in dep_metadata["developers"]:
-            # add dependency crate developer assumptions
-            user_metadata = get_user_metadata(u)
-            user_variables, user_assumptions = reputable_user(u, user_metadata)
-            variables.extend(user_variables)
-            assumptions.extend(user_assumptions)
-    # solve the assumptions, find the minimum weight
+        if max_depth is not None and max_depth == 0:
+            continue
+        max_depth = max_depth - 1 if max_depth is not None else None
+        get_all_assumptions(d, max_depth, variables, assumptions)
+    return variables, assumptions
+
+def complete_analysis(crate: str):
+    """
+    Performs a complete analysis for a given crate.
+    """
+    variables, assumptions = get_all_assumptions(crate)
     alt_solve_assumptions(variables, assumptions)
 
 def main():
@@ -311,7 +345,7 @@ def main():
     # print(dict(*first_crate[0])) # RustSec
     # print(first_crate[1] is not None) # Has a passed audit
     # passed_audit = first_crate[1] is not None
-    complete_analysis("anyhow_v1.0.82")
+    complete_analysis("anyhow-v1.0.82")
 
 if __name__ == "__main__":
     main()
