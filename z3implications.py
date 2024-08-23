@@ -372,8 +372,9 @@ def complete_analysis(crate: CrateVersion):
 def main():
     # complete_analysis("sage_derive", "0.1.0") # crashes if repo url not found, fix later
     # complete_analysis("idna", "0.1.2") # anirudh this is the example you have to look at.
-    crate = CrateVersion("anyhow", "1.0.82")
-    crate = CrateVersion("idna", "0.1.2")
+    # crate = CrateVersion("anyhow", "1.0.82")
+    # crate = CrateVersion("idna", "0.1.2")
+    crate = CrateVersion("sage_derive", "0.1.0")
     complete_analysis(crate)
 
 if __name__ == "__main__":

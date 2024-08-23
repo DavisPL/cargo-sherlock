@@ -55,7 +55,10 @@ def get_stars_and_forks(crate_name):
     response = requests.get(url)
     data = response.json()
     repository_url = data['crate']['repository']
-    # print(repository_url)
+    # print("line 58" , repository_url)
+
+    if repository_url == None:
+        return None
 
     regex = r"https:\/\/github\.com\/([^\/]+)\/([^\/]+)";
     match = re.match(regex, repository_url)
@@ -823,7 +826,7 @@ def logger(crate_name, version , job_id):
             # print(information)
             writer.writerow(["github_stats" , "-" ,information["stars"], information["forks"], information["watchers"]])
         else:
-            writer.writerow(["github_stats", "-", "-", "-" ,"-" ])
+            writer.writerow(["github_stats", "-", 0 , 0 ,0 ])
         writer.writerow(["************************************"])
 
         downloads = get_downloads(crate_name)
