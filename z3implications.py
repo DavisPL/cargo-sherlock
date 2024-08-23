@@ -1,33 +1,13 @@
-import z3
 import math
 import csv
-import os
 import sys
+from typing import NamedTuple, DefaultDict
+import z3
 import logger
-def parser():
-    csv.field_size_limit(sys.maxsize)
-    directory_path = '/logs/Random500/'
-    full_path = os.path.join(os.getcwd() + directory_path)
-    # files = glob.glob(os.path.join(full_path, '*.csv'))
-    files = ["anyhow-1.0.82.csv"]
-    # print(files)
-    result = []
-    for file in files:
-        temp = []
-        with open(file, 'r') as f:
-            contents = f.read()
-            sections = contents.split('************************************')
-            for section in sections:
-                # Remove any leading/trailing whitespace
-                section = section.strip()
-                if not section:
-                    continue
-                # print(section)
-                lines = section.splitlines()
-                reader = csv.DictReader(lines)
-                temp.append(reader)
-        result.append(temp)
-    return result
+
+class CrateVersion(NamedTuple):
+    name: str
+    version: str
 
 def downloads_weight_function(downloads: int) -> int:
     """
@@ -56,10 +36,17 @@ class Assumption:
         self.variable = z3.Bool(name)
         self.consequent = consequent
         self.weight = weight
+    def __repr__(self) -> str:
+        return f"Assumption({self.name}, {self.consequent}, {self.weight})"
+    def default_assignment(self) -> z3.BoolRef:
+        """
+        Returns the default assignment of the negative assumption. This is true for
+        positive assumptions.
+        """
+        return z3.BoolVal(True)
     def single_assumption_weight(self) -> z3.ArithRef:
         """
-        Returns the weight of a single assumption. Weight is incurred if the assumption
-        is set to true.
+        Returns the weight of a single assumption. Weight is incurred if the assumption is set to true.
         """
         return z3.If(self.variable, self.weight, 0)
     @staticmethod
@@ -70,22 +57,30 @@ class Assumption:
         return z3.Sum([a.single_assumption_weight() for a in assumptions])
 
 class NegativeAssumption(Assumption):
+    def __repr__(self) -> str:
+        return f"Neg{super().__repr__()}"
+    def default_assignment(self) -> z3.BoolRef:
+        """
+        Returns the default assignment of the negative assumption. This is false for
+        negative assumptions.
+        """
+        return z3.BoolVal(False)
     def single_assumption_weight(self) -> z3.ArithRef:
         """
-        Returns the weight of a single negative assumption. Weight is incurred if the 
-        assumption is set to false.
+        Returns the weight of a single negative assumption. Weight is incurred if the assumption is 
+        set to false.
         """
         return z3.If(self.variable, 0, self.weight)
 
-def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[Assumption]]:
+def assumptions_for(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRef], list[Assumption]]:
     """
     Returns a list of variables and a list of assumptions to prove that a given crate is safe.
     The first element in the returned list of assumptions is what is being proved (i.e. the crate is safe).
     """
     # Unknown variables
-    safe = z3.Bool(f"{crate}_safe")  # crate is safe
-    good_downloads = z3.Bool(f"{crate}_high_downloads")  # crate has a 'good enough' number of downloads
-    good_repo_stats = z3.Bool(f"{crate}_high_repo_stats")  # crate repo has a 'good enough' number of stars and forks
+    safe = z3.Bool(f"{crate.name}-{crate.version}_safe")  # crate is safe
+    good_downloads = z3.Bool(f"{crate.name}-{crate.version}_high_downloads")  # crate has a 'good enough' number of downloads
+    good_repo_stats = z3.Bool(f"{crate.name}-{crate.version}_high_repo_stats")  # crate repo has a 'good enough' number of stars and forks
     dependency_safety = []
     user_safety = []
     for d in metadata["dependencies"]:
@@ -102,16 +97,16 @@ def assumptions_for(crate: str, metadata: dict) -> tuple[list[z3.BoolRef], list[
     return (
         [safe, good_downloads, good_repo_stats], 
         [
-            Assumption(f"a0_{crate}", safe, 1500),
-            Assumption(f"a1_{crate}", good_downloads, downloads_weight_function(metadata["downloads"])),
-            Assumption(f"a2_{crate}", z3.Implies(good_downloads, safe), 90),
-            Assumption(f"a3_{crate}", z3.Implies(passed_audit, safe), 100),
-            Assumption(f"a4_{crate}", z3.Implies(z3.And(no_side_effects, z3.And(dependency_safety)), safe), 8),
-            Assumption(f"a5_{crate}", good_repo_stats, repo_stats_weight_function(metadata["stars"], metadata["forks"])),
-            Assumption(f"a6_{crate}", z3.Implies(good_repo_stats, safe), 11),
-            Assumption(f"a7_{crate}", z3.Implies(z3.And(user_safety), safe), 5),
-            NegativeAssumption(f"na0_{crate}", z3.Implies(in_rust_sec, z3.Not(safe)), 1000),
-            NegativeAssumption(f"na1_{crate}", z3.Implies(failed_rudra, z3.Not(safe)), 500)
+            Assumption(f"a0_{crate.name}-{crate.version}", safe, 1500),
+            Assumption(f"a1_{crate.name}-{crate.version}", good_downloads, downloads_weight_function(metadata["downloads"])),
+            Assumption(f"a2_{crate.name}-{crate.version}", z3.Implies(good_downloads, safe), 90),
+            Assumption(f"a3_{crate.name}-{crate.version}", z3.Implies(passed_audit, safe), 100),
+            Assumption(f"a4_{crate.name}-{crate.version}", z3.Implies(z3.And(no_side_effects, z3.And(dependency_safety)), safe), 8),
+            Assumption(f"a5_{crate.name}-{crate.version}", good_repo_stats, repo_stats_weight_function(metadata["stars"], metadata["forks"])),
+            Assumption(f"a6_{crate.name}-{crate.version}", z3.Implies(good_repo_stats, safe), 11),
+            Assumption(f"a7_{crate.name}-{crate.version}", z3.Implies(z3.And(user_safety), safe), 5),
+            NegativeAssumption(f"na0_{crate.name}-{crate.version}", z3.Implies(in_rust_sec, z3.Not(safe)), 1000),
+            NegativeAssumption(f"na1_{crate.name}-{crate.version}", z3.Implies(failed_rudra, z3.Not(safe)), 500)
         ]
     )
 
@@ -189,6 +184,11 @@ def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]
         print(f"Z3 Solving Time: {stats.get_key_value('time')} sec") # time taken
         print(f"Z3 Num Conflicts: {stats.get_key_value('conflicts')}") # approx. number of branches explored by Z3
         print("==================================")
+        assumptions_made = ((a.name, a.weight) for a in assumptions if model[a.variable] == a.default_assignment())
+        print("Assumptions Made:")
+        for pair in assumptions_made:
+            print(f"{pair[0]}: {pair[1]} wt")
+        print("==================================")
         print("Full Model:")
         print(model)
     elif result == z3.unsat:
@@ -220,6 +220,11 @@ def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumpt
         print(f"Z3 Solving Time: {stats.get_key_value('time')} sec") # time taken
         print(f"Z3 Num Conflicts: {stats.get_key_value('sat conflicts')}") # approx. number of branches explored by Z3
         print("==================================")
+        assumptions_made = ((a.name, a.weight) for a in assumptions if model[a.variable] == a.default_assignment())
+        print("Assumptions Made:")
+        for pair in assumptions_made:
+            print(f"{pair[0]}: {pair[1]} wt")
+        print("==================================")
         print("Full Model:")
         print(model)
     elif result == z3.unsat:
@@ -228,9 +233,8 @@ def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumpt
         print("The satisfiability of the formula could not be determined.") # Hopefully this never happens
 
 
-def parse_single_file(file: str):
+def parse_single_file(file: str) -> list:
     csv.field_size_limit(sys.maxsize)
-    # temp = []
     with open(file, 'r') as f:
         contents = f.read()
         sections = contents.split('************************************')
@@ -240,7 +244,6 @@ def parse_single_file(file: str):
             section = section.strip()
             if not section:
                 continue
-            # print(section)
             lines = section.splitlines()
             reader = csv.DictReader(lines)
             data = list(reader)
@@ -248,20 +251,8 @@ def parse_single_file(file: str):
     return result
 
 def create_audit_summary(crate_info):
-    # Initialize the audit summary dictionary with default values
-    audit_summary = {
-        "passed_audit": False,
-        "num_side_effects": 0,
-        "downloads": 0,
-        "in_rust_sec": False,
-        "stars": 0,
-        "forks": 0,
-        "failed_rudra": False,
-        "dependencies": [],
-        "developers": [],
-        "audits": []  # To store audit information if needed
-    }
-
+    # Initialize the audit summary dictionary using DefaultDict
+    audit_summary = DefaultDict(list)
     # Iterate over the parsed data to update the dictionary
     for section in crate_info:
         if not section:
@@ -305,54 +296,20 @@ def create_audit_summary(crate_info):
     
     return audit_summary
 
-def get_crate_metadata(name: str, version: str) -> dict:
+def get_crate_metadata(crate: CrateVersion) -> dict:
     """
     Returns the metadata for a given crate.
     """
-    #runs cargo sherlock
-    logger.logger(name, version, "exp")
-
-    crato_info = parse_single_file(f"logs/exp/{name}-{version}.csv")
-
-    audit_summary = create_audit_summary(crato_info)
+    # Runs cargo sherlock
+    logger.logger(crate.name, crate.version, "exp")
+    crate_info = parse_single_file(f"logs/exp/{crate.name}-{crate.version}.csv")
+    audit_summary = create_audit_summary(crate_info)
 
     # import pprint
     # pp = pprint.PrettyPrinter(indent=2)
     # pp.pprint(audit_summary)
 
     return audit_summary
-
-    # print(audit_summary)
-
-
-    # print(crato_info)
-    # exit()
-    
-    # TODO: Connect to Cargo Sherlock, implement this function
-    # if crate == "anyhow_v1.0.82":
-    #     return {
-    #         "passed_audit": True,
-    #         "num_side_effects": 0,
-    #         "downloads": 100,
-    #         "in_rust_sec": False,
-    #         "stars": 125,
-    #         "forks": 3,
-    #         "failed_rudra": False,
-    #         "dependencies": ["backtrace_v0.3.63"],
-    #         "developers": ["dtolnay"]
-    #     }
-    # elif crate == "backtrace_v0.3.63":
-    #     return {
-    #         "passed_audit": True,
-    #         "num_side_effects": 5,
-    #         "downloads": 1_000_000,
-    #         "in_rust_sec": False,
-    #         "stars": 125,
-    #         "forks": 3,
-    #         "failed_rudra": False,
-    #         "dependencies": [],
-    #         "developers": ["alexcrichton"]
-    #     }
 
 def get_user_metadata(user: str) -> dict:
     """
@@ -369,52 +326,55 @@ def get_user_metadata(user: str) -> dict:
             "stars": 125,
             "forks": 3
         }
+    else:
+        return {
+            "stars": 0,
+            "forks": 0
+        }
 
-def complete_analysis(crate: str, version: str):
+def get_all_assumptions(
+        crate: CrateVersion,
+        max_depth: None | int = None,
+        variables: list[z3.BoolRef] = [], 
+        assumptions: list[Assumption] = []
+    ) -> tuple[list[z3.BoolRef], list[Assumption]]:
     """
-    Performs a complete analysis for a given crate.
+    Returns all variables and assumptions (including dependency and user variables/assumptions)
+    for a given crate. If max_depth is not None, then the function will only return variables
+    and assumptions for dependency crates up to the given depth.
     """
-    # print(crate)
-    # exit()
-    metadata = get_crate_metadata(crate , version)
+    metadata = get_crate_metadata(crate)
     # add main crate assumptions
-    variables, assumptions = assumptions_for(crate, metadata)
+    crate_variables, crate_assumptions = assumptions_for(crate, metadata)
+    variables.extend(crate_variables)
+    assumptions.extend(crate_assumptions)
     for u in metadata["developers"]:
         user_metadata = get_user_metadata(u)
         # add main crate developer assumptions
         user_variables, user_assumptions = reputable_user(u, user_metadata)
         variables.extend(user_variables)
         assumptions.extend(user_assumptions)
+    d: CrateVersion # the dependencies are of type CrateVersion
     for d in metadata["dependencies"]:
-        dep_metadata = get_crate_metadata(d)
-        # add dependency crate assumptions
-        dep_variables, dep_assumptions = assumptions_for(d, dep_metadata) 
-        variables.extend(dep_variables)
-        assumptions.extend(dep_assumptions)
-        for u in dep_metadata["developers"]:
-            # add dependency crate developer assumptions
-            user_metadata = get_user_metadata(u)
-            user_variables, user_assumptions = reputable_user(u, user_metadata)
-            variables.extend(user_variables)
-            assumptions.extend(user_assumptions)
-    # solve the assumptions, find the minimum weight
+        if max_depth is not None and max_depth == 0:
+            continue
+        max_depth = max_depth - 1 if max_depth is not None else None
+        get_all_assumptions(crate, max_depth, variables, assumptions)
+    return variables, assumptions
+
+def complete_analysis(crate: CrateVersion):
+    """
+    Performs a complete analysis for a given crate.
+    """
+    variables, assumptions = get_all_assumptions(crate)
     alt_solve_assumptions(variables, assumptions)
 
 def main():
-    # result = parser()
-    # first_crate = result[0]
-    # for i in first_crate:
-    #    print(*i)
-    # print(dict(*first_crate[3])['downloads']) # downloads
-    # downloads = int(dict(*first_crate[3])['downloads'])
-    # print(dict(*first_crate[0])) # RustSec
-    # print(first_crate[1] is not None) # Has a passed audit
-    # passed_audit = first_crate[1] is not None
     # complete_analysis("sage_derive", "0.1.0") # crashes if repo url not found, fix later
-    # complete_analysis("idna", "0.1.2") # anirudh this is the example you have to look at. 
-    complete_analysis("anyhow", "1.0.82") # works
-
-
+    # complete_analysis("idna", "0.1.2") # anirudh this is the example you have to look at.
+    crate = CrateVersion("anyhow", "1.0.82")
+    crate = CrateVersion("idna", "0.1.2")
+    complete_analysis(crate)
 
 if __name__ == "__main__":
     main()
