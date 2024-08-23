@@ -30,7 +30,7 @@ def get_github_repo_stats(username, repository, token_file='token.txt'):
 
     url = f"https://api.github.com/repos/{username}/{repository}"
 
-    print(url)
+    # print(url)
 
     response = requests.get(url, headers={"Authorization": f"token {token}"})
 
@@ -59,6 +59,8 @@ def get_stars_and_forks(crate_name):
 
     regex = r"https:\/\/github\.com\/([^\/]+)\/([^\/]+)";
     match = re.match(regex, repository_url)
+
+
     if match:
         username = match.group(1)
         repo_name = match.group(2)
@@ -759,6 +761,15 @@ def run_cargo_and_save(crate_name, crate_path):
     
     return output_file_path
 
+def get_dependencies(crate_name, version):
+    # Fetch dependencies from crates.io API
+    url = f"https://crates.io/api/v1/crates/{crate_name}/{version}/dependencies"
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()['dependencies']
+    else:
+        print(f"Failed to fetch dependencies for {crate_name} version {version}")
+        return []
 def logger(crate_name, version , job_id):
     '''
     This function will log the results of solidifier in a file.
@@ -805,13 +816,14 @@ def logger(crate_name, version , job_id):
             ])
         writer.writerow(["************************************"])
 
-        information =  get_stars_and_forks("anyhow")
+        # information =  get_stars_and_forks("anyhow")
+        information = get_stars_and_forks(crate_name)
         writer.writerow(["event", "timestamp", "stars", "forks" , "watchers"])
         if information!=None:
             # print(information)
-            writer.writerow(["github_stats" ,information["stars"], information["forks"], information["watchers"]])
+            writer.writerow(["github_stats" , "-" ,information["stars"], information["forks"], information["watchers"]])
         else:
-            writer.writerow(["github_stats", "-", "-", "-"])
+            writer.writerow(["github_stats", "-", "-", "-" ,"-" ])
         writer.writerow(["************************************"])
 
         downloads = get_downloads(crate_name)
@@ -835,6 +847,12 @@ def logger(crate_name, version , job_id):
             total,
             flagged
         ])
+        # dependencies = get_dependencies_from_toml(f"{crate_name}-{version}")
+        # if dependencies:
+        #     root_package = list(dependencies.keys())[0]  # Assuming the first package is the root
+        #     print("Dependency tree:")
+        #     print_dependency_tree(dependencies, root_package)
+        # exit()
         writer.writerow(["************************************"])
         writer.writerow(["Rudra", "timestamp",])
         rud = rudra(crate_name , version)
@@ -986,9 +1004,58 @@ def random_logs(count):
             continue
       
 # random_logs(500)
-logger("anyhow" , "1.0.82" , "exp")
+# logger("anyhow" , "1.0.82" , "exp")
+# 
+# dependencies = get_dependencies("anyhow", "1.0.82")
+# layer1 = []
+# for dep in dependencies:
+#     print(dep["crate_id"] , dep["req"])
+#     layer1.append((dep["crate_id"] , dep["req"]))
+
+# crate_path = "syn-2.0.75"  # Change this to the path of your crate
+
+dependency_cache = {}
+
+def get_latest_version(crate_name):
+    url = f'https://crates.io/api/v1/crates/{crate_name}'
+    response = requests.get(url)
+    crate_info = response.json()['crate']
+    return crate_info['newest_version']
+
+def get_dependencies(crate_name, version):
+    url = f'https://crates.io/api/v1/crates/{crate_name}/{version}/dependencies'
+    response = requests.get(url)
+    return response.json()['dependencies']
+
+def build_dependency_tree(crate_name, version):
+    # Check if the dependency tree for this crate is already cached
+    if (crate_name, version) in dependency_cache:
+        print("Using cached dependency tree for", crate_name, version)
+        return dependency_cache[(crate_name, version)]
+    
+    tree = {}
+    dependencies = get_dependencies(crate_name, version)
+    
+    for dep in dependencies:
+        if dep["kind"] != "normal":  # Only include normal dependencies
+            continue
+        
+        sub_dep_name = dep["crate_id"]
+        sub_dep_version = get_latest_version(sub_dep_name)
+        print(f"Fetching dependencies for {sub_dep_name} ({sub_dep_version})")
+        
+        # Recursively build the dependency tree for this sub-dependency
+        tree[sub_dep_name] = build_dependency_tree(sub_dep_name, sub_dep_version)
+    
+    # Cache the computed dependency tree for the current crate
+    dependency_cache[(crate_name, version)] = tree
+    
+    return tree
 
 
 
+# dependency_tree = build_dependency_tree("clap", "2.33.3")
 
-
+# import pprint
+# pp = pprint.PrettyPrinter(indent=2)
+# pp.pprint(dependency_tree)

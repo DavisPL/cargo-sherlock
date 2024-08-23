@@ -476,8 +476,24 @@ start = "2023-05-22"
 end = "2025-07-30"
 notes = "The Bytecode Alliance is the author of this crate."
 
+[[wildcard-audits.wasmtime-wasi-keyvalue]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2021-10-29"
+end = "2025-07-30"
+notes = "The Bytecode Alliance is the author of this crate."
+
 [[wildcard-audits.wasmtime-wasi-nn]]
 who = "Bobby Holley <bobbyholley@gmail.com>"
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2021-10-29"
+end = "2025-07-30"
+notes = "The Bytecode Alliance is the author of this crate."
+
+[[wildcard-audits.wasmtime-wasi-runtime-config]]
+who = "Alex Crichton <alex@alexcrichton.com>"
 criteria = "safe-to-deploy"
 user-id = 73222
 start = "2021-10-29"
@@ -3399,6 +3415,12 @@ criteria = "safe-to-deploy"
 user-id = 3618
 start = "2019-04-23"
 end = "2025-05-06"
+
+[[trusted.pulley-interpreter]]
+criteria = "safe-to-deploy"
+user-id = 696
+start = "2024-07-30"
+end = "2025-08-08"
 
 [[trusted.quote]]
 criteria = "safe-to-deploy"
