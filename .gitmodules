@@ -1,0 +1,3 @@
+[submodule "cargo-scan"]
+	path = cargo-scan
+	url = https://github.com/PLSysSec/cargo-scan.git
