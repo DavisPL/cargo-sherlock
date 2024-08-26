@@ -14,7 +14,7 @@ import tarfile
 import shutil
 import random
 from tqdm import tqdm
-from bs4 import BeautifulSoup
+import copy
 
 def get_github_repo_stats(username, repository, token_file='token.txt'):
     if not os.path.exists(token_file):
@@ -601,7 +601,7 @@ def extract_and_delete():
             try:
                 with tarfile.open(file, 'r:gz') as tar:
                     tar.extractall()
-                print(f"Extracted {file}")
+                # print(f"Extracted {file}")
             except Exception as e:
                 print(f"Failed to extract {file}: {e}")
 
@@ -610,7 +610,7 @@ def extract_and_delete():
         if file.endswith('.tar.gz'):
             try:
                 os.remove(file)
-                print(f"Deleted {file}")
+                # print(f"Deleted {file}")
             except Exception as e:
                 print(f"Failed to delete {file}: {e}")  
 
@@ -1026,15 +1026,22 @@ def get_latest_version(crate_name):
     return crate_info['newest_version']
 
 def get_dependencies(crate_name, version):
-    url = f'https://crates.io/api/v1/crates/{crate_name}/{version}/dependencies'
-    response = requests.get(url)
-    return response.json()['dependencies']
+    try:
+        url = f'https://crates.io/api/v1/crates/{crate_name}/{version}/dependencies'
+        response = requests.get(url)
+        return response.json()['dependencies']
+    except:
+        print(f"Failed to fetch dependencies for {crate_name} version {version}")
+        return []
 
 def build_dependency_tree(crate_name, version):
+    global dependency_cache
+    
     # Check if the dependency tree for this crate is already cached
-    if (crate_name, version) in dependency_cache:
-        print("Using cached dependency tree for", crate_name, version)
-        return dependency_cache[(crate_name, version)]
+    # print("Fetching dependencies for", crate_name, version)
+    if (crate_name,version) in dependency_cache:
+        # print("Using cached dependency tree for", crate_name, version)
+        return copy.deepcopy(dependency_cache[(crate_name,version)])
     
     tree = {}
     dependencies = get_dependencies(crate_name, version)
@@ -1042,23 +1049,28 @@ def build_dependency_tree(crate_name, version):
     for dep in dependencies:
         if dep["kind"] != "normal":  # Only include normal dependencies
             continue
+        if dep["optional"]:  # Skip optional dependencies
+            continue
         
         sub_dep_name = dep["crate_id"]
         sub_dep_version = get_latest_version(sub_dep_name)
-        print(f"Fetching dependencies for {sub_dep_name} ({sub_dep_version})")
+        # print(f"Fetching dependencies for {sub_dep_name} ({sub_dep_version})")
         
         # Recursively build the dependency tree for this sub-dependency
         tree[sub_dep_name] = build_dependency_tree(sub_dep_name, sub_dep_version)
     
     # Cache the computed dependency tree for the current crate
-    dependency_cache[(crate_name, version)] = tree
+    dependency_cache[(crate_name,version)] = copy.deepcopy(tree)
     
     return tree
 
+# dependency_cache = {}
 
-
-# dependency_tree = build_dependency_tree("clap", "2.33.3")
+# dependency_tree = build_dependency_tree("backtrace", "0.3.54")
 
 # import pprint
-# pp = pprint.PrettyPrinter(indent=2)
+# pp = pprint.PrettyPrinter(indent=4)
 # pp.pprint(dependency_tree)
+
+# for i in dependency_tree:
+#     print(i)
