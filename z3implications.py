@@ -1,6 +1,7 @@
 import math
 import csv
 import sys
+import argparse
 from typing import NamedTuple, DefaultDict
 import z3
 import logger
@@ -374,7 +375,11 @@ def main():
     # complete_analysis("idna", "0.1.2") # anirudh this is the example you have to look at.
     # crate = CrateVersion("anyhow", "1.0.82")
     # crate = CrateVersion("idna", "0.1.2")
-    crate = CrateVersion("sage_derive", "0.1.0")
+    parser = argparse.ArgumentParser(description="Perform a complete analysis for a given crate.")
+    parser.add_argument("crate_name", type=str, help="The name of the crate to analyze.")
+    parser.add_argument("crate_version", type=str, help="The version of the crate to analyze.")
+    args = parser.parse_args()
+    crate = CrateVersion(args.crate_name, args.crate_version)
     complete_analysis(crate)
 
 if __name__ == "__main__":
