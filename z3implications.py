@@ -84,8 +84,9 @@ def assumptions_for(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRe
     good_repo_stats = z3.Bool(f"{crate.name}-{crate.version}_high_repo_stats")  # crate repo has a 'good enough' number of stars and forks
     dependency_safety = []
     user_safety = []
+    d: CrateVersion # the dependencies are of type CrateVersion
     for d in metadata["dependencies"]:
-        dependency_safety.append(z3.Bool(f"{d}_safe")) # dependency is safe
+        dependency_safety.append(z3.Bool(f"{d.name}-{d.version}_safe")) # dependency is safe
     for u in metadata["developers"]:
         user_safety.append(z3.Bool(f"{u}_trusted")) # user is trusted
     
@@ -261,7 +262,7 @@ def create_audit_summary(crate_info):
         
         for item in section:
             if item.get('event') == 'RustSec':
-                audit_summary['in_rust_sec'] = item.get('label') == 'Safe'
+                audit_summary['in_rust_sec'] = item.get('label') != 'Safe'
             
             elif item.get('event') == 'Author':
                 audit_summary['developers'].append(item.get('username'))
@@ -360,7 +361,7 @@ def get_all_assumptions(
         if max_depth is not None and max_depth == 0:
             continue
         max_depth = max_depth - 1 if max_depth is not None else None
-        get_all_assumptions(crate, max_depth, variables, assumptions)
+        get_all_assumptions(d, max_depth, variables, assumptions)
     return variables, assumptions
 
 def complete_analysis(crate: CrateVersion):
