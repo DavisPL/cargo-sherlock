@@ -875,6 +875,20 @@ notes = "The delta only adds `f16` and `f128` support (with some other minor cha
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.bytemuck]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "ub-risk-3"
+delta = "1.16.3 -> 1.17.0"
+notes = "1.17.0 may rely on `union` layout that is not guaranteed by the compiler.\nSee https://github.com/Lokathor/bytemuck/pull/268\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.bytemuck]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "1.16.3 -> 1.17.1"
+notes = "Unsafe review comments can be found in https://crrev.com/c/5813463"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.bytemuck]]
 who = [ "Manish Goregaokar <manishearth@google.com>", "Łukasz Anforowicz <lukasza@google.com>",]
 criteria = [ "ub-risk-2", "does-not-implement-crypto",]
 version = "1.13.1"
@@ -906,6 +920,13 @@ who = "danakj <danakj@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 delta = "1.6.1 -> 1.7.0"
 notes = "Added support for Zeroable enums, which requires them to be represented as an integer and to have 0 as one of their values.\n\nOther trivial/formatting changes.\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.bytemuck_derive]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "1.7.0 -> 1.7.1"
+notes = "No impact on safety AFAICT - the delta only specifies a new attribute for\n`proc_macro_derive` to work around re-export issues described at\nhttps://github.com/Lokathor/bytemuck/issues/159\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.byteorder]]
@@ -1258,6 +1279,13 @@ aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_p
 who = "Dustin J. Mitchell <djmitche@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "4.5.8 -> 4.5.9"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.clap]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "4.5.15 -> 4.5.16"
+notes = "The only change in the delta is explicitly listing re-exports\ninstead of using a `*` wildcard in `pub use clap_derive::{self, *}`.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.clap_builder]]
@@ -5984,6 +6012,13 @@ aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_p
 who = "Adrian Taylor <adetaylor@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 delta = "1.0.35 -> 1.0.36"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.quote]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "1.0.36 -> 1.0.37"
+notes = "The delta just 1) inlines/expands `impl ToTokens` that used to be handled via\n`primitive!` macro and 2) adds `impl ToTokens` for `CStr` and `CString`.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.r0]]

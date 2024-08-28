@@ -5,6 +5,7 @@ import argparse
 from typing import NamedTuple, DefaultDict
 import z3
 import logger
+import ast
 
 class CrateVersion(NamedTuple):
     name: str
@@ -234,7 +235,6 @@ def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumpt
     else:
         print("The satisfiability of the formula could not be determined.") # Hopefully this never happens
 
-
 def parse_single_file(file: str) -> list:
     csv.field_size_limit(sys.maxsize)
     with open(file, 'r') as f:
@@ -242,6 +242,9 @@ def parse_single_file(file: str) -> list:
         sections = contents.split('************************************')
         result = []
         for section in sections:
+            # print(type(section), section)
+            # if type(section) == dict():
+            #     print("i have tree" , section)
             # Remove any leading/trailing whitespace
             section = section.strip()
             if not section:
@@ -250,6 +253,7 @@ def parse_single_file(file: str) -> list:
             reader = csv.DictReader(lines)
             data = list(reader)
             result.append(data)
+    # print(result)
     return result
 
 def create_audit_summary(crate_info):
@@ -288,9 +292,26 @@ def create_audit_summary(crate_info):
                     'notes': item.get('notes', '')
                 })
 
-            elif item.get('event') == 'dependencies':
-                if 'dependency' in item:
-                    audit_summary['dependencies'].append(item['dependency'])
+            elif item.get('event') == 'dependency_tree':
+                if 'dependency_tree' in item:
+                    tree = ast.literal_eval(item.get('dependency_tree'))
+                    flat_tree = {f"{key[0]}-{key[1]}": value for key, value in tree.items()}
+                    # print("flat tree is:",flat_tree)
+                    dependencies = []
+                    for key, _ in flat_tree.items():
+                        # a = CrateVersion(key['name'], key['version'])
+                        # a = CrateVersion(key.split("-")[0], key.split("-")[-1])
+                        # print(key.split("-")[:-1])
+                        name = "-".join(key.split("-")[:-1])
+                        a = CrateVersion(name, key.split("-")[-1])
+                        dependencies.append(a)
+                        # print(a)
+                        # exit(1)
+                    audit_summary['dependencies'] = dependencies
+                        # item.update({"dependency_tree": key})
+                    
+                    # print("tree is:",audit_summary['dependency_tree'])
+                    # exit(1)
 
     # Set passed_audit to True if there are any audits
     if audit_summary['audits']:
@@ -307,9 +328,9 @@ def get_crate_metadata(crate: CrateVersion) -> dict:
     crate_info = parse_single_file(f"logs/exp/{crate.name}-{crate.version}.csv")
     audit_summary = create_audit_summary(crate_info)
 
-    # import pprint
-    # pp = pprint.PrettyPrinter(indent=2)
-    # pp.pprint(audit_summary)
+    import pprint
+    pp = pprint.PrettyPrinter(indent=2)
+    pp.pprint(audit_summary)
 
     return audit_summary
 

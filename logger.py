@@ -850,6 +850,14 @@ def logger(crate_name, version , job_id):
             total,
             flagged
         ])
+        writer.writerow(["************************************"])
+        dependency_tree = build_dependency_tree(crate_name, version)
+        writer.writerow(["event", "timestamp", "dependency_tree"])
+        writer.writerow([
+            "dependency_tree",
+            "-",
+            dependency_tree
+        ])
         # dependencies = get_dependencies_from_toml(f"{crate_name}-{version}")
         # if dependencies:
         #     root_package = list(dependencies.keys())[0]  # Assuming the first package is the root
@@ -1057,7 +1065,7 @@ def build_dependency_tree(crate_name, version):
         # print(f"Fetching dependencies for {sub_dep_name} ({sub_dep_version})")
         
         # Recursively build the dependency tree for this sub-dependency
-        tree[sub_dep_name] = build_dependency_tree(sub_dep_name, sub_dep_version)
+        tree[(sub_dep_name, sub_dep_version)] = build_dependency_tree(sub_dep_name, sub_dep_version)
     
     # Cache the computed dependency tree for the current crate
     dependency_cache[(crate_name,version)] = copy.deepcopy(tree)
@@ -1072,5 +1080,4 @@ def build_dependency_tree(crate_name, version):
 # pp = pprint.PrettyPrinter(indent=4)
 # pp.pprint(dependency_tree)
 
-# for i in dependency_tree:
-#     print(i)
+# logger("backtrace" , "0.3.54" , "exp")
