@@ -40,6 +40,12 @@ class Assumption:
         self.weight = weight
     def __repr__(self) -> str:
         return f"Assumption({self.name}, {self.consequent}, {self.weight})"
+    def __eq__(self, other) -> bool:
+        if isinstance(other, Assumption):
+            return self.name == other.name and self.consequent == other.consequent and self.weight == other.weight
+        return NotImplemented
+    def __hash__(self) -> int:
+        return hash((self.name, self.consequent, self.weight))
     def default_assignment(self) -> z3.BoolRef:
         """
         Returns the default assignment of the negative assumption. This is true for
@@ -155,16 +161,15 @@ def exists_bool_expr(variables: list[z3.BoolRef], expression: z3.BoolRef) -> z3.
     clauses = get_substituted_clauses(variables, expression)
     return z3.Or(clauses)
 
-def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]):
+def solve_assumptions(crate: CrateVersion, variables: list[z3.BoolRef], assumptions: list[Assumption]):
     """
-    Finds the minimum weight of a set of assumptions that prove the crate is safe. This function
-    requires that the first element in variables is the variable representing the crate being safe
-    (i.e. the variable being proven).
+    Finds the minimum weight of a set of assumptions that prove the given crate is safe.
     """
     solver = z3.Solver()
     min_weight = z3.Int('min_weight')
     assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
-    implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(variables[0]))
+    crate_is_safe = z3.Bool(f"{crate.name}-{crate.version}_safe")
+    implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(crate_is_safe))
     # Define the UNSAT predicate. This checks if implications_with_neg_conclusion is unsatisfiable. 
     # If it is, then the conclusion (i.e. the crate is safe) must be derivable from the assumptions.
     UNSAT = z3.Not(z3.Exists(variables, implications_with_neg_conclusion))
@@ -199,7 +204,7 @@ def solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]
     else:
         print("The satisfiability of the formula could not be determined.") # Hopefully this never happens
 
-def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumption]):
+def alt_solve_assumptions(crate: CrateVersion, variables: list[z3.BoolRef], assumptions: list[Assumption]):
     """
     Alternative encoding of the solve_assumptions function. This function uses Z3 Optimize
     and seems to be much more efficient than the original solve_assumptions function.
@@ -207,7 +212,8 @@ def alt_solve_assumptions(variables: list[z3.BoolRef], assumptions: list[Assumpt
     optimizer = z3.Optimize()
     min_weight = z3.Int('min_weight')
     assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
-    implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(variables[0]))
+    crate_is_safe = z3.Bool(f"{crate.name}-{crate.version}_safe")
+    implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(crate_is_safe))
     UNSAT = z3.Not(exists_bool_expr(variables, implications_with_neg_conclusion))
     CON = exists_bool_expr(variables, assumption_implications)
     optimizer.add(UNSAT)
@@ -380,17 +386,17 @@ def get_all_assumptions(
     d: CrateVersion # the dependencies are of type CrateVersion
     for d in metadata["dependencies"]:
         if max_depth is not None and max_depth == 0:
-            continue
+            break
         max_depth = max_depth - 1 if max_depth is not None else None
         get_all_assumptions(d, max_depth, variables, assumptions)
-    return variables, assumptions
+    return list(set(variables)), list(set(assumptions))
 
 def complete_analysis(crate: CrateVersion):
     """
     Performs a complete analysis for a given crate.
     """
     variables, assumptions = get_all_assumptions(crate)
-    alt_solve_assumptions(variables, assumptions)
+    alt_solve_assumptions(crate, variables, assumptions)
 
 def main():
     # complete_analysis("sage_derive", "0.1.0") # crashes if repo url not found, fix later
