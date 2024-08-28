@@ -262,14 +262,15 @@ def parse_single_file(file: str) -> list:
     # print(result)
     return result
 
-def create_audit_summary(crate_info):
+def create_audit_summary(crate_info: list[list[dict]]):
     # Initialize the audit summary dictionary using DefaultDict
     audit_summary = DefaultDict(list)
     # Iterate over the parsed data to update the dictionary
+    section: list[dict]
     for section in crate_info:
         if not section:
             continue
-        
+        item: dict
         for item in section:
             if item.get('event') == 'RustSec':
                 audit_summary['in_rust_sec'] = item.get('label') != 'Safe'
@@ -344,7 +345,7 @@ def get_user_metadata(user: str) -> dict:
     """
     Returns the metadata for a given user.
     """
-    # TODO: Connect to Cargo Sherlock, implement this function
+    # TODO: Find a way to implement this function
     if user == "dtolnay":
         return {
             "stars": 100,
@@ -393,7 +394,7 @@ def get_all_assumptions(
 
 def complete_analysis(crate: CrateVersion):
     """
-    Performs a complete analysis for a given crate.
+    Performs a complete analysis for a given crate. Prints results to stdout.
     """
     variables, assumptions = get_all_assumptions(crate)
     alt_solve_assumptions(crate, variables, assumptions)
