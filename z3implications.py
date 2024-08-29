@@ -3,6 +3,7 @@ import csv
 import sys
 import argparse
 from typing import NamedTuple, DefaultDict
+from timeit import default_timer as timer
 import z3
 import logger
 import ast
@@ -115,7 +116,7 @@ def assumptions_for(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRe
             Assumption(f"a6_{crate.name}-{crate.version}", z3.Implies(good_repo_stats, safe), 11),
             Assumption(f"a7_{crate.name}-{crate.version}", z3.Implies(z3.And(user_safety), safe), 5),
             NegativeAssumption(f"na0_{crate.name}-{crate.version}", z3.Implies(in_rust_sec, z3.Not(safe)), 1000),
-            NegativeAssumption(f"na1_{crate.name}-{crate.version}", z3.Implies(failed_rudra, z3.Not(safe)), 500)
+            # NegativeAssumption(f"na1_{crate.name}-{crate.version}", z3.Implies(failed_rudra, z3.Not(safe)), 500)
         ]
     )
 
@@ -126,14 +127,11 @@ def reputable_user(user: str, metadata: dict) -> tuple[list[z3.BoolRef], list[As
     # TODO: Expand this function to include more assumptions about reputable users.
     # Unknown variables
     trusted = z3.Bool(f"{user}_trusted")  # user is trusted
-    good_profile_stats = z3.Bool(f"{user}_high_profile_stats")  # user has a 'good enough' total number of stars and forks on GitHub
 
     return (
-        [trusted, good_profile_stats], 
+        [trusted], 
         [
             Assumption(f"ua0_{user}", trusted, 100),
-            Assumption(f"ua1_{user}", good_profile_stats, user_stats_weight_function(metadata["stars"], metadata["forks"])),
-            Assumption(f"ua2_{user}", z3.Implies(good_profile_stats, trusted), 10),
         ]
     )
 
@@ -165,6 +163,7 @@ def solve_assumptions(crate: CrateVersion, variables: list[z3.BoolRef], assumpti
     """
     Finds the minimum weight of a set of assumptions that prove the given crate is safe.
     """
+    raise DeprecationWarning("This function is deprecated. Use alt_solve_assumptions instead.")
     solver = z3.Solver()
     min_weight = z3.Int('min_weight')
     assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
@@ -209,8 +208,10 @@ def alt_solve_assumptions(crate: CrateVersion, variables: list[z3.BoolRef], assu
     Alternative encoding of the solve_assumptions function. This function uses Z3 Optimize
     and seems to be much more efficient than the original solve_assumptions function.
     """
+    print(f"Number of Z3 Variables: {len(variables)}")
     optimizer = z3.Optimize()
     min_weight = z3.Int('min_weight')
+    formula_construct_start = timer()
     assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
     crate_is_safe = z3.Bool(f"{crate.name}-{crate.version}_safe")
     implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(crate_is_safe))
@@ -219,6 +220,8 @@ def alt_solve_assumptions(crate: CrateVersion, variables: list[z3.BoolRef], assu
     optimizer.add(UNSAT)
     optimizer.add(CON)
     optimizer.add(min_weight == Assumption.assumptions_weight(assumptions))
+    formula_construct_end = timer()
+    print(f"Formula Construction Time: {formula_construct_end - formula_construct_start:.3f} sec")
     optimizer.minimize(min_weight)
     # Check for satisfiability
     result = optimizer.check()
@@ -227,7 +230,7 @@ def alt_solve_assumptions(crate: CrateVersion, variables: list[z3.BoolRef], assu
         stats = optimizer.statistics()
         print(f"Minimum Weight: {model[min_weight]}")
         print(f"Z3 Solving Time: {stats.get_key_value('time')} sec") # time taken
-        print(f"Z3 Num Conflicts: {stats.get_key_value('sat conflicts')}") # approx. number of branches explored by Z3
+        print(f"Z3 Num Conflicts: {stats.get_key_value('conflicts')}") # approx. number of branches explored by Z3
         print("==================================")
         assumptions_made = ((a.name, a.weight) for a in assumptions if model[a.variable] == a.default_assignment())
         print("Assumptions Made:")
@@ -259,7 +262,6 @@ def parse_single_file(file: str) -> list:
             reader = csv.DictReader(lines)
             data = list(reader)
             result.append(data)
-    # print(result)
     return result
 
 def create_audit_summary(crate_info: list[list[dict]]):
@@ -306,14 +308,10 @@ def create_audit_summary(crate_info: list[list[dict]]):
                     # print("flat tree is:",flat_tree)
                     dependencies = []
                     for key, _ in flat_tree.items():
-                        # a = CrateVersion(key['name'], key['version'])
-                        # a = CrateVersion(key.split("-")[0], key.split("-")[-1])
-                        # print(key.split("-")[:-1])
                         name = "-".join(key.split("-")[:-1])
-                        a = CrateVersion(name, key.split("-")[-1])
-                        dependencies.append(a)
-                        # print(a)
-                        # exit(1)
+                        version = key.split("-")[-1]
+                        cv = CrateVersion(name, version)
+                        dependencies.append(cv)
                     audit_summary['dependencies'] = dependencies
                         # item.update({"dependency_tree": key})
                     
@@ -378,12 +376,12 @@ def get_all_assumptions(
     crate_variables, crate_assumptions = assumptions_for(crate, metadata)
     variables.extend(crate_variables)
     assumptions.extend(crate_assumptions)
-    for u in metadata["developers"]:
-        user_metadata = get_user_metadata(u)
-        # add main crate developer assumptions
-        user_variables, user_assumptions = reputable_user(u, user_metadata)
-        variables.extend(user_variables)
-        assumptions.extend(user_assumptions)
+    # for u in metadata["developers"]:
+    #     user_metadata = get_user_metadata(u)
+    #     # add main crate developer assumptions
+    #     user_variables, user_assumptions = reputable_user(u, user_metadata)
+    #     variables.extend(user_variables)
+    #     assumptions.extend(user_assumptions)
     d: CrateVersion # the dependencies are of type CrateVersion
     for d in metadata["dependencies"]:
         if max_depth is not None and max_depth == 0:
@@ -400,10 +398,6 @@ def complete_analysis(crate: CrateVersion):
     alt_solve_assumptions(crate, variables, assumptions)
 
 def main():
-    # complete_analysis("sage_derive", "0.1.0") # crashes if repo url not found, fix later
-    # complete_analysis("idna", "0.1.2") # anirudh this is the example you have to look at.
-    # crate = CrateVersion("anyhow", "1.0.82")
-    # crate = CrateVersion("idna", "0.1.2")
     parser = argparse.ArgumentParser(description="Perform a complete analysis for a given crate.")
     parser.add_argument("crate_name", type=str, help="The name of the crate to analyze.")
     parser.add_argument("crate_version", type=str, help="The version of the crate to analyze.")
