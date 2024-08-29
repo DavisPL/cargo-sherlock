@@ -102,8 +102,6 @@ def assumptions_for(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRe
     passed_audit = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
     no_side_effects = z3.BoolVal(metadata["num_side_effects"] == 0)  # crate has no side effects
     in_rust_sec = z3.BoolVal(metadata["in_rust_sec"])  # crate is in RustSec
-    failed_rudra = z3.BoolVal(metadata["failed_rudra"])  # crate failed Rudra
-
     return (
         [safe, good_downloads, good_repo_stats], 
         [
@@ -116,7 +114,6 @@ def assumptions_for(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRe
             Assumption(f"a6_{crate.name}-{crate.version}", z3.Implies(good_repo_stats, safe), 11),
             Assumption(f"a7_{crate.name}-{crate.version}", z3.Implies(z3.And(user_safety), safe), 5),
             NegativeAssumption(f"na0_{crate.name}-{crate.version}", z3.Implies(in_rust_sec, z3.Not(safe)), 1000),
-            # NegativeAssumption(f"na1_{crate.name}-{crate.version}", z3.Implies(failed_rudra, z3.Not(safe)), 500)
         ]
     )
 
@@ -215,8 +212,8 @@ def alt_solve_assumptions(crate: CrateVersion, variables: list[z3.BoolRef], assu
     assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
     crate_is_safe = z3.Bool(f"{crate.name}-{crate.version}_safe")
     implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(crate_is_safe))
-    UNSAT = z3.Not(exists_bool_expr(variables, implications_with_neg_conclusion))
-    CON = exists_bool_expr(variables, assumption_implications)
+    UNSAT = z3.Not(z3.Exists(variables, implications_with_neg_conclusion))
+    CON = z3.Exists(variables, assumption_implications)
     optimizer.add(UNSAT)
     optimizer.add(CON)
     optimizer.add(min_weight == Assumption.assumptions_weight(assumptions))
@@ -376,12 +373,12 @@ def get_all_assumptions(
     crate_variables, crate_assumptions = assumptions_for(crate, metadata)
     variables.extend(crate_variables)
     assumptions.extend(crate_assumptions)
-    # for u in metadata["developers"]:
-    #     user_metadata = get_user_metadata(u)
-    #     # add main crate developer assumptions
-    #     user_variables, user_assumptions = reputable_user(u, user_metadata)
-    #     variables.extend(user_variables)
-    #     assumptions.extend(user_assumptions)
+    for u in metadata["developers"]:
+        user_metadata = get_user_metadata(u)
+        # add main crate developer assumptions
+        user_variables, user_assumptions = reputable_user(u, user_metadata)
+        variables.extend(user_variables)
+        assumptions.extend(user_assumptions)
     d: CrateVersion # the dependencies are of type CrateVersion
     for d in metadata["dependencies"]:
         if max_depth is not None and max_depth == 0:
