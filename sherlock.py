@@ -28,7 +28,7 @@ def get_crate_metadata(crate: CrateVersion) -> dict:
     # pretty_print_summary(audit_summary)
     return audit_summary
 
-def get_user_metadata(user: str) -> dict:
+def get_user_metadata(user: User) -> dict:
     """
     Returns the metadata for a given user.
     """
