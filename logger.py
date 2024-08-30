@@ -111,11 +111,9 @@ def get_versions(dep_name):
     response = requests.get(url, headers=headers)
     body = response.text
     data = json.loads(body)
-    # print(data)
     if "errors" in data:
         return "error"
     versions = [v["num"] for v in data["versions"]] 
-    # print("I have", versions)
     # Removing the versions with alphabetical characters like 3.0.0-beta.2. They cause problems later while automating
     versions = [version for version in versions if not any(char.isalpha() for char in version)]
     versions.sort()
@@ -197,7 +195,6 @@ def bulls_eye(ver , version):
             if op2 == '':
                 print("494")
                 if version < v2 and version >= v: # this means that the version is in the range of v and v2
-                    # print(version , v , v2)÷
                     return True,None
                 else: #not in the range of v and v2
                     return False,"Critical"
@@ -536,39 +533,43 @@ def remove_before_value(list_of_lists, value):
         return list_of_lists
 
 def formatter(codex):
-    genome = []
+    formatted_data = []
     for sequence in codex:
-        temp = sequence.split(",")
-        temp = [x.strip() for x in temp]
-        genome.append(temp)
-    return genome
+        split_list = re.split(r'(?<!\\),', str(sequence))
+        split_list = [item.replace('\\,', ',') for item in split_list]
+        split_list = [x.strip() for x in split_list]
+        formatted_data.append(split_list)
+    return formatted_data
+
+def clean_row(row):
+    '''
+    Input : ["['crate", 'fn_decl', 'callee', 'effect', 'dir', 'file', 'line', "col']"]
+    output : ['crate", 'fn_decl', 'callee', 'effect', 'dir', 'file', 'line', "col']
+    '''
+    row_str = ','.join(row)
+    row_str = row_str.lstrip("['").rstrip("']")
+    cleaned_row = re.split(r'(?<!\\),', row_str)
+    cleaned_row = [item.strip().strip("'\"") for item in cleaned_row]
+    return cleaned_row
+
 
 def get_potential_functions(file_path):
     length = 0
-    # print("I will read " , full_path)
     try:
         with open(file_path) as csv_file:
-            reader = (csv.reader(csv_file))
-            for row in reader:
-                lines = row[0].split("\n")
-                # print(lines)
-                lines = remove_before_value(lines, 'crate')
-                lines = remove_after_value(lines , 'num_effects')
-                lines = formatter(lines)
-                df = pd.DataFrame(lines[1:] , columns=lines[0])
-                with open("effect_counts.json", "r") as file:
-                    loaded_effect_counts = json.load(file)
-                    rustsec_effects = loaded_effect_counts.keys()
-                    # print("my length is", len(df))
-                    length = len(df)
-                    # print("df is", df)
-                    concerned_df = df[df['effect'].isin(rustsec_effects)]
-                    # print("concerned_df is", concerned_df)
-                    desired_order = ['dir', 'file', 'line', 'col', 'fn_decl', 'callee', 'effect']
-                    # Reorder the DataFrame
-                    df_reordered = concerned_df[desired_order]
-                    df_reordered.to_csv("dangerous_functions.csv")
-                    return len(df), len(concerned_df)
+            reader = list(csv.reader(csv_file))
+            lines = reader[2:-3] # removing the first two and last three lines
+        formatted_lines = formatter(lines)
+        formatted_lines = [clean_row(row) for row in formatted_lines]
+        df = pd.DataFrame(formatted_lines[1:] , columns=formatted_lines[0])
+        with open("effect_counts.json", "r") as file:
+                loaded_effect_counts = json.load(file)
+                rustsec_effects = loaded_effect_counts.keys()
+                concerned_df = df[df['effect'].isin(rustsec_effects)]
+                desired_order = ['dir', 'file', 'line', 'col', 'fn_decl', 'callee', 'effect']
+                df_reordered = concerned_df[desired_order]
+                df_reordered.to_csv(f"experiments/dangerous_functions.csv")
+                return len(df), len(concerned_df)
     except FileNotFoundError:
         print(f"File not found: {file_path}")
         return None,None
@@ -690,23 +691,18 @@ def get_last_audited_version(audit_info):
     '''
     This function will return the last audited version.
     '''
-    # print(audit_info)
     last = "0.0.0"
     last = version.parse(last)
     for audit in audit_info:
         if 'version' in audit:
             temp = version.parse(audit["version"])
             if last < temp:
-                # print(last, temp)
                 last = temp
         if 'delta' in audit:
             start,end = getVersion(audit["delta"])
             end = version.parse(end)
-            # print(last , end)
             if last < end:
-                # print("in")
                 last = end
-        # print(last)
     return last
 
 def get_repo_url(crate_name):
@@ -722,7 +718,6 @@ def get_repo_url(crate_name):
 def repo_analysis(crate_name , target, last_audited_release):
     url = get_repo_url(crate_name)
     target = "Release " + str(target)
-    print("I am looking for", target)
     last_audited_release = "Release " + str(last_audited_release)
     hash_target = None
     hash_last_audited_release = None
@@ -744,9 +739,16 @@ def repo_analysis(crate_name , target, last_audited_release):
         # print(commit)
 
 def run_cargo_and_save(crate_name, crate_path):
+    if not os.path.exists("cargo-scan"):
+        print("cargo-scan directory not found. Please clone the repo using --recurse flag.")
+        exit(1)
+    
+    if not os.path.exists("experiments"):
+        os.mkdir("experiments") 
+
     original_directory = os.getcwd()
     crate_name = crate_name.replace('-', '_')
-    output_file_path = os.path.join(original_directory, f"{crate_name}.csv")
+    output_file_path = os.path.join(original_directory, "experiments", f"{crate_name}.csv")
 
     cargo_scan_directory = os.path.join(original_directory, "cargo-scan")
     os.chdir(cargo_scan_directory)
@@ -757,10 +759,11 @@ def run_cargo_and_save(crate_name, crate_path):
 
     os.chdir(original_directory)
 
+    # Write the output to the CSV file
     with open(output_file_path, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        # writer.writerow(['Directory', 'Output', 'Error'])
-        writer.writerow([result.stdout, result.stderr])
+        # Split the output into lines to write each line separately
+        writer.writerows([[line] for line in result.stdout.splitlines()])
     
     return output_file_path
 
@@ -841,7 +844,6 @@ def logger(crate_name, version , job_id):
         download_crate(crate_name, version)
         extract_and_delete()
         file_name = run_cargo_and_save(crate_name, f"{crate_name}-{version}")
-        # file_name = f"cargo-scan/{crate_name}-{version}.csv"
         total,flagged = get_potential_functions(file_name)
         writer.writerow(["event", "timestamp", "total", "flagged"])
         writer.writerow([
@@ -858,12 +860,6 @@ def logger(crate_name, version , job_id):
             "-",
             dependency_tree
         ])
-        # dependencies = get_dependencies_from_toml(f"{crate_name}-{version}")
-        # if dependencies:
-        #     root_package = list(dependencies.keys())[0]  # Assuming the first package is the root
-        #     print("Dependency tree:")
-        #     print_dependency_tree(dependencies, root_package)
-        # exit()
         writer.writerow(["************************************"])
         writer.writerow(["Rudra", "timestamp",])
         rud = rudra(crate_name , version)
@@ -871,7 +867,13 @@ def logger(crate_name, version , job_id):
             rud
         ])
         writer.writerow(["************************************"])
-        shutil.rmtree(f"{crate_name}-{version}")
+        # shutil.rmtree(f"{crate_name}-{version}")
+
+        '''
+        Code below this is for future use.
+
+        '''
+
         # flag,future = version_audit(audit_info[1], version)
         # # print(same_version_flag)
         # if flag: #means this version has been audited
@@ -1046,9 +1048,7 @@ def build_dependency_tree(crate_name, version):
     global dependency_cache
     
     # Check if the dependency tree for this crate is already cached
-    # print("Fetching dependencies for", crate_name, version)
     if (crate_name,version) in dependency_cache:
-        # print("Using cached dependency tree for", crate_name, version)
         return copy.deepcopy(dependency_cache[(crate_name,version)])
     
     tree = {}
@@ -1062,7 +1062,6 @@ def build_dependency_tree(crate_name, version):
         
         sub_dep_name = dep["crate_id"]
         sub_dep_version = get_latest_version(sub_dep_name)
-        # print(f"Fetching dependencies for {sub_dep_name} ({sub_dep_version})")
         
         # Recursively build the dependency tree for this sub-dependency
         tree[(sub_dep_name, sub_dep_version)] = build_dependency_tree(sub_dep_name, sub_dep_version)
@@ -1071,13 +1070,3 @@ def build_dependency_tree(crate_name, version):
     dependency_cache[(crate_name,version)] = copy.deepcopy(tree)
     
     return tree
-
-# dependency_cache = {}
-
-# dependency_tree = build_dependency_tree("backtrace", "0.3.54")
-
-# import pprint
-# pp = pprint.PrettyPrinter(indent=4)
-# pp.pprint(dependency_tree)
-
-# logger("backtrace" , "0.3.54" , "exp")

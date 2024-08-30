@@ -1,0 +1,7 @@
+{
+    "[UnsafeCall]": 359,
+    "[PtrDeref]": 8,
+    "[FFI Call]": 3,
+    "std::io": 9,
+    "std::process": 13
+}

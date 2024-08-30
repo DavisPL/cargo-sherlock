@@ -2,6 +2,7 @@ token.txt
 test.txt
 /logs/exp/
 *.csv
+/experiments/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
