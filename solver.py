@@ -3,7 +3,7 @@ import argparse
 from timeit import default_timer as timer
 import z3
 from assumption import Assumption, assumptions_for
-from sherlock import CrateVersion, User, MAX_WEIGHT
+from assumption import CrateVersion, User, MAX_WEIGHT
 import sherlock
 
 MAX_MINUTES = 5 # timeout for each call to the solver
@@ -46,8 +46,8 @@ def get_min_weight(objective: CrateVersion | User, variables: list[z3.BoolRef], 
     assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
     crate_is_safe = z3.Bool(f"{objective}_safe")
     implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(crate_is_safe))
-    UNSAT = z3.Not(z3.Exists(variables, implications_with_neg_conclusion))
-    CON = z3.Exists(variables, assumption_implications)
+    UNSAT = z3.Not(exists_bool_expr(variables, implications_with_neg_conclusion))
+    CON = exists_bool_expr(variables, assumption_implications)
     optimizer.add(UNSAT)
     optimizer.add(CON)
     optimizer.add(min_weight == Assumption.assumptions_weight(assumptions))
@@ -85,57 +85,14 @@ def get_min_weight(objective: CrateVersion | User, variables: list[z3.BoolRef], 
         print(f"Z3 Reason: {optimizer.reason_unknown()}")
         return MAX_WEIGHT
 
-def alt_solve_assumptions(crate: CrateVersion, variables: list[z3.BoolRef], assumptions: list[Assumption]):
-    """
-    Alternative encoding of the solve_assumptions function. This function uses Z3 Optimize
-    and seems to be much more efficient than the original solve_assumptions function.
-    """
-    print(f"Solving for minimum weight of assumptions for {crate}...")
-    print(f"Number of Z3 Variables: {len(variables)}")
-    optimizer = z3.Optimize()
-    optimizer.set("timeout", MAX_MINUTES * 60_000) 
-    min_weight = z3.Int('min_weight')
-    formula_construct_start = timer()
-    assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
-    crate_is_safe = z3.Bool(f"{crate}_safe")
-    implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(crate_is_safe))
-    UNSAT = z3.Not(z3.Exists(variables, implications_with_neg_conclusion))
-    CON = z3.Exists(variables, assumption_implications)
-    optimizer.add(UNSAT)
-    optimizer.add(CON)
-    optimizer.add(min_weight == Assumption.assumptions_weight(assumptions))
-    formula_construct_end = timer()
-    print(f"Formula Construction Time: {formula_construct_end - formula_construct_start:.3f} sec")
-    optimizer.minimize(min_weight)
-    # Check for satisfiability
-    result = optimizer.check()
-    if result == z3.sat:
-        model = optimizer.model()
-        stats = optimizer.statistics()
-        print(f"Minimum Weight: {model[min_weight]}")
-        print(f"Z3 Solving Time: {stats.get_key_value('time')} sec") # time taken
-        print("==================================")
-        assumptions_made = (a for a in assumptions if model[a.variable] == a.default_assignment())
-        print("Assumptions Made:")
-        a: Assumption
-        for a in assumptions_made:
-            print(f"{a.name}: {a.weight} wt")
-        print("==================================")
-        print("Full Model:")
-        print(model)
-    elif result == z3.unsat:
-        raise Exception("The Z3 formula is unsatisfiable.") # This should never happen
-    else:
-        print("The satisfiability of the formula could not be determined.") # Hopefully this never happens
-        print(f"Z3 Reason: {optimizer.reason_unknown()}")
-
 def complete_analysis(crate: CrateVersion):
     """
     Performs a complete analysis for a given crate. Prints results to stdout.
     """
     metadata = sherlock.get_crate_metadata(crate)
     variables, assumptions = assumptions_for(crate, metadata)
-    alt_solve_assumptions(crate, variables, assumptions)
+    trust_score = get_min_weight(crate, variables, assumptions)
+    print(f"Trust Score for {crate}: {trust_score}")
 
 def main():
     parser = argparse.ArgumentParser(description="Perform a complete analysis for a given crate.")

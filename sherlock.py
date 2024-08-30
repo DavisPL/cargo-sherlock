@@ -5,14 +5,17 @@ import logger
 from typing import NamedTuple, DefaultDict
 import csv
 
-MAX_WEIGHT = 1500
-
 User = str
 class CrateVersion(NamedTuple):
     name: str
     version: str
     def __str__(self) -> str:
         return f"{self.name}-{self.version}"
+
+def pretty_print_summary(summary):
+    import pprint
+    pp = pprint.PrettyPrinter(indent=2)
+    pp.pprint(summary)
 
 def get_crate_metadata(crate: CrateVersion) -> dict:
     """
@@ -22,11 +25,7 @@ def get_crate_metadata(crate: CrateVersion) -> dict:
     logger.logger(crate.name, crate.version, "exp")
     crate_info = parse_single_file(f"logs/exp/{crate.name}-{crate.version}.csv")
     audit_summary = create_audit_summary(crate_info)
-
-    import pprint
-    pp = pprint.PrettyPrinter(indent=2)
-    pp.pprint(audit_summary)
-
+    # pretty_print_summary(audit_summary)
     return audit_summary
 
 def get_user_metadata(user: str) -> dict:

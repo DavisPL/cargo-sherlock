@@ -1,8 +1,10 @@
 # This file contains the assumptions that are made about the safety of a crate.
 import math
 import z3
-from sherlock import CrateVersion, User, MAX_WEIGHT
+from sherlock import CrateVersion, User
 import sherlock
+
+MAX_WEIGHT = 500
 
 def downloads_weight_function(downloads: int) -> int:
     """
@@ -16,14 +18,14 @@ def repo_stats_weight_function(stars: int, forks: int) -> int:
     Assigns a weight to the assumption "the crate repo has a good enough number of stars and forks" 
     as a function of the number of stars and forks the crate actually has.
     """
-    return round(1000*math.exp(-stars/10000) + 1000*math.exp(-forks/10000))
+    return round(1000*math.exp(-stars/250) + 200*math.exp(-forks/20))
 
 def user_stats_weight_function(stars: int, forks: int) -> int:
     """
     Assigns a weight to the assumption "the user has a good enough number of stars and forks on GitHub" 
     as a function of the number of stars and forks the user actually has.
     """
-    return round(1000*math.exp(-stars/10000) + 1000*math.exp(-forks/10000))
+    return round(1000*math.exp(-stars/10000) + 300*math.exp(-forks/60))
 
 class Assumption:
     def __init__(self, name: str, consequent: z3.BoolRef, weight: int):
@@ -84,7 +86,7 @@ def reputable_user(user: User, metadata: dict) -> tuple[list[z3.BoolRef], list[A
     return (
         [trusted], 
         [
-            Assumption(f"ua0_{user}", trusted, 100),
+            Assumption(f"ua0_{user}", trusted, 40),
         ]
     )
 
@@ -111,11 +113,11 @@ def assumptions_for(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRe
     assumptions = [
         Assumption(f"a0_{crate}", safe, MAX_WEIGHT),
         Assumption(f"a1_{crate}", good_downloads, downloads_weight_function(metadata["downloads"])),
-        Assumption(f"a2_{crate}", z3.Implies(good_downloads, safe), 90),
-        Assumption(f"a3_{crate}", z3.Implies(passed_audit, safe), 100),
+        Assumption(f"a2_{crate}", z3.Implies(good_downloads, safe), 10),
+        Assumption(f"a3_{crate}", z3.Implies(passed_audit, safe), 30),
         Assumption(f"a4_{crate}", good_repo_stats, repo_stats_weight_function(metadata["stars"], metadata["forks"])),
-        Assumption(f"a5_{crate}", z3.Implies(good_repo_stats, safe), 11),
-        NegativeAssumption(f"na0_{crate}", z3.Implies(in_rust_sec, z3.Not(safe)), 1000),
+        Assumption(f"a5_{crate}", z3.Implies(good_repo_stats, safe), 15),
+        NegativeAssumption(f"na0_{crate}", z3.Implies(in_rust_sec, z3.Not(safe)), 50),
     ]
     d: CrateVersion
     for d in metadata["dependencies"]:
@@ -137,7 +139,7 @@ def assumptions_for(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRe
             user_safety.append(z3.Bool(f"{u}_safe"))
             unknown_vars.append(z3.Bool(f"{u}_safe"))
             assumptions.append(Assumption(f"usr_{u}", z3.Bool(f"{u}_safe"), user_min_weight))
-    assumptions.append(Assumption(f"a6_{crate}", z3.Implies(z3.And(no_side_effects, z3.And(dependency_safety)), safe), 8))
+    assumptions.append(Assumption(f"a6_{crate}", z3.Implies(z3.And(no_side_effects, z3.And(dependency_safety)), safe), 1))
     assumptions.append(Assumption(f"a7_{crate}", z3.Implies(z3.And(user_safety), safe), 5))
 
     return (unknown_vars, assumptions)
