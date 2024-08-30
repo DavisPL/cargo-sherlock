@@ -1,3 +1,5 @@
+raise DeprecationWarning("This file is deprecated. Use the new implementation in solver.py instead.")
+
 import math
 import csv
 import sys
@@ -84,7 +86,6 @@ class NegativeAssumption(Assumption):
 def assumptions_for(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRef], list[Assumption]]:
     """
     Returns a list of variables and a list of assumptions to prove that a given crate is safe.
-    The first element in the returned list of assumptions is what is being proved (i.e. the crate is safe).
     """
     # Unknown variables
     safe = z3.Bool(f"{crate.name}-{crate.version}_safe")  # crate is safe
@@ -102,6 +103,8 @@ def assumptions_for(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRe
     passed_audit = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
     no_side_effects = z3.BoolVal(metadata["num_side_effects"] == 0)  # crate has no side effects
     in_rust_sec = z3.BoolVal(metadata["in_rust_sec"])  # crate is in RustSec
+
+
     return (
         [safe, good_downloads, good_repo_stats], 
         [
@@ -300,9 +303,8 @@ def create_audit_summary(crate_info: list[list[dict]]):
 
             elif item.get('event') == 'dependency_tree':
                 if 'dependency_tree' in item:
-                    tree = ast.literal_eval(item.get('dependency_tree'))
-                    flat_tree = {f"{key[0]}-{key[1]}": value for key, value in tree.items()}
-                    # print("flat tree is:",flat_tree)
+                    tree: dict = ast.literal_eval(item.get('dependency_tree'))
+                    flat_tree: dict = {f"{key[0]}-{key[1]}": value for key, value in tree.items()}
                     dependencies = []
                     for key, _ in flat_tree.items():
                         name = "-".join(key.split("-")[:-1])
