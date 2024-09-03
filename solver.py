@@ -71,10 +71,10 @@ def get_min_weight(objective: CrateVersion | User, variables: list[z3.BoolRef], 
         else:
             print("Z3 Num Conflicts: N/A")
         print("==================================")
-        assumptions_made = ((a.name, a.weight) for a in assumptions if model[a.variable] == a.default_assignment())
+        assumptions_made = (a for a in assumptions if model[a.variable] == a.default_assignment())
         print("Assumptions Made:")
-        for pair in assumptions_made:
-            print(f"{pair[0]}: {pair[1]} wt")
+        for a in assumptions_made:
+            print(f"{a.name}: {a.weight} wt")
         print("==================================")
         min_weight_int: z3.IntNumRef = model[min_weight]
         return min_weight_int.as_long()
