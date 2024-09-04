@@ -7,6 +7,7 @@ RHS (name pending) is an automated reasoning tool that attempts to determine the
 1. Clone this repository and the cargo-scan submodule.
 2. Run `rustup update` to ensure you have the latest version of Rust (or install it via the [official website]((https://www.rust-lang.org/tools/install))).
 3. Run `make` to create a Python virtual environment, install all Python dependencies, and build cargo-scan.
+4. Generate a GitHub personal access token. Go to the [token page](https://github.com/settings/tokens/new) and select Generate new token (classic). Then, name your token, select an expiration date, and grant the token at least the `public_repo` scope by checking the box. Finally, create and copy your token, pasting it into the file `helpers/token.txt`.
 
 Assuming you have Rust and Python installed, you can perform the installation by running the following commands:
 ```
