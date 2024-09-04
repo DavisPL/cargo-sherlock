@@ -2,9 +2,9 @@
 import argparse
 from timeit import default_timer as timer
 import z3
-from assumption import Assumption, assumptions_for
-from assumption import CrateVersion, User, MAX_WEIGHT
-import sherlock
+from helpers.assumption import Assumption, assumptions_for
+from helpers.assumption import CrateVersion, User, MAX_WEIGHT
+import helpers.sherlock as sherlock
 
 MAX_MINUTES = 5 # timeout for each call to the solver
 

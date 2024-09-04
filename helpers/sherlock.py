@@ -1,7 +1,7 @@
 # This file contains the functions to get metadata for a given crate or user.
 import sys
 import ast
-import logger
+import helpers.logger as logger
 from typing import NamedTuple, DefaultDict
 import csv
 

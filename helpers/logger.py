@@ -242,7 +242,7 @@ def get_organization_file(url,file):
     try:
         response = requests.get(url)
         response.raise_for_status()  
-        with open(f"{file}.toml", "w") as file:
+        with open(f"../audits/{file}.toml", "w") as file:
             file.write(response.text)
     except requests.RequestException as e:
         print(f"Failed to download and save file: {e}")
@@ -363,7 +363,7 @@ def is_audited(crate_name, version=None):
     points = 0
     for org in organiations:
         # org = "google"
-        codex = parse_toml_with_type_and_crate(f"{org}.toml")
+        codex = parse_toml_with_type_and_crate(f"../audits/{org}.toml")
     # print(codex.keys())
         for type,data in codex.items():
             # print(type)
@@ -554,21 +554,25 @@ def clean_row(row):
 
 
 def get_potential_functions(file_path):
+    # print(file_path)
     length = 0
     try:
         with open(file_path) as csv_file:
             reader = list(csv.reader(csv_file))
             lines = reader[2:-3] # removing the first two and last three lines
         formatted_lines = formatter(lines)
+        # print(formatted_lines)
         formatted_lines = [clean_row(row) for row in formatted_lines]
+        # print(formatted_lines)
         df = pd.DataFrame(formatted_lines[1:] , columns=formatted_lines[0])
+        # print(df)
         with open("effect_counts.json", "r") as file:
                 loaded_effect_counts = json.load(file)
                 rustsec_effects = loaded_effect_counts.keys()
                 concerned_df = df[df['effect'].isin(rustsec_effects)]
                 desired_order = ['dir', 'file', 'line', 'col', 'fn_decl', 'callee', 'effect']
                 df_reordered = concerned_df[desired_order]
-                df_reordered.to_csv(f"experiments/dangerous_functions.csv")
+                df_reordered.to_csv(f"../experiments/dangerous_functions.csv")
                 return len(df), len(concerned_df)
     except FileNotFoundError:
         print(f"File not found: {file_path}")
@@ -579,7 +583,7 @@ def get_potential_functions(file_path):
 
 def download_crate(crate_name, version):
     # Construct the output file name
-    output_file = f"{crate_name}-{version}.tar.gz"
+    output_file = f"../processing/{crate_name}-{version}.tar.gz"
 
     # Construct the URL for downloading
     url = f"https://crates.io/api/v1/crates/{crate_name}/{version}/download"
@@ -596,6 +600,8 @@ def download_crate(crate_name, version):
     #     raise Exception(f"Failed to download the crate. Status code: {response.status_code}")
 
 def extract_and_delete():
+    current_directory = os.getcwd()
+    os.chdir("../processing")
     # Extract all .tar.gz files in the current directory
     for file in os.listdir('.'):
         if file.endswith('.tar.gz'):
@@ -614,6 +620,7 @@ def extract_and_delete():
                 # print(f"Deleted {file}")
             except Exception as e:
                 print(f"Failed to delete {file}: {e}")  
+    os.chdir(current_directory)
 
 def rudra(crate_name, version):
     '''
@@ -738,22 +745,19 @@ def repo_analysis(crate_name , target, last_audited_release):
         print("****************************")
         # print(commit)
 
-def run_cargo_and_save(crate_name, crate_path):
-    if not os.path.exists("cargo-scan"):
-        print("cargo-scan directory not found. Please clone the repo using --recurse flag.")
-        exit(1)
-    
-    if not os.path.exists("experiments"):
-        os.mkdir("experiments") 
+def run_cargo_and_save(crate_name, crate_version):
+    if not os.path.exists("../experiments"):
+        os.mkdir("../experiments") 
 
     original_directory = os.getcwd()
     crate_name = crate_name.replace('-', '_')
-    output_file_path = os.path.join(original_directory, "experiments", f"{crate_name}.csv")
+    output_file_path = os.path.join(original_directory, "../experiments", f"{crate_name}-{crate_version}.csv")
+    crate_path = os.path.join(original_directory, "../processing", f"{crate_name}-{crate_version}")
 
-    cargo_scan_directory = os.path.join(original_directory, "cargo-scan")
+    cargo_scan_directory = os.path.join(original_directory, "../cargo-scan")
     os.chdir(cargo_scan_directory)
 
-    command = f'cargo run --bin scan ../{crate_path}'
+    command = f'cargo run --bin scan {crate_path}'
     # Combine stderr into stdout to capture all output
     result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
 
@@ -780,11 +784,16 @@ def logger(crate_name, version , job_id):
     '''
     This function will log the results of solidifier in a file.
     '''
-    if not os.path.exists(f"logs/{job_id}"):
-        os.mkdir(f"logs/{job_id}")
+
+    current_directory = os.getcwd()
+
+    os.chdir("helpers")
+
+    if not os.path.exists(f"../logs/{job_id}"):
+        os.mkdir(f"../logs/{job_id}")
 
     label = inRustSec(crate_name, version)
-    with open(f"logs/{job_id}/{crate_name}-{version}.csv", "w", newline='') as file:
+    with open(f"../logs/{job_id}/{crate_name}-{version}.csv", "w", newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["************************************"])
         writer.writerow(["event", "timestamp", "label"])
@@ -843,7 +852,8 @@ def logger(crate_name, version , job_id):
         
         download_crate(crate_name, version)
         extract_and_delete()
-        file_name = run_cargo_and_save(crate_name, f"{crate_name}-{version}")
+        file_name = run_cargo_and_save(crate_name, version)
+        # print(file_name , "is the file name")
         total,flagged = get_potential_functions(file_name)
         writer.writerow(["event", "timestamp", "total", "flagged"])
         writer.writerow([
@@ -867,7 +877,9 @@ def logger(crate_name, version , job_id):
             rud
         ])
         writer.writerow(["************************************"])
-        # shutil.rmtree(f"{crate_name}-{version}")
+
+        os.chdir(current_directory)
+        shutil.rmtree(f"processing/{crate_name}-{version}")
 
         '''
         Code below this is for future use.
@@ -1016,17 +1028,6 @@ def random_logs(count):
                 writer.writerow(["************************************"])
             continue
       
-# random_logs(500)
-# logger("anyhow" , "1.0.82" , "exp")
-# 
-# dependencies = get_dependencies("anyhow", "1.0.82")
-# layer1 = []
-# for dep in dependencies:
-#     print(dep["crate_id"] , dep["req"])
-#     layer1.append((dep["crate_id"] , dep["req"]))
-
-# crate_path = "syn-2.0.75"  # Change this to the path of your crate
-
 dependency_cache = {}
 
 def get_latest_version(crate_name):
@@ -1070,3 +1071,7 @@ def build_dependency_tree(crate_name, version):
     dependency_cache[(crate_name,version)] = copy.deepcopy(tree)
     
     return tree
+
+
+# logger("tokio", "1.39.3" , "test")
+# get_potential_functions("/Users/hassnain/Desktop/RHS/supply-chain-trust/helpers/../experiments/tokio-1.39.3.csv")

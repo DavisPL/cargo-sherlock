@@ -1,8 +1,8 @@
 # This file contains the assumptions that are made about the safety of a crate.
 import math
 import z3
-from sherlock import CrateVersion, User
-import sherlock
+from helpers.sherlock import CrateVersion, User
+import helpers.sherlock as sherlock
 
 MAX_WEIGHT = 500
 
