@@ -14,6 +14,7 @@ cargo-scan/Cargo.toml:
 	git submodule update --remote
 
 clean:
+	rm -rf processing/*
 	rm -rf __pycache__
 	rm -rf $(VENV)
 	cargo clean --manifest-path cargo-scan/Cargo.toml
