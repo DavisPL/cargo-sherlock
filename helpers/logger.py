@@ -159,10 +159,12 @@ def inRustSec(crate_name, version):
                     print("This crate has been flagged by RustSec.")
                     return "Critical"
                 if label == "Critical" and not flag:
-                    print("This is present in RUST SEC but has been patched. However, you are using a vulnerable version. The patched versions are", ver)
+                    # print("This is present in RUST SEC but has been patched. However, you are using a vulnerable version.")
+                    print("A past version of this crate appeeats in RustSec. Please check the patched version.")
                     return "Critical"
                 if label == None and flag:
-                    print("This crate has been reported by RustSec but you are using a patched version.")
+                    # print("This crate has been reported by RustSec but you are using a patched version.")
+                    print("A past version of this crate appeeats in RustSec. Please check the patched version.")
                     return "Low"
     return "Safe"
 
@@ -184,16 +186,16 @@ def bulls_eye(ver , version):
         Now, if my version is in unsafe range, I should return Critical. 
         If the version has been patched return patched.
     '''
-    print("I am comparing", version  , "with" , ver)
+    # print("I am comparing", version  , "with" , ver)
     for i in range(0,len(ver)):
-        print("I am", i, ver[i])
+        # print("I am", i, ver[i])
         (op,v,_) = ver[i]
         if i+1 < len(ver):
-            print("next is", i+1 , ver[i+1])
+            # print("next is", i+1 , ver[i+1])
             (op2,v2,_) = ver[i+1]
-            print(op2 , v2)
+            # print(op2 , v2)
             if op2 == '':
-                print("494")
+                # print("494")
                 if version < v2 and version >= v: # this means that the version is in the range of v and v2
                     return True,None
                 else: #not in the range of v and v2

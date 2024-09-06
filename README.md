@@ -1,6 +1,6 @@
-# RHS
+# Cargo-Sherlock 🕵️
 
-RHS (name pending) is an automated reasoning tool that attempts to determine the safety of Rust crates by modeling trust.
+Cargo-Sherlock is an automated reasoning tool that attempts to determine the safety of Rust crates by modeling trust. 
 
 ## Installation
 
@@ -19,7 +19,46 @@ make
 ```
 
 ## Usage
-To run the tool, run the Python interpreter on `solver.py`, supplying the crate name and version you would like to analyze. For example:
+To run the tool, run the Python interpreter on `detective.py`, supplying the crate name and version you would like to analyze. Additionally you can use various flags to control its behaviour. 
+
+### Basic Usage
+
+To analyze a specific crate and version:
+
+```bash
+python3 script.py <crate_name> <version>
 ```
-python3 solver.py tokio 1.39.3
+
+Replace `<crate_name>` and `<version>` with the actual crate name and version you want to analyze. By default, this will run the `logger.py` script to log information about the specified crate, this prints the logging information on the screen. This information is is also stored at `logs\exp\<crate_name>-<version>.csv`.
+
+### Available Flags
+
+- **`-a` or `--assumptions`**: Runs `solver.py` to perform a detailed analysis of the crate logging information. It uses z3 modelling to determine which assumptions should be made to trust this crate.
+
+
+```bash
+python3 script.py <crate_name> <version> -a
 ```
+
+- **`-u` or `--update`**: Updates the information needed for analysis by running three scripts sequentially:
+  1. `scrapper.py` to collect information from the RustSec website.
+  2. `getCrates.py` to retrieve all crates and their side effects.
+  3. `aggregator.py` to compile side effects for all reported vulnerable functions.
+   
+  This flag ensures that the latest data is used for analysis.
+ ## Note : This updating information scrapes rustsec and gets side effects using cargo-scan for all rustsec crates to updates information about dangerous side effects. Running this can take upto 2 hours. 
+
+
+- **Extended Help**:
+
+```bash
+python3 script.py -H
+```
+
+## Outputs
+
+Depending on the flags used, Cargo-Sherlock will output different information:
+- **Default Output**: Logs the crate information using `logger.py`.
+- **With `-a` Flag**: Provides detailed analysis results from `solver.py`.
+- **With `-u` Flag**: Updates the data from external sources, followed by either `solver.py` or `logger.py` execution based on additional flags.
+
