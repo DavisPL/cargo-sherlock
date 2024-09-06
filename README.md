@@ -1,6 +1,5 @@
 # Cargo-Sherlock 🕵️
-
-Cargo-Sherlock is an automated reasoning tool that attempts to determine the safety of Rust crates by modeling trust. 
+`Cargo-Sherlock`  is a Python-based tool designed to enhance the security of Rust projects by leveraging differnet metadata information about Rust crates. It Is an automated reasoning tool that attempts to determine the safety of Rust crates by modeling trust. 
 
 ## Installation
 
