@@ -93,7 +93,7 @@ Depending on the flags used, Cargo Sherlock will output different information:
 ## Additional Information 
 
 ### Credits
-Cargo Sherlock is an open source from Professor [Caleb Stanford's](https://web.cs.ucdavis.edu/~cdstanford/) Davis PL research group. For copyright information, see the LICENSE.
+Cargo Sherlock is an open source project from Professor [Caleb Stanford's](https://web.cs.ucdavis.edu/~cdstanford/) Davis PL research group. For copyright information, see the LICENSE.
 
 The following members of the Davis PL research group have made contributions to this project (names in alphabetical order):
 - Anirudh Basu
