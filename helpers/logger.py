@@ -1,4 +1,3 @@
-import time
 import json
 import requests
 import regex as re
@@ -113,7 +112,7 @@ def get_versions(dep_name):
     data = json.loads(body)
     if "errors" in data:
         return "error"
-    versions = [v["num"] for v in data["versions"]] 
+    versions: list[str] = [v["num"] for v in data["versions"]] 
     # Removing the versions with alphabetical characters like 3.0.0-beta.2. They cause problems later while automating
     versions = [version for version in versions if not any(char.isalpha() for char in version)]
     versions.sort()
