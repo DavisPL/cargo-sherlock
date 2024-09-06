@@ -13,6 +13,7 @@ Assuming you have Rust and Python installed, you can perform the installation by
 ```
 git clone --recurse-submodules https://github.com/DavisPL/supply-chain-trust.git
 git submodule init
+git submodule update
 rustup update
 make
 ```
