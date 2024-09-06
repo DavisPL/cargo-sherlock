@@ -26,7 +26,7 @@ To run the tool, run the Python interpreter on `detective.py`, supplying the cra
 To analyze a specific crate and version:
 
 ```bash
-python3 script.py <crate_name> <version>
+python3 detective.py <crate_name> <version>
 ```
 
 Replace `<crate_name>` and `<version>` with the actual crate name and version you want to analyze. By default, this will run the `logger.py` script to log information about the specified crate, this prints the logging information on the screen. This information is is also stored at `logs\exp\<crate_name>-<version>.csv`.
@@ -37,7 +37,7 @@ Replace `<crate_name>` and `<version>` with the actual crate name and version yo
 
 
 ```bash
-python3 script.py <crate_name> <version> -a
+python3 detective.py <crate_name> <version> -a
 ```
 
 - **`-u` or `--update`**: Updates the information needed for analysis by running three scripts sequentially:
@@ -52,7 +52,7 @@ python3 script.py <crate_name> <version> -a
 - **Extended Help**:
 
 ```bash
-python3 script.py -H
+python3 detective.py -H
 ```
 
 ## Outputs
