@@ -1,4 +1,3 @@
-import time
 import json
 import requests
 import regex as re
@@ -16,7 +15,7 @@ import random
 from tqdm import tqdm
 import copy
 
-def get_github_repo_stats(username, repository, token_file='token.txt'):
+def get_github_repo_stats(username: str, repository: str, token_file: str = 'token.txt') -> dict | None:
     if not os.path.exists(token_file):
             print(f"Error: Token file '{token_file}' not found. Please generate a GitHub token and save it to a file named 'token.txt'.")
             return None
@@ -49,7 +48,7 @@ def get_github_repo_stats(username, repository, token_file='token.txt'):
         print(f"Failed to retrieve data: {response.status_code}")
         return None
 
-def get_stars_and_forks(crate_name):
+def get_stars_and_forks(crate_name: str) -> dict | None:
     # Get the repository URL for the crate
     url = f"https://crates.io/api/v1/crates/{crate_name}"
     response = requests.get(url)
@@ -105,7 +104,7 @@ def parse_dict_string(dict_string):
 
     return result_dict
         
-def get_versions(dep_name):
+def get_versions(dep_name: str):
     url = f"https://crates.io/api/v1/crates/{dep_name}/versions"
     headers = {"User-Agent": "reqwest"}
     response = requests.get(url, headers=headers)
@@ -113,7 +112,7 @@ def get_versions(dep_name):
     data = json.loads(body)
     if "errors" in data:
         return "error"
-    versions = [v["num"] for v in data["versions"]] 
+    versions: list[str] = [v["num"] for v in data["versions"]] 
     # Removing the versions with alphabetical characters like 3.0.0-beta.2. They cause problems later while automating
     versions = [version for version in versions if not any(char.isalpha() for char in version)]
     versions.sort()
@@ -160,15 +159,15 @@ def inRustSec(crate_name, version):
                     return "Critical"
                 if label == "Critical" and not flag:
                     # print("This is present in RUST SEC but has been patched. However, you are using a vulnerable version.")
-                    print("A past version of this crate appeeats in RustSec. Please check the patched version.")
+                    print("A past version of this crate appears in RustSec. Please check the patched version.")
                     return "Critical"
                 if label == None and flag:
                     # print("This crate has been reported by RustSec but you are using a patched version.")
-                    print("A past version of this crate appeeats in RustSec. Please check the patched version.")
+                    print("A past version of this crate appears in RustSec. Please check the patched version.")
                     return "Low"
     return "Safe"
 
-def bulls_eye(ver , version):
+def bulls_eye(ver, version):
     '''
         this ver is actually a list of tuples of size 3, where the first element is the operator, second is the version and third is not relevant looks something like this 
         [('>=', '0.23.5', '.5'), ('>=', '0.22.4', '.4'), ('', '0.23.0', '.0'), ('>=', '0.21.11', '.11'), ('', '0.22.0', '.0')]
@@ -353,7 +352,7 @@ def parse_toml_with_type_and_crate(toml_path):
 def is_audited(crate_name, version=None):
     '''
     Get the name of the organization who audited that thing in specific. 
-    if google cater for ub-risk criteria as well and p[oints based on that?]
+    if google cater for ub-risk criteria as well and points based on that?
     '''
     cargo_vet = get_cargo_vet()
     # print(cargo_vet)
@@ -468,7 +467,7 @@ def is_audited(crate_name, version=None):
         return False,{}
     return True, vessel
 
-def get_author(crate_name):
+def get_author(crate_name: str):
     '''
     query the crates.io page and get the author name
     '''
@@ -495,7 +494,7 @@ def get_author(crate_name):
     else:
         return "Failed to retrieve crate data: HTTP Status Code {}".format(response.status_code)
 
-def get_downloads(crate_name):    
+def get_downloads(crate_name: str):    
     '''
     Query the crates.io API to get total download counts for a crate.
     '''
@@ -583,7 +582,7 @@ def get_potential_functions(file_path):
         print(f"An error occurred: {e}")
         return None,None
 
-def download_crate(crate_name, version):
+def download_crate(crate_name: str, version: str):
     # Construct the output file name
     output_file = f"../processing/{crate_name}-{version}.tar.gz"
 
@@ -782,7 +781,8 @@ def get_dependencies(crate_name, version):
     else:
         print(f"Failed to fetch dependencies for {crate_name} version {version}")
         return []
-def logger(crate_name, version , job_id):
+
+def logger(crate_name: str, version: str, job_id: str):
     '''
     This function will log the results of solidifier in a file.
     '''
@@ -803,10 +803,11 @@ def logger(crate_name, version , job_id):
         writer.writerow(["************************************"])
 
 
-        _,audit_info = is_audited(crate_name, version)
+        _, audit_info = is_audited(crate_name, version)
 
         writer.writerow(["event", "timestamp", "organization", "type", "criteria", "delta", "version", "notes"])
 
+        entry: dict
         for entry in audit_info:
                 writer.writerow([
                     entry.get('type', ''),
@@ -836,7 +837,7 @@ def logger(crate_name, version , job_id):
         # information =  get_stars_and_forks("anyhow")
         information = get_stars_and_forks(crate_name)
         writer.writerow(["event", "timestamp", "stars", "forks" , "watchers"])
-        if information!=None:
+        if information != None:
             # print(information)
             writer.writerow(["github_stats" , "-" ,information["stars"], information["forks"], information["watchers"]])
         else:
@@ -965,7 +966,7 @@ def get_crate_names(page, per_page):
     response = requests.get(url)
     return response.json()['crates']
 
-def get_random_crates(count):
+def get_random_crates(count: int):
     # Get all crate names from a random page
     all_crate_names = []
     per_page = 20

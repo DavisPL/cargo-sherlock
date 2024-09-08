@@ -2,7 +2,6 @@ import argparse
 import subprocess
 import sys
 import helpers.sherlock as sherlock
-import helpers.logger as logger
 from helpers.assumption import CrateVersion
 from pprint import pprint
 
