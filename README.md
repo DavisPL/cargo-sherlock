@@ -79,7 +79,7 @@ python3 sherlock.py <crate_name> [version] -a
   
   Note: This flag updates information by scraping RustSec and retrieving side effects using cargo-scan for all RustSec crates. Depending upon the internet connection and processing power, it can take a fair amount of time.
 
-- `-o` or `--output`: Specifies an output file path to save the crate information. When used, the tool will write the logging information to the specified file.
+- `-o` or `--output`: Specifies an output file path to save the crate information. When used, the tool will write the logging information to the specified file. If you do not provide this flag, the information is stored at `logs/exp/<crate_name>-.csv`.
 
 Note: This flag currently does not work in combination with the `-a` (assumptions) flag. 
 
