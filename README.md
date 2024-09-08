@@ -77,7 +77,15 @@ python3 detective.py <crate_name> [version] -a
   
   This flag ensures that the latest data is used for analysis.
   
-  Note: This flag updates information by scraping RustSec and retrieving side effects using cargo-scan for all RustSec crates. Depending upon the internet connection and processing power, it can take a fair amount of time. 
+  Note: This flag updates information by scraping RustSec and retrieving side effects using cargo-scan for all RustSec crates. Depending upon the internet connection and processing power, it can take a fair amount of time.
+
+- `-o` or `--output`: Specifies an output file path to save the crate information. When used, the tool will write the logging information to the specified file.
+
+Note: This flag currently does not work in combination with the `-a` (assumptions) flag. 
+
+```bash
+python3 detective.py <crate_name> [version] -o <output_file_path>
+```
 
 - `-h`: Displays a help message.
 

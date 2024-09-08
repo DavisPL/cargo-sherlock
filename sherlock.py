@@ -15,6 +15,7 @@ def main():
     parser.add_argument('-a', '--assumptions', action='store_true', help='Solve using assumptions to assign a trust score to the crate') 
     parser.add_argument('-u', '--update', action='store_true', help='Update information by running scrapper.py, getCrates.py, and aggregator.py')
     parser.add_argument('-H', '--help_extended', action='store_true', help='Show extended help information')
+    parser.add_argument('-o', '--output', type=str, help='Output file path to save crate information')
 
     args = parser.parse_args()
 
@@ -26,6 +27,7 @@ def main():
             -a, --assumptions   Solve using assumptions to assign a trust score to the crate
             -u, --update        Update rustsec information
             -h, --help_extended Show this extended help message
+            -o, --output        Specify the output file path to save crate information
         """)
         sys.exit(0)
 
@@ -60,6 +62,12 @@ def main():
         crate_information = sherlock.get_crate_metadata(crate)
         print(f"Logging information for {args.crate_name}-{args.version}:")
         pprint(crate_information)
+
+        # Save crate information to the output file if provided
+        if args.output:
+            with open(args.output, 'w') as output_file:
+                pprint(crate_information, stream=output_file)
+            print(f"Crate information saved to {args.output}.")
 
 if __name__ == "__main__":
     main()
