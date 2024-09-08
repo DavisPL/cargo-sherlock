@@ -20,7 +20,7 @@ make
 4. Generate a GitHub personal access token. Go to the [token page](https://github.com/settings/tokens/new) and select Generate new token (classic). Then, name your token, select an expiration date, and grant the token at least the `public_repo` scope by checking the box. Finally, create and copy your token, pasting it into the file `helpers/token.txt`.
 
 ## Usage
-To run the tool, run the Python interpreter on `detective.py`, supplying the crate name and version you would like to analyze. Additionally, you can use various flags to control its behaviour. 
+To run the tool, run the Python interpreter on `sherlock.py`, supplying the crate name and version you would like to analyze. Additionally, you can use various flags to control its behaviour. 
 
 Here is an example output:
 ```
@@ -56,10 +56,9 @@ Crate: anyhow, Version: 1.0.87
 To analyze a specific crate and version:
 
 ```bash
-python3 detective.py <crate_name> <version>
+python3 sherlock.py <crate_name> [version]
 ```
-
-Replace `<crate_name>` and `<version>` with the actual crate name and version you want to analyze. By default, this will run the `logger.py` script to log information about the specified crate, this prints the logging information on the screen. This information is is also stored at `logs/exp/<crate_name>-<version>.csv`.
+Replace <crate_name> with the actual crate name you want to analyze. If you omit the [version], the tool will fetch and use the latest version of the crate by default. By default, this will run the logger.py script to log information about the specified crate, printing the logging information to the screen. This information is also stored at logs/exp/<crate_name>-<version>.csv
 
 ### Available Flags
 
@@ -69,7 +68,7 @@ Replace `<crate_name>` and `<version>` with the actual crate name and version yo
 
 
 ```bash
-python3 detective.py <crate_name> <version> -a
+python3 detective.py <crate_name> [version] -a
 ```
 
 - `-u` or `--update`: Updates the information needed for analysis by running three scripts sequentially:
@@ -79,7 +78,7 @@ python3 detective.py <crate_name> <version> -a
   
   This flag ensures that the latest data is used for analysis.
   
-  Note: This flag updates information by scraping RustSec and retrieving side effects using cargo-scan for all RustSec crates. **Running this can take up to 2 hours.**
+  Note: This flag updates information by scraping RustSec and retrieving side effects using cargo-scan for all RustSec crates. This can take a long time depending upon internet connection and processing speed. 
 
 - `-h`: Displays a help message.
 

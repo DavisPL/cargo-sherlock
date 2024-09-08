@@ -112,11 +112,11 @@ def get_versions(dep_name: str):
     data = json.loads(body)
     if "errors" in data:
         return "error"
-    versions: list[str] = [v["num"] for v in data["versions"]] 
-    # Removing the versions with alphabetical characters like 3.0.0-beta.2. They cause problems later while automating
-    versions = [version for version in versions if not any(char.isalpha() for char in version)]
-    versions.sort()
-    # print(versions)
+    versions = [v["num"] for v in data["versions"]]
+    # Removing versions with alphabetical characters like '3.0.0-beta.2'
+    versions = [v for v in versions if not any(char.isalpha() for char in v)]
+    # Sort versions using packaging's Version class
+    versions.sort(key=version.parse)
     return versions
 
 def find_previous_version(given_version, versions_list):
