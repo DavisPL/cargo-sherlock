@@ -24,7 +24,7 @@ To run the tool, run the Python interpreter on `sherlock.py`, supplying the crat
 
 Here is an example output:
 ```
-❯ python3 detective.py -a anyhow 1.0.87
+❯ python3 sherlock.py -a anyhow 1.0.87
 Solving for required Assumptions to trust anyhow-1.0.87...
 Solving for minimum weight of assumptions for dtolnay...
 Number of Z3 Variables: 1
@@ -48,7 +48,6 @@ a1_anyhow-1.0.87: 0 wt
 a2_anyhow-1.0.87: 10 wt
 ==================================
 Trust Score for anyhow-1.0.87: 10
-Crate: anyhow, Version: 1.0.87
 ```
 
 ### Basic Usage
@@ -78,7 +77,7 @@ python3 detective.py <crate_name> [version] -a
   
   This flag ensures that the latest data is used for analysis.
   
-  Note: This flag updates information by scraping RustSec and retrieving side effects using cargo-scan for all RustSec crates. This can take a long time depending upon internet connection and processing speed. 
+  Note: This flag updates information by scraping RustSec and retrieving side effects using cargo-scan for all RustSec crates. Depending upon the internet connection and processing power, it can take a fair amount of time. 
 
 - `-h`: Displays a help message.
 
