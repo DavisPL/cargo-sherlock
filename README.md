@@ -84,7 +84,7 @@ python3 sherlock.py <crate_name> [version] -a
 Note: This flag currently does not work in combination with the `-a` (assumptions) flag. 
 
 ```bash
-python3 detective.py <crate_name> [version] -o <output_file_path>
+python3 sherlock.py <crate_name> [version] -o <output_file_path>
 ```
 
 - `-h`: Displays a help message.
