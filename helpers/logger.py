@@ -55,6 +55,7 @@ def get_stars_and_forks(crate_name: str) -> dict | None:
     response = requests.get(url)
     data = response.json()
     repository_url = data['crate']['repository']
+    repository_url = repository_url.rstrip('.git')
     # print("line 58" , repository_url)
 
     if repository_url == None:
@@ -62,13 +63,12 @@ def get_stars_and_forks(crate_name: str) -> dict | None:
 
     regex = r"https:\/\/github\.com\/([^\/]+)\/([^\/]+)";
     match = re.match(regex, repository_url)
+    # print("line 64" , match)
 
 
     if match:
         username = match.group(1)
         repo_name = match.group(2)
-        # print(f"Username: {username}")
-        # print(f"Repository Name: {repo_name}")
         return get_github_repo_stats(username, repo_name)
     else:
         # print("No match found for repository URL")
@@ -364,11 +364,8 @@ def is_audited(crate_name, version=None):
     vessel = []
     points = 0
     for org in organiations:
-        # org = "google"
         codex = parse_toml_with_type_and_crate(f"../audits/{org}.toml")
-    # print(codex.keys())
         for type,data in codex.items():
-            # print(type)
             temp = {}
             for name,info in data.items():
                 if name == crate_name: 
@@ -377,22 +374,16 @@ def is_audited(crate_name, version=None):
                             temp["organization"] = org
                             temp["type"] = type
                             temp["criteria"] = audit["criteria"]
-                            # points+=3
                             temp["points"] = 3
-                            # print(f"This crate is written by an author trusted by {org}.")
                             if temp != {}:
                                 vessel.append(temp)
                                 temp = {}
                                 points = 0
                     else:
                         for audit in info:
-                            # print(audit)
-                            # print(audit)
                             if 'delta' in audit:
                                 versions = getVersion(audit["delta"])
-                                # print("version : " , versions)
                                 if version in versions:
-                                    # print("This specific version is audited by", org)
                                     if 'safe-to' in audit['criteria']: 
                                     # covers the following cases:
                                     # 1) safe-to-deploy
@@ -424,7 +415,9 @@ def is_audited(crate_name, version=None):
                                     points = 0
                             else: #when will this happen? - when it is audited for the first time.
                                 # print(audit , org)
-                                if version == audit["version"]:
+                                if "version" not in audit.keys(): #this happens when mozilla audits a crate they have devloped but there are some commits by other ppl as well, so they just audit the commits and not a specific version.
+                                    points = 3
+                                elif version == audit["version"]:
                                     # print("This specific version is audited by", org)
                                     if 'safe-to' in audit['criteria']: 
                                     # covers the following cases:
@@ -444,13 +437,9 @@ def is_audited(crate_name, version=None):
                                 temp["organization"] = org
                                 temp["type"] = type
                                 temp["criteria"] = audit["criteria"]
-                                # temp.append(org)
-                                # temp.append(type)
-                                # temp.append(audit["criteria"])
                                 temp["points"] = points
-                                temp["version"] = audit["version"]
-                                # temp.append(points)
-                                # temp.append(audit["version"])
+                                if 'version' in audit.keys():
+                                    temp["version"] = audit["version"]
                                 if 'notes' in audit:
                                     # temp.append(audit["notes"])
                                     temp["notes"] = audit["notes"]
