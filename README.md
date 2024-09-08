@@ -67,7 +67,7 @@ Replace <crate_name> with the actual crate name you want to analyze. If you omit
 
 
 ```bash
-python3 detective.py <crate_name> [version] -a
+python3 sherlock.py <crate_name> [version] -a
 ```
 
 - `-u` or `--update`: Updates the information needed for analysis by running three scripts sequentially:
