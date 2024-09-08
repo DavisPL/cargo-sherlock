@@ -14,6 +14,7 @@ import shutil
 import random
 from tqdm import tqdm
 import copy
+import sys
 
 def get_github_repo_stats(username: str, repository: str, token_file: str = 'token.txt') -> dict | None:
     if not os.path.exists(token_file):
@@ -1034,10 +1035,13 @@ def random_logs(count):
 dependency_cache = {}
 
 def get_latest_version(crate_name):
-    url = f'https://crates.io/api/v1/crates/{crate_name}'
-    response = requests.get(url)
-    crate_info = response.json()['crate']
-    return crate_info['newest_version']
+    versions = get_versions(crate_name)
+    if versions:
+        return versions[-1]  
+    else:
+        print(f"Could not fetch the latest version for crate {crate_name}.")
+        print("This should not happen, please raise an issue on GitHub.")
+        sys.exit(1)
 
 def get_dependencies(crate_name, version):
     try:

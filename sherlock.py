@@ -4,15 +4,7 @@ import sys
 import helpers.sherlock as sherlock
 from helpers.assumption import CrateVersion
 from pprint import pprint
-from helpers.logger import get_versions
-
-def get_latest_version(crate_name):
-    versions = get_versions(crate_name)
-    if versions:
-        return versions[-1]  
-    else:
-        print(f"Could not fetch the latest version for crate {crate_name}.")
-        sys.exit(1)
+from helpers.logger import get_latest_version
 
 def main():
     parser = argparse.ArgumentParser(description='A utility script for managing crates.')
@@ -47,10 +39,10 @@ def main():
         print("Updating information...")
         
         print("Running scrapper.py to collect information from the RUST SEC website...")
-        # subprocess.run([sys.executable, 'scrapper.py'])
+        subprocess.run([sys.executable, 'scrapper.py'])
 
         print("Running getCrates.py to get all crates and their side effects...")
-        # subprocess.run([sys.executable, 'getCrates.py'])
+        subprocess.run([sys.executable, 'getCrates.py'])
 
         print("Running aggregator.py to get the side effects for all reported vulnerable functions...")
         subprocess.run([sys.executable, 'aggregator.py'])
