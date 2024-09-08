@@ -33,10 +33,10 @@ def main():
         print("Updating information...")
         
         print("Running scrapper.py to collect information from the RUST SEC website...")
-        subprocess.run([sys.executable, 'scrapper.py'])
+        # subprocess.run([sys.executable, 'scrapper.py'])
 
         print("Running getCrates.py to get all crates and their side effects...")
-        subprocess.run([sys.executable, 'getCrates.py'])
+        # subprocess.run([sys.executable, 'getCrates.py'])
 
         print("Running aggregator.py to get the side effects for all reported vulnerable functions...")
         subprocess.run([sys.executable, 'aggregator.py'])
@@ -55,9 +55,6 @@ def main():
         print(f"Logging information for {args.crate_name}-{args.version}:")
         # print(crate_information)
         pprint(crate_information)
-
-    # Output a log with crate information
-    print(f"Crate: {args.crate_name}, Version: {args.version}")
 
 if __name__ == "__main__":
     main()

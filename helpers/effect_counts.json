@@ -1,1 +1,5 @@
-{}
+{
+    "[UnsafeCall]": 1044,
+    "[FFI Call]": 9,
+    "std::io": 18
+}

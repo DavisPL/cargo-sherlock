@@ -1358,6 +1358,13 @@ delta = "4.5.15 -> 4.5.16"
 notes = "The only change in the delta is explicitly listing re-exports\ninstead of using a `*` wildcard in `pub use clap_derive::{self, *}`.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.clap]]
+who = "danakj <danakj@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "4.5.15 -> 4.5.17"
+notes = "Minor code change and toml changes."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.clap_builder]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -1433,6 +1440,13 @@ aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_p
 who = "Dustin J. Mitchell <djmitche@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "4.5.8 -> 4.5.9"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.clap_builder]]
+who = "danakj <danakj@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "4.5.15 -> 4.5.17"
+notes = "No new unsafe, net, fs"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.clap_conf]]
@@ -2138,6 +2152,12 @@ delta = "1.0.124 -> 1.0.126"
 notes = "Only minor changes:\n\n* Using `let Some(foo) = ... else { ... }` pattern in a few places.\n* Exposing an extra constructor for `rust::Slice`.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.cxxbridge-cmd]]
+who = "danakj <danakj@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "1.0.126 -> 1.0.128"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.cxxbridge-flags]]
 who = "Android Legacy"
 criteria = "safe-to-run"
@@ -2227,6 +2247,12 @@ who = "Lukasz Anforowicz <lukasza@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 delta = "1.0.124 -> 1.0.126"
 notes = "No changes in this delta"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.cxxbridge-flags]]
+who = "danakj <danakj@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "1.0.126 -> 1.0.128"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.cxxbridge-macro]]
@@ -6643,6 +6669,13 @@ version = "0.4.0"
 notes = "Reviewed in https://crrev.com/c/5171063\n\nPreviously reviewed during security review and the audit is grandparented in.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.rustc_version]]
+who = "danakj <danakj@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "0.4.0 -> 0.4.1"
+notes = "No unsafe, net or fs."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.rustfft]]
 who = "Li-Yu Yu <aaronyu@google.com>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -7087,6 +7120,12 @@ aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_p
 who = "Lukasz Anforowicz <lukasza@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "1.0.124 -> 1.0.127"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.serde_json]]
+who = "danakj <danakj@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "1.0.127 -> 1.0.128"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.serde_json_lenient]]

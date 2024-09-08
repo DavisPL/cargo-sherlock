@@ -187,7 +187,7 @@ def run_cargo_scan_and_save_output():
     try:
         os.chdir('../cargo-scan')
         output_data = []
-        directories = directories[:10]
+        # directories = directories[:10]
 
         print("Getting Side Effects for Rust Sec crates...")
         for directory in tqdm(directories):
@@ -205,7 +205,7 @@ def run_cargo_scan_and_save_output():
                     with open(csv_filename, 'w', newline='') as csvfile:
                         writer = csv.writer(csvfile)
                         # writer.writerow(['Directory', 'Output', 'Error'])
-                        writer.writerow([process.stdout, process.stderr])
+                        writer.writerows([[line] for line in process.stdout.splitlines()])
                 except Exception as e:
                     print(f"Failed to write to CSV file: {e}")
             except:
@@ -218,34 +218,34 @@ def run_cargo_scan_and_save_output():
         # Return to the original directory
         os.chdir(original_dir)
 
-codex = read_dicts_from_txt("helpers/data.txt")
-# print(codex[0])
-pattern = r'(>=|>)?(\d+\.\d+(\.\d+)?)'
-print("Downloading RustSec crates...")
-for data in tqdm(codex):
-    # print(dict)
-    # data = dict(data)
-    # print(data)
-    # print(type(data))
-    data = parse_dict_string(data)
-    # print(data)
-    temp = data["package"]
-    package = temp["name"].split("(")[0]
-    # print(package)
-    temp = data["patched"]
-    versions = list()
-    target_version = str()
-    if temp == "no patched versions":
-        versions = get_versions(package)
-        target_version = versions[-1]
-    else:
-        (_,ver,_) = re.findall(pattern, temp)[0]
-        versions = get_versions(package)
-        if versions == "error":
-            continue
-        target_version = find_previous_version(ver, versions)
-    download_crate(package,target_version)
+# codex = read_dicts_from_txt("helpers/data.txt")
+# # print(codex[0])
+# pattern = r'(>=|>)?(\d+\.\d+(\.\d+)?)'
+# print("Downloading RustSec crates...")
+# for data in tqdm(codex):
+#     # print(dict)
+#     # data = dict(data)
+#     # print(data)
+#     # print(type(data))
+#     data = parse_dict_string(data)
+#     # print(data)
+#     temp = data["package"]
+#     package = temp["name"].split("(")[0]
+#     # print(package)
+#     temp = data["patched"]
+#     versions = list()
+#     target_version = str()
+#     if temp == "no patched versions":
+#         versions = get_versions(package)
+#         target_version = versions[-1]
+#     else:
+#         (_,ver,_) = re.findall(pattern, temp)[0]
+#         versions = get_versions(package)
+#         if versions == "error":
+#             continue
+#         target_version = find_previous_version(ver, versions)
+#     download_crate(package,target_version)
     time.sleep(0.1)
 
-extract_and_delete()
+# extract_and_delete()
 run_cargo_scan_and_save_output()
