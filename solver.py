@@ -4,7 +4,7 @@ from timeit import default_timer as timer
 import z3
 from helpers.assumption import Assumption, assumptions_for
 from helpers.assumption import CrateVersion, User, MAX_WEIGHT
-import helpers.sherlock as sherlock
+import helpers.crate_data as crate_data
 
 MAX_MINUTES = 5 # timeout for each call to the solver
 
@@ -89,7 +89,7 @@ def complete_analysis(crate: CrateVersion):
     """
     Performs a complete analysis for a given crate. Prints results to stdout.
     """
-    metadata = sherlock.get_crate_metadata(crate)
+    metadata = crate_data.get_crate_metadata(crate)
     variables, assumptions = assumptions_for(crate, metadata)
     trust_score = get_min_weight(crate, variables, assumptions)
     print(f"Trust Score for {crate}: {trust_score}")

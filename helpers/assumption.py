@@ -1,8 +1,8 @@
 # This file contains the assumptions that are made about the safety of a crate.
 import math
 import z3
-from helpers.sherlock import CrateVersion, User
-import helpers.sherlock as sherlock
+from helpers.crate_data import CrateVersion, User
+import helpers.crate_data as crate_data
 
 MAX_WEIGHT = 500
 
@@ -123,7 +123,7 @@ def assumptions_for(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRe
     for d in metadata["dependencies"]:
         # if the dependency is not already in the list of unknown variables (i.e. hasn't been processed yet)
         if z3.Bool(f"{d}_safe") not in unknown_vars:
-            dep_metadata = sherlock.get_crate_metadata(d)
+            dep_metadata = crate_data.get_crate_metadata(d)
             dep_variables, dep_assumptions = assumptions_for(d, dep_metadata) # recursively add assumptions for dependencies
             dep_min_weight = get_min_weight(d, dep_variables, dep_assumptions) # get the minimum weight of assumptions for the dependency
             dependency_safety.append(z3.Bool(f"{d}_safe"))
@@ -133,7 +133,7 @@ def assumptions_for(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRe
     for u in metadata["developers"]:
         # if the user is not already in the list of unknown variables (i.e. hasn't been processed yet)
         if z3.Bool(f"{u}_safe") not in unknown_vars:
-            user_metadata = sherlock.get_user_metadata(u)
+            user_metadata = crate_data.get_user_metadata(u)
             user_variables, user_assumptions = reputable_user(u, user_metadata)
             user_min_weight = get_min_weight(u, user_variables, user_assumptions)
             user_safety.append(z3.Bool(f"{u}_safe"))

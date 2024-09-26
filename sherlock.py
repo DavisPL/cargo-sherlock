@@ -1,7 +1,7 @@
 import argparse
 import subprocess
 import sys
-import helpers.sherlock as sherlock
+import helpers.crate_data as crate_data
 from helpers.assumption import CrateVersion
 from pprint import pprint
 from helpers.logger import get_latest_version
@@ -59,7 +59,7 @@ def main():
         # Get logging information about the crate
         crate = CrateVersion(args.crate_name, args.version)
         print(f"Getting Logging Information About Crate {crate}...")
-        crate_information = sherlock.get_crate_metadata(crate)
+        crate_information = crate_data.get_crate_metadata(crate)
         print(f"Logging information for {args.crate_name}-{args.version}:")
         pprint(crate_information)
 
