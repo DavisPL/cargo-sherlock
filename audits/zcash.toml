@@ -70,6 +70,13 @@ criteria = "safe-to-deploy"
 delta = "0.2.16 -> 0.2.18"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
+[[audits.ambassador]]
+who = "Kris Nuttycombe <kris@nutty.land>"
+criteria = "safe-to-deploy"
+version = "0.4.1"
+notes = "Crate uses no unsafe code and the macros introduced by this crate generate the expected trait implementations without introducing additional unexpected operations."
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
 [[audits.anyhow]]
 who = "Daira-Emma Hopwood <daira@jacaranda.org>"
 criteria = "safe-to-deploy"
@@ -133,6 +140,19 @@ aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/suppl
 who = "Sean Bowe <ewillbefull@gmail.com>"
 criteria = "safe-to-deploy"
 delta = "0.3.6 -> 0.3.7"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
+[[audits.arrayref]]
+who = "Daira-Emma Hopwood <daira@jacaranda.org>"
+criteria = "safe-to-deploy"
+delta = "0.3.6 -> 0.3.8"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
+[[audits.arrayref]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "0.3.8 -> 0.3.9"
+notes = "Changes to `unsafe` lines are to make some existing `unsafe fn`s `const`."
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
 [[audits.async-trait]]
@@ -331,6 +351,12 @@ delta = "1.5.0 -> 1.6.0"
 notes = "There is significant use of `unsafe` code, but safety requirements are well documented\nand appear correct as far as I can see.\n"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
+[[audits.bytes]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "1.7.1 -> 1.7.2"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
 [[audits.cc]]
 who = "Daira-Emma Hopwood <daira@jacaranda.org>"
 criteria = "safe-to-deploy"
@@ -342,6 +368,12 @@ who = "Daira-Emma Hopwood <daira@jacaranda.org>"
 criteria = "safe-to-deploy"
 delta = "1.0.83 -> 1.0.94"
 notes = "The optimization to use `buffer.set_len(buffer.capacity())` in `command_helpers::StderrForwarder::forward_available`\ndoesn't look panic-safe: if `stderr.read` panics and that panic is caught by a caller of `forward_available`, then\nthe inner buffer of `StderrForwarder` will contain uninitialized data. This looks difficult to trigger in practice,\nbut I have opened an issue <https://github.com/rust-lang/cc-rs/issues/1036>.\n\n`parallel::async_executor` contains `unsafe` pinning code but it looks reasonable. Similarly for the `unsafe`\ninitialization code in `parallel::job_token::JobTokenServer` and file operations in `parallel::stderr`.\n\nThis crate executes commands, and my review is likely not sufficient to detect subtle backdoors.\nI did not review the use of library handles in the `com` package on Windows.\n"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
+[[audits.cc]]
+who = "Daira-Emma Hopwood <daira@jacaranda.org>"
+criteria = "safe-to-deploy"
+delta = "1.1.6 -> 1.1.13"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
 [[audits.chacha20]]
@@ -467,6 +499,12 @@ delta = "0.2.6 -> 0.3.0"
 notes = "Replaces some `unsafe` code by bumping MSRV to 1.66 (to access `core::hint::black_box`)."
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
+[[audits.constant_time_eq]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "0.3.0 -> 0.3.1"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
 [[audits.cpufeatures]]
 who = "Jack Grigg <jack@z.cash>"
 criteria = "safe-to-deploy"
@@ -497,6 +535,13 @@ aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/suppl
 who = "Daira-Emma Hopwood <daira@jacaranda.org>"
 criteria = "safe-to-deploy"
 delta = "0.2.11 -> 0.2.12"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
+[[audits.cpufeatures]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "0.2.13 -> 0.2.14"
+notes = "New `unsafe` block is to call `sysctlbyname` to detect DIT on Apple ARM64, which\nis done in the same way as existing target feature checks on that arch.\n"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
 [[audits.crossbeam-channel]]
@@ -732,6 +777,13 @@ delta = "1.0.122 -> 1.0.124"
 notes = "- Change to `build.rs` is to use `error_in_core` rustc feature.\n- Change to `cxx.cc` uses the same technique for `char` as is already in use for\n  `isize` to check if it is an alias for `[u]int8_t`.\n"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
+[[audits.cxx]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "1.0.126 -> 1.0.128"
+notes = "`unsafe` changes are to copy the `SyncUnsafeCell` type from nightly Rust. It is\nused as the ZST `SyncUnsafeCell<PhantomData<()>>` to fix an LLVM miscompilation.\n"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
 [[audits.cxxbridge-flags]]
 who = "Daira Hopwood <daira@jacaranda.org>"
 criteria = "safe-to-deploy"
@@ -907,6 +959,12 @@ delta = "1.0.122 -> 1.0.124"
 notes = "Only changes to lints."
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
+[[audits.cxxbridge-macro]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "1.0.126 -> 1.0.128"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
 [[audits.darling]]
 who = "Jack Grigg <jack@electriccoin.co>"
 criteria = "safe-to-deploy"
@@ -1075,6 +1133,12 @@ aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/suppl
 who = "Jack Grigg <jack@electriccoin.co>"
 criteria = "safe-to-deploy"
 delta = "2.0.2 -> 2.1.0"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
+[[audits.fastrand]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "2.1.0 -> 2.1.1"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
 [[audits.ff]]
@@ -1497,6 +1561,12 @@ aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/suppl
 who = "Jack Grigg <jack@electriccoin.co>"
 criteria = "safe-to-deploy"
 delta = "2.8.0 -> 2.9.0"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
+[[audits.ipnet]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "2.9.0 -> 2.10.0"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
 [[audits.is-terminal]]
@@ -2468,6 +2538,13 @@ version = "0.4.0"
 notes = "Most of the crate is code to parse and validate the output of `rustc -vV`. The caller can\nchoose which `rustc` to use, or can use `rustc_version::{version, version_meta}` which will\ntry `$RUSTC` followed by `rustc`.\n\nIf an adversary can arbitrarily set the `$RUSTC` environment variable then this crate will\nexecute arbitrary code. But when this crate is used within a build script, `$RUSTC` should\nbe set correctly by `cargo`.\n"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
+[[audits.rustc_version]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "0.4.0 -> 0.4.1"
+notes = "Changes to `Command` usage are to add support for `RUSTC_WRAPPER`."
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
 [[audits.rustix]]
 who = "Daira-Emma Hopwood <daira@jacaranda.org>"
 criteria = "safe-to-deploy"
@@ -2943,6 +3020,12 @@ notes = "New `build.rs` file uses `autocfg` crate to conditionally enable new tr
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
 [[audits.tempfile]]
+who = "Daira-Emma Hopwood <daira@jacaranda.org>"
+criteria = "safe-to-run"
+delta = "3.5.0 -> 3.12.0"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
+[[audits.tempfile]]
 who = "Jack Grigg <jack@electriccoin.co>"
 criteria = "safe-to-deploy"
 delta = "3.6.0 -> 3.8.0"
@@ -3399,6 +3482,13 @@ criteria = "safe-to-run"
 delta = "0.2.1 -> 0.2.2"
 aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
 
+[[audits.visibility]]
+who = "Kris Nuttycombe <kris@nutty.land>"
+criteria = [ "safe-to-deploy", "license-reviewed",]
+version = "0.1.1"
+notes = "- Crate has no unsafe code, and sets `#![forbid(unsafe_code)]`.\n- Crate has no powerful imports, and exclusively provides a proc macro\n  that safely malleates a visibility modifier.\n"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
 [[audits.wagyu-zcash-parameters]]
 who = "Sean Bowe <ewillbefull@gmail.com>"
 criteria = [ "safe-to-deploy", "crypto-reviewed",]
@@ -3585,6 +3675,40 @@ who = "Jack Grigg <jack@electriccoin.co>"
 criteria = "safe-to-deploy"
 delta = "2.5.0 -> 2.5.2"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
+[[audits.zcash_address]]
+who = "Kris Nuttycombe <kris@nutty.land>"
+criteria = "safe-to-deploy"
+delta = "0.3.2 -> 0.4.0"
+notes = "This release contains no unsafe code and consists soley of added convenience methods."
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[audits.zcash_encoding]]
+who = "Kris Nuttycombe <kris@nutty.land>"
+criteria = "safe-to-deploy"
+delta = "0.2.0 -> 0.2.1"
+notes = "This release adds minor convenience methods and involves no unsafe code."
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[audits.zcash_keys]]
+who = "Kris Nuttycombe <kris@nutty.land>"
+criteria = "safe-to-deploy"
+delta = "0.2.0 -> 0.3.0"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[audits.zcash_primitives]]
+who = "Kris Nuttycombe <kris@nutty.land>"
+criteria = "safe-to-deploy"
+delta = "0.15.1 -> 0.16.0"
+notes = "The primary change here is the switch from the `hdwallet` dependency to using `bip32`."
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[audits.zcash_proofs]]
+who = "Kris Nuttycombe <kris@nutty.land>"
+criteria = "safe-to-deploy"
+delta = "0.15.0 -> 0.16.0"
+notes = "This release involves only updates of previously-vetted dependencies."
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
 
 [[audits.zerocopy]]
 who = "Daira-Emma Hopwood <daira@jacaranda.org>"
@@ -3790,6 +3914,20 @@ end = "2025-04-22"
 aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
 
 [[trusted.orchard]]
+criteria = "safe-to-deploy"
+user-id = 169181
+start = "2024-08-12"
+end = "2025-08-12"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[trusted.orchard]]
+criteria = [ "safe-to-deploy", "crypto-reviewed", "license-reviewed",]
+user-id = 169181
+start = "2024-08-12"
+end = "2025-08-12"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[trusted.orchard]]
 criteria = [ "safe-to-deploy", "crypto-reviewed", "license-reviewed",]
 user-id = 6289
 start = "2021-01-07"
@@ -3808,6 +3946,20 @@ criteria = [ "safe-to-deploy", "crypto-reviewed",]
 user-id = 6289
 start = "2024-01-26"
 end = "2025-04-22"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[trusted.sapling-crypto]]
+criteria = "safe-to-deploy"
+user-id = 169181
+start = "2024-08-12"
+end = "2025-08-12"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[trusted.sapling-crypto]]
+criteria = [ "safe-to-deploy", "crypto-reviewed", "license-reviewed",]
+user-id = 169181
+start = "2024-08-12"
+end = "2025-08-12"
 aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
 
 [[trusted.sapling-crypto]]
@@ -3987,6 +4139,13 @@ aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/sup
 
 [[trusted.zcash_address]]
 criteria = "safe-to-deploy"
+user-id = 169181
+start = "2024-08-20"
+end = "2025-08-26"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[trusted.zcash_address]]
+criteria = "safe-to-deploy"
 user-id = 1244
 start = "2022-10-19"
 end = "2024-09-21"
@@ -3997,6 +4156,13 @@ criteria = "safe-to-deploy"
 user-id = 6289
 start = "2021-03-07"
 end = "2025-03-18"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
+[[trusted.zcash_address]]
+criteria = "safe-to-deploy"
+user-id = 169181
+start = "2024-08-20"
+end = "2025-08-26"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
 [[trusted.zcash_client_backend]]
@@ -4098,6 +4264,13 @@ end = "2025-04-22"
 aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
 
 [[trusted.zcash_primitives]]
+criteria = "safe-to-deploy"
+user-id = 169181
+start = "2024-08-20"
+end = "2025-08-26"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[trusted.zcash_primitives]]
 criteria = [ "safe-to-deploy", "crypto-reviewed", "license-reviewed",]
 user-id = 6289
 start = "2021-03-26"
@@ -4111,6 +4284,13 @@ start = "2019-10-08"
 end = "2024-09-21"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
+[[trusted.zcash_primitives]]
+criteria = "safe-to-deploy"
+user-id = 169181
+start = "2024-08-20"
+end = "2025-08-26"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
 [[trusted.zcash_proofs]]
 criteria = [ "safe-to-deploy", "crypto-reviewed", "license-reviewed",]
 user-id = 6289
@@ -4119,10 +4299,24 @@ end = "2025-04-22"
 aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
 
 [[trusted.zcash_proofs]]
+criteria = "safe-to-deploy"
+user-id = 169181
+start = "2024-08-20"
+end = "2025-08-26"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[trusted.zcash_proofs]]
 criteria = [ "safe-to-deploy", "crypto-reviewed", "license-reviewed",]
 user-id = 6289
 start = "2021-03-26"
 end = "2024-09-21"
+aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
+
+[[trusted.zcash_proofs]]
+criteria = "safe-to-deploy"
+user-id = 169181
+start = "2024-08-20"
+end = "2025-08-26"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
 [[trusted.zcash_protocol]]

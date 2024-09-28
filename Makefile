@@ -8,9 +8,17 @@ install: $(VENV)/bin/activate cargo-scan/Cargo.toml
 	git submodule update
 	. ./$(VENV)/bin/activate
 	cargo build --manifest-path cargo-scan/Cargo.toml
-	# Almost done! The last step is to generate a GitHub personal access token and store it in helpers/token.txt.
+	# Prompt the user to enter their GitHub personal access token
+	@echo "Please enter your GitHub personal access token:"
+	@read token; \
+	if [ ! -z "$$token" ]; then \
+		echo "$$token" > helpers/token.txt; \
+		echo "Token saved to helpers/token.txt"; \
+	else \
+		echo "No token entered. Please generate a GitHub personal access token and store it in helpers/token.txt manually."; \
+	fi
 	# Instructions on how to do this can be found in the README.md file (installation step 4).
-	# Press Enter to continue...
+	@echo "Press Enter to continue..."
 	@read dummy
 
 activate: $(VENV)/bin/activate
