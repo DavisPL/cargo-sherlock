@@ -7,7 +7,7 @@
 
 1. Clone this repository and the [cargo-scan](https://github.com/PLSysSec/cargo-scan) submodule.
 ```Bash
-git clone --recurse-submodules https://github.com/DavisPL/supply-chain-trust.git
+git clone --recurse-submodules https://github.com/DavisPL/cargo-sherlock.git
 ```
 2. Run `rustup update` to ensure you have the latest version of Rust (or install it via the [official website]((https://www.rust-lang.org/tools/install))).
 ```Bash
