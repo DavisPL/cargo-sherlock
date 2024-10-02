@@ -1,4 +1,0 @@
-{'assumptions': ['hex2d-dpcext-0.1.0 has all safe dependencies: 31 wt',
-                 'hex2d-dpcext-0.1.0 having no side effects and having all '
-                 'safe dependencies implies it is safe: 1 wt'],
- 'trust_score': 32}
