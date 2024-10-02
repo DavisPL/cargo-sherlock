@@ -8,8 +8,8 @@ install: $(VENV)/bin/activate cargo-scan/Cargo.toml
 	git submodule update
 	. ./$(VENV)/bin/activate
 	cargo build --manifest-path cargo-scan/Cargo.toml
-	# Prompt the user to enter their GitHub personal access token
-	@echo "Please enter your GitHub personal access token:"
+	# Please enter your GitHub personal access token:
+	# Instructions on how to do this can be found in the README.md file (installation step 4).
 	@read token; \
 	if [ ! -z "$$token" ]; then \
 		echo "$$token" > helpers/token.txt; \
@@ -17,7 +17,6 @@ install: $(VENV)/bin/activate cargo-scan/Cargo.toml
 	else \
 		echo "No token entered. Please generate a GitHub personal access token and store it in helpers/token.txt manually."; \
 	fi
-	# Instructions on how to do this can be found in the README.md file (installation step 4).
 	@echo "Press Enter to continue..."
 	@read dummy
 
