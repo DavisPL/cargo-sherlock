@@ -886,6 +886,12 @@ criteria = "safe-to-deploy"
 delta = "2.3.2 -> 2.3.3"
 notes = "Nothing outside the realm of what one would expect from a bitflags generator,\nall as expected.\n"
 
+[[audits.bitflags]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-deploy"
+delta = "2.4.1 -> 2.6.0"
+notes = "Changes in how macros are invoked and various bits and pieces of macro-fu.\nOtherwise no major changes and nothing dealing with `unsafe`.\n"
+
 [[audits.block-buffer]]
 who = "Benjamin Bouvier <public@benj.me>"
 criteria = "safe-to-deploy"
@@ -1266,6 +1272,12 @@ who = "Alex Crichton <alex@alexcrichton.com>"
 criteria = "safe-to-deploy"
 delta = "1.4.1 -> 1.5.3"
 notes = "This diff brings in a number of minor updates of which none are related to\n`unsafe` code or anything system-related like filesystems.\n"
+
+[[audits.either]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-deploy"
+delta = "1.8.1 -> 1.13.0"
+notes = "More utilities and such for the `Either` type, no `unsafe` code."
 
 [[audits.embedded-io]]
 who = "Alex Crichton <alex@alexcrichton.com>"
@@ -1852,6 +1864,12 @@ criteria = "safe-to-deploy"
 delta = "0.7.1 -> 0.8.0"
 notes = "Minor updates, using new Rust features like `const`, no major changes."
 
+[[audits.miniz_oxide]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-deploy"
+delta = "0.8.0 -> 0.7.4"
+notes = "Very few changes here, only minor updates here and there."
+
 [[audits.mio]]
 who = "Alex Crichton <alex@alexcrichton.com>"
 criteria = "safe-to-deploy"
@@ -2148,6 +2166,12 @@ who = "Trevor Elliott <telliott@fastly.com>"
 criteria = "safe-to-deploy"
 delta = "0.6.1 -> 0.7.0"
 notes = "The Bytecode Alliance is the author of this crate."
+
+[[audits.region]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-deploy"
+delta = "2.2.0 -> 3.0.2"
+notes = "This release brings a number of refactorings and new platforms to be supported\nin the crate. Lots of `unsafe` code because that's what the crate is\nfundamentally doing, managing virtual memory. That being said it's all largely\nthe same as before where it's all as expected and the `unsafe` has to do with\nmanaging OS APIs.\n"
 
 [[audits.rustc-demangle]]
 who = "Alex Crichton <alex@alexcrichton.com>"

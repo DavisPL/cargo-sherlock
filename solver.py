@@ -7,6 +7,7 @@ import helpers.weights as weights
 import helpers.crate_data as crate_data
 from helpers.assumption import Assumption, CrateAssumptionSummary, MadeAssumption, NegativeAssumption
 from helpers.crate_data import CrateVersion
+from pprint import pprint
 
 MAX_MINUTES = 5 # timeout for each call to the solver
 MAX_WEIGHT = 500
@@ -158,18 +159,29 @@ def complete_analysis(crate: CrateVersion):
     """
     summary = memoized_crate_analysis(crate)
     trust_score = sum(a.weight for a in summary.assumptions_made)
+    assumptions = []
     print(f"Trust Score for {crate}: {trust_score}")
     print("Assumptions Made:")
     for a in summary.assumptions_made:
+        assumptions.append(f"{a.name}: {a.weight} wt")
         print(f"{a.name}: {a.weight} wt")
+    codex = {}
+    codex['trust_score'] = trust_score
+    codex['assumptions'] = assumptions
+    return codex
 
 def main():
     parser = argparse.ArgumentParser(description="Perform a complete analysis for a given crate.")
     parser.add_argument("crate_name", type=str, help="The name of the crate to analyze.")
     parser.add_argument("crate_version", type=str, help="The version of the crate to analyze.")
+    parser.add_argument("output", type=str, help="Output file path to save crate information.")
     args = parser.parse_args()
     crate = CrateVersion(args.crate_name, args.crate_version)
-    complete_analysis(crate)
+    codex = complete_analysis(crate)
+    if args.output:
+        with open(args.output, "w") as output_file:
+            pprint(codex, stream=output_file)
+        print(f"Results saved to {args.output}")
 
 if __name__ == "__main__":
     main()

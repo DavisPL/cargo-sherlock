@@ -3,6 +3,7 @@ test.txt
 /logs/exp/
 *.csv
 /experiments/
+run_random.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
