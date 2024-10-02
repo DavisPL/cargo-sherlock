@@ -174,7 +174,7 @@ def main():
     parser = argparse.ArgumentParser(description="Perform a complete analysis for a given crate.")
     parser.add_argument("crate_name", type=str, help="The name of the crate to analyze.")
     parser.add_argument("crate_version", type=str, help="The version of the crate to analyze.")
-    parser.add_argument("output", type=str, help="Output file path to save crate information.")
+    parser.add_argument("--output", default=None, type=str, help="Output file path to save crate information.")
     args = parser.parse_args()
     crate = CrateVersion(args.crate_name, args.crate_version)
     codex = complete_analysis(crate)
@@ -182,6 +182,9 @@ def main():
         with open(args.output, "w") as output_file:
             pprint(codex, stream=output_file)
         print(f"Results saved to {args.output}")
+    else:
+        # If no output provided, just print the results
+        pprint(codex)
 
 if __name__ == "__main__":
     main()

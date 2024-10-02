@@ -54,7 +54,10 @@ def main():
         # Run solver.py with crate_name and version
         crate = CrateVersion(args.crate_name, args.version)
         print(f"Solving for required Assumptions to trust {crate}...")
-        codex = subprocess.run([sys.executable, 'solver.py', args.crate_name, args.version , args.output])
+        command = [sys.executable, 'solver.py', args.crate_name, args.version]
+        if args.output:
+            command.append(args.output)
+        subprocess.run(command)
     else:
         # Get logging information about the crate
         crate = CrateVersion(args.crate_name, args.version)
