@@ -1411,6 +1411,12 @@ delta = "4.5.15 -> 4.5.17"
 notes = "Minor code change and toml changes."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.clap]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "4.5.17 -> 4.5.18"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.clap_builder]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -1493,6 +1499,12 @@ who = "danakj <danakj@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 delta = "4.5.15 -> 4.5.17"
 notes = "No new unsafe, net, fs"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.clap_builder]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "4.5.17 -> 4.5.18"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.clap_conf]]
@@ -5731,6 +5743,12 @@ version = "0.17.13"
 notes = "Grepped for `-i cipher`, `-i crypto`, `'\\bfs\\b'`, `'\\bnet\\b'`, `'\\bunsafe\\b'`\nand there were no hits except for reasonable, client-controlled usage of\n`std::fs::File` in tests in `src/encoder.rs`, tests in `src/decoder/stream.rs`,\nand in some example code.\n\nNote that some additional, internal notes about an older version of this crate\ncan be found at go/image-crate-chromium-security-review.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.png]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "0.17.13 -> 0.17.14"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.polars]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = "ub-risk-0"
@@ -6625,6 +6643,12 @@ aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_p
 who = "Adrian Taylor <adetaylor@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "0.8.3 -> 0.8.4"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.regex-syntax]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "0.8.4 -> 0.8.5"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.regex_automata]]
@@ -8683,6 +8707,12 @@ aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_p
 who = "Lukasz Anforowicz <lukasza@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "0.1.12 -> 0.1.13"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.unicode-width]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "0.1.13 -> 0.1.14"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.unicode-xid]]

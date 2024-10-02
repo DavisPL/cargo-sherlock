@@ -1,0 +1,48 @@
+[package]
+name = "azure_storage_blobs_mirror"
+version = "0.1.0"
+description = "Azure Blob Storage crate from the Azure SDK for Rust"
+readme = "README.md"
+authors = ["Microsoft Corp."]
+license = "MIT"
+repository = "https://github.com/azure/azure-sdk-for-rust"
+homepage = "https://github.com/azure/azure-sdk-for-rust"
+documentation = "https://docs.rs/azure_storage_blobs"
+keywords = ["sdk", "azure", "storage", "blobs"]
+categories = ["api-bindings"]
+edition = "2021"
+
+[dependencies]
+azure_core = { package = "azure_core_mirror", version = "0.3" }
+azure_storage = { package = "azure_storage_mirror", version = "0.2", default-features = false }
+base64 = "0.13"
+bytes = "1.0"
+time = "0.3.10"
+futures = "0.3"
+log = "0.4"
+md5 = "0.7"
+RustyXML = "0.3"
+serde = { version = "1.0" }
+serde_derive = "1.0"
+serde_json = "1.0"
+serde-xml-rs = "0.5"
+uuid = { version = "1.0", features = ["v4"] }
+url = "2.2"
+
+[dev-dependencies]
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+env_logger = "0.9"
+azure_identity = { path = "identity", default_features = false }
+reqwest = "0.11"
+mock_transport = { path = "eng/test/mock_transport" }
+
+[features]
+default = ["enable_reqwest"]
+test_e2e = []
+azurite_workaround = []
+enable_reqwest = ["azure_core/enable_reqwest", "azure_storage/enable_reqwest"]
+enable_reqwest_rustls = [
+  "azure_core/enable_reqwest_rustls",
+  "azure_storage/enable_reqwest_rustls",
+]
+into_future = []

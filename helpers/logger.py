@@ -30,8 +30,7 @@ def get_github_repo_stats(username: str, repository: str, token_file: str = 'tok
 
     url = f"https://api.github.com/repos/{username}/{repository}"
 
-    # print(url)
-
+  
     response = requests.get(url, headers={"Authorization": f"token {token}"})
 
     if response.status_code == 200:
@@ -55,15 +54,14 @@ def get_stars_and_forks(crate_name: str) -> dict | None:
     response = requests.get(url)
     data = response.json()
     repository_url = data['crate']['repository']
-    repository_url = repository_url.rstrip('.git')
-    # print("line 58" , repository_url)
+    if '.git' in repository_url:
+        repository_url = repository_url.rstrip('.git')
 
     if repository_url == None:
         return None
 
     regex = r"https:\/\/github\.com\/([^\/]+)\/([^\/]+)";
     match = re.match(regex, repository_url)
-    # print("line 64" , match)
 
 
     if match:
