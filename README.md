@@ -24,30 +24,15 @@ To run the tool, run the Python interpreter on `sherlock.py`, supplying the crat
 
 Here is an example output:
 ```
-❯ python3 sherlock.py -a anyhow 1.0.87
-Solving for required Assumptions to trust anyhow-1.0.87...
-Solving for minimum weight of assumptions for dtolnay...
-Number of Z3 Variables: 1
-Formula Construction Time: 0.001 sec
-Minimum weight of assumptions for dtolnay: 40
-Z3 Solving Time: 0 sec
-Z3 Num Conflicts: N/A
-==================================
+❯ python3 sherlock.py -a abomonation
+This crate has been flagged by RustSec.
+This crate has not been audited by any organization.
+Trust Score for abomonation-0.7.3: 60
 Assumptions Made:
-ua0_dtolnay: 40 wt
-==================================
-Solving for minimum weight of assumptions for anyhow-1.0.87...
-Number of Z3 Variables: 4
-Formula Construction Time: 0.004 sec
-Minimum weight of assumptions for anyhow-1.0.87: 10
-Z3 Solving Time: 0.001 sec
-Z3 Num Conflicts: 1
-==================================
-Assumptions Made:
-a1_anyhow-1.0.87: 0 wt
-a2_anyhow-1.0.87: 10 wt
-==================================
-Trust Score for anyhow-1.0.87: 10
+abomonation-0.7.3 has many downloads: 0 wt
+abomonation-0.7.3 having many downloads implies it is safe: 10 wt
+abomonation-0.7.3 has all safe dependencies: 0 wt
+abomonation-0.7.3 appearing in RustSec implies it is less safe (score penalty): 50 wt
 ```
 
 ### Basic Usage
