@@ -4,6 +4,7 @@ test.txt
 *.csv
 /experiments/
 run_random.py
+evaluation
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -54,11 +54,10 @@ def get_stars_and_forks(crate_name: str) -> dict | None:
     response = requests.get(url)
     data = response.json()
     repository_url = data['crate']['repository']
-    if '.git' in repository_url:
-        repository_url = repository_url.rstrip('.git')
-
     if repository_url == None:
         return None
+    if '.git' in repository_url:
+        repository_url = repository_url.rstrip('.git')
 
     regex = r"https:\/\/github\.com\/([^\/]+)\/([^\/]+)";
     match = re.match(regex, repository_url)
