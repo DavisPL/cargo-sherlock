@@ -2,6 +2,7 @@
 import argparse
 import datetime
 import logging
+import sys
 import z3
 import helpers.weights as weights
 import helpers.crate_data as crate_data
@@ -153,22 +154,19 @@ def exists_bool_expr(variables: list[z3.BoolRef], expression: z3.BoolRef) -> z3.
     clauses = get_substituted_clauses(variables, expression)
     return z3.Or(clauses)
 
-def complete_analysis(crate: CrateVersion):
+def complete_analysis(crate: CrateVersion, file = None):
     """
-    Performs a complete analysis for a given crate. Prints results to stdout.
+    Performs a complete analysis for a given crate. Prints results to the specified file (or stdout if
+    no file is specified).
     """
     summary = memoized_crate_analysis(crate)
     trust_score = sum(a.weight for a in summary.assumptions_made)
     assumptions = []
-    print(f"Trust Score for {crate}: {trust_score}")
-    print("Assumptions Made:")
+    print(f"Trust Score for {crate}: {trust_score}", file=file)
+    print("Assumptions Made:", file=file)
     for a in summary.assumptions_made:
         assumptions.append(f"{a.name}: {a.weight} wt")
-        print(f"{a.name}: {a.weight} wt")
-    codex = {}
-    codex['trust_score'] = trust_score
-    codex['assumptions'] = assumptions
-    return codex
+        print(f"{a.name}: {a.weight} wt", file=file)
 
 def main():
     parser = argparse.ArgumentParser(description="Perform a complete analysis for a given crate.")
@@ -177,14 +175,7 @@ def main():
     parser.add_argument("--output", default=None, type=str, help="Output file path to save crate information.")
     args = parser.parse_args()
     crate = CrateVersion(args.crate_name, args.crate_version)
-    codex = complete_analysis(crate)
-    if args.output:
-        with open(args.output, "w") as output_file:
-            pprint(codex, stream=output_file)
-        print(f"Results saved to {args.output}")
-    else:
-        # If no output provided, just print the results
-        pprint(codex)
+    complete_analysis(crate, args.output)
 
 if __name__ == "__main__":
     main()
