@@ -2,7 +2,6 @@
 import argparse
 import datetime
 import logging
-import sys
 import z3
 import helpers.weights as weights
 import helpers.crate_data as crate_data
