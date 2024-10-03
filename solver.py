@@ -19,7 +19,7 @@ logging.basicConfig(
     encoding="utf-8",
     filemode="w",
     format="%(asctime)s %(levelname)-8s %(message)s",
-    level=logging.DEBUG,
+    level=logging.INFO,
     datefmt="%Y-%m-%d-%Y %H:%M:%S"
 )
 logger = logging.getLogger(__name__)
@@ -85,11 +85,11 @@ def get_crate_assumption_summary(crate: CrateVersion, variables: list[z3.BoolRef
     Solves for the minimum weight assumptions necessary to prove a crate is safe. Returns a summary of the assumptions made.
     """
     logger.info(f"Solving for minimum weight of assumptions for {crate}...")
-    logger.debug(f"Number of Z3 Variables: {len(variables)}")
+    logger.info(f"Number of Z3 Variables: {len(variables)}")
     optimizer = z3.Optimize()
     optimizer.set("timeout", MAX_MINUTES * 60_000)
     min_weight = z3.Int('min_weight')
-    logger.debug("Constructing Z3 formula...")
+    logger.info("Constructing Z3 formula...")
     assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
     crate_is_safe = z3.Bool(f"{crate}_safe")
     implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(crate_is_safe))
@@ -98,8 +98,8 @@ def get_crate_assumption_summary(crate: CrateVersion, variables: list[z3.BoolRef
     optimizer.add(UNSAT)
     optimizer.add(CON)
     optimizer.add(min_weight == Assumption.assumptions_weight(assumptions))
-    logger.debug("Finished constructing Z3 formula.")
-    logger.debug("Solving Z3 formula...")
+    logger.info("Finished constructing Z3 formula.")
+    logger.info("Solving Z3 formula...")
     optimizer.minimize(min_weight)
     # Check for satisfiability
     result = optimizer.check()
@@ -110,13 +110,13 @@ def get_crate_assumption_summary(crate: CrateVersion, variables: list[z3.BoolRef
         # for some reason, the time taken is not always recorded in the statistics (it seems to not be recorded when the
         # formula is determined to be satisfiable very quickly)
         z3_solving_time = stats.get_key_value('time') if "time" in stats.keys() else 0
-        logger.debug(f"Z3 Solving Time: {z3_solving_time} sec")
+        logger.info(f"Z3 Solving Time: {z3_solving_time} sec")
         if "conflicts" in stats.keys():
-            logger.debug(f"Z3 Num Conflicts: {stats.get_key_value('conflicts')}")
+            logger.info(f"Z3 Num Conflicts: {stats.get_key_value('conflicts')}")
         elif "sat conflicts" in stats.keys():
-            logger.debug(f"Z3 Num Conflicts: {stats.get_key_value('sat conflicts')}")
+            logger.info(f"Z3 Num Conflicts: {stats.get_key_value('sat conflicts')}")
         else:
-            logger.debug("Z3 Num Conflicts: N/A")
+            logger.info("Z3 Num Conflicts: N/A")
         assumptions_made = [MadeAssumption(a.name, a.weight) for a in assumptions if model[a.variable] == a.default_assignment()]
         logger.info("Assumptions Made:")
         for a in assumptions_made:
