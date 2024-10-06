@@ -5,7 +5,6 @@ import helpers.crate_data as crate_data
 from helpers.assumption import CrateVersion
 from pprint import pprint
 from helpers.logger import get_latest_version
-from solver import complete_analysis
 
 def main():
     parser = argparse.ArgumentParser(description='Rust Holmes Sherlock: A tool to analye Rust crates')
@@ -27,6 +26,10 @@ def main():
 
     args = parser.parse_args()
 
+    if args.command is None:
+        parser.print_help()
+        sys.exit(1)
+
     # Fetch the latest version if not provided
     if args.version is None:
         args.version = get_latest_version(args.crate_name)
@@ -47,7 +50,7 @@ def main():
 
         # Get logging information about the crate
         crate = CrateVersion(args.crate_name, args.version)
-        print(f"Getting Logging Information About Crate {crate}...")
+        print(f"Getting logging information About crate {crate}...")
         crate_information = crate_data.get_crate_metadata(crate)
         print(f"Logging information for {args.crate_name}-{args.version}:")
         pprint(crate_information)
@@ -60,8 +63,9 @@ def main():
 
     # Handle the 'trust' subcommand
     elif args.command == 'trust':
+        from solver import complete_analysis
         crate = CrateVersion(args.crate_name, args.version)
-        print(f"Solving for required Assumptions to trust {crate}...", file=args.output)
+        print(f"Solving for required assumptions to trust {crate}...", file=args.output)
         complete_analysis(crate, args.output)
 
 if __name__ == "__main__":
