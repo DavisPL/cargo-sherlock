@@ -62,11 +62,23 @@ def main():
             print(f"Crate information saved to {args.output}.")
 
     # Handle the 'trust' subcommand
+    # elif args.command == 'trust':
+    #     from solver import complete_analysis
+    #     crate = CrateVersion(args.crate_name, args.version)
+    #     print(f"Solving for required assumptions to trust {crate}...", file=args.output)
+    #     complete_analysis(crate, args.output)
     elif args.command == 'trust':
         from solver import complete_analysis
         crate = CrateVersion(args.crate_name, args.version)
-        print(f"Solving for required assumptions to trust {crate}...", file=args.output)
-        complete_analysis(crate, args.output)
+
+        # If output is provided, open the file; otherwise, print to console
+        if args.output:
+            with open(args.output, 'w') as output_file:
+                print(f"Solving for required assumptions to trust {crate}...", file=output_file)
+                complete_analysis(crate, output_file)  # Pass the file object to complete_analysis
+        else:
+            print(f"Solving for required assumptions to trust {crate}...")
+            complete_analysis(crate, sys.stdout)  
 
 if __name__ == "__main__":
     main()

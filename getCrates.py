@@ -8,7 +8,7 @@ import subprocess
 import csv
 import time
 from tqdm import tqdm
-
+ 
 def read_dicts_from_txt(text_file, separator="\n---\n"):
     with open(text_file, "r") as file:
         content = file.read()
@@ -217,34 +217,34 @@ def run_cargo_scan_and_save_output():
         # Return to the original directory
         os.chdir(original_dir)
 
-# codex = read_dicts_from_txt("helpers/data.txt")
-# # print(codex[0])
-# pattern = r'(>=|>)?(\d+\.\d+(\.\d+)?)'
-# print("Downloading RustSec crates...")
-# for data in tqdm(codex):
-#     # print(dict)
-#     # data = dict(data)
-#     # print(data)
-#     # print(type(data))
-#     data = parse_dict_string(data)
-#     # print(data)
-#     temp = data["package"]
-#     package = temp["name"].split("(")[0]
-#     # print(package)
-#     temp = data["patched"]
-#     versions = list()
-#     target_version = str()
-#     if temp == "no patched versions":
-#         versions = get_versions(package)
-#         target_version = versions[-1]
-#     else:
-#         (_,ver,_) = re.findall(pattern, temp)[0]
-#         versions = get_versions(package)
-#         if versions == "error":
-#             continue
-#         target_version = find_previous_version(ver, versions)
-#     download_crate(package,target_version)
+codex = read_dicts_from_txt("helpers/data.txt")
+# print(codex[0])
+pattern = r'(>=|>)?(\d+\.\d+(\.\d+)?)'
+print("Downloading RustSec crates...")
+for data in tqdm(codex):
+    # print(dict)
+    # data = dict(data)
+    # print(data)
+    # print(type(data))
+    data = parse_dict_string(data)
+    # print(data)
+    temp = data["package"]
+    package = temp["name"].split("(")[0]
+    # print(package)
+    temp = data["patched"]
+    versions = list()
+    target_version = str()
+    if temp == "no patched versions":
+        versions = get_versions(package)
+        target_version = versions[-1]
+    else:
+        (_,ver,_) = re.findall(pattern, temp)[0]
+        versions = get_versions(package)
+        if versions == "error":
+            continue
+        target_version = find_previous_version(ver, versions)
+    download_crate(package,target_version)
     time.sleep(0.1)
 
-# extract_and_delete()
+extract_and_delete()
 run_cargo_scan_and_save_output()

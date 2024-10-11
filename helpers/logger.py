@@ -551,7 +551,7 @@ def get_potential_functions(file_path):
         formatted_lines = formatter(lines)
         # print(formatted_lines)
         formatted_lines = [clean_row(row) for row in formatted_lines]
-        # print(formatted_lines)
+        # print("554 " , formatted_lines)
         df = pd.DataFrame(formatted_lines[1:] , columns=formatted_lines[0])
         # print(df)
         with open("effect_counts.json", "r") as file:
@@ -738,13 +738,12 @@ def run_cargo_and_save(crate_name, crate_version):
         os.mkdir("../experiments") 
 
     original_directory = os.getcwd()
-    crate_name = crate_name.replace('-', '_')
-    output_file_path = os.path.join(original_directory, "../experiments", f"{crate_name}-{crate_version}.csv")
+    # crate_name = crate_name.replace('-', '_') # idk why this was here, but this was casuing the cargo-scan to crash, because this modified the crate-name that was supplied to cargo-scan and than cargo-scan would not be able to find the directory and cause a crash. This lead to that 2 columns passed, expeced 8 columns error. Commenting this fixed this. This might cause issues later. But the issue is yet to be encounterd. 
     crate_path = os.path.join(original_directory, "../processing", f"{crate_name}-{crate_version}")
+    output_file_path = os.path.join(original_directory, "../experiments", f"{crate_name}-{crate_version}.csv")
 
     cargo_scan_directory = os.path.join(original_directory, "../cargo-scan")
     os.chdir(cargo_scan_directory)
-
     command = f'cargo run --bin scan {crate_path}'
     # Combine stderr into stdout to capture all output
     result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)

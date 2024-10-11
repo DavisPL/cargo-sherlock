@@ -5,6 +5,8 @@ test.txt
 /experiments/
 run_random.py
 evaluation
+*.txt
+rustsec
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
