@@ -7,7 +7,6 @@ import helpers.weights as weights
 import helpers.crate_data as crate_data
 from helpers.assumption import Assumption, CrateAssumptionSummary, MadeAssumption, NegativeAssumption
 from helpers.crate_data import CrateVersion
-from pprint import pprint
 
 MAX_MINUTES = 5 # timeout for each call to the solver
 MAX_WEIGHT = 500
@@ -56,7 +55,7 @@ def get_crate_assumptions(crate: CrateVersion, metadata: dict) -> tuple[list[z3.
         Assumption(f"{crate} having many downloads implies it is safe", z3.Implies(good_downloads, safe), 10),
         Assumption(f"{crate} having a passed audit implies it is safe", z3.Implies(passed_audit, safe), 30),
         Assumption(f"{crate} has many stars and forks", good_repo_stats, weights.repo_stats_weight(metadata["stars"], metadata["forks"])),
-        Assumption(f"{crate} having many stars and forms implies it is safe", z3.Implies(good_repo_stats, safe), 15),
+        Assumption(f"{crate} having many stars and forks implies it is safe", z3.Implies(good_repo_stats, safe), 15),
         Assumption(f"{crate} has all safe dependencies", all_dependencies_safe, min_weight_for_dependency_safety),
         Assumption(f"{crate} having no side effects and having all safe dependencies implies it is safe", z3.Implies(z3.And(no_side_effects, all_dependencies_safe), safe), 1),
         NegativeAssumption(f"{crate} appearing in RustSec implies it is less safe (score penalty)", z3.Implies(in_rust_sec, z3.Not(safe)), 50),
