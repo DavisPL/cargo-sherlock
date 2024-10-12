@@ -5,7 +5,7 @@ import logging
 import z3
 import helpers.weights as weights
 import helpers.crate_data as crate_data
-from helpers.assumption import Assumption, CrateAssumptionSummary, MadeAssumption, NegativeAssumption
+from helpers.assumption import Assumption, CrateAssumptionSummary, NegativeAssumption
 from helpers.crate_data import CrateVersion
 
 MAX_MINUTES = 5 # timeout for each call to the solver
@@ -50,15 +50,15 @@ def get_crate_assumptions(crate: CrateVersion, metadata: dict) -> tuple[list[z3.
     min_weight_for_dependency_safety = sum(a.weight for a in assumptions_made_no_duplicates)
 
     assumptions = [
-        Assumption(f"{crate} is safe", safe, MAX_WEIGHT),
-        Assumption(f"{crate} has many downloads", good_downloads, weights.downloads_weight(metadata["downloads"])),
-        Assumption(f"{crate} having many downloads implies it is safe", z3.Implies(good_downloads, safe), 10),
-        Assumption(f"{crate} having a passed audit implies it is safe", z3.Implies(passed_audit, safe), 30),
-        Assumption(f"{crate} has many stars and forks", good_repo_stats, weights.repo_stats_weight(metadata["stars"], metadata["forks"])),
-        Assumption(f"{crate} having many stars and forks implies it is safe", z3.Implies(good_repo_stats, safe), 15),
-        Assumption(f"{crate} has all safe dependencies", all_dependencies_safe, min_weight_for_dependency_safety),
-        Assumption(f"{crate} having no side effects and having all safe dependencies implies it is safe", z3.Implies(z3.And(no_side_effects, all_dependencies_safe), safe), 1),
-        NegativeAssumption(f"{crate} appearing in RustSec implies it is less safe (score penalty)", z3.Implies(in_rust_sec, z3.Not(safe)), 50),
+        Assumption(0, crate, safe, MAX_WEIGHT),
+        Assumption(1, crate, good_downloads, weights.downloads_weight(metadata["downloads"])),
+        Assumption(2, crate, z3.Implies(good_downloads, safe), 10),
+        Assumption(3, crate, z3.Implies(passed_audit, safe), 30),
+        Assumption(4, crate, good_repo_stats, weights.repo_stats_weight(metadata["stars"], metadata["forks"])),
+        Assumption(5, crate, z3.Implies(good_repo_stats, safe), 15),
+        Assumption(6, crate, all_dependencies_safe, min_weight_for_dependency_safety),
+        Assumption(7, crate, z3.Implies(z3.And(no_side_effects, all_dependencies_safe), safe), 1),
+        NegativeAssumption(8, crate, z3.Implies(in_rust_sec, z3.Not(safe)), 50),
     ]
 
     return (unknown_vars, assumptions)
@@ -115,10 +115,10 @@ def get_crate_assumption_summary(crate: CrateVersion, variables: list[z3.BoolRef
             logger.info(f"Z3 Num Conflicts: {stats.get_key_value('sat conflicts')}")
         else:
             logger.info("Z3 Num Conflicts: N/A")
-        assumptions_made = [MadeAssumption(a.name, a.weight) for a in assumptions if model[a.variable] == a.default_assignment()]
+        assumptions_made = [a for a in assumptions if model[a.variable] == a.default_assignment()]
         logger.info("Assumptions Made:")
         for a in assumptions_made:
-            logger.info(f"{a.name}: {a.weight} wt")
+            logger.info(a.__repr__())
         return CrateAssumptionSummary(crate, assumptions_made)
     elif result == z3.unsat:
         logger.critical("The Z3 formula is unsatisfiable.") # This should never happen
@@ -126,7 +126,8 @@ def get_crate_assumption_summary(crate: CrateVersion, variables: list[z3.BoolRef
     else:
         logger.error("The satisfiability of the formula could not be determined.")
         logger.error(f"Z3 Reason: {optimizer.reason_unknown()}")
-        return CrateAssumptionSummary(crate, [MadeAssumption(f"{crate.name}-{crate.version}_safe", MAX_WEIGHT)])
+        assumptions_made = [Assumption(0, crate, z3.Bool(f"{crate}_safe"), MAX_WEIGHT)]
+        return CrateAssumptionSummary(crate, assumptions_made)
 
 def get_substituted_clauses(variables: list[z3.BoolRef], expression: z3.BoolRef) -> list[z3.BoolRef]:
     """
@@ -159,12 +160,10 @@ def complete_analysis(crate: CrateVersion, file = None):
     """
     summary = memoized_crate_analysis(crate)
     trust_score = sum(a.weight for a in summary.assumptions_made)
-    assumptions = []
     print(f"Trust Score for {crate}: {trust_score}", file=file)
     print("Assumptions Made:", file=file)
     for a in summary.assumptions_made:
-        assumptions.append(f"{a.name}: {a.weight} wt")
-        print(f"{a.name}: {a.weight} wt", file=file)
+        print(a, file=file)
 
 def main():
     parser = argparse.ArgumentParser(description="Perform a complete analysis for a given crate.")
