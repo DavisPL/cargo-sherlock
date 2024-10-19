@@ -25,7 +25,8 @@ logger = logging.getLogger(__name__)
 def get_crate_assumptions(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRef], list[Assumption]]:
     """
     Returns a list of Z3 variables and possible assumptions for a given crate. Notably, one of the assumptions is that
-    all dependencies of the crate are safe. The weight of this assumption is decided 
+    all dependencies of the crate are safe. The weight of this assumption is decided by recursively calling this function
+    on the depdenencies of the crate.
     """
     # Unknown variables
     safe = z3.Bool(f"{crate}_safe")  # crate is safe
