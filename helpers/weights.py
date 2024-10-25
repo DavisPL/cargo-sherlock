@@ -5,7 +5,7 @@ def downloads_weight(downloads: int) -> int:
     Assigns a weight to the assumption "the crate has a good enough number of downloads" 
     as a function of the number of downloads the crate actually has.
     """
-    return round(1000*math.exp(-downloads/100000))
+    return round(1000 * (1 - (1/9) * math.log10(downloads)) ** 3)
 
 def repo_stats_weight(stars: int, forks: int) -> int:
     """

@@ -547,7 +547,9 @@ def get_potential_functions(file_path):
     try:
         with open(file_path) as csv_file:
             reader = list(csv.reader(csv_file))
-            lines = reader[2:-3] # removing the first two and last three lines
+            target = ['crate, fn_decl, callee, effect, dir, file, line, col']
+            start_index = reader.index(target)
+            lines = reader[start_index:-3] # removing the first two and last three lines
         formatted_lines = formatter(lines)
         # print(formatted_lines)
         formatted_lines = [clean_row(row) for row in formatted_lines]
