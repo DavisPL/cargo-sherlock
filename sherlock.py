@@ -28,7 +28,7 @@ def main():
 
     if args.command is None:
         parser.print_help()
-        sys.exit(1)
+        sys.exit(0)
 
     # Fetch the latest version if not provided
     if args.version is None:
