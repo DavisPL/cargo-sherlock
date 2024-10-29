@@ -5,6 +5,7 @@ import logging
 import z3
 import helpers.weights as weights
 import helpers.crate_data as crate_data
+import helpers.developer_data as developer_data
 from helpers.assumption import Assumption, CrateAssumptionSummary, NegativeAssumption
 from helpers.crate_data import CrateVersion
 
@@ -22,6 +23,27 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+def get_developer_assumptions(developer: str, metadata: dict) -> tuple[list[z3.BoolRef], list[Assumption]]:
+    """
+    Returns a list of Z3 variables and possible assumptions for a given developer. 
+    """
+    # TODO: Expand this function to include more assumptions about developers
+
+    # Unknown variables
+    trusted = z3.Bool(f"{developer}_trusted")  # developer is trusted
+    unknown_vars = [trusted]
+
+    # Known variables
+    in_trusted_list = z3.BoolVal(metadata["in_trusted_list"])  # developer is in the list of trusted developers
+
+    assumptions = [
+        Assumption(f"{developer} is trusted", trusted, 450),
+        Assumption(f"{developer} being in the trusted list implies they are trusted", z3.Implies(in_trusted_list, trusted), 3)
+    ]
+
+    return (unknown_vars, assumptions)
+
+
 def get_crate_assumptions(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRef], list[Assumption]]:
     """
     Returns a list of Z3 variables and possible assumptions for a given crate. Notably, one of the assumptions is that
@@ -33,7 +55,11 @@ def get_crate_assumptions(crate: CrateVersion, metadata: dict) -> tuple[list[z3.
     good_downloads = z3.Bool(f"{crate}_high_downloads")  # crate has a 'good enough' number of downloads
     good_repo_stats = z3.Bool(f"{crate}_high_repo_stats")  # crate repo has a 'good enough' number of stars and forks
     all_dependencies_safe = z3.Bool(f"{crate}_all_dependencies_safe")  # all crate dependencies are safe
-    unknown_vars = [safe, good_downloads, good_repo_stats, all_dependencies_safe]
+    developers_trusted = []
+    for developer in metadata["developers"]:
+        trusted = z3.Bool(f"{developer}_trusted")
+        developers_trusted.append(trusted)
+    unknown_vars = [safe, good_downloads, good_repo_stats, all_dependencies_safe] + developers_trusted
 
     # Known variables
     passed_audit = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
@@ -43,24 +69,31 @@ def get_crate_assumptions(crate: CrateVersion, metadata: dict) -> tuple[list[z3.
     # Assumptions necessary to prove all dependencies are safe. Each element CrateAssumptionSummary in the list
     # contains the assumptions necessary to prove that a single dependency is safe.
     assumptions_for_dependency_safety: list[CrateAssumptionSummary] = []
-    d: CrateVersion
-    for d in metadata["dependencies"]:
-        assumptions_for_dependency_safety.append(memoized_crate_analysis(d))
+    dependency: CrateVersion
+    for dependency in metadata["dependencies"]:
+        assumptions_for_dependency_safety.append(memoized_crate_analysis(dependency))
     # Duplicate assumptions are removed to avoid double counting the weight of assumptions.
     assumptions_made_no_duplicates = set(a for s in assumptions_for_dependency_safety for a in s.assumptions_made)
     min_weight_for_dependency_safety = sum(a.weight for a in assumptions_made_no_duplicates)
-
+    
     assumptions = [
-        Assumption(0, crate, safe, MAX_WEIGHT),
-        Assumption(1, crate, good_downloads, weights.downloads_weight(metadata["downloads"])),
-        Assumption(2, crate, z3.Implies(good_downloads, safe), 10),
-        Assumption(3, crate, z3.Implies(passed_audit, safe), 30),
-        Assumption(4, crate, good_repo_stats, weights.repo_stats_weight(metadata["stars"], metadata["forks"])),
-        Assumption(5, crate, z3.Implies(good_repo_stats, safe), 15),
-        Assumption(6, crate, all_dependencies_safe, min_weight_for_dependency_safety),
-        Assumption(7, crate, z3.Implies(z3.And(no_side_effects, all_dependencies_safe), safe), 1),
-        NegativeAssumption(8, crate, z3.Implies(in_rust_sec, z3.Not(safe)), 50),
+        Assumption(f"{crate} is safe", safe, MAX_WEIGHT),
+        Assumption(f"{crate} has many downloads", good_downloads, weights.downloads_weight(metadata["downloads"])),
+        Assumption(f"{crate} having many downloads implies it is safe", z3.Implies(good_downloads, safe), 10),
+        Assumption(f"{crate} having a passed audit implies it is safe", z3.Implies(passed_audit, safe), 30),
+        Assumption(f"{crate} has many stars and forks", good_repo_stats, weights.repo_stats_weight(metadata["stars"], metadata["forks"])),
+        Assumption(f"{crate} having many stars and forks implies it is safe", z3.Implies(good_repo_stats, safe), 15),
+        Assumption(f"{crate} has all safe dependencies", all_dependencies_safe, min_weight_for_dependency_safety),
+        Assumption(f"{crate} having no side effects and having all safe dependencies implies it is safe", z3.Implies(z3.And(no_side_effects, all_dependencies_safe), safe), 1),
+        Assumption(f"{crate} having all trusted developers implies it is safe", z3.Implies(z3.And(developers_trusted), safe), 2),
+        NegativeAssumption(f"{crate} appearing in RustSec implies it is less safe (score penalty)", z3.Implies(in_rust_sec, z3.Not(safe)), 50),
     ]
+
+    for developer in metadata["developers"]:
+        metadata = developer_data.get_developer_metadata(developer)
+        developer_variables, developer_assumptions = get_developer_assumptions(developer, metadata)
+        developer_min_weight = get_developer_min_weight(developer, developer_variables, developer_assumptions)
+        assumptions.append(Assumption(f"{developer} is trusted", z3.Bool(f"{developer}_trusted"), developer_min_weight))
 
     return (unknown_vars, assumptions)
 
@@ -127,8 +160,55 @@ def get_crate_assumption_summary(crate: CrateVersion, variables: list[z3.BoolRef
     else:
         logger.error("The satisfiability of the formula could not be determined.")
         logger.error(f"Z3 Reason: {optimizer.reason_unknown()}")
-        assumptions_made = [Assumption(0, crate, z3.Bool(f"{crate}_safe"), MAX_WEIGHT)]
+        assumptions_made = [Assumption(f"{crate} is safe", crate_is_safe, MAX_WEIGHT)]
         return CrateAssumptionSummary(crate, assumptions_made)
+    
+def get_developer_min_weight(developer: str, variables: list[z3.BoolRef], assumptions: list[Assumption]) -> int:
+    """
+    Solves for the minimum weight assumptions necessary to prove a developer is trustworthy. Returns the minimum weight.
+    """
+    logger.info(f"Solving for minimum weight of assumptions for {developer}...")
+    logger.info(f"Number of Z3 Variables: {len(variables)}")
+    optimizer = z3.Optimize()
+    optimizer.set("timeout", MAX_MINUTES * 60_000)
+    min_weight = z3.Int('min_weight')
+    logger.info("Constructing Z3 formula...")
+    assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
+    crate_is_safe = z3.Bool(f"{developer}_trusted")
+    implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(crate_is_safe))
+    UNSAT = z3.Not(exists_bool_expr(variables, implications_with_neg_conclusion))
+    CON = exists_bool_expr(variables, assumption_implications)
+    optimizer.add(UNSAT)
+    optimizer.add(CON)
+    optimizer.add(min_weight == Assumption.assumptions_weight(assumptions))
+    logger.info("Finished constructing Z3 formula.")
+    logger.info("Solving Z3 formula...")
+    optimizer.minimize(min_weight)
+    # Check for satisfiability
+    result = optimizer.check()
+    if result == z3.sat:
+        model = optimizer.model()
+        stats = optimizer.statistics()
+        logger.info(f"Minimum weight of assumptions for {developer}: {model[min_weight]}")
+        # for some reason, the time taken is not always recorded in the statistics (it seems to not be recorded when the
+        # formula is determined to be satisfiable very quickly)
+        z3_solving_time = stats.get_key_value('time') if "time" in stats.keys() else 0
+        logger.info(f"Z3 Solving Time: {z3_solving_time} sec")
+        if "conflicts" in stats.keys():
+            logger.info(f"Z3 Num Conflicts: {stats.get_key_value('conflicts')}")
+        elif "sat conflicts" in stats.keys():
+            logger.info(f"Z3 Num Conflicts: {stats.get_key_value('sat conflicts')}")
+        else:
+            logger.info("Z3 Num Conflicts: N/A")
+        min_weight_int: z3.IntNumRef = model[min_weight]
+        return min_weight_int.as_long()
+    elif result == z3.unsat:
+        logger.critical("The Z3 formula is unsatisfiable.") # This should never happen
+        raise Exception
+    else:
+        logger.error("The satisfiability of the formula could not be determined.")
+        logger.error(f"Z3 Reason: {optimizer.reason_unknown()}")
+        return MAX_WEIGHT
 
 def get_substituted_clauses(variables: list[z3.BoolRef], expression: z3.BoolRef) -> list[z3.BoolRef]:
     """
