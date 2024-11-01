@@ -55,7 +55,7 @@ def get_crate_assumptions(crate: CrateVersion, metadata: dict) -> tuple[list[z3.
     good_downloads = z3.Bool(f"{crate}_high_downloads")  # crate has a 'good enough' number of downloads
     good_repo_stats = z3.Bool(f"{crate}_high_repo_stats")  # crate repo has a 'good enough' number of stars and forks
     all_dependencies_safe = z3.Bool(f"{crate}_all_dependencies_safe")  # all crate dependencies are safe
-    developers_trusted = []
+    developers_trusted: list[z3.BoolRef] = []
     for developer in metadata["developers"]:
         trusted = z3.Bool(f"{developer}_trusted")
         developers_trusted.append(trusted)
