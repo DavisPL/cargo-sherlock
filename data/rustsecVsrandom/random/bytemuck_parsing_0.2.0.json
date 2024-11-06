@@ -1,0 +1,5 @@
+Solving for required assumptions to trust bytemuck_parsing-0.2.0...
+Trust Score for bytemuck_parsing-0.2.0: 25
+Assumptions Made:
+bytemuck_parsing-0.2.0 has all safe dependencies: 24 wt
+bytemuck_parsing-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

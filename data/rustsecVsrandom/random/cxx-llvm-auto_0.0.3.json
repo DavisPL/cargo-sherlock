@@ -1,0 +1,5 @@
+Solving for required assumptions to trust cxx-llvm-auto-0.0.3...
+Trust Score for cxx-llvm-auto-0.0.3: 239
+Assumptions Made:
+cxx-llvm-auto-0.0.3 has many downloads: 229 wt
+cxx-llvm-auto-0.0.3 having many downloads implies it is safe: 10 wt

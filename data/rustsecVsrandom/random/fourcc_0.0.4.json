@@ -1,0 +1,5 @@
+Solving for required assumptions to trust fourcc-0.0.4...
+Trust Score for fourcc-0.0.4: 1
+Assumptions Made:
+fourcc-0.0.4 has all safe dependencies: 0 wt
+fourcc-0.0.4 having no side effects and having all safe dependencies implies it is safe: 1 wt

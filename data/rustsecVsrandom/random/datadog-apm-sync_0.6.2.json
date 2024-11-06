@@ -1,0 +1,5 @@
+Solving for required assumptions to trust datadog-apm-sync-0.6.2...
+Trust Score for datadog-apm-sync-0.6.2: 112
+Assumptions Made:
+datadog-apm-sync-0.6.2 has many downloads: 102 wt
+datadog-apm-sync-0.6.2 having many downloads implies it is safe: 10 wt

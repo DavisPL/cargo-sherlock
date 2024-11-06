@@ -1,0 +1,5 @@
+Solving for required assumptions to trust byteme-0.0.5...
+Trust Score for byteme-0.0.5: 54
+Assumptions Made:
+byteme-0.0.5 has all safe dependencies: 53 wt
+byteme-0.0.5 having no side effects and having all safe dependencies implies it is safe: 1 wt
