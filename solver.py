@@ -44,7 +44,12 @@ def get_developer_assumptions(developer: str, metadata: dict) -> tuple[list[z3.B
     return (unknown_vars, assumptions)
 
 
-def get_crate_assumptions(crate: CrateVersion, metadata: dict, processed_crates: set[CrateVersion] = set()) -> tuple[list[z3.BoolRef], list[Assumption]]:
+def get_crate_assumptions(
+        crate: CrateVersion, 
+        metadata: dict, 
+        processed_crates: set[CrateVersion] = set(), 
+        processed_developers: set[str] = set()
+    ) -> tuple[list[z3.BoolRef], list[Assumption]]:
     """
     Returns a list of Z3 variables and possible assumptions for a given crate.
     """
@@ -73,32 +78,30 @@ def get_crate_assumptions(crate: CrateVersion, metadata: dict, processed_crates:
 
     developers_trusted: list[z3.BoolRef] = []
     for developer in metadata["developers"]:
-        developer_metadata = developer_data.get_developer_metadata(developer)
-        developer_variables, developer_assumptions = get_developer_assumptions(developer, developer_metadata)
-        unknown_vars += developer_variables
+        if developer not in processed_developers:
+            processed_developers.add(developer)
+            developer_metadata = developer_data.get_developer_metadata(developer)
+            developer_variables, developer_assumptions = get_developer_assumptions(developer, developer_metadata)
+            unknown_vars += developer_variables
+            assumptions.extend(developer_assumptions)
         developers_trusted.append(z3.Bool(f"{developer}_trusted"))
-        assumptions.append(
-            Assumption(
-                f"{crate} having all trusted developers implies it is safe", 
-                z3.Implies(z3.And(developers_trusted), safe), 2
-            )
-        )
-        assumptions.extend(developer_assumptions)
+    assumptions.append(Assumption(f"{crate} having all trusted developers implies it is safe", z3.Implies(z3.And(developers_trusted), safe), 2))
 
     dependencies_safe: list[z3.BoolRef] = []
     dependency: CrateVersion
     for dependency in metadata["dependencies"]:
-        dependency_metadata = crate_data.get_crate_metadata(dependency)
-        dependency_variables, dependency_assumptions = get_crate_assumptions(dependency, dependency_metadata, processed_crates)
-        dependencies_safe.append(z3.Bool(f"{dependency}_safe"))
-        unknown_vars += dependency_variables
-        assumptions.append(
-            Assumption(
-                f"{crate} having no side effects and having all safe dependencies implies it is safe", 
-                z3.Implies(z3.And(no_side_effects, z3.And(dependencies_safe)), safe), 1
+        if dependency not in processed_crates:
+            dependency_metadata = crate_data.get_crate_metadata(dependency)
+            dependency_variables, dependency_assumptions = get_crate_assumptions(dependency, dependency_metadata, processed_crates)
+            dependencies_safe.append(z3.Bool(f"{dependency}_safe"))
+            unknown_vars += dependency_variables
+            assumptions.append(
+                Assumption(
+                    f"{crate} having no side effects and having all safe dependencies implies it is safe", 
+                    z3.Implies(z3.And(no_side_effects, z3.And(dependencies_safe)), safe), 1
+                )
             )
-        )
-        assumptions.extend(dependency_assumptions)
+            assumptions.extend(dependency_assumptions)
     
     return (unknown_vars, assumptions)
 
@@ -197,11 +200,11 @@ def main():
     parser.add_argument("crate_name", type=str, help="The name of the crate to analyze.")
     parser.add_argument("crate_version", type=str, help="The version of the crate to analyze.")
     parser.add_argument("--output", default=None, type=str, help="Output file path to save crate information.")
-    args = parser.parse_args()
-    crate = CrateVersion(args.crate_name, args.crate_version)
-    # crate = CrateVersion("anyhow", "1.0.91")
-    complete_analysis(crate, args.output)
-    # complete_analysis(crate)
+    # args = parser.parse_args()
+    # crate = CrateVersion(args.crate_name, args.crate_version)
+    crate = CrateVersion("syn", "2.0.87")
+    # complete_analysis(crate, args.output)
+    complete_analysis(crate)
 
 if __name__ == "__main__":
     main()
