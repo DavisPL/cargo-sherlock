@@ -43,7 +43,6 @@ def get_developer_assumptions(developer: str, metadata: dict) -> tuple[list[z3.B
 
     return (unknown_vars, assumptions)
 
-
 def get_crate_assumptions(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRef], list[Assumption]]:
     """
     Returns a list of Z3 variables and possible assumptions for a given crate. Notably, one of the assumptions is that
@@ -108,6 +107,7 @@ def memoized_crate_analysis(crate: CrateVersion, processed_crates: list[CrateAss
         return summary
     metadata = crate_data.get_crate_metadata(crate)
     variables, assumptions = get_crate_assumptions(crate, metadata)
+    Assumption.weight_consistency_check(assumptions)
     summary = get_crate_assumption_summary(crate, variables, assumptions)
     processed_crates.append(summary)
     return summary
