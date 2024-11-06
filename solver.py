@@ -6,11 +6,10 @@ import z3
 import helpers.weights as weights
 import helpers.crate_data as crate_data
 import helpers.developer_data as developer_data
-from helpers.assumption import Assumption, CrateAssumptionSummary, NegativeAssumption
+from helpers.assumption import Assumption, CrateAssumptionSummary, NegativeAssumption, MAX_WEIGHT
 from helpers.crate_data import CrateVersion
 
 MAX_MINUTES = 5 # timeout for each call to the solver
-MAX_WEIGHT = 500
 
 logfile_name = datetime.datetime.now().strftime('logs/solver/%Y-%m-%d_%H:%M:%S.log')
 logging.basicConfig(
