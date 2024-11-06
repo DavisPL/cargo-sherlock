@@ -57,12 +57,6 @@ class NegativeAssumption(Assumption):
     """
     def __repr__(self) -> str:
         return f"Negative{super().__repr__()}"
-    def __str__(self) -> str:
-        match self.id:
-            case 8:
-                return f"{self.crate} appearing in RustSec implies it is less safe (score penalty): {self.weight} weight"
-            case _:
-                return super().__str__(self)
     def default_assignment(self) -> z3.BoolRef:
         """
         Returns the default assignment of the negative assumption. This is false for
