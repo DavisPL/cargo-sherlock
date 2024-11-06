@@ -184,6 +184,7 @@ def complete_analysis(crate: CrateVersion, file = None):
     """
     metadata = crate_data.get_crate_metadata(crate)
     variables, assumptions = get_crate_assumptions(crate, metadata)
+    Assumption.weight_consistency_check(assumptions)
     summary = get_crate_assumption_summary(crate, variables, assumptions)
     trust_score = sum(a.weight for a in summary.assumptions_made)
     print(f"Trust Score for {crate}: {trust_score}", file=file)
