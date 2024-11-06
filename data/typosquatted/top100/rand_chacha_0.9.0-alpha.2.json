@@ -1,0 +1,5 @@
+Solving for required assumptions to trust rand_chacha-0.9.0-alpha.2...
+Trust Score for rand_chacha-0.9.0-alpha.2: 10
+Assumptions Made:
+rand_chacha-0.9.0-alpha.2 has many downloads: 0 wt
+rand_chacha-0.9.0-alpha.2 having many downloads implies it is safe: 10 wt
