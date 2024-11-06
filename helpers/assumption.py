@@ -2,7 +2,6 @@
 from typing import NamedTuple
 import z3
 from helpers.crate_data import CrateVersion
-from solver import MAX_WEIGHT
 
 class Assumption:
     """
@@ -46,6 +45,7 @@ class Assumption:
         Conducts a consistency check on the weights for a list of assumptions. Prints a warning message to 
         stdout if weights are found to be inconsistent.
         """
+        from solver import MAX_WEIGHT
         for assumption in assumptions:
             if assumption.weight > MAX_WEIGHT or assumption.weight < 0:
                 print(f"WARNING: The weight {assumption.weight} on {assumption.name} is not consistent with the other assumptions.")
