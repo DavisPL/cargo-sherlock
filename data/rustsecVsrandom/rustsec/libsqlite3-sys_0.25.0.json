@@ -1,0 +1,8 @@
+Solving for required assumptions to trust libsqlite3-sys-0.25.0...
+Trust Score for libsqlite3-sys-0.25.0: 64
+Assumptions Made:
+libsqlite3-sys-0.25.0 has many downloads: 4 wt
+libsqlite3-sys-0.25.0 having many downloads implies it is safe: 10 wt
+libsqlite3-sys-0.25.0 has many stars and forks: 0 wt
+libsqlite3-sys-0.25.0 has all safe dependencies: 0 wt
+libsqlite3-sys-0.25.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

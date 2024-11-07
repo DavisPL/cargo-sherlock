@@ -1,0 +1,6 @@
+Solving for required assumptions to trust ammonia-2.0.0...
+Trust Score for ammonia-2.0.0: 76
+Assumptions Made:
+ammonia-2.0.0 has many downloads: 16 wt
+ammonia-2.0.0 having many downloads implies it is safe: 10 wt
+ammonia-2.0.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust phonenumber-0.3.6+8.13.36...
+Trust Score for phonenumber-0.3.6+8.13.36: 83
+Assumptions Made:
+phonenumber-0.3.6+8.13.36 has many downloads: 23 wt
+phonenumber-0.3.6+8.13.36 having many downloads implies it is safe: 10 wt
+phonenumber-0.3.6+8.13.36 appearing in RustSec implies it is less safe (score penalty): 50 weight

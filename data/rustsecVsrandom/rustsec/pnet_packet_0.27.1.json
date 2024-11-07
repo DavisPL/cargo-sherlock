@@ -1,0 +1,6 @@
+Solving for required assumptions to trust pnet_packet-0.27.1...
+Trust Score for pnet_packet-0.27.1: 65
+Assumptions Made:
+pnet_packet-0.27.1 has many stars and forks: 0 wt
+pnet_packet-0.27.1 having many stars and forks implies it is safe: 15 wt
+pnet_packet-0.27.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

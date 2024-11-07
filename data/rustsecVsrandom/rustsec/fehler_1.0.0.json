@@ -1,0 +1,6 @@
+Solving for required assumptions to trust fehler-1.0.0...
+Trust Score for fehler-1.0.0: 82
+Assumptions Made:
+fehler-1.0.0 has all safe dependencies: 31 wt
+fehler-1.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+fehler-1.0.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

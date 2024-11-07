@@ -1,0 +1,6 @@
+Solving for required assumptions to trust gix-path-0.10.8...
+Trust Score for gix-path-0.10.8: 65
+Assumptions Made:
+gix-path-0.10.8 has many stars and forks: 0 wt
+gix-path-0.10.8 having many stars and forks implies it is safe: 15 wt
+gix-path-0.10.8 appearing in RustSec implies it is less safe (score penalty): 50 weight

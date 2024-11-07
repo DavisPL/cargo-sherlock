@@ -1,0 +1,6 @@
+Solving for required assumptions to trust lmdb-rs-0.7.6...
+Trust Score for lmdb-rs-0.7.6: 113
+Assumptions Made:
+lmdb-rs-0.7.6 has many downloads: 53 wt
+lmdb-rs-0.7.6 having many downloads implies it is safe: 10 wt
+lmdb-rs-0.7.6 appearing in RustSec implies it is less safe (score penalty): 50 weight

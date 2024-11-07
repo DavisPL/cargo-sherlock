@@ -1,0 +1,6 @@
+Solving for required assumptions to trust signal-simple-0.1.1...
+Trust Score for signal-simple-0.1.1: 264
+Assumptions Made:
+signal-simple-0.1.1 has many downloads: 204 wt
+signal-simple-0.1.1 having many downloads implies it is safe: 10 wt
+signal-simple-0.1.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

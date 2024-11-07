@@ -1,0 +1,6 @@
+Solving for required assumptions to trust memmap-0.7.0...
+Trust Score for memmap-0.7.0: 68
+Assumptions Made:
+memmap-0.7.0 has many downloads: 8 wt
+memmap-0.7.0 having many downloads implies it is safe: 10 wt
+memmap-0.7.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

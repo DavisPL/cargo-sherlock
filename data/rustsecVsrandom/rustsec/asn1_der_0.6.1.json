@@ -1,0 +1,7 @@
+Solving for required assumptions to trust asn1_der-0.6.1...
+Trust Score for asn1_der-0.6.1: 78
+Assumptions Made:
+asn1_der-0.6.1 has many downloads: 18 wt
+asn1_der-0.6.1 having many downloads implies it is safe: 10 wt
+asn1_der-0.6.1 has all safe dependencies: 0 wt
+asn1_der-0.6.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

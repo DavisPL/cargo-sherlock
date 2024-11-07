@@ -1,0 +1,6 @@
+Solving for required assumptions to trust simd-json-0.1.14...
+Trust Score for simd-json-0.1.14: 78
+Assumptions Made:
+simd-json-0.1.14 has many stars and forks: 13 wt
+simd-json-0.1.14 having many stars and forks implies it is safe: 15 wt
+simd-json-0.1.14 appearing in RustSec implies it is less safe (score penalty): 50 weight

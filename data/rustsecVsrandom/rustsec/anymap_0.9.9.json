@@ -1,0 +1,7 @@
+Solving for required assumptions to trust anymap-0.9.9...
+Trust Score for anymap-0.9.9: 76
+Assumptions Made:
+anymap-0.9.9 has many downloads: 16 wt
+anymap-0.9.9 having many downloads implies it is safe: 10 wt
+anymap-0.9.9 has all safe dependencies: 0 wt
+anymap-0.9.9 appearing in RustSec implies it is less safe (score penalty): 50 weight

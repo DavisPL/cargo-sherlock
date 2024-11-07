@@ -1,0 +1,6 @@
+Solving for required assumptions to trust bat-0.18.1...
+Trust Score for bat-0.18.1: 65
+Assumptions Made:
+bat-0.18.1 has many stars and forks: 0 wt
+bat-0.18.1 having many stars and forks implies it is safe: 15 wt
+bat-0.18.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

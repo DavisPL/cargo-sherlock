@@ -1,0 +1,7 @@
+Solving for required assumptions to trust atom-0.3.5...
+Trust Score for atom-0.3.5: 100
+Assumptions Made:
+atom-0.3.5 has many downloads: 40 wt
+atom-0.3.5 having many downloads implies it is safe: 10 wt
+atom-0.3.5 has all safe dependencies: 0 wt
+atom-0.3.5 appearing in RustSec implies it is less safe (score penalty): 50 weight
