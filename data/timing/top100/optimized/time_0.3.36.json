@@ -1,0 +1,6 @@
+Solving for required assumptions to trust time-0.3.36...
+Trust Score for time-0.3.36: 60
+Assumptions Made:
+time-0.3.36 has many downloads: 0 wt
+time-0.3.36 having many downloads implies it is safe: 10 wt
+time-0.3.36 appearing in RustSec implies it is less safe (score penalty): 50 wt

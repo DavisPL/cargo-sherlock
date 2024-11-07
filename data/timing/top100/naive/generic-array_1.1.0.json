@@ -1,0 +1,7 @@
+Solving for required assumptions to trust generic-array-1.1.0...
+Trust Score for generic-array-1.1.0: 60
+Assumptions Made:
+generic-array-1.1.0 has many downloads: 0 wt
+generic-array-1.1.0 having many downloads implies it is safe: 10 wt
+generic-array-1.1.0 appearing in RustSec implies it is less safe (score penalty): 50 wt
+typenum-1.17.0 has many downloads: 0 wt

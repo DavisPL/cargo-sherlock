@@ -58,7 +58,7 @@ def main():
         start_time = datetime.now()
         try:
             subprocess.run([sys.executable, 'sherlock.py', 'trust', crate_name, latest_version, '-o', output_path],
-                           timeout=180)
+                           timeout=600)
             end_time = datetime.now()
             duration = (end_time - start_time).total_seconds()
             print(f"Ran sherlock on {crate_name} version {latest_version} and saved output to {output_path}.")

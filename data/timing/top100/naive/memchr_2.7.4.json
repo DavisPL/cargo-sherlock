@@ -1,0 +1,5 @@
+Solving for required assumptions to trust memchr-2.7.4...
+Trust Score for memchr-2.7.4: 10
+Assumptions Made:
+memchr-2.7.4 has many downloads: 0 wt
+memchr-2.7.4 having many downloads implies it is safe: 10 wt

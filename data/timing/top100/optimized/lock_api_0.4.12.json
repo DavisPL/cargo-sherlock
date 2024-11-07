@@ -1,0 +1,6 @@
+Solving for required assumptions to trust lock_api-0.4.12...
+Trust Score for lock_api-0.4.12: 60
+Assumptions Made:
+lock_api-0.4.12 has many downloads: 0 wt
+lock_api-0.4.12 having many downloads implies it is safe: 10 wt
+lock_api-0.4.12 appearing in RustSec implies it is less safe (score penalty): 50 wt
