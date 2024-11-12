@@ -779,6 +779,8 @@ def logger(crate_name: str, version: str, job_id: str):
 
     os.chdir("helpers")
 
+    data = []
+
     if not os.path.exists(f"../logs/{job_id}"):
         os.mkdir(f"../logs/{job_id}")
 
@@ -788,6 +790,7 @@ def logger(crate_name: str, version: str, job_id: str):
         writer.writerow(["************************************"])
         writer.writerow(["event", "timestamp", "label"])
         writer.writerow(["RustSec","-", label])
+        data.append([{ "event": "RustSec", "timestamp": "-", "label": label}])
         writer.writerow(["************************************"])
 
 
@@ -797,17 +800,20 @@ def logger(crate_name: str, version: str, job_id: str):
 
         entry: dict
         for entry in audit_info:
-                writer.writerow([
-                    entry.get('type', ''),
-                    "-",
-                    label,
-                    entry.get('organization', ''),
-                    entry.get('criteria', ''),
-                    entry.get('delta', ''),
-                    entry.get('version', ''),
-                    entry.get('notes', '').replace('\n', ' '),
-                    entry.get('points', '')
-                ])
+            writer.writerow([
+                entry.get('type', ''),
+                "-",
+                label,
+                entry.get('organization', ''),
+                entry.get('criteria', ''),
+                entry.get('delta', ''),
+                entry.get('version', ''),
+                entry.get('notes', '').replace('\n', ' '),
+                entry.get('points', '')
+            ])
+            data.append({ "event": entry.get('type', ''), "timestamp": "-", "organization": entry.get('organization', ''), "type": entry.get('criteria', ''), "delta": entry.get('delta', ''), "version": entry.get('version', ''), "notes": entry.get('notes', '').replace('\n', ' ')})
+            # data.append(entry)
+
         writer.writerow(["************************************"])
 
         author = get_author(crate_name)
@@ -820,6 +826,7 @@ def logger(crate_name: str, version: str, job_id: str):
                 entry[2],
                 entry[3]
             ])
+            data.append({ "event": "Author", "timestamp": "-", "name": entry[1], "username": entry[2], "url": entry[3]})
         writer.writerow(["************************************"])
 
         # information =  get_stars_and_forks("anyhow")
@@ -828,8 +835,10 @@ def logger(crate_name: str, version: str, job_id: str):
         if information != None:
             # print(information)
             writer.writerow(["github_stats" , "-" ,information["stars"], information["forks"], information["watchers"]])
+            data.append({ "event": "github_stats", "timestamp": "-", "stars": information["stars"], "forks": information["forks"], "watchers": information["watchers"]})
         else:
             writer.writerow(["github_stats", "-", 0 , 0 ,0 ])
+            data.append({ "event": "github_stats", "timestamp": "-", "stars": 0, "forks": 0, "watchers": 0})
         writer.writerow(["************************************"])
 
         downloads = get_downloads(crate_name)
@@ -839,6 +848,7 @@ def logger(crate_name: str, version: str, job_id: str):
             "-",
             downloads
         ])
+        data.append({ "event": "Downloads", "timestamp": "-", "downloads": downloads})
         writer.writerow(["************************************"])
         
         download_crate(crate_name, version)
@@ -853,6 +863,7 @@ def logger(crate_name: str, version: str, job_id: str):
             total,
             flagged
         ])
+        data.append({ "event": "Side Effects", "timestamp": "-", "total": total, "flagged": flagged})
         writer.writerow(["************************************"])
         dependency_tree = build_dependency_tree(crate_name, version)
         writer.writerow(["event", "timestamp", "dependency_tree"])
@@ -861,16 +872,20 @@ def logger(crate_name: str, version: str, job_id: str):
             "-",
             dependency_tree
         ])
+        data.append({ "event": "dependency_tree", "timestamp": "-", "dependency_tree": dependency_tree})
         writer.writerow(["************************************"])
         writer.writerow(["Rudra", "timestamp",])
         rud = rudra(crate_name , version)
         writer.writerow([
             rud
         ])
+        data.append({ "event": "Rudra", "timestamp": "-", "output": rud})
         writer.writerow(["************************************"])
 
         os.chdir(current_directory)
         shutil.rmtree(f"processing/{crate_name}-{version}")
+
+        return data
 
         '''
         Code below this is for future use.
