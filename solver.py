@@ -66,7 +66,7 @@ def get_crate_assumptions(
     no_side_effects = z3.BoolVal(metadata["num_side_effects"] == 0)  # crate has no side effects
     in_rust_sec = z3.BoolVal(metadata["in_rust_sec"])  # crate is in RustSec
         
-    assumptions = [
+    assumptions: list[Assumption] = [
         Assumption(f"{crate} is safe", safe, MAX_WEIGHT),
         Assumption(f"{crate} has many downloads", good_downloads, weights.downloads_weight(metadata["downloads"])),
         Assumption(f"{crate} having many downloads implies it is safe", z3.Implies(good_downloads, safe), 10),
@@ -82,7 +82,7 @@ def get_crate_assumptions(
             processed_developers.add(developer)
             developer_metadata = developer_data.get_developer_metadata(developer)
             developer_variables, developer_assumptions = get_developer_assumptions(developer, developer_metadata)
-            unknown_vars += developer_variables
+            unknown_vars.extend(developer_variables)
             assumptions.extend(developer_assumptions)
         developers_trusted.append(z3.Bool(f"{developer}_trusted"))
     assumptions.append(Assumption(f"{crate} having all trusted developers implies it is safe", z3.Implies(z3.And(developers_trusted), safe), 2))
@@ -94,14 +94,14 @@ def get_crate_assumptions(
             dependency_metadata = crate_data.get_crate_metadata(dependency)
             dependency_variables, dependency_assumptions = get_crate_assumptions(dependency, dependency_metadata, processed_crates)
             dependencies_safe.append(z3.Bool(f"{dependency}_safe"))
-            unknown_vars += dependency_variables
-            assumptions.append(
-                Assumption(
-                    f"{crate} having no side effects and having all safe dependencies implies it is safe", 
-                    z3.Implies(z3.And(no_side_effects, z3.And(dependencies_safe)), safe), 1
-                )
-            )
+            unknown_vars.extend(dependency_variables)
             assumptions.extend(dependency_assumptions)
+    assumptions.append(
+        Assumption(
+            f"{crate} having no side effects and having all safe dependencies implies it is safe", 
+            z3.Implies(z3.And(no_side_effects, z3.And(dependencies_safe)), safe), 1
+        )
+    )
     
     return (unknown_vars, assumptions)
 
@@ -200,11 +200,11 @@ def main():
     parser.add_argument("crate_name", type=str, help="The name of the crate to analyze.")
     parser.add_argument("crate_version", type=str, help="The version of the crate to analyze.")
     parser.add_argument("--output", default=None, type=str, help="Output file path to save crate information.")
-    # args = parser.parse_args()
-    # crate = CrateVersion(args.crate_name, args.crate_version)
-    crate = CrateVersion("syn", "2.0.87")
-    # complete_analysis(crate, args.output)
-    complete_analysis(crate)
+    args = parser.parse_args()
+    crate = CrateVersion(args.crate_name, args.crate_version)
+    # crate = CrateVersion("syn", "2.0.87")
+    complete_analysis(crate, args.output)
+    # complete_analysis(crate)
 
 if __name__ == "__main__":
     main()
