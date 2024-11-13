@@ -1,0 +1,5 @@
+Solving for required assumptions to trust collect-rs-0.2.0...
+Trust Score for collect-rs-0.2.0: 309
+Assumptions Made:
+collect-rs-0.2.0 has many downloads: 299 wt
+collect-rs-0.2.0 having many downloads implies it is safe: 10 wt

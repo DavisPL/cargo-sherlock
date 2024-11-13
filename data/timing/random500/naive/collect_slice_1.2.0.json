@@ -1,0 +1,5 @@
+Solving for required assumptions to trust collect_slice-1.2.0...
+Trust Score for collect_slice-1.2.0: 126
+Assumptions Made:
+collect_slice-1.2.0 has many downloads: 116 wt
+collect_slice-1.2.0 having many downloads implies it is safe: 10 wt

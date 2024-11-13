@@ -1,0 +1,7 @@
+Solving for required assumptions to trust debug_stub_derive-0.3.0...
+Trust Score for debug_stub_derive-0.3.0: 7
+Assumptions Made:
+debug_stub_derive-0.3.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+dtolnay being in the trusted list implies they are trusted: 3 wt
+quote-1.0.37 having all trusted developers implies it is safe: 2 wt
+debug_stub_derive-0.3.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

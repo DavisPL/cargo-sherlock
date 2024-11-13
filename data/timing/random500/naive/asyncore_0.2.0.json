@@ -1,0 +1,7 @@
+Solving for required assumptions to trust asyncore-0.2.0...
+Trust Score for asyncore-0.2.0: 16
+Assumptions Made:
+asyncore-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+async-std-1.13.0 has many downloads: 5 wt
+async-std-1.13.0 having many downloads implies it is safe: 10 wt
+async-std-1.13.0 has many stars and forks: 0 wt

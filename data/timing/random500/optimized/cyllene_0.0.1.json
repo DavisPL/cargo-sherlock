@@ -1,0 +1,5 @@
+Solving for required assumptions to trust cyllene-0.0.1...
+Trust Score for cyllene-0.0.1: 1
+Assumptions Made:
+cyllene-0.0.1 has all safe dependencies: 0 wt
+cyllene-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt

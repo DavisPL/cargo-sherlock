@@ -1,0 +1,7 @@
+Solving for required assumptions to trust elkai-rs-0.1.7...
+Trust Score for elkai-rs-0.1.7: 216
+Assumptions Made:
+elkai-rs-0.1.7 has many downloads: 206 wt
+elkai-rs-0.1.7 having many downloads implies it is safe: 10 wt
+libc-0.2.162 has many downloads: 0 wt
+libc-0.2.162 has many stars and forks: 0 wt

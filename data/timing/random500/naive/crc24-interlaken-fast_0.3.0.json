@@ -1,0 +1,7 @@
+Solving for required assumptions to trust crc24-interlaken-fast-0.3.0...
+Trust Score for crc24-interlaken-fast-0.3.0: 156
+Assumptions Made:
+crc24-interlaken-fast-0.3.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+core_detect-1.0.0 has many downloads: 144 wt
+core_detect-1.0.0 having many downloads implies it is safe: 10 wt
+crc24-interlaken-fast-0.3.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust grid_trait-0.1.1...
+Trust Score for grid_trait-0.1.1: 34
+Assumptions Made:
+grid_trait-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+mint-0.5.9 has many downloads: 23 wt
+mint-0.5.9 having many downloads implies it is safe: 10 wt

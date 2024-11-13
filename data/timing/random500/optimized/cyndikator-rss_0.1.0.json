@@ -1,0 +1,5 @@
+Solving for required assumptions to trust cyndikator-rss-0.1.0...
+Trust Score for cyndikator-rss-0.1.0: 63
+Assumptions Made:
+cyndikator-rss-0.1.0 has all safe dependencies: 62 wt
+cyndikator-rss-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

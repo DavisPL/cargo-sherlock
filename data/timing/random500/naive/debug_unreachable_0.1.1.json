@@ -1,0 +1,6 @@
+Solving for required assumptions to trust debug_unreachable-0.1.1...
+Trust Score for debug_unreachable-0.1.1: 16
+Assumptions Made:
+debug_unreachable-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+unreachable-1.0.0 has many downloads: 5 wt
+unreachable-1.0.0 having many downloads implies it is safe: 10 wt
