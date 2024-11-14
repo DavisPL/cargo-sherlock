@@ -43,19 +43,22 @@ def process_directory(base_dir):
     return result
 
 # Directory paths
-normal_dir = '/home/ubuntu/typo/cargo-sherlock/evaluation/top100'
-typo_dir = '/home/ubuntu/typo/cargo-sherlock/evaluation/typo'
+# normal_dir = '/home/ubuntu/typo/cargo-sherlock/evaluation/top100'
+# typo_dir = '/home/ubuntu/typo/cargo-sherlock/evaluation/typo'
+
+optimal_dir = "/Users/hassnain/Desktop/cargo-sherlock/data/timing/random500/single_query"
+optimized_dir = "/Users/hassnain/Desktop/cargo-sherlock/data/timing/random500/optimized"
 
 # Process both normal and rustsec directories
-normal_data = process_directory(normal_dir)
-typo_data = process_directory(typo_dir)
+optimal_data = process_directory(optimal_dir)
+optimized_data = process_directory(optimized_dir)
 
 # Create DataFrames
-normal_df = pd.DataFrame(normal_data)
-typo_df = pd.DataFrame(typo_data)
+optimal_df = pd.DataFrame(optimal_data)
+optimized_df = pd.DataFrame(optimized_data)
 
 # Save to CSV files
-normal_df.to_csv('/home/ubuntu/typo/cargo-sherlock/top100_data.csv', index=False)
-typo_df.to_csv('/home/ubuntu/typo/cargo-sherlock/typo_data.csv', index=False)
+optimal_df.to_csv('/Users/hassnain/Desktop/cargo-sherlock/data/timing/random500/single_query.csv', index=False)
+optimized_df.to_csv('/Users/hassnain/Desktop/cargo-sherlock/data/timing/random500/optimized.csv', index=False)
 
-print("CSV files generated: 'top100_data.csv' and 'typo_data.csv'")
+# print("CSV files generated: 'top100_data.csv' and 'typo_data.csv'")

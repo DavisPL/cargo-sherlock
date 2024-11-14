@@ -1,0 +1,4 @@
+Solving for required assumptions to trust futures-io-0.3.31...
+Trust Score for futures-io-0.3.31: 1
+Assumptions Made:
+futures-io-0.3.31 having no side effects and having all safe dependencies implies it is safe: 1 wt

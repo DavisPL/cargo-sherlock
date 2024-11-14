@@ -1,0 +1,4 @@
+Solving for required assumptions to trust bevy_bevy_gpu-0.0.1...
+Trust Score for bevy_bevy_gpu-0.0.1: 1
+Assumptions Made:
+bevy_bevy_gpu-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt

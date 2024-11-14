@@ -1,0 +1,4 @@
+Solving for required assumptions to trust unicode-width-0.2.0...
+Trust Score for unicode-width-0.2.0: 1
+Assumptions Made:
+unicode-width-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

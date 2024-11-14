@@ -1,0 +1,4 @@
+Solving for required assumptions to trust collect-0.0.26...
+Trust Score for collect-0.0.26: 1
+Assumptions Made:
+collect-0.0.26 having no side effects and having all safe dependencies implies it is safe: 1 wt

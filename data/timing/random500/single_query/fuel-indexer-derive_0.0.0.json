@@ -1,0 +1,4 @@
+Solving for required assumptions to trust fuel-indexer-derive-0.0.0...
+Trust Score for fuel-indexer-derive-0.0.0: 1
+Assumptions Made:
+fuel-indexer-derive-0.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

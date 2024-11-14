@@ -1,6 +1,0 @@
-Solving for required assumptions to trust drawille-nostd-0.1.2...
-Trust Score for drawille-nostd-0.1.2: 11
-Assumptions Made:
-drawille-nostd-0.1.2 having no side effects and having all safe dependencies implies it is safe: 1 wt
-num-traits-0.2.19 has many downloads: 0 wt
-num-traits-0.2.19 having many downloads implies it is safe: 10 wt
