@@ -19,8 +19,25 @@ make
 ```
 4. Generate a GitHub personal access token. Go to the [token page](https://github.com/settings/tokens/new) and select Generate new token (classic). Then, name your token, select an expiration date, and grant the token at least the `public_repo` scope by checking the box. Finally, create and copy your token, pasting it into the file `helpers/token.txt`.
 
+5. You can activate the python virtual environment by running: 
+```bash
+source .venv/bin/activate 
+```
+
 ## Usage
-To run the tool, run the Python interpreter on `sherlock.py`, supplying the crate name and version you would like to analyze. Additionally, you can use various flags to control its behaviour. 
+To run the tool, run the Python interpreter on `sherlock.py`, supplying the crate name and version(optional) you would like to analyze. Additionally, you can use various flags to control its behaviour. The tool supports two modes log and trust. You will have to specify the mode while using it. 
+
+```bash 
+python3 sherlock.py trust <crate_name> 
+```
+The above command will run the tool in trust mode for specified crate. Since no version is provided, it will use the latest version by default. For `log` mode, you can run:
+
+```bash 
+python3 sherlock.py log <crate_name>
+```
+
+⚠️ The tool is under active developmenet. The documentation below this is outdated. 
+
 
 Here is an example output:
 ```
