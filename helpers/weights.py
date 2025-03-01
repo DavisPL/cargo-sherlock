@@ -6,7 +6,7 @@ def downloads_weight(downloads: int) -> int:
     as a function of the number of downloads the crate actually has.
     """
     if downloads == 0:
-        return 500 #max weight
+        return 500 # max weight
     return round(1000 * (1 - (1/9) * math.log10(downloads)) ** 3)
 
 def repo_stats_weight(stars: int, forks: int) -> int:

@@ -240,7 +240,7 @@ def complete_analysis(crate: CrateVersion, file = None):
     """
     summary = memoized_crate_analysis(crate)
     trust_score = sum(a.weight for a in summary.assumptions_made)
-    print(f"Trust Score for {crate}: {trust_score}", file=file)
+    print(f"Trust Cost for {crate} (lower cost is better): {trust_score}", file=file)
     print("Assumptions Made:", file=file)
     for a in summary.assumptions_made:
         print(a, file=file)

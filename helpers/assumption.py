@@ -25,7 +25,7 @@ class Assumption:
         return hash((self.name, self.consequent, self.weight))
     def default_assignment(self) -> z3.BoolRef:
         """
-        Returns the default assignment of the negative assumption. This is true for
+        Returns the default assignment of the assumption. This is true for
         positive assumptions.
         """
         return z3.BoolVal(True)
