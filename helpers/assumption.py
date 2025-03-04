@@ -2,59 +2,59 @@
 from typing import NamedTuple
 import z3
 from helpers.crate_data import CrateVersion
-MAX_WEIGHT = 500
+MAX_COST = 500
 
 class Assumption:
     """
     Class representing an assumption that can be made by the solver.
     """
-    def __init__(self, name: str, consequent: z3.BoolRef, weight: int):
+    def __init__(self, name: str, consequent: z3.BoolRef, cost: int):
         self.name = name
         self.variable = z3.Bool(name)
         self.consequent = consequent
-        self.weight = weight
+        self.cost = cost
     def __repr__(self) -> str:
-        return f"Assumption({self.name}, {self.consequent}, {self.weight})"
+        return f"Assumption({self.name}, {self.consequent}, {self.cost})"
     def __str__(self) -> str:
-        return f"{self.name}: {self.weight} wt"
+        return f"{self.name}: {self.cost} cost"
     def __eq__(self, other) -> bool:
         if isinstance(other, Assumption):
-            return self.name == other.name and self.consequent == other.consequent and self.weight == other.weight
+            return self.name == other.name and self.consequent == other.consequent and self.cost == other.cost
         return NotImplemented
     def __hash__(self) -> int:
-        return hash((self.name, self.consequent, self.weight))
+        return hash((self.name, self.consequent, self.cost))
     def default_assignment(self) -> z3.BoolRef:
         """
         Returns the default assignment of the assumption. This is true for
         positive assumptions.
         """
         return z3.BoolVal(True)
-    def single_assumption_weight(self) -> z3.ArithRef:
+    def single_assumption_cost(self) -> z3.ArithRef:
         """
-        Returns the weight of a single assumption. Weight is incurred if the assumption is set to true.
+        Returns the cost of a single assumption. Cost is incurred if the assumption is set to true.
         """
-        return z3.If(self.variable, self.weight, 0)
+        return z3.If(self.variable, self.cost, 0)
     @staticmethod
-    def assumptions_weight(assumptions: list['Assumption']) -> z3.ArithRef:
+    def assumptions_cost(assumptions: list['Assumption']) -> z3.ArithRef:
         """
-        Returns the total weight of a set of assumptions.
+        Returns the total cost of a set of assumptions.
         """
-        return z3.Sum([a.single_assumption_weight() for a in assumptions])
+        return z3.Sum([a.single_assumption_cost() for a in assumptions])
     @staticmethod
-    def weight_consistency_check(assumptions: list['Assumption']):
+    def cost_consistency_check(assumptions: list['Assumption']):
         """
-        Conducts a consistency check on the weights for a list of assumptions. Prints a warning message to 
-        stdout if weights are found to be inconsistent.
+        Conducts a consistency check on the costs for a list of assumptions. Prints a warning message to 
+        stdout if costs are found to be inconsistent.
         """
         for assumption in assumptions:
-            if assumption.weight > MAX_WEIGHT or assumption.weight < 0:
-                print(f"WARNING: The weight {assumption.weight} on {assumption.name} is not consistent with the other assumptions.")
+            if assumption.cost > MAX_COST or assumption.cost < 0:
+                print(f"WARNING: The cost {assumption.cost} on {assumption.name} is not consistent with the other assumptions.")
         
 
 class NegativeAssumption(Assumption):
     """
     Class representing a negative assumption that can be made by the solver. A negative assumption is an assumption
-    that incurs weight if it is set to false.
+    that incurs cost if it is set to false.
     """
     def __repr__(self) -> str:
         return f"Negative{super().__repr__()}"
@@ -64,12 +64,12 @@ class NegativeAssumption(Assumption):
         negative assumptions.
         """
         return z3.BoolVal(False)
-    def single_assumption_weight(self) -> z3.ArithRef:
+    def single_assumption_cost(self) -> z3.ArithRef:
         """
-        Returns the weight of a single negative assumption. Weight is incurred if the assumption is 
+        Returns the cost of a single negative assumption. Cost is incurred if the assumption is 
         set to false.
         """
-        return z3.If(self.variable, 0, self.weight)
+        return z3.If(self.variable, 0, self.cost)
 
 class CrateAssumptionSummary(NamedTuple):
     """
