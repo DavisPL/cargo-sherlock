@@ -36,20 +36,19 @@ The above command will run the tool in trust mode for specified crate. Since no 
 python3 sherlock.py log <crate_name>
 ```
 
-⚠️ The tool is under active developmenet. The documentation below this is outdated. 
-
-
 Here is an example output:
 ```
-❯ python3 sherlock.py -a abomonation
+❯ python3 sherlock.py trust abomonation
+Latest version of abomonation is 0.7.3.
+Solving for required assumptions to trust abomonation-0.7.3...
 This crate has been flagged by RustSec.
 This crate has not been audited by any organization.
-Trust Score for abomonation-0.7.3: 60
+Trust Cost for abomonation-0.7.3 (lower cost is better): 97 cost
 Assumptions Made:
-abomonation-0.7.3 has many downloads: 0 wt
-abomonation-0.7.3 having many downloads implies it is safe: 10 wt
-abomonation-0.7.3 has all safe dependencies: 0 wt
-abomonation-0.7.3 appearing in RustSec implies it is less safe (score penalty): 50 wt
+abomonation-0.7.3 has many downloads: 37 cost
+abomonation-0.7.3 having many downloads implies it is safe: 10 cost
+abomonation-0.7.3 has all safe dependencies: 0 cost
+abomonation-0.7.3 appearing in RustSec implies it is less safe (score penalty): 50 cost
 ```
 
 ### Basic Usage
@@ -60,6 +59,8 @@ To analyze a specific crate and version:
 python3 sherlock.py <crate_name> [version]
 ```
 Replace <crate_name> with the actual crate name you want to analyze. If you omit the [version], the tool will fetch and use the latest version of the crate by default. By default, this will run the logger.py script to log information about the specified crate, printing the logging information to the screen. This information is also stored at logs/exp/<crate_name>-<version>.csv
+
+⚠️ The tool is under active development. The documentation below this is outdated.
 
 ### Available Flags
 
