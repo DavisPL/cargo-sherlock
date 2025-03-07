@@ -542,20 +542,21 @@ def clean_row(row):
 
 
 def get_potential_functions(file_path):
-    # print(file_path)
+    # print(file_path)c
     length = 0
     try:
         with open(file_path) as csv_file:
             reader = list(csv.reader(csv_file))
             target = ['crate, fn_decl, callee, effect, dir, file, line, col']
             start_index = reader.index(target)
-            lines = reader[start_index:-3] # removing the first two and last three lines
+            lines = reader[start_index:-3] # removing the first two and last three lines, the last three lines contains the summary and first line is finished 'dev' profile etc 
         formatted_lines = formatter(lines)
-        # print(formatted_lines)
         formatted_lines = [clean_row(row) for row in formatted_lines]
-        # print("554 " , formatted_lines)
         df = pd.DataFrame(formatted_lines[1:] , columns=formatted_lines[0])
-        # print(df)
+        # here I am getting the count for just the unsafe calls, it is possible to get the count of each type of side effect as well if interested. 
+        unsafe = df[df["effect"].str.contains("unsafe", case=False, na=False)]["effect"].count()
+        unsafe += df[df["effect"].str.contains("PtrDeref", case=False, na=False)]["effect"].count() # Unsafe calls with a pointer dereference are labeled as PtrDeref
+
         with open("effect_counts.json", "r") as file:
                 loaded_effect_counts = json.load(file)
                 rustsec_effects = loaded_effect_counts.keys()
@@ -563,13 +564,13 @@ def get_potential_functions(file_path):
                 desired_order = ['dir', 'file', 'line', 'col', 'fn_decl', 'callee', 'effect']
                 df_reordered = concerned_df[desired_order]
                 df_reordered.to_csv(f"../experiments/dangerous_functions.csv")
-                return len(df), len(concerned_df)
+                return len(df), len(concerned_df) , int(unsafe)
     except FileNotFoundError:
         print(f"File not found: {file_path}")
-        return None,None
+        return None,None,None
     except Exception as e:
         print(f"An error occurred: {e}")
-        return None,None
+        return None,None,None
 
 def download_crate(crate_name: str, version: str):
     # Construct the output file name
@@ -854,16 +855,16 @@ def logger(crate_name: str, version: str, job_id: str):
         download_crate(crate_name, version)
         extract_and_delete()
         file_name = run_cargo_and_save(crate_name, version)
-        # print(file_name , "is the file name")
-        total,flagged = get_potential_functions(file_name)
+        total,flagged,unsafe= get_potential_functions(file_name)
         writer.writerow(["event", "timestamp", "total", "flagged"])
         writer.writerow([
             "Side Effects",
             "-",
             total,
-            flagged
+            flagged,
+            unsafe
         ])
-        data.append({ "event": "Side Effects", "timestamp": "-", "total": total, "flagged": flagged})
+        data.append({ "event": "Side Effects", "timestamp": "-", "total": total, "flagged": flagged , "unsafe": unsafe})
         writer.writerow(["************************************"])
         dependency_tree = build_dependency_tree(crate_name, version)
         writer.writerow(["event", "timestamp", "dependency_tree"])
@@ -883,7 +884,7 @@ def logger(crate_name: str, version: str, job_id: str):
         writer.writerow(["************************************"])
 
         os.chdir(current_directory)
-        shutil.rmtree(f"processing/{crate_name}-{version}")
+        # shutil.rmtree(f"processing/{crate_name}-{version}")
 
         return data
 

@@ -165,9 +165,13 @@ def create_audit_summary(crate_info):
         'failed_rudra': False,
         'audits': [],
         'dependencies': [],
-        'passed_audit': False
+        'passed_audit': False, 
+        'num_unsafe_calls': 0
     })
-    
+
+    # print("In create_audit_summary")
+    # print(crate_info)
+    # print("_" * 50)
     for section in crate_info:
         if isinstance(section, list):
             for item in section:
@@ -186,6 +190,7 @@ def create_audit_summary(crate_info):
                 
                 elif item.get('event') == 'Side Effects':
                     audit_summary['num_side_effects'] = int(item.get('total', 0) or 0)
+                    audit_summary['num_unsafe_calls'] = int(item.get('unsafe', 0) or 0)
 
                 elif 'Rudra' in item:
                     audit_summary['failed_rudra'] = True
@@ -220,6 +225,7 @@ def create_audit_summary(crate_info):
 
             elif section.get('event') == 'Side Effects':
                 audit_summary['num_side_effects'] = int(section.get('total', 0) or 0)
+                audit_summary['num_unsafe_calls'] = int(section.get('unsafe', 0) or 0)
 
             elif 'Rudra' in section:
                 audit_summary['failed_rudra'] = True

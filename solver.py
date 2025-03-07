@@ -10,6 +10,7 @@ from helpers.assumption import Assumption, CrateAssumptionSummary, NegativeAssum
 from helpers.crate_data import CrateVersion
 
 MAX_MINUTES = 5 # timeout for each call to the solver
+MAX_COST = 500
 
 logfile_name = datetime.datetime.now().strftime('logs/solver/%Y-%m-%d_%H:%M:%S.log')
 logging.basicConfig(
@@ -240,7 +241,12 @@ def complete_analysis(crate: CrateVersion, file = None):
     """
     summary = memoized_crate_analysis(crate)
     trust_cost = sum(a.cost for a in summary.assumptions_made)
-    print(f"Trust Cost for {crate} (lower cost is better): {trust_cost} cost", file=file)
+
+    normalized_trust_cost = (trust_cost / MAX_COST) * 100
+    # normalized_trust_cost = min(normalized_trust_cost, 1)
+
+
+    print(f"Trust Cost for {crate} (lower cost is better): {normalized_trust_cost} cost", file=file)
     print("Assumptions Made:", file=file)
     for a in summary.assumptions_made:
         print(a, file=file)
