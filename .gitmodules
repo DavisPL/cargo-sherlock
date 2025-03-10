@@ -1,3 +1,6 @@
 [submodule "cargo-scan"]
 	path = cargo-scan
 	url = https://github.com/PLSysSec/cargo-scan.git
+[submodule "rudra"]
+	path = rudra
+	url = https://github.com/sslab-gatech/Rudra
