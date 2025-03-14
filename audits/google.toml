@@ -369,6 +369,13 @@ criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "1.0.94 -> 1.0.95"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.anyhow]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "1.0.95 -> 1.0.97"
+notes = "Only minor changes to comments, tests, and clippy expectations."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.anymap]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "ub-risk-3", "does-not-implement-crypto",]
@@ -1000,6 +1007,13 @@ notes = "No changes related to `unsafe impl ... bytemuck` pieces from `src/exter
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.bitflags]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.8.0 -> 2.9.0"
+notes = "Adds a straightforward clear() function, but no new unsafe code."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.bitflags]]
 who = "Taylor Cramer <cramertj@google.com>"
 criteria = [ "ub-risk-1", "does-not-implement-crypto",]
 version = "2.3.3"
@@ -1219,6 +1233,13 @@ notes = "Unsafe review at https://chromium-review.googlesource.com/c/chromium/sr
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.bytemuck]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "1.21.0 -> 1.22.0"
+notes = "This adds new instances of unsafe, but the uses are justified:\n- BoxBytes is essentially a Box<[u8], which is Send + Sync, so also marking BoxBytes as Send + Sync is justified.\n- core::num::Saturating<T> meets the criteria for Zeroable + Pod, so marking it as such is justified.\n\nSee https://crrev.com/c/6321863 for more audit notes.\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.bytemuck]]
 who = [ "Manish Goregaokar <manishearth@google.com>", "Łukasz Anforowicz <lukasza@google.com>",]
 criteria = [ "ub-risk-2", "does-not-implement-crypto",]
 version = "1.13.1"
@@ -1359,11 +1380,24 @@ delta = "1.9.0 -> 1.10.0"
 notes = "Reviewed in https://crrev.com/c/6235725. Very large change in buf_impl.rs\nas well but no unsafe changes there specifically.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.bytes]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "1.10.0 -> 1.10.1"
+notes = "Still no crypto, and safe to run with trustworthy inputs.\n\nThere are some `unsafe`-related changes in the delta, but I didn't\nevaluate those, because this is not required for `safe-to-run`\ncertification.\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.calendrical_calculations]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 version = "0.1.2"
 notes = "Contains no unsafe"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.calendrical_calculations]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "0.1.2 -> 0.1.3"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.caliptra_cfi]]
@@ -1484,6 +1518,12 @@ criteria = [ "safe-to-run", "does-not-implement-crypto",]
 version = "0.1.1"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.cfg_aliases]]
+who = "Hsin-chen Chuang <chharry@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "0.1.1 -> 0.2.1"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.chacha20]]
 who = "Joshua Liebow-Feeser <joshlf@google.com>"
 criteria = [ "safe-to-deploy", "ub-risk-2",]
@@ -1546,6 +1586,24 @@ who = "George Burgess IV <gbiv@google.com>"
 criteria = "ub-risk-0"
 version = "1.4.1"
 notes = "`rg -i unsafe` resulted in zero hits for this package."
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.ciborium]]
+who = "Daniel Verkamp <dverkamp@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+version = "0.2.2"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.ciborium-io]]
+who = "Daniel Verkamp <dverkamp@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+version = "0.2.2"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.ciborium-ll]]
+who = "Daniel Verkamp <dverkamp@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+version = "0.2.2"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.clang-sys]]
@@ -1744,6 +1802,13 @@ delta = "4.5.28 -> 4.5.29"
 notes = "No code changes."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.clap]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "4.5.29 -> 4.5.31"
+notes = "Comment-only change to update version."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.clap_builder]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -1864,6 +1929,13 @@ who = "Jonathan Hao <phao@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "4.5.27 -> 4.5.29"
 notes = "Only changed `args_present` method a bit and added a `value` method to `flat_map`."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.clap_builder]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "4.5.29 -> 4.5.31"
+notes = "No unsafe uses added or changed. Delta consists of miscellaneous fixes and cleanups (e.g. improvements for ValueRange) and a new parser for Saturating<T>."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.clap_conf]]
@@ -2743,6 +2815,13 @@ criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "1.0.140 -> 1.0.141"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.cxxbridge-cmd]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "1.0.141 -> 1.0.143"
+notes = "Clippy lint suppression and... a C++ deduction guide for cxx::Slice."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.cxxbridge-flags]]
 who = "Android Legacy"
 criteria = "safe-to-run"
@@ -2889,6 +2968,13 @@ aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_p
 who = "Takuto Ikuta <tikuta@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 delta = "1.0.140 -> 1.0.141"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.cxxbridge-flags]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "1.0.141 -> 1.0.143"
+notes = "Only changes for rustdoc generation."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.cxxbridge-macro]]
@@ -3139,6 +3225,13 @@ version = "0.9.0"
 notes = "Unsafe code pertaining to defining FFI interfaces"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.diplomat]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "crypto-safe", "ub-risk-2",]
+delta = "0.9.0 -> 0.10.0"
+notes = "Similar unsafe code pertaining to FFI interfaces"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.diplomat-runtime]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
@@ -3146,10 +3239,24 @@ version = "0.9.0"
 notes = "Unsafe code pertaining to defining FFI-compatible types, with safety comments."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.diplomat-runtime]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "crypto-safe", "ub-risk-2",]
+delta = "0.9.0 -> 0.10.0"
+notes = "Very minor diff"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.diplomat_core]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 version = "0.9.0"
+notes = "No unsafe code"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.diplomat_core]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "crypto-safe", "ub-risk-0",]
+delta = "0.9.0 -> 0.10.0"
 notes = "No unsafe code"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -3307,6 +3414,20 @@ aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_p
 who = "Adrian Taylor <adetaylor@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "1.12.0 -> 1.13.0"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.either]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+delta = "1.13.0 -> 1.14.0"
+notes = "Inheriting ub-risk-1 from the baseline review of 1.13.0. While the delta has some diffs in unsafe code, they are either:\n- migrating code to use helper macros\n- migrating match patterns to take advantage of default bindings mode from RFC 2005\nEither way, the result is code that does exactly the same thing and does not change the risk of UB.\n\nSee https://crrev.com/c/6323164 for more audit details.\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.either]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+delta = "1.14.0 -> 1.15.0"
+notes = "The delta in `lib.rs` only tweaks doc comments and `#[cfg(feature = \"std\")]`."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.elliptic-curve]]
@@ -3765,6 +3886,13 @@ version = "0.6.0"
 notes = "Contains no unsafe"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.fixed_decimal]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "crypto-safe", "ub-risk-0",]
+delta = "0.6.0 -> 0.7.0"
+notes = "Contains no unsafe"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.fixedbitset]]
 who = "ChromeOS"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -3831,6 +3959,13 @@ who = "Adrian Taylor <adetaylor@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 delta = "1.0.34 -> 1.0.35"
 notes = "There are no significant code changes in this delta (just one string constant change). Note that prior audits may have been partial."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.flate2]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "1.0.35 -> 1.1.0"
+notes = "This is a delta audit from a **partial** audit (**not** covering zlib-related crate features which are not used by Chromium). The delta does not appear to any new unsafety or unsoundness. Changes consist of:\n- deriving more impls, e.g. for Clone or Default\n- migrating away from deprecated things in the rand crate\n- general improvements, e.g.:\n  - slice::copy_from_slice instead of a for loop\n  - Result::map_err instead of Result::unwrap\n  - use helpers for converting numerics to/from little-endian bytes\n  - nicer conversions between miniz_oxide::MZFlush and  FlushCompress/FlushDecompress\n- cfg soup changes in FFI for the C zlib backends–though Chromium does not use these backends\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.flate2]]
@@ -4712,6 +4847,12 @@ delta = "0.3.24 -> 0.3.26"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.half]]
+who = "Daniel Verkamp <dverkamp@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+version = "2.4.1"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.half]]
 who = "Ben Saunders <bsaunders@google.com>"
 criteria = [ "ub-risk-3", "does-not-implement-crypto",]
 version = "1.8.2"
@@ -5039,10 +5180,24 @@ version = "2.0.0-beta1"
 notes = "Contains no unsafe"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_calendar]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "No unsafe introduced"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_calendar_data]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "2.0.0-beta1"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_calendar_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -5053,6 +5208,13 @@ version = "2.0.0-beta1"
 notes = "Despite being an FFI crate, it is 100% safe code since it uses Diplomat for bindings."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_capi]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "Despite being an FFI crate, it is 100% safe code since it uses Diplomat for bindings."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_casemap]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
@@ -5060,10 +5222,24 @@ version = "2.0.0-beta1"
 notes = "Safety review: One bit of unsafe DST construction from constant values. One checklisted ULE impl for a simple type wrapping RawBytesULE."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_casemap]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "No meaningful change to unsafe code"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_casemap_data]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "2.0.0-beta1"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_casemap_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -5074,10 +5250,24 @@ version = "2.0.0-beta1"
 notes = "All unsafe code commented:\n - enum construction from discriminant with masks or other checks\n - from_u32 for Hangul Jamo, with math that is in range\n - from_u32 from a packed type that maintains a valid char invariant\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_collator]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+version = "2.0.0-beta2"
+notes = "All unsafe code commented (and improved from prior version):\n - enum construction from discriminant with masks or other checks\n - from_u32 for Hangul Jamo, with math that is in range\n - from_u32 from a packed type that maintains a valid char invariant\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_collator_data]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "2.0.0-beta1"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_collator_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "crypto-safe", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -5088,6 +5278,13 @@ version = "2.0.0-beta1"
 notes = "Two instances of unsafe :\n - Non-safety related unsafe API that imposes additional invariants\n - `from_utf8` for known-UTF8 integer\n\nComments added/improved in https://github.com/unicode-org/icu4x/pull/6056.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_collections]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "from_utf8 unsafe removed. no new unsafe added"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_datetime]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
@@ -5095,10 +5292,24 @@ version = "2.0.0-beta1"
 notes = "All unsafe code commented:\n  - Checklisted ULE impls\n  - from-utf8 code based on type invariants\n\nComments added/improved in https://github.com/unicode-org/icu4x/pull/6056.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_datetime]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "crypto-safe", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "Same unsafe code as last time, with improved comments"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_datetime_data]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "2.0.0-beta1"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_datetime_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -5109,10 +5320,24 @@ version = "2.0.0-beta1"
 notes = "Contains no unsafe"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_decimal]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "Contains no unsafe"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_decimal_data]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "2.0.0-beta1"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_decimal_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -5122,10 +5347,24 @@ criteria = "does-not-implement-crypto"
 version = "0.2.0"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_experimental]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = "does-not-implement-crypto"
+delta = "0.2.0 -> 0.3.0-beta2"
+notes = "No crypto introduced"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_experimental_data]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "0.2.0-dev"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_experimental_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "0.2.0-dev -> 0.3.0-beta2"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -5136,10 +5375,24 @@ version = "2.0.0-beta1"
 notes = "Simple well-commented unsafe around regex-automata DFA construction."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_list]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "Some new use of VarZeroCow unsafe APIs, which are on byte slices so the unchecked construction is not a problem"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_list_data]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "2.0.0-beta1"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_list_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -5150,6 +5403,13 @@ version = "2.0.0-beta1"
 notes = "Covariant transform transmute; since rustc does not understand that ZeroMap is invariant"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_locale]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "No contentful changes to unsafe code"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_locale_core]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
@@ -5157,10 +5417,31 @@ version = "2.0.0-beta1"
 notes = "All unsafe code commented:\n  - A checklisted ULE impl\n  - from-utf8 code on known-ASCII\n  - Some unchecked indexing around maintained invariants\n\nComments added/improved in https://github.com/unicode-org/icu4x/pull/6056.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_locale_core]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+version = "2.0.0-beta2"
+notes = "All unsafe code commented (and improved from prior version):\n  - A checklisted ULE impl\n  - from-utf8 code on known-ASCII\n  - Some unchecked indexing around maintained invariants\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_locale_data]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "2.0.0-beta1"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_locale_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_locale_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -5182,6 +5463,13 @@ criteria = "does-not-implement-crypto"
 version = "2.0.0-beta1"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_normalizer]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+version = "2.0.0-beta2"
+notes = "All unsafe is unchecked `char` and `str` conversion, mostly well-commented.\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_normalizer_data]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -5195,11 +5483,25 @@ version = "2.0.0-beta1"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_normalizer_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_pattern]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
 version = "0.3.0"
 notes = "Simple unsafe around repr(transparent), and one checklist-commented VarULE impl.\n\nComments improved in https://github.com/unicode-org/icu4x/pull/6056\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_pattern]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+delta = "0.3.0 -> 0.4.0"
+notes = "Unsafe code unchanged; comments improved"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.icu_plurals]]
@@ -5209,10 +5511,24 @@ version = "2.0.0-beta1"
 notes = "Unsafe code pertaining to checklisted ULE/VarULE impls.\n\nComments added/improved in https://github.com/unicode-org/icu4x/pull/6056.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_plurals]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "No new unsafe code."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_plurals_data]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "2.0.0-beta1"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_plurals_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -5222,10 +5538,24 @@ criteria = "does-not-implement-crypto"
 version = "2.0.0-beta1"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_properties]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+version = "2.0.0-beta2"
+notes = "All unsafe was removed"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_properties_data]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "2.0.0-beta1"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_properties_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -5243,6 +5573,13 @@ version = "2.0.0-beta1"
 notes = "All unsafe code commented:\n  - Minor unsafe transmutes between types which are identical but not type-system-provably so.\n  - One unsafe EqULE impl\n  - Some repr(transparent) transmutes\n  - A from_utf8_unchecked for an ascii-validated string\n\nComment improvements can be found in https://github.com/unicode-org/icu4x/pull/6056\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_provider]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "from_utf8_unchecked unsafe remove, all other unsafe not meaningfully changed"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_provider_adapters]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
@@ -5250,10 +5587,24 @@ version = "2.0.0-beta1"
 notes = "Contains no unsafe"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_provider_adapters]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "Still contains no unsafe"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_provider_baked]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = "does-not-implement-crypto"
 version = "2.0.0-beta1"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_provider_baked]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+version = "2.0.0-beta2"
+notes = "All unsafe code commented:\n   - Unchecked indexing in generated code\n   - Unchecked indexing around successful binary searches\n   - Unchecked indexing in ZeroTrie assuming valid tries by-construction\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.icu_provider_macros]]
@@ -5276,10 +5627,38 @@ version = "2.0.0-beta1"
 notes = "Unsafe code pertaining to unchecked indexing, with length checks right before it"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.icu_segmenter]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "No change to unsafe code"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.icu_segmenter_data]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "2.0.0-beta1"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_segmenter_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "crypto-safe", "ub-risk-2",]
+delta = "2.0.0-beta1 -> 2.0.0-beta2"
+notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_time]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+version = "2.0.0-beta2"
+notes = "Does not contain any unsafe code"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.icu_time_data]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+version = "2.0.0-beta2"
 notes = "Contains codegenned unsafe only, using safe Bake impls from zerovec/zerotrie"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
@@ -5397,6 +5776,13 @@ who = "Lukasz Anforowicz <lukasza@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "2.7.1"
 notes = "Grepped for `-i cipher`, `-i crypto`, `'\\bfs\\b'`, `'\\bnet\\b'`\nand there were no hits.\n\nThere is a little bit of `unsafe` Rust code - the audit can be found at\nhttps://chromium-review.googlesource.com/c/chromium/src/+/6187726/2\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.indexmap]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "2.7.1 -> 2.8.0"
+notes = "No `unsafe` introduced or affected in:\n* `indexmap_with_default!` and `indexset_with_default!` macros\n* New `PartialEq` implementations\n* `fn slice_eq` in `util.rs`\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.indexmap]]
@@ -5673,6 +6059,13 @@ delta = "1.0.11 -> 1.0.14"
 notes = "Unsafe review at https://crrev.com/c/6051067\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.itoa]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "1.0.14 -> 1.0.15"
+notes = "Only minor rustdoc changes."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.itoap]]
 who = "Augie Fackler <augie@google.com>"
 criteria = "ub-risk-2"
@@ -5685,6 +6078,13 @@ who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 version = "0.3.0"
 notes = "Contains no unsafe"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.ixdtf]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "crypto-safe", "ub-risk-0",]
+delta = "0.3.0 -> 0.4.0"
+notes = "No unsafe"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.jiff]]
@@ -5913,6 +6313,12 @@ aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust
 who = "Daniel Verkamp <dverkamp@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "0.2.147 -> 0.2.153"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.libc]]
+who = "Hsin-chen Chuang <chharry@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "0.2.153 -> 0.2.170"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.libc]]
@@ -6184,6 +6590,13 @@ version = "0.7.4"
 notes = "Contains no unsafe"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.litemap]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "0.7.4 -> 0.7.5"
+notes = "Delta implements the entry API but doesn't add or change any unsafe code."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.litrs]]
 who = "ChromeOS"
 criteria = "safe-to-run"
@@ -6258,6 +6671,13 @@ who = "Lukasz Anforowicz <lukasza@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 delta = "0.4.22 -> 0.4.25"
 notes = "No impact on `unsafe` usage in `lib.rs`."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.log]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "0.4.25 -> 0.4.26"
+notes = "Only trivial code and documentation changes."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.log]]
@@ -6559,6 +6979,13 @@ delta = "0.8.3 -> 0.8.4"
 notes = "No big changes. Replaces some array with Box and other minor changes."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.miniz_oxide]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "0.8.4 -> 0.8.5"
+notes = "No additions of or changes to unsafe code. Delta consists of a bug fix + cleanups/changes to make it easier for the compiler to elide checks."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.mio]]
 who = "Android Legacy"
 criteria = "safe-to-run"
@@ -6736,6 +7163,12 @@ aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust
 who = "Daniel Verkamp <dverkamp@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "0.27.1 -> 0.28.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.nix]]
+who = "Hsin-chen Chuang <chharry@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "0.28.0 -> 0.29.0"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.nix]]
@@ -7439,6 +7872,13 @@ criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 delta = "0.17.15 -> 0.17.16"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.png]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "0.17.16 -> 0.18.0-rc"
+notes = "Still no `unsafe`, no cryptography, and justified usage of `std::fs`."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.polars]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = "ub-risk-0"
@@ -7528,6 +7968,13 @@ who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "0.1.0"
 notes = "Contains a handful of lines of from-UTF8 unsafety and some `repr(transparent)` casting unsafety. Reasonably well commented, could do with listing invariants explicitly."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.potential_utf]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "crypto-safe", "ub-risk-2",]
+delta = "0.1.0 -> 0.1.2"
+notes = "Addition of safe comparison APIs since last audit"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.powerfmt]]
@@ -7828,6 +8275,13 @@ delta = "1.0.92 -> 1.0.93"
 notes = "No `unsafe`-related changes."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.proc-macro2]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "1.0.93 -> 1.0.94"
+notes = "Minor doc changes and clippy lint adjustments+fixes."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.process-wrap]]
 who = "Augie Fackler <augie@google.com>"
 criteria = "ub-risk-3"
@@ -7985,6 +8439,12 @@ criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "3.2.0 -> 3.6.0"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.protobuf]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "3.6.0 -> 3.7.2"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.protobuf-codegen]]
 who = "Android Legacy"
 criteria = "safe-to-run"
@@ -8009,6 +8469,12 @@ criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "3.2.0 -> 3.6.0"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.protobuf-codegen]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "3.6.0 -> 3.7.2"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.protobuf-parse]]
 who = "ChromeOS Audio"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -8021,6 +8487,12 @@ criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "3.2.0 -> 3.6.0"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.protobuf-parse]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "3.6.0 -> 3.7.2"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.protobuf-support]]
 who = "ChromeOS Audio"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -8031,6 +8503,12 @@ aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust
 who = "Daniel Verkamp <dverkamp@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "3.2.0 -> 3.6.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.protobuf-support]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "3.6.0 -> 3.7.2"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.protoc]]
@@ -8247,6 +8725,20 @@ who = "Dustin J. Mitchell <djmitche@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 delta = "1.0.37 -> 1.0.38"
 notes = "Still no unsafe"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.quote]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "1.0.38 -> 1.0.39"
+notes = "Only minor changes for clippy lints and documentation."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.quote]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "1.0.39 -> 1.0.40"
+notes = "The delta is just a simplification of how `tokens.extend(...)` call is made.\nStill no `unsafe` anywhere.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.r0]]
@@ -9001,6 +9493,13 @@ delta = "1.0.18 -> 1.0.19"
 notes = "No unsafe, just doc changes"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.rustversion]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "1.0.19 -> 1.0.20"
+notes = "Only minor updates to documentation and the mock today used for testing."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.rusty-fork]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -9185,6 +9684,13 @@ delta = "1.0.24 -> 1.0.25"
 notes = "No changes in `.rs` files except `doc` attribute changes in `lib.rs`."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.semver]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "1.0.25 -> 1.0.26"
+notes = "Only minor documentation updates."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.semver-parser]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -9294,6 +9800,13 @@ who = "Dustin J. Mitchell <djmitche@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 delta = "1.0.216 -> 1.0.217"
 notes = "Minimal changes, nothing unsafe"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.serde]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "1.0.217 -> 1.0.218"
+notes = "No changes outside comments and documentation."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.serde-tuple-vec-map]]
@@ -9437,6 +9950,13 @@ delta = "1.0.216 -> 1.0.217"
 notes = "No changes"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.serde_derive]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "1.0.217 -> 1.0.218"
+notes = "No changes outside comments and documentation."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.serde_jcs]]
 who = "Augie Fackler <augie@google.com>"
 criteria = [ "ub-risk-3", "does-not-implement-crypto",]
@@ -9566,6 +10086,13 @@ aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_p
 who = "Liza Burakova <liza@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "1.0.137 -> 1.0.138"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.serde_json]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "1.0.138 -> 1.0.140"
+notes = "Only minor fixes for clippy and documentation updates."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.serde_json_lenient]]
@@ -9783,7 +10310,7 @@ aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_p
 
 [[audits.skrifa]]
 who = "Dustin J. Mitchell <djmitche@chromium.org>"
-criteria = [ "safe-to-deploy", "crypto-safe", "ub-risk-0",]
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 delta = "0.19.0 -> 0.19.1"
 notes = "Crate has `forbid_unsafe` and no unsafe code. Changes all appear font-related and safe."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
@@ -10574,6 +11101,13 @@ criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 delta = "1.8.0 -> 1.8.1"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.tinyvec]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "1.8.1 -> 1.9.0"
+notes = "Larger delta, but no unsafe code introduced. Deltas for:\n- borsh (Binary Object Representation Serializer for Hashing) serialization/deserialization support behind the `borsh` feature.\n- trait implementations to interoperate with the generic-array crate\n- miscellaneous helper functions and support code, e.g. `into_vec()`.\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.tinyvec_macros]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = [ "does-not-implement-crypto", "safe-to-deploy",]
@@ -11240,6 +11774,13 @@ criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 delta = "1.0.15 -> 1.0.16"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.unicode-ident]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "1.0.16 -> 1.0.18"
+notes = "Only minor comment and documentation updates."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.unicode-linebreak]]
 who = "Lukasz Anforowicz <lukasza@chromium.org>"
 criteria = [ "ub-risk-0", "safe-to-deploy", "does-not-implement-crypto",]
@@ -11883,6 +12424,13 @@ version = "0.6.0"
 notes = "Contains three lines of unsafe, thoroughly commented: one is for from-UTF8 on ASCII, the other two are for from-UTF8 on a datastructure that keeps track of a buffer with partial UTF8 validation. Relatively straigtforward."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.writeable]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+delta = "0.6.0 -> 0.6.1"
+notes = "Minor comment/documentation updates and switch to a non-panicking alternative to split_at()."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.wycheproof]]
 who = "danakj@chromium.org"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -11956,6 +12504,13 @@ version = "0.7.5"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.yoke]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "0.7.5 -> 0.8.0"
+notes = "Cleaning up a previous hack for adding trait bounds to yoke objects. Unsafe changes:\n- deleting the hack itself removes a lot of unsafe use required in the hack's implementation\n- changes another unsafe use to remove the use of the hack, now that it's no longer needed\n\n\nSee https://crrev.com/c/6323349 for more audit notes.\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.yoke]]
 who = "Luca Versari <veluca@google.com>"
 criteria = [ "ub-risk-2", "does-not-implement-crypto",]
 version = "0.7.4"
@@ -11980,6 +12535,13 @@ who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
 version = "0.7.5"
 notes = "Custom derive implementing the `Yokeable` trait. Generally generates simple code that asserts covariance."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.yoke-derive]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "0.7.5 -> 0.8.0"
+notes = "No code changes: only incrementing the version."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.zerocopy]]
@@ -12068,6 +12630,13 @@ version = "0.1.5"
 notes = "Contains no unsafe"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.zerofrom]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "0.1.5 -> 0.1.6"
+notes = "Only minor cfg tweaks."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.zerofrom-derive]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -12079,6 +12648,13 @@ who = "Manish Goregaokar <manishearth@google.com>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 version = "0.1.5"
 notes = "Contains no unsafe"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.zerofrom-derive]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "0.1.5 -> 0.1.6"
+notes = "Only a minor clippy adjustment."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.zeroize]]
@@ -12101,6 +12677,13 @@ notes = "Minor repr(transparent) unsafe code. Improved comments in https://githu
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.zerotrie]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "0.2.0 -> 0.2.1"
+notes = "Changes in unsafe blocks are wrapping direct calls to `core::mem::transmute` with the `transparent_ref_from_store` wrapper.\nNo safety guarantees change, but providing the `transparent_ref_from_store` as a wrapper provides a convenient marker that this transmute operation is actually sound.\n\nSee https://crrev.com/c/6323349 for more audit notes.\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.zerotrie]]
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = "ub-risk-2"
 version = "0.1.2"
@@ -12113,6 +12696,13 @@ criteria = "does-not-implement-crypto"
 version = "0.11.0"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.zerovec]]
+who = "Manish Goregaokar <manishearth@google.com>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "0.11.0 -> 0.11.1"
+notes = "Some unsafe changed:\n  - VarZeroCow unsafe moved around but not changed much, comments improved.\n  - Added a ULE impl for ()\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.zerovec-derive]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -12123,6 +12713,12 @@ aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = "does-not-implement-crypto"
 version = "0.11.0"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.zerovec-derive]]
+who = "Daniel Cheng <dcheng@chromium.org>"
+criteria = "does-not-implement-crypto"
+delta = "0.11.0 -> 0.11.1"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.zstd]]

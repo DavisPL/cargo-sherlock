@@ -237,6 +237,20 @@ start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
+[[wildcard-audits.actix-client-ip-cloudflare]]
+criteria = "safe-to-deploy"
+user-id = 56903
+start = "2021-01-01"
+end = "2025-12-31"
+notes = "Maintained by member of Actix team."
+
+[[wildcard-audits.actix-web-lab-derive]]
+criteria = "safe-to-deploy"
+user-id = 56903
+start = "2021-01-01"
+end = "2025-12-31"
+notes = "Maintained by member of Actix team."
+
 [[wildcard-audits.actix-web-lab]]
 criteria = "safe-to-deploy"
 user-id = 56903

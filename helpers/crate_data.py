@@ -7,6 +7,9 @@ import csv
 
 User = str
 class CrateVersion(NamedTuple):
+    """
+    Class representing a crate and its version.
+    """
     name: str
     version: str
     def __str__(self) -> str:
