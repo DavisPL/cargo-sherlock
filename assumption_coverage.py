@@ -4,6 +4,7 @@ from helpers.crate_data import CrateVersion
 from helpers.logger import get_crate_names
 from solver import memoized_crate_analysis
 from collections import Counter
+from helpers.assumption import Assumption
 
 # Function to get the latest version of a crate
 def get_latest_version(crate_name):
@@ -36,20 +37,20 @@ def get_random_crates(count: int):
     # Get the latest version of each selected crate
     return [CrateVersion(crate_name, get_latest_version(crate_name)) for crate_name in random_crates]
 
-def get_assumptions_made(crate: CrateVersion) -> list[int]:
+def get_assumptions_made(crate: CrateVersion) -> list[Assumption]:
     """
-    Returns a list of assumption IDs made for a given crate.
+    Returns a list of assumptions made for a given crate.
     """
     summary = memoized_crate_analysis(crate)
-    return [assumption.id for assumption in summary.assumptions_made]
+    return summary.assumptions_made
 
 def main():
     random_crates = get_random_crates(30)
     for crate in random_crates:
         print(f"{crate} assumptions:")
         assumptions_made = get_assumptions_made(crate)
-        for assumption_id in assumptions_made:
-            print(f"Assumption {assumption_id}")
+        for assumption in assumptions_made:
+            print(assumption.name)
 
 
 if __name__ == "__main__":

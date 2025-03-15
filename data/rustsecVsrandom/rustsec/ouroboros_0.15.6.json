@@ -1,0 +1,6 @@
+Solving for required assumptions to trust ouroboros-0.15.6...
+Trust Score for ouroboros-0.15.6: 66
+Assumptions Made:
+ouroboros-0.15.6 has many downloads: 6 wt
+ouroboros-0.15.6 having many downloads implies it is safe: 10 wt
+ouroboros-0.15.6 appearing in RustSec implies it is less safe (score penalty): 50 weight

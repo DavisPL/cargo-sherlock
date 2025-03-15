@@ -1,0 +1,6 @@
+Solving for required assumptions to trust av-data-0.2.2...
+Trust Score for av-data-0.2.2: 142
+Assumptions Made:
+av-data-0.2.2 has many downloads: 82 wt
+av-data-0.2.2 having many downloads implies it is safe: 10 wt
+av-data-0.2.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

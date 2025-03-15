@@ -1,0 +1,6 @@
+Solving for required assumptions to trust slice-deque-0.1.16...
+Trust Score for slice-deque-0.1.16: 90
+Assumptions Made:
+slice-deque-0.1.16 has many downloads: 30 wt
+slice-deque-0.1.16 having many downloads implies it is safe: 10 wt
+slice-deque-0.1.16 appearing in RustSec implies it is less safe (score penalty): 50 weight

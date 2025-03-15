@@ -1,0 +1,6 @@
+Solving for required assumptions to trust sized-chunks-0.6.2...
+Trust Score for sized-chunks-0.6.2: 67
+Assumptions Made:
+sized-chunks-0.6.2 has many downloads: 7 wt
+sized-chunks-0.6.2 having many downloads implies it is safe: 10 wt
+sized-chunks-0.6.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust rustls-0.23.4...
+Trust Score for rustls-0.23.4: 61
+Assumptions Made:
+rustls-0.23.4 has many downloads: 1 wt
+rustls-0.23.4 having many downloads implies it is safe: 10 wt
+rustls-0.23.4 appearing in RustSec implies it is less safe (score penalty): 50 weight

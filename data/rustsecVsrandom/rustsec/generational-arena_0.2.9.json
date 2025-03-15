@@ -1,0 +1,6 @@
+Solving for required assumptions to trust generational-arena-0.2.9...
+Trust Score for generational-arena-0.2.9: 52
+Assumptions Made:
+generational-arena-0.2.9 has all safe dependencies: 1 wt
+generational-arena-0.2.9 having no side effects and having all safe dependencies implies it is safe: 1 wt
+generational-arena-0.2.9 appearing in RustSec implies it is less safe (score penalty): 50 weight

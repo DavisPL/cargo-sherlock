@@ -1,0 +1,6 @@
+Solving for required assumptions to trust cache-0.2.0...
+Trust Score for cache-0.2.0: 240
+Assumptions Made:
+cache-0.2.0 has many downloads: 180 wt
+cache-0.2.0 having many downloads implies it is safe: 10 wt
+cache-0.2.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

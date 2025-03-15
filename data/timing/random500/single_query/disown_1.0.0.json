@@ -1,0 +1,4 @@
+Solving for required assumptions to trust disown-1.0.0...
+Trust Score for disown-1.0.0: 1
+Assumptions Made:
+disown-1.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

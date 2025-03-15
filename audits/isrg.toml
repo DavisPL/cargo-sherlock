@@ -12,7 +12,7 @@ who = "David Cook <dcook@divviup.org>"
 criteria = "safe-to-deploy"
 user-id = 213776
 start = "2020-09-28"
-end = "2025-02-12"
+end = "2026-01-07"
 
 [audits]
 [[audits.aes]]
@@ -372,6 +372,12 @@ who = "Brandon Pitman <bran@bran.land>"
 criteria = "safe-to-deploy"
 delta = "0.1.3 -> 0.1.4"
 
+[[audits.libbz2-rs-sys]]
+who = "Ameer Ghani <inahga@divviup.org>"
+criteria = "safe-to-deploy"
+version = "0.1.1"
+notes = "libbz2-rs-sys mainly uses unsafe around the C FFI boundary, for libc interop,\nand for custom allocation support. Most end-user-facing decompression logic\nis in safe Rust. I have fuzzed and reviewed its code, and to the best of my\nability I believe it's free of any serious security vulnerabilities.\n\nlibbz2-rs-sys only depends on the libc crate, which is widely used and\nmaintained by the Rust project.\n"
+
 [[audits.libc]]
 who = "Brandon Pitman <bran@bran.land>"
 criteria = "safe-to-deploy"
@@ -381,6 +387,17 @@ delta = "0.2.139 -> 0.2.141"
 who = "Brandon Pitman <bran@bran.land>"
 criteria = "safe-to-deploy"
 delta = "0.2.149 -> 0.2.150"
+
+[[audits.libz-rs-sys]]
+who = "Ameer Ghani <inahga@divviup.org>"
+criteria = "safe-to-deploy"
+version = "0.4.0"
+notes = "This crate uses unsafe since it's for C to Rust FFI. I have reviewed and fuzzed it, and I believe it is free of any serious security problems.\n\nThe only dependency is zlib-rs, which is maintained by the same maintainers as this crate.\n"
+
+[[audits.libz-rs-sys]]
+who = "Ameer Ghani <inahga@divviup.org>"
+criteria = "safe-to-deploy"
+delta = "0.4.0 -> 0.4.1"
 
 [[audits.linux-raw-sys]]
 who = "Brandon Pitman <bran@bran.land>"
@@ -482,6 +499,11 @@ delta = "1.18.0 -> 1.19.0"
 who = "David Cook <dcook@divviup.org>"
 criteria = "safe-to-deploy"
 delta = "1.19.0 -> 1.20.1"
+
+[[audits.once_cell]]
+who = "J.C. Jones <jc@insufficient.coffee>"
+criteria = "safe-to-deploy"
+delta = "1.20.3 -> 1.21.0"
 
 [[audits.opaque-debug]]
 who = "David Cook <dcook@divviup.org>"
@@ -819,6 +841,22 @@ who = "Tim Geoghegan <timg@divviup.org>"
 criteria = "safe-to-run"
 delta = "7.0.0 -> 7.0.1"
 
+[[audits.zlib-rs]]
+who = "Ameer Ghani <inahga@divviup.org>"
+criteria = "safe-to-deploy"
+version = "0.4.0"
+notes = "zlib-rs uses unsafe Rust for invoking compiler intrinsics (i.e. SIMD), eschewing bounds checks, along the FFI boundary, and for interacting with pointers sourced from C. I have extensively reviewed and fuzzed the unsafe code. All findings from that work have been resolved as of version 0.4.0. To the best of my ability, I believe it's free of any serious security problems.\n\nzlib-rs does not require any external dependencies.\n"
+
+[[audits.zlib-rs]]
+who = "Ameer Ghani <inahga@divviup.org>"
+criteria = "safe-to-deploy"
+delta = "0.4.0 -> 0.4.1"
+
+[[audits.zlib-rs]]
+who = "Ameer Ghani <inahga@divviup.org>"
+criteria = "safe-to-deploy"
+delta = "0.4.1 -> 0.4.2"
+
 [trusted]
 [[trusted.byteorder]]
 criteria = "safe-to-deploy"
@@ -956,19 +994,19 @@ end = "2025-07-01"
 criteria = "safe-to-deploy"
 user-id = 3618
 start = "2019-03-01"
-end = "2024-06-08"
+end = "2025-11-04"
 
 [[trusted.thiserror]]
 criteria = "safe-to-deploy"
 user-id = 3618
 start = "2019-10-09"
-end = "2024-07-25"
+end = "2025-11-04"
 
 [[trusted.thiserror-impl]]
 criteria = "safe-to-deploy"
 user-id = 3618
 start = "2019-10-09"
-end = "2024-07-25"
+end = "2025-11-04"
 
 [[trusted.thread_local]]
 criteria = "safe-to-deploy"

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust aes-ctr-0.99.99...
+Trust Score for aes-ctr-0.99.99: 51
+Assumptions Made:
+aes-ctr-0.99.99 has all safe dependencies: 0 wt
+aes-ctr-0.99.99 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aes-ctr-0.99.99 appearing in RustSec implies it is less safe (score penalty): 50 weight

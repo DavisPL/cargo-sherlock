@@ -1,0 +1,5 @@
+Solving for required assumptions to trust bad64-sys-0.7.0...
+Trust Score for bad64-sys-0.7.0: 1
+Assumptions Made:
+bad64-sys-0.7.0 has all safe dependencies: 0 wt
+bad64-sys-0.7.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

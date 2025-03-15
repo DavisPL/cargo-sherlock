@@ -1,0 +1,7 @@
+Solving for required assumptions to trust hyper-0.14.2...
+Trust Score for hyper-0.14.2: 60
+Assumptions Made:
+hyper-0.14.2 has many downloads: 0 wt
+hyper-0.14.2 having many downloads implies it is safe: 10 wt
+hyper-0.14.2 has many stars and forks: 0 wt
+hyper-0.14.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

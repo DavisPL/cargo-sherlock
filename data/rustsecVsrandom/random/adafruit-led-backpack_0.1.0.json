@@ -1,0 +1,5 @@
+Solving for required assumptions to trust adafruit-led-backpack-0.1.0...
+Trust Score for adafruit-led-backpack-0.1.0: 5
+Assumptions Made:
+adafruit-led-backpack-0.1.0 has all safe dependencies: 4 wt
+adafruit-led-backpack-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

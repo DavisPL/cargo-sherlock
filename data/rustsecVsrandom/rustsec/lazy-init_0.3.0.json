@@ -1,0 +1,7 @@
+Solving for required assumptions to trust lazy-init-0.3.0...
+Trust Score for lazy-init-0.3.0: 123
+Assumptions Made:
+lazy-init-0.3.0 has many downloads: 63 wt
+lazy-init-0.3.0 having many downloads implies it is safe: 10 wt
+lazy-init-0.3.0 has all safe dependencies: 0 wt
+lazy-init-0.3.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

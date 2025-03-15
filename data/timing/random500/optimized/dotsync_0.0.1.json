@@ -1,0 +1,5 @@
+Solving for required assumptions to trust dotsync-0.0.1...
+Trust Score for dotsync-0.0.1: 14
+Assumptions Made:
+dotsync-0.0.1 has all safe dependencies: 13 wt
+dotsync-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt

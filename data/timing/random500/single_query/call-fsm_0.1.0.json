@@ -1,0 +1,4 @@
+Solving for required assumptions to trust call-fsm-0.1.0...
+Trust Score for call-fsm-0.1.0: 1
+Assumptions Made:
+call-fsm-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust prettytable-rs-0.9.0...
+Trust Score for prettytable-rs-0.9.0: 71
+Assumptions Made:
+prettytable-rs-0.9.0 has many downloads: 11 wt
+prettytable-rs-0.9.0 having many downloads implies it is safe: 10 wt
+prettytable-rs-0.9.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

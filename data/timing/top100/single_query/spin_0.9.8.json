@@ -1,0 +1,6 @@
+Solving for required assumptions to trust spin-0.9.8...
+Trust Score for spin-0.9.8: 60
+Assumptions Made:
+spin-0.9.8 has many downloads: 0 wt
+spin-0.9.8 having many downloads implies it is safe: 10 wt
+spin-0.9.8 appearing in RustSec implies it is less safe (score penalty): 50 wt

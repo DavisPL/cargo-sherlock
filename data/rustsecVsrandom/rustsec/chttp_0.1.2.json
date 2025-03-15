@@ -1,0 +1,6 @@
+Solving for required assumptions to trust chttp-0.1.2...
+Trust Score for chttp-0.1.2: 132
+Assumptions Made:
+chttp-0.1.2 has many stars and forks: 67 wt
+chttp-0.1.2 having many stars and forks implies it is safe: 15 wt
+chttp-0.1.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

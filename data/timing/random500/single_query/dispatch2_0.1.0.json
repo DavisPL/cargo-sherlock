@@ -1,0 +1,7 @@
+Solving for required assumptions to trust dispatch2-0.1.0...
+Trust Score for dispatch2-0.1.0: 273
+Assumptions Made:
+dispatch2-0.1.0 has many downloads: 263 wt
+dispatch2-0.1.0 having many downloads implies it is safe: 10 wt
+libc-0.2.162 has many downloads: 0 wt
+libc-0.2.162 has many stars and forks: 0 wt

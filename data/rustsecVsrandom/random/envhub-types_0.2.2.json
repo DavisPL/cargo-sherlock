@@ -1,0 +1,5 @@
+Solving for required assumptions to trust envhub-types-0.2.2...
+Trust Score for envhub-types-0.2.2: 116
+Assumptions Made:
+envhub-types-0.2.2 has all safe dependencies: 115 wt
+envhub-types-0.2.2 having no side effects and having all safe dependencies implies it is safe: 1 wt

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust cortex-m-rt-0.7.2...
+Trust Score for cortex-m-rt-0.7.2: 83
+Assumptions Made:
+cortex-m-rt-0.7.2 has many downloads: 23 wt
+cortex-m-rt-0.7.2 having many downloads implies it is safe: 10 wt
+cortex-m-rt-0.7.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

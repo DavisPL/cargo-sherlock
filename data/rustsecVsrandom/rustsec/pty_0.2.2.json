@@ -1,0 +1,6 @@
+Solving for required assumptions to trust pty-0.2.2...
+Trust Score for pty-0.2.2: 127
+Assumptions Made:
+pty-0.2.2 has many downloads: 67 wt
+pty-0.2.2 having many downloads implies it is safe: 10 wt
+pty-0.2.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

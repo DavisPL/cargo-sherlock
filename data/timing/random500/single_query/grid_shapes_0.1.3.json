@@ -1,0 +1,7 @@
+Solving for required assumptions to trust grid_shapes-0.1.3...
+Trust Score for grid_shapes-0.1.3: 109
+Assumptions Made:
+coord_2d-0.3.6 having no side effects and having all safe dependencies implies it is safe: 1 wt
+grid_2d-0.15.3 has many downloads: 97 wt
+grid_2d-0.15.3 having many downloads implies it is safe: 10 wt
+grid_shapes-0.1.3 having no side effects and having all safe dependencies implies it is safe: 1 wt

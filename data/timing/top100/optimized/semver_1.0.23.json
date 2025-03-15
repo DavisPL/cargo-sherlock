@@ -1,0 +1,6 @@
+Solving for required assumptions to trust semver-1.0.23...
+Trust Score for semver-1.0.23: 5
+Assumptions Made:
+semver-1.0.23 has many downloads: 0 wt
+semver-1.0.23 having all trusted developers implies it is safe: 2 wt
+dtolnay is trusted: 3 wt

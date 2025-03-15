@@ -1,0 +1,7 @@
+Solving for required assumptions to trust once_cell-1.0.0...
+Trust Score for once_cell-1.0.0: 60
+Assumptions Made:
+once_cell-1.0.0 has many downloads: 0 wt
+once_cell-1.0.0 having many downloads implies it is safe: 10 wt
+once_cell-1.0.0 has all safe dependencies: 0 wt
+once_cell-1.0.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

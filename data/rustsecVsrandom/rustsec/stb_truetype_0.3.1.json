@@ -1,0 +1,6 @@
+Solving for required assumptions to trust stb_truetype-0.3.1...
+Trust Score for stb_truetype-0.3.1: 83
+Assumptions Made:
+stb_truetype-0.3.1 has many downloads: 23 wt
+stb_truetype-0.3.1 having many downloads implies it is safe: 10 wt
+stb_truetype-0.3.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

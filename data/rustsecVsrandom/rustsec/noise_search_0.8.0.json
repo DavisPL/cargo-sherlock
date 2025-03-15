@@ -1,0 +1,6 @@
+Solving for required assumptions to trust noise_search-0.8.0...
+Trust Score for noise_search-0.8.0: 207
+Assumptions Made:
+noise_search-0.8.0 has many downloads: 147 wt
+noise_search-0.8.0 having many downloads implies it is safe: 10 wt
+noise_search-0.8.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

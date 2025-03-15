@@ -2,12 +2,21 @@
 VENV = .venv
 PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip
+NIGHTLY_VERSION = nightly-2024-10-25 
 
 install: $(VENV)/bin/activate cargo-scan/Cargo.toml
 	git submodule init
 	git submodule update
 	. ./$(VENV)/bin/activate
-	cargo build --manifest-path cargo-scan/Cargo.toml
+
+	# Ensure the specific Rust Nightly version is installed and used
+	rustup install $(NIGHTLY_VERSION)
+	rustup override set $(NIGHTLY_VERSION)
+	rustup component add miri --toolchain $(NIGHTLY_VERSION)
+
+	# Build the Cargo project using the specific Nightly version
+	cargo +$(NIGHTLY_VERSION) build --manifest-path cargo-scan/Cargo.toml
+
 	# Please enter your GitHub personal access token:
 	# Instructions on how to do this can be found in the README.md file (installation step 4).
 	@read token; \

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust mozjpeg-0.8.17...
+Trust Score for mozjpeg-0.8.17: 115
+Assumptions Made:
+mozjpeg-0.8.17 has many downloads: 55 wt
+mozjpeg-0.8.17 having many downloads implies it is safe: 10 wt
+mozjpeg-0.8.17 appearing in RustSec implies it is less safe (score penalty): 50 weight

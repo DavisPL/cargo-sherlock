@@ -1,0 +1,6 @@
+Solving for required assumptions to trust interledger-packet-0.4.0...
+Trust Score for interledger-packet-0.4.0: 161
+Assumptions Made:
+interledger-packet-0.4.0 has many downloads: 101 wt
+interledger-packet-0.4.0 having many downloads implies it is safe: 10 wt
+interledger-packet-0.4.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

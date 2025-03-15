@@ -1,0 +1,6 @@
+Solving for required assumptions to trust wasmtime-1.0.1...
+Trust Score for wasmtime-1.0.1: 65
+Assumptions Made:
+wasmtime-1.0.1 has many stars and forks: 0 wt
+wasmtime-1.0.1 having many stars and forks implies it is safe: 15 wt
+wasmtime-1.0.1 appearing in RustSec implies it is less safe (score penalty): 50 weight
