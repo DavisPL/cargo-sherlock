@@ -205,7 +205,12 @@ def complete_analysis(crate: CrateVersion, file = None):
     variables, assumptions = get_crate_assumptions(crate, crate_metadata)
     summary = get_crate_assumption_summary(crate, variables, assumptions)
     trust_cost = sum(a.cost for a in summary.assumptions_made)
-    print(f"Trust Cost for {crate} (lower cost is better): {trust_cost} cost", file=file)
+
+    normalized_trust_cost = (trust_cost / MAX_COST) * 100
+    # normalized_trust_cost = min(normalized_trust_cost, 1)
+
+
+    print(f"Trust Cost for {crate} (lower cost is better): {normalized_trust_cost} cost", file=file)
     print("Assumptions Made:", file=file)
     for a in summary.assumptions_made:
         print(a, file=file)

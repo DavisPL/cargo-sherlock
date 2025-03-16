@@ -540,22 +540,22 @@ def clean_row(row):
     cleaned_row = [item.strip().strip("'\"") for item in cleaned_row]
     return cleaned_row
 
-
 def get_potential_functions(file_path):
-    # print(file_path)
+    # print(file_path)c
     length = 0
     try:
         with open(file_path) as csv_file:
             reader = list(csv.reader(csv_file))
             target = ['crate, fn_decl, callee, effect, dir, file, line, col']
             start_index = reader.index(target)
-            lines = reader[start_index:-3] # removing the first two and last three lines
+            lines = reader[start_index:-3] # removing the first two and last three lines, the last three lines contains the summary and first line is finished 'dev' profile etc 
         formatted_lines = formatter(lines)
-        # print(formatted_lines)
         formatted_lines = [clean_row(row) for row in formatted_lines]
-        # print("554 " , formatted_lines)
         df = pd.DataFrame(formatted_lines[1:] , columns=formatted_lines[0])
-        # print(df)
+        # here I am getting the count for just the unsafe calls, it is possible to get the count of each type of side effect as well if interested. 
+        unsafe = df[df["effect"].str.contains("unsafe", case=False, na=False)]["effect"].count()
+        unsafe += df[df["effect"].str.contains("PtrDeref", case=False, na=False)]["effect"].count() # Unsafe calls with a pointer dereference are labeled as PtrDeref
+
         with open("effect_counts.json", "r") as file:
                 loaded_effect_counts = json.load(file)
                 rustsec_effects = loaded_effect_counts.keys()
@@ -563,13 +563,13 @@ def get_potential_functions(file_path):
                 desired_order = ['dir', 'file', 'line', 'col', 'fn_decl', 'callee', 'effect']
                 df_reordered = concerned_df[desired_order]
                 df_reordered.to_csv(f"../experiments/dangerous_functions.csv")
-                return len(df), len(concerned_df)
+                return len(df), len(concerned_df) , int(unsafe)
     except FileNotFoundError:
         print(f"File not found: {file_path}")
-        return None,None
+        return None,None,None
     except Exception as e:
         print(f"An error occurred: {e}")
-        return None,None
+        return None,None,None
 
 def download_crate(crate_name: str, version: str):
     # Construct the output file name
@@ -770,6 +770,95 @@ def get_dependencies(crate_name, version):
         print(f"Failed to fetch dependencies for {crate_name} version {version}")
         return []
 
+def run_miri_and_save(crate_name, crate_version):
+    # Define paths
+    base_dir = os.path.abspath(os.path.join(os.getcwd(), ".."))
+    experiments_dir = os.path.join(base_dir, "experiments")
+    crate_dir = os.path.join(base_dir, "processing", f"{crate_name}-{crate_version}")
+    output_file_path = os.path.join(experiments_dir, f"{crate_name}-{crate_version}_miri_output.csv")
+
+    # Ensure the experiments directory exists
+    os.makedirs(experiments_dir, exist_ok=True)
+
+    # Change to the crate directory
+    original_directory = os.getcwd()
+    os.chdir(crate_dir)
+
+    try:
+        # Command to run Miri tests
+        command = 'cargo +nightly miri test'
+
+        # Run the command and capture the output
+        result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+
+        # Write the output to the CSV file
+        with open(output_file_path, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            # Split the output into lines and write each line separately
+            writer.writerows([[line] for line in result.stdout.splitlines()])
+
+        # print(f"Miri test output saved to: {output_file_path}")
+    except Exception as e:
+        print(f"An error occurred helper/logger::run_miri_and_save: {e}")
+    finally:
+        # Change back to the original directory
+        os.chdir(original_directory)
+
+    return output_file_path
+    
+def parse_miri_summary(output_file_path):
+    """
+    Parses the Miri output file to extract the last test result summary.
+    
+    The expected format in the file is similar to:
+      test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.43s
+    
+    Returns:
+        A dictionary with keys:
+            'status', 'passed', 'failed', 'ignored', 'measured', 'filtered_out', 'time_seconds'
+        or None if no summary line could be found or parsed.
+    """
+    if not os.path.exists(output_file_path):
+        print(f"File not found: {output_file_path} Miri")
+        return None
+
+    summary_line = None
+    with open(output_file_path, 'r') as f:
+        for line in f:
+            if "test result:" in line:
+                summary_line = line.strip().strip('"')
+
+    if summary_line is None:
+        print("No test summary line found in the file for Miri")
+        return {"status": "crash"}
+
+    # Define a regex pattern to extract the summary values.
+    pattern = (
+        r"test result:\s+(\w+)\.\s+"      # status, e.g. "ok"
+        r"(\d+)\s+passed;\s+"             # number of tests passed
+        r"(\d+)\s+failed;\s+"             # number of tests failed
+        r"(\d+)\s+ignored;\s+"            # number of tests ignored
+        r"(\d+)\s+measured;\s+"           # number of tests measured
+        r"(\d+)\s+filtered out;\s+"       # number of tests filtered out
+        r"finished in\s+([\d\.]+)s"        # total time in seconds
+    )
+    match = re.search(pattern, summary_line)
+    if match:
+        result = {
+            "status": match.group(1),
+            "passed": int(match.group(2)),
+            "failed": int(match.group(3)),
+            "ignored": int(match.group(4)),
+            "measured": int(match.group(5)),
+            "filtered_out": int(match.group(6)),
+            "time_seconds": float(match.group(7))
+        }
+        return result
+    else:
+        print("Failed to parse the summary line for Miri:")
+        print(summary_line)
+        return None
+
 def logger(crate_name: str, version: str, job_id: str):
     '''
     This function will log the results of solidifier in a file.
@@ -854,16 +943,16 @@ def logger(crate_name: str, version: str, job_id: str):
         download_crate(crate_name, version)
         extract_and_delete()
         file_name = run_cargo_and_save(crate_name, version)
-        # print(file_name , "is the file name")
-        total,flagged = get_potential_functions(file_name)
+        total,flagged,unsafe= get_potential_functions(file_name)
         writer.writerow(["event", "timestamp", "total", "flagged"])
         writer.writerow([
             "Side Effects",
             "-",
             total,
-            flagged
+            flagged,
+            unsafe
         ])
-        data.append({ "event": "Side Effects", "timestamp": "-", "total": total, "flagged": flagged})
+        data.append({ "event": "Side Effects", "timestamp": "-", "total": total, "flagged": flagged , "unsafe": unsafe})
         writer.writerow(["************************************"])
         dependency_tree = build_dependency_tree(crate_name, version)
         writer.writerow(["event", "timestamp", "dependency_tree"])
@@ -880,10 +969,36 @@ def logger(crate_name: str, version: str, job_id: str):
             rud
         ])
         data.append({ "event": "Rudra", "timestamp": "-", "output": rud})
-        writer.writerow(["************************************"])
+        miri_file = run_miri_and_save(crate_name, version)
+        miri = parse_miri_summary(miri_file)
+        if miri["status"] != "crash":
+        # {'status': 'ok', 'passed': 24, 'failed': 0, 'ignored': 0, 'measured': 0, 'filtered_out': 0, 'time_seconds': 0.51}
+            writer.writerow(["event", "timestamp", "status", "passed", "failed", "ignored", "measured", "filtered_out", "time_seconds"])
+            writer.writerow([
+                "Miri",
+                "-",
+                miri["status"],
+                miri["passed"],
+                miri["failed"],
+                miri["ignored"],
+                miri["measured"],
+                miri["filtered_out"],
+                miri["time_seconds"]
+            ])
+            data.append({ "event": "Miri", "timestamp": "-", "status": miri["status"], "passed": miri["passed"], "failed": miri["failed"], "ignored": miri["ignored"], "measured": miri["measured"], "filtered_out": miri["filtered_out"], "time_seconds": miri["time_seconds"]})
+            writer.writerow(["************************************"])
+        else:
+            writer.writerow(["Miri", "timestamp" , "status"])
+            writer.writerow([
+                "Miri",
+                "-",
+                "Miri failed to run"
+            ])
+            data.append({ "event": "Miri", "timestamp": "-", "output": "Miri failed to run" , "status": "crash"})
+            writer.writerow(["************************************"])
 
         os.chdir(current_directory)
-        shutil.rmtree(f"processing/{crate_name}-{version}")
+        # shutil.rmtree(f"processing/{crate_name}-{version}")
 
         return data
 
