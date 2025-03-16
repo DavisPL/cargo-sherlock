@@ -49,27 +49,6 @@ class Assumption:
         for assumption in assumptions:
             if assumption.cost > MAX_COST or assumption.cost < 0:
                 print(f"WARNING: The cost {assumption.cost} on {assumption.name} is not consistent with the other assumptions.")
-        
-
-class NegativeAssumption(Assumption):
-    """
-    Class representing a negative assumption that can be made by the solver. A negative assumption is an assumption
-    that incurs cost if it is set to false.
-    """
-    def __repr__(self) -> str:
-        return f"Negative{super().__repr__()}"
-    def default_assignment(self) -> z3.BoolRef:
-        """
-        Returns the default assignment of the negative assumption. This is false for
-        negative assumptions.
-        """
-        return z3.BoolVal(False)
-    def single_assumption_cost(self) -> z3.ArithRef:
-        """
-        Returns the cost of a single negative assumption. Cost is incurred if the assumption is 
-        set to false.
-        """
-        return z3.If(self.variable, 0, self.cost)
 
 class CrateAssumptionSummary(NamedTuple):
     """

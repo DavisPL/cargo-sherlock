@@ -1,16 +1,14 @@
 # This file contains the main functions for solving the minimum cost problem using Z3.
-import argparse
 import datetime
 import logging
 import z3
 import helpers.costs as costs
 import helpers.crate_data as crate_data
 import helpers.developer_data as developer_data
-from helpers.assumption import Assumption, CrateAssumptionSummary, NegativeAssumption, MAX_COST
+from helpers.assumption import Assumption, CrateAssumptionSummary, MAX_COST
 from helpers.crate_data import CrateVersion
 
-MAX_MINUTES = 5 # timeout for each call to the solver
-MAX_COST = 500
+MAX_MINUTES = 5 # timeout for the solver call
 
 logfile_name = datetime.datetime.now().strftime('logs/solver/%Y-%m-%d_%H:%M:%S.log')
 logging.basicConfig(
@@ -43,7 +41,12 @@ def get_developer_assumptions(developer: str, metadata: dict) -> tuple[list[z3.B
 
     return (unknown_vars, assumptions)
 
-def get_crate_assumptions(crate: CrateVersion, metadata: dict) -> tuple[list[z3.BoolRef], list[Assumption]]:
+def get_crate_assumptions(
+        crate: CrateVersion, 
+        metadata: dict, 
+        analyzed_crates: set[CrateVersion] = set(),
+        analyzed_developers: set[str] = set()
+    ) -> tuple[list[z3.BoolRef], list[Assumption]]:
     """
     Returns a list of Z3 variables and possible assumptions for a given crate. Notably, one of the assumptions is that
     all dependencies of the crate are safe. The cost of this assumption is decided by recursively calling this function
@@ -53,27 +56,27 @@ def get_crate_assumptions(crate: CrateVersion, metadata: dict) -> tuple[list[z3.
     safe = z3.Bool(f"{crate}_safe")  # crate is safe
     good_downloads = z3.Bool(f"{crate}_high_downloads")  # crate has a 'good enough' number of downloads
     good_repo_stats = z3.Bool(f"{crate}_high_repo_stats")  # crate repo has a 'good enough' number of stars and forks
-    all_dependencies_safe = z3.Bool(f"{crate}_all_dependencies_safe")  # all crate dependencies are safe
-    developers_trusted: list[z3.BoolRef] = []
-    for developer in metadata["developers"]:
-        trusted = z3.Bool(f"{developer}_trusted")
-        developers_trusted.append(trusted)
-    unknown_vars = [safe, good_downloads, good_repo_stats, all_dependencies_safe] + developers_trusted
+    dependencies_safe: list[z3.BoolRef] = [z3.Bool(f"{dep}_safe") for dep in metadata["dependencies"]]
+    developers_trusted: list[z3.BoolRef] = [z3.Bool(f"{dev}_trusted") for dev in metadata["developers"]]
+    unknown_vars = [safe, good_downloads, good_repo_stats] + dependencies_safe
 
     # Known variables
     passed_audit = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
     no_side_effects = z3.BoolVal(metadata["num_side_effects"] == 0)  # crate has no side effects
-    in_rust_sec = z3.BoolVal(metadata["in_rust_sec"])  # crate is in RustSec
 
-    # Assumptions necessary to prove all dependencies are safe. Each element CrateAssumptionSummary in the list
-    # contains the assumptions necessary to prove that a single dependency is safe.
-    assumptions_for_dependency_safety: list[CrateAssumptionSummary] = []
+    assumptions_for_dependency_safety: list[Assumption] = []
+    analyzed_crates.add(crate)
     dependency: CrateVersion
-    for dependency in metadata["dependencies"]:
-        assumptions_for_dependency_safety.append(memoized_crate_analysis(dependency))
-    # Duplicate assumptions are removed to avoid double counting the cost of assumptions.
-    assumptions_made_no_duplicates = set(a for s in assumptions_for_dependency_safety for a in s.assumptions_made)
-    min_cost_for_dependency_safety = sum(a.cost for a in assumptions_made_no_duplicates)
+    for i, dependency in enumerate(metadata["dependencies"]):
+        if dependency in analyzed_crates:
+            logger.info(f"Dependency {dependency} has already been analyzed. Skipping.")
+            continue
+        logger.info(f"Analyzing dependency {dependency} ({i + 1}/{len(metadata['dependencies'])})...")
+        analyzed_crates.add(dependency)
+        dependency_metadata = crate_data.get_crate_metadata(dependency)
+        dependency_vars, dependency_assumptions = get_crate_assumptions(dependency, dependency_metadata, analyzed_crates, analyzed_developers)
+        unknown_vars.extend(dependency_vars)
+        assumptions_for_dependency_safety.extend(dependency_assumptions)
     
     assumptions = [
         Assumption(f"{crate} is safe", safe, MAX_COST),
@@ -82,36 +85,68 @@ def get_crate_assumptions(crate: CrateVersion, metadata: dict) -> tuple[list[z3.
         Assumption(f"{crate} having a passed audit implies it is safe", z3.Implies(passed_audit, safe), 30),
         Assumption(f"{crate} has many stars and forks", good_repo_stats, costs.repo_stats_cost(metadata["stars"], metadata["forks"])),
         Assumption(f"{crate} having many stars and forks implies it is safe", z3.Implies(good_repo_stats, safe), 15),
-        Assumption(f"{crate} has all safe dependencies", all_dependencies_safe, min_cost_for_dependency_safety),
-        Assumption(f"{crate} having no side effects and having all safe dependencies implies it is safe", z3.Implies(z3.And(no_side_effects, all_dependencies_safe), safe), 1),
+        Assumption(f"{crate} having no side effects and having all safe dependencies implies it is safe", z3.Implies(z3.And(no_side_effects, z3.And(dependencies_safe)), safe), 1),
         Assumption(f"{crate} having all trusted developers implies it is safe", z3.Implies(z3.And(developers_trusted), safe), 2),
-        NegativeAssumption(f"{crate} appearing in RustSec implies it is less safe (score penalty)", z3.Implies(in_rust_sec, z3.Not(safe)), 50),
     ]
 
     for developer in metadata["developers"]:
+        if developer in analyzed_developers:
+            logger.info(f"Developer {developer} has already been analyzed. Skipping.")
+            continue
+        logger.info(f"Analyzing developer {developer}...")
+        analyzed_developers.add(developer)
         metadata = developer_data.get_developer_metadata(developer)
         developer_variables, developer_assumptions = get_developer_assumptions(developer, metadata)
-        developer_min_cost = get_developer_min_cost(developer, developer_variables, developer_assumptions)
-        assumptions.append(Assumption(f"{developer} is trusted", z3.Bool(f"{developer}_trusted"), developer_min_cost))
+        assumptions.extend(developer_assumptions)
+        unknown_vars.extend(developer_variables)
 
     return (unknown_vars, assumptions)
 
-def memoized_crate_analysis(crate: CrateVersion, processed_crates: list[CrateAssumptionSummary] = []) -> CrateAssumptionSummary:
+def get_head(horn_clause: z3.BoolRef) -> z3.BoolRef | None:
     """
-    Returns the minimum cost of assumptions for a given crate, with the assumptions made for all crates
-    stored in the processed_crates list.
+    Gets the head (unnegated literal) of a horn clause in disjunctive form. Returns None if no head is found.
     """
-    # Check if the crate has already been processed. If it has, return its summary
-    summary = next((c for c in processed_crates if c.crate == crate), None)
-    if summary is not None:
-        return summary
-    metadata = crate_data.get_crate_metadata(crate)
-    variables, assumptions = get_crate_assumptions(crate, metadata)
-    Assumption.cost_consistency_check(assumptions)
-    summary = get_crate_assumption_summary(crate, variables, assumptions)
-    processed_crates.append(summary)
-    return summary
+    literals = horn_clause.children() if z3.is_or(horn_clause) else [horn_clause]
+    for literal in literals:
+        if not z3.is_not(literal):
+            return literal
+    return None
 
+def get_body(horn_clause: z3.BoolRef) -> z3.BoolRef:
+    """
+    Gets the body (conjunction of negated literals) of a horn clause in disjunctive form.
+    """
+    literals = horn_clause.children() if z3.is_or(horn_clause) else [horn_clause]
+    body_literals = [z3.Not(literal) for literal in literals if z3.is_not(literal)]
+    return z3.And(body_literals)
+
+def propogate_heads(variables: list[z3.BoolRef], assumptions: list[Assumption], conclusion: z3.BoolRef) -> z3.BoolRef:
+    """
+    Propogates the heads of assumptions to create a Z3 formula that is satisfiable iff the conclusion is entailed by the assumptions.
+    """
+    assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
+    horn_assumptions = z3.simplify(assumption_implications)
+    clauses: list[z3.BoolRef] = horn_assumptions.children() if z3.is_and(horn_assumptions) else [horn_assumptions]
+    conclusion_proving_bodies = []
+    for clause in clauses:
+        head = get_head(clause)
+        if head == conclusion:
+            body = get_body(clause)
+            conclusion_proving_bodies.append(body)
+    entails = z3.Or(conclusion_proving_bodies) # formula that is satisfiable iff the conclusion is entailed by the assumptions
+    for var in variables:
+        substitution_bodies = []
+        for clause in clauses:
+            head = get_head(clause)
+            if head == var:
+                body = get_body(clause)
+                substitution_bodies.append(body)
+        variable_substitution = z3.Or(substitution_bodies) # disjunction of bodies that imply the variable
+        entails = z3.substitute(entails, (var, variable_substitution))
+        for clause in clauses:
+            clause = z3.substitute(clause, (var, variable_substitution)) # apply the substitution to the rest of the clauses
+    return z3.simplify(entails)
+            
 def get_crate_assumption_summary(crate: CrateVersion, variables: list[z3.BoolRef], assumptions: list[Assumption]) -> CrateAssumptionSummary:
     """
     Solves for the minimum cost assumptions necessary to prove a crate is safe. Returns a summary of the assumptions made.
@@ -122,13 +157,10 @@ def get_crate_assumption_summary(crate: CrateVersion, variables: list[z3.BoolRef
     optimizer.set("timeout", MAX_MINUTES * 60_000)
     min_cost = z3.Int('min_cost')
     logger.info("Constructing Z3 formula...")
-    assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
     crate_is_safe = z3.Bool(f"{crate}_safe")
-    implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(crate_is_safe))
-    UNSAT = z3.Not(exists_bool_expr(variables, implications_with_neg_conclusion))
-    CON = exists_bool_expr(variables, assumption_implications)
-    optimizer.add(UNSAT)
-    optimizer.add(CON)
+    entails = propogate_heads(variables, assumptions, crate_is_safe)
+    logger.info(entails)
+    optimizer.add(entails)
     optimizer.add(min_cost == Assumption.assumptions_cost(assumptions))
     logger.info("Finished constructing Z3 formula.")
     logger.info("Solving Z3 formula...")
@@ -162,84 +194,16 @@ def get_crate_assumption_summary(crate: CrateVersion, variables: list[z3.BoolRef
         logger.error(f"Z3 Reason: {optimizer.reason_unknown()}")
         assumptions_made = [Assumption(f"{crate} is safe", crate_is_safe, MAX_COST)]
         return CrateAssumptionSummary(crate, assumptions_made)
-    
-def get_developer_min_cost(developer: str, variables: list[z3.BoolRef], assumptions: list[Assumption]) -> int:
-    """
-    Solves for the minimum cost assumptions necessary to prove a developer is trustworthy. Returns the minimum cost.
-    """
-    logger.info(f"Solving for minimum cost of assumptions for {developer}...")
-    logger.info(f"Number of Z3 Variables: {len(variables)}")
-    optimizer = z3.Optimize()
-    optimizer.set("timeout", MAX_MINUTES * 60_000)
-    min_cost = z3.Int('min_cost')
-    logger.info("Constructing Z3 formula...")
-    assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
-    crate_is_safe = z3.Bool(f"{developer}_trusted")
-    implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(crate_is_safe))
-    UNSAT = z3.Not(exists_bool_expr(variables, implications_with_neg_conclusion))
-    CON = exists_bool_expr(variables, assumption_implications)
-    optimizer.add(UNSAT)
-    optimizer.add(CON)
-    optimizer.add(min_cost == Assumption.assumptions_cost(assumptions))
-    logger.info("Finished constructing Z3 formula.")
-    logger.info("Solving Z3 formula...")
-    optimizer.minimize(min_cost)
-    # Check for satisfiability
-    result = optimizer.check()
-    if result == z3.sat:
-        model = optimizer.model()
-        stats = optimizer.statistics()
-        logger.info(f"Minimum cost of assumptions for {developer}: {model[min_cost]}")
-        # for some reason, the time taken is not always recorded in the statistics (it seems to not be recorded when the
-        # formula is determined to be satisfiable very quickly)
-        z3_solving_time = stats.get_key_value('time') if "time" in stats.keys() else 0
-        logger.info(f"Z3 Solving Time: {z3_solving_time} sec")
-        if "conflicts" in stats.keys():
-            logger.info(f"Z3 Num Conflicts: {stats.get_key_value('conflicts')}")
-        elif "sat conflicts" in stats.keys():
-            logger.info(f"Z3 Num Conflicts: {stats.get_key_value('sat conflicts')}")
-        else:
-            logger.info("Z3 Num Conflicts: N/A")
-        min_cost_int: z3.IntNumRef = model[min_cost]
-        return min_cost_int.as_long()
-    elif result == z3.unsat:
-        logger.critical("The Z3 formula is unsatisfiable.") # This should never happen
-        raise Exception
-    else:
-        logger.error("The satisfiability of the formula could not be determined.")
-        logger.error(f"Z3 Reason: {optimizer.reason_unknown()}")
-        return MAX_COST
-
-def get_substituted_clauses(variables: list[z3.BoolRef], expression: z3.BoolRef) -> list[z3.BoolRef]:
-    """
-    Returns a list of clauses, composed of the substitution of all occurrences of the given variables 
-    in the given expression with True and False. Each clause is a possible assignment of the boolean 
-    variables.
-    """
-    clauses = []
-    def sub(i=0, clause=expression):
-        if i == len(variables):
-            clauses.append(clause)
-        else:
-            sub(i+1, z3.substitute(clause, (variables[i], z3.BoolVal(False))))
-            sub(i+1, z3.substitute(clause, (variables[i], z3.BoolVal(True))))
-    sub()
-    return clauses
-
-def exists_bool_expr(variables: list[z3.BoolRef], expression: z3.BoolRef) -> z3.BoolRef:
-    """
-    Returns the existential quantification of the given expression with respect to the given boolean
-    variables. This is equivalent to the disjunction of all possible substitutions of the variables.
-    """
-    clauses = get_substituted_clauses(variables, expression)
-    return z3.Or(clauses)
 
 def complete_analysis(crate: CrateVersion, file = None):
     """
     Performs a complete analysis for a given crate. Prints results to the specified file (or stdout if
     no file is specified).
     """
-    summary = memoized_crate_analysis(crate)
+    logger.info(f"Performing complete analysis for {crate}")
+    crate_metadata = crate_data.get_crate_metadata(crate)
+    variables, assumptions = get_crate_assumptions(crate, crate_metadata)
+    summary = get_crate_assumption_summary(crate, variables, assumptions)
     trust_cost = sum(a.cost for a in summary.assumptions_made)
 
     normalized_trust_cost = (trust_cost / MAX_COST) * 100
@@ -252,13 +216,9 @@ def complete_analysis(crate: CrateVersion, file = None):
         print(a, file=file)
 
 def main():
-    parser = argparse.ArgumentParser(description="Perform a complete analysis for a given crate.")
-    parser.add_argument("crate_name", type=str, help="The name of the crate to analyze.")
-    parser.add_argument("crate_version", type=str, help="The version of the crate to analyze.")
-    parser.add_argument("--output", default=None, type=str, help="Output file path to save crate information.")
-    args = parser.parse_args()
-    crate = CrateVersion(args.crate_name, args.crate_version)
-    complete_analysis(crate, args.output)
+    crate = CrateVersion("tokio", "1.44.1")
+    crate = CrateVersion("anyhow", "1.0.97")
+    complete_analysis(crate)
 
 if __name__ == "__main__":
     main()
