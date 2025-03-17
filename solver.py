@@ -5,7 +5,7 @@ import z3
 import helpers.costs as costs
 import helpers.crate_data as crate_data
 import helpers.developer_data as developer_data
-from helpers.assumption import Assumption, CrateAssumptionSummary, MAX_COST
+from helpers.assumption import Assumption, CrateAssumptionSummary
 from helpers.crate_data import CrateVersion
 
 MAX_MINUTES = 5 # timeout for the solver call
@@ -35,8 +35,8 @@ def get_developer_assumptions(developer: str, metadata: dict) -> tuple[list[z3.B
     in_trusted_list = z3.BoolVal(metadata["in_trusted_list"])  # developer is in the list of trusted developers
 
     assumptions = [
-        Assumption(f"{developer} is trusted", trusted, 450),
-        Assumption(f"{developer} being in the trusted list implies they are trusted", z3.Implies(in_trusted_list, trusted), 3)
+        Assumption(f"{developer} is trusted", trusted, 70),
+        Assumption(f"{developer} being in the trusted list implies they are trusted", z3.Implies(in_trusted_list, trusted), 5)
     ]
 
     return (unknown_vars, assumptions)
@@ -79,14 +79,14 @@ def get_crate_assumptions(
         assumptions_for_dependency_safety.extend(dependency_assumptions)
     
     assumptions = [
-        Assumption(f"{crate} is safe", safe, MAX_COST),
+        Assumption(f"{crate} is safe", safe, costs.MAX_COST),
         Assumption(f"{crate} has many downloads", good_downloads, costs.downloads_cost(metadata["downloads"])),
-        Assumption(f"{crate} having many downloads implies it is safe", z3.Implies(good_downloads, safe), 10),
-        Assumption(f"{crate} having a passed audit implies it is safe", z3.Implies(passed_audit, safe), 30),
+        Assumption(f"{crate} having many downloads implies it is safe", z3.Implies(good_downloads, safe), 25),
+        Assumption(f"{crate} having a passed audit implies it is safe", z3.Implies(passed_audit, safe), 5),
         Assumption(f"{crate} has many stars and forks", good_repo_stats, costs.repo_stats_cost(metadata["stars"], metadata["forks"])),
-        Assumption(f"{crate} having many stars and forks implies it is safe", z3.Implies(good_repo_stats, safe), 15),
-        Assumption(f"{crate} having no side effects and having all safe dependencies implies it is safe", z3.Implies(z3.And(no_side_effects, z3.And(dependencies_safe)), safe), 1),
-        Assumption(f"{crate} having all trusted developers implies it is safe", z3.Implies(z3.And(developers_trusted), safe), 2),
+        Assumption(f"{crate} having many stars and forks implies it is safe", z3.Implies(good_repo_stats, safe), 20),
+        Assumption(f"{crate} having no side effects and having all safe dependencies implies it is safe", z3.Implies(z3.And(no_side_effects, z3.And(dependencies_safe)), safe), 10),
+        Assumption(f"{crate} having all trusted developers implies it is safe", z3.Implies(z3.And(developers_trusted), safe), 15),
     ]
 
     for developer in metadata["developers"]:
@@ -192,7 +192,7 @@ def get_crate_assumption_summary(crate: CrateVersion, variables: list[z3.BoolRef
     else:
         logger.error("The satisfiability of the formula could not be determined.")
         logger.error(f"Z3 Reason: {optimizer.reason_unknown()}")
-        assumptions_made = [Assumption(f"{crate} is safe", crate_is_safe, MAX_COST)]
+        assumptions_made = [Assumption(f"{crate} is safe", crate_is_safe, costs.MAX_COST)]
         return CrateAssumptionSummary(crate, assumptions_made)
 
 def complete_analysis(crate: CrateVersion, file = None):
@@ -206,11 +206,7 @@ def complete_analysis(crate: CrateVersion, file = None):
     summary = get_crate_assumption_summary(crate, variables, assumptions)
     trust_cost = sum(a.cost for a in summary.assumptions_made)
 
-    normalized_trust_cost = (trust_cost / MAX_COST) * 100
-    # normalized_trust_cost = min(normalized_trust_cost, 1)
-
-
-    print(f"Trust Cost for {crate} (lower cost is better): {normalized_trust_cost} cost", file=file)
+    print(f"Trust Cost for {crate} (lower cost is better): {trust_cost} cost", file=file)
     print("Assumptions Made:", file=file)
     for a in summary.assumptions_made:
         print(a, file=file)

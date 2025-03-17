@@ -2,8 +2,7 @@
 from typing import NamedTuple
 import z3
 from helpers.crate_data import CrateVersion
-MAX_COST = 500
-
+from helpers.costs import MAX_COST
 class Assumption:
     """
     Class representing an assumption that can be made by the solver.
