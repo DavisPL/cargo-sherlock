@@ -209,7 +209,6 @@ def complete_analysis(crate: CrateVersion, file = None):
     normalized_trust_cost = (trust_cost / MAX_COST) * 100
     # normalized_trust_cost = min(normalized_trust_cost, 1)
 
-
     print(f"Trust Cost for {crate} (lower cost is better): {normalized_trust_cost} cost", file=file)
     print("Assumptions Made:", file=file)
     for a in summary.assumptions_made:

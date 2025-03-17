@@ -4,6 +4,9 @@ import ast
 import helpers.logger as logger
 from typing import NamedTuple, DefaultDict
 import csv
+from pprint import pprint
+import json 
+import collections
 
 User = str
 class CrateVersion(NamedTuple):
@@ -16,7 +19,6 @@ class CrateVersion(NamedTuple):
         return f"{self.name}-{self.version}"
 
 def pretty_print_summary(summary):
-    import pprint
     pp = pprint.PrettyPrinter(indent=2)
     pp.pprint(summary)
 
@@ -24,15 +26,28 @@ def get_crate_metadata(crate: CrateVersion) -> dict:
     """
     Returns the metadata for a given crate.
     """
-    # Runs cargo sherlock
-    crate_info = logger.logger(crate.name, crate.version, "exp")
-    # crate_info = parse_single_file(f"logs/exp/{crate.name}-{crate.version}.csv")
-    # pretty_print_summary(crate_info)
-    audit_summary = create_audit_summary(crate_info)
-    # # pretty_print_summary(audit_summary)
-    return audit_summary
-    # return crate_info
+    cache_path = "logs/cache/" + crate.name + "-" + crate.version + ".json"
+    try:
+        with open(cache_path, "r") as file_backup:
+            print("Loading Results for " + crate.name + "-" + crate.version + " from cache...")
+            audit_summary = json.load(file_backup)
+        return audit_summary
+    except FileNotFoundError:
+        print("Cache file not found, running cargo sherlock...")
 
+    # runs cargo sherlock
+    crate_info = logger.logger(crate.name, crate.version, "exp")
+    audit_summary = create_audit_summary(crate_info)
+
+    if isinstance(audit_summary, collections.defaultdict):
+        audit_summary = dict(audit_summary)
+
+    # save the audit summary to a cache file
+    with open(cache_path, "w") as file_backup:
+        json.dump(audit_summary, file_backup, indent=2)
+    
+    return audit_summary
+    
 def get_user_metadata(user: User) -> dict:
     """
     Returns the metadata for a given user.
@@ -194,8 +209,6 @@ def create_audit_summary(crate_info):
                             'time_seconds': 0.0
                         }
                     else:
-                        print("lol here")
-                        sys.exit(1)
                         try:
                             failed = int(item.get('failed', 0))
                         except (ValueError, TypeError):
@@ -261,9 +274,6 @@ def create_audit_summary(crate_info):
                         'time_seconds': 0.0
                     }
                 else:
-                    print(section)
-                    print("kaboom here")
-                    sys.exit(1)
                     try:
                         failed = int(section.get('failed', 0))
                     except (ValueError, TypeError):

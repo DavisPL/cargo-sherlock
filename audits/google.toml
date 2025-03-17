@@ -1809,6 +1809,13 @@ delta = "4.5.29 -> 4.5.31"
 notes = "Comment-only change to update version."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.clap]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "4.5.31 -> 4.5.32"
+notes = "Only `examples` changes + comment-only changes in `lib.rs` and `_tutorial.rs`."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.clap_builder]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -1936,6 +1943,13 @@ who = "Daniel Cheng <dcheng@chromium.org>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
 delta = "4.5.29 -> 4.5.31"
 notes = "No unsafe uses added or changed. Delta consists of miscellaneous fixes and cleanups (e.g. improvements for ValueRange) and a new parser for Saturating<T>."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.clap_builder]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "4.5.31 -> 4.5.32"
+notes = "Just a new `fn remove` method in `src/error/mod.rs`."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.clap_conf]]
@@ -2822,6 +2836,13 @@ delta = "1.0.141 -> 1.0.143"
 notes = "Clippy lint suppression and... a C++ deduction guide for cxx::Slice."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.cxxbridge-cmd]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "1.0.143 -> 1.0.146"
+notes = "Only propagating `cxx.h` change from the main `cxx` roll."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.cxxbridge-flags]]
 who = "Android Legacy"
 criteria = "safe-to-run"
@@ -2975,6 +2996,13 @@ who = "Daniel Cheng <dcheng@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 delta = "1.0.141 -> 1.0.143"
 notes = "Only changes for rustdoc generation."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.cxxbridge-flags]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "1.0.143 -> 1.0.146"
+notes = "No actual changes in this delta - just a version bump."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.cxxbridge-macro]]
@@ -3421,6 +3449,13 @@ who = "Daniel Cheng <dcheng@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
 delta = "1.13.0 -> 1.14.0"
 notes = "Inheriting ub-risk-1 from the baseline review of 1.13.0. While the delta has some diffs in unsafe code, they are either:\n- migrating code to use helper macros\n- migrating match patterns to take advantage of default bindings mode from RFC 2005\nEither way, the result is code that does exactly the same thing and does not change the risk of UB.\n\nSee https://crrev.com/c/6323164 for more audit details.\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.either]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-1",]
+delta = "1.14.0 -> 1.15.0"
+notes = "The delta in `lib.rs` only tweaks doc comments and `#[cfg(feature = \"std\")]`."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.elliptic-curve]]
@@ -7997,6 +8032,13 @@ delta = "0.2.17 -> 0.2.20"
 notes = "Using zerocopy to reduce unsafe usage."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.ppv-lite86]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-run", "does-not-implement-crypto",]
+delta = "0.2.20 -> 0.2.21"
+notes = "The delta mostly corresponds to @joshlf's\nhttps://github.com/cryptocorrosion/cryptocorrosion/pull/85 which started\nusing an undocumented API that `zerocopy` has provided specifically for\n`ppv-lite86` in https://github.com/google/zerocopy/pull/2418.\n"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.predicates]]
 who = "Max Lee <endlesspring@google.com>"
 criteria = [ "safe-to-run", "does-not-implement-crypto",]
@@ -8725,6 +8767,13 @@ who = "Daniel Cheng <dcheng@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 delta = "1.0.38 -> 1.0.39"
 notes = "Only minor changes for clippy lints and documentation."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.quote]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "1.0.39 -> 1.0.40"
+notes = "The delta is just a simplification of how `tokens.extend(...)` call is made.\nStill no `unsafe` anywhere.\n"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.r0]]
@@ -9795,6 +9844,13 @@ delta = "1.0.217 -> 1.0.218"
 notes = "No changes outside comments and documentation."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
+[[audits.serde]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-2",]
+delta = "1.0.218 -> 1.0.219"
+notes = "Just allowing `clippy::elidable_lifetime_names`."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
 [[audits.serde-tuple-vec-map]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = [ "does-not-implement-crypto", "safe-to-deploy",]
@@ -9941,6 +9997,13 @@ who = "Daniel Cheng <dcheng@chromium.org>"
 criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
 delta = "1.0.217 -> 1.0.218"
 notes = "No changes outside comments and documentation."
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.serde_derive]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = [ "safe-to-deploy", "does-not-implement-crypto", "ub-risk-0",]
+delta = "1.0.218 -> 1.0.219"
+notes = "Minor changes (clippy tweaks, using `mem::take` instead of `mem::replace`)."
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.serde_jcs]]
@@ -11048,6 +11111,12 @@ aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust
 who = "Manish Goregaokar <manishearth@google.com>"
 criteria = "does-not-implement-crypto"
 version = "0.8.0"
+aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
+
+[[audits.tinystr]]
+who = "Lukasz Anforowicz <lukasza@chromium.org>"
+criteria = "does-not-implement-crypto"
+delta = "0.8.0 -> 0.8.1"
 aggregated-from = "https://chromium.googlesource.com/chromium/src/+/main/third_party/rust/chromium_crates_io/supply-chain/audits.toml?format=TEXT"
 
 [[audits.tinytemplate]]

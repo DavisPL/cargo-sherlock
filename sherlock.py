@@ -70,7 +70,6 @@ def main():
     elif args.command == 'trust':
         from solver import complete_analysis
         crate = CrateVersion(args.crate_name, args.version)
-
         # If output is provided, open the file; otherwise, print to console
         if args.output:
             with open(args.output, 'w') as output_file:
