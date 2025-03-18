@@ -1230,7 +1230,6 @@ dependency_cache = {}
 
 def get_latest_version(crate_name):
     versions = get_versions(crate_name)
-    print(f"Versions for crate {crate_name}: {versions}")
     if versions:
         return versions[-1]  
     else:
