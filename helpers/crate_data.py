@@ -233,7 +233,8 @@ def create_audit_summary(crate_info , crate:CrateVersion):
             for item in section:
                 if item.get('event') == 'Miri':
                     status = item.get('status', 'unknown').lower()
-                    if status != "crash":
+                    if status == "ok":
+                        failed = 0
                         audit_summary['miri'] = False
                     else:
                         failed = int(item.get('failed', 0))
@@ -284,12 +285,12 @@ def create_audit_summary(crate_info , crate:CrateVersion):
         elif isinstance(section, dict):
             if section.get('event') == 'Miri':
                 status = section.get('status', 'unknown').lower()
-                if status != "crash":
+                if status == "ok":
+                    failed = 0
                     audit_summary['miri'] = False
                 else:
                     failed = int(section.get('failed', 0))
                     audit_summary['miri'] = True
-                print(section)
                 audit_summary['miri_details'] = {
                     'status': status,
                     'passed': int(section.get('passed', 0)),

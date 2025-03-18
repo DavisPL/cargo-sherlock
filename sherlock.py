@@ -4,7 +4,7 @@ import sys
 import helpers.crate_data as crate_data
 from helpers.assumption import CrateVersion
 from pprint import pprint
-from helpers.logger import get_latest_version
+from helpers.logger import get_latest_version,verify_version
 import json 
 
 def main():
@@ -33,9 +33,12 @@ def main():
 
     # Fetch the latest version if not provided
     if args.version is None:
+        print(f"Version not specified, fetching the Latest version for analysis.")
         args.version = get_latest_version(args.crate_name)
-        print(f"Version not specified, using the Latest version for analysis.")
         print(f"Latest version of {args.crate_name} is {args.version}.")
+    else:
+        if not verify_version(args.crate_name, args.version):
+            sys.exit(1)
 
     # Handle the 'log' subcommand
     if args.command == 'log':

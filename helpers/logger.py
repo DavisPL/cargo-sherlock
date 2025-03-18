@@ -894,16 +894,15 @@ def parse_miri_summary(output_file_path):
 
     # Regex to parse the test summary line.
     summary_pattern = (
-        r"test result:\s+(\w+)\.\s+"      
-        r"(\d+)\s+passed;\s+"             
-        r"(\d+)\s+failed;\s+"             
-        r"(\d+)\s+ignored;\s+"           
-        r"(\d+)\s+measured;\s+"           
-        r"(\d+)\s+filtered out;\s+"   
-        r"finished in\s+([\d\.]+)s"      
+        r"test result:\s+(\w+)\.\s+"      # status (e.g., ok)
+        r"(\d+)\s+passed;\s+"             # passed count
+        r"(\d+)\s+failed;\s+"             # failed count
+        r"(\d+)\s+ignored;\s+"            # ignored count
+        r"(\d+)\s+measured;\s+"           # measured count
+        r"(\d+)\s+filtered out;\s+"       # filtered out count
+        r"finished in\s+([\d\.]+)s"        # time in seconds
     )
 
-    # Parse summary (if available)
     summary = {}
     if summary_line:
         match = re.search(summary_pattern, summary_line)
@@ -938,21 +937,20 @@ def parse_miri_summary(output_file_path):
             "time_seconds": 0.0
         }
 
-    # If error messages exist, override summary with crash details.
-    if error_lines:
+    # If the summary status is not "ok" and error messages exist, override the summary.
+    if summary.get("status") != "ok" and error_lines:
         total_failed = 0
-        # Pattern to extract the leaked size, e.g. "size: 1332"
+        # Pattern to try extracting a number from an error line (optional).
         size_pattern = r"error:\s*(\d+)"
         for err in error_lines:
             size_match = re.search(size_pattern, err)
             if size_match:
                 total_failed += int(size_match.group(1))
             else:
-                total_failed += 1  # Fallback if no size is found
+                total_failed += 1  # Fallback if no number is found.
         summary["status"] = "crash"
         summary["failed"] = total_failed
         summary["errors"] = error_lines
-        return summary
 
     return summary
 
@@ -1236,6 +1234,18 @@ def get_latest_version(crate_name):
         print(f"Could not fetch the latest version for crate {crate_name}.")
         print("This should not happen, please raise an issue on GitHub.")
         sys.exit(1)
+
+def verify_version(crate_name, version):
+    """
+    Verify if the given version of the crate exists on crates.io.
+    """
+    versions = get_versions(crate_name)
+    if version not in versions:
+        print(f"Invalid Version : {version} of crate {crate_name} does not exist.")
+        print(f"Available versions are: {versions}")
+        print("Please check the version and try again.")
+        return False
+    return True
 
 def get_dependencies(crate_name, version):
     try:
