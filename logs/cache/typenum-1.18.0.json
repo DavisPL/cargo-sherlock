@@ -1,0 +1,41 @@
+{
+  "in_rust_sec": false,
+  "developers": [
+    "paholg"
+  ],
+  "stars": 541,
+  "forks": 48,
+  "downloads": 256856277,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.15.0 -> 1.16.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.16.0 -> 1.17.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_version": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 56,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.9
+  }
+}

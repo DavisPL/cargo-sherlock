@@ -102,6 +102,11 @@ def parse_dict_string(dict_string):
 
     return result_dict
         
+def normalize_version(v: str):
+    if v.startswith('v'):
+        v = v[1:]
+    return version.parse(v)
+
 def get_versions(dep_name: str):
     url = f"https://crates.io/api/v1/crates/{dep_name}/versions"
     headers = {"User-Agent": "reqwest"}
@@ -111,10 +116,7 @@ def get_versions(dep_name: str):
     if "errors" in data:
         return "error"
     versions = [v["num"] for v in data["versions"]]
-    # Removing versions with alphabetical characters like '3.0.0-beta.2'
-    versions = [v for v in versions if not any(char.isalpha() for char in v)]
-    # Sort versions using packaging's Version class
-    versions.sort(key=version.parse)
+    versions.sort(key=normalize_version)
     return versions
 
 def find_previous_version(given_version, versions_list):
@@ -1228,6 +1230,7 @@ dependency_cache = {}
 
 def get_latest_version(crate_name):
     versions = get_versions(crate_name)
+    print(f"Versions for crate {crate_name}: {versions}")
     if versions:
         return versions[-1]  
     else:
