@@ -51,5 +51,5 @@ def combine_costs(positive_cost: int, negative_cost: int) -> CrateLabel:
     issue_score = MAX_COST - negative_cost
     for i in range(1, 5):
         if positive_cost <= -i/10 * issue_score + 20*i:
-            return CrateLabel(i)
+            return CrateLabel(i-1)
     return CrateLabel.CRITICAL
