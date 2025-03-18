@@ -805,59 +805,157 @@ def run_miri_and_save(crate_name, crate_version):
         os.chdir(original_directory)
 
     return output_file_path
+
+
+# def parse_miri_summary(output_file_path):
+#     """
+#     Parses the Miri output file to extract the last test result summary.
     
+#     The expected format in the file is similar to:
+#       test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.43s
+    
+#     Returns:
+#         A dictionary with keys:
+#             'status', 'passed', 'failed', 'ignored', 'measured', 'filtered_out', 'time_seconds'
+#         or None if no summary line could be found or parsed.
+#     """
+#     if not os.path.exists(output_file_path):
+#         print(f"File not found: {output_file_path} Miri")
+#         return None
+
+#     summary_line = None
+#     with open(output_file_path, 'r') as f:
+#         for line in f:
+#             if "test result:" in line:
+#                 summary_line = line.strip().strip('"')
+
+#     if summary_line is None:
+#         print("No test summary line found in the file for Miri")
+#         return {"status": "crash"}
+
+#     # Define a regex pattern to extract the summary values.
+#     pattern = (
+#         r"test result:\s+(\w+)\.\s+"      # status, e.g. "ok"
+#         r"(\d+)\s+passed;\s+"             # number of tests passed
+#         r"(\d+)\s+failed;\s+"             # number of tests failed
+#         r"(\d+)\s+ignored;\s+"            # number of tests ignored
+#         r"(\d+)\s+measured;\s+"           # number of tests measured
+#         r"(\d+)\s+filtered out;\s+"       # number of tests filtered out
+#         r"finished in\s+([\d\.]+)s"        # total time in seconds
+#     )
+#     match = re.search(pattern, summary_line)
+#     if match:
+#         result = {
+#             "status": match.group(1),
+#             "passed": int(match.group(2)),
+#             "failed": int(match.group(3)),
+#             "ignored": int(match.group(4)),
+#             "measured": int(match.group(5)),
+#             "filtered_out": int(match.group(6)),
+#             "time_seconds": float(match.group(7))
+#         }
+#         return result
+#     else:
+#         print("Failed to parse the summary line for Miri:")
+#         print(summary_line)
+#         return None
+
 def parse_miri_summary(output_file_path):
     """
-    Parses the Miri output file to extract the last test result summary.
+    Parses the Miri output file to extract both the test summary and any error messages.
     
-    The expected format in the file is similar to:
-      test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.43s
+    Expected output includes:
+      - A test summary line like:
+            test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.96s
+      - Error messages (lines starting with "error:") that may follow.
     
-    Returns:
-        A dictionary with keys:
-            'status', 'passed', 'failed', 'ignored', 'measured', 'filtered_out', 'time_seconds'
-        or None if no summary line could be found or parsed.
+    If any error messages are found, this function returns a dictionary with:
+         - "status": "crash"
+         - "failed": number of error messages found (overriding the summary failed count)
+         - "errors": list of error message lines
+         - Plus any parsed summary fields (passed, ignored, measured, filtered_out, time_seconds)
+    
+    If no errors are found, it returns the parsed summary.
     """
     if not os.path.exists(output_file_path):
-        print(f"File not found: {output_file_path} Miri")
+        print(f"File not found: {output_file_path} (Miri output)")
         return None
 
     summary_line = None
+    error_lines = []
+
     with open(output_file_path, 'r') as f:
         for line in f:
-            if "test result:" in line:
-                summary_line = line.strip().strip('"')
+            clean_line = line.strip().strip('"')
+            if "test result:" in clean_line:
+                summary_line = clean_line
+            if "error:" in clean_line:
+                error_lines.append(clean_line)
 
-    if summary_line is None:
-        print("No test summary line found in the file for Miri")
-        return {"status": "crash"}
-
-    # Define a regex pattern to extract the summary values.
-    pattern = (
-        r"test result:\s+(\w+)\.\s+"      # status, e.g. "ok"
-        r"(\d+)\s+passed;\s+"             # number of tests passed
-        r"(\d+)\s+failed;\s+"             # number of tests failed
-        r"(\d+)\s+ignored;\s+"            # number of tests ignored
-        r"(\d+)\s+measured;\s+"           # number of tests measured
-        r"(\d+)\s+filtered out;\s+"       # number of tests filtered out
-        r"finished in\s+([\d\.]+)s"        # total time in seconds
+    # Regex to parse the test summary line.
+    summary_pattern = (
+        r"test result:\s+(\w+)\.\s+"      
+        r"(\d+)\s+passed;\s+"             
+        r"(\d+)\s+failed;\s+"             
+        r"(\d+)\s+ignored;\s+"           
+        r"(\d+)\s+measured;\s+"           
+        r"(\d+)\s+filtered out;\s+"   
+        r"finished in\s+([\d\.]+)s"      
     )
-    match = re.search(pattern, summary_line)
-    if match:
-        result = {
-            "status": match.group(1),
-            "passed": int(match.group(2)),
-            "failed": int(match.group(3)),
-            "ignored": int(match.group(4)),
-            "measured": int(match.group(5)),
-            "filtered_out": int(match.group(6)),
-            "time_seconds": float(match.group(7))
-        }
-        return result
+
+    # Parse summary (if available)
+    summary = {}
+    if summary_line:
+        match = re.search(summary_pattern, summary_line)
+        if match:
+            summary = {
+                "status": match.group(1),
+                "passed": int(match.group(2)),
+                "failed": int(match.group(3)),
+                "ignored": int(match.group(4)),
+                "measured": int(match.group(5)),
+                "filtered_out": int(match.group(6)),
+                "time_seconds": float(match.group(7))
+            }
+        else:
+            summary = {
+                "status": "unknown",
+                "passed": 0,
+                "failed": 0,
+                "ignored": 0,
+                "measured": 0,
+                "filtered_out": 0,
+                "time_seconds": 0.0
+            }
     else:
-        print("Failed to parse the summary line for Miri:")
-        print(summary_line)
-        return None
+        summary = {
+            "status": "unknown",
+            "passed": 0,
+            "failed": 0,
+            "ignored": 0,
+            "measured": 0,
+            "filtered_out": 0,
+            "time_seconds": 0.0
+        }
+
+    # If error messages exist, override summary with crash details.
+    if error_lines:
+        total_failed = 0
+        # Pattern to extract the leaked size, e.g. "size: 1332"
+        size_pattern = r"error:\s*(\d+)"
+        for err in error_lines:
+            size_match = re.search(size_pattern, err)
+            if size_match:
+                total_failed += int(size_match.group(1))
+            else:
+                total_failed += 1  # Fallback if no size is found
+        summary["status"] = "crash"
+        summary["failed"] = total_failed
+        summary["errors"] = error_lines
+        return summary
+
+    return summary
+
 
 def logger(crate_name: str, version: str, job_id: str):
     '''
@@ -971,34 +1069,13 @@ def logger(crate_name: str, version: str, job_id: str):
         data.append({ "event": "Rudra", "timestamp": "-", "output": rud})
         miri_file = run_miri_and_save(crate_name, version)
         miri = parse_miri_summary(miri_file)
-        if miri["status"] != "crash":
-        # {'status': 'ok', 'passed': 24, 'failed': 0, 'ignored': 0, 'measured': 0, 'filtered_out': 0, 'time_seconds': 0.51}
-            writer.writerow(["event", "timestamp", "status", "passed", "failed", "ignored", "measured", "filtered_out", "time_seconds"])
-            writer.writerow([
-                "Miri",
-                "-",
-                miri["status"],
-                miri["passed"],
-                miri["failed"],
-                miri["ignored"],
-                miri["measured"],
-                miri["filtered_out"],
-                miri["time_seconds"]
-            ])
-            data.append({ "event": "Miri", "timestamp": "-", "status": miri["status"], "passed": miri["passed"], "failed": miri["failed"], "ignored": miri["ignored"], "measured": miri["measured"], "filtered_out": miri["filtered_out"], "time_seconds": miri["time_seconds"]})
-            writer.writerow(["************************************"])
-        else:
-            writer.writerow(["Miri", "timestamp" , "status"])
-            writer.writerow([
-                "Miri",
-                "-",
-                "Miri failed to run"
-            ])
-            data.append({ "event": "Miri", "timestamp": "-", "output": "Miri failed to run" , "status": "crash"})
-            writer.writerow(["************************************"])
-
+        writer.writerow(["event", "timestamp", "status", "passed", "failed", "ignored", "measured", "filtered_out", "time_seconds"])
+        writer.writerow(["Miri","-",miri["status"], miri["passed"], miri["failed"], miri["ignored"], miri["measured"], miri["filtered_out"], miri["time_seconds"]
+        ])
+        data.append({ "event": "Miri", "timestamp": "-", "status": miri["status"], "passed": miri["passed"], "failed": miri["failed"], "ignored": miri["ignored"], "measured": miri["measured"], "filtered_out": miri["filtered_out"], "time_seconds": miri["time_seconds"]})
+        
         os.chdir(current_directory)
-        # shutil.rmtree(f"processing/{crate_name}-{version}")
+        shutil.rmtree(f"processing/{crate_name}-{version}")
 
         return data
 

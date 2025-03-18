@@ -259,22 +259,71 @@ def complete_analysis(crate: CrateVersion, file = None):
     Performs a complete analysis for a given crate. Prints results to the specified file (or stdout if
     no file is specified).
     """
+    # logger.info(f"Performing complete analysis for {crate}")
+    # crate_metadata = crate_data.get_crate_metadata(crate)
+    # pos_model_result = solve_positive_mintrust(crate, crate_metadata)
+    # neg_model_result = solve_negative_mintrust(crate, crate_metadata)
+    # trust_cost = sum(a.cost for a in pos_model_result.assumptions_made)
+    # distrust_cost = sum(a.cost for a in neg_model_result.assumptions_made)
+    # label = costs.combine_costs(trust_cost, distrust_cost)
+    # print(f"Trust Cost for {crate} (lower cost is better): {trust_cost} cost", file=file)
+    # print("Assumptions made for trusting:", file=file)
+    # for a in pos_model_result.assumptions_made:
+    #     print(a, file=file)
+    # print(f"Distrust Cost for {crate} (higher cost is better): {distrust_cost} cost", file=file)
+    # print("Assumptions made for distrusting:", file=file)
+    # for a in neg_model_result.assumptions_made:
+    #     print(a, file=file)
+    # print(f"Severity label for {crate}: {label.name}", file=file)
+
     logger.info(f"Performing complete analysis for {crate}")
+
     crate_metadata = crate_data.get_crate_metadata(crate)
     pos_model_result = solve_positive_mintrust(crate, crate_metadata)
     neg_model_result = solve_negative_mintrust(crate, crate_metadata)
     trust_cost = sum(a.cost for a in pos_model_result.assumptions_made)
     distrust_cost = sum(a.cost for a in neg_model_result.assumptions_made)
     label = costs.combine_costs(trust_cost, distrust_cost)
-    print(f"Trust Cost for {crate} (lower cost is better): {trust_cost} cost", file=file)
-    print("Assumptions made for trusting:", file=file)
-    for a in pos_model_result.assumptions_made:
-        print(a, file=file)
-    print(f"Distrust Cost for {crate} (higher cost is better): {distrust_cost} cost", file=file)
-    print("Assumptions made for distrusting:", file=file)
-    for a in neg_model_result.assumptions_made:
-        print(a, file=file)
-    print(f"Severity label for {crate}: {label.name}", file=file)
+
+    border = "+" + "-" * 60 + "+"
+    header = f"|{'Analysis Report for ' + str(crate):^60}|"
+
+    report_lines = []
+    report_lines.append(border)
+    report_lines.append(header)
+    report_lines.append(border)
+    report_lines.append("")
+    report_lines.append("Assumptions Summary:")
+    report_lines.append("Score Range: 0 (Min) - 100 (Max)")
+    report_lines.append("")
+    report_lines.append(f"Trust Cost (lower is better): {trust_cost} cost")
+    report_lines.append("Assumptions for Trusting:")
+    if pos_model_result.assumptions_made:
+        for a in pos_model_result.assumptions_made:
+            report_lines.append(f"  • {a}")
+    else:
+        report_lines.append("  (None)")
+
+    report_lines.append("")
+    report_lines.append(f"Distrust Cost (higher is better): {distrust_cost} cost")
+    report_lines.append("Assumptions for Distrusting:")
+    if neg_model_result.assumptions_made:
+        for a in neg_model_result.assumptions_made:
+            report_lines.append(f"  • {a}")
+    else:
+        report_lines.append("  (None)")
+
+    report_lines.append("")
+    report_lines.append(f"Severity Label: {label.name}")
+    report_lines.append("")
+    report_lines.append(f"Full details about the crate can be found at: /logs/cache/{crate.name}-{crate.version}.json")
+    report_lines.append(border)
+    report_lines.append("")
+
+    final_report = "\n".join(report_lines)
+    print(final_report, file=file)
+
+
 
 def main():
     crate = CrateVersion("anyhow", "1.0.97")

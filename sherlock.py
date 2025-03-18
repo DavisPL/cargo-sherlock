@@ -34,6 +34,7 @@ def main():
     # Fetch the latest version if not provided
     if args.version is None:
         args.version = get_latest_version(args.crate_name)
+        print(f"Version not specified, using the Latest version for analysis.")
         print(f"Latest version of {args.crate_name} is {args.version}.")
 
     # Handle the 'log' subcommand

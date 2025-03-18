@@ -212,7 +212,6 @@ def evaluate_audits(audits, current_version):
     return passed_audit, past_audit
 
 def create_audit_summary(crate_info , crate:CrateVersion):
-    # Initialize the audit summary dictionary using DefaultDict
     audit_summary = defaultdict(list)
     audit_summary.update({
         'in_rust_sec': False,
@@ -234,34 +233,20 @@ def create_audit_summary(crate_info , crate:CrateVersion):
             for item in section:
                 if item.get('event') == 'Miri':
                     status = item.get('status', 'unknown').lower()
-                    if status == "crash":
-                        # If the summary indicates a crash, do not mark as failed (i.e. keep miri as False)
+                    if status != "crash":
                         audit_summary['miri'] = False
-                        audit_summary['miri_details'] = {
-                            'status': "crash",
-                            'passed': 0,
-                            'failed': 0,
-                            'ignored': 0,
-                            'measured': 0,
-                            'filtered_out': 0,
-                            'time_seconds': 0.0
-                        }
                     else:
-                        try:
-                            failed = int(item.get('failed', 0))
-                        except (ValueError, TypeError):
-                            failed = 0
-                        # Set miri to True if any test failed or the status is not "ok"
-                        audit_summary['miri'] = (failed > 0 or status != 'ok')
-                        audit_summary['miri_details'] = {
-                            'status': status,
-                            'passed': int(item.get('passed', 0)),
-                            'failed': failed,
-                            'ignored': int(item.get('ignored', 0)),
-                            'measured': int(item.get('measured', 0)),
-                            'filtered_out': int(item.get('filtered_out', 0)),
-                            'time_seconds': float(item.get('time_seconds', 0))
-                        }
+                        failed = int(item.get('failed', 0))
+                        audit_summary['miri'] = True
+                    audit_summary['miri_details'] = {
+                        'status': status,
+                        'passed': int(item.get('passed', 0)),
+                        'failed': failed,
+                        'ignored': int(item.get('ignored', 0)),
+                        'measured': int(item.get('measured', 0)),
+                        'filtered_out': int(item.get('filtered_out', 0)),
+                        'time_seconds': float(item.get('time_seconds', 0))
+                    }
                 elif item.get('event') == 'RustSec':
                     audit_summary['in_rust_sec'] = item.get('label') != 'Safe'
                 
@@ -299,34 +284,21 @@ def create_audit_summary(crate_info , crate:CrateVersion):
         elif isinstance(section, dict):
             if section.get('event') == 'Miri':
                 status = section.get('status', 'unknown').lower()
-                if status == "crash":
-                    # If the summary indicates a crash, do not mark as failed (i.e. keep miri as False)
+                if status != "crash":
                     audit_summary['miri'] = False
-                    audit_summary['miri_details'] = {
-                        'status': "crash",
-                        'passed': 0,
-                        'failed': 0,
-                        'ignored': 0,
-                        'measured': 0,
-                        'filtered_out': 0,
-                        'time_seconds': 0.0
-                    }
                 else:
-                    try:
-                        failed = int(section.get('failed', 0))
-                    except (ValueError, TypeError):
-                        failed = 0
-                    # Set miri to True if any test failed or the status is not "ok"
-                    audit_summary['miri'] = (failed > 0 or status != 'ok')
-                    audit_summary['miri_details'] = {
-                        'status': status,
-                        'passed': int(section.get('passed', 0)),
-                        'failed': failed,
-                        'ignored': int(section.get('ignored', 0)),
-                        'measured': int(section.get('measured', 0)),
-                        'filtered_out': int(section.get('filtered_out', 0)),
-                        'time_seconds': float(section.get('time_seconds', 0))
-                    }
+                    failed = int(section.get('failed', 0))
+                    audit_summary['miri'] = True
+                print(section)
+                audit_summary['miri_details'] = {
+                    'status': status,
+                    'passed': int(section.get('passed', 0)),
+                    'failed': failed,
+                    'ignored': int(section.get('ignored', 0)),
+                    'measured': int(section.get('measured', 0)),
+                    'filtered_out': int(section.get('filtered_out', 0)),
+                    'time_seconds': float(section.get('time_seconds', 0))
+                }
             elif section.get('event') == 'RustSec':
                 audit_summary['in_rust_sec'] = section.get('label') != 'Safe'
 
