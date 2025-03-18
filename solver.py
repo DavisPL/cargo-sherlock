@@ -119,7 +119,7 @@ def get_negative_assumptions(
 
     assumptions = [
         Assumption(f"{crate} is unsafe", unsafe, costs.MAX_COST),
-        Assumption(f"{crate} is in the RustSec implies it is unsafe", z3.Implies(in_rustsec, unsafe), 0),
+        Assumption(f"{crate} being in RustSec implies it is unsafe", z3.Implies(in_rustsec, unsafe), 0),
         Assumption(f"{crate} has an unsafe dependency implies it is unsafe", z3.Implies(z3.Or(dependencies_unsafe), unsafe), 70),
         Assumption(f"{crate} has many side effects", many_side_effects, costs.side_effects_cost(metadata["num_side_effects"])),
         Assumption(f"{crate} has many side effects implies it is unsafe", z3.Implies(many_side_effects, unsafe), 60),
@@ -277,8 +277,8 @@ def complete_analysis(crate: CrateVersion, file = None):
     print(f"Severity label for {crate}: {label.name}", file=file)
 
 def main():
-    crate = CrateVersion("tokio", "1.44.1")
     crate = CrateVersion("anyhow", "1.0.97")
+    crate = CrateVersion("tokio", "1.44.1")
     complete_analysis(crate)
 
 if __name__ == "__main__":

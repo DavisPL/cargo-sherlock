@@ -30,7 +30,8 @@ def get_crate_metadata(crate: CrateVersion) -> dict:
     try:
         with open(cache_path, "r") as file_backup:
             print("Loading Results for " + crate.name + "-" + crate.version + " from cache...")
-            audit_summary = json.load(file_backup)
+            audit_summary: dict = json.load(file_backup)
+            audit_summary['dependencies'] = [CrateVersion(dep[0], dep[1]) for dep in audit_summary['dependencies']]
         return audit_summary
     except FileNotFoundError:
         print("Cache file not found, running cargo sherlock...")
