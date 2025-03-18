@@ -7,6 +7,8 @@ import csv
 from pprint import pprint
 import json 
 import collections
+from collections import defaultdict
+from packaging.version import Version, InvalidVersion
 
 User = str
 class CrateVersion(NamedTuple):
@@ -37,7 +39,7 @@ def get_crate_metadata(crate: CrateVersion) -> dict:
 
     # runs cargo sherlock
     crate_info = logger.logger(crate.name, crate.version, "exp")
-    audit_summary = create_audit_summary(crate_info)
+    audit_summary = create_audit_summary(crate_info,crate)
 
     if isinstance(audit_summary, collections.defaultdict):
         audit_summary = dict(audit_summary)
@@ -170,7 +172,45 @@ def parse_dependency_tree(tree_data):
     
     return dependencies
 
-def create_audit_summary(crate_info):
+def evaluate_audits(audits, current_version):
+    """
+    Given a list of audit entries and the current version (a string),
+    return a tuple (passed_audit, past_audit):
+      - passed_audit is True if an audit entry exactly certifies the current version.
+      - past_audit is True if any audit entry applies to a version lower than current_version.
+    Future (i.e. higher) audit entries are ignored.
+    """
+    passed_audit = False
+    past_audit = False
+    curr_ver = Version(current_version)
+   
+    for audit in audits:
+        # Check full audit entries with a "version" field.
+        if audit.get('version'):
+            try:
+                audited_ver = Version(audit['version'])
+            except InvalidVersion:
+                continue
+            if audited_ver == curr_ver:
+                passed_audit = True
+            elif audited_ver < curr_ver:
+                past_audit = True
+        # Check delta audit entries, expected in the format "X -> Y"
+        elif audit.get('delta'):
+            parts = audit['delta'].split("->")
+            if len(parts) == 2:
+                new_ver_str = parts[1].strip()
+                try:
+                    new_ver = Version(new_ver_str)
+                except InvalidVersion:
+                    continue
+                if new_ver == curr_ver:
+                    passed_audit = True
+                elif new_ver < curr_ver:
+                    past_audit = True
+    return passed_audit, past_audit
+
+def create_audit_summary(crate_info , crate:CrateVersion):
     # Initialize the audit summary dictionary using DefaultDict
     audit_summary = defaultdict(list)
     audit_summary.update({
@@ -185,12 +225,9 @@ def create_audit_summary(crate_info):
         'dependencies': [],
         'passed_audit': False, 
         'num_unsafe_calls': 0,
-        'miri': False
+        'miri': False,
+        'past_version': False
     })
-
-    # print("In create_audit_summary")
-    # print(crate_info)
-    # print("_" * 50)
     for section in crate_info:
         if isinstance(section, list):
             for item in section:
@@ -310,6 +347,7 @@ def create_audit_summary(crate_info):
                 audit_summary['failed_rudra'] = True
 
             elif section.get('event') == 'audits':
+                # want to check if the current version is audited
                 audit_summary['audits'].append({
                     'organization': section.get('organization', ''),
                     'criteria': section.get('type', ''),  # Correcting the field to match expected criteria
@@ -322,8 +360,11 @@ def create_audit_summary(crate_info):
                 tree_data = section.get('dependency_tree')
                 audit_summary['dependencies'] = parse_dependency_tree(tree_data)
 
-    # Set passed_audit to True if there are any audits
-    if audit_summary['audits']:
-        audit_summary['passed_audit'] = True
+    # # Set passed_audit to True if there are any audits
+    # if audit_summary['audits']:
+    #     audit_summary['passed_audit'] = True
+    passed, past = evaluate_audits(audit_summary['audits'], crate.version)
+    audit_summary['passed_audit'] = passed
+    audit_summary['past_version'] = past
 
     return audit_summary

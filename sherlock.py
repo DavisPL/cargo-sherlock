@@ -5,6 +5,7 @@ import helpers.crate_data as crate_data
 from helpers.assumption import CrateVersion
 from pprint import pprint
 from helpers.logger import get_latest_version
+import json 
 
 def main():
     parser = argparse.ArgumentParser(description='Rust Holmes Sherlock: A tool to analye Rust crates')
@@ -56,9 +57,11 @@ def main():
         pprint(crate_information)
 
         # Save crate information to the output file if provided
-        if args.output:
-            with open(args.output, 'w') as output_file:
-                pprint(crate_information, stream=output_file)
+        if args.output:    
+            temp = dict(crate_information)
+            # save the audit summary to a cache file
+            with open(args.output, "w") as file:
+                json.dump(temp, file, indent=2)
             print(f"Crate information saved to {args.output}.")
 
     # Handle the 'trust' subcommand
