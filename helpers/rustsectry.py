@@ -116,10 +116,11 @@ def worst_label(labels: list[str] | str) -> str:
     severity_order = {
         "Safe": 0,
         "Patched": 1,
-        "LOW": 2,
-        "MEDIUM": 3,
-        "HIGH": 4,
-        "CRITICAL": 5
+        "Uncategorized": 2,
+        "LOW": 3,
+        "MEDIUM": 4,
+        "HIGH": 5,
+        "CRITICAL": 6
     }
     worst = "Safe"
     for label in labels:
