@@ -128,7 +128,7 @@ def get_negative_assumptions(
 
     assumptions = [
         Assumption(f"{crate} is unsafe", unsafe, costs.MAX_COST),
-        Assumption(f"{crate} previously being in RustSec implies it is unsafe", z3.Implies(previously_in_rustsec, unsafe), 80),
+        Assumption(f"{crate} previously being in RustSec implies it is unsafe", z3.Implies(previously_in_rustsec, unsafe), 90),
         Assumption(f"{crate} having an info label in RustSec implies it is unsafe", z3.Implies(in_rustsec_info, unsafe), 45),
         Assumption(f"{crate} having a low severity label in RustSec implies it is unsafe", z3.Implies(low_severity, unsafe), 20),
         Assumption(f"{crate} having a medium severity label in RustSec implies it is unsafe", z3.Implies(med_severity, unsafe), 15),
