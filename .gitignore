@@ -4,7 +4,6 @@ test.txt
 *.csv
 /experiments/
 run_random.py
-evaluation
 *.txt
 rustsec
 typo_crates
