@@ -16,7 +16,7 @@ def is_vulnerable(crate_version, patched_info):
          
     If patched_info is "no patched version", it always returns True.
     """
-    if patched_info == "no patched version":
+    if patched_info == "no patched versions":
         return True
 
     parsed_version = version.parse(crate_version)
@@ -113,7 +113,7 @@ if __name__ == '__main__':
     #   - Another might use a compound expression like "^1.7.5>=2.6.0"
     # If you pass a version "3.7.1", then the generic logic will mark it as vulnerable
     # if any matching advisory indicates so.
-    in_rusrsec, in_pathcec_riustsec, label = inRustSec("gix-path", "0.9.0")
+    in_rusrsec, in_pathcec_riustsec, label = inRustSec("abomonation", "0.7.3")
     print("in_rustsec:", in_rusrsec)
     print("in_patched_rustsec:", in_pathcec_riustsec)
     print("label:", label)

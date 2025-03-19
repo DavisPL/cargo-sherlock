@@ -196,7 +196,7 @@ def is_vulnerable(crate_version, patched_info):
          
     If patched_info is "no patched version", it always returns True.
     """
-    if patched_info == "no patched version":
+    if patched_info == "no patched versions":
         return True
 
     parsed_version = version.parse(crate_version)
