@@ -107,6 +107,26 @@ def parse_dict_string(dict_string):
                 result_dict[key] = value
     return result_dict
 
+def worst_label(labels: list[str] | str) -> str:
+    """
+    Determines the highest severity label from a list of labels.
+    """
+    if isinstance(labels, str):
+        return labels
+    severity_order = {
+        "Safe": 0,
+        "Patched": 1,
+        "LOW": 2,
+        "MEDIUM": 3,
+        "HIGH": 4,
+        "CRITICAL": 5
+    }
+    worst = "Safe"
+    for label in labels:
+        if severity_order[label] > severity_order[worst]:
+            worst = label
+    return worst
+
 if __name__ == '__main__':
     # For example, for the "protobuf" crate:
     #   - One advisory might specify patched: ">=3.7.2" (simple expression)

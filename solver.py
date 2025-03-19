@@ -7,6 +7,7 @@ import helpers.crate_data as crate_data
 import helpers.developer_data as developer_data
 from helpers.assumption import Assumption, CrateAssumptionSummary
 from helpers.crate_data import CrateVersion
+from helpers.rustsectry import worst_label
 
 MAX_MINUTES = 5 # timeout for the solver call
 
@@ -116,12 +117,23 @@ def get_negative_assumptions(
     unknown_vars = [unsafe, many_side_effects] + dependencies_unsafe
 
     # Known variables
-    in_rustsec = z3.BoolVal(metadata["in_rust_sec"]) # crate is in the RustSec database
+    rustsec_label = worst_label(metadata["rustsec_label"]) # crate's worst label from RustSec
+    previously_in_rustsec = z3.BoolVal(metadata["rustsec_label"] == "patched") # crate was in the RustSec database in the past
+    in_rustsec_info = z3.BoolVal(metadata["rustsec_label"] == "INFO") # crate has an info severity label
+    low_severity = z3.BoolVal(rustsec_label == "LOW") # crate has a low severity label
+    med_severity = z3.BoolVal(rustsec_label == "MEDIUM") # crate has a medium severity label
+    high_severity = z3.BoolVal(rustsec_label == "HIGH") # crate has a high severity label
+    critical_severity = z3.BoolVal(rustsec_label == "CRITICAL") # crate has a critical severity label
     fails_miri = z3.BoolVal(metadata["miri_details"]['failed'] != 0) # crate fails Miri tests
 
     assumptions = [
         Assumption(f"{crate} is unsafe", unsafe, costs.MAX_COST),
-        Assumption(f"{crate} being in RustSec implies it is unsafe", z3.Implies(in_rustsec, unsafe), 0),
+        Assumption(f"{crate} previously being in RustSec implies it is unsafe", z3.Implies(previously_in_rustsec, unsafe), 80),
+        Assumption(f"{crate} having an info label in RustSec implies it is unsafe", z3.Implies(in_rustsec_info, unsafe), 45),
+        Assumption(f"{crate} having a low severity label in RustSec implies it is unsafe", z3.Implies(low_severity, unsafe), 20),
+        Assumption(f"{crate} having a medium severity label in RustSec implies it is unsafe", z3.Implies(med_severity, unsafe), 15),
+        Assumption(f"{crate} having a high severity label in RustSec implies it is unsafe", z3.Implies(high_severity, unsafe), 10),
+        Assumption(f"{crate} having a critical severity label in RustSec implies it is unsafe", z3.Implies(critical_severity, unsafe), 5),
         Assumption(f"{crate} has an unsafe dependency implies it is unsafe", z3.Implies(z3.Or(dependencies_unsafe), unsafe), 70),
         Assumption(f"{crate} has many side effects", many_side_effects, costs.side_effects_cost(metadata["num_side_effects"])),
         Assumption(f"{crate} has many side effects implies it is unsafe", z3.Implies(many_side_effects, unsafe), 60),
@@ -330,6 +342,7 @@ def complete_analysis(crate: CrateVersion, file = None):
 def main():
     crate = CrateVersion("anyhow", "1.0.97")
     crate = CrateVersion("tokio", "1.44.1")
+    crate = CrateVersion("zlib-rs", "0.3.0")
     complete_analysis(crate)
 
 if __name__ == "__main__":
