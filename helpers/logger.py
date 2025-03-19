@@ -15,6 +15,7 @@ import random
 from tqdm import tqdm
 import copy
 import sys
+from packaging.version import parse
 
 def get_github_repo_stats(username: str, repository: str, token_file: str = 'token.txt') -> dict | None:
     if not os.path.exists(token_file):
@@ -72,40 +73,53 @@ def get_stars_and_forks(crate_name: str) -> dict | None:
         return None
 
 def read_dicts_from_txt(text_file, separator="\n---\n"):
+    """
+    Reads a text file containing multiple dictionary entries separated by a delimiter.
+    """
     with open(text_file, "r") as file:
         content = file.read()
-        # Split the content by the separator, and ignore the first empty item if it exists
         dict_strings = [s for s in content.split(separator) if s]
-        
     return dict_strings
 
 def parse_dict_string(dict_string):
-    # Helper function to convert strings to dictionaries
+    """
+    Converts a string representation of a dictionary (with keys and values on separate lines)
+    into an actual Python dictionary.
+    """
     def string_to_dict(s):
         try:
-            # Convert string representation of dictionary to an actual dictionary
             return json.loads(s.replace("'", '"'))
         except json.JSONDecodeError:
             return s
+    
     kv_pattern = re.compile(r"(\w+):\s*(.+)")
-
     result_dict = {}
+    
     for line in dict_string.split('\n'):
         match = kv_pattern.match(line.strip())
         if match:
             key, value = match.groups()
-            # Check if value is a nested dictionary or list
             if value.startswith('{') or value.startswith('['):
                 result_dict[key] = string_to_dict(value)
             else:
                 result_dict[key] = value
-
     return result_dict
-        
-def normalize_version(v: str):
-    if v.startswith('v'):
-        v = v[1:]
-    return version.parse(v)
+
+
+def normalize_version(version):
+    return parse(version)
+
+# def get_versions(dep_name: str):
+#     url = f"https://crates.io/api/v1/crates/{dep_name}/versions"
+#     headers = {"User-Agent": "reqwest"}
+#     response = requests.get(url, headers=headers)
+#     data = response.json()
+#     if "errors" in data:
+#         return "error"
+    
+#     versions = [v["num"] for v in data["versions"]]
+#     versions.sort(key=normalize_version)
+#     return versions
 
 def get_versions(dep_name: str):
     url = f"https://crates.io/api/v1/crates/{dep_name}/versions"
@@ -116,17 +130,18 @@ def get_versions(dep_name: str):
     if "errors" in data:
         return "error"
     versions = [v["num"] for v in data["versions"]]
-    versions.sort(key=normalize_version)
+    # Removing versions with alphabetical characters like '3.0.0-beta.2'
+    versions = [v for v in versions if not any(char.isalpha() for char in v)]
+    # Sort versions using packaging's Version class
+    versions.sort(key=version.parse)
     return versions
 
+
 def find_previous_version(given_version, versions_list):
-    # Convert all versions to a list of packaging.version.Version objects
     versions_objects = [version.parse(v) for v in versions_list]
 
-    # Sort the versions
     versions_objects.sort()
 
-    # Find the index of the given version
     try:
         index_of_given = versions_objects.index(version.parse(given_version))
         # Find the version one less than the given version, if it exists
@@ -137,35 +152,107 @@ def find_previous_version(given_version, versions_list):
 
     return str(previous_version) if previous_version else None
 
-def inRustSec(crate_name, version):
+# def inRustSec(crate_name, version):
+#     codex = read_dicts_from_txt("data.txt")
+#     # print(cod÷ex)
+#     pattern = r'(>=|>)?(\d+\.\d+(\.\d+)?)'
+#     for data in codex:
+#         data = parse_dict_string(data)
+#         temp = data["package"]
+#         package = temp["name"].split("(")[0]
+#         if package == crate_name:
+#         # print(package)
+#             temp = data["patched"]
+#             if temp == "no patched version": # this means that the crate is still vulnerable
+#                 return "Critical"
+#             else:
+#                 ver = re.findall(pattern, temp)
+#                 # print(data)
+#                 flag, label = bulls_eye(ver, version)
+#                 if label == "Critical" and flag:
+#                     print("This crate has been flagged by RustSec.")
+#                     return "Critical"
+#                 if label == "Critical" and not flag:
+#                     # print("This is present in RUST SEC but has been patched. However, you are using a vulnerable version.")
+#                     print("A past version of this crate appears in RustSec. Please check the patched version.")
+#                     return "Critical"
+#                 if label == None and flag:
+#                     # print("This crate has been reported by RustSec but you are using a patched version.")
+#                     print("A past version of this crate appears in RustSec. Please check the patched version.")
+#                     return "Low"
+#     return "Safe"
+
+def is_vulnerable(crate_version, patched_info):
+    """
+    Determines if a given crate_version is vulnerable based on a generic patched_info string.
+    
+    Two cases are supported:
+      1. If patched_info starts with '^', it is treated as a compound expression.
+         In that case we extract all version thresholds from the string and, for each,
+         if the threshold's major version matches the crate_version's major version, we
+         compare crate_version against that threshold.
+      2. Otherwise, patched_info is assumed to be a simple expression (e.g. ">=3.7.2"),
+         and the version is vulnerable if it is less than the threshold.
+         
+    If patched_info is "no patched version", it always returns True.
+    """
+    if patched_info == "no patched version":
+        return True
+
+    parsed_version = version.parse(crate_version)
+    
+    if patched_info.startswith('^'):
+        thresholds = re.findall(r'(\d+\.\d+\.\d+)', patched_info)
+        for threshold_str in thresholds:
+            threshold_version = version.parse(threshold_str)
+            if threshold_version.major == parsed_version.major:
+                return parsed_version < threshold_version
+        return False
+    else:
+        match = re.match(r'>=\s*(\d+\.\d+\.\d+)', patched_info)
+        if match:
+            threshold_str = match.group(1)
+            threshold_version = version.parse(threshold_str)
+            return parsed_version < threshold_version
+        else:
+            return False
+
+def inRustSec(crate_name, crate_version):
+    """
+    Checks if the given crate appears on RustSec and returns:
+      - in_rustsec: True if the crate is found and at least one advisory marks the version as vulnerable.
+      - in_patched_rustsec: True if the crate is found and every advisory indicates the version is patched.
+      - label: Overall label, using the advisory's "classification" (or "Critical" if not provided)
+               for vulnerable advisories; if all advisories mark as patched, returns "Patched". 
+               If no advisory is found, returns "Safe".
+    """
     codex = read_dicts_from_txt("data.txt")
-    # print(cod÷ex)
-    pattern = r'(>=|>)?(\d+\.\d+(\.\d+)?)'
+    vulnerable_labels = []  # To collect labels from vulnerable advisories.
+    patched_count = 0       # Number of advisories that consider the version patched.
+    total = 0               # Total advisories for this crate.
+    
     for data in codex:
-        data = parse_dict_string(data)
-        temp = data["package"]
-        package = temp["name"].split("(")[0]
+        record = parse_dict_string(data)
+        package = record.get("package", {}).get("name", "").split("(")[0]
         if package == crate_name:
-        # print(package)
-            temp = data["patched"]
-            if temp == "no patched version": # this means that the crate is still vulnerable
-                return "Critical"
+            total += 1
+            patched_info = record.get("patched", "")
+            classification = record.get("classification", None)
+            if patched_info == "no patched version" or is_vulnerable(crate_version, patched_info):
+                vuln_label = classification if classification is not None else "Critical"
+                vulnerable_labels.append(vuln_label)
             else:
-                ver = re.findall(pattern, temp)
-                # print(data)
-                flag, label = bulls_eye(ver, version)
-                if label == "Critical" and flag:
-                    print("This crate has been flagged by RustSec.")
-                    return "Critical"
-                if label == "Critical" and not flag:
-                    # print("This is present in RUST SEC but has been patched. However, you are using a vulnerable version.")
-                    print("A past version of this crate appears in RustSec. Please check the patched version.")
-                    return "Critical"
-                if label == None and flag:
-                    # print("This crate has been reported by RustSec but you are using a patched version.")
-                    print("A past version of this crate appears in RustSec. Please check the patched version.")
-                    return "Low"
-    return "Safe"
+                patched_count += 1
+    
+    if total == 0:
+        return False, False, "Safe"
+    
+    if vulnerable_labels:
+        unique_labels = list(set(vulnerable_labels))
+        overall_label = unique_labels[0] if len(unique_labels) == 1 else unique_labels
+        return True, False, overall_label
+    else:
+        return False, True, "Patched"
 
 def bulls_eye(ver, version):
     '''
@@ -971,13 +1058,14 @@ def logger(crate_name: str, version: str, job_id: str):
     if not os.path.exists(f"../logs/{job_id}"):
         os.mkdir(f"../logs/{job_id}")
 
-    label = inRustSec(crate_name, version)
+    rustsec_current, rustsec_patched, rustsec_label = inRustSec(crate_name, version)
     with open(f"../logs/{job_id}/{crate_name}-{version}.csv", "w", newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["************************************"])
-        writer.writerow(["event", "timestamp", "label"])
-        writer.writerow(["RustSec","-", label])
-        data.append([{ "event": "RustSec", "timestamp": "-", "label": label}])
+        writer.writerow(["event", "timestamp", "current", "patched", "label"])
+        writer.writerow(["RustSec", "-", rustsec_current, rustsec_patched, rustsec_label])
+        data.append({ "event": "RustSec", "timestamp": "-", "current": rustsec_current, "patched": rustsec_patched, "label": rustsec_label})
+        # data.append([{ "event": "RustSec", "timestamp": "-", "label": label}])
         writer.writerow(["************************************"])
 
 
@@ -990,7 +1078,6 @@ def logger(crate_name: str, version: str, job_id: str):
             writer.writerow([
                 entry.get('type', ''),
                 "-",
-                label,
                 entry.get('organization', ''),
                 entry.get('criteria', ''),
                 entry.get('delta', ''),

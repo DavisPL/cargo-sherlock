@@ -214,7 +214,9 @@ def evaluate_audits(audits, current_version):
 def create_audit_summary(crate_info , crate:CrateVersion):
     audit_summary = defaultdict(list)
     audit_summary.update({
-        'in_rust_sec': False,
+        'rustsec_label': None,
+        'in_rustsec_patched': False,
+        'in_rustsec_current': False,
         'developers': [],
         'stars': 0,
         'forks': 0,
@@ -249,8 +251,12 @@ def create_audit_summary(crate_info , crate:CrateVersion):
                         'time_seconds': float(item.get('time_seconds', 0))
                     }
                 elif item.get('event') == 'RustSec':
-                    audit_summary['in_rust_sec'] = item.get('label') != 'Safe'
-                
+                    # print(item)
+                    # sys.exit(1)
+                    audit_summary['in_rustsec_current'] = item.get('current') 
+                    audit_summary['in_rustsec_patched'] = item.get('patched')
+                    audit_summary['rustsec_label'] = item.get('label')
+                            # rustsec_current, rustsec_patched, rustsec_label
                 elif item.get('event') == 'Author':
                     audit_summary['developers'].append(item.get('username'))
 
@@ -301,7 +307,11 @@ def create_audit_summary(crate_info , crate:CrateVersion):
                     'time_seconds': float(section.get('time_seconds', 0))
                 }
             elif section.get('event') == 'RustSec':
-                audit_summary['in_rust_sec'] = section.get('label') != 'Safe'
+                # `print("sec" , section)
+                # sys.exit(1)
+                audit_summary['in_rustsec_current'] = section.get('current') 
+                audit_summary['in_rustsec_patched'] = section.get('patched')
+                audit_summary['rustsec_label'] = section.get('label')
 
             elif section.get('event') == 'Author':
                 audit_summary['developers'].append(section.get('username'))
