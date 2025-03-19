@@ -78,16 +78,21 @@ advisories = {}
 count = 0
 
 for h3 in soup.find_all('h3'):
-    try:   
-        tag = h3.find('span').text.strip()
-        link = h3.find('a')['href']
-        if tag not in advisories:
-            advisories[tag] = [link]
-        else:
-            advisories[tag].append(link)
-        count +=1
-    except:
+    # Try to get the tag text; if not present, assign a default value.
+    tag_element = h3.find('span')
+    tag = tag_element.text.strip() if tag_element else "Uncategorized"
+
+    # Get the advisory link
+    link_element = h3.find('a')
+    if not link_element:
         continue
+    link = link_element['href']
+
+    # Add the advisory link under the tag in your dictionary.
+    if tag not in advisories:
+        advisories[tag] = [link]
+    else:
+        advisories[tag].append(link)
     # print(count)
     # break
 
