@@ -37,7 +37,7 @@ def get_developer_assumptions(developer: str, metadata: dict) -> tuple[list[z3.B
 
     assumptions = [
         Assumption(f"{developer} is trusted", trusted, 70),
-        Assumption(f"{developer} being in the trusted list implies they are trusted", z3.Implies(in_trusted_list, trusted), 5)
+        Assumption(f"{developer} being in the trusted list implies they are trusted", z3.Implies(in_trusted_list, trusted), 1)
     ]
 
     return (unknown_vars, assumptions)
@@ -73,7 +73,7 @@ def get_positive_assumptions(
         Assumption(f"{crate} has many stars and forks", good_repo_stats, costs.repo_stats_cost(metadata["stars"], metadata["forks"])),
         Assumption(f"{crate} having many stars and forks implies it is safe", z3.Implies(good_repo_stats, safe), 20),
         Assumption(f"{crate} having no side effects and having all safe dependencies implies it is safe", z3.Implies(z3.And(no_side_effects, z3.And(dependencies_safe)), safe), 10),
-        Assumption(f"{crate} having all trusted developers implies it is safe", z3.Implies(z3.And(developers_trusted), safe), 15),
+        Assumption(f"{crate} having all trusted developers implies it is safe", z3.Implies(z3.And(developers_trusted), safe), 5),
     ]
 
     analyzed_crates.add(crate)
