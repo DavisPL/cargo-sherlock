@@ -218,6 +218,7 @@ def create_audit_summary(crate_info , crate:CrateVersion):
         'in_rustsec_patched': False,
         'in_rustsec_current': False,
         'in_rust_sec' : False, #remove this once we add support for new ones
+        'rustsec_tag': None,
         'developers': [],
         'stars': 0,
         'forks': 0,
@@ -257,6 +258,8 @@ def create_audit_summary(crate_info , crate:CrateVersion):
                     audit_summary['in_rustsec_current'] = item.get('current') 
                     audit_summary['in_rustsec_patched'] = item.get('patched')
                     audit_summary['rustsec_label'] = item.get('label')
+                    audit_summary['in_rust_sec'] = item.get('label') != 'Safe'
+                    audit_summary['rustsec_tag'] = item.get('tag') 
                             # rustsec_current, rustsec_patched, rustsec_label
                 elif item.get('event') == 'Author':
                     audit_summary['developers'].append(item.get('username'))
@@ -313,7 +316,8 @@ def create_audit_summary(crate_info , crate:CrateVersion):
                 audit_summary['in_rustsec_current'] = section.get('current') 
                 audit_summary['in_rustsec_patched'] = section.get('patched')
                 audit_summary['rustsec_label'] = section.get('label')
-
+                audit_summary['in_rust_sec'] = section.get('label') != 'Safe'
+                audit_summary['rustsec_tag'] = section.get('tag') 
             elif section.get('event') == 'Author':
                 audit_summary['developers'].append(section.get('username'))
 

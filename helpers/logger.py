@@ -225,17 +225,25 @@ def inRustSec(crate_name, crate_version):
       - label: Overall label, using the advisory's "classification" (or "Critical" if not provided)
                for vulnerable advisories; if all advisories mark as patched, returns "Patched". 
                If no advisory is found, returns "Safe".
+      - advisory_type: The advisory "type" (collected from each record's "type" field).
     """
     codex = read_dicts_from_txt("data.txt")
-    vulnerable_labels = []  # To collect labels from vulnerable advisories.
-    patched_count = 0       # Number of advisories that consider the version patched.
-    total = 0               # Total advisories for this crate.
+    vulnerable_labels = []  # For vulnerable advisories' labels.
+    patched_count = 0       # Count of advisories that indicate patched.
+    advisories_found = False
+    types_list = []         # To collect type values from each advisory.
     
     for data in codex:
         record = parse_dict_string(data)
         package = record.get("package", {}).get("name", "").split("(")[0]
         if package == crate_name:
-            total += 1
+            advisories_found = True
+            
+            # Gather the advisory "type" from the record if available.
+            rec_type = record.get("type", None)
+            if rec_type is not None:
+                types_list.append(rec_type)
+            
             patched_info = record.get("patched", "")
             classification = record.get("classification", None)
             if patched_info == "no patched version" or is_vulnerable(crate_version, patched_info):
@@ -243,16 +251,25 @@ def inRustSec(crate_name, crate_version):
                 vulnerable_labels.append(vuln_label)
             else:
                 patched_count += 1
-    
-    if total == 0:
-        return False, False, "Safe"
-    
+
+    if types_list:
+        unique_types = list(set(types_list))
+        advisory_type = unique_types[0] if len(unique_types) == 1 else unique_types
+    else:
+        advisory_type = None
+
+    # If no advisories were found, return defaults.
+    if not advisories_found:
+        return False, False, "Safe", advisory_type
+
+    # Determine overall label and vulnerability status.
     if vulnerable_labels:
         unique_labels = list(set(vulnerable_labels))
         overall_label = unique_labels[0] if len(unique_labels) == 1 else unique_labels
-        return True, False, overall_label
+        return True, False, overall_label, advisory_type
     else:
-        return False, True, "Patched"
+        return False, True, "Patched", advisory_type
+
 
 def bulls_eye(ver, version):
     '''
@@ -1058,13 +1075,13 @@ def logger(crate_name: str, version: str, job_id: str):
     if not os.path.exists(f"../logs/{job_id}"):
         os.mkdir(f"../logs/{job_id}")
 
-    rustsec_current, rustsec_patched, rustsec_label = inRustSec(crate_name, version)
+    rustsec_current, rustsec_patched, rustsec_label, rustsec_tag = inRustSec(crate_name, version)
     with open(f"../logs/{job_id}/{crate_name}-{version}.csv", "w", newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["************************************"])
-        writer.writerow(["event", "timestamp", "current", "patched", "label"])
-        writer.writerow(["RustSec", "-", rustsec_current, rustsec_patched, rustsec_label])
-        data.append({ "event": "RustSec", "timestamp": "-", "current": rustsec_current, "patched": rustsec_patched, "label": rustsec_label})
+        writer.writerow(["event", "timestamp", "current", "patched", "label" , "tag"])
+        writer.writerow(["RustSec", "-", rustsec_current, rustsec_patched, rustsec_label, rustsec_tag])
+        data.append({ "event": "RustSec", "timestamp": "-", "current": rustsec_current, "patched": rustsec_patched, "label": rustsec_label, "tag": rustsec_tag})
         # data.append([{ "event": "RustSec", "timestamp": "-", "label": label}])
         writer.writerow(["************************************"])
 
@@ -1358,17 +1375,14 @@ def build_dependency_tree(crate_name, version):
     
     for dep in dependencies:
         # print("working" , dep)
-        print('in', dep["crate_id"] , dep["kind"] , dep["optional"])
         if dep["kind"] != "normal":  # Only include normal dependencies
             continue
         if dep["optional"]:  # Skip optional dependencies
             continue
         sub_dep_name = dep["crate_id"]
-        print("working" , sub_dep_name)
         sub_dep_version = get_latest_version(sub_dep_name)
         
         # Recursively build the dependency tree for this sub-dependency
-        print("going again")
         tree[(sub_dep_name, sub_dep_version)] = build_dependency_tree(sub_dep_name, sub_dep_version)
     
     # Cache the computed dependency tree for the current crate
