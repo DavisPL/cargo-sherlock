@@ -36,7 +36,7 @@ def get_crate_metadata(crate: CrateVersion) -> dict:
             audit_summary['dependencies'] = [CrateVersion(dep[0], dep[1]) for dep in audit_summary['dependencies']]
         return audit_summary
     except FileNotFoundError:
-        print("Cache file not found, running cargo sherlock...")
+        print("Cache file not found, running cargo sherlock on " + crate.name + "-" + crate.version + "...")
 
     # runs cargo sherlock
     crate_info = logger.logger(crate.name, crate.version, "exp")
@@ -217,6 +217,7 @@ def create_audit_summary(crate_info , crate:CrateVersion):
         'rustsec_label': None,
         'in_rustsec_patched': False,
         'in_rustsec_current': False,
+        'in_rust_sec' : False, #remove this once we add support for new ones
         'developers': [],
         'stars': 0,
         'forks': 0,
@@ -228,7 +229,7 @@ def create_audit_summary(crate_info , crate:CrateVersion):
         'passed_audit': False, 
         'num_unsafe_calls': 0,
         'miri': False,
-        'past_version': False
+        'past_audit': False
     })
     for section in crate_info:
         if isinstance(section, list):
@@ -347,8 +348,8 @@ def create_audit_summary(crate_info , crate:CrateVersion):
     # # Set passed_audit to True if there are any audits
     # if audit_summary['audits']:
     #     audit_summary['passed_audit'] = True
-    passed, past = evaluate_audits(audit_summary['audits'], crate.version)
+    passed, past = evaluate_audits(audit_summary['audits'], crate.version) #todo change this to current_audit and past_audit
     audit_summary['passed_audit'] = passed
-    audit_summary['past_version'] = past
+    audit_summary['past_audit'] = past
 
     return audit_summary

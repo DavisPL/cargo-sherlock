@@ -1154,13 +1154,14 @@ def logger(crate_name: str, version: str, job_id: str):
             rud
         ])
         data.append({ "event": "Rudra", "timestamp": "-", "output": rud})
+        print("running miri")
         miri_file = run_miri_and_save(crate_name, version)
         miri = parse_miri_summary(miri_file)
         writer.writerow(["event", "timestamp", "status", "passed", "failed", "ignored", "measured", "filtered_out", "time_seconds"])
         writer.writerow(["Miri","-",miri["status"], miri["passed"], miri["failed"], miri["ignored"], miri["measured"], miri["filtered_out"], miri["time_seconds"]
         ])
         data.append({ "event": "Miri", "timestamp": "-", "status": miri["status"], "passed": miri["passed"], "failed": miri["failed"], "ignored": miri["ignored"], "measured": miri["measured"], "filtered_out": miri["filtered_out"], "time_seconds": miri["time_seconds"]})
-        
+        print("miri done")
         os.chdir(current_directory)
         shutil.rmtree(f"processing/{crate_name}-{version}")
 
@@ -1356,15 +1357,18 @@ def build_dependency_tree(crate_name, version):
     dependencies = get_dependencies(crate_name, version)
     
     for dep in dependencies:
+        # print("working" , dep)
+        print('in', dep["crate_id"] , dep["kind"] , dep["optional"])
         if dep["kind"] != "normal":  # Only include normal dependencies
             continue
         if dep["optional"]:  # Skip optional dependencies
             continue
-        
         sub_dep_name = dep["crate_id"]
+        print("working" , sub_dep_name)
         sub_dep_version = get_latest_version(sub_dep_name)
         
         # Recursively build the dependency tree for this sub-dependency
+        print("going again")
         tree[(sub_dep_name, sub_dep_version)] = build_dependency_tree(sub_dep_name, sub_dep_version)
     
     # Cache the computed dependency tree for the current crate
