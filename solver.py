@@ -59,14 +59,16 @@ def get_positive_assumptions(
     unknown_vars = [safe, good_downloads, good_repo_stats] + dependencies_safe
 
     # Known variables
-    passed_audit = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
+    current_audit = z3.BoolVal(metadata["passed_audit"])  # crate passed audit
     no_side_effects = z3.BoolVal(metadata["num_side_effects"] == 0)  # crate has no side effects
+    past_audit = z3.BoolVal(metadata["past_audit"])  # crate passed audit in the past
     
     assumptions = [
         Assumption(f"{crate} is safe", safe, costs.MAX_COST),
         Assumption(f"{crate} has many downloads", good_downloads, costs.downloads_cost(metadata["downloads"])),
         Assumption(f"{crate} having many downloads implies it is safe", z3.Implies(good_downloads, safe), 25),
-        Assumption(f"{crate} having a passed audit implies it is safe", z3.Implies(passed_audit, safe), 5),
+        Assumption(f"{crate} having a current audit implies it is safe", z3.Implies(current_audit, safe), 5),
+        Assumption(f"{crate} has a past audit implies it is safe", z3.Implies(past_audit, safe), 20),
         Assumption(f"{crate} has many stars and forks", good_repo_stats, costs.repo_stats_cost(metadata["stars"], metadata["forks"])),
         Assumption(f"{crate} having many stars and forks implies it is safe", z3.Implies(good_repo_stats, safe), 20),
         Assumption(f"{crate} having no side effects and having all safe dependencies implies it is safe", z3.Implies(z3.And(no_side_effects, z3.And(dependencies_safe)), safe), 10),

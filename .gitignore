@@ -9,6 +9,8 @@ evaluation
 rustsec
 typo_crates
 cloned_crates
+processing/*
+logs/cache/*
 
 
 
