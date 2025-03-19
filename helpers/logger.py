@@ -894,18 +894,26 @@ def run_miri_and_save(crate_name, crate_version):
         # Command to run Miri tests
         command = 'cargo +nightly miri test'
 
-        # Run the command and capture the output
-        result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        # Run the command with a 10 minute timeout (600 seconds)
+        result = subprocess.run(
+            command,
+            shell=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            timeout=600  # Timeout set to 600 seconds (10 minutes)
+        )
 
         # Write the output to the CSV file
         with open(output_file_path, 'w', newline='') as csvfile:
             writer = csv.writer(csvfile)
-            # Split the output into lines and write each line separately
             writer.writerows([[line] for line in result.stdout.splitlines()])
-
-        # print(f"Miri test output saved to: {output_file_path}")
+    except subprocess.TimeoutExpired:
+        print("Miri test did not complete within 10 minutes. Timing out.")
+        return None
     except Exception as e:
         print(f"An error occurred helper/logger::run_miri_and_save: {e}")
+        return None
     finally:
         # Change back to the original directory
         os.chdir(original_directory)
@@ -983,6 +991,17 @@ def parse_miri_summary(output_file_path):
     
     If no errors are found, it returns the parsed summary.
     """
+    if output_file_path is None:
+        return {
+                "status": "timeout",
+                "passed": 0,
+                "failed": 0,
+                "ignored": 0,
+                "measured": 0,
+                "filtered_out": 0,
+                "time_seconds": 0.0
+            }
+
     if not os.path.exists(output_file_path):
         print(f"File not found: {output_file_path} (Miri output)")
         return None
@@ -1171,14 +1190,12 @@ def logger(crate_name: str, version: str, job_id: str):
             rud
         ])
         data.append({ "event": "Rudra", "timestamp": "-", "output": rud})
-        print("running miri")
         miri_file = run_miri_and_save(crate_name, version)
         miri = parse_miri_summary(miri_file)
         writer.writerow(["event", "timestamp", "status", "passed", "failed", "ignored", "measured", "filtered_out", "time_seconds"])
         writer.writerow(["Miri","-",miri["status"], miri["passed"], miri["failed"], miri["ignored"], miri["measured"], miri["filtered_out"], miri["time_seconds"]
         ])
         data.append({ "event": "Miri", "timestamp": "-", "status": miri["status"], "passed": miri["passed"], "failed": miri["failed"], "ignored": miri["ignored"], "measured": miri["measured"], "filtered_out": miri["filtered_out"], "time_seconds": miri["time_seconds"]})
-        print("miri done")
         os.chdir(current_directory)
         shutil.rmtree(f"processing/{crate_name}-{version}")
 
