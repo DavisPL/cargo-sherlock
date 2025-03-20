@@ -1,0 +1,34 @@
+Solving for required assumptions to trust supply-chain-trust-example-crate-000038-2.0.13...
++------------------------------------------------------------+
+|Analysis Report for supply-chain-trust-example-crate-000038-2.0.13|
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 36 cost
+Assumptions for Trusting:
+  • supply-chain-trust-example-crate-000038-2.0.13 having no side effects and having all safe dependencies implies it is safe: 10 cost
+  • thiserror-impl-2.0.12 has many downloads: 0 cost
+  • thiserror-impl-2.0.12 has many stars and forks: 0 cost
+  • thiserror-impl-2.0.12 having all trusted developers implies it is safe: 5 cost
+  • proc-macro2-1.0.94 has many downloads: 0 cost
+  • proc-macro2-1.0.94 having a current audit implies it is safe: 5 cost
+  • unicode-ident-1.0.18 has many downloads: 0 cost
+  • unicode-ident-1.0.18 having a current audit implies it is safe: 5 cost
+  • dtolnay being in the trusted list implies they are trusted: 1 cost
+  • quote-1.0.40 has many downloads: 0 cost
+  • quote-1.0.40 having a current audit implies it is safe: 5 cost
+  • syn-2.0.100 has many downloads: 0 cost
+  • syn-2.0.100 has many stars and forks: 0 cost
+  • syn-2.0.100 having all trusted developers implies it is safe: 5 cost
+
+Distrust Cost (higher is better): 100 cost
+Assumptions for Distrusting:
+  • supply-chain-trust-example-crate-000038-2.0.13 is unsafe: 100 cost
+
+Severity Label: LOW_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/supply-chain-trust-example-crate-000038-2.0.13.json
++------------------------------------------------------------+
+
