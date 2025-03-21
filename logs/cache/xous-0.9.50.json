@@ -1,0 +1,36 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "xobs",
+    "bunnie"
+  ],
+  "stars": 559,
+  "forks": 88,
+  "downloads": 97903,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "lazy_static",
+      "1.5.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

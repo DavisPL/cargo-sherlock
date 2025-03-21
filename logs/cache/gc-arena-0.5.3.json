@@ -1,0 +1,59 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "kyren"
+  ],
+  "stars": 635,
+  "forks": 46,
+  "downloads": 159887,
+  "num_side_effects": 71,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "gc-arena-derive",
+      "0.5.3"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "synstructure",
+      "0.13.1"
+    ],
+    [
+      "sptr",
+      "0.3.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 60,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

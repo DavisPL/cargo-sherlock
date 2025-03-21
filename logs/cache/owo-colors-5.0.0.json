@@ -1,0 +1,46 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "sunshowers",
+    "jam1garner"
+  ],
+  "stars": 688,
+  "forks": 36,
+  "downloads": 42960417,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-4",
+      "delta": "",
+      "version": "3.5.0",
+      "notes": "Reviewed in CL 683999019\\nIssues found:\\n - Unsafe code relies on const promotion. This *may* actually be sound in a const context, however it's not a huge deal since it's easy to patch: https://github.com/jam1garner/owo-colors/pull/131\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-4",
+      "delta": "",
+      "version": "4.1.0",
+      "notes": "Reviewed in CL 683999019\\nIssues found:\\n - Unsafe code relies on const promotion. This *may* actually be sound in a const context, however it's not a huge deal since it's easy to patch: https://github.com/jam1garner/owo-colors/pull/131\\n"
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 36,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 1.21
+  }
+}

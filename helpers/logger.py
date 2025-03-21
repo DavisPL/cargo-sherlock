@@ -15,6 +15,7 @@ import random
 from tqdm import tqdm
 import copy
 import sys
+from packaging.version import parse
 
 def get_github_repo_stats(username: str, repository: str, token_file: str = 'token.txt') -> dict | None:
     if not os.path.exists(token_file):
@@ -72,36 +73,54 @@ def get_stars_and_forks(crate_name: str) -> dict | None:
         return None
 
 def read_dicts_from_txt(text_file, separator="\n---\n"):
+    """
+    Reads a text file containing multiple dictionary entries separated by a delimiter.
+    """
     with open(text_file, "r") as file:
         content = file.read()
-        # Split the content by the separator, and ignore the first empty item if it exists
         dict_strings = [s for s in content.split(separator) if s]
-        
     return dict_strings
 
 def parse_dict_string(dict_string):
-    # Helper function to convert strings to dictionaries
+    """
+    Converts a string representation of a dictionary (with keys and values on separate lines)
+    into an actual Python dictionary.
+    """
     def string_to_dict(s):
         try:
-            # Convert string representation of dictionary to an actual dictionary
             return json.loads(s.replace("'", '"'))
         except json.JSONDecodeError:
             return s
+    
     kv_pattern = re.compile(r"(\w+):\s*(.+)")
-
     result_dict = {}
+    
     for line in dict_string.split('\n'):
         match = kv_pattern.match(line.strip())
         if match:
             key, value = match.groups()
-            # Check if value is a nested dictionary or list
             if value.startswith('{') or value.startswith('['):
                 result_dict[key] = string_to_dict(value)
             else:
                 result_dict[key] = value
-
     return result_dict
-        
+
+
+def normalize_version(version):
+    return parse(version)
+
+# def get_versions(dep_name: str):
+#     url = f"https://crates.io/api/v1/crates/{dep_name}/versions"
+#     headers = {"User-Agent": "reqwest"}
+#     response = requests.get(url, headers=headers)
+#     data = response.json()
+#     if "errors" in data:
+#         return "error"
+    
+#     versions = [v["num"] for v in data["versions"]]
+#     versions.sort(key=normalize_version)
+#     return versions
+
 def get_versions(dep_name: str):
     url = f"https://crates.io/api/v1/crates/{dep_name}/versions"
     headers = {"User-Agent": "reqwest"}
@@ -117,14 +136,12 @@ def get_versions(dep_name: str):
     versions.sort(key=version.parse)
     return versions
 
+
 def find_previous_version(given_version, versions_list):
-    # Convert all versions to a list of packaging.version.Version objects
     versions_objects = [version.parse(v) for v in versions_list]
 
-    # Sort the versions
     versions_objects.sort()
 
-    # Find the index of the given version
     try:
         index_of_given = versions_objects.index(version.parse(given_version))
         # Find the version one less than the given version, if it exists
@@ -135,35 +152,124 @@ def find_previous_version(given_version, versions_list):
 
     return str(previous_version) if previous_version else None
 
-def inRustSec(crate_name, version):
+# def inRustSec(crate_name, version):
+#     codex = read_dicts_from_txt("data.txt")
+#     # print(cod÷ex)
+#     pattern = r'(>=|>)?(\d+\.\d+(\.\d+)?)'
+#     for data in codex:
+#         data = parse_dict_string(data)
+#         temp = data["package"]
+#         package = temp["name"].split("(")[0]
+#         if package == crate_name:
+#         # print(package)
+#             temp = data["patched"]
+#             if temp == "no patched version": # this means that the crate is still vulnerable
+#                 return "Critical"
+#             else:
+#                 ver = re.findall(pattern, temp)
+#                 # print(data)
+#                 flag, label = bulls_eye(ver, version)
+#                 if label == "Critical" and flag:
+#                     print("This crate has been flagged by RustSec.")
+#                     return "Critical"
+#                 if label == "Critical" and not flag:
+#                     # print("This is present in RUST SEC but has been patched. However, you are using a vulnerable version.")
+#                     print("A past version of this crate appears in RustSec. Please check the patched version.")
+#                     return "Critical"
+#                 if label == None and flag:
+#                     # print("This crate has been reported by RustSec but you are using a patched version.")
+#                     print("A past version of this crate appears in RustSec. Please check the patched version.")
+#                     return "Low"
+#     return "Safe"
+
+def is_vulnerable(crate_version, patched_info):
+    """
+    Determines if a given crate_version is vulnerable based on a generic patched_info string.
+    
+    Two cases are supported:
+      1. If patched_info starts with '^', it is treated as a compound expression.
+         In that case we extract all version thresholds from the string and, for each,
+         if the threshold's major version matches the crate_version's major version, we
+         compare crate_version against that threshold.
+      2. Otherwise, patched_info is assumed to be a simple expression (e.g. ">=3.7.2"),
+         and the version is vulnerable if it is less than the threshold.
+         
+    If patched_info is "no patched version", it always returns True.
+    """
+    if patched_info == "no patched versions":
+        return True
+
+    parsed_version = version.parse(crate_version)
+    
+    if patched_info.startswith('^'):
+        thresholds = re.findall(r'(\d+\.\d+\.\d+)', patched_info)
+        for threshold_str in thresholds:
+            threshold_version = version.parse(threshold_str)
+            if threshold_version.major == parsed_version.major:
+                return parsed_version < threshold_version
+        return False
+    else:
+        match = re.match(r'>=\s*(\d+\.\d+\.\d+)', patched_info)
+        if match:
+            threshold_str = match.group(1)
+            threshold_version = version.parse(threshold_str)
+            return parsed_version < threshold_version
+        else:
+            return False
+
+def inRustSec(crate_name, crate_version):
+    """
+    Checks if the given crate appears on RustSec and returns:
+      - in_rustsec: True if the crate is found and at least one advisory marks the version as vulnerable.
+      - in_patched_rustsec: True if the crate is found and every advisory indicates the version is patched.
+      - label: Overall label, using the advisory's "classification" (or "Critical" if not provided)
+               for vulnerable advisories; if all advisories mark as patched, returns "Patched". 
+               If no advisory is found, returns "Safe".
+      - advisory_type: The advisory "type" (collected from each record's "type" field).
+    """
     codex = read_dicts_from_txt("data.txt")
-    # print(cod÷ex)
-    pattern = r'(>=|>)?(\d+\.\d+(\.\d+)?)'
+    vulnerable_labels = []  # For vulnerable advisories' labels.
+    patched_count = 0       # Count of advisories that indicate patched.
+    advisories_found = False
+    types_list = []         # To collect type values from each advisory.
+    
     for data in codex:
-        data = parse_dict_string(data)
-        temp = data["package"]
-        package = temp["name"].split("(")[0]
+        record = parse_dict_string(data)
+        package = record.get("package", {}).get("name", "").split("(")[0]
         if package == crate_name:
-        # print(package)
-            temp = data["patched"]
-            if temp == "no patched version": # this means that the crate is still vulnerable
-                return "Critical"
+            advisories_found = True
+            
+            # Gather the advisory "type" from the record if available.
+            rec_type = record.get("type", None)
+            if rec_type is not None:
+                types_list.append(rec_type)
+            
+            patched_info = record.get("patched", "")
+            classification = record.get("classification", None)
+            if patched_info == "no patched version" or is_vulnerable(crate_version, patched_info):
+                vuln_label = classification if classification is not None else "Critical"
+                vulnerable_labels.append(vuln_label)
             else:
-                ver = re.findall(pattern, temp)
-                # print(data)
-                flag, label = bulls_eye(ver, version)
-                if label == "Critical" and flag:
-                    print("This crate has been flagged by RustSec.")
-                    return "Critical"
-                if label == "Critical" and not flag:
-                    # print("This is present in RUST SEC but has been patched. However, you are using a vulnerable version.")
-                    print("A past version of this crate appears in RustSec. Please check the patched version.")
-                    return "Critical"
-                if label == None and flag:
-                    # print("This crate has been reported by RustSec but you are using a patched version.")
-                    print("A past version of this crate appears in RustSec. Please check the patched version.")
-                    return "Low"
-    return "Safe"
+                patched_count += 1
+
+    if types_list:
+        unique_types = list(set(types_list))
+        advisory_type = unique_types[0] if len(unique_types) == 1 else unique_types
+    else:
+        advisory_type = None
+
+    # If no advisories were found, return defaults.
+    if not advisories_found:
+        return False, False, "Safe", advisory_type
+
+    # Determine overall label and vulnerability status.
+    if vulnerable_labels:
+        unique_labels = list(set(vulnerable_labels))
+        overall_label = unique_labels[0] if len(unique_labels) == 1 else unique_labels
+        return True, False, overall_label, advisory_type
+    else:
+        return False, True, "Patched", advisory_type
+
 
 def bulls_eye(ver, version):
     '''
@@ -788,76 +894,191 @@ def run_miri_and_save(crate_name, crate_version):
         # Command to run Miri tests
         command = 'cargo +nightly miri test'
 
-        # Run the command and capture the output
-        result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        # Run the command with a 10 minute timeout (600 seconds)
+        result = subprocess.run(
+            command,
+            shell=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            timeout=600  # Timeout set to 600 seconds (10 minutes)
+        )
 
         # Write the output to the CSV file
         with open(output_file_path, 'w', newline='') as csvfile:
             writer = csv.writer(csvfile)
-            # Split the output into lines and write each line separately
             writer.writerows([[line] for line in result.stdout.splitlines()])
-
-        # print(f"Miri test output saved to: {output_file_path}")
+    except subprocess.TimeoutExpired:
+        print("Miri test did not complete within 10 minutes. Timing out.")
+        return None
     except Exception as e:
         print(f"An error occurred helper/logger::run_miri_and_save: {e}")
+        return None
     finally:
         # Change back to the original directory
         os.chdir(original_directory)
 
     return output_file_path
+
+
+# def parse_miri_summary(output_file_path):
+#     """
+#     Parses the Miri output file to extract the last test result summary.
     
+#     The expected format in the file is similar to:
+#       test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.43s
+    
+#     Returns:
+#         A dictionary with keys:
+#             'status', 'passed', 'failed', 'ignored', 'measured', 'filtered_out', 'time_seconds'
+#         or None if no summary line could be found or parsed.
+#     """
+#     if not os.path.exists(output_file_path):
+#         print(f"File not found: {output_file_path} Miri")
+#         return None
+
+#     summary_line = None
+#     with open(output_file_path, 'r') as f:
+#         for line in f:
+#             if "test result:" in line:
+#                 summary_line = line.strip().strip('"')
+
+#     if summary_line is None:
+#         print("No test summary line found in the file for Miri")
+#         return {"status": "crash"}
+
+#     # Define a regex pattern to extract the summary values.
+#     pattern = (
+#         r"test result:\s+(\w+)\.\s+"      # status, e.g. "ok"
+#         r"(\d+)\s+passed;\s+"             # number of tests passed
+#         r"(\d+)\s+failed;\s+"             # number of tests failed
+#         r"(\d+)\s+ignored;\s+"            # number of tests ignored
+#         r"(\d+)\s+measured;\s+"           # number of tests measured
+#         r"(\d+)\s+filtered out;\s+"       # number of tests filtered out
+#         r"finished in\s+([\d\.]+)s"        # total time in seconds
+#     )
+#     match = re.search(pattern, summary_line)
+#     if match:
+#         result = {
+#             "status": match.group(1),
+#             "passed": int(match.group(2)),
+#             "failed": int(match.group(3)),
+#             "ignored": int(match.group(4)),
+#             "measured": int(match.group(5)),
+#             "filtered_out": int(match.group(6)),
+#             "time_seconds": float(match.group(7))
+#         }
+#         return result
+#     else:
+#         print("Failed to parse the summary line for Miri:")
+#         print(summary_line)
+#         return None
+
 def parse_miri_summary(output_file_path):
     """
-    Parses the Miri output file to extract the last test result summary.
+    Parses the Miri output file to extract both the test summary and any error messages.
     
-    The expected format in the file is similar to:
-      test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.43s
+    Expected output includes:
+      - A test summary line like:
+            test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.96s
+      - Error messages (lines starting with "error:") that may follow.
     
-    Returns:
-        A dictionary with keys:
-            'status', 'passed', 'failed', 'ignored', 'measured', 'filtered_out', 'time_seconds'
-        or None if no summary line could be found or parsed.
+    If any error messages are found, this function returns a dictionary with:
+         - "status": "crash"
+         - "failed": number of error messages found (overriding the summary failed count)
+         - "errors": list of error message lines
+         - Plus any parsed summary fields (passed, ignored, measured, filtered_out, time_seconds)
+    
+    If no errors are found, it returns the parsed summary.
     """
+    if output_file_path is None:
+        return {
+                "status": "timeout",
+                "passed": 0,
+                "failed": 0,
+                "ignored": 0,
+                "measured": 0,
+                "filtered_out": 0,
+                "time_seconds": 0.0
+            }
+
     if not os.path.exists(output_file_path):
-        print(f"File not found: {output_file_path} Miri")
+        print(f"File not found: {output_file_path} (Miri output)")
         return None
 
     summary_line = None
+    error_lines = []
+
     with open(output_file_path, 'r') as f:
         for line in f:
-            if "test result:" in line:
-                summary_line = line.strip().strip('"')
+            clean_line = line.strip().strip('"')
+            if "test result:" in clean_line:
+                summary_line = clean_line
+            if "error:" in clean_line:
+                error_lines.append(clean_line)
 
-    if summary_line is None:
-        print("No test summary line found in the file for Miri")
-        return {"status": "crash"}
-
-    # Define a regex pattern to extract the summary values.
-    pattern = (
-        r"test result:\s+(\w+)\.\s+"      # status, e.g. "ok"
-        r"(\d+)\s+passed;\s+"             # number of tests passed
-        r"(\d+)\s+failed;\s+"             # number of tests failed
-        r"(\d+)\s+ignored;\s+"            # number of tests ignored
-        r"(\d+)\s+measured;\s+"           # number of tests measured
-        r"(\d+)\s+filtered out;\s+"       # number of tests filtered out
-        r"finished in\s+([\d\.]+)s"        # total time in seconds
+    # Regex to parse the test summary line.
+    summary_pattern = (
+        r"test result:\s+(\w+)\.\s+"      # status (e.g., ok)
+        r"(\d+)\s+passed;\s+"             # passed count
+        r"(\d+)\s+failed;\s+"             # failed count
+        r"(\d+)\s+ignored;\s+"            # ignored count
+        r"(\d+)\s+measured;\s+"           # measured count
+        r"(\d+)\s+filtered out;\s+"       # filtered out count
+        r"finished in\s+([\d\.]+)s"        # time in seconds
     )
-    match = re.search(pattern, summary_line)
-    if match:
-        result = {
-            "status": match.group(1),
-            "passed": int(match.group(2)),
-            "failed": int(match.group(3)),
-            "ignored": int(match.group(4)),
-            "measured": int(match.group(5)),
-            "filtered_out": int(match.group(6)),
-            "time_seconds": float(match.group(7))
-        }
-        return result
+
+    summary = {}
+    if summary_line:
+        match = re.search(summary_pattern, summary_line)
+        if match:
+            summary = {
+                "status": match.group(1),
+                "passed": int(match.group(2)),
+                "failed": int(match.group(3)),
+                "ignored": int(match.group(4)),
+                "measured": int(match.group(5)),
+                "filtered_out": int(match.group(6)),
+                "time_seconds": float(match.group(7))
+            }
+        else:
+            summary = {
+                "status": "unknown",
+                "passed": 0,
+                "failed": 0,
+                "ignored": 0,
+                "measured": 0,
+                "filtered_out": 0,
+                "time_seconds": 0.0
+            }
     else:
-        print("Failed to parse the summary line for Miri:")
-        print(summary_line)
-        return None
+        summary = {
+            "status": "unknown",
+            "passed": 0,
+            "failed": 0,
+            "ignored": 0,
+            "measured": 0,
+            "filtered_out": 0,
+            "time_seconds": 0.0
+        }
+
+    # If the summary status is not "ok" and error messages exist, override the summary.
+    if summary.get("status") != "ok" and error_lines:
+        total_failed = 0
+        # Pattern to try extracting a number from an error line (optional).
+        size_pattern = r"error:\s*(\d+)"
+        for err in error_lines:
+            size_match = re.search(size_pattern, err)
+            if size_match:
+                total_failed += int(size_match.group(1))
+            else:
+                total_failed += 1  # Fallback if no number is found.
+        summary["status"] = "crash"
+        summary["failed"] = total_failed
+        summary["errors"] = error_lines
+
+    return summary
+
 
 def logger(crate_name: str, version: str, job_id: str):
     '''
@@ -873,13 +1094,14 @@ def logger(crate_name: str, version: str, job_id: str):
     if not os.path.exists(f"../logs/{job_id}"):
         os.mkdir(f"../logs/{job_id}")
 
-    label = inRustSec(crate_name, version)
+    rustsec_current, rustsec_patched, rustsec_label, rustsec_tag = inRustSec(crate_name, version)
     with open(f"../logs/{job_id}/{crate_name}-{version}.csv", "w", newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["************************************"])
-        writer.writerow(["event", "timestamp", "label"])
-        writer.writerow(["RustSec","-", label])
-        data.append([{ "event": "RustSec", "timestamp": "-", "label": label}])
+        writer.writerow(["event", "timestamp", "current", "patched", "label" , "tag"])
+        writer.writerow(["RustSec", "-", rustsec_current, rustsec_patched, rustsec_label, rustsec_tag])
+        data.append({ "event": "RustSec", "timestamp": "-", "current": rustsec_current, "patched": rustsec_patched, "label": rustsec_label, "tag": rustsec_tag})
+        # data.append([{ "event": "RustSec", "timestamp": "-", "label": label}])
         writer.writerow(["************************************"])
 
 
@@ -892,7 +1114,6 @@ def logger(crate_name: str, version: str, job_id: str):
             writer.writerow([
                 entry.get('type', ''),
                 "-",
-                label,
                 entry.get('organization', ''),
                 entry.get('criteria', ''),
                 entry.get('delta', ''),
@@ -971,34 +1192,12 @@ def logger(crate_name: str, version: str, job_id: str):
         data.append({ "event": "Rudra", "timestamp": "-", "output": rud})
         miri_file = run_miri_and_save(crate_name, version)
         miri = parse_miri_summary(miri_file)
-        if miri["status"] != "crash":
-        # {'status': 'ok', 'passed': 24, 'failed': 0, 'ignored': 0, 'measured': 0, 'filtered_out': 0, 'time_seconds': 0.51}
-            writer.writerow(["event", "timestamp", "status", "passed", "failed", "ignored", "measured", "filtered_out", "time_seconds"])
-            writer.writerow([
-                "Miri",
-                "-",
-                miri["status"],
-                miri["passed"],
-                miri["failed"],
-                miri["ignored"],
-                miri["measured"],
-                miri["filtered_out"],
-                miri["time_seconds"]
-            ])
-            data.append({ "event": "Miri", "timestamp": "-", "status": miri["status"], "passed": miri["passed"], "failed": miri["failed"], "ignored": miri["ignored"], "measured": miri["measured"], "filtered_out": miri["filtered_out"], "time_seconds": miri["time_seconds"]})
-            writer.writerow(["************************************"])
-        else:
-            writer.writerow(["Miri", "timestamp" , "status"])
-            writer.writerow([
-                "Miri",
-                "-",
-                "Miri failed to run"
-            ])
-            data.append({ "event": "Miri", "timestamp": "-", "output": "Miri failed to run" , "status": "crash"})
-            writer.writerow(["************************************"])
-
+        writer.writerow(["event", "timestamp", "status", "passed", "failed", "ignored", "measured", "filtered_out", "time_seconds"])
+        writer.writerow(["Miri","-",miri["status"], miri["passed"], miri["failed"], miri["ignored"], miri["measured"], miri["filtered_out"], miri["time_seconds"]
+        ])
+        data.append({ "event": "Miri", "timestamp": "-", "status": miri["status"], "passed": miri["passed"], "failed": miri["failed"], "ignored": miri["ignored"], "measured": miri["measured"], "filtered_out": miri["filtered_out"], "time_seconds": miri["time_seconds"]})
         os.chdir(current_directory)
-        # shutil.rmtree(f"processing/{crate_name}-{version}")
+        shutil.rmtree(f"processing/{crate_name}-{version}")
 
         return data
 
@@ -1160,6 +1359,18 @@ def get_latest_version(crate_name):
         print("This should not happen, please raise an issue on GitHub.")
         sys.exit(1)
 
+def verify_version(crate_name, version):
+    """
+    Verify if the given version of the crate exists on crates.io.
+    """
+    versions = get_versions(crate_name)
+    if version not in versions:
+        print(f"Invalid Version : {version} of crate {crate_name} does not exist.")
+        print(f"Available versions are: {versions}")
+        print("Please check the version and try again.")
+        return False
+    return True
+
 def get_dependencies(crate_name, version):
     try:
         url = f'https://crates.io/api/v1/crates/{crate_name}/{version}/dependencies'
@@ -1180,11 +1391,11 @@ def build_dependency_tree(crate_name, version):
     dependencies = get_dependencies(crate_name, version)
     
     for dep in dependencies:
+        # print("working" , dep)
         if dep["kind"] != "normal":  # Only include normal dependencies
             continue
         if dep["optional"]:  # Skip optional dependencies
             continue
-        
         sub_dep_name = dep["crate_id"]
         sub_dep_version = get_latest_version(sub_dep_name)
         

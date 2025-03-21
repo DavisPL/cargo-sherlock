@@ -1,0 +1,57 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "ethanfrey",
+    "webmaster128",
+    "github:confio:developers"
+  ],
+  "stars": 31,
+  "forks": 16,
+  "downloads": 4198518,
+  "num_side_effects": 1,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 1,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 4,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

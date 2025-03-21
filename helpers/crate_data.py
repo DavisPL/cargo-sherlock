@@ -4,6 +4,11 @@ import ast
 import helpers.logger as logger
 from typing import NamedTuple, DefaultDict
 import csv
+from pprint import pprint
+import json 
+import collections
+from collections import defaultdict
+from packaging.version import Version, InvalidVersion
 
 User = str
 class CrateVersion(NamedTuple):
@@ -16,7 +21,6 @@ class CrateVersion(NamedTuple):
         return f"{self.name}-{self.version}"
 
 def pretty_print_summary(summary):
-    import pprint
     pp = pprint.PrettyPrinter(indent=2)
     pp.pprint(summary)
 
@@ -24,15 +28,29 @@ def get_crate_metadata(crate: CrateVersion) -> dict:
     """
     Returns the metadata for a given crate.
     """
-    # Runs cargo sherlock
-    crate_info = logger.logger(crate.name, crate.version, "exp")
-    # crate_info = parse_single_file(f"logs/exp/{crate.name}-{crate.version}.csv")
-    # pretty_print_summary(crate_info)
-    audit_summary = create_audit_summary(crate_info)
-    # # pretty_print_summary(audit_summary)
-    return audit_summary
-    # return crate_info
+    cache_path = "logs/cache/" + crate.name + "-" + crate.version + ".json"
+    try:
+        with open(cache_path, "r") as file_backup:
+            print("Loading Results for " + crate.name + "-" + crate.version + " from cache...")
+            audit_summary: dict = json.load(file_backup)
+            audit_summary['dependencies'] = [CrateVersion(dep[0], dep[1]) for dep in audit_summary['dependencies']]
+        return audit_summary
+    except FileNotFoundError:
+        print("Cache file not found, running cargo sherlock on " + crate.name + "-" + crate.version + "...")
 
+    # runs cargo sherlock
+    crate_info = logger.logger(crate.name, crate.version, "exp")
+    audit_summary = create_audit_summary(crate_info,crate)
+
+    if isinstance(audit_summary, collections.defaultdict):
+        audit_summary = dict(audit_summary)
+
+    # save the audit summary to a cache file
+    with open(cache_path, "w") as file_backup:
+        json.dump(audit_summary, file_backup, indent=2)
+    
+    return audit_summary
+    
 def get_user_metadata(user: User) -> dict:
     """
     Returns the metadata for a given user.
@@ -155,11 +173,52 @@ def parse_dependency_tree(tree_data):
     
     return dependencies
 
-def create_audit_summary(crate_info):
-    # Initialize the audit summary dictionary using DefaultDict
+def evaluate_audits(audits, current_version):
+    """
+    Given a list of audit entries and the current version (a string),
+    return a tuple (passed_audit, past_audit):
+      - passed_audit is True if an audit entry exactly certifies the current version.
+      - past_audit is True if any audit entry applies to a version lower than current_version.
+    Future (i.e. higher) audit entries are ignored.
+    """
+    passed_audit = False
+    past_audit = False
+    curr_ver = Version(current_version)
+   
+    for audit in audits:
+        # Check full audit entries with a "version" field.
+        if audit.get('version'):
+            try:
+                audited_ver = Version(audit['version'])
+            except InvalidVersion:
+                continue
+            if audited_ver == curr_ver:
+                passed_audit = True
+            elif audited_ver < curr_ver:
+                past_audit = True
+        # Check delta audit entries, expected in the format "X -> Y"
+        elif audit.get('delta'):
+            parts = audit['delta'].split("->")
+            if len(parts) == 2:
+                new_ver_str = parts[1].strip()
+                try:
+                    new_ver = Version(new_ver_str)
+                except InvalidVersion:
+                    continue
+                if new_ver == curr_ver:
+                    passed_audit = True
+                elif new_ver < curr_ver:
+                    past_audit = True
+    return passed_audit, past_audit
+
+def create_audit_summary(crate_info , crate:CrateVersion):
     audit_summary = defaultdict(list)
     audit_summary.update({
-        'in_rust_sec': False,
+        'rustsec_label': None,
+        'in_rustsec_patched': False,
+        'in_rustsec_current': False,
+        'in_rust_sec' : False, #remove this once we add support for new ones
+        'rustsec_tag': None,
         'developers': [],
         'stars': 0,
         'forks': 0,
@@ -170,50 +229,38 @@ def create_audit_summary(crate_info):
         'dependencies': [],
         'passed_audit': False, 
         'num_unsafe_calls': 0,
-        'miri': False
+        'miri': False,
+        'past_audit': False
     })
-
-    # print("In create_audit_summary")
-    # print(crate_info)
-    # print("_" * 50)
     for section in crate_info:
         if isinstance(section, list):
             for item in section:
                 if item.get('event') == 'Miri':
                     status = item.get('status', 'unknown').lower()
-                    if status == "crash":
-                        # If the summary indicates a crash, do not mark as failed (i.e. keep miri as False)
+                    if status == "ok":
+                        failed = 0
                         audit_summary['miri'] = False
-                        audit_summary['miri_details'] = {
-                            'status': "crash",
-                            'passed': 0,
-                            'failed': 0,
-                            'ignored': 0,
-                            'measured': 0,
-                            'filtered_out': 0,
-                            'time_seconds': 0.0
-                        }
                     else:
-                        print("lol here")
-                        sys.exit(1)
-                        try:
-                            failed = int(item.get('failed', 0))
-                        except (ValueError, TypeError):
-                            failed = 0
-                        # Set miri to True if any test failed or the status is not "ok"
-                        audit_summary['miri'] = (failed > 0 or status != 'ok')
-                        audit_summary['miri_details'] = {
-                            'status': status,
-                            'passed': int(item.get('passed', 0)),
-                            'failed': failed,
-                            'ignored': int(item.get('ignored', 0)),
-                            'measured': int(item.get('measured', 0)),
-                            'filtered_out': int(item.get('filtered_out', 0)),
-                            'time_seconds': float(item.get('time_seconds', 0))
-                        }
+                        failed = int(item.get('failed', 0))
+                        audit_summary['miri'] = True
+                    audit_summary['miri_details'] = {
+                        'status': status,
+                        'passed': int(item.get('passed', 0)),
+                        'failed': failed,
+                        'ignored': int(item.get('ignored', 0)),
+                        'measured': int(item.get('measured', 0)),
+                        'filtered_out': int(item.get('filtered_out', 0)),
+                        'time_seconds': float(item.get('time_seconds', 0))
+                    }
                 elif item.get('event') == 'RustSec':
+                    # print(item)
+                    # sys.exit(1)
+                    audit_summary['in_rustsec_current'] = item.get('current') 
+                    audit_summary['in_rustsec_patched'] = item.get('patched')
+                    audit_summary['rustsec_label'] = item.get('label')
                     audit_summary['in_rust_sec'] = item.get('label') != 'Safe'
-                
+                    audit_summary['rustsec_tag'] = item.get('tag') 
+                            # rustsec_current, rustsec_patched, rustsec_label
                 elif item.get('event') == 'Author':
                     audit_summary['developers'].append(item.get('username'))
 
@@ -248,40 +295,29 @@ def create_audit_summary(crate_info):
         elif isinstance(section, dict):
             if section.get('event') == 'Miri':
                 status = section.get('status', 'unknown').lower()
-                if status == "crash":
-                    # If the summary indicates a crash, do not mark as failed (i.e. keep miri as False)
+                if status == "ok":
+                    failed = 0
                     audit_summary['miri'] = False
-                    audit_summary['miri_details'] = {
-                        'status': "crash",
-                        'passed': 0,
-                        'failed': 0,
-                        'ignored': 0,
-                        'measured': 0,
-                        'filtered_out': 0,
-                        'time_seconds': 0.0
-                    }
                 else:
-                    print(section)
-                    print("kaboom here")
-                    sys.exit(1)
-                    try:
-                        failed = int(section.get('failed', 0))
-                    except (ValueError, TypeError):
-                        failed = 0
-                    # Set miri to True if any test failed or the status is not "ok"
-                    audit_summary['miri'] = (failed > 0 or status != 'ok')
-                    audit_summary['miri_details'] = {
-                        'status': status,
-                        'passed': int(section.get('passed', 0)),
-                        'failed': failed,
-                        'ignored': int(section.get('ignored', 0)),
-                        'measured': int(section.get('measured', 0)),
-                        'filtered_out': int(section.get('filtered_out', 0)),
-                        'time_seconds': float(section.get('time_seconds', 0))
-                    }
+                    failed = int(section.get('failed', 0))
+                    audit_summary['miri'] = True
+                audit_summary['miri_details'] = {
+                    'status': status,
+                    'passed': int(section.get('passed', 0)),
+                    'failed': failed,
+                    'ignored': int(section.get('ignored', 0)),
+                    'measured': int(section.get('measured', 0)),
+                    'filtered_out': int(section.get('filtered_out', 0)),
+                    'time_seconds': float(section.get('time_seconds', 0))
+                }
             elif section.get('event') == 'RustSec':
+                # `print("sec" , section)
+                # sys.exit(1)
+                audit_summary['in_rustsec_current'] = section.get('current') 
+                audit_summary['in_rustsec_patched'] = section.get('patched')
+                audit_summary['rustsec_label'] = section.get('label')
                 audit_summary['in_rust_sec'] = section.get('label') != 'Safe'
-
+                audit_summary['rustsec_tag'] = section.get('tag') 
             elif section.get('event') == 'Author':
                 audit_summary['developers'].append(section.get('username'))
 
@@ -300,6 +336,7 @@ def create_audit_summary(crate_info):
                 audit_summary['failed_rudra'] = True
 
             elif section.get('event') == 'audits':
+                # want to check if the current version is audited
                 audit_summary['audits'].append({
                     'organization': section.get('organization', ''),
                     'criteria': section.get('type', ''),  # Correcting the field to match expected criteria
@@ -312,8 +349,11 @@ def create_audit_summary(crate_info):
                 tree_data = section.get('dependency_tree')
                 audit_summary['dependencies'] = parse_dependency_tree(tree_data)
 
-    # Set passed_audit to True if there are any audits
-    if audit_summary['audits']:
-        audit_summary['passed_audit'] = True
+    # # Set passed_audit to True if there are any audits
+    # if audit_summary['audits']:
+    #     audit_summary['passed_audit'] = True
+    passed, past = evaluate_audits(audit_summary['audits'], crate.version) #todo change this to current_audit and past_audit
+    audit_summary['passed_audit'] = passed
+    audit_summary['past_audit'] = past
 
     return audit_summary

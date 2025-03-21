@@ -1,0 +1,109 @@
+{
+  "rustsec_label": [
+    "INFO",
+    "Uncategorized"
+  ],
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "Vulnerability",
+    "INFOUnmaintained"
+  ],
+  "developers": [
+    "briansmith"
+  ],
+  "stars": 3903,
+  "forks": 737,
+  "downloads": 212969318,
+  "num_side_effects": 144,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "0.16.12 -> 0.16.20",
+      "version": "",
+      "notes": "Reviewed on: https://fxrev.dev/923001 (0.16.13 -> 0.16.20)\\nReviewed on: https://fxrev.dev/716624 (0.16.12 -> 0.16.13)\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "getrandom",
+      "0.3.2"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "r-efi",
+      "5.2.0"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "untrusted",
+      "0.9.0"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 61,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 43,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

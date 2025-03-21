@@ -1,0 +1,149 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "cramertj",
+    "taiki-e"
+  ],
+  "stars": 5549,
+  "forks": 641,
+  "downloads": 259235566,
+  "num_side_effects": 18,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.3.27",
+      "notes": "build.rs is just detecting the target and setting cfg. unsafety is for implementing a concurrency primitives using atomics and unsafecell, and is not obviously incorrect (this is the sort of thing I wouldn't certify as correct without formal methods)"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.3.31",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.3.14",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.3.28",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.3.28 -> 0.3.31",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.21 -> 0.3.23",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.23 -> 0.3.25",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.25 -> 0.3.26",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.27 -> 0.3.26",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.27 -> 0.3.28",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.25 -> 0.3.26",
+      "version": "",
+      "notes": "Atomics usage in `Stream::size_hint` impls looks fine."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.26 -> 0.3.27",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.27 -> 0.3.28",
+      "version": "",
+      "notes": "Dependency updates, and an MSRV update to Rust 1.56."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.28 -> 0.3.29",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.29 -> 0.3.30",
+      "version": "",
+      "notes": "Removes `build.rs` now that it can rely on the `target_has_atomic` attribute."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.30 -> 0.3.31",
+      "version": "",
+      "notes": "Changes to `unsafe` code are only to wrap the internals of some `unsafe fn`s int\\n`unsafe` blocks for added clarity.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "futures-core",
+      "0.3.31"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 18,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.15
+  }
+}

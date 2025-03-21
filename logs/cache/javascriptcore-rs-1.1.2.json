@@ -1,0 +1,141 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "GuillaumeGomez",
+    "antoyo",
+    "tauri-bot"
+  ],
+  "stars": 97,
+  "forks": 22,
+  "downloads": 2687852,
+  "num_side_effects": 131,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "glib",
+      "0.20.9"
+    ],
+    [
+      "futures-channel",
+      "0.3.31"
+    ],
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "futures-executor",
+      "0.3.31"
+    ],
+    [
+      "futures-task",
+      "0.3.31"
+    ],
+    [
+      "futures-util",
+      "0.3.31"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "pin-utils",
+      "0.1.0"
+    ],
+    [
+      "glib-macros",
+      "0.20.7"
+    ],
+    [
+      "heck",
+      "0.5.0"
+    ],
+    [
+      "proc-macro-crate",
+      "3.3.0"
+    ],
+    [
+      "toml_edit",
+      "0.22.24"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "toml_datetime",
+      "0.6.8"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "glib-sys",
+      "0.20.9"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "gobject-sys",
+      "0.20.9"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "javascriptcore-rs-sys",
+      "1.1.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 60,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

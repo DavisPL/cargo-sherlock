@@ -1,0 +1,77 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "Vulnerability",
+    "INFOUnsound"
+  ],
+  "developers": [
+    "dhardy",
+    "github:rust-random:maintainers"
+  ],
+  "stars": 1801,
+  "forks": 454,
+  "downloads": 480120894,
+  "num_side_effects": 2,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.6.1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.6.4",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "",
+      "version": "0.6.4",
+      "notes": "For more detailed unsafe review notes please see https://crrev.com/c/6362797\\n"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.6.3",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.6.1 -> 0.5.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.6.3 -> 0.6.4",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 3,
+    "failed": 0,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.1
+  }
+}

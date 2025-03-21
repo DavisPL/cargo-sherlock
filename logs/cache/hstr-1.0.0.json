@@ -1,0 +1,64 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "kdy1",
+    "swc-bot"
+  ],
+  "stars": 31910,
+  "forks": 1269,
+  "downloads": 5088741,
+  "num_side_effects": 24,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "new_debug_unreachable",
+      "1.0.6"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "phf",
+      "0.11.3"
+    ],
+    [
+      "phf_shared",
+      "0.11.3"
+    ],
+    [
+      "siphasher",
+      "1.0.1"
+    ],
+    [
+      "rustc-hash",
+      "2.1.1"
+    ],
+    [
+      "triomphe",
+      "0.1.14"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 20,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.14
+  }
+}

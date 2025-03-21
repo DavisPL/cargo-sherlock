@@ -1,0 +1,134 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Manishearth",
+    "github:unicode-org:icu4x-release"
+  ],
+  "stars": 1434,
+  "forks": 190,
+  "downloads": 30543741,
+  "num_side_effects": 12,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "does-not-implement-crypto",
+      "delta": "",
+      "version": "2.0.0-beta1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-1\",]",
+      "delta": "",
+      "version": "2.0.0-beta2",
+      "notes": "All unsafe is unchecked `char` and `str` conversion, mostly well-commented.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "1.5.0",
+      "notes": "I, Henri Sivonen, am the principal author of this crate."
+    }
+  ],
+  "dependencies": [
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "icu_collections",
+      "1.5.0"
+    ],
+    [
+      "yoke",
+      "0.8.0"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ],
+    [
+      "zerofrom",
+      "0.1.6"
+    ],
+    [
+      "zerovec",
+      "0.11.1"
+    ],
+    [
+      "icu_properties",
+      "1.5.1"
+    ],
+    [
+      "icu_provider",
+      "1.5.0"
+    ],
+    [
+      "icu_locid",
+      "1.5.0"
+    ],
+    [
+      "litemap",
+      "0.7.5"
+    ],
+    [
+      "tinystr",
+      "0.8.1"
+    ],
+    [
+      "writeable",
+      "0.6.1"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "utf16_iter",
+      "1.0.5"
+    ],
+    [
+      "utf8_iter",
+      "1.0.4"
+    ],
+    [
+      "write16",
+      "1.0.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 11,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

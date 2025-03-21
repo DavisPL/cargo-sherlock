@@ -1,0 +1,200 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "MarkMcCaskey",
+    "github:wasmerio:wasmer-core"
+  ],
+  "stars": 19511,
+  "forks": 852,
+  "downloads": 5123068,
+  "num_side_effects": 12,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bytecheck",
+      "0.8.1"
+    ],
+    [
+      "bytecheck_derive",
+      "0.8.1"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "ptr_meta",
+      "0.3.0"
+    ],
+    [
+      "rancor",
+      "0.1.0"
+    ],
+    [
+      "enum-iterator",
+      "2.1.0"
+    ],
+    [
+      "enum-iterator-derive",
+      "1.4.0"
+    ],
+    [
+      "enumset",
+      "1.1.5"
+    ],
+    [
+      "enumset_derive",
+      "0.10.0"
+    ],
+    [
+      "darling",
+      "0.20.10"
+    ],
+    [
+      "darling_core",
+      "0.20.10"
+    ],
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "ident_case",
+      "1.0.1"
+    ],
+    [
+      "darling_macro",
+      "0.20.10"
+    ],
+    [
+      "getrandom",
+      "0.3.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "r-efi",
+      "5.2.0"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "hex",
+      "0.4.3"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "more-asserts",
+      "0.3.1"
+    ],
+    [
+      "rkyv",
+      "0.8.10"
+    ],
+    [
+      "munge",
+      "0.4.3"
+    ],
+    [
+      "munge_macro",
+      "0.4.3"
+    ],
+    [
+      "rend",
+      "0.5.2"
+    ],
+    [
+      "rkyv_derive",
+      "0.8.10"
+    ],
+    [
+      "sha2",
+      "0.10.8"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "target-lexicon",
+      "0.13.2"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "xxhash-rust",
+      "0.8.15"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 2,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.17
+  }
+}

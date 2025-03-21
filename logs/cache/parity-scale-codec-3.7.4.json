@@ -1,0 +1,95 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "gui1117",
+    "parity-crate-owner",
+    "github:paritytech:core-devs"
+  ],
+  "stars": 267,
+  "forks": 95,
+  "downloads": 23503495,
+  "num_side_effects": 14,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "3.2.1 -> 3.4.0",
+      "version": "",
+      "notes": "No new code, just refactoring to remove the `full` feature flag."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "3.6.1 -> 3.6.5",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "3.6.5 -> 3.6.9",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "arrayvec",
+      "0.7.6"
+    ],
+    [
+      "byte-slice-cast",
+      "1.2.3"
+    ],
+    [
+      "const_format",
+      "0.2.34"
+    ],
+    [
+      "const_format_proc_macros",
+      "0.2.34"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "unicode-xid",
+      "0.2.6"
+    ],
+    [
+      "impl-trait-for-tuples",
+      "0.2.3"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 13,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 80,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 78.94
+  }
+}

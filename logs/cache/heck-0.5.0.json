@@ -1,0 +1,88 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "withoutboats",
+    "jplatte"
+  ],
+  "stars": 525,
+  "forks": 35,
+  "downloads": 386511285,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.4.0",
+      "notes": "Contains `forbid_unsafe` and only uses `std::fmt` from the standard library. Otherwise only contains string manipulation."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.1 -> 0.5.0",
+      "version": "",
+      "notes": "Minor changes for a `no_std` upgrade but otherwise everything looks as expected."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.4.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.5.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.4.0 -> 0.3.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.4.0 -> 0.4.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-0\", \"safe-to-deploy\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.4.1",
+      "notes": "Grepped for `-i cipher`, `-i crypto`, `'x08fsx08'``, `'x08netx08'``, `'x08unsafex08'``\\nand there were no hits.\\n\\n`heck` (version `0.3.3`) has been added to Chromium in\\nhttps://source.chromium.org/chromium/chromium/src/+/28841c33c77833cc30b286f9ae24c97e7a8f4057\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.0 -> 0.4.1",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 16,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.84
+  }
+}

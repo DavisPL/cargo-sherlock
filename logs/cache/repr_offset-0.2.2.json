@@ -1,0 +1,39 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "rodrimati1992"
+  ],
+  "stars": 1,
+  "forks": 1,
+  "downloads": 1109901,
+  "num_side_effects": 6,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "tstr",
+      "0.2.4"
+    ],
+    [
+      "tstr_proc_macros",
+      "0.2.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 6,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "INFOUnsound",
+    "Vulnerability"
+  ],
+  "developers": [
+    "seanmonstar",
+    "github:hyperium:core"
+  ],
+  "stars": 15059,
+  "forks": 1631,
+  "downloads": 273451358,
+  "num_side_effects": 63,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.0-rc.3 -> 1.0.1",
+      "version": "",
+      "notes": "Quite a few changes here relative to the last RC but everything is related to\\nrefactorings and such. No new fundamental addition of functionality or\\nsubstantially new unsafe code.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.14.20",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.14.27",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-4",
+      "delta": "",
+      "version": "1.0.1",
+      "notes": "Reviewed in CL 588384310\\nIssues found:\\n - https://github.com/hyperium/hyper/pull/3498\\n - https://github.com/hyperium/hyper/issues/3556\\n - https://github.com/hyperium/hyper/issues/3500 \\n(probably not a real issue)\\n - https://github.com/hyperium/hyper/issues/3554 (documentation)\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.14.19 -> 0.14.20",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.14.20 -> 0.14.22",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.14.22 -> 0.14.23",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.14.23 -> 0.14.24",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.23 -> 0.14.24",
+      "version": "",
+      "notes": "Fixes a bug where memory was reserved based on an adversary-controllable size, before the\\ncorresponding data was received.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.25 -> 0.14.26",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.26 -> 0.14.27",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.27 -> 0.14.28",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "futures-channel",
+      "0.3.31"
+    ],
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "futures-util",
+      "0.3.31"
+    ],
+    [
+      "futures-task",
+      "0.3.31"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "pin-utils",
+      "0.1.0"
+    ],
+    [
+      "http",
+      "1.3.1"
+    ],
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "http-body",
+      "1.0.1"
+    ],
+    [
+      "httparse",
+      "1.10.1"
+    ],
+    [
+      "httpdate",
+      "1.0.3"
+    ],
+    [
+      "tokio",
+      "1.44.1"
+    ],
+    [
+      "backtrace",
+      "0.3.74"
+    ],
+    [
+      "addr2line",
+      "0.24.2"
+    ],
+    [
+      "gimli",
+      "0.31.1"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "miniz_oxide",
+      "0.8.5"
+    ],
+    [
+      "adler2",
+      "2.0.0"
+    ],
+    [
+      "object",
+      "0.36.7"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "rustc-demangle",
+      "0.1.24"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "tower-service",
+      "0.3.3"
+    ],
+    [
+      "tracing",
+      "0.1.41"
+    ],
+    [
+      "tracing-core",
+      "0.1.33"
+    ],
+    [
+      "want",
+      "0.3.1"
+    ],
+    [
+      "try-lock",
+      "0.2.5"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 18,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 11,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

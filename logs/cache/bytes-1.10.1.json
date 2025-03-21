@@ -1,0 +1,173 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "carllerche",
+    "Darksonn",
+    "github:tokio-rs:core"
+  ],
+  "stars": 2004,
+  "forks": 306,
+  "downloads": 322028677,
+  "num_side_effects": 199,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.5.6",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.0.1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.4.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.4.0 -> 1.5.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.5.0 -> 1.6.0",
+      "version": "",
+      "notes": "Update removes some unsafe, and includes verifiable safety comments for newly-added unsafe."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.6.0 -> 1.6.1",
+      "version": "",
+      "notes": "Very minor update, no unsafe changes"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.6.1 -> 1.7.1",
+      "version": "",
+      "notes": "Many changes but they seem to meet the low bar of safe-to-run."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.7.1 -> 1.7.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.7.2 -> 1.8.0",
+      "version": "",
+      "notes": "smol change, does not add unsafe code, majority of change is new tests"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.8.0 -> 1.9.0",
+      "version": "",
+      "notes": "Reviewed in https://crrev.com/c/6072366."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.9.0 -> 1.10.0",
+      "version": "",
+      "notes": "Reviewed in https://crrev.com/c/6235725. Very large change in buf_impl.rs\\nas well but no unsafe changes there specifically.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.10.0 -> 1.10.1",
+      "version": "",
+      "notes": "Still no crypto, and safe to run with trustworthy inputs.\\n\\nThere are some `unsafe`-related changes in the delta, but I didn't\\nevaluate those, because this is not required for `safe-to-run`\\ncertification.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.1.0 -> 1.2.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.2.1 -> 1.3.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.3.0 -> 1.4.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.4.0 -> 1.9.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.3.0 -> 1.4.0",
+      "version": "",
+      "notes": "Adds a `mem::forget` as part of avoiding `Vec::into_boxed_slice` when it would reallocate.\\nI checked that the required semantics of `mem::forget` are maintained, but it seems like\\n`ManuallyDrop` should also work here and be compatible with their MSRV.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.4.0 -> 1.5.0",
+      "version": "",
+      "notes": "- Introduces new `unsafe` blocks inside new `UninitSlice` constructors, but these replace\\n  existing equivalent `unsafe` blocks that were directly constructing `UninitSlice`.\\n- Adds `unsafe impl BufMut for &mut [core::mem::MaybeUninit<u8>]`, which is implemented\\n  almost identically to the existing `unsafe impl BufMut for &mut [u8]`.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.5.0 -> 1.6.0",
+      "version": "",
+      "notes": "There is significant use of `unsafe` code, but safety requirements are well documented\\nand appear correct as far as I can see.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.7.1 -> 1.7.2",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 162,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 246,
+    "failed": 0,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 5.54
+  }
+}

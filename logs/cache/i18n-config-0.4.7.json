@@ -1,0 +1,87 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "kellpossible"
+  ],
+  "stars": 129,
+  "forks": 30,
+  "downloads": 935203,
+  "num_side_effects": 29,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "basic-toml",
+      "0.1.10"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "unic-langid",
+      "0.9.5"
+    ],
+    [
+      "unic-langid-impl",
+      "0.9.5"
+    ],
+    [
+      "tinystr",
+      "0.8.1"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

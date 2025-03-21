@@ -1,0 +1,64 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "jdm",
+    "github:servo:cargo-publish"
+  ],
+  "stars": 1076,
+  "forks": 228,
+  "downloads": 6734798,
+  "num_side_effects": 6,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "block",
+      "0.1.6"
+    ],
+    [
+      "core-foundation",
+      "0.10.0"
+    ],
+    [
+      "core-foundation-sys",
+      "0.8.7"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "core-graphics-types",
+      "0.2.0"
+    ],
+    [
+      "objc",
+      "0.2.7"
+    ],
+    [
+      "malloc_buf",
+      "1.0.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 6,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

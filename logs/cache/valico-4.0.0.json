@@ -1,0 +1,243 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "s-panferov"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 10008453,
+  "num_side_effects": 1,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "addr",
+      "0.15.6"
+    ],
+    [
+      "psl-types",
+      "2.0.11"
+    ],
+    [
+      "base64",
+      "0.22.1"
+    ],
+    [
+      "chrono",
+      "0.4.40"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "downcast-rs",
+      "2.0.1"
+    ],
+    [
+      "erased-serde",
+      "0.4.6"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "typeid",
+      "1.0.3"
+    ],
+    [
+      "fancy-regex",
+      "0.14.0"
+    ],
+    [
+      "bit-set",
+      "0.8.0"
+    ],
+    [
+      "bit-vec",
+      "0.8.0"
+    ],
+    [
+      "regex-automata",
+      "0.4.9"
+    ],
+    [
+      "regex-syntax",
+      "0.8.5"
+    ],
+    [
+      "json-pointer",
+      "0.3.4"
+    ],
+    [
+      "serde_json",
+      "1.0.140"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "jsonway",
+      "2.0.0"
+    ],
+    [
+      "percent-encoding",
+      "2.3.1"
+    ],
+    [
+      "phf",
+      "0.11.3"
+    ],
+    [
+      "phf_shared",
+      "0.11.3"
+    ],
+    [
+      "siphasher",
+      "1.0.1"
+    ],
+    [
+      "uritemplate-next",
+      "0.2.0"
+    ],
+    [
+      "regex",
+      "1.11.1"
+    ],
+    [
+      "url",
+      "2.5.4"
+    ],
+    [
+      "form_urlencoded",
+      "1.2.1"
+    ],
+    [
+      "idna",
+      "1.0.3"
+    ],
+    [
+      "idna_adapter",
+      "1.2.0"
+    ],
+    [
+      "icu_normalizer",
+      "1.5.0"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "icu_collections",
+      "1.5.0"
+    ],
+    [
+      "yoke",
+      "0.8.0"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ],
+    [
+      "zerofrom",
+      "0.1.6"
+    ],
+    [
+      "zerovec",
+      "0.11.1"
+    ],
+    [
+      "icu_properties",
+      "1.5.1"
+    ],
+    [
+      "icu_provider",
+      "1.5.0"
+    ],
+    [
+      "icu_locid",
+      "1.5.0"
+    ],
+    [
+      "litemap",
+      "0.7.5"
+    ],
+    [
+      "tinystr",
+      "0.8.1"
+    ],
+    [
+      "writeable",
+      "0.6.1"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "utf16_iter",
+      "1.0.5"
+    ],
+    [
+      "utf8_iter",
+      "1.0.4"
+    ],
+    [
+      "write16",
+      "1.0.0"
+    ],
+    [
+      "uuid",
+      "1.16.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 92,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 190.27
+  }
+}

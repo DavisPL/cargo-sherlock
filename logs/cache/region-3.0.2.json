@@ -1,0 +1,91 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "darfink"
+  ],
+  "stars": 125,
+  "forks": 24,
+  "downloads": 10418184,
+  "num_side_effects": 76,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "2.2.0 -> 3.0.2",
+      "version": "",
+      "notes": "This release brings a number of refactorings and new platforms to be supported\\nin the crate. Lots of `unsafe` code because that's what the crate is\\nfundamentally doing, managing virtual memory. That being said it's all largely\\nthe same as before where it's all as expected and the `unsafe` has to do with\\nmanaging OS APIs.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "mach2",
+      "0.4.2"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 36,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

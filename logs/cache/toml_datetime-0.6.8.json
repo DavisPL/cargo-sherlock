@@ -1,0 +1,67 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "epage",
+    "github:toml-rs:maintainers"
+  ],
+  "stars": 789,
+  "forks": 114,
+  "downloads": 137990675,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "embark-studios",
+      "criteria": "safe-to-deploy",
+      "delta": "0.6.1 -> 0.6.2",
+      "version": "",
+      "notes": "No notable changes"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.6.8",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.5.1",
+      "notes": "Crate has `#![forbid(unsafe_code)]`, no `unwrap / expect / panic`, no ambient capabilities."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.1 -> 0.6.1",
+      "version": "",
+      "notes": "Fixes a bug in parsing negative minutes in datetime string offsets."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.6.2 -> 0.6.3",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Kimundi",
+    "github:rust-lang-nursery:libs"
+  ],
+  "stars": 1979,
+  "forks": 122,
+  "downloads": 370821848,
+  "num_side_effects": 2,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "does-not-implement-crypto",
+      "delta": "",
+      "version": "1.4.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.4.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "",
+      "version": "1.4.0",
+      "notes": "I grepped for \\\\\\\"crypt\\\\\\\", \\\\\\\"cipher\\\\\\\", \\\\\\\"fs\\\\\\\", \\\\\\\"net\\\\\\\" - there were no hits.\\n\\nThere are two places where `unsafe` is used.  Unsafe review notes can be found\\nin https://crrev.com/c/5347418.\\n\\nThis crate has been added to Chromium in https://crrev.com/c/3321895.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.4.0 -> 1.5.0",
+      "version": "",
+      "notes": "Unsafe review notes: https://crrev.com/c/5650836"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "1.4.0",
+      "notes": "I have read over the macros, and audited the unsafe code."
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 2,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 5,
+    "failed": 0,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.19
+  }
+}

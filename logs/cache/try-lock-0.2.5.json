@@ -1,0 +1,73 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "seanmonstar"
+  ],
+  "stars": 36,
+  "forks": 7,
+  "downloads": 199165239,
+  "num_side_effects": 5,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.2.4",
+      "notes": "Implements a concurrency primitive with atomics, and is not obviously incorrect"
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.2.3",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.2.3",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.2.3 -> 0.2.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.3 -> 0.2.4",
+      "version": "",
+      "notes": "Fixes unsoundness."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.4 -> 0.2.5",
+      "version": "",
+      "notes": "Bumps MSRV to remove unsafe code block."
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 5,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.23
+  }
+}

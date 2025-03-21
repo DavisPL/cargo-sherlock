@@ -1,0 +1,47 @@
+{
+  "rustsec_label": "LOW",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "japaric",
+    "rnijveld",
+    "bjorn3",
+    "pvdrz",
+    "squell"
+  ],
+  "stars": 3051,
+  "forks": 86,
+  "downloads": 9467,
+  "num_side_effects": 648,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "glob",
+      "0.3.2"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 61,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

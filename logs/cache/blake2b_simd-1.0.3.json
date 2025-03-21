@@ -1,0 +1,58 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "oconnor663"
+  ],
+  "stars": 128,
+  "forks": 21,
+  "downloads": 27446031,
+  "num_side_effects": 817,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.0 -> 1.0.1",
+      "version": "",
+      "notes": "Switches to `constant_time_eq 0.2.4`, which bumps its MSRV to 1.59."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.1 -> 1.0.2",
+      "version": "",
+      "notes": "Switches to `constant_time_eq 0.3.0`, which bumps its MSRV to 1.66."
+    }
+  ],
+  "dependencies": [
+    [
+      "arrayref",
+      "0.3.9"
+    ],
+    [
+      "arrayvec",
+      "0.7.6"
+    ],
+    [
+      "constant_time_eq",
+      "0.4.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 815,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 11,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.57
+  }
+}

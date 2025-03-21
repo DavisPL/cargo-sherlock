@@ -1,0 +1,69 @@
+Solving for required assumptions to trust photonic-interface-restore-0.1.0...
++------------------------------------------------------------+
+|    Analysis Report for photonic-interface-restore-0.1.0    |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 75 cost
+Assumptions for Trusting:
+  • photonic-interface-restore-0.1.0 having all trusted developers implies it is safe: 5 cost
+  • unicode-ident-1.0.18 has many downloads: 0 cost
+  • syn-2.0.100 has many downloads: 0 cost
+  • syn-2.0.100 has many stars and forks: 0 cost
+  • futures-channel-0.3.31 has many downloads: 0 cost
+  • futures-channel-0.3.31 has many stars and forks: 0 cost
+  • futures-core-0.3.31 has many stars and forks: 0 cost
+  • futures-io-0.3.31 has many downloads: 0 cost
+  • futures-sink-0.3.31 has many downloads: 0 cost
+  • futures-sink-0.3.31 has many stars and forks: 0 cost
+  • futures-task-0.3.31 has many stars and forks: 0 cost
+  • futures-util-0.3.31 has many downloads: 0 cost
+  • futures-util-0.3.31 has many stars and forks: 0 cost
+  • pin-project-lite-0.2.16 has many downloads: 0 cost
+  • pin-utils-0.1.0 has many downloads: 0 cost
+  • num-traits-0.2.19 has many downloads: 0 cost
+  • rand-0.9.0 has many stars and forks: 0 cost
+  • rand_core-0.9.3 has many stars and forks: 0 cost
+  • zerocopy-0.8.23 has many stars and forks: 0 cost
+  • zerocopy-derive-0.8.23 has many downloads: 0 cost
+  • zerocopy-derive-0.8.23 has many stars and forks: 0 cost
+  • serde-1.0.219 has many stars and forks: 0 cost
+  • serde_derive-1.0.219 has many stars and forks: 0 cost
+  • tokio-1.44.1 has many stars and forks: 0 cost
+  • addr2line-0.24.2 has many downloads: 0 cost
+  • gimli-0.31.1 has many downloads: 0 cost
+  • libc-0.2.171 has many downloads: 0 cost
+  • libc-0.2.171 has many stars and forks: 0 cost
+  • memchr-2.7.4 has many downloads: 0 cost
+  • rustc-demangle-0.1.24 has many downloads: 0 cost
+  • windows-targets-0.53.0 has many stars and forks: 0 cost
+  • windows_aarch64_gnullvm-0.53.0 has many downloads: 0 cost
+  • windows_aarch64_gnullvm-0.53.0 has many stars and forks: 0 cost
+  • windows_aarch64_msvc-0.53.0 has many downloads: 0 cost
+  • windows_aarch64_msvc-0.53.0 has many stars and forks: 0 cost
+  • windows_i686_gnu-0.53.0 has many downloads: 0 cost
+  • windows_i686_gnullvm-0.53.0 has many stars and forks: 0 cost
+  • windows_i686_msvc-0.53.0 has many stars and forks: 0 cost
+  • windows_x86_64_gnu-0.53.0 has many downloads: 0 cost
+  • windows_x86_64_gnu-0.53.0 has many stars and forks: 0 cost
+  • windows_x86_64_gnullvm-0.53.0 has many stars and forks: 0 cost
+  • windows_x86_64_msvc-0.53.0 has many downloads: 0 cost
+  • tokio-stream-0.1.17 has many stars and forks: 0 cost
+  • fooker is trusted: 70 cost
+  • serde_json-1.0.140 has many stars and forks: 0 cost
+  • itoa-1.0.15 has many downloads: 0 cost
+
+Distrust Cost (higher is better): 100 cost
+Assumptions for Distrusting:
+  • photonic-interface-restore-0.1.0 is unsafe: 100 cost
+  • tokio-1.44.1 has many side effects: 0 cost
+  • libc-0.2.171 has many side effects: 0 cost
+  • memchr-2.7.4 has many side effects: 0 cost
+
+Severity Label: HIGH_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/photonic-interface-restore-0.1.0.json
++------------------------------------------------------------+
+

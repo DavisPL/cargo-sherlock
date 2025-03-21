@@ -1,0 +1,94 @@
+{
+  "rustsec_label": "HIGH",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "Licenser",
+    "sunnybot",
+    "mfelsche",
+    "simd-lite-bot"
+  ],
+  "stars": 1212,
+  "forks": 88,
+  "downloads": 3350374,
+  "num_side_effects": 317,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-4",
+      "delta": "",
+      "version": "0.13.10",
+      "notes": "Reviewed in CL 661175961\\nIssues found:\\n - Review incomplete: Pervasive undocumented unsafety.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "halfbrown",
+      "0.3.0"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "lexical",
+      "7.0.4"
+    ],
+    [
+      "lexical-core",
+      "1.0.5"
+    ],
+    [
+      "lexical-util",
+      "1.0.6"
+    ],
+    [
+      "static_assertions",
+      "1.1.0"
+    ],
+    [
+      "page_size",
+      "0.6.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 308,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 30,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "larsbergstrom",
+    "github:servo:cargo-publish"
+  ],
+  "stars": 1076,
+  "forks": 228,
+  "downloads": 118844417,
+  "num_side_effects": 772,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.4 -> 0.8.6",
+      "version": "",
+      "notes": "The changes here are all typical bindings updates: new functions, types, and\\nconstants. I have not audited all the bindings for ABI conformance.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "",
+      "version": "0.8.7",
+      "notes": "OSX system APIs"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.6 -> 0.8.7",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "waywardmonkeys",
+    "zbraniecki",
+    "alerque",
+    "nordzilla",
+    "dminor",
+    "gregtatum"
+  ],
+  "stars": 1139,
+  "forks": 100,
+  "downloads": 2208893,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.16.0",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "fluent-bundle",
+      "0.15.3"
+    ],
+    [
+      "fluent-langneg",
+      "0.14.1"
+    ],
+    [
+      "icu_locid",
+      "1.5.0"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "litemap",
+      "0.7.5"
+    ],
+    [
+      "tinystr",
+      "0.8.1"
+    ],
+    [
+      "writeable",
+      "0.6.1"
+    ],
+    [
+      "fluent-syntax",
+      "0.11.1"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "intl-memoizer",
+      "0.5.2"
+    ],
+    [
+      "type-map",
+      "0.5.0"
+    ],
+    [
+      "rustc-hash",
+      "2.1.1"
+    ],
+    [
+      "unic-langid",
+      "0.9.5"
+    ],
+    [
+      "unic-langid-impl",
+      "0.9.5"
+    ],
+    [
+      "intl_pluralrules",
+      "7.0.2"
+    ],
+    [
+      "self_cell",
+      "1.1.0"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.77
+  }
+}

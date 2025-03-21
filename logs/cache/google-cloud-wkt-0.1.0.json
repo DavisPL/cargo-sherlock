@@ -1,0 +1,108 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "codyoss",
+    "coryan"
+  ],
+  "stars": 371,
+  "forks": 42,
+  "downloads": 3679,
+  "num_side_effects": 5,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "serde_json",
+      "1.0.140"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "serde_with",
+      "3.12.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "time",
+      "0.3.40"
+    ],
+    [
+      "deranged",
+      "0.4.0"
+    ],
+    [
+      "num-conv",
+      "0.1.0"
+    ],
+    [
+      "powerfmt",
+      "0.2.0"
+    ],
+    [
+      "time-core",
+      "0.1.4"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

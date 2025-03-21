@@ -1,0 +1,22 @@
+Solving for required assumptions to trust reffers-0.6.0...
++------------------------------------------------------------+
+|             Analysis Report for reffers-0.6.0              |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 54 cost
+Assumptions for Trusting:
+  • reffers-0.6.0 has many downloads: 29 cost
+  • reffers-0.6.0 having many downloads implies it is safe: 25 cost
+
+Distrust Cost (higher is better): 15 cost
+Assumptions for Distrusting:
+  • reffers-0.6.0 having a medium severity label in RustSec implies it is unsafe: 15 cost
+
+Severity Label: CRITICAL
+
+Full details about the crate can be found at: /logs/cache/reffers-0.6.0.json
++------------------------------------------------------------+
+

@@ -1,0 +1,165 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "matklad",
+    "vorner"
+  ],
+  "stars": 1936,
+  "forks": 113,
+  "downloads": 403944631,
+  "num_side_effects": 53,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.16.0 -> 1.17.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.17.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.19.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.17.0 -> 1.18.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.14.0 -> 1.15.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.15.0 -> 1.16.0",
+      "version": "",
+      "notes": "Changes to unsafe code in src/lib.rs, src/impl_std.rs, and src/imp_pl.rs are\\nfunctionally equivalent, and call unwrap_unchecked() on already-initialized\\nOptions. The new implementation based on critical_section appears to be sound.\\n"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.16.0 -> 1.17.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.17.1 -> 1.17.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.17.2 -> 1.18.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.18.0 -> 1.19.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.19.0 -> 1.20.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.20.3 -> 1.21.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "1.21.0 -> 1.21.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.12.0 -> 1.13.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.13.1 -> 1.16.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.16.0 -> 1.17.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.20.1 -> 1.20.2",
+      "version": "",
+      "notes": "This update works around a Cargo bug that forces the addition of `portable-atomic` into a lockfile, which we have never needed to use."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.20.2 -> 1.20.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.17.0 -> 1.17.1",
+      "version": "",
+      "notes": "Small refactor that reduces the overall amount of `unsafe` code. The new strict provenance\\napproach looks reasonable.\\n"
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 47,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 42,
+    "failed": 0,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 1.06
+  }
+}

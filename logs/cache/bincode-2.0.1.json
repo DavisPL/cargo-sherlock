@@ -1,0 +1,45 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "TyOverby",
+    "ZoeyR",
+    "VictorKoenders"
+  ],
+  "stars": 2913,
+  "forks": 280,
+  "downloads": 103916121,
+  "num_side_effects": 26,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.0.1",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "unty",
+      "0.0.4"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 13,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 22,
+    "failed": 0,
+    "ignored": 3,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.56
+  }
+}

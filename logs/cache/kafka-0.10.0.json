@@ -1,0 +1,94 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "xitep",
+    "dead10ck",
+    "spicavigo",
+    "johnward"
+  ],
+  "stars": 1308,
+  "forks": 137,
+  "downloads": 515947,
+  "num_side_effects": 52,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "crc",
+      "3.2.1"
+    ],
+    [
+      "crc-catalog",
+      "2.4.0"
+    ],
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "ref_slice",
+      "1.2.1"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "tracing",
+      "0.1.41"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "tracing-core",
+      "0.1.33"
+    ],
+    [
+      "twox-hash",
+      "2.1.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 2,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 17,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 1.07
+  }
+}

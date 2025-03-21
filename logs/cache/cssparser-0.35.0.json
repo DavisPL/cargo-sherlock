@@ -1,0 +1,133 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "SimonSapin",
+    "Manishearth",
+    "metajack",
+    "pcwalton",
+    "github:servo:cargo-publish"
+  ],
+  "stars": 766,
+  "forks": 134,
+  "downloads": 14683223,
+  "num_side_effects": 22,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.29.6",
+      "notes": "I've reviewed or authored most of the recent changes to this library, and it\\nwas developed by other mozilla folks. Unsafe code there is reasonable (utf-8\\ncasts for serialization and parsing).\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.29.6 -> 0.31.0",
+      "version": "",
+      "notes": "All the changes in this release were authored by Mozilla staff, except the\\nuninit_array stuff, which looks fine.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.31.0 -> 0.31.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.31.2 -> 0.32.0",
+      "version": "",
+      "notes": "All changes were either authored or reviewed by Mozilla employees."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.32.0 -> 0.33.0",
+      "version": "",
+      "notes": "Mozilla authored. Breaking changes from 0.32 involve splitting color APIs into\\ntheir own crate and removing an unused line number offset mechanism.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.33.0 -> 0.33.0@git:aaa966d9d6ae70c4b8a62bb5e3a14c068bb7dff0",
+      "version": "",
+      "notes": "Only one minimal change exposing a previously-private enumeration."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.33.0 -> 0.34.0",
+      "version": "",
+      "notes": "I'm the publisher of the crate, and either myself or other Mozilla folks have been authors or reviewers of all the changes."
+    }
+  ],
+  "dependencies": [
+    [
+      "cssparser-macros",
+      "0.6.1"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "dtoa-short",
+      "0.3.5"
+    ],
+    [
+      "dtoa",
+      "1.0.10"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "phf",
+      "0.11.3"
+    ],
+    [
+      "phf_shared",
+      "0.11.3"
+    ],
+    [
+      "siphasher",
+      "1.0.1"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 18,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 13,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "hawkw",
+    "davidbarsky",
+    "github:tokio-rs:publish-tracing"
+  ],
+  "stars": 5775,
+  "forks": 766,
+  "downloads": 167594611,
+  "num_side_effects": 64,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.3.17",
+      "notes": ""
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-run",
+      "delta": "0.3.11 -> 0.3.17",
+      "version": "",
+      "notes": "Largely documentation changes in this update but there was additionally a crop\\nof other miscellaneous updates to APIs all covered in the changelog without,\\nbusiness as usual for minor updates in this crate.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "0.3.1 -> 0.3.15",
+      "version": "",
+      "notes": "Reviewed on https://fxrev.dev/907708"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.16 -> 0.3.17",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.17 -> 0.3.18",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "tracing-core",
+      "0.1.33"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 14,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 92,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 370.7
+  }
+}

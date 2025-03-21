@@ -1,0 +1,62 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "alexcrichton",
+    "Byron",
+    "joshtriplett",
+    "rust-lang-owner"
+  ],
+  "stars": 122,
+  "forks": 79,
+  "downloads": 95548676,
+  "num_side_effects": 31,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.1.2",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.1.3",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.1.8",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.1.12",
+      "notes": "The bundled zlib C sources were not audited as a part of this. However, I did\\ncompare the vendored sources present in this crate with their upstream repos.\\n\\nThere was no diff between zlib/ and https://zlib.net/fossils/zlib-1.2.11.tar.gz.\\n\\nzlib-ng did not provide a version, so I ran diff across everything in zlib-ng's\\ncommit history. The closest upstream SHA was\\ncf89cf35037f152ce7adfeca864656de5d33ea1e with 8 lines of output from\\n`diff --recursive . ../../libz-sys-1.1.12/src/zlib-ng/`. All of these referenced\\nfiles that were only present in libz-sys, and they're all presumably irrelevant\\n(CI configuration files, .git files, linter config)\\n"
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

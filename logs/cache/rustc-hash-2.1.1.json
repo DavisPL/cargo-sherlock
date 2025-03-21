@@ -1,0 +1,68 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "nikomatsakis",
+    "github:rust-lang:core",
+    "github:rust-lang:compiler"
+  ],
+  "stars": 450,
+  "forks": 52,
+  "downloads": 171734214,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.1.0 -> 2.0.0",
+      "version": "",
+      "notes": "Chris Fallin reviewed this update with me, and we didn't find anything surprising. We did verify that the new constants did originate in the paper referenced."
+    },
+    {
+      "organization": "google",
+      "criteria": "does-not-implement-crypto",
+      "delta": "",
+      "version": "1.1.0",
+      "notes": "The hash this crate implements is explicitly non-cryptographic."
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.1.0",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "1.1.0",
+      "notes": "Straightforward crate with no unsafe code, does what it says on the tin."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.1.0 -> 2.1.1",
+      "version": "",
+      "notes": "Simple hashing crate, no unsafe code."
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 3,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.14
+  }
+}

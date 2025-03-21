@@ -1,0 +1,104 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "jhpratt"
+  ],
+  "stars": 1158,
+  "forks": 283,
+  "downloads": 342748332,
+  "num_side_effects": 112,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.44 -> 0.1.45",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.45 -> 0.3.17",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.3.9 -> 0.3.17",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.17 -> 0.3.23",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.23 -> 0.3.36",
+      "version": "",
+      "notes": "There's a bit of new unsafe code that is self-imposed because they now assert\\nthat ordinals are non-zero. All unsafe code was checked to ensure that the\\ninvariants claimed were true.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.20 -> 0.3.22",
+      "version": "",
+      "notes": "Fixes alignment (by using `#[repr(C)]`) of some `union`s that are used in\\n`unsafe` blocks to const convert between `UtcOffset`, and a trait type that is\\neither `UtcOffset` or `()`.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.30 -> 0.3.31",
+      "version": "",
+      "notes": "Removes one `unsafe` block by repurposing a constructor containing a more\\ngeneral invocation of the same `unsafe` function.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.31 -> 0.3.36",
+      "version": "",
+      "notes": "Some use of `unsafe` code but its safety requirements are documented and look okay."
+    }
+  ],
+  "dependencies": [
+    [
+      "deranged",
+      "0.4.0"
+    ],
+    [
+      "num-conv",
+      "0.1.0"
+    ],
+    [
+      "powerfmt",
+      "0.2.0"
+    ],
+    [
+      "time-core",
+      "0.1.4"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 74,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 319,
+    "failed": 5,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 5.39
+  }
+}

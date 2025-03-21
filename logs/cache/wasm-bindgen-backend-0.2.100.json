@@ -1,0 +1,91 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "alexcrichton",
+    "fitzgen",
+    "github:rustwasm:core",
+    "github:rustwasm:wasm-bindgen-publish"
+  ],
+  "stars": 8108,
+  "forks": 1097,
+  "downloads": 145661740,
+  "num_side_effects": 14,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "",
+      "version": "0.2.92",
+      "notes": "Reviewed in CL 643989422"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "0.2.92 -> 0.2.93",
+      "version": "",
+      "notes": "Reviewed in CL 695250202"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.88 -> 0.2.89",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.89 -> 0.2.92",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "bumpalo",
+      "3.17.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "wasm-bindgen-shared",
+      "0.2.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

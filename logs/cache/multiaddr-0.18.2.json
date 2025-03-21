@@ -1,0 +1,131 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Stebalien",
+    "jxs",
+    "dignifiedquire",
+    "mxinden",
+    "github:libp2p:rust-libp2p-maintainers"
+  ],
+  "stars": 93,
+  "forks": 50,
+  "downloads": 12204055,
+  "num_side_effects": 87,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "arrayref",
+      "0.3.9"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "data-encoding",
+      "2.8.0"
+    ],
+    [
+      "libp2p-identity",
+      "0.2.10"
+    ],
+    [
+      "quick-protobuf",
+      "0.8.1"
+    ],
+    [
+      "tracing",
+      "0.1.41"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "tracing-core",
+      "0.1.33"
+    ],
+    [
+      "multibase",
+      "0.9.1"
+    ],
+    [
+      "base-x",
+      "0.2.11"
+    ],
+    [
+      "data-encoding-macro",
+      "0.1.17"
+    ],
+    [
+      "data-encoding-macro-internal",
+      "0.1.15"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "multihash",
+      "0.19.3"
+    ],
+    [
+      "core2",
+      "0.4.0"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "unsigned-varint",
+      "0.8.0"
+    ],
+    [
+      "percent-encoding",
+      "2.3.1"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "static_assertions",
+      "1.1.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,23 @@
+Solving for required assumptions to trust byteorder-1.5.0...
++------------------------------------------------------------+
+|            Analysis Report for byteorder-1.5.0             |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 5 cost
+Assumptions for Trusting:
+  • byteorder-1.5.0 has many downloads: 0 cost
+  • byteorder-1.5.0 having a current audit implies it is safe: 5 cost
+
+Distrust Cost (higher is better): 71 cost
+Assumptions for Distrusting:
+  • byteorder-1.5.0 has many side effects: 11 cost
+  • byteorder-1.5.0 has many side effects implies it is unsafe: 60 cost
+
+Severity Label: SAFE
+
+Full details about the crate can be found at: /logs/cache/byteorder-1.5.0.json
++------------------------------------------------------------+
+

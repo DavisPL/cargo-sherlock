@@ -1,0 +1,90 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "alexcrichton",
+    "japaric",
+    "rust-lang-owner",
+    "github:rust-lang:libs"
+  ],
+  "stars": 623,
+  "forks": 103,
+  "downloads": 119287865,
+  "num_side_effects": 1,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.2 -> 0.2.4",
+      "version": "",
+      "notes": "This diff primarily fixes a few issues with the `fma`-related functions,\\nbut also contains some other minor fixes as well. Everything looks A-OK and\\nas expected.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.4 -> 0.2.7",
+      "version": "",
+      "notes": "This is a minor update which has some testing affordances as well as some\\nupdated math algorithms.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.8 -> 0.2.11",
+      "version": "",
+      "notes": "Mostly formatting-related changes, nothing major."
+    },
+    {
+      "organization": "google",
+      "criteria": "does-not-implement-crypto",
+      "delta": "",
+      "version": "0.2.11",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.2.6",
+      "notes": "This crate uses unsafe block, but this doesn't have network and file access. I audited code."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.2 -> 0.2.5",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.5 -> 0.2.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.7 -> 0.2.8",
+      "version": "",
+      "notes": "Forces some intermediate values to not have too much precision on the x87 FPU."
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 1,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.15
+  }
+}

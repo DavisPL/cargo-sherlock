@@ -4,7 +4,8 @@ import sys
 import helpers.crate_data as crate_data
 from helpers.assumption import CrateVersion
 from pprint import pprint
-from helpers.logger import get_latest_version
+from helpers.logger import get_latest_version,verify_version
+import json 
 
 def main():
     parser = argparse.ArgumentParser(description='Rust Holmes Sherlock: A tool to analye Rust crates')
@@ -32,8 +33,12 @@ def main():
 
     # Fetch the latest version if not provided
     if args.version is None:
+        print(f"Version not specified, fetching the Latest version for analysis.")
         args.version = get_latest_version(args.crate_name)
         print(f"Latest version of {args.crate_name} is {args.version}.")
+    else:
+        if not verify_version(args.crate_name, args.version):
+            sys.exit(1)
 
     # Handle the 'log' subcommand
     if args.command == 'log':
@@ -56,9 +61,11 @@ def main():
         pprint(crate_information)
 
         # Save crate information to the output file if provided
-        if args.output:
-            with open(args.output, 'w') as output_file:
-                pprint(crate_information, stream=output_file)
+        if args.output:    
+            temp = dict(crate_information)
+            # save the audit summary to a cache file
+            with open(args.output, "w") as file:
+                json.dump(temp, file, indent=2)
             print(f"Crate information saved to {args.output}.")
 
     # Handle the 'trust' subcommand
@@ -70,7 +77,6 @@ def main():
     elif args.command == 'trust':
         from solver import complete_analysis
         crate = CrateVersion(args.crate_name, args.version)
-
         # If output is provided, open the file; otherwise, print to console
         if args.output:
             with open(args.output, 'w') as output_file:

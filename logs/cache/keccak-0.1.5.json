@@ -1,0 +1,76 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "newpavlov",
+    "github:rustcrypto:hashes"
+  ],
+  "stars": 42,
+  "forks": 15,
+  "downloads": 50106992,
+  "num_side_effects": 2,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "",
+      "version": "0.1.5",
+      "notes": "Reviewed in CL 636605237"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.1.2",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.2 -> 0.1.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.3 -> 0.1.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.2 -> 0.1.3",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 2,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.62
+  }
+}

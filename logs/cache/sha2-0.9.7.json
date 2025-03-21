@@ -1,0 +1,105 @@
+{
+  "rustsec_label": "Uncategorized",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "tarcieri",
+    "newpavlov",
+    "github:rustcrypto:hashes"
+  ],
+  "stars": 1982,
+  "forks": 267,
+  "downloads": 264366407,
+  "num_side_effects": 89,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.9 -> 0.10.2",
+      "version": "",
+      "notes": "This upgrade is mostly a code refactor, as far as I can tell. No new uses of unsafe nor any new ambient capabilities usage."
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.10.2",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.10.2 -> 0.10.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.10.6 -> 0.10.8",
+      "version": "",
+      "notes": "The bulk of this is https://github.com/RustCrypto/hashes/pull/490 which adds aarch64 support along with another PR adding longson.\\nI didn't check the implementation thoroughly but there wasn't anything obviously nefarious. 0.10.8 has been out for more than a year\\nwhich suggests no one else has found anything either.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.10.6 -> 0.10.7",
+      "version": "",
+      "notes": "The new `unsafe` assembly backend only uses aarch64 intrinsics, via their typed\\nRust APIs (aside from the SHA2-specific intrinsics that are not in Rust yet). I\\ndid not perform a cryptographic review, but the code to load from and store into\\nthe function arguments looks correct.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "block-buffer",
+      "0.10.4"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "opaque-debug",
+      "0.3.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 89,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

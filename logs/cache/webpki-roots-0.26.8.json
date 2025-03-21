@@ -1,0 +1,66 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "ctz",
+    "djc",
+    "github:rustls:publishers"
+  ],
+  "stars": 104,
+  "forks": 49,
+  "downloads": 172981095,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.22.4 -> 0.23.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.23.0 -> 0.25.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "embark-studios",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.22.4",
+      "notes": "Inspected it to confirm that it only contains data definitions and no runtime code"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.25.2 -> 0.25.4",
+      "version": "",
+      "notes": "I have not checked consistency with the Mozilla IncludedCACertificateReportPEMCSV report."
+    }
+  ],
+  "dependencies": [
+    [
+      "rustls-pki-types",
+      "1.11.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

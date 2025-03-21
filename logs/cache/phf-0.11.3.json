@@ -1,0 +1,63 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "sfackler",
+    "abonander",
+    "JohnTitor"
+  ],
+  "stars": 1903,
+  "forks": 122,
+  "downloads": 130860382,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.10.1 -> 0.11.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.0 -> 0.11.1",
+      "version": "",
+      "notes": "Mostly modernisation, migrating to `PhfBorrow`, and making more things `&'static`.\\nNo unsafe code in the new `OrderedMap` and `OrderedSet` types.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.11.1 -> 0.11.2",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "phf_shared",
+      "0.11.3"
+    ],
+    [
+      "siphasher",
+      "1.0.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

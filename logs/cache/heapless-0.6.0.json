@@ -1,0 +1,66 @@
+{
+  "rustsec_label": "HIGH",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "japaric",
+    "adamgreig",
+    "korken89",
+    "github:rust-embedded:libs"
+  ],
+  "stars": 1657,
+  "forks": 200,
+  "downloads": 23626200,
+  "num_side_effects": 176,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.7.17",
+      "notes": "does-not-implement-crypto: Hashing containers (e.g., IndexMap) defer to other\\nmachinery like the hash32 crate for hashing.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "as-slice",
+      "0.2.1"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "hash32",
+      "0.3.1"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 174,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 32,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "rustsec_label": "Uncategorized",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "carllerche",
+    "github:nix-rust:nix-maintainers"
+  ],
+  "stars": 2764,
+  "forks": 684,
+  "downloads": 235393674,
+  "num_side_effects": 705,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.19.1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.20.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.24.2",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.23.1 -> 0.23.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.25.0 -> 0.26.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.26.2 -> 0.27.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.27.1 -> 0.28.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.28.0 -> 0.29.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-3\", \"safe-to-run\",]",
+      "delta": "",
+      "version": "0.26.2",
+      "notes": "Reviewed on https://fxrev.dev/780283\\nIssues:\\n- https://github.com/nix-rust/nix/issues/1975\\n- https://github.com/nix-rust/nix/issues/1977\\n- https://github.com/nix-rust/nix/pull/1978\\n- https://github.com/nix-rust/nix/pull/1979\\n- https://github.com/nix-rust/nix/issues/1980\\n- https://github.com/nix-rust/nix/issues/1981\\n- https://github.com/nix-rust/nix/pull/1983\\n- https://github.com/nix-rust/nix/issues/1990\\n- https://github.com/nix-rust/nix/pull/1992\\n- https://github.com/nix-rust/nix/pull/1993\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "0.26.1 -> 0.28.0",
+      "version": "",
+      "notes": "Reviewed in CL 622222105\\n(The rating differs from the previous once since I feel that the crate needs much more safety comments)\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "",
+      "version": "0.26.2",
+      "notes": "Reviewed in CL 552861153"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.15.0 -> 0.25.0",
+      "version": "",
+      "notes": "Plenty of new bindings but also several important bug fixes (including buffer overflows). New unsafe sections are restricted to wrappers and are no more dangerous than calling the C functions."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.25.0 -> 0.25.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.25.1 -> 0.26.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.26.2 -> 0.27.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.27.1 -> 0.28.0",
+      "version": "",
+      "notes": "Many new features and bugfixes. Obviously there's a lot of unsafe code calling\\nlibc, but the usage looks correct.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.28.0 -> 0.29.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.26.1 -> 0.26.2",
+      "version": "",
+      "notes": "Fixes `SockaddrIn6` endianness bug."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.26.2 -> 0.26.4",
+      "version": "",
+      "notes": "Most of the `unsafe` changes are cleaning up their usage:\\n- Replacing `data.len() * std::mem::size_of::<$ty>()` with `std::mem::size_of_val(data)`.\\n- Removing some `mem::transmute`s.\\n- Using `*mut` instead of `*const` to convey intended semantics.\\n\\nA new unsafe trait method `SockaddrLike::set_length` is added; it's impls look fine.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "memoffset",
+      "0.9.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 242,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 10,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

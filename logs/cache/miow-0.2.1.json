@@ -1,0 +1,65 @@
+{
+  "rustsec_label": "MEDIUM",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "alexcrichton",
+    "faern",
+    "yoshuawuyts"
+  ],
+  "stars": 112,
+  "forks": 40,
+  "downloads": 40779781,
+  "num_side_effects": 79,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "kernel32-sys",
+      "0.2.2"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "net2",
+      "0.2.39"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "ws2_32-sys",
+      "0.2.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 69,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

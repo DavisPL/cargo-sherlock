@@ -1,0 +1,91 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "kazcw"
+  ],
+  "stars": 56,
+  "forks": 33,
+  "downloads": 291888447,
+  "num_side_effects": 243,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.2.10",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.2.17",
+      "notes": "Reviewed in https://crrev.com/c/5171063\\n\\nPreviously reviewed during security review and the audit is grandparented in.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.2.17 -> 0.2.20",
+      "version": "",
+      "notes": "Using zerocopy to reduce unsafe usage."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.2.20 -> 0.2.21",
+      "version": "",
+      "notes": "The delta mostly corresponds to @joshlf's\\nhttps://github.com/cryptocorrosion/cryptocorrosion/pull/85 which started\\nusing an undocumented API that `zerocopy` has provided specifically for\\n`ppv-lite86` in https://github.com/google/zerocopy/pull/2418.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.16 -> 0.2.17",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "zerocopy",
+      "0.8.23"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.23"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 227,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

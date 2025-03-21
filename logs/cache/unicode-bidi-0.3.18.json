@@ -1,0 +1,71 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "SimonSapin",
+    "larsbergstrom",
+    "metajack",
+    "mbrubeck",
+    "behnam",
+    "github:servo:cargo-publish"
+  ],
+  "stars": 78,
+  "forks": 34,
+  "downloads": 245929131,
+  "num_side_effects": 4,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.3.8",
+      "notes": "This crate has no unsafe code and does not use `std::*`. Skimming the crate it\\ndoes not attempt to out of the bounds of what it's already supposed to be doing.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-1\",]",
+      "delta": "",
+      "version": "0.3.18",
+      "notes": "Contains one line of repr(transparent) unsafe"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.8 -> 0.3.13",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.13 -> 0.3.14",
+      "version": "",
+      "notes": "I am the author of the bulk of the upstream changes in this version, and also checked the remaining post-0.3.13 changes."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.14 -> 0.3.15",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 1,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 3,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.39
+  }
+}

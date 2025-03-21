@@ -1,0 +1,89 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "jamesmunns"
+  ],
+  "stars": 1050,
+  "forks": 99,
+  "downloads": 9186547,
+  "num_side_effects": 27,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "1.0.8",
+      "notes": "I've audited the unsafe code to do what it looks like it's doing. Otherwise the\\ncrate is a standard serializer/deserializer crate.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "1.0.10 -> 1.1.1",
+      "version": "",
+      "notes": "Reviewed in CL 707054899"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "1.0.2 -> 1.0.10",
+      "version": "",
+      "notes": "Reviewed in CL 698047950"
+    }
+  ],
+  "dependencies": [
+    [
+      "cobs",
+      "0.3.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 22,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 13,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.47
+  }
+}
