@@ -1,0 +1,50 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "epage"
+  ],
+  "stars": 62,
+  "forks": 5,
+  "downloads": 12031257,
+  "num_side_effects": 37,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "",
+      "version": "2.0.0",
+      "notes": "Reviewed in CL 653263733\\nIssues found:\\n - Should use repr(C) union to get correct layout: https://github.com/cobalt-org/kstring/pull/77.\\n - Ideally the HeapStr trait should be unsafe, but this is a local issue since the trait is sealed.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "2.0.0 -> 2.0.1",
+      "version": "",
+      "notes": "Reviewed in CL 655475274"
+    }
+  ],
+  "dependencies": [
+    [
+      "static_assertions",
+      "1.1.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 14,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 10,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.89
+  }
+}

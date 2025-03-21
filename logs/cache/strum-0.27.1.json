@@ -1,0 +1,52 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Peternator7"
+  ],
+  "stars": 1956,
+  "forks": 161,
+  "downloads": 168087424,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "embark-studios",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.24.1",
+      "notes": "Tiny layer on top of the proc macro crate, found no unsafe or system usage"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"does-not-implement-crypto\", \"safe-to-deploy\", \"ub-risk-0\",]",
+      "delta": "",
+      "version": "0.25.0",
+      "notes": "Reviewed in https://crrev.com/c/5171063\\n\\nPreviously reviewed during security review and the audit is grandparented in.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.25.0 -> 0.26.3",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 18,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.06
+  }
+}

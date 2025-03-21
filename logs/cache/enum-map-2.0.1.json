@@ -1,0 +1,59 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "xfix"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 13791695,
+  "num_side_effects": 5,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "2.7.3",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "enum-map-derive",
+      "0.17.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 5,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 11,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.32
+  }
+}

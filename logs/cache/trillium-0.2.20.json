@@ -1,0 +1,143 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "jbr"
+  ],
+  "stars": 350,
+  "forks": 18,
+  "downloads": 148471,
+  "num_side_effects": 2,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "async-trait",
+      "0.1.88"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "trillium-http",
+      "0.3.17"
+    ],
+    [
+      "encoding_rs",
+      "0.8.35"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "futures-lite",
+      "2.6.0"
+    ],
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "httparse",
+      "1.10.1"
+    ],
+    [
+      "httpdate",
+      "1.0.3"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "mime",
+      "0.3.17"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "smartcow",
+      "0.2.1"
+    ],
+    [
+      "smartstring",
+      "1.0.1"
+    ],
+    [
+      "static_assertions",
+      "1.1.0"
+    ],
+    [
+      "stopper",
+      "0.2.8"
+    ],
+    [
+      "event-listener",
+      "5.4.0"
+    ],
+    [
+      "concurrent-queue",
+      "2.5.0"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "trillium-macros",
+      "0.0.6"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

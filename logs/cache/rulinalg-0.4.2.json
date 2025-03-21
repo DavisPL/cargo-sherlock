@@ -1,0 +1,69 @@
+{
+  "rustsec_label": [
+    "CRITICAL",
+    "INFO"
+  ],
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "INFOUnmaintained",
+    "Vulnerability"
+  ],
+  "developers": [
+    "AtheMathmo"
+  ],
+  "stars": 291,
+  "forks": 58,
+  "downloads": 598580,
+  "num_side_effects": 37,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "matrixmultiply",
+      "0.3.9"
+    ],
+    [
+      "rawpointer",
+      "0.2.1"
+    ],
+    [
+      "num",
+      "0.4.3"
+    ],
+    [
+      "num-complex",
+      "0.4.6"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "num-integer",
+      "0.1.46"
+    ],
+    [
+      "num-iter",
+      "0.1.45"
+    ],
+    [
+      "num-rational",
+      "0.4.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 35,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 13,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

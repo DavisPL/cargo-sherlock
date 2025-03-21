@@ -1,0 +1,30 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "lambda-fairy"
+  ],
+  "stars": 164,
+  "forks": 9,
+  "downloads": 26349461,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 11,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

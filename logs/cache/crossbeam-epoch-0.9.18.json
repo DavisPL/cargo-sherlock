@@ -1,0 +1,123 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "jeehoonkang",
+    "Amanieu",
+    "taiki-e",
+    "github:crossbeam-rs:admins"
+  ],
+  "stars": 7724,
+  "forks": 483,
+  "downloads": 225633474,
+  "num_side_effects": 121,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.9 -> 0.9.15",
+      "version": "",
+      "notes": "In general crossbeam has quite a lot of unsafe code as it's a primitive tool for\\nconcurrency but this update isn't adding any extra unsafe than there already\\nwas and all the updates here are related to odds-and-ends maintenance. In\\nother words everything is as one would expect from a minor update for this\\ncrate.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.15 -> 0.9.18",
+      "version": "",
+      "notes": "Nontrivial update but mostly around dependencies and how `unsafe` code is managed. Everything looks the same shape as before."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.9.14",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.9.14 -> 0.9.15",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.8 -> 0.9.10",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.10 -> 0.9.13",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.13 -> 0.9.14",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.13 -> 0.9.14",
+      "version": "",
+      "notes": "Bumps memoffset to 0.8, and marks some BPF and Sony Vita targets as not having atomics."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.14 -> 0.9.15",
+      "version": "",
+      "notes": "Bumps memoffset to 0.9, and unmarks some ARMv7r and Sony Vita targets as not having 64-bit atomics."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.15 -> 0.9.16",
+      "version": "",
+      "notes": "Moved an `unsafe` block while removing `scopeguard` dependency."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.16 -> 0.9.17",
+      "version": "",
+      "notes": "Changes to `unsafe` code are to replace manual pointer logic with equivalent\\n`unsafe` stdlib methods, now that MSRV is high enough to use them.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.17 -> 0.9.18",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 105,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

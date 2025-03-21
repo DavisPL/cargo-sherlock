@@ -1,0 +1,96 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "seanmonstar"
+  ],
+  "stars": 594,
+  "forks": 93,
+  "downloads": 269520090,
+  "num_side_effects": 12,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.15.0 -> 1.16.0",
+      "version": "",
+      "notes": "Some minor platform updates but no major change to any code."
+    },
+    {
+      "organization": "google",
+      "criteria": "does-not-implement-crypto",
+      "delta": "",
+      "version": "1.13.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.13.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.13.0 -> 1.16.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.13.1 -> 1.14.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.14.0 -> 1.15.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.14.0 -> 1.15.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.15.0 -> 1.16.0",
+      "version": "",
+      "notes": "New unsafe code calls AIX `getsystemcfg` API exposed by `libc` to access the SMT mode."
+    }
+  ],
+  "dependencies": [
+    [
+      "hermit-abi",
+      "0.5.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 5,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

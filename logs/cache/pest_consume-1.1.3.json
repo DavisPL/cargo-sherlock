@@ -1,0 +1,75 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Nadrieril"
+  ],
+  "stars": 47,
+  "forks": 6,
+  "downloads": 865108,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "pest",
+      "2.7.15"
+    ],
+    [
+      "ucd-trie",
+      "0.1.7"
+    ],
+    [
+      "pest_consume_macros",
+      "1.1.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "pest_derive",
+      "2.7.15"
+    ],
+    [
+      "pest_generator",
+      "2.7.15"
+    ],
+    [
+      "pest_meta",
+      "2.7.15"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 11,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.18
+  }
+}

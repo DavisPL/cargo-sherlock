@@ -1,0 +1,103 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "sam0x17"
+  ],
+  "stars": 48,
+  "forks": 4,
+  "downloads": 3500588,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "macro_magic_macros",
+      "0.6.0"
+    ],
+    [
+      "macro_magic_core",
+      "0.6.0"
+    ],
+    [
+      "const-random",
+      "0.1.18"
+    ],
+    [
+      "const-random-macro",
+      "0.1.16"
+    ],
+    [
+      "getrandom",
+      "0.3.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "r-efi",
+      "5.2.0"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "tiny-keccak",
+      "2.0.2"
+    ],
+    [
+      "crunchy",
+      "0.2.3"
+    ],
+    [
+      "derive-syn-parse",
+      "0.2.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "macro_magic_core_macros",
+      "0.6.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

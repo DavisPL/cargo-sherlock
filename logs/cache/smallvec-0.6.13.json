@@ -1,0 +1,111 @@
+{
+  "rustsec_label": "CRITICAL",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "INFOUnsound",
+    "Vulnerability"
+  ],
+  "developers": [
+    "SimonSapin",
+    "Ms2ger",
+    "github:servo:cargo-publish"
+  ],
+  "stars": 1423,
+  "forks": 148,
+  "downloads": 375211310,
+  "num_side_effects": 92,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.8.0 -> 1.11.0",
+      "version": "",
+      "notes": "The main change is the switch to use `NonNull<T>` internally instead of\\n`*mut T`. This seems reasonable, as `Vec` also never stores a null pointer,\\nand in particular the new `NonNull::new_unchecked`s look ok.\\n\\nMost of the rest of the changes are adding some new unstable features which\\naren't enabled by default.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.11.0 -> 1.13.2",
+      "version": "",
+      "notes": "Mostly minor updates, the one semi-substantial update looks good."
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.6.1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.10.0 -> 1.13.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.13.2",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\",]",
+      "delta": "1.13.2 -> 1.14.0",
+      "version": "",
+      "notes": "WARNING: This certification is a result of a **partial** audit. The\\n`malloc_size_of` feature has **not** been audited. This feature does\\nnot explicitly document its safety requirements.\\nSee also https://chromium-review.googlesource.com/c/chromium/src/+/6275133/comment/ea0d7a93_98051a2e/\\nand https://github.com/servo/malloc_size_of/issues/8.\\nThis feature is banned in gnrt_config.toml.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-3\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.11.0",
+      "notes": "Reviewed in CL 552492992"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.8.0 -> 1.9.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.9.0 -> 1.10.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.11.1 -> 1.13.2",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "maybe-uninit",
+      "2.0.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 82,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

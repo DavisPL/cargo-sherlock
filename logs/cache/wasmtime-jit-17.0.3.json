@@ -1,0 +1,245 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "alexcrichton",
+    "sunfishcode",
+    "github:bytecodealliance:wasmtime-publish"
+  ],
+  "stars": 16004,
+  "forks": 1378,
+  "downloads": 9724322,
+  "num_side_effects": 24,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "anyhow",
+      "1.0.97"
+    ],
+    [
+      "bincode",
+      "2.0.1"
+    ],
+    [
+      "unty",
+      "0.0.4"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "gimli",
+      "0.31.1"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "object",
+      "0.36.7"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "rustix",
+      "1.0.3"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "errno",
+      "0.3.10"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "linux-raw-sys",
+      "0.9.3"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "target-lexicon",
+      "0.13.2"
+    ],
+    [
+      "wasmtime-environ",
+      "31.0.0"
+    ],
+    [
+      "cranelift-bitset",
+      "0.118.0"
+    ],
+    [
+      "cranelift-entity",
+      "0.118.0"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "postcard",
+      "1.1.1"
+    ],
+    [
+      "cobs",
+      "0.3.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "wasmparser",
+      "0.227.1"
+    ],
+    [
+      "wasmtime-jit-icache-coherence",
+      "31.0.0"
+    ],
+    [
+      "wasmtime-runtime",
+      "20.0.2"
+    ],
+    [
+      "mach2",
+      "0.4.2"
+    ],
+    [
+      "memfd",
+      "0.6.4"
+    ],
+    [
+      "memoffset",
+      "0.9.1"
+    ],
+    [
+      "paste",
+      "1.0.15"
+    ],
+    [
+      "psm",
+      "0.1.25"
+    ],
+    [
+      "sptr",
+      "0.3.2"
+    ],
+    [
+      "wasmtime-asm-macros",
+      "31.0.0"
+    ],
+    [
+      "wasmtime-slab",
+      "31.0.0"
+    ],
+    [
+      "wasmtime-versioned-export-macros",
+      "31.0.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 10,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

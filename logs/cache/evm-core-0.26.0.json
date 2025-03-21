@@ -1,0 +1,63 @@
+{
+  "rustsec_label": "Uncategorized",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "sorpaas"
+  ],
+  "stars": 1232,
+  "forks": 372,
+  "downloads": 1021462,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "funty",
+      "2.0.0"
+    ],
+    [
+      "primitive-types",
+      "0.13.1"
+    ],
+    [
+      "fixed-hash",
+      "0.8.0"
+    ],
+    [
+      "static_assertions",
+      "1.1.0"
+    ],
+    [
+      "uint",
+      "0.10.0"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "crunchy",
+      "0.2.3"
+    ],
+    [
+      "hex",
+      "0.4.3"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "danburkert",
+    "github:tokio-rs:prost-core"
+  ],
+  "stars": 4165,
+  "forks": 534,
+  "downloads": 154723181,
+  "num_side_effects": 14,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.11.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.12.3",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.12.3 -> 0.12.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.12.4 -> 0.12.6",
+      "version": "",
+      "notes": "No concerning changes for safe-to-run."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.12.6 -> 0.13.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.13.3 -> 0.13.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.13.4 -> 0.13.5",
+      "version": "",
+      "notes": "Touches one function with unsafe inside, but it only adds the const keyword so should not really change anything. Converts a `from` to `as` as well."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.0 -> 0.11.9",
+      "version": "",
+      "notes": "Mostly internal refactorings. Minimal new unsafe code, but with the invariants explicitly checked in code"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.11.9 -> 0.12.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.12.1 -> 0.12.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.13.1 -> 0.13.4",
+      "version": "",
+      "notes": "- The new `unsafe` block in `encoded_len_varint` has correct safety documentation.\\n- The other changes to `unsafe` code are a move of existing `unsafe` code.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "bytes",
+      "1.10.1"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 12,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

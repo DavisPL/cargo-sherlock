@@ -1,0 +1,186 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "alicemaz",
+    "marshallpierce"
+  ],
+  "stars": 645,
+  "forks": 119,
+  "downloads": 520042736,
+  "num_side_effects": 26,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.21.0",
+      "notes": "This crate has no dependencies, no build.rs, and contains no unsafe code."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.21.0",
+      "notes": "This crate has no dependencies, no build.rs, and contains no unsafe code."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.21.3 -> 0.22.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.13.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.13.1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.13.1 -> 0.10.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-0\", \"safe-to-deploy\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.13.1",
+      "notes": "Skimmed the uses of `std` to ensure that nothing untoward is happening. Code uses `forbid(unsafe_code)` and, indeed, there are no uses of `unsafe`"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "",
+      "version": "0.22.1",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.20.0 -> 0.21.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.21.0 -> 0.21.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.21.1 -> 0.21.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.21.2 -> 0.21.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.21.3 -> 0.21.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.21.4 -> 0.21.5",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.21.5 -> 0.21.6",
+      "version": "",
+      "notes": "sourcegraph-based diff did not see the v0.21.6 tag; I retrieved a local copy of the repo and used that for diff'ing."
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.21.6 -> 0.21.7",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.21.7 -> 0.22.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.22.0 -> 0.22.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.13.0 -> 0.13.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.21.3 -> 0.21.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.21.4 -> 0.21.5",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.21.5 -> 0.21.7",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 36,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

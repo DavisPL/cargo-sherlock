@@ -1,0 +1,100 @@
+{
+  "rustsec_label": "LOW",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "Vulnerability",
+    "INFOUnsound"
+  ],
+  "developers": [
+    "andreeaflorescu",
+    "jiangliu",
+    "lauralt",
+    "roypat",
+    "github:rust-vmm:gatekeepers"
+  ],
+  "stars": 319,
+  "forks": 105,
+  "downloads": 2589195,
+  "num_side_effects": 143,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "",
+      "version": "0.12.1",
+      "notes": "Reviewed in CL 556862067\\nIssues found:\\n - https://github.com/rust-vmm/vm-memory/issues/250\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "",
+      "version": "0.12.1",
+      "notes": "Reviewed in CL 556862067\\nIssues from previous review fixed\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-4\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.13.1",
+      "notes": "Reviewed in CL 595684339\\nIssues found:\\n- https://github.com/rust-vmm/vm-memory/issues/281\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 85,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

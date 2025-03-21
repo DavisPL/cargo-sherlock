@@ -1,0 +1,38 @@
+{
+  "rustsec_label": "HIGH",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "briansmith"
+  ],
+  "stars": 201,
+  "forks": 24,
+  "downloads": 212669308,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.7.1",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 5,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

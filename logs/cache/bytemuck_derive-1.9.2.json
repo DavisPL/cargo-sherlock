@@ -1,0 +1,104 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Lokathor"
+  ],
+  "stars": 812,
+  "forks": 87,
+  "downloads": 28778216,
+  "num_side_effects": 2,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.5.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "",
+      "version": "1.6.0",
+      "notes": "Grepped for \\\"unsafe\\\", \\\"crypt\\\", \\\"cipher\\\", \\\"fs\\\", \\\"net\\\" - there were no\\nhits except for 8 occurrences of `unsafe`.  Additional `unsafe` review comments\\ncan be found in https://crrev.com/c/5445719.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.6.0 -> 1.6.1",
+      "version": "",
+      "notes": "No behavior/code changes AFAICT - only adding\\n`#[allow(clippy::multiple_bound_locations)]`, doc comments, and making\\nsome cosmetic changes in non-`.rs` files.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.6.1 -> 1.7.0",
+      "version": "",
+      "notes": "Added support for Zeroable enums, which requires them to be represented as an integer and to have 0 as one of their values.\\n\\nOther trivial/formatting changes.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.7.0 -> 1.7.1",
+      "version": "",
+      "notes": "No impact on safety AFAICT - the delta only specifies a new attribute for\\n`proc_macro_derive` to work around re-export issues described at\\nhttps://github.com/Lokathor/bytemuck/issues/159\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.7.1 -> 1.8.0",
+      "version": "",
+      "notes": "Unsafe review: https://crrev.com/c/5921014"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.8.0 -> 1.8.1",
+      "version": "",
+      "notes": "Changes do not impact safety."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.8.1 -> 1.9.2",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 6,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

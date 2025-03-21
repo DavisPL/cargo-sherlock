@@ -1,0 +1,81 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "seanmonstar"
+  ],
+  "stars": 136,
+  "forks": 61,
+  "downloads": 61155203,
+  "num_side_effects": 6,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.1.0-rc.2",
+      "notes": "only one use of unsafe related to pin projection. unclear to me why pin_project! is used in many modules of the project, but the expanded output of that macro is inlined in either.rs"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.0-rc.2 -> 0.1.0",
+      "version": "",
+      "notes": "Minor documentation updates an additions, nothing major."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.0 -> 0.1.2",
+      "version": "",
+      "notes": "New uses of pin_project! look fine."
+    }
+  ],
+  "dependencies": [
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "http",
+      "1.3.1"
+    ],
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "http-body",
+      "1.0.1"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 3,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

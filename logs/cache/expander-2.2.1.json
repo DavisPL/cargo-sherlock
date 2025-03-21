@@ -1,0 +1,88 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "drahnr",
+    "github:paritytech:core-devs"
+  ],
+  "stars": 22,
+  "forks": 4,
+  "downloads": 6295110,
+  "num_side_effects": 19,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "blake2",
+      "0.10.6"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "file-guard",
+      "0.2.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "fs-err",
+      "3.1.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "rustsec_label": "HIGH",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "alexcrichton",
+    "fitzgen",
+    "yurydelendik",
+    "sunfishcode",
+    "bnjbvr",
+    "github:bytecodealliance:wasmtime-publish"
+  ],
+  "stars": 16005,
+  "forks": 1378,
+  "downloads": 17193079,
+  "num_side_effects": 26,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "cranelift-bforest",
+      "0.118.0"
+    ],
+    [
+      "cranelift-entity",
+      "0.118.0"
+    ],
+    [
+      "cranelift-bitset",
+      "0.118.0"
+    ],
+    [
+      "cranelift-codegen-shared",
+      "0.118.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "regalloc",
+      "0.0.34"
+    ],
+    [
+      "rustc-hash",
+      "2.1.1"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "target-lexicon",
+      "0.13.2"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 25,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

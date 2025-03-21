@@ -1,0 +1,128 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "nagisa",
+    "lucab"
+  ],
+  "stars": 32,
+  "forks": 9,
+  "downloads": 12361551,
+  "num_side_effects": 5,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.6.1",
+      "notes": "Does not interact with the system in any way than otherwise instructed to.\\nContains unsafe blocks but are encapsulated and required for the operation at\\nhand.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.6.2",
+      "notes": "The only changes from 0.6.1 were from my own PR which updated memfd to newer\\ndependencies.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.6.2 -> 0.6.3",
+      "version": "",
+      "notes": "Just a dependency version bump and documentation update"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.6.3 -> 0.6.4",
+      "version": "",
+      "notes": "This commit only updated the dependency `rustix`, so same as before."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-2\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.6.4",
+      "notes": "Reviewed in CL 703568697"
+    }
+  ],
+  "dependencies": [
+    [
+      "rustix",
+      "1.0.3"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "errno",
+      "0.3.10"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "linux-raw-sys",
+      "0.9.3"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 3,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

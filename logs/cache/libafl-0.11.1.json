@@ -1,0 +1,191 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "aflpp"
+  ],
+  "stars": 2183,
+  "forks": 347,
+  "downloads": 77064,
+  "num_side_effects": 575,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "ahash",
+      "0.8.11"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "zerocopy",
+      "0.8.23"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.23"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "c2rust-bitfields",
+      "0.20.0"
+    ],
+    [
+      "c2rust-bitfields-derive",
+      "0.20.0"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "libafl_bolts",
+      "0.15.1"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "mach",
+      "0.3.2"
+    ],
+    [
+      "num_enum",
+      "0.7.3"
+    ],
+    [
+      "num_enum_derive",
+      "0.7.3"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "static_assertions",
+      "1.1.0"
+    ],
+    [
+      "tuple_list",
+      "0.1.3"
+    ],
+    [
+      "windows",
+      "0.61.1"
+    ],
+    [
+      "windows-collections",
+      "0.2.0"
+    ],
+    [
+      "windows-core",
+      "0.61.0"
+    ],
+    [
+      "windows-implement",
+      "0.60.0"
+    ],
+    [
+      "windows-interface",
+      "0.59.1"
+    ],
+    [
+      "windows-link",
+      "0.1.1"
+    ],
+    [
+      "windows-result",
+      "0.3.2"
+    ],
+    [
+      "windows-strings",
+      "0.4.0"
+    ],
+    [
+      "windows-future",
+      "0.2.0"
+    ],
+    [
+      "windows-numerics",
+      "0.2.0"
+    ],
+    [
+      "libm",
+      "0.2.11"
+    ],
+    [
+      "meminterval",
+      "0.4.1"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "postcard",
+      "1.1.1"
+    ],
+    [
+      "cobs",
+      "0.3.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "rustversion",
+      "1.0.20"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 193,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

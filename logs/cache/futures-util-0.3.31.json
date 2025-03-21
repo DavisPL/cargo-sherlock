@@ -1,0 +1,133 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "cramertj",
+    "taiki-e"
+  ],
+  "stars": 5549,
+  "forks": 641,
+  "downloads": 264581638,
+  "num_side_effects": 190,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.27 -> 0.3.31",
+      "version": "",
+      "notes": "New waker_ref module contains \\\"FIXME: panics on Arc::clone / refcount changes could wreak havoc...\\\" comment, but this corner case feels low risk."
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.3.14",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.3.28",
+      "notes": "There's a custom xorshift-based `random::shuffle` implementation in\\nsrc/async_await/random.rs. This is `doc(hidden)` and seems to exist just so\\nthat `futures-macro::select` can be unbiased. Sicne xorshift is explicitly not\\nintended to be a cryptographically secure algorithm, it is not considered\\ncrypto.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.3.28 -> 0.3.31",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.21 -> 0.3.23",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.23 -> 0.3.25",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.25 -> 0.3.26",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.26 -> 0.3.28",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.25 -> 0.3.26",
+      "version": "",
+      "notes": "Changes to `unsafe` usage are to split `Either::project` into `Either::as_pin_ref` and\\n`Either::as_pin_mut`. The new code follows the old code's pattern, and also now has SAFETY\\ndocumentation.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.27 -> 0.3.28",
+      "version": "",
+      "notes": "- MSRV bumped to 1.56.\\n- Changes to `unsafe` code are to move a function call outside an `unsafe fn`,\\n  and to call the `unsafe fn` earlier. The safety requirement of being in the\\n  `POLLING` state appears to be preserved.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.28 -> 0.3.29",
+      "version": "",
+      "notes": "Only change to `unsafe` code is to add a `Fut: Send` bound to the\\n`unsafe impl Sync for FuturesUnordered<Fut>`.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.29 -> 0.3.30",
+      "version": "",
+      "notes": "- Removes `build.rs` now that it can rely on the `target_has_atomic` attribute.\\n- Almost all changes to `unsafe` blocks are to either move them around, or\\n  replace them with safe method calls.\\n- One new `unsafe` block is added for a slice lifetime transmutation. The slice\\n  reconstruction is obviously correct. AFAICT the lifetime transmutation is also\\n  correct; the slice's lifetime logically comes from the `AsyncBufRead` reader\\n  inside `FillBuf`, rather than the `Context`.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "futures-task",
+      "0.3.31"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "pin-utils",
+      "0.1.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 123,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 160,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 1.18
+  }
+}

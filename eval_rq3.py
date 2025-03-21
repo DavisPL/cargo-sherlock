@@ -87,7 +87,7 @@ def run_sherlock_on_crates(csv_file):
             print(f"Command for {crate_name} failed with return code {result.returncode}")
 
     # Use 5 threads to process commands concurrently.
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
         executor.map(process_row, reader)
 
 if __name__ == "__main__":

@@ -1,0 +1,47 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "anza-team"
+  ],
+  "stars": 869,
+  "forks": 408,
+  "downloads": 2938518,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "num_cpus",
+      "1.16.0"
+    ],
+    [
+      "hermit-abi",
+      "0.5.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

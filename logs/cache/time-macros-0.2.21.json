@@ -1,0 +1,131 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "jhpratt"
+  ],
+  "stars": 1158,
+  "forks": 283,
+  "downloads": 197281177,
+  "num_side_effects": 4,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.2.4",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-2\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.2.15",
+      "notes": "Reviewed in CL 580962188"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.2.6",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.2.4 -> 0.2.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.6 -> 0.2.10",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.10 -> 0.2.18",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.4 -> 0.2.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.7 -> 0.2.8",
+      "version": "",
+      "notes": "- Only new `unsafe` code takes a `NonZeroU16` at proc-macro evaluation time and hard-codes\\n  its contents into a `NonZeroU16::new_unchecked` constructor, which is safe.\\n- Bumps MSRV to 1.63.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.8 -> 0.2.9",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.9 -> 0.2.14",
+      "version": "",
+      "notes": "New `unsafe` blocks are because a previously-unsafe macro helper now declares its\\nunsafety; no actual logic changes.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.14 -> 0.2.15",
+      "version": "",
+      "notes": "New `unsafe` block is because `time::Date` now has a niche value optimization,\\nand its macro-only constructor is now `unsafe`. Safe because the macro ensures\\nthat `ordinal` is non-zero while parsing.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.15 -> 0.2.16",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.16 -> 0.2.18",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "num-conv",
+      "0.1.0"
+    ],
+    [
+      "time-core",
+      "0.1.4"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "unknown",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

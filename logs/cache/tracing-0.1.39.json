@@ -1,0 +1,84 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "carllerche",
+    "hawkw",
+    "github:tokio-rs:publish-tracing"
+  ],
+  "stars": 5776,
+  "forks": 766,
+  "downloads": 255914482,
+  "num_side_effects": 4,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.34 -> 0.1.37",
+      "version": "",
+      "notes": "A routine set of updates for the tracing crate this includes minor refactorings,\\naddition of benchmarks, some test updates, but overall nothing out of the\\nordinary.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.1.35",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-4",
+      "delta": "",
+      "version": "0.1.39",
+      "notes": "Reviewed in CL 573852894\\nIssues found:\\n - https://github.com/tokio-rs/tracing/pull/2765\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.1.37",
+      "notes": "There's only one unsafe impl, and its purpose is to ensure correct behavior by\\ncreating a non-Send marker type (it has nothing to do with soundness). All\\ndependencies make sense, and no side-effectful std functions are used.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.1.35 -> 0.1.36",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.1.36 -> 0.1.37",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "tracing-core",
+      "0.1.33"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 4,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.16
+  }
+}

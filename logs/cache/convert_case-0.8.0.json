@@ -1,0 +1,43 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "rutrum"
+  ],
+  "stars": 138,
+  "forks": 10,
+  "downloads": 136056948,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "embark-studios",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.4.0",
+      "notes": "No unsafe usage or ambient capabilities"
+    }
+  ],
+  "dependencies": [
+    [
+      "unicode-segmentation",
+      "1.12.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 85,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 11.99
+  }
+}

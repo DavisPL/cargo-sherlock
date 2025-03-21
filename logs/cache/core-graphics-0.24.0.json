@@ -1,0 +1,98 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "larsbergstrom",
+    "metajack",
+    "mbrubeck",
+    "pcwalton",
+    "github:servo:cargo-publish"
+  ],
+  "stars": 1076,
+  "forks": 228,
+  "downloads": 15784252,
+  "num_side_effects": 339,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.22.3 -> 0.23.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.23.1 -> 0.24.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "core-foundation",
+      "0.10.0"
+    ],
+    [
+      "core-foundation-sys",
+      "0.8.7"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "core-graphics-types",
+      "0.2.0"
+    ],
+    [
+      "foreign-types",
+      "0.5.0"
+    ],
+    [
+      "foreign-types-macros",
+      "0.2.3"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "foreign-types-shared",
+      "0.3.1"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 64,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

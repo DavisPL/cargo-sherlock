@@ -1,0 +1,123 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "anza-team"
+  ],
+  "stars": 868,
+  "forks": 407,
+  "downloads": 426996,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "libsecp256k1",
+      "0.7.2"
+    ],
+    [
+      "arrayref",
+      "0.3.9"
+    ],
+    [
+      "base64",
+      "0.22.1"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "libsecp256k1-core",
+      "0.3.0"
+    ],
+    [
+      "crunchy",
+      "0.2.3"
+    ],
+    [
+      "subtle",
+      "2.6.1"
+    ],
+    [
+      "rand",
+      "0.9.0"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "zerocopy",
+      "0.8.23"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.23"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "solana-define-syscall",
+      "2.2.1"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 1,
+    "failed": 5,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.17
+  }
+}

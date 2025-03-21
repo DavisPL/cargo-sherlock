@@ -1,0 +1,70 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "jdm",
+    "github:servo:cargo-publish"
+  ],
+  "stars": 1076,
+  "forks": 228,
+  "downloads": 11250922,
+  "num_side_effects": 18,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.1 -> 0.1.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.2 -> 0.1.3",
+      "version": "",
+      "notes": "I've reviewed every source contribution that was neither authored nor reviewed by Mozilla."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.3 -> 0.2.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "core-foundation",
+      "0.10.0"
+    ],
+    [
+      "core-foundation-sys",
+      "0.8.7"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

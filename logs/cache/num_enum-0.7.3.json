@@ -1,0 +1,87 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "illicitonion"
+  ],
+  "stars": 284,
+  "forks": 37,
+  "downloads": 78882781,
+  "num_side_effects": 1,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "embark-studios",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.5.11",
+      "notes": "No unsafe usage or ambient capabilities"
+    },
+    {
+      "organization": "embark-studios",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.11 -> 0.6.1",
+      "version": "",
+      "notes": "Minor changes"
+    },
+    {
+      "organization": "embark-studios",
+      "criteria": "safe-to-deploy",
+      "delta": "0.6.1 -> 0.7.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.5.7",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.7.0 -> 0.7.2",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "num_enum_derive",
+      "0.7.3"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 1,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.33
+  }
+}

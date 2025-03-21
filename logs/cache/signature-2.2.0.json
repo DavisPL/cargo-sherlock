@@ -1,0 +1,47 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "tarcieri",
+    "newpavlov",
+    "github:rustcrypto:traits"
+  ],
+  "stars": 634,
+  "forks": 211,
+  "downloads": 104369619,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "2.1.0",
+      "notes": "This crate uses `#![forbid(unsafe_code)]`, has no build script, and only provides traits with some trivial default implementations.\\nI did not review whether implementing these APIs would present any undocumented cryptographic hazards.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "2.1.0 -> 2.2.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

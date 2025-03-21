@@ -1,0 +1,43 @@
+{
+  "rustsec_label": "Uncategorized",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "knsd"
+  ],
+  "stars": 537,
+  "forks": 62,
+  "downloads": 4312784,
+  "num_side_effects": 60,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "",
+      "version": "0.5.0",
+      "notes": "Reviewed in CL 670551760"
+    }
+  ],
+  "dependencies": [
+    [
+      "libc",
+      "0.2.171"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 20,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.36
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "newpavlov",
+    "github:rustcrypto:traits"
+  ],
+  "stars": 634,
+  "forks": 211,
+  "downloads": 110959306,
+  "num_side_effects": 4,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.4.4",
+      "notes": "Most unsafe is hidden by `inout` dependency; only remaining unsafe is raw-splitting a slice and an unreachable hint. Older versions of this regularly reach ~150k daily downloads."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.0 -> 0.4.3",
+      "version": "",
+      "notes": "Significant rework of (mainly RustCrypto-internal) APIs."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "[ \"safe-to-deploy\", \"crypto-reviewed\",]",
+      "delta": "0.4.3 -> 0.4.4",
+      "version": "",
+      "notes": "Adds panics to prevent a block size of zero from causing unsoundness."
+    }
+  ],
+  "dependencies": [
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "inout",
+      "0.1.4"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 4,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

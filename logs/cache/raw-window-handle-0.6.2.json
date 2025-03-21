@@ -1,0 +1,61 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Osspial",
+    "Lokathor",
+    "kchibisov"
+  ],
+  "stars": 354,
+  "forks": 52,
+  "downloads": 26307222,
+  "num_side_effects": 10,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "embark-studios",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.3 -> 0.5.0",
+      "version": "",
+      "notes": "No new unsafe usage or ambient capabilities"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.5.0",
+      "notes": "I looked through all the sources of the v0.5.0 crate."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.0 -> 0.5.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.2 -> 0.6.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 8,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 39,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.64
+  }
+}

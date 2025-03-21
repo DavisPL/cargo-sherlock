@@ -1,0 +1,132 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "armaniferrante",
+    "acheroncrypto"
+  ],
+  "stars": 4117,
+  "forks": 1495,
+  "downloads": 610354,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "anchor-syn",
+      "0.31.0"
+    ],
+    [
+      "anyhow",
+      "1.0.97"
+    ],
+    [
+      "bs58",
+      "0.5.1"
+    ],
+    [
+      "heck",
+      "0.5.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "serde_json",
+      "1.0.140"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "sha2",
+      "0.10.8"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "borsh-derive-internal",
+      "0.11.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "unknown",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

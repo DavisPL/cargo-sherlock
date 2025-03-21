@@ -1,0 +1,175 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "INFOUnsound",
+    "Vulnerability"
+  ],
+  "developers": [
+    "carllerche",
+    "github:tokio-rs:mio-core"
+  ],
+  "stars": 6544,
+  "forks": 764,
+  "downloads": 298900644,
+  "num_side_effects": 461,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.6 -> 0.8.8",
+      "version": "",
+      "notes": "Mostly OS portability updates along with some minor bugfixes."
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.7.7",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.7.14",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.8.8",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "0.8.5 -> 0.8.9",
+      "version": "",
+      "notes": "Audited at https://fxrev.dev/946305"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.6.21 -> 0.6.23",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.0 -> 0.8.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.8 -> 1.0.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.2 -> 0.8.4",
+      "version": "",
+      "notes": "Migrates from winapi to windows-sys. The changes to API usage look reasonable\\nbased on what I've seen in other uses of the windows-sys crate. Unsafe code\\nfalls into two categories:\\n- Usage of `mem::zeroed()`, which doesn't look obviously wrong. The\\n  `..unsafe { mem::zeroed() }` in `sys::unix::selector::kqueue` looks weird\\n  but AFAICT is saying \\\"take any unspecified fields from an instance of this\\n  struct that has been zero-initialized\\\", which is fine for integer fields. It\\n  would be nice if there was documentation to this effect (explaining why this\\n  is done instead of `..Default::default()`).\\n- Calls to Windows API methods. These are either pre-existing (and altered for\\n  the differences in the crate abstractions), or newly added in logic that\\n  appears to be copied from miow 0.3.6 (I scanned this by eye and didn't see\\n  any noteworthy changes other than handling windows-sys API differences).\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.4 -> 0.8.5",
+      "version": "",
+      "notes": "The only unsafe changes are in epoll_create1 failure cases. Usage of epoll_create and fcntl looks fine; it is vulnerable to a race condition in multithreaded programs that fork child processes, but epoll_create1 is how you avoid this problem. See the discussion of the O_CLOEXEC flag in the open(2) man page for details."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.5 -> 0.8.6",
+      "version": "",
+      "notes": "New `unsafe` usages:\\n- `NonZeroU8::new_unchecked`: I verified the constant is non-zero.\\n- Additional `syscall!(close(socket))` calls before returning errors.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.6 -> 0.8.8",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.10 -> 0.8.11",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 225,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 5,
+    "failed": 0,
+    "ignored": 16,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.16
+  }
+}

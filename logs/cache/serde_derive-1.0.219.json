@@ -1,0 +1,357 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "dtolnay",
+    "github:serde-rs:publish"
+  ],
+  "stars": 9512,
+  "forks": 808,
+  "downloads": 439417872,
+  "num_side_effects": 7,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.0.152",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-0",
+      "delta": "",
+      "version": "1.0.193",
+      "notes": "Grepped for `\\\\bunsafe\\\\b` - there were no hits"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "",
+      "version": "1.0.195",
+      "notes": "Grepped for \\\"unsafe\\\", \\\"crypt\\\", \\\"cipher\\\", \\\"fs\\\", \\\"net\\\" - there were no hits"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "",
+      "version": "1.0.196",
+      "notes": "Grepped for \\\"unsafe\\\", \\\"crypt\\\", \\\"cipher\\\", \\\"fs\\\", \\\"net\\\" - there were no hits"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "",
+      "version": "1.0.197",
+      "notes": "Grepped for \\\"unsafe\\\", \\\"crypt\\\", \\\"cipher\\\", \\\"fs\\\", \\\"net\\\" - there were no hits"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.197 -> 1.0.201",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.201 -> 1.0.202",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.202 -> 1.0.203",
+      "version": "",
+      "notes": "Grepped for \\\"unsafe\\\", \\\"crypt\\\", \\\"cipher\\\", \\\"fs\\\", \\\"net\\\" - there were no hits"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.203 -> 1.0.204",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.204 -> 1.0.207",
+      "version": "",
+      "notes": "Grepped for \\\\\\\"unsafe\\\\\\\", \\\\\\\"crypt\\\\\\\", \\\\\\\"cipher\\\\\\\", \\\\\\\"fs\\\\\\\", \\\\\\\"net\\\\\\\" - there were no hits"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.207 -> 1.0.209",
+      "version": "",
+      "notes": "There are no code changes in this delta - see https://crrev.com/c/5812194/2..5\\n\\nI've neverthless also grepped for `-i cipher`, `-i crypto`, `\\\\bfs\\\\b`,\\n`\\\\bnet\\\\b`, and `\\\\bunsafe\\\\b`.  There were no hits.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.209 -> 1.0.210",
+      "version": "",
+      "notes": "Almost no new code - just feature rearrangement"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.210 -> 1.0.213",
+      "version": "",
+      "notes": "Grepped for 'unsafe', 'crypt', 'cipher', 'fs', 'net' - there were no hits"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.213 -> 1.0.214",
+      "version": "",
+      "notes": "No changes to unsafe, no crypto"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.214 -> 1.0.215",
+      "version": "",
+      "notes": "Minor changes should not impact UB risk"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.215 -> 1.0.216",
+      "version": "",
+      "notes": "The delta adds `#[automatically_derived]` in a few places.  Still no `unsafe`."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.216 -> 1.0.217",
+      "version": "",
+      "notes": "No changes"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.217 -> 1.0.218",
+      "version": "",
+      "notes": "No changes outside comments and documentation."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.0.218 -> 1.0.219",
+      "version": "",
+      "notes": "Minor changes (clippy tweaks, using `mem::take` instead of `mem::replace`)."
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.152 -> 1.0.153",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.153 -> 1.0.154",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.154 -> 1.0.155",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.156 -> 1.0.159",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.160 -> 1.0.162",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.162 -> 1.0.163",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.203 -> 1.0.204",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.204 -> 1.0.207",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.137 -> 1.0.143",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.143 -> 1.0.144",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.144 -> 1.0.151",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.151 -> 1.0.152",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.198 -> 1.0.201",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.150 -> 1.0.160",
+      "version": "",
+      "notes": "Update of syn dependency and thus largely changes to adopt the newer API"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.163 -> 1.0.179",
+      "version": "",
+      "notes": "Internal refactorings and dependency updates"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.201 -> 1.0.202",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.136 -> 1.0.143",
+      "version": "",
+      "notes": "Bumps syn, inverts some build flags."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.143 -> 1.0.145",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.155 -> 1.0.156",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.159 -> 1.0.160",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.163 -> 1.0.164",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.179 -> 1.0.188",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.188 -> 1.0.193",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.193 -> 1.0.194",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.216 -> 1.0.217",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "unknown",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

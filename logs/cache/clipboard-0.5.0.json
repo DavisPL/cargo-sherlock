@@ -1,0 +1,137 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "SimonSapin",
+    "aweinstock314",
+    "github:servo:cargo-publish"
+  ],
+  "stars": 371,
+  "forks": 77,
+  "downloads": 1353649,
+  "num_side_effects": 5,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "clipboard-win",
+      "5.4.0"
+    ],
+    [
+      "error-code",
+      "3.3.1"
+    ],
+    [
+      "objc",
+      "0.2.7"
+    ],
+    [
+      "malloc_buf",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "objc-foundation",
+      "0.1.1"
+    ],
+    [
+      "block",
+      "0.1.6"
+    ],
+    [
+      "objc_id",
+      "0.1.1"
+    ],
+    [
+      "x11-clipboard",
+      "0.9.3"
+    ],
+    [
+      "x11rb",
+      "0.13.1"
+    ],
+    [
+      "gethostname",
+      "1.0.0"
+    ],
+    [
+      "rustix",
+      "1.0.3"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "errno",
+      "0.3.10"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "linux-raw-sys",
+      "0.9.3"
+    ],
+    [
+      "x11rb-protocol",
+      "0.13.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 3,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

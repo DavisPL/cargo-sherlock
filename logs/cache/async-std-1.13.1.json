@@ -1,0 +1,34 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "skade",
+    "Keruspe",
+    "dignifiedquire",
+    "yoshuawuyts",
+    "joshtriplett"
+  ],
+  "stars": 4019,
+  "forks": 340,
+  "downloads": 38137150,
+  "num_side_effects": 296,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 36,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 38,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

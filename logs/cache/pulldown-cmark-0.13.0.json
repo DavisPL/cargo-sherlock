@@ -1,0 +1,67 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "marcusklaas",
+    "raphlinus",
+    "Martin1887"
+  ],
+  "stars": 2175,
+  "forks": 252,
+  "downloads": 37259042,
+  "num_side_effects": 12,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.8.0",
+      "notes": "This crate has `unsafe` blocks and they're all related to SIMD-acceleration and\\nare otherwise not doing other `unsafe` operations. Additionally the crate does\\nnot do anything other than markdown rendering as is expected.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.0 -> 0.9.3",
+      "version": "",
+      "notes": "This is a large change to the `pulldown-cmark` crate but it tightens\\nrestrictions on `unsafe` code to forbid it in non-SIMD mode and additionally\\nmany changes look to be related to refactoring, improving, and restructuring.\\nThis crate is not fundamentally different from before, which was trusted, but\\nlooks to be receiving new assistance for maintainership as well.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "",
+      "version": "0.9.3",
+      "notes": "Reviewed in CL 555491415"
+    }
+  ],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "unicase",
+      "2.8.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

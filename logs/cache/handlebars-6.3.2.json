@@ -1,0 +1,147 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "sunng87"
+  ],
+  "stars": 1346,
+  "forks": 144,
+  "downloads": 38488520,
+  "num_side_effects": 48,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "derive_builder",
+      "0.20.2"
+    ],
+    [
+      "derive_builder_macro",
+      "0.20.2"
+    ],
+    [
+      "derive_builder_core",
+      "0.20.2"
+    ],
+    [
+      "darling",
+      "0.20.10"
+    ],
+    [
+      "darling_core",
+      "0.20.10"
+    ],
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "ident_case",
+      "1.0.1"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "darling_macro",
+      "0.20.10"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "num-order",
+      "1.2.0"
+    ],
+    [
+      "num-modular",
+      "0.6.1"
+    ],
+    [
+      "pest",
+      "2.7.15"
+    ],
+    [
+      "ucd-trie",
+      "0.1.7"
+    ],
+    [
+      "pest_derive",
+      "2.7.15"
+    ],
+    [
+      "pest_generator",
+      "2.7.15"
+    ],
+    [
+      "pest_meta",
+      "2.7.15"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "serde_json",
+      "1.0.140"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 4,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

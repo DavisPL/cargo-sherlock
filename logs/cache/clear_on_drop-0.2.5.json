@@ -1,0 +1,38 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "cesarb"
+  ],
+  "stars": 54,
+  "forks": 13,
+  "downloads": 4297557,
+  "num_side_effects": 5,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "",
+      "version": "0.2.5",
+      "notes": "Reviewed in CL 666491561\\nIssues:\\n - Could use some safety comments\\n - Clear::clear() would ideally discard the &mut self and only work with raw pointers to avoid tripping anything around reference validity. Impl is *probably* fine given the way T-opsem is leaning\\n"
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 5,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

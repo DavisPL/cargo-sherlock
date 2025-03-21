@@ -1,0 +1,134 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "jrobsonchase",
+    "stanislav-tkach",
+    "dmitry-timofeev",
+    "rib"
+  ],
+  "stars": 1328,
+  "forks": 167,
+  "downloads": 40706253,
+  "num_side_effects": 143,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "embark-studios",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.21.1",
+      "notes": "Aims to provide a safe JNI (Java Native Interface) API over the\\nunsafe `jni_sys` crate.\\n\\nThis is a very general FFI abstraction for Java VMs with a lot of unsafe code\\nthroughout the API. There are almost certainly some edge cases with its design\\nthat could lead to unsound behaviour but it should still be considerably safer\\nthan working with JNI directly.\\n\\nA lot of the unsafe usage relates to quite-simple use of `from_raw` APIs to\\nconstruct or cast wrapper types (around JNI pointers) which are fairly\\nstraight-forward to verify/trust in context.\\n\\nSome unsafe code has good `// # Safety` documentation (this has been enforced for\\nnewer code) but a lot of unsafe code doesn't document invariants that are\\nbeing relied on.\\n\\nThe design depends on non-trivial named lifetimes across many APIs to associate\\nJava local references with JNI stack frames.\\n\\nThe crate is not very actively maintained and was practically unmaintained for\\nover a year before the 0.20 release.\\n\\nRobert Bragg who now works at Embark Studios became the maintainer of this\\ncrate in October 2022.\\n\\nIn the process of working on the `jni` crate since becoming maintainer it's\\nworth noting that I came across multiple APIs that I found needed to be\\nre-worked to address safety issues, including ensuring that APIs that are not\\nimplemented safely are correctly declared as `unsafe`.\\n\\nThere has been a focus on improving safety in the last two release.\\n\\nThe jni crate has been used in production with the Signal messaging application\\nfor over two years:\\nhttps://github.com/signalapp/libsignal/blob/main/rust/bridge/jni/Cargo.toml\\n\\n# Some Notable Open Issues\\n- https://github.com/jni-rs/jni-rs/issues/422 - questions soundness of linking\\n  multiple versions of jni crate into an application, considering the use\\n  of (separately scoped) thread-local-storage to track thread attachments\\n- https://github.com/jni-rs/jni-rs/issues/405 - discusses the ease with which\\n  code may expose the JVM to invalid booleans with undefined behaviour\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "cesu8",
+      "1.1.0"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "combine",
+      "4.6.7"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "jni-sys",
+      "0.4.0"
+    ],
+    [
+      "jni-sys-macros",
+      "0.1.0"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 133,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 21,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.43
+  }
+}

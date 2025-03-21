@@ -1,0 +1,203 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "dhardy",
+    "github:rust-random:maintainers"
+  ],
+  "stars": 356,
+  "forks": 205,
+  "downloads": 435633115,
+  "num_side_effects": 171,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.1.16",
+      "notes": "getrandom simply contains a bundle of ways of deferring to external sources of\\nrandomness (libcalls, syscalls, CPU insns), so no crypto is directly implemented\\nhere.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.2.2",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.2.7",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.2.10",
+      "notes": "While this crate provides crypto methods, they all defer to system or hardware\\ncrypto implementations. Hence, this crate does not implement crypto.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.2.11",
+      "notes": "Reviewed in https://crrev.com/c/5171063\\n\\nPreviously reviewed during security review and the audit is grandparented in.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "does-not-implement-crypto",
+      "delta": "0.2.11 -> 0.2.12",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.2.12 -> 0.2.14",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.2.14 -> 0.2.15",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "0.2.2 -> 0.2.12",
+      "version": "",
+      "notes": "Audited at https://fxrev.dev/932979"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.2.2 -> 0.1.16",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.9 -> 0.2.10",
+      "version": "",
+      "notes": "These changes include some new `unsafe` code for the `emscripten` and `psvita` targets, but all it does is call `libc::getentropy`."
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.10 -> 0.2.11",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.11 -> 0.2.12",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.12 -> 0.2.14",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.14 -> 0.2.15",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.6 -> 0.2.7",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.7 -> 0.2.8",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.8 -> 0.2.9",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.10 -> 0.2.11",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.15 -> 0.3.1",
+      "version": "",
+      "notes": "I've looked over all unsafe code, and it appears to be safe, fully initializing the rng buffers.\\nIn addition, I've checked Linux, Windows, Mac, and Android more thoroughly against API\\ndocumentation.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.6 -> 0.2.7",
+      "version": "",
+      "notes": "Checked that getrandom::wasi::getrandom_inner matches wasi::random_get.\\nChecked that getrandom::util_libc::Weak lock ordering matches std::sys::unix::weak::DlsymWeak.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.8 -> 0.2.9",
+      "version": "",
+      "notes": "The new `getrandom_uninit` method is introduced by retrofitting every system\\nimplementation to take `&mut [MaybeUninit<u8>]` instead of `&mut [u8]`.\\n\\nMost implementations are only altered to update their signature, and to\\ninternally cast the slice back to `*mut u8` when writing to it. All of these\\nbackends appear to write bytes to the full length of the slice, so it should be\\nfully initialized afterwards, upholding the invariants of the new `unsafe` code\\nin the public APIs.\\n\\n- I did not check the behaviour of each implementation's system method to ensure\\n  they never write uninitialized bytes; the code prior to this change already\\n  needed to uphold that invariant as it was writing into `&mut [u8]`.\\n\\nThe following system implementations have additional `unsafe` code modifications:\\n\\n- `custom`: The slice is zero-filled to ensure the `MaybeUninit<u8>` doesn't\\n  escape into a system implementation that might not write initialized bytes\\n  into the entire slice. The internal API between registration and usage is also\\n  switched from C ABI to Rust ABI, to guard against potential panics.\\n\\n- `emscripten`: New backend, implementation looks reasonable.\\n\\n- `hermit`: New backend, writes incrementally to the slice, but ensures that the\\n  entire slice has been written to before returning `Ok(())`. I note that it is\\n  possible for the implementation to loop indefinitely if `sys_read_entropy`\\n  were to always return 0 for some reason.\\n\\n- `js`: Adds chunking to limit each write to less than 2^31 (but that seems like\\n  a bugfix). The safety requirements for `Uint8Array::view_mut_raw` appear to be\\n  satisfied.\\n\\n- `rdrand`: Code changes to better handle CPU families with broken RDRAND.\\n\\n- `solaris_illumos`: Now uses `GRND_RANDOM`.\\n\\n- `windows`: Added `RtlGenRandom` fallback for non-UWP Windows.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "r-efi",
+      "5.2.0"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 137,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 7,
+    "failed": 0,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.29
+  }
+}

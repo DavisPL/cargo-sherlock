@@ -1,0 +1,162 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Byron",
+    "joshtriplett",
+    "rust-lang-owner"
+  ],
+  "stars": 982,
+  "forks": 170,
+  "downloads": 213147149,
+  "num_side_effects": 120,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.26 -> 1.0.28",
+      "version": "",
+      "notes": "No new `unsafe` and no large changes in function. This diff is mostly refactoring with a lot of docs, CI, test changes. Adds some defensive clearing out of certain variables as a safeguard."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.30 -> 1.1.0",
+      "version": "",
+      "notes": "Minor updates, mostly a new changelog with many lines. No new `unsafe` code and\\nmostly just updating Rust idioms.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.0.26",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.0.26 -> 1.0.27",
+      "version": "",
+      "notes": "There is a CRC implementation in here, but those are not considered crypto.\\nFurther, it's only used in tests internal to this crate.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "",
+      "version": "1.0.30",
+      "notes": "WARNING: This certification is a result of a **partial** audit.  The\\n`any_zlib` code has **not** been audited.  Ability to track partial\\naudits is tracked in https://github.com/mozilla/cargo-vet/issues/380\\nChromium does use the `any_zlib` feature(s).  Accidentally depending on\\nthis feature in the future is prevented using the `ban_features` feature\\nof `gnrt` - see:\\nhttps://crrev.com/c/4723145/31/third_party/rust/chromium_crates_io/gnrt_config.toml\\n\\nSecurity review of earlier versions of the crate can be found at\\n(Google-internal, sorry): go/image-crate-chromium-security-review\\n\\nI grepped for `-i cipher`, `-i crypto`, `'\\\\bfs\\\\b'`, `'\\\\bnet\\\\b'`, `'\\\\bunsafe\\\\b'`.\\n\\nAll `unsafe` in `flate2` is gated behind `#[cfg(feature = \\\"any_zlib\\\")]`:\\n\\n* The code under `src/ffi/...` will not be used because the `mod c`\\n  declaration in `src/ffi/mod.rs` depends on the `any_zlib` config\\n* 7 uses of `unsafe` in `src/mem.rs` also all depend on the\\n  `any_zlib` config:\\n    - 2 in `fn set_dictionary` (under `impl Compress`)\\n    - 2 in `fn set_level` (under `impl Compress`)\\n    - 3 in `fn set_dictionary` (under `impl Decompress`)\\n\\nAll hits of `'\\\\bfs\\\\b'` are in comments, or example code, or test code\\n(but not in product code).\\n\\nThere were no hits of `-i cipher`, `-i crypto`, `'\\\\bnet\\\\b'`.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.30 -> 1.0.31",
+      "version": "",
+      "notes": "WARNING: This certification is a result of a **partial** audit.  The\\n`any_zlib` code has **not** been audited.  See the audit of 1.0.30 for\\nmore details.\\n\\nOnly benign changes:\\n\\n* Comment-only changes in `.rs` files\\n* Also changing dependency version in `Cargo.toml`, but this is for `any_zlib`\\n  feature which is not used in Chromium (i.e. this is a *partial* audit - see\\n  the previous audit notes for 1.0.30)\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.31 -> 1.0.33",
+      "version": "",
+      "notes": "WARNING: This certification is a result of a **partial** audit.  The\\n`any_zlib` code has **not** been audited.  See the audit of 1.0.30 for\\nmore details.\\n\\nThis delta audit has been reviewed in https://crrev.com/c/5811890\\nThe delta can be seen at https://diff.rs/flate2/1.0.31/1.0.33\\nThe delta bumps up `miniz_oxide` dependency to `0.8.0`\\nThe delta also contains some changes to `src/ffi/c.rs` which is *NOT* used by Chromium\\nand therefore hasn't been covered by this partial audit.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.33 -> 1.0.34",
+      "version": "",
+      "notes": "WARNING: This certification is a result of a **partial** audit.  The\\n`any_zlib` code has **not** been audited.  See the audit of 1.0.30 for\\nmore details.\\n\\nThe delta can be seen at https://diff.rs/flate2/1.0.33/1.0.34\\nThe delta bumps up `libz-rs-sys` dependency from `0.2.1` to `0.3.0`\\nThe delta in `lib.rs` only tweaks comments and has no code changes.\\nThe delta also contains some changes to `src/ffi/c.rs` which is *NOT* used by Chromium\\nand therefore hasn't been covered by this partial audit.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.34 -> 1.0.35",
+      "version": "",
+      "notes": "There are no significant code changes in this delta (just one string constant change). Note that prior audits may have been partial."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.35 -> 1.1.0",
+      "version": "",
+      "notes": "This is a delta audit from a **partial** audit (**not** covering zlib-related crate features which are not used by Chromium). The delta does not appear to any new unsafety or unsoundness. Changes consist of:\\n- deriving more impls, e.g. for Clone or Default\\n- migrating away from deprecated things in the rand crate\\n- general improvements, e.g.:\\n  - slice::copy_from_slice instead of a for loop\\n  - Result::map_err instead of Result::unwrap\\n  - use helpers for converting numerics to/from little-endian bytes\\n  - nicer conversions between miniz_oxide::MZFlush and  FlushCompress/FlushDecompress\\n- cfg soup changes in FFI for the C zlib backends\u2013though Chromium does not use these backends\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-4",
+      "delta": "",
+      "version": "1.0.24",
+      "notes": "Reviewed in CL 558916134\\nIssues found:\\n - Uninitialized memory: https://github.com/rust-lang/flate2-rs/pull/373\\nMinor code quality suggestions:\\n - Defense in depth on dangling pointers (https://github.com/rust-lang/flate2-rs/issues/379)\\n - set_len usage relies on tricky undocumented invariants (incidentally fixed by PR #373)\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-4",
+      "delta": "1.0.24 -> 1.0.27",
+      "version": "",
+      "notes": "Reviewed in CL 572611911\\nSame review as previous\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "1.0.27 -> 1.0.28",
+      "version": "",
+      "notes": "Reviewed in CL 573223148\\nIssues from previous review (#379, #220) fixed (PRs #380, #373).\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.24 -> 1.0.25",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.28 -> 1.0.30",
+      "version": "",
+      "notes": "Some new unsafe code, however it has been verified and there are unit tests as well."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.25 -> 1.0.26",
+      "version": "",
+      "notes": "Few dep updates, internal refactorings"
+    }
+  ],
+  "dependencies": [
+    [
+      "crc32fast",
+      "1.4.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "miniz_oxide",
+      "0.8.5"
+    ],
+    [
+      "adler2",
+      "2.0.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 42,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

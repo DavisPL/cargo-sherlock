@@ -1,0 +1,82 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "GuillaumeGomez",
+    "sdroege",
+    "bilelmoussaoui",
+    "github:gtk-rs:crates-io"
+  ],
+  "stars": 506,
+  "forks": 88,
+  "downloads": 4962693,
+  "num_side_effects": 5,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "proc-macro-crate",
+      "3.3.0"
+    ],
+    [
+      "toml_edit",
+      "0.22.24"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "toml_datetime",
+      "0.6.8"
+    ],
+    [
+      "proc-macro-error",
+      "1.0.4"
+    ],
+    [
+      "proc-macro-error-attr",
+      "1.0.4"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

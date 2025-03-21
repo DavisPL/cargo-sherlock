@@ -1,0 +1,136 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "dtolnay"
+  ],
+  "stars": 324,
+  "forks": 37,
+  "downloads": 434311648,
+  "num_side_effects": 1,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.11 -> 1.0.14",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.4.7",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.0.5",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.0.5 -> 1.0.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.0.6 -> 1.0.9",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "",
+      "version": "1.0.10",
+      "notes": "I grepped for \\\\\\\"crypt\\\\\\\", \\\\\\\"cipher\\\\\\\", \\\\\\\"fs\\\\\\\", \\\\\\\"net\\\\\\\" - there were no hits.\\n\\nThere are a few places where `unsafe` is used.  Unsafe review notes can be found\\nin https://crrev.com/c/5350697.\\n\\nVersion 1.0.1 of this crate has been added to Chromium in\\nhttps://crrev.com/c/3321896.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.10 -> 1.0.11",
+      "version": "",
+      "notes": "Straightforward diff between 1.0.10 and 1.0.11 - only 3 commits:\\n\\n* Bumping up the version\\n* A touch up of comments\\n* And my own PR to make `unsafe` blocks more granular:\\n  https://github.com/dtolnay/itoa/pull/42\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.11 -> 1.0.14",
+      "version": "",
+      "notes": "Unsafe review at https://crrev.com/c/6051067\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.14 -> 1.0.15",
+      "version": "",
+      "notes": "Only minor rustdoc changes."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.2 -> 1.0.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.3 -> 1.0.5",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.1 -> 1.0.3",
+      "version": "",
+      "notes": "Update makes no changes to code."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.5 -> 1.0.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.6 -> 1.0.9",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.9 -> 1.0.10",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 1,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.1
+  }
+}

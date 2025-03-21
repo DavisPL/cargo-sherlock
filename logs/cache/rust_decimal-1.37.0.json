@@ -1,0 +1,75 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "paupino"
+  ],
+  "stars": 1097,
+  "forks": 194,
+  "downloads": 34663347,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "",
+      "version": "1.36.0",
+      "notes": "Grepped for `-i cipher`, `-i crypto`, `'\\\\bfs\\\\b'`, `'\\\\bnet\\\\b'`, `'\\\\bunsafe\\\\b'`\\nand there were no hits except:\\n\\n* Some reasonable `fs` usage in `build.rs`, under `make/scripts`, in one test\\n* A single `unsafe` usage in one test.  I think this still qualifies this crate\\n  as `ub-risk-0`.  FWIW the test usage seems sound - see:\\n  https://chromium-review.googlesource.com/c/chromium/src/+/6187726/2/third_party/rust/chromium_crates_io/vendor/rust_decimal-1.36.0/tests/decimal_tests.rs\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.24.0 -> 1.25.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.25.0 -> 1.26.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.26.1 -> 1.27.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.27.0 -> 1.28.1",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "arrayvec",
+      "0.7.6"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}
