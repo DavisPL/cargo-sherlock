@@ -5,7 +5,6 @@ test.txt
 /experiments/
 run_random.py
 *.txt
-rustsec
 typo_crates
 cloned_crates
 processing/*
