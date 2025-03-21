@@ -1,21 +1,23 @@
-Solving for required assumptions to trust supply-chain-trust-example-crate-000052-0.9.1...
+Solving for required assumptions to trust supply-chain-trust-example-crate-000052-0.9.2...
 +------------------------------------------------------------+
-|Analysis Report for supply-chain-trust-example-crate-000052-0.9.1|
+|Analysis Report for supply-chain-trust-example-crate-000052-0.9.2|
 +------------------------------------------------------------+
 
 Assumptions Summary:
 Score Range: 0 (Min) - 100 (Max)
 
-Trust Cost (lower is better): 10 cost
+Trust Cost (lower is better): 75 cost
 Assumptions for Trusting:
-  • supply-chain-trust-example-crate-000052-0.9.1 having no side effects and having all safe dependencies implies it is safe: 10 cost
+  • supply-chain-trust-example-crate-000052-0.9.2 having all trusted developers implies it is safe: 5 cost
+  • muhammad-hassnain is trusted: 70 cost
 
-Distrust Cost (higher is better): 50 cost
+Distrust Cost (higher is better): 85 cost
 Assumptions for Distrusting:
-  • supply-chain-trust-example-crate-000052-0.9.1 failing a Miri test implies it is unsafe: 50 cost
+  • supply-chain-trust-example-crate-000052-0.9.2 has many side effects: 25 cost
+  • supply-chain-trust-example-crate-000052-0.9.2 has many side effects implies it is unsafe: 60 cost
 
-Severity Label: SAFE
+Severity Label: CRITICAL
 
-Full details about the crate can be found at: /logs/cache/supply-chain-trust-example-crate-000052-0.9.1.json
+Full details about the crate can be found at: /logs/cache/supply-chain-trust-example-crate-000052-0.9.2.json
 +------------------------------------------------------------+
 
