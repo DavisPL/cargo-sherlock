@@ -24,12 +24,13 @@ def main():
     trust_parser.add_argument('crate_name', type=str, help='Name of the crate')
     trust_parser.add_argument('version', type=str, nargs='?', default=None, help='Version of the crate (optional)')
     trust_parser.add_argument('-o', '--output', type=str, help='Output file path to save trust score information')
+    trust_parser.add_argument('--no-horn', action='store_true', help='Use the naive solver instead of the Horn solver; not recommended for large crates')
 
     args = parser.parse_args()
 
     if args.command is None:
         parser.print_help()
-        sys.exit(1)
+        sys.exit(0)
 
     # Fetch the latest version if not provided
     if args.version is None:
@@ -68,23 +69,18 @@ def main():
                 json.dump(temp, file, indent=2)
             print(f"Crate information saved to {args.output}.")
 
-    # Handle the 'trust' subcommand
-    # elif args.command == 'trust':
-    #     from solver import complete_analysis
-    #     crate = CrateVersion(args.crate_name, args.version)
-    #     print(f"Solving for required assumptions to trust {crate}...", file=args.output)
-    #     complete_analysis(crate, args.output)
     elif args.command == 'trust':
         from solver import complete_analysis
+        use_horn_solver = not args.no_horn
         crate = CrateVersion(args.crate_name, args.version)
         # If output is provided, open the file; otherwise, print to console
         if args.output:
             with open(args.output, 'w') as output_file:
                 print(f"Solving for required assumptions to trust {crate}...", file=output_file)
-                complete_analysis(crate, output_file)  # Pass the file object to complete_analysis
+                complete_analysis(crate, horn_solver = use_horn_solver, file = output_file)  # Pass the file object to complete_analysis
         else:
             print(f"Solving for required assumptions to trust {crate}...")
-            complete_analysis(crate, sys.stdout)  
+            complete_analysis(crate, horn_solver = use_horn_solver, file = sys.stdout)  
 
 if __name__ == "__main__":
     main()
