@@ -1,0 +1,232 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "marcospb19",
+    "vrmiguel"
+  ],
+  "stars": 2751,
+  "forks": 87,
+  "downloads": 28160,
+  "num_side_effects": 89,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "atty",
+      "0.2.14"
+    ],
+    [
+      "hermit-abi",
+      "0.5.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "bzip2",
+      "0.5.2"
+    ],
+    [
+      "flate2",
+      "1.1.0"
+    ],
+    [
+      "crc32fast",
+      "1.4.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "miniz_oxide",
+      "0.8.5"
+    ],
+    [
+      "adler2",
+      "2.0.0"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "strsim",
+      "0.11.1"
+    ],
+    [
+      "tar",
+      "0.4.44"
+    ],
+    [
+      "filetime",
+      "0.2.25"
+    ],
+    [
+      "libredox",
+      "0.1.3"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "walkdir",
+      "2.5.0"
+    ],
+    [
+      "same-file",
+      "1.0.6"
+    ],
+    [
+      "winapi-util",
+      "0.1.9"
+    ],
+    [
+      "xz2",
+      "0.1.7"
+    ],
+    [
+      "lzma-sys",
+      "0.1.20"
+    ],
+    [
+      "zip",
+      "2.4.2"
+    ],
+    [
+      "arbitrary",
+      "1.4.1"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "zstd",
+      "0.13.3"
+    ],
+    [
+      "zstd-safe",
+      "7.2.4"
+    ],
+    [
+      "zstd-sys",
+      "1.3.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

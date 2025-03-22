@@ -1,0 +1,79 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "ModProg"
+  ],
+  "stars": 16,
+  "forks": 3,
+  "downloads": 7143254,
+  "num_side_effects": 11,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "attribute-derive-macro",
+      "0.10.3"
+    ],
+    [
+      "collection_literals",
+      "1.0.1"
+    ],
+    [
+      "interpolator",
+      "0.5.0"
+    ],
+    [
+      "manyhow",
+      "0.11.4"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "proc-macro-utils",
+      "0.10.0"
+    ],
+    [
+      "quote-use",
+      "0.8.4"
+    ],
+    [
+      "quote-use-macros",
+      "0.8.4"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "derive-where",
+      "1.2.7"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

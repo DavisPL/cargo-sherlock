@@ -4,6 +4,7 @@ import json
 import subprocess
 import concurrent.futures
 import requests
+import threading
 from packaging import version
 from typing import Union
 
@@ -167,6 +168,9 @@ def get_vulnerable_candidate_version(crate_name: str) -> Union[str, None]:
         print(f"Error computing max candidate for {crate_name}: {e}")
         return None
 
+# --- Global lock for thread-safe file writes ---
+failed_lock = threading.Lock()
+
 # --- Main loop: run the tool on vulnerable versions of rustsec crates using one loop ---
 
 def run_sherlock_on_vulnerable_rustsec_crates():
@@ -176,7 +180,7 @@ def run_sherlock_on_vulnerable_rustsec_crates():
     Then run the tool (sherlock.py) on that crate and version, storing the output in
     evaluation/rq3/rustsec with filename <crate_name>-<version>.
     
-    This version uses a single loop to process unique crates concurrently using a thread pool with 5 threads.
+    This version uses a single loop to process unique crates concurrently using a thread pool with 10 threads.
     """
     dict_strings = read_dicts_from_txt("helpers/data.txt")
     output_dir = os.path.join("evaluation", "rq3", "rustsec")
@@ -189,20 +193,27 @@ def run_sherlock_on_vulnerable_rustsec_crates():
         if candidate_version is None:
             print(f"Skipping {crate_name}: no candidate vulnerable version found.")
             return
-        output_file = os.path.join(output_dir, f"{crate_name}-{candidate_version}")
-        command = f"python3 sherlock.py trust {crate_name} {candidate_version} -o {output_file}"
-        print(f"Running: {command}")
+            output_file = os.path.join(output_dir, f"{crate_name}")
+            command = f"python3 sherlock.py trust {crate_name} -o {output_file}"
+        else:
+            output_file = os.path.join(output_dir, f"{crate_name}-{candidate_version}")
+            command = f"python3 sherlock.py trust {crate_name} {candidate_version} -o {output_file}"
+            print(f"Running: {command}")
         result = subprocess.run(command, shell=True)
         if result.returncode != 0:
             print(f"Command for {crate_name} failed with return code {result.returncode}")
+            with failed_lock:
+                with open("rustsec_failed.txt", "a") as f:
+                    f.write(crate_name + "\n")
     
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         for data in dict_strings:
             record = parse_dict_string(data)
             crate = record.get("package", {}).get("name", "").split("(")[0]
             if crate and crate not in processed:
                 processed.add(crate)
                 executor.submit(process_crate, crate)
+    
 
 if __name__ == "__main__":
     run_sherlock_on_vulnerable_rustsec_crates()

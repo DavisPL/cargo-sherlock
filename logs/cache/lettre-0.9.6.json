@@ -1,0 +1,47 @@
+{
+  "rustsec_label": [
+    "Uncategorized",
+    "MEDIUM"
+  ],
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "amousset",
+    "github:lettre:release"
+  ],
+  "stars": 1978,
+  "forks": 207,
+  "downloads": 3863838,
+  "num_side_effects": 79,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "fast_chemail",
+      "0.9.6"
+    ],
+    [
+      "ascii_utils",
+      "0.9.3"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

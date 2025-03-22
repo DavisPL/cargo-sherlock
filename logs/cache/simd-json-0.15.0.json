@@ -1,0 +1,114 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "Licenser",
+    "sunnybot",
+    "mfelsche",
+    "simd-lite-bot"
+  ],
+  "stars": 1212,
+  "forks": 89,
+  "downloads": 3359244,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-4",
+      "delta": "",
+      "version": "0.13.10",
+      "notes": "Reviewed in CL 661175961\\nIssues found:\\n - Review incomplete: Pervasive undocumented unsafety.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "getrandom",
+      "0.3.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "r-efi",
+      "5.2.0"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "halfbrown",
+      "0.3.0"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "ref-cast",
+      "1.0.24"
+    ],
+    [
+      "ref-cast-impl",
+      "1.0.24"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "simdutf8",
+      "0.1.5"
+    ],
+    [
+      "value-trait",
+      "0.11.0"
+    ],
+    [
+      "float-cmp",
+      "0.10.0"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}
