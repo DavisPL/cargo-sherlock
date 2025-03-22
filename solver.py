@@ -389,8 +389,8 @@ def complete_analysis(crate: CrateVersion, horn_solver: bool, file = None):
 def main():
     crate = CrateVersion("anyhow", "1.0.97")
     crate = CrateVersion("zlib-rs", "0.3.0")
-    crate = CrateVersion("tokio", "1.44.1")
-    complete_analysis(crate, horn_solver=False)
+    crate = CrateVersion("fast-float", "0.2.0")
+    complete_analysis(crate, horn_solver=True)
 
 if __name__ == "__main__":
     main()

@@ -117,15 +117,19 @@ def worst_label(labels: list[str] | str) -> str:
         "Safe": 0,
         "Patched": 1,
         "Uncategorized": 2,
-        "LOW": 3,
-        "MEDIUM": 4,
-        "HIGH": 5,
-        "CRITICAL": 6
+        "INFO": 3,
+        "LOW": 4,
+        "MEDIUM": 5,
+        "HIGH": 6,
+        "CRITICAL": 7
     }
     worst = "Safe"
     for label in labels:
-        if severity_order[label] > severity_order[worst]:
-            worst = label
+        try:
+            if severity_order[label] > severity_order[worst]:
+                worst = label
+        except KeyError:
+            return labels[0]
     return worst
 
 if __name__ == '__main__':
