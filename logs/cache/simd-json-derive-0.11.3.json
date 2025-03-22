@@ -1,0 +1,121 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "Licenser",
+    "mfelsche",
+    "simd-lite-bot"
+  ],
+  "stars": 34,
+  "forks": 8,
+  "downloads": 131921,
+  "num_side_effects": 41,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "simd-json",
+      "0.15.0"
+    ],
+    [
+      "getrandom",
+      "0.3.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "r-efi",
+      "5.2.0"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "halfbrown",
+      "0.3.0"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "ref-cast",
+      "1.0.24"
+    ],
+    [
+      "ref-cast-impl",
+      "1.0.24"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "simdutf8",
+      "0.1.5"
+    ],
+    [
+      "value-trait",
+      "0.11.0"
+    ],
+    [
+      "float-cmp",
+      "0.10.0"
+    ],
+    [
+      "simd-json-derive-int",
+      "0.15.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 12,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "brayniac",
+    "jvns",
+    "github:rust-bpf:owners"
+  ],
+  "stars": 477,
+  "forks": 53,
+  "downloads": 202117,
+  "num_side_effects": 157,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bcc-sys",
+      "0.23.0"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "socket2",
+      "0.5.8"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 11,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

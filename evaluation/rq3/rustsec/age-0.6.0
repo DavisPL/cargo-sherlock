@@ -14,7 +14,6 @@ Assumptions for Trusting:
 Distrust Cost (higher is better): 10 cost
 Assumptions for Distrusting:
   • age-0.6.0 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
   • memchr-2.7.4 has many side effects: 0 cost
 
 Severity Label: LOW_SEVERITY

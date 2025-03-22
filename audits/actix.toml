@@ -1,298 +1,267 @@
-# cargo-vet audits file
-#
-# see https://mozilla.github.io/cargo-vet/index.html for more info how cargo-vet works
-
-# ----------------------------
-# first-party actix-net crates
-# ----------------------------
-
+[wildcard-audits]
 [[wildcard-audits.actix-macros]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-codec]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-rt]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-server]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-service]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-tls]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-tracing]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-utils]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.bytestring]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.local-channel]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.local-waker]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
-# ----------------------------
-# first-party actix-web crates
-# ----------------------------
-
 [[wildcard-audits.actix-files]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-http-test]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-http]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-multipart-derive]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-multipart]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-router]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-test]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-web-actors]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
-end = "2025-08-08" # deprecation date
+end = "2025-08-08"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-web-codegen]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-web]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.awc]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
-# -------------------------------
-# first-party actix-extras crates
-# -------------------------------
-
 [[wildcard-audits.actix-cors]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-identity]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-limitation]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-protobuf]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-redis]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
-end = "2025-08-08" # deprecation date
+end = "2025-08-08"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-session]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-settings]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-web-httpauth]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-ws]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
-# ------------------------------
-# first-party actix actor crates
-# ------------------------------
-
 [[wildcard-audits.actix]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix_derive]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
 [[wildcard-audits.actix-broker]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by Actix team."
 
-# ------------------
-# third-party crates
-# ------------------
-
 [[wildcard-audits.actix-client-ip-cloudflare]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by member of Actix team."
 
 [[wildcard-audits.actix-web-lab-derive]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
 notes = "Maintained by member of Actix team."
 
 [[wildcard-audits.actix-web-lab]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
-notes = """
-Maintained by member of Actix team.
-
-While functionality is documented as experimental, it is only in terms of breaking change risks and
-does not indicate that production usage of these helpers is dangerous.
-"""
+notes = "Maintained by member of Actix team.\n\nWhile functionality is documented as experimental, it is only in terms of breaking change risks and\ndoes not indicate that production usage of these helpers is dangerous.\n"
 
 [[wildcard-audits.actix-hash]]
 criteria = "safe-to-deploy"
-user-id = 56903 # @robjtede
+user-id = 56903
 start = "2021-01-01"
 end = "2025-12-31"
-notes = """
-Maintained by member of Actix team.
+notes = "Maintained by member of Actix team.\n\nImplementations are simple and hazardous hashing functions are marked as such in documentation.\n"
 
-Implementations are simple and hazardous hashing functions are marked as such in documentation.
-"""

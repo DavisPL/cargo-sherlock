@@ -1,0 +1,67 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "BurntSushi"
+  ],
+  "stars": 2103,
+  "forks": 50,
+  "downloads": 4651840,
+  "num_side_effects": 109,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "",
+      "version": "0.1.0",
+      "notes": "Reviewed in CL 666672133"
+    }
+  ],
+  "dependencies": [
+    [
+      "jiff-static",
+      "0.2.4"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "portable-atomic",
+      "1.11.0"
+    ],
+    [
+      "portable-atomic-util",
+      "0.2.4"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 44,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

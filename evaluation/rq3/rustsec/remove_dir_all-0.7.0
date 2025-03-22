@@ -15,6 +15,7 @@ Distrust Cost (higher is better): 10 cost
 Assumptions for Distrusting:
   • remove_dir_all-0.7.0 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
   • libc-0.2.171 has many side effects: 0 cost
+  • winapi-0.3.9 has many side effects: 0 cost
 
 Severity Label: MEDIUM_SEVERITY
 

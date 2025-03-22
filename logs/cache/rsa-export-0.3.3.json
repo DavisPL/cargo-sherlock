@@ -1,0 +1,171 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "aumetra"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 96476,
+  "num_side_effects": 4,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "num-bigint-dig",
+      "0.8.4"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "libm",
+      "0.2.11"
+    ],
+    [
+      "num-integer",
+      "0.1.46"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "num-iter",
+      "0.1.45"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "rsa",
+      "0.9.8"
+    ],
+    [
+      "const-oid",
+      "0.10.0"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "pkcs1",
+      "0.7.5"
+    ],
+    [
+      "der",
+      "0.7.9"
+    ],
+    [
+      "spki",
+      "0.7.3"
+    ],
+    [
+      "pkcs8",
+      "0.10.2"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "signature",
+      "2.2.0"
+    ],
+    [
+      "subtle",
+      "2.6.1"
+    ],
+    [
+      "zeroize",
+      "1.8.1"
+    ],
+    [
+      "simple_asn1",
+      "0.6.3"
+    ],
+    [
+      "num-bigint",
+      "0.4.6"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "time",
+      "0.3.40"
+    ],
+    [
+      "deranged",
+      "0.4.0"
+    ],
+    [
+      "num-conv",
+      "0.1.0"
+    ],
+    [
+      "powerfmt",
+      "0.2.0"
+    ],
+    [
+      "time-core",
+      "0.1.4"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "scouten",
+    "scouten-adobe"
+  ],
+  "stars": 32,
+  "forks": 14,
+  "downloads": 136371,
+  "num_side_effects": 87,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "num_enum",
+      "0.7.3"
+    ],
+    [
+      "num_enum_derive",
+      "0.7.3"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 5,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "mattnenterprise"
+  ],
+  "stars": 186,
+  "forks": 57,
+  "downloads": 492258,
+  "num_side_effects": 27,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "chrono",
+      "0.4.40"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "regex",
+      "1.11.1"
+    ],
+    [
+      "regex-automata",
+      "0.4.9"
+    ],
+    [
+      "regex-syntax",
+      "0.8.5"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

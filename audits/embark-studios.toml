@@ -1,11 +1,4 @@
-# cargo-vet audits file
-#
-# see https://mozilla.github.io/cargo-vet/index.html for more info how cargo-vet works
-
-# -------------------------------------------
-# our own crates that we develop and maintain
-# -------------------------------------------
-
+[wildcard-audits]
 [[wildcard-audits.ark-api]]
 who = "Johan Andersson <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
@@ -100,10 +93,7 @@ criteria = "safe-to-deploy"
 user-id = 52553
 start = "2021-01-01"
 end = "2024-05-23"
-notes = """
-Maintained by the Ark team at Embark.
-Small crate with no dependencies and no ambient capabilities.
-"""
+notes = "Maintained by the Ark team at Embark.\nSmall crate with no dependencies and no ambient capabilities.\n"
 
 [[wildcard-audits.macaw]]
 who = "Johan Andersson <opensource@embark-studios.com>"
@@ -143,12 +133,7 @@ criteria = "safe-to-deploy"
 user-id = 52553
 start = "2021-01-01"
 end = "2024-05-23"
-notes = """
-Small crate with no dependencies and no ambient capabilities. The safe interface of the crate
-is gated behind unsafe implementation of a core trait, and care must be taken to ensure that
-the relevant invariants are guaranteed when doing so. Maintained by the Ark team at Embark
-and used in production.
-"""
+notes = "Small crate with no dependencies and no ambient capabilities. The safe interface of the crate\nis gated behind unsafe implementation of a core trait, and care must be taken to ensure that\nthe relevant invariants are guaranteed when doing so. Maintained by the Ark team at Embark\nand used in production.\n"
 
 [[wildcard-audits.puffin]]
 who = "Johan Andersson <opensource@embark-studios.com>"
@@ -196,11 +181,7 @@ criteria = "safe-to-deploy"
 user-id = 52553
 start = "2021-01-01"
 end = "2024-05-23"
-notes = """
-Maintained by Embark. 
-Note that this crate is explicitly for the purpose of testing aborting & crashing your application in different ways, 
-which we use to verify that our crash reporting systems work properly
-"""
+notes = "Maintained by Embark.\nNote that this crate is explicitly for the purpose of testing aborting & crashing your application in different ways, \nwhich we use to verify that our crash reporting systems work properly\n"
 
 [[wildcard-audits.saft]]
 who = "Niklas Nummelin <opensource@embark-studios.com>"
@@ -224,15 +205,7 @@ criteria = "safe-to-deploy"
 user-id = 52553
 start = "2021-01-01"
 end = "2024-05-23"
-notes = """
-Maintained by the Ark team at Embark.
-
-Tiny crate that with sane unsafe usage and no ambient runtime capabilities in the Rust code.
-
-Note it has a complex build setup where it downloads over HTTP a specific a pinned pre-built static binary for the C++ MoltenVK library.
-
-This audit does NOT cover the very large C++ MoltenVK codebase.
-"""
+notes = "Maintained by the Ark team at Embark.\n\nTiny crate that with sane unsafe usage and no ambient runtime capabilities in the Rust code.\n\nNote it has a complex build setup where it downloads over HTTP a specific a pinned pre-built static binary for the C++ MoltenVK library.\n\nThis audit does NOT cover the very large C++ MoltenVK codebase.\n"
 
 [[wildcard-audits.spirv-std]]
 who = "eddyb <opensource@embark-studios.com>"
@@ -336,11 +309,7 @@ criteria = "safe-to-deploy"
 user-id = 52553
 start = "2020-01-01"
 end = "2024-05-23"
-notes = """
-Maintained by Embark.
-
-No unsafe usage but does allow calling of cargo via the cargo_metadata crate
-"""
+notes = "Maintained by Embark.\n\nNo unsafe usage but does allow calling of cargo via the cargo_metadata crate\n"
 
 [[wildcard-audits.tame-gcs]]
 who = "Jake Shadle <opensource@embark-studios.com>"
@@ -364,11 +333,7 @@ criteria = "safe-to-deploy"
 user-id = 52553
 start = "2021-01-01"
 end = "2024-05-23"
-notes = """
-Maintained by Embark.
-
-No unsafe usage, but can get the path to the process it is running in
-"""
+notes = "Maintained by Embark.\n\nNo unsafe usage, but can get the path to the process it is running in\n"
 
 [[wildcard-audits.crash-context]]
 who = "Jake Shadle <opensource@embark-studios.com>"
@@ -376,13 +341,7 @@ criteria = "safe-to-deploy"
 user-id = 52553
 start = "2023-01-01"
 end = "2024-05-23"
-notes = """
-Maintained by Embark.
-
-This crate contains a large amount of unsafe code as it is provides assembly
-code for capturing CPU contexts, as well as a large chunk of unsafe code on
-MacOS for interacting with mach ports, but is fairly thoroughly tested.
-"""
+notes = "Maintained by Embark.\n\nThis crate contains a large amount of unsafe code as it is provides assembly\ncode for capturing CPU contexts, as well as a large chunk of unsafe code on\nMacOS for interacting with mach ports, but is fairly thoroughly tested.\n"
 
 [[wildcard-audits.crash-handler]]
 who = "Jake Shadle <opensource@embark-studios.com>"
@@ -390,13 +349,7 @@ criteria = "safe-to-deploy"
 user-id = 52553
 start = "2023-01-01"
 end = "2024-05-23"
-notes = """
-Maintained by Embark.
-
-This crate contains a large amount of unsafe code as it is interacting with OS
-signal/exception handling functionality, but is fairly thoroughly tested. Note
-on Linux targets, this also performs an interposition of pthread_create.
-"""
+notes = "Maintained by Embark.\n\nThis crate contains a large amount of unsafe code as it is interacting with OS\nsignal/exception handling functionality, but is fairly thoroughly tested. Note\non Linux targets, this also performs an interposition of pthread_create.\n"
 
 [[wildcard-audits.minidumper]]
 who = "Jake Shadle <opensource@embark-studios.com>"
@@ -404,19 +357,9 @@ criteria = "safe-to-deploy"
 user-id = 52553
 start = "2023-01-01"
 end = "2024-05-23"
-notes = """
-Maintained by Embark.
+notes = "Maintained by Embark.\n\nThis crate contains a large amount of unsafe code for implementing IPC between 2\nlocal processes, as well as calling into the minidump-writer crate which also\ncontains a significant amount of unsafe to dump a processes state, but is fairly\nthoroughly tested.\n"
 
-This crate contains a large amount of unsafe code for implementing IPC between 2
-local processes, as well as calling into the minidump-writer crate which also
-contains a significant amount of unsafe to dump a processes state, but is fairly
-thoroughly tested.
-"""
-
-# ------------------------------------------------------------------
-# third party crates we've done at least light audit / inspection of 
-# ------------------------------------------------------------------
-
+[audits]
 [[audits.tinyvec_macros]]
 who = "Johan Andersson <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
@@ -590,6 +533,12 @@ criteria = "safe-to-deploy"
 version = "0.1.31"
 notes = "Inspected it and it is a tiny crate implementing allocator wrapping a the allocator C++ sys crate but with simple unsafe code that looks sound"
 
+[[audits.mimalloc]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.37"
+notes = "Tiny allocator layer on top of the C sys crate. No ambient capabilities"
+
 [[audits.nohash-hasher]]
 who = "Johan Andersson <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
@@ -600,11 +549,7 @@ notes = "Tiny crate with no dependencies, no unsafe, and no ambient capabilities
 who = "Johan Andersson <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
 version = "0.3.1"
-notes = """
-No unsafe and no dependencies except math (glam), used it in production since 2021.
-
-Written by Tomasz Stachowiak as side-project while employed with us at Embark Studios.
-"""
+notes = "No unsafe and no dependencies except math (glam), used it in production since 2021.\n\nWritten by Tomasz Stachowiak as side-project while employed with us at Embark Studios.\n"
 
 [[audits.dolly]]
 who = "Johan Andersson <opensource@embark-studios.com>"
@@ -630,16 +575,11 @@ criteria = "safe-to-deploy"
 version = "0.1.1"
 notes = "Tiny crate that initializes Android with FFI, looks sane. No other ambient capabilities"
 
-
 [[audits.egui]]
 who = "Johan Andersson <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
 version = "0.18.0"
-notes = """
-No unsafe usage or ambient capabilities itself, used in production since 2020.
-
-Written by Emil Ernerfeldt who used to work with us at Embark Studios.
-"""
+notes = "No unsafe usage or ambient capabilities itself, used in production since 2020.\n\nWritten by Emil Ernerfeldt who used to work with us at Embark Studios.\n"
 
 [[audits.egui]]
 who = "Johan Andersson <opensource@embark-studios.com>"
@@ -657,11 +597,7 @@ notes = "Specified crate license does not include licenses of embedded fonts if 
 who = "Johan Andersson <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
 version = "0.18.0"
-notes = """
-Math crate with no unsafe usage or ambient capabilities, used in production since 2020.
-
-Written by Emil Ernerfeldt who used to work with us at Embark Studios.
-"""
+notes = "Math crate with no unsafe usage or ambient capabilities, used in production since 2020.\n\nWritten by Emil Ernerfeldt who used to work with us at Embark Studios.\n"
 
 [[audits.emath]]
 who = "Johan Andersson <opensource@embark-studios.com>"
@@ -673,12 +609,7 @@ notes = "No unsafe usage and no ambient capabilities"
 who = "Johan Andersson <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
 version = "0.18.0"
-notes = """
-No unsafe usage, does layer with windowing system (which is the point of the crate). Used in production since 2020.
-Does optionally interact with clipboard, webbrowser, and screen-reader; but through separate crates.
-
-Written by Emil Ernerfeldt who used to work with us at Embark Studios.
-"""
+notes = "No unsafe usage, does layer with windowing system (which is the point of the crate). Used in production since 2020.\nDoes optionally interact with clipboard, webbrowser, and screen-reader; but through separate crates.\n\nWritten by Emil Ernerfeldt who used to work with us at Embark Studios.\n"
 
 [[audits.egui-winit]]
 who = "Johan Andersson <opensource@embark-studios.com>"
@@ -763,6 +694,18 @@ who = "Johan Andersson <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
 version = "0.17.8"
 notes = "Forbids unsafe, no ambient capabilities"
+
+[[audits.png]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.17.9"
+notes = "No unsafe usage (forbidden) or ambient capabilities"
+
+[[audits.png]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.17.9"
+notes = "No unsafe usage (forbidden) or ambient capabilities"
 
 [[audits.vec1]]
 who = "Johan Andersson <opensource@embark-studios.com>"
@@ -881,7 +824,6 @@ criteria = "safe-to-deploy"
 version = "2.1.0"
 notes = "Some unsafe usage but with safety comments and tests, and appear sound but didn't do detailed evaluation. No ambient capabilities"
 
-
 [[audits.assert-json-diff]]
 who = "Johan Andersson <opensource@embark-studios.com>"
 criteria = "safe-to-run"
@@ -968,11 +910,7 @@ notes = "Lots of unsafe code for calling into C FFI functions, looks pretty simp
 who = "Johan Andersson <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
 version = "0.3.3"
-notes = """
-Builds C/asm dependency which this review has not audited in detail, but is well established from Intel. 
-Exposes FFI types & functions generated through bindgen. No other logic.
-No ambient capabilities
-"""
+notes = "Builds C/asm dependency which this review has not audited in detail, but is well established from Intel.\nExposes FFI types & functions generated through bindgen. No other logic.\nNo ambient capabilities\n"
 
 [[audits.lyon_geom]]
 who = "Johan Andersson <opensource@embark-studios.com>"
@@ -1038,25 +976,7 @@ notes = "No unsafe usage or ambient capabilities. No functionality in it beyond 
 who = "Robert Bragg <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
 version = "0.4.1"
-notes = """Some unsafe usage for JNI/FFI, such as implementing extern \"C\" functions for
-NativeActivity and to use the `ndk_sys` FFI bindings for the Android NDK libraries.
-
-The GameActivity backend depends on around 2k lines of third-party C/C++ code from Google
-as well as around 500 lines of C++ code for the GameText (input method) support.
-The C/C++ code is compiled with the `cc` crate.
-
-Although I have reviewed all of the C/C++ code for GameActivity + GameText there
-could be unknown soundness issues in there or potentially in any of the Android
-NDK APIs used, which are generally also implemented in C/C++.
-
-Written by Robert Bragg who now works at Embark Studios.
-"""
-
-[[audits.mimalloc]]
-who = "Johan Andersson <opensource@embark-studios.com>"
-criteria = "safe-to-deploy"
-version = "0.1.37"
-notes = "Tiny allocator layer on top of the C sys crate. No ambient capabilities"
+notes = "Some unsafe usage for JNI/FFI, such as implementing extern \"C\" functions for\nNativeActivity and to use the `ndk_sys` FFI bindings for the Android NDK libraries.\n\nThe GameActivity backend depends on around 2k lines of third-party C/C++ code from Google\nas well as around 500 lines of C++ code for the GameText (input method) support.\nThe C/C++ code is compiled with the `cc` crate.\n\nAlthough I have reviewed all of the C/C++ code for GameActivity + GameText there\ncould be unknown soundness issues in there or potentially in any of the Android\nNDK APIs used, which are generally also implemented in C/C++.\n\nWritten by Robert Bragg who now works at Embark Studios.\n"
 
 [[audits.case]]
 who = "Johan Andersson <opensource@embark-studios.com>"
@@ -1080,49 +1000,7 @@ notes = "Tiny proc marcro. No unsafe usage or ambient capabilities"
 who = "Robert Bragg <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
 version = "0.21.1"
-notes = """Aims to provide a safe JNI (Java Native Interface) API over the
-unsafe `jni_sys` crate.
-
-This is a very general FFI abstraction for Java VMs with a lot of unsafe code
-throughout the API. There are almost certainly some edge cases with its design
-that could lead to unsound behaviour but it should still be considerably safer
-than working with JNI directly.
-
-A lot of the unsafe usage relates to quite-simple use of `from_raw` APIs to
-construct or cast wrapper types (around JNI pointers) which are fairly
-straight-forward to verify/trust in context.
-
-Some unsafe code has good `// # Safety` documentation (this has been enforced for
-newer code) but a lot of unsafe code doesn't document invariants that are
-being relied on.
-
-The design depends on non-trivial named lifetimes across many APIs to associate
-Java local references with JNI stack frames.
-
-The crate is not very actively maintained and was practically unmaintained for
-over a year before the 0.20 release.
-
-Robert Bragg who now works at Embark Studios became the maintainer of this
-crate in October 2022.
-
-In the process of working on the `jni` crate since becoming maintainer it's
-worth noting that I came across multiple APIs that I found needed to be
-re-worked to address safety issues, including ensuring that APIs that are not
-implemented safely are correctly declared as `unsafe`.
-
-There has been a focus on improving safety in the last two release.
-
-The jni crate has been used in production with the Signal messaging application
-for over two years:
-https://github.com/signalapp/libsignal/blob/main/rust/bridge/jni/Cargo.toml
-
-# Some Notable Open Issues
-- https://github.com/jni-rs/jni-rs/issues/422 - questions soundness of linking
-  multiple versions of jni crate into an application, considering the use
-  of (separately scoped) thread-local-storage to track thread attachments
-- https://github.com/jni-rs/jni-rs/issues/405 - discusses the ease with which
-  code may expose the JVM to invalid booleans with undefined behaviour
-"""
+notes = "Aims to provide a safe JNI (Java Native Interface) API over the\nunsafe `jni_sys` crate.\n\nThis is a very general FFI abstraction for Java VMs with a lot of unsafe code\nthroughout the API. There are almost certainly some edge cases with its design\nthat could lead to unsound behaviour but it should still be considerably safer\nthan working with JNI directly.\n\nA lot of the unsafe usage relates to quite-simple use of `from_raw` APIs to\nconstruct or cast wrapper types (around JNI pointers) which are fairly\nstraight-forward to verify/trust in context.\n\nSome unsafe code has good `// # Safety` documentation (this has been enforced for\nnewer code) but a lot of unsafe code doesn't document invariants that are\nbeing relied on.\n\nThe design depends on non-trivial named lifetimes across many APIs to associate\nJava local references with JNI stack frames.\n\nThe crate is not very actively maintained and was practically unmaintained for\nover a year before the 0.20 release.\n\nRobert Bragg who now works at Embark Studios became the maintainer of this\ncrate in October 2022.\n\nIn the process of working on the `jni` crate since becoming maintainer it's\nworth noting that I came across multiple APIs that I found needed to be\nre-worked to address safety issues, including ensuring that APIs that are not\nimplemented safely are correctly declared as `unsafe`.\n\nThere has been a focus on improving safety in the last two release.\n\nThe jni crate has been used in production with the Signal messaging application\nfor over two years:\nhttps://github.com/signalapp/libsignal/blob/main/rust/bridge/jni/Cargo.toml\n\n# Some Notable Open Issues\n- https://github.com/jni-rs/jni-rs/issues/422 - questions soundness of linking\n  multiple versions of jni crate into an application, considering the use\n  of (separately scoped) thread-local-storage to track thread attachments\n- https://github.com/jni-rs/jni-rs/issues/405 - discusses the ease with which\n  code may expose the JVM to invalid booleans with undefined behaviour\n"
 
 [[audits.colorchoice]]
 who = "Johan Andersson <opensource@embark-studios.com>"
@@ -1182,18 +1060,6 @@ who = "Johan Andersson <opensource@embark-studios.com>"
 criteria = "safe-to-deploy"
 delta = "0.3.0 -> 0.4.0"
 notes = "No unsafe usage or ambient capabilities"
-
-[[audits.png]]
-who = "Johan Andersson <opensource@embark-studios.com>"
-criteria = "safe-to-deploy"
-version = "0.17.9"
-notes = "No unsafe usage (forbidden) or ambient capabilities"
-
-[[audits.png]]
-who = "Johan Andersson <opensource@embark-studios.com>"
-criteria = "safe-to-deploy"
-version = "0.17.9"
-notes = "No unsafe usage (forbidden) or ambient capabilities"
 
 [[audits.postgres-types]]
 who = "Johan Andersson <opensource@embark-studios.com>"
@@ -1255,189 +1121,186 @@ criteria = "safe-to-deploy"
 version = "0.1.11"
 notes = "No unsafe usage or ambient capabilities"
 
-# ------------------------------------------------------------------------------------------
-# third party crates that we haven't audited, but we trust the author and release process of
-# ------------------------------------------------------------------------------------------
-
-
+[trusted]
 [[trusted.cranelift-bforest]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.cranelift-codegen]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.cranelift-codegen-meta]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.cranelift-codegen-shared]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.cranelift-control]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.cranelift-entity]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.cranelift-frontend]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.cranelift-isle]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.cranelift-native]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.cranelift-wasm]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasi-cap-std-sync]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasi-common]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasmtime]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasmtime-asm-macros]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasmtime-cranelift]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasmtime-cranelift-shared]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasmtime-environ]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasmtime-jit]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasmtime-jit-debug]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasmtime-jit-icache-coherence]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasmtime-runtime]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasmtime-types]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wasmtime-wasi]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wiggle]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wiggle-generate]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
 
 [[trusted.wiggle-macro]]
 criteria = "safe-to-deploy"
-user-id = 73222                                                                                                                                                    # wasmtime-publish
+user-id = 73222
 start = "2023-01-01"
 end = "2024-05-26"
 notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
