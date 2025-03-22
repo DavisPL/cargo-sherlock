@@ -1,0 +1,55 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "getsentry-bot"
+  ],
+  "stars": 486,
+  "forks": 78,
+  "downloads": 15929067,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "symbolic-common",
+      "12.14.1"
+    ],
+    [
+      "debugid",
+      "0.8.0"
+    ],
+    [
+      "uuid",
+      "1.16.0"
+    ],
+    [
+      "memmap2",
+      "0.9.5"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

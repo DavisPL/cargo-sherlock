@@ -30,13 +30,13 @@
   ],
   "passed_audit": false,
   "num_unsafe_calls": 10,
-  "miri": false,
+  "miri": true,
   "past_audit": false,
   "miri_details": {
-    "status": "ok",
+    "status": "crash",
     "passed": 0,
-    "failed": 0,
-    "ignored": 2,
+    "failed": 1,
+    "ignored": 0,
     "measured": 0,
     "filtered_out": 0,
     "time_seconds": 0.0

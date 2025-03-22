@@ -1,4 +1,6 @@
-[audits]
+
+# cargo-vet audits file
+
 [[audits.anyhow]]
 who = "Radu Matei <radu.matei@fermyon.com>"
 criteria = "safe-to-deploy"
@@ -37,4 +39,3 @@ who = "Radu Matei <radu.matei@fermyon.com>"
 criteria = "safe-to-deploy"
 delta = "5.0.0 -> 5.0.1"
 notes = "The version bump does not have any functional change for the wasmtime-cache crate."
-

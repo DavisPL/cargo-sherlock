@@ -10,7 +10,7 @@
   ],
   "stars": 745,
   "forks": 80,
-  "downloads": 33746850,
+  "downloads": 33797742,
   "num_side_effects": 23,
   "failed_rudra": false,
   "audits": [
@@ -98,9 +98,9 @@
   "miri": true,
   "past_audit": true,
   "miri_details": {
-    "status": "timeout",
+    "status": "crash",
     "passed": 0,
-    "failed": 0,
+    "failed": 1,
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,

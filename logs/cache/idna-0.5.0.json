@@ -1,0 +1,102 @@
+{
+  "rustsec_label": "Uncategorized",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "SimonSapin",
+    "github:servo:cargo-publish",
+    "github:servo:rust-url"
+  ],
+  "stars": 1375,
+  "forks": 344,
+  "downloads": 334199764,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.3.0",
+      "notes": "This is a crate without unsafe code or usage of the standard library. The large\\nsize of this crate comes from the large generated unicode tables file. This\\ncrate is broadly used throughout the ecosystem and does not contain anything\\nsuspicious.\\n"
+    },
+    {
+      "organization": "embark-studios",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.0 -> 0.4.0",
+      "version": "",
+      "notes": "No unsafe usage or ambient capabilities"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.3.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.3.0 -> 1.0.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.0 -> 0.2.3",
+      "version": "",
+      "notes": "Backwards diff with some algorithm changes, no unsafe code."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.0 -> 0.5.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.0 -> 1.0.2",
+      "version": "",
+      "notes": "In the 0.5.0 to 1.0.2 delta, I, Henri Sivonen, rewrote the non-Punycode internals of the crate and made the changes to the Punycode code."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.2 -> 1.0.3",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "unicode-bidi",
+      "0.3.18"
+    ],
+    [
+      "unicode-normalization",
+      "0.1.24"
+    ],
+    [
+      "tinyvec",
+      "1.9.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "rustsec_label": "Uncategorized",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "teythoon",
+    "nwalfield"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 645549,
+  "num_side_effects": 285,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "anyhow",
+      "1.0.97"
+    ],
+    [
+      "base64",
+      "0.22.1"
+    ],
+    [
+      "buffered-reader",
+      "1.4.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "chrono",
+      "0.4.40"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "dyn-clone",
+      "1.0.19"
+    ],
+    [
+      "getrandom",
+      "0.3.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "r-efi",
+      "5.2.0"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "idna",
+      "1.0.3"
+    ],
+    [
+      "idna_adapter",
+      "1.2.0"
+    ],
+    [
+      "icu_normalizer",
+      "1.5.0"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "icu_collections",
+      "1.5.0"
+    ],
+    [
+      "yoke",
+      "0.8.0"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ],
+    [
+      "zerofrom",
+      "0.1.6"
+    ],
+    [
+      "zerovec",
+      "0.11.1"
+    ],
+    [
+      "icu_properties",
+      "1.5.1"
+    ],
+    [
+      "icu_provider",
+      "1.5.0"
+    ],
+    [
+      "icu_locid",
+      "1.5.0"
+    ],
+    [
+      "litemap",
+      "0.7.5"
+    ],
+    [
+      "tinystr",
+      "0.8.1"
+    ],
+    [
+      "writeable",
+      "0.6.1"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "utf16_iter",
+      "1.0.5"
+    ],
+    [
+      "utf8_iter",
+      "1.0.4"
+    ],
+    [
+      "write16",
+      "1.0.0"
+    ],
+    [
+      "lalrpop-util",
+      "0.22.1"
+    ],
+    [
+      "rustversion",
+      "1.0.20"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "memsec",
+      "0.7.0"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "regex",
+      "1.11.1"
+    ],
+    [
+      "regex-automata",
+      "0.4.9"
+    ],
+    [
+      "regex-syntax",
+      "0.8.5"
+    ],
+    [
+      "sha1collisiondetection",
+      "0.3.4"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "xxhash-rust",
+      "0.8.15"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 19,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -210,10 +210,41 @@ def propogate_heads(variables: list[z3.BoolRef], assumptions: list[Assumption], 
         for clause in clauses:
             clause = z3.substitute(clause, (var, variable_substitution)) # apply the substitution to the rest of the clauses
     return z3.simplify(entails)
-            
-def solve_mintrust(crate: CrateVersion, variables: list[z3.BoolRef], assumptions: list[Assumption], conclusion: z3.BoolRef) -> CrateAssumptionSummary:
+
+def get_substituted_clauses(variables: list[z3.BoolRef], expression: z3.BoolRef) -> list[z3.BoolRef]:
     """
-    Solves for the minimum cost assumptions necessary to prove a crate is safe. Returns a summary of the assumptions made.
+    Returns a list of clauses, composed of the substitution of all occurrences of the given variables 
+    in the given expression with True and False. Each clause is a possible assignment of the boolean 
+    variables.
+    """
+    clauses = []
+    def sub(i=0, clause=expression):
+        if i == len(variables):
+            clauses.append(clause)
+        else:
+            sub(i+1, z3.substitute(clause, (variables[i], z3.BoolVal(False))))
+            sub(i+1, z3.substitute(clause, (variables[i], z3.BoolVal(True))))
+    sub()
+    return clauses
+
+def exists_bool_expr(variables: list[z3.BoolRef], expression: z3.BoolRef) -> z3.BoolRef:
+    """
+    Returns the existential quantification of the given expression with respect to the given boolean
+    variables. This is equivalent to the disjunction of all possible substitutions of the variables.
+    """
+    clauses = get_substituted_clauses(variables, expression)
+    return z3.Or(clauses)
+
+def solve_mintrust(
+        crate: CrateVersion, 
+        variables: list[z3.BoolRef], 
+        assumptions: list[Assumption], 
+        conclusion: z3.BoolRef,
+        horn_solver: bool
+    ) -> CrateAssumptionSummary:
+    """
+    Solves for the minimum cost assumptions necessary to prove a crate is safe.
+    Returns a summary of the assumptions made.
     """
     logger.info(f"Solving for minimum cost of assumptions for {crate}...")
     logger.info(f"Number of Z3 Variables: {len(variables)}")
@@ -221,7 +252,12 @@ def solve_mintrust(crate: CrateVersion, variables: list[z3.BoolRef], assumptions
     optimizer.set("timeout", MAX_MINUTES * 60_000)
     min_cost = z3.Int('min_cost')
     logger.info("Constructing Z3 formula...")
-    entails = propogate_heads(variables, assumptions, conclusion)
+    assumption_implications = z3.And([z3.Implies(a.variable, a.consequent) for a in assumptions])
+    if horn_solver:
+        entails = propogate_heads(variables, assumptions, conclusion)
+    else:
+        implications_with_neg_conclusion = z3.And(assumption_implications, z3.Not(conclusion))
+        entails = z3.Not(exists_bool_expr(variables, implications_with_neg_conclusion))
     logger.info(entails)
     optimizer.add(entails)
     optimizer.add(min_cost == Assumption.assumptions_cost(assumptions))
@@ -258,28 +294,28 @@ def solve_mintrust(crate: CrateVersion, variables: list[z3.BoolRef], assumptions
             logger.critical(f"Z3 Reason: {optimizer.reason_unknown()}")
             raise Exception
 
-def solve_positive_mintrust(crate: CrateVersion, metadata: dict) -> CrateAssumptionSummary:
+def solve_positive_mintrust(crate: CrateVersion, metadata: dict, horn_solver: bool) -> CrateAssumptionSummary:
     """
     Solves for the minimum cost assumptions necessary to prove a crate is safe. Returns a summary of the assumptions made.
     """
     logger.info(f"Solving positive mintrust for {crate}")
     variables, assumptions = get_positive_assumptions(crate, metadata)
     conclusion = z3.Bool(f"{crate}_safe")
-    solution = solve_mintrust(crate, variables, assumptions, conclusion)
+    solution = solve_mintrust(crate, variables, assumptions, conclusion, horn_solver)
     return solution
 
-def solve_negative_mintrust(crate: CrateVersion, metadata: dict) -> CrateAssumptionSummary:
+def solve_negative_mintrust(crate: CrateVersion, metadata: dict, horn_solver: bool) -> CrateAssumptionSummary:
     """
     Solves for the minimum cost assumptions necessary to prove a crate is unsafe. Returns a summary of the assumptions made.
     """
     logger.info(f"Solving negative mintrust for {crate}")
     variables, assumptions = get_negative_assumptions(crate, metadata)
     conclusion = z3.Bool(f"{crate}_unsafe")
-    solution = solve_mintrust(crate, variables, assumptions, conclusion)
+    solution = solve_mintrust(crate, variables, assumptions, conclusion, horn_solver)
     return solution
 
 
-def complete_analysis(crate: CrateVersion, file = None):
+def complete_analysis(crate: CrateVersion, horn_solver: bool, file = None):
     """
     Performs a complete analysis for a given crate. Prints results to the specified file (or stdout if
     no file is specified).
@@ -304,8 +340,8 @@ def complete_analysis(crate: CrateVersion, file = None):
     logger.info(f"Performing complete analysis for {crate}")
 
     crate_metadata = crate_data.get_crate_metadata(crate)
-    pos_model_result = solve_positive_mintrust(crate, crate_metadata)
-    neg_model_result = solve_negative_mintrust(crate, crate_metadata)
+    pos_model_result = solve_positive_mintrust(crate, crate_metadata, horn_solver)
+    neg_model_result = solve_negative_mintrust(crate, crate_metadata, horn_solver)
     trust_cost = sum(a.cost for a in pos_model_result.assumptions_made)
     distrust_cost = sum(a.cost for a in neg_model_result.assumptions_made)
     label = costs.combine_costs(trust_cost, distrust_cost)
@@ -352,9 +388,9 @@ def complete_analysis(crate: CrateVersion, file = None):
 
 def main():
     crate = CrateVersion("anyhow", "1.0.97")
-    crate = CrateVersion("tokio", "1.44.1")
     crate = CrateVersion("zlib-rs", "0.3.0")
-    complete_analysis(crate)
+    crate = CrateVersion("tokio", "1.44.1")
+    complete_analysis(crate, horn_solver=False)
 
 if __name__ == "__main__":
     main()
