@@ -1,0 +1,251 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "imsnif"
+  ],
+  "stars": 2625,
+  "forks": 70,
+  "downloads": 24612,
+  "num_side_effects": 306,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "crossterm",
+      "0.28.1"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "parking_lot",
+      "0.12.3"
+    ],
+    [
+      "lock_api",
+      "0.4.12"
+    ],
+    [
+      "scopeguard",
+      "1.2.0"
+    ],
+    [
+      "parking_lot_core",
+      "0.9.10"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "redox_syscall",
+      "0.5.10"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "rustix",
+      "1.0.3"
+    ],
+    [
+      "errno",
+      "0.3.10"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "linux-raw-sys",
+      "0.9.3"
+    ],
+    [
+      "failure",
+      "0.1.8"
+    ],
+    [
+      "filesize",
+      "0.2.0"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "jwalk",
+      "0.8.1"
+    ],
+    [
+      "crossbeam",
+      "0.8.4"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ],
+    [
+      "rayon",
+      "1.10.0"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ],
+    [
+      "rayon-core",
+      "1.12.1"
+    ],
+    [
+      "crossbeam-deque",
+      "0.8.6"
+    ],
+    [
+      "crossbeam-epoch",
+      "0.9.18"
+    ],
+    [
+      "nix",
+      "0.29.0"
+    ],
+    [
+      "structopt",
+      "0.3.26"
+    ],
+    [
+      "clap",
+      "4.5.32"
+    ],
+    [
+      "clap_builder",
+      "4.5.32"
+    ],
+    [
+      "anstyle",
+      "1.0.10"
+    ],
+    [
+      "clap_lex",
+      "0.7.4"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "structopt-derive",
+      "0.4.18"
+    ],
+    [
+      "heck",
+      "0.5.0"
+    ],
+    [
+      "proc-macro-error",
+      "1.0.4"
+    ],
+    [
+      "proc-macro-error-attr",
+      "1.0.4"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "tui",
+      "0.19.0"
+    ],
+    [
+      "cassowary",
+      "0.3.0"
+    ],
+    [
+      "unicode-segmentation",
+      "1.12.0"
+    ],
+    [
+      "unicode-width",
+      "0.2.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

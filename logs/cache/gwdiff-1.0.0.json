@@ -1,0 +1,159 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "metakernel"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 1124,
+  "num_side_effects": 18,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "anyhow",
+      "1.0.97"
+    ],
+    [
+      "argh",
+      "0.1.13"
+    ],
+    [
+      "argh_derive",
+      "0.1.13"
+    ],
+    [
+      "argh_shared",
+      "0.1.13"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "rust-fuzzy-search",
+      "0.1.1"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "comde",
+      "0.3.0"
+    ],
+    [
+      "delegate",
+      "0.13.2"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ],
+    [
+      "env_logger",
+      "0.11.7"
+    ],
+    [
+      "env_filter",
+      "0.1.3"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "gawires-diff",
+      "1.0.0"
+    ],
+    [
+      "divsufsort",
+      "2.0.0"
+    ],
+    [
+      "sacabase",
+      "2.0.0"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "rayon",
+      "1.10.0"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ],
+    [
+      "rayon-core",
+      "1.12.1"
+    ],
+    [
+      "crossbeam-deque",
+      "0.8.6"
+    ],
+    [
+      "crossbeam-epoch",
+      "0.9.18"
+    ],
+    [
+      "sacapart",
+      "2.0.0"
+    ],
+    [
+      "gawires-patch",
+      "1.0.0"
+    ],
+    [
+      "integer-encoding",
+      "4.0.2"
+    ],
+    [
+      "hmac-sha256",
+      "1.1.8"
+    ],
+    [
+      "pipe",
+      "0.4.0"
+    ],
+    [
+      "crossbeam-channel",
+      "0.5.14"
+    ],
+    [
+      "size",
+      "0.5.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

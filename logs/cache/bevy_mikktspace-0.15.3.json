@@ -1,0 +1,36 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "cart",
+    "github:bevyengine:publish"
+  ],
+  "stars": 38567,
+  "forks": 3794,
+  "downloads": 1699758,
+  "num_side_effects": 835,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "glam",
+      "0.30.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 815,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

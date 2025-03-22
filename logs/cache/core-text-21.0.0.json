@@ -1,0 +1,109 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "larsbergstrom",
+    "metajack",
+    "mbrubeck",
+    "pcwalton",
+    "github:servo:cargo-publish"
+  ],
+  "stars": 1078,
+  "forks": 228,
+  "downloads": 3653686,
+  "num_side_effects": 212,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "19.2.0 -> 20.0.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "20.0.0 -> 20.1.0",
+      "version": "",
+      "notes": "The bulk of the 20.0.0 -> 20.1.0 changes were purely cosmetic clippy and rustfmt changes.\\n\\nThe only substantive change was the addition of wrappers to expose two additional Core Text APIs,\\nthe variants of CTFontCreateWithName and CTFontCreateWithFontDescriptor that accept a CTFontOptions\\nparameter. These are directly parallel to the existing versions without CTFontOptions, and do not\\nintroduce any new forms of risk.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "20.1.0 -> 21.0.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "core-foundation",
+      "0.10.0"
+    ],
+    [
+      "core-foundation-sys",
+      "0.8.7"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "core-graphics",
+      "0.24.0"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "core-graphics-types",
+      "0.2.0"
+    ],
+    [
+      "foreign-types",
+      "0.5.0"
+    ],
+    [
+      "foreign-types-macros",
+      "0.2.3"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "foreign-types-shared",
+      "0.3.1"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 66,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

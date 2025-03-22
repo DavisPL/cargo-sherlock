@@ -1,0 +1,56 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "GuillaumeGomez",
+    "Kijewski",
+    "github:askama-rs:maintainer"
+  ],
+  "stars": 358,
+  "forks": 20,
+  "downloads": 528074,
+  "num_side_effects": 15,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "",
+      "version": "0.3.5",
+      "notes": "Reviewed in CL 691465401\\nReview done alongside rinja_derive.\\nThe unsafe code is mostly in from_utf8_unchecked calls. It does not appear to be particularly performance-necessary, and the crate could use clearer tracking of these invariants. One bit of unsafe code relies on code in rinja_parser continuing to be ASCII-only.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.3.5",
+      "notes": "Template crate, forked from askama which has been audited.  The only unsafe code is calls to\\n`str::from_utf8_unchecked` for known ASCII strings.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "nom",
+      "8.0.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

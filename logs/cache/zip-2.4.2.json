@@ -1,0 +1,121 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Plecra",
+    "Pr0methean"
+  ],
+  "stars": 167,
+  "forks": 52,
+  "downloads": 60108780,
+  "num_side_effects": 257,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.6.4",
+      "notes": "No unsafe code nor unwarranted dependencies. Side-effectful std usage is only\\npresent where expected (zip archive reading/writing and unpacking)\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.6.2 -> 0.6.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.6.3 -> 0.6.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.6.4 -> 2.1.3",
+      "version": "",
+      "notes": "There's a lot of new code and features, however it's almost entirely very\\nstraightforward and safe. All new dependencies are appropriate.\\n`FixedSizeBlock::interpret` could be unsound if implemented on a\\nnon-1-byte-aligned type, however right now that is not the case\\n(submitted https://github.com/zip-rs/zip2/issues/198).\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "arbitrary",
+      "1.4.1"
+    ],
+    [
+      "crc32fast",
+      "1.4.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 3,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 33,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

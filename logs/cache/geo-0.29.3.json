@@ -1,0 +1,129 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "frewsxcv",
+    "sunng87",
+    "github:georust:geo-publishers"
+  ],
+  "stars": 1638,
+  "forks": 206,
+  "downloads": 6951554,
+  "num_side_effects": 14,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "float_next_after",
+      "1.0.0"
+    ],
+    [
+      "geo-types",
+      "0.7.15"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "geographiclib-rs",
+      "0.2.4"
+    ],
+    [
+      "libm",
+      "0.2.11"
+    ],
+    [
+      "i_overlay",
+      "2.1.0"
+    ],
+    [
+      "i_float",
+      "1.8.0"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "i_key_sort",
+      "0.4.0"
+    ],
+    [
+      "i_shape",
+      "1.8.0"
+    ],
+    [
+      "i_tree",
+      "0.9.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "robust",
+      "1.1.0"
+    ],
+    [
+      "rstar",
+      "0.12.2"
+    ],
+    [
+      "heapless",
+      "0.8.0"
+    ],
+    [
+      "hash32",
+      "0.3.1"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 2,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "tarcieri"
+  ],
+  "stars": 31,
+  "forks": 0,
+  "downloads": 4423,
+  "num_side_effects": 2,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "failure",
+      "0.1.8"
+    ],
+    [
+      "failure_derive",
+      "0.1.8"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "synstructure",
+      "0.13.1"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "heapless",
+      "0.8.0"
+    ],
+    [
+      "hash32",
+      "0.3.1"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 10,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

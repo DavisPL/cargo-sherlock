@@ -1,0 +1,40 @@
+Solving for required assumptions to trust sc2-proc-macro-1.0.0...
++------------------------------------------------------------+
+|          Analysis Report for sc2-proc-macro-1.0.0          |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 46 cost
+Assumptions for Trusting:
+  • sc2-proc-macro-1.0.0 having no side effects and having all safe dependencies implies it is safe: 10 cost
+  • proc-macro2-1.0.94 has many downloads: 0 cost
+  • proc-macro2-1.0.94 having a current audit implies it is safe: 5 cost
+  • unicode-ident-1.0.18 has many downloads: 0 cost
+  • unicode-ident-1.0.18 having a current audit implies it is safe: 5 cost
+  • dtolnay being in the trusted list implies they are trusted: 1 cost
+  • quote-1.0.40 has many downloads: 0 cost
+  • quote-1.0.40 having a current audit implies it is safe: 5 cost
+  • regex-1.11.1 has many downloads: 0 cost
+  • regex-1.11.1 having a current audit implies it is safe: 5 cost
+  • regex-1.11.1 has many stars and forks: 0 cost
+  • regex-automata-0.4.9 has many downloads: 0 cost
+  • regex-automata-0.4.9 having a current audit implies it is safe: 5 cost
+  • regex-automata-0.4.9 has many stars and forks: 0 cost
+  • regex-syntax-0.8.5 has many downloads: 0 cost
+  • regex-syntax-0.8.5 having a current audit implies it is safe: 5 cost
+  • regex-syntax-0.8.5 has many stars and forks: 0 cost
+  • syn-2.0.100 has many downloads: 0 cost
+  • syn-2.0.100 has many stars and forks: 0 cost
+  • syn-2.0.100 having all trusted developers implies it is safe: 5 cost
+
+Distrust Cost (higher is better): 100 cost
+Assumptions for Distrusting:
+  • sc2-proc-macro-1.0.0 is unsafe: 100 cost
+
+Severity Label: MEDIUM_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/sc2-proc-macro-1.0.0.json
++------------------------------------------------------------+
+

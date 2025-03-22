@@ -1,0 +1,179 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "andriyDev"
+  ],
+  "stars": 38,
+  "forks": 2,
+  "downloads": 10996,
+  "num_side_effects": 4,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "disjoint",
+      "0.8.0"
+    ],
+    [
+      "dodgy_2d",
+      "0.5.4"
+    ],
+    [
+      "glam",
+      "0.30.1"
+    ],
+    [
+      "rand",
+      "0.9.0"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "zerocopy",
+      "0.8.24"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.24"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "geo",
+      "0.29.3"
+    ],
+    [
+      "float_next_after",
+      "1.0.0"
+    ],
+    [
+      "geo-types",
+      "0.7.15"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "geographiclib-rs",
+      "0.2.4"
+    ],
+    [
+      "libm",
+      "0.2.11"
+    ],
+    [
+      "i_overlay",
+      "2.1.0"
+    ],
+    [
+      "i_float",
+      "1.8.0"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "i_key_sort",
+      "0.4.0"
+    ],
+    [
+      "i_shape",
+      "1.8.0"
+    ],
+    [
+      "i_tree",
+      "0.9.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "robust",
+      "1.1.0"
+    ],
+    [
+      "rstar",
+      "0.12.2"
+    ],
+    [
+      "heapless",
+      "0.8.0"
+    ],
+    [
+      "hash32",
+      "0.3.1"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "kdtree",
+      "0.7.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "ord_subset",
+      "3.1.1"
+    ],
+    [
+      "slotmap",
+      "1.0.7"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 151.59
+  }
+}

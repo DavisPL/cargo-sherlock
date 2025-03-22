@@ -1,0 +1,377 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "kvark",
+    "cwfitzgerald",
+    "github:gfx-rs:wgpu"
+  ],
+  "stars": 13687,
+  "forks": 1015,
+  "downloads": 7052728,
+  "num_side_effects": 5610,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.12.0",
+      "notes": "This crate, up through the indicated version, was written or reviewed\\nby Dzmitry Malyshau while he was a Mozilla employee. Dzmitry left\\nMozilla at the beginning of February 2022. This audit statement was\\ncollected by Jim Blandy, a Mozilla employee, over email in July 2022:\\nDzmitry was shown, and agreed to, the 'safe-to-deploy' text.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.12.0 -> 0.13.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.13.0 -> 0.14.0",
+      "version": "",
+      "notes": "Audit by Erich Gubler, Jim Blandy, Nicolas Silva, and Teodor Tanasoaia."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.0 -> 0.15.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.15.0 -> 0.16.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.16.0 -> 0.17.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.17.0 -> 0.18.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.18.0 -> 0.19.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.19.3 -> 0.20.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.20.0 -> 22.0.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "22.0.0 -> 23.0.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "23.0.0 -> 23.0.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "23.0.1 -> 24.0.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "arrayvec",
+      "0.7.6"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "core-graphics-types",
+      "0.2.0"
+    ],
+    [
+      "core-foundation",
+      "0.10.0"
+    ],
+    [
+      "core-foundation-sys",
+      "0.8.7"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "js-sys",
+      "0.3.77"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "wasm-bindgen",
+      "0.2.100"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "wasm-bindgen-macro",
+      "0.2.100"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "wasm-bindgen-macro-support",
+      "0.2.100"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "wasm-bindgen-backend",
+      "0.2.100"
+    ],
+    [
+      "bumpalo",
+      "3.17.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "wasm-bindgen-shared",
+      "0.2.100"
+    ],
+    [
+      "khronos-egl",
+      "6.0.0"
+    ],
+    [
+      "metal",
+      "0.31.0"
+    ],
+    [
+      "block",
+      "0.1.6"
+    ],
+    [
+      "foreign-types",
+      "0.5.0"
+    ],
+    [
+      "foreign-types-macros",
+      "0.2.3"
+    ],
+    [
+      "foreign-types-shared",
+      "0.3.1"
+    ],
+    [
+      "objc",
+      "0.2.7"
+    ],
+    [
+      "malloc_buf",
+      "1.0.0"
+    ],
+    [
+      "paste",
+      "1.0.15"
+    ],
+    [
+      "naga",
+      "24.0.0"
+    ],
+    [
+      "bit-set",
+      "0.8.0"
+    ],
+    [
+      "bit-vec",
+      "0.8.0"
+    ],
+    [
+      "codespan-reporting",
+      "0.11.1"
+    ],
+    [
+      "termcolor",
+      "1.4.1"
+    ],
+    [
+      "winapi-util",
+      "0.1.9"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "unicode-width",
+      "0.2.0"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "rustc-hash",
+      "2.1.1"
+    ],
+    [
+      "strum",
+      "0.27.1"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "parking_lot",
+      "0.12.3"
+    ],
+    [
+      "lock_api",
+      "0.4.12"
+    ],
+    [
+      "scopeguard",
+      "1.2.0"
+    ],
+    [
+      "parking_lot_core",
+      "0.9.10"
+    ],
+    [
+      "redox_syscall",
+      "0.5.10"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "profiling",
+      "1.0.16"
+    ],
+    [
+      "raw-window-handle",
+      "0.6.2"
+    ],
+    [
+      "web-sys",
+      "0.3.77"
+    ],
+    [
+      "wgpu-types",
+      "24.0.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 5378,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

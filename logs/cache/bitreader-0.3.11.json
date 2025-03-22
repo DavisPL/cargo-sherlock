@@ -1,0 +1,64 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "irauta"
+  ],
+  "stars": 37,
+  "forks": 10,
+  "downloads": 1035490,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.3.6",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"does-not-implement-crypto\", \"safe-to-deploy\",]",
+      "delta": "",
+      "version": "0.3.7",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-0",
+      "delta": "",
+      "version": "0.3.7",
+      "notes": "`rg -i unsafe` resulted in zero hits for this package."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.7 -> 0.3.6",
+      "version": "",
+      "notes": "No material changes."
+    }
+  ],
+  "dependencies": [
+    [
+      "cfg-if",
+      "1.0.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 4,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.15
+  }
+}

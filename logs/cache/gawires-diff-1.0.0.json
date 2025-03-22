@@ -1,0 +1,75 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "metakernel"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 1703,
+  "num_side_effects": 4,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "divsufsort",
+      "2.0.0"
+    ],
+    [
+      "sacabase",
+      "2.0.0"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "rayon",
+      "1.10.0"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ],
+    [
+      "rayon-core",
+      "1.12.1"
+    ],
+    [
+      "crossbeam-deque",
+      "0.8.6"
+    ],
+    [
+      "crossbeam-epoch",
+      "0.9.18"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ],
+    [
+      "sacapart",
+      "2.0.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}
