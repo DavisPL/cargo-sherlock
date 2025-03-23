@@ -1,7 +1,6 @@
 token.txt
 test.txt
 /logs/exp/
-*.csv
 /experiments/
 run_random.py
 *.txt

@@ -1,0 +1,213 @@
+crate_name,version,trust_score,assumptions,librs
+ckb-chain-iter,0.119.0-rc2,25,ckb-chain-iter-0.119.0-rc2 has many stars and forks: 10 wt | ckb-chain-iter-0.119.0-rc2 having many stars and forks implies it is safe: 15 wt,yes
+defaults,0.2.0,31,defaults-0.2.0 has all safe dependencies: 30 wt | defaults-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt,no
+adafruit-feather-rp2040,0.8.0,19,adafruit-feather-rp2040-0.8.0 has all safe dependencies: 18 wt | adafruit-feather-rp2040-0.8.0 having no side effects and having all safe dependencies implies it is safe: 1 wt,yes
+algorand-primitives,0.1.0,1,algorand-primitives-0.1.0 has all safe dependencies: 0 wt | algorand-primitives-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt,no
+four_derive,0.0.13,33,four_derive-0.0.13 has all safe dependencies: 32 wt | four_derive-0.0.13 having no side effects and having all safe dependencies implies it is safe: 1 wt
+google-androidpublisher2-cli,6.0.0+20200331,32,google-androidpublisher2-cli-6.0.0+20200331 has many stars and forks: 17 wt | google-androidpublisher2-cli-6.0.0+20200331 having many stars and forks implies it is safe: 15 wt
+common_substrings,1.0.0,1,common_substrings-1.0.0 has all safe dependencies: 0 wt | common_substrings-1.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+default2,0.3.1,31,default2-0.3.1 has all safe dependencies: 30 wt | default2-0.3.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+array-const-fn-init,0.1.1,1,array-const-fn-init-0.1.1 has all safe dependencies: 0 wt | array-const-fn-init-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+freqiterator,2.0.0,33,freqiterator-2.0.0 has all safe dependencies: 32 wt | freqiterator-2.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+amethyst_input,0.15.3,15,amethyst_input-0.15.3 has many stars and forks: 0 wt | amethyst_input-0.15.3 having many stars and forks implies it is safe: 15 wt
+aks_primes,0.1.1,1,aks_primes-0.1.1 has all safe dependencies: 0 wt | aks_primes-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+finql-data,0.2.0,32,finql-data-0.2.0 has all safe dependencies: 31 wt | finql-data-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+drv2605,0.1.0,3,drv2605-0.1.0 has all safe dependencies: 2 wt | drv2605-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+alter,0.1.0,1,alter-0.1.0 has all safe dependencies: 0 wt | alter-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+conut,0.1.1,1,conut-0.1.1 has all safe dependencies: 0 wt | conut-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+adafruit-aht10,0.1.0,2,adafruit-aht10-0.1.0 has all safe dependencies: 1 wt | adafruit-aht10-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+bp256,0.6.1,15,bp256-0.6.1 has all safe dependencies: 14 wt | bp256-0.6.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+commoncrypto,0.2.0,36,commoncrypto-0.2.0 has many downloads: 26 wt | commoncrypto-0.2.0 having many downloads implies it is safe: 10 wt
+enum_unwrapper,0.1.2,21,enum_unwrapper-0.1.2 has all safe dependencies: 20 wt | enum_unwrapper-0.1.2 having no side effects and having all safe dependencies implies it is safe: 1 wt
+ark-ed-on-bls12-377-ext,0.4.1,39,ark-ed-on-bls12-377-ext-0.4.1 has many downloads: 29 wt | ark-ed-on-bls12-377-ext-0.4.1 having many downloads implies it is safe: 10 wt
+eloquent_core,2.0.2,27,eloquent_core-2.0.2 has all safe dependencies: 26 wt | eloquent_core-2.0.2 having no side effects and having all safe dependencies implies it is safe: 1 wt
+enum_to_u8_slice_derive,0.2.0,31,enum_to_u8_slice_derive-0.2.0 has all safe dependencies: 30 wt | enum_to_u8_slice_derive-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+fabio_exp_doc,0.1.0,1,fabio_exp_doc-0.1.0 has all safe dependencies: 0 wt | fabio_exp_doc-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+defer-lite,1.0.0,1,defer-lite-1.0.0 has all safe dependencies: 0 wt | defer-lite-1.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+datachannel-sys,0.21.2,1,datachannel-sys-0.21.2 has all safe dependencies: 0 wt | datachannel-sys-0.21.2 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aws-sdk-redshiftdata,1.47.0,15,aws-sdk-redshiftdata-1.47.0 has many stars and forks: 0 wt | aws-sdk-redshiftdata-1.47.0 having many stars and forks implies it is safe: 15 wt
+cpp,0.5.9,24,cpp-0.5.9 has many downloads: 14 wt | cpp-0.5.9 having many downloads implies it is safe: 10 wt
+amethyst_error,0.15.3,15,amethyst_error-0.15.3 has many stars and forks: 0 wt | amethyst_error-0.15.3 having many stars and forks implies it is safe: 15 wt
+enumber,0.3.1,21,enumber-0.3.1 has all safe dependencies: 20 wt | enumber-0.3.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aws-sdk-rolesanywhere,1.50.0,15,aws-sdk-rolesanywhere-1.50.0 has many stars and forks: 0 wt | aws-sdk-rolesanywhere-1.50.0 having many stars and forks implies it is safe: 15 wt
+envelope,0.8.1,14,envelope-0.8.1 has all safe dependencies: 13 wt | envelope-0.8.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+enumerable_derive,1.0.0,42,enumerable_derive-1.0.0 has all safe dependencies: 41 wt | enumerable_derive-1.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+contructor-derive,0.1.1,31,contructor-derive-0.1.1 has all safe dependencies: 30 wt | contructor-derive-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+axum_cors,0.1.7,24,axum_cors-0.1.7 has all safe dependencies: 23 wt | axum_cors-0.1.7 having no side effects and having all safe dependencies implies it is safe: 1 wt
+finl_unicode,1.2.0,1,finl_unicode-1.2.0 has all safe dependencies: 0 wt | finl_unicode-1.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+common_consts,0.1.0,1,common_consts-0.1.0 has all safe dependencies: 0 wt | common_consts-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aws-sdk-resourcegroups,1.48.0,15,aws-sdk-resourcegroups-1.48.0 has many stars and forks: 0 wt | aws-sdk-resourcegroups-1.48.0 having many stars and forks implies it is safe: 15 wt
+cax,0.1.0,1,cax-0.1.0 has all safe dependencies: 0 wt | cax-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+batbox-tuple-macros,0.16.0,1,batbox-tuple-macros-0.16.0 has all safe dependencies: 0 wt | batbox-tuple-macros-0.16.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+algorithm-rs,0.0.1,1,algorithm-rs-0.0.1 has all safe dependencies: 0 wt | algorithm-rs-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+audis,0.2.1,16,audis-0.2.1 has all safe dependencies: 15 wt | audis-0.2.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+adafruit-bluefruit-protocol,1.0.0,1,adafruit-bluefruit-protocol-1.0.0 has all safe dependencies: 0 wt | adafruit-bluefruit-protocol-1.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+elo,0.3.0,1,elo-0.3.0 has all safe dependencies: 0 wt | elo-0.3.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+algorithm_rust,0.6.0,1,algorithm_rust-0.6.0 has all safe dependencies: 0 wt | algorithm_rust-0.6.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+bytemuck_parsing,0.2.0,25,bytemuck_parsing-0.2.0 has all safe dependencies: 24 wt | bytemuck_parsing-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aws-sdk-route53recoverycluster,1.46.0,15,aws-sdk-route53recoverycluster-1.46.0 has many stars and forks: 0 wt | aws-sdk-route53recoverycluster-1.46.0 having many stars and forks implies it is safe: 15 wt
+elodin,0.1.0,1,elodin-0.1.0 has all safe dependencies: 0 wt | elodin-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cosmicbox,0.5.1,34,cosmicbox-0.5.1 has all safe dependencies: 33 wt | cosmicbox-0.5.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cpp_build,0.5.9,24,cpp_build-0.5.9 has many downloads: 14 wt | cpp_build-0.5.9 having many downloads implies it is safe: 10 wt
+bacule,0.0.1,11,bacule-0.0.1 has all safe dependencies: 10 wt | bacule-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+amethyst_locale,0.15.3,15,amethyst_locale-0.15.3 has many stars and forks: 0 wt | amethyst_locale-0.15.3 having many stars and forks implies it is safe: 15 wt
+auditable-info,0.8.0,48,auditable-info-0.8.0 has many downloads: 38 wt | auditable-info-0.8.0 having many downloads implies it is safe: 10 wt
+eq-float,0.1.0,1,eq-float-0.1.0 has all safe dependencies: 0 wt | eq-float-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+amethyst_engine,0.3.1,15,amethyst_engine-0.3.1 has many stars and forks: 0 wt | amethyst_engine-0.3.1 having many stars and forks implies it is safe: 15 wt
+foux,0.0.1,1,foux-0.0.1 has all safe dependencies: 0 wt | foux-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+doodle,0.2.0,11,doodle-0.2.0 has all safe dependencies: 10 wt | doodle-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+algonaut_teal,0.0.1,1,algonaut_teal-0.0.1 has all safe dependencies: 0 wt | algonaut_teal-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aws-sdk-route53,1.49.0,15,aws-sdk-route53-1.49.0 has many stars and forks: 0 wt | aws-sdk-route53-1.49.0 having many stars and forks implies it is safe: 15 wt
+aingle_middleware_bytes_derive,0.0.3,21,aingle_middleware_bytes_derive-0.0.3 has all safe dependencies: 20 wt | aingle_middleware_bytes_derive-0.0.3 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aks,0.1.1,1,aks-0.1.1 has all safe dependencies: 0 wt | aks-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+audit-info,0.5.0-alpha.3,1,audit-info-0.5.0-alpha.3 has all safe dependencies: 0 wt | audit-info-0.5.0-alpha.3 having no side effects and having all safe dependencies implies it is safe: 1 wt
+convenience,0.1.0,2,convenience-0.1.0 has all safe dependencies: 1 wt | convenience-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+algonium,0.1.0,1,algonium-0.1.0 has all safe dependencies: 0 wt | algonium-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+config_tools_derive,0.1.1,31,config_tools_derive-0.1.1 has all safe dependencies: 30 wt | config_tools_derive-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+amethyst_controls,0.15.3,15,amethyst_controls-0.15.3 has many stars and forks: 0 wt | amethyst_controls-0.15.3 having many stars and forks implies it is safe: 15 wt
+google-analytics3-cli,6.0.0+20190807,32,google-analytics3-cli-6.0.0+20190807 has many stars and forks: 17 wt | google-analytics3-cli-6.0.0+20190807 having many stars and forks implies it is safe: 15 wt
+ark-ff-macros,0.5.0-alpha.0,19,ark-ff-macros-0.5.0-alpha.0 has many downloads: 9 wt | ark-ff-macros-0.5.0-alpha.0 having many downloads implies it is safe: 10 wt
+cargo-craft,0.1.0,1,cargo-craft-0.1.0 has all safe dependencies: 0 wt | cargo-craft-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+axum_grants,0.1.3,31,axum_grants-0.1.3 has all safe dependencies: 30 wt | axum_grants-0.1.3 having no side effects and having all safe dependencies implies it is safe: 1 wt
+conum,0.1.0,1,conum-0.1.0 has all safe dependencies: 0 wt | conum-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cawg-identity,0.1.1,1,cawg-identity-0.1.1 has all safe dependencies: 0 wt | cawg-identity-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+alt_serde,1.0.119,15,alt_serde-1.0.119 has many stars and forks: 0 wt | alt_serde-1.0.119 having many stars and forks implies it is safe: 15 wt
+alt_serde_derive,1.0.119,15,alt_serde_derive-1.0.119 has many stars and forks: 0 wt | alt_serde_derive-1.0.119 having many stars and forks implies it is safe: 15 wt
+bad_idea,0.1.0,1,bad_idea-0.1.0 has all safe dependencies: 0 wt | bad_idea-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+dming-risc0,0.1.0,1,dming-risc0-0.1.0 has all safe dependencies: 0 wt | dming-risc0-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+google-analyticsreporting4,6.0.0+20240123,32,google-analyticsreporting4-6.0.0+20240123 has many stars and forks: 17 wt | google-analyticsreporting4-6.0.0+20240123 having many stars and forks implies it is safe: 15 wt
+google-androidpublisher3-cli,3.1.0+20220307,32,google-androidpublisher3-cli-3.1.0+20220307 has many stars and forks: 17 wt | google-androidpublisher3-cli-3.1.0+20220307 having many stars and forks implies it is safe: 15 wt
+bad64-sys,0.7.0,1,bad64-sys-0.7.0 has all safe dependencies: 0 wt | bad64-sys-0.7.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+discrimination-tree,0.3.0,1,discrimination-tree-0.3.0 has all safe dependencies: 0 wt | discrimination-tree-0.3.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cayenne,0.1.0,1,cayenne-0.1.0 has all safe dependencies: 0 wt | cayenne-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+datadog,0.1.0,1,datadog-0.1.0 has all safe dependencies: 0 wt | datadog-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+dose,0.1.3,42,dose-0.1.3 has all safe dependencies: 41 wt | dose-0.1.3 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aws-sdk-rds,1.61.0,15,aws-sdk-rds-1.61.0 has many stars and forks: 0 wt | aws-sdk-rds-1.61.0 having many stars and forks implies it is safe: 15 wt
+aws-sdk-robomaker,1.46.1,15,aws-sdk-robomaker-1.46.1 has many stars and forks: 0 wt | aws-sdk-robomaker-1.46.1 having many stars and forks implies it is safe: 15 wt
+drunkenbishop,0.1.1,11,drunkenbishop-0.1.1 has all safe dependencies: 10 wt | drunkenbishop-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+batbox-num,0.16.0,31,batbox-num-0.16.0 has all safe dependencies: 30 wt | batbox-num-0.16.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+enum_variant_eq,0.1.0,22,enum_variant_eq-0.1.0 has all safe dependencies: 21 wt | enum_variant_eq-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+defaultdict,0.18.0,1,defaultdict-0.18.0 has all safe dependencies: 0 wt | defaultdict-0.18.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+ckb-build-info,0.119.0-rc2,25,ckb-build-info-0.119.0-rc2 has many stars and forks: 10 wt | ckb-build-info-0.119.0-rc2 having many stars and forks implies it is safe: 15 wt
+elr_primes,0.1.2,1,elr_primes-0.1.2 has all safe dependencies: 0 wt | elr_primes-0.1.2 having no side effects and having all safe dependencies implies it is safe: 1 wt
+eq_wld,0.2.1,33,eq_wld-0.2.1 has all safe dependencies: 32 wt | eq_wld-0.2.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+datadog-asm,0.1.0,1,datadog-asm-0.1.0 has all safe dependencies: 0 wt | datadog-asm-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+google-androidmanagement1-cli,6.0.0+20240626,32,google-androidmanagement1-cli-6.0.0+20240626 has many stars and forks: 17 wt | google-androidmanagement1-cli-6.0.0+20240626 having many stars and forks implies it is safe: 15 wt
+cxx-qt-macro,0.6.1,34,cxx-qt-macro-0.6.1 has many stars and forks: 19 wt | cxx-qt-macro-0.6.1 having many stars and forks implies it is safe: 15 wt
+AlankuoRust,0.1.0,11,AlankuoRust-0.1.0 has all safe dependencies: 10 wt | AlankuoRust-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+dryb,0.1.0,1,dryb-0.1.0 has all safe dependencies: 0 wt | dryb-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+eloquence,0.1.1,1,eloquence-0.1.1 has all safe dependencies: 0 wt | eloquence-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+ckb-chain,0.119.0-rc2,25,ckb-chain-0.119.0-rc2 has many stars and forks: 10 wt | ckb-chain-0.119.0-rc2 having many stars and forks implies it is safe: 15 wt
+dming,0.1.0,1,dming-0.1.0 has all safe dependencies: 0 wt | dming-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+gitto,0.0.1,1,gitto-0.0.1 has all safe dependencies: 0 wt | gitto-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+bad_email,0.1.1,41,bad_email-0.1.1 has all safe dependencies: 40 wt | bad_email-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+array-merge,0.1.1,1,array-merge-0.1.1 has all safe dependencies: 0 wt | array-merge-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+alt_serde_json,1.0.61,15,alt_serde_json-1.0.61 has many stars and forks: 0 wt | alt_serde_json-1.0.61 having many stars and forks implies it is safe: 15 wt
+cxx-qt-lib,0.6.1,35,cxx-qt-lib-0.6.1 has many stars and forks: 20 wt | cxx-qt-lib-0.6.1 having many stars and forks implies it is safe: 15 wt
+discrimenum,0.1.0,31,discrimenum-0.1.0 has all safe dependencies: 30 wt | discrimenum-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+equalia,1.0.0,42,equalia-1.0.0 has all safe dependencies: 41 wt | equalia-1.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+common_risp,0.1.1,2,common_risp-0.1.1 has all safe dependencies: 1 wt | common_risp-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+fourcc,0.0.4,1,fourcc-0.0.4 has all safe dependencies: 0 wt | fourcc-0.0.4 having no side effects and having all safe dependencies implies it is safe: 1 wt
+ark-ff,0.5.0-alpha.0,19,ark-ff-0.5.0-alpha.0 has many downloads: 9 wt | ark-ff-0.5.0-alpha.0 having many downloads implies it is safe: 10 wt
+elrond-codec-derive,0.16.0,42,elrond-codec-derive-0.16.0 has all safe dependencies: 41 wt | elrond-codec-derive-0.16.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+algonaut_uri,0.0.1,1,algonaut_uri-0.0.1 has all safe dependencies: 0 wt | algonaut_uri-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cxx-qt,0.6.1,34,cxx-qt-0.6.1 has many stars and forks: 19 wt | cxx-qt-0.6.1 having many stars and forks implies it is safe: 15 wt
+eqlog-eqlog,0.8.0,20,eqlog-eqlog-0.8.0 has all safe dependencies: 19 wt | eqlog-eqlog-0.8.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+dryad,0.0.1,1,dryad-0.0.1 has all safe dependencies: 0 wt | dryad-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+elp,2.0.0,31,elp-2.0.0 has all safe dependencies: 30 wt | elp-2.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+controlled_astar,1.0.1,1,controlled_astar-1.0.1 has all safe dependencies: 0 wt | controlled_astar-1.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+google-androidenterprise1,6.0.0+20240625,32,google-androidenterprise1-6.0.0+20240625 has many stars and forks: 17 wt | google-androidenterprise1-6.0.0+20240625 having many stars and forks implies it is safe: 15 wt
+default_fields,0.1.0,21,default_fields-0.1.0 has all safe dependencies: 20 wt | default_fields-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+dming-core,0.1.0,1,dming-core-0.1.0 has all safe dependencies: 0 wt | dming-core-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+adafruit-featherwing-oled128x64,0.1.0,36,adafruit-featherwing-oled128x64-0.1.0 has all safe dependencies: 35 wt | adafruit-featherwing-oled128x64-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+ark-ff-asm,0.5.0-alpha.0,19,ark-ff-asm-0.5.0-alpha.0 has many downloads: 9 wt | ark-ff-asm-0.5.0-alpha.0 having many downloads implies it is safe: 10 wt
+deferred,1.1.0,1,deferred-1.1.0 has all safe dependencies: 0 wt | deferred-1.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+doomsday,0.3.0,1,doomsday-0.3.0 has all safe dependencies: 0 wt | doomsday-0.3.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aws-sdk-ram,1.46.0,15,aws-sdk-ram-1.46.0 has many stars and forks: 0 wt | aws-sdk-ram-1.46.0 having many stars and forks implies it is safe: 15 wt
+Algorithms-Illuminated,0.1.1,1,Algorithms-Illuminated-0.1.1 has all safe dependencies: 0 wt | Algorithms-Illuminated-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+adafruit-kb2040,0.8.0,20,adafruit-kb2040-0.8.0 has all safe dependencies: 19 wt | adafruit-kb2040-0.8.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+auxtrate,0.1.1,43,auxtrate-0.1.1 has all safe dependencies: 42 wt | auxtrate-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+frequency-unit,0.2.3,13,frequency-unit-0.2.3 has all safe dependencies: 12 wt | frequency-unit-0.2.3 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cxx-qt-lib-headers,0.6.1,34,cxx-qt-lib-headers-0.6.1 has many stars and forks: 19 wt | cxx-qt-lib-headers-0.6.1 having many stars and forks implies it is safe: 15 wt
+fresh,0.1.0,1,fresh-0.1.0 has all safe dependencies: 0 wt | fresh-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+debcontrol-struct-with-oma-decontrol,0.3.1,13,debcontrol-struct-with-oma-decontrol-0.3.1 has all safe dependencies: 12 wt | debcontrol-struct-with-oma-decontrol-0.3.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+enum_traits_macros,2.0.0,21,enum_traits_macros-2.0.0 has all safe dependencies: 20 wt | enum_traits_macros-2.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+ada,0.3.0,1,ada-0.3.0 has all safe dependencies: 0 wt | ada-0.3.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+akula,0.0.1,1,akula-0.0.1 has all safe dependencies: 0 wt | akula-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+dry-mods,0.1.5,1,dry-mods-0.1.5 has all safe dependencies: 0 wt | dry-mods-0.1.5 having no side effects and having all safe dependencies implies it is safe: 1 wt
+enum_traits,0.3.0,1,enum_traits-0.3.0 has all safe dependencies: 0 wt | enum_traits-0.3.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+av-bitstream,0.2.0,21,av-bitstream-0.2.0 has all safe dependencies: 20 wt | av-bitstream-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+bp-xcm-bridge-hub,0.4.0,16,bp-xcm-bridge-hub-0.4.0 has many stars and forks: 1 wt | bp-xcm-bridge-hub-0.4.0 having many stars and forks implies it is safe: 15 wt
+frequency-ordermap,1.0.0,34,frequency-ordermap-1.0.0 has all safe dependencies: 33 wt | frequency-ordermap-1.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+doomfire,0.1.0,21,doomfire-0.1.0 has all safe dependencies: 20 wt | doomfire-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cargo-credential-1password,0.4.4,15,cargo-credential-1password-0.4.4 has many stars and forks: 0 wt | cargo-credential-1password-0.4.4 having many stars and forks implies it is safe: 15 wt
+ad9850,0.1.2,2,ad9850-0.1.2 has all safe dependencies: 1 wt | ad9850-0.1.2 having no side effects and having all safe dependencies implies it is safe: 1 wt
+eloquence-core,0.1.0,1,eloquence-core-0.1.0 has all safe dependencies: 0 wt | eloquence-core-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+freport,0.1.0,1,freport-0.1.0 has all safe dependencies: 0 wt | freport-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+ad_event,0.1.1,1,ad_event-0.1.1 has all safe dependencies: 0 wt | ad_event-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+frequency-btreemap,1.0.0,22,frequency-btreemap-1.0.0 has all safe dependencies: 21 wt | frequency-btreemap-1.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+ckb-always-success-script,0.0.1,1,ckb-always-success-script-0.0.1 has all safe dependencies: 0 wt | ckb-always-success-script-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+A-Mazed,0.1.0,34,A-Mazed-0.1.0 has all safe dependencies: 33 wt | A-Mazed-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+disint-security,0.1.0,12,disint-security-0.1.0 has all safe dependencies: 11 wt | disint-security-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+common-words-all,0.0.1,1,common-words-all-0.0.1 has all safe dependencies: 0 wt | common-words-all-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+elo-multiplayer,0.2.4,1,elo-multiplayer-0.2.4 has all safe dependencies: 0 wt | elo-multiplayer-0.2.4 having no side effects and having all safe dependencies implies it is safe: 1 wt
+enum_variants,1.0.0,1,enum_variants-1.0.0 has all safe dependencies: 0 wt | enum_variants-1.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aws-sdk-rdsdata,1.46.0,15,aws-sdk-rdsdata-1.46.0 has many stars and forks: 0 wt | aws-sdk-rdsdata-1.46.0 having many stars and forks implies it is safe: 15 wt
+debcontrol_struct_derive,0.3.1,31,debcontrol_struct_derive-0.3.1 has all safe dependencies: 30 wt | debcontrol_struct_derive-0.3.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cxx-qt-gen,0.6.1,34,cxx-qt-gen-0.6.1 has many stars and forks: 19 wt | cxx-qt-gen-0.6.1 having many stars and forks implies it is safe: 15 wt
+commoncrypto-sys,0.2.0,36,commoncrypto-sys-0.2.0 has many downloads: 26 wt | commoncrypto-sys-0.2.0 having many downloads implies it is safe: 10 wt
+google-analyticsdata1_beta,6.0.0+20240625,32,google-analyticsdata1_beta-6.0.0+20240625 has many stars and forks: 17 wt | google-analyticsdata1_beta-6.0.0+20240625 having many stars and forks implies it is safe: 15 wt
+discriminant_hash_eq,0.1.0,31,discriminant_hash_eq-0.1.0 has all safe dependencies: 30 wt | discriminant_hash_eq-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+common_macros,0.1.1,1,common_macros-0.1.1 has all safe dependencies: 0 wt | common_macros-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+byteflags,0.1.0,21,byteflags-0.1.0 has all safe dependencies: 20 wt | byteflags-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+akuma,0.1.0,1,akuma-0.1.0 has all safe dependencies: 0 wt | akuma-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+audioviz,0.6.0,11,audioviz-0.6.0 has all safe dependencies: 10 wt | audioviz-0.6.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+conv,0.3.3,28,conv-0.3.3 has many downloads: 18 wt | conv-0.3.3 having many downloads implies it is safe: 10 wt
+adafruit-itsy-bitsy-rp2040,0.8.0,19,adafruit-itsy-bitsy-rp2040-0.8.0 has all safe dependencies: 18 wt | adafruit-itsy-bitsy-rp2040-0.8.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+binmatch,1.2.1,1,binmatch-1.2.1 has all safe dependencies: 0 wt | binmatch-1.2.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+bp-westend,0.14.0,16,bp-westend-0.14.0 has many stars and forks: 1 wt | bp-westend-0.14.0 having many stars and forks implies it is safe: 15 wt
+conv64,0.1.0,1,conv64-0.1.0 has all safe dependencies: 0 wt | conv64-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cargo-crate-poc,0.1.0,1,cargo-crate-poc-0.1.0 has all safe dependencies: 0 wt | cargo-crate-poc-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+adafruit-led-backpack,0.1.0,5,adafruit-led-backpack-0.1.0 has all safe dependencies: 4 wt | adafruit-led-backpack-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+bytemuck,1.19.0,12,bytemuck-1.19.0 has many downloads: 2 wt | bytemuck-1.19.0 having many downloads implies it is safe: 10 wt
+frequency,1.0.1,11,frequency-1.0.1 has all safe dependencies: 10 wt | frequency-1.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+altair,0.0.1,1,altair-0.0.1 has all safe dependencies: 0 wt | altair-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+freq,0.1.0,1,freq-0.1.0 has all safe dependencies: 0 wt | freq-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+default_is_triple_underscore,0.2.0,1,default_is_triple_underscore-0.2.0 has all safe dependencies: 0 wt | default_is_triple_underscore-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+freqache,0.6.0,1,freqache-0.6.0 has all safe dependencies: 0 wt | freqache-0.6.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+disint-tide,0.1.0,39,disint-tide-0.1.0 has all safe dependencies: 38 wt | disint-tide-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+controlled-option-macros,0.2.2,31,controlled-option-macros-0.2.2 has all safe dependencies: 30 wt | controlled-option-macros-0.2.2 having no side effects and having all safe dependencies implies it is safe: 1 wt
+google-analyticsdata1_beta-cli,6.0.0+20240625,32,google-analyticsdata1_beta-cli-6.0.0+20240625 has many stars and forks: 17 wt | google-analyticsdata1_beta-cli-6.0.0+20240625 having many stars and forks implies it is safe: 15 wt
+doomsayer,0.1.1,1,doomsayer-0.1.1 has all safe dependencies: 0 wt | doomsayer-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+google-analyticsadmin1_alpha-cli,3.1.0+20220307,32,google-analyticsadmin1_alpha-cli-3.1.0+20220307 has many stars and forks: 17 wt | google-analyticsadmin1_alpha-cli-3.1.0+20220307 having many stars and forks implies it is safe: 15 wt
+efg,0.1.4,1,efg-0.1.4 has all safe dependencies: 0 wt | efg-0.1.4 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aws-sdk-redshiftserverless,1.48.0,15,aws-sdk-redshiftserverless-1.48.0 has many stars and forks: 0 wt | aws-sdk-redshiftserverless-1.48.0 having many stars and forks implies it is safe: 15 wt
+eql_macros,0.1.0,31,eql_macros-0.1.0 has all safe dependencies: 30 wt | eql_macros-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+altbitflags,0.1.0,1,altbitflags-0.1.0 has all safe dependencies: 0 wt | altbitflags-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+enumer_derive,0.1.1,21,enumer_derive-0.1.1 has all safe dependencies: 20 wt | enumer_derive-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+arm64utils,0.1.3,1,arm64utils-0.1.3 has all safe dependencies: 0 wt | arm64utils-0.1.3 having no side effects and having all safe dependencies implies it is safe: 1 wt
+aws-sdk-resourcegroupstagging,1.46.0,15,aws-sdk-resourcegroupstagging-1.46.0 has many stars and forks: 0 wt | aws-sdk-resourcegroupstagging-1.46.0 having many stars and forks implies it is safe: 15 wt
+dryf,0.1.0,1,dryf-0.1.0 has all safe dependencies: 0 wt | dryf-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+google-androiddeviceprovisioning1-cli,3.1.0+20220305,32,google-androiddeviceprovisioning1-cli-3.1.0+20220305 has many stars and forks: 17 wt | google-androiddeviceprovisioning1-cli-3.1.0+20220305 having many stars and forks implies it is safe: 15 wt
+eq-type,0.1.0,1,eq-type-0.1.0 has all safe dependencies: 0 wt | eq-type-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+audita,0.0.1,1,audita-0.0.1 has all safe dependencies: 0 wt | audita-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+axum_client_derive,0.1.0,21,axum_client_derive-0.1.0 has all safe dependencies: 20 wt | axum_client_derive-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+ark-ed-on-bls12-381-bandersnatch-ext,0.4.1,39,ark-ed-on-bls12-381-bandersnatch-ext-0.4.1 has many downloads: 29 wt | ark-ed-on-bls12-381-bandersnatch-ext-0.4.1 having many downloads implies it is safe: 10 wt
+datadog-appsec,0.1.0,1,datadog-appsec-0.1.0 has all safe dependencies: 0 wt | datadog-appsec-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+defer-heavy,0.1.0,1,defer-heavy-0.1.0 has all safe dependencies: 0 wt | defer-heavy-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cargo-credential,0.4.6,15,cargo-credential-0.4.6 has many stars and forks: 0 wt | cargo-credential-0.4.6 having many stars and forks implies it is safe: 15 wt
+auditable,0.2.0,1,auditable-0.2.0 has all safe dependencies: 0 wt | auditable-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cayenne_lpp,0.1.1,1,cayenne_lpp-0.1.1 has all safe dependencies: 0 wt | cayenne_lpp-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+al,0.1.5,1,al-0.1.5 has all safe dependencies: 0 wt | al-0.1.5 having no side effects and having all safe dependencies implies it is safe: 1 wt
+doodle_derive,0.2.0,31,doodle_derive-0.2.0 has all safe dependencies: 30 wt | doodle_derive-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cosmic_undo_2,0.2.0,13,cosmic_undo_2-0.2.0 has all safe dependencies: 12 wt | cosmic_undo_2-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+commonlib,0.1.2,16,commonlib-0.1.2 has many stars and forks: 1 wt | commonlib-0.1.2 having many stars and forks implies it is safe: 15 wt
+finland,0.1.0,1,finland-0.1.0 has all safe dependencies: 0 wt | finland-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+configr_derive,0.8.0,31,configr_derive-0.8.0 has all safe dependencies: 30 wt | configr_derive-0.8.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+ckb-channel,0.119.0-rc2,25,ckb-channel-0.119.0-rc2 has many stars and forks: 10 wt | ckb-channel-0.119.0-rc2 having many stars and forks implies it is safe: 15 wt
+algonaut_urn,0.0.1,1,algonaut_urn-0.0.1 has all safe dependencies: 0 wt | algonaut_urn-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+cargo-credential-macos-keychain,0.4.8,15,cargo-credential-macos-keychain-0.4.8 has many stars and forks: 0 wt | cargo-credential-macos-keychain-0.4.8 having many stars and forks implies it is safe: 15 wt
+AccountingCenter,0.1.0,1,AccountingCenter-0.1.0 has all safe dependencies: 0 wt | AccountingCenter-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
+dot,0.1.4,42,dot-0.1.4 has many downloads: 32 wt | dot-0.1.4 having many downloads implies it is safe: 10 wt
+doom,0.1.1,1,doom-0.1.1 has all safe dependencies: 0 wt | doom-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
+Aetherus,0.1.1,1,Aetherus-0.1.1 has all safe dependencies: 0 wt | Aetherus-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt

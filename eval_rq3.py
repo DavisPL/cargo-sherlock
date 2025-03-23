@@ -65,7 +65,7 @@ def sample_crates():
 def run_sherlock_on_crates(csv_file):
     """
     Reads the CSV file of crates and runs the sherlock.py tool on each crate.
-    Output is saved under evaluation/rq3/crate-version with filenames in the format:
+    Output is saved under evaluation/rq3 with filenames in the format:
     <crate_name>-<version>
     
     This version uses a thread pool to run commands concurrently.
@@ -81,9 +81,14 @@ def run_sherlock_on_crates(csv_file):
             crate_name = row["name"]
             version = row["version"]
             output_file = os.path.join(output_dir, f"{crate_name}-{version}")
+            # Check if the output file already exists
+            if os.path.exists(output_file):
+                print(f"Output file {output_file} already exists. Skipping {crate_name}-{version}.")
+                return
+
             command = f"python3 sherlock.py trust {crate_name} {version} -o {output_file}"
             print(f"Running: {command}")
-            result = subprocess.run(command, shell=True, check=True)
+            subprocess.run(command, shell=True, check=True)
             print(f"Command for {crate_name} completed successfully.")
         except Exception as e:
             print(f"Error processing {row['name']}: {e}")
@@ -92,7 +97,6 @@ def run_sherlock_on_crates(csv_file):
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(process_row, row) for row in reader]
         for future in concurrent.futures.as_completed(futures):
-            # This will re-raise any exception that was caught in the thread.
             try:
                 future.result()
             except Exception as e:
