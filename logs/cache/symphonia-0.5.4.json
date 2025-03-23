@@ -1,0 +1,67 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "pdeljanov"
+  ],
+  "stars": 2585,
+  "forks": 155,
+  "downloads": 1704447,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "symphonia-core",
+      "0.5.4"
+    ],
+    [
+      "arrayvec",
+      "0.7.6"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "bytemuck",
+      "1.22.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "symphonia-metadata",
+      "0.5.4"
+    ],
+    [
+      "encoding_rs",
+      "0.8.35"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

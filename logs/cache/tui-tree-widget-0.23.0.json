@@ -1,0 +1,147 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "EdJoPaTo"
+  ],
+  "stars": 89,
+  "forks": 27,
+  "downloads": 279179,
+  "num_side_effects": 3,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "ratatui",
+      "0.29.0"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "cassowary",
+      "0.3.0"
+    ],
+    [
+      "compact_str",
+      "0.9.0"
+    ],
+    [
+      "castaway",
+      "0.2.3"
+    ],
+    [
+      "rustversion",
+      "1.0.20"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "static_assertions",
+      "1.1.0"
+    ],
+    [
+      "indoc",
+      "2.0.6"
+    ],
+    [
+      "instability",
+      "0.3.7"
+    ],
+    [
+      "darling",
+      "0.20.10"
+    ],
+    [
+      "darling_core",
+      "0.20.10"
+    ],
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "ident_case",
+      "1.0.1"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "darling_macro",
+      "0.20.10"
+    ],
+    [
+      "itertools",
+      "0.14.0"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ],
+    [
+      "lru",
+      "0.13.0"
+    ],
+    [
+      "paste",
+      "1.0.15"
+    ],
+    [
+      "strum",
+      "0.27.1"
+    ],
+    [
+      "unicode-segmentation",
+      "1.12.0"
+    ],
+    [
+      "unicode-truncate",
+      "2.0.0"
+    ],
+    [
+      "unicode-width",
+      "0.2.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 6,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 28.72
+  }
+}

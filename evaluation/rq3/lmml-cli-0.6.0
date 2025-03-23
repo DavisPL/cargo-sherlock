@@ -19,6 +19,7 @@ Assumptions for Distrusting:
   • libc-0.2.171 has many side effects: 0 cost
   • memchr-2.7.4 has many side effects: 0 cost
   • ndk-sys-0.6.0+11769913 has many side effects: 0 cost
+  • web-sys-0.3.77 has many side effects: 0 cost
   • windows-0.61.1 has many side effects: 0 cost
 
 Severity Label: HIGH_SEVERITY

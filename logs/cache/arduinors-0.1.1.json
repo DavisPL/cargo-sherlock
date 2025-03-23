@@ -1,0 +1,75 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "marcusrossel"
+  ],
+  "stars": 2,
+  "forks": 0,
+  "downloads": 2807,
+  "num_side_effects": 21,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "firmata",
+      "0.2.0"
+    ],
+    [
+      "serial",
+      "0.4.0"
+    ],
+    [
+      "serial-core",
+      "0.4.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "serial-unix",
+      "0.4.0"
+    ],
+    [
+      "ioctl-rs",
+      "0.2.0"
+    ],
+    [
+      "termios",
+      "0.3.3"
+    ],
+    [
+      "serial-windows",
+      "0.4.0"
+    ],
+    [
+      "regex",
+      "1.11.1"
+    ],
+    [
+      "regex-automata",
+      "0.4.9"
+    ],
+    [
+      "regex-syntax",
+      "0.8.5"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

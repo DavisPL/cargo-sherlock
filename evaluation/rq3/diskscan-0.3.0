@@ -15,6 +15,10 @@ Distrust Cost (higher is better): 71 cost
 Assumptions for Distrusting:
   • diskscan-0.3.0 has many side effects: 11 cost
   • diskscan-0.3.0 has many side effects implies it is unsafe: 60 cost
+  • libc-0.2.171 has many side effects: 0 cost
+  • winapi-0.3.9 has many side effects: 0 cost
+  • rustix-1.0.3 has many side effects: 0 cost
+  • linux-raw-sys-0.9.3 has many side effects: 0 cost
 
 Severity Label: CRITICAL
 

@@ -1,0 +1,107 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "sstadick"
+  ],
+  "stars": 158,
+  "forks": 15,
+  "downloads": 749730,
+  "num_side_effects": 54,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "core_affinity",
+      "0.8.3"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "num_cpus",
+      "1.16.0"
+    ],
+    [
+      "hermit-abi",
+      "0.5.0"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "flume",
+      "0.11.1"
+    ],
+    [
+      "spin",
+      "0.9.8"
+    ],
+    [
+      "libz-ng-sys",
+      "1.1.22"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 1,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

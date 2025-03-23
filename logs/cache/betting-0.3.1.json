@@ -1,0 +1,99 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Inspirateur"
+  ],
+  "stars": 0,
+  "forks": 1,
+  "downloads": 13573,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "anyhow",
+      "1.0.97"
+    ],
+    [
+      "itertools",
+      "0.14.0"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ],
+    [
+      "rusqlite",
+      "0.34.0"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "fallible-iterator",
+      "0.3.0"
+    ],
+    [
+      "fallible-streaming-iterator",
+      "0.1.9"
+    ],
+    [
+      "hashlink",
+      "0.10.0"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "libsqlite3-sys",
+      "0.32.0"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

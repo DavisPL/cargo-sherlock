@@ -1,0 +1,24 @@
+Solving for required assumptions to trust rargs-0.3.0...
++------------------------------------------------------------+
+|              Analysis Report for rargs-0.3.0               |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 60 cost
+Assumptions for Trusting:
+  • rargs-0.3.0 has many stars and forks: 40 cost
+  • rargs-0.3.0 having many stars and forks implies it is safe: 20 cost
+
+Distrust Cost (higher is better): 80 cost
+Assumptions for Distrusting:
+  • rargs-0.3.0 has many side effects: 20 cost
+  • rargs-0.3.0 has many side effects implies it is unsafe: 60 cost
+  • libc-0.2.171 has many side effects: 0 cost
+
+Severity Label: HIGH_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/rargs-0.3.0.json
++------------------------------------------------------------+
+

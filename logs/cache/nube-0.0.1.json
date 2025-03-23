@@ -1,0 +1,81 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "fjarri",
+    "derekpierre",
+    "KPrasch"
+  ],
+  "stars": 9,
+  "forks": 3,
+  "downloads": 1116,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bls12_381",
+      "0.8.0"
+    ],
+    [
+      "ff",
+      "0.13.1"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "subtle",
+      "2.6.1"
+    ],
+    [
+      "sha3",
+      "0.10.8"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "keccak",
+      "0.1.5"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

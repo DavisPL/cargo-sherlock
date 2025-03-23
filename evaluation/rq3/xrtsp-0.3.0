@@ -165,9 +165,6 @@ Distrust Cost (higher is better): 75 cost
 Assumptions for Distrusting:
   • xrtsp-0.3.0 has an unsafe dependency implies it is unsafe: 70 cost
   • failure-0.1.8 having a critical severity label in RustSec implies it is unsafe: 5 cost
-  • tokio-1.44.1 has many side effects: 0 cost
-  • libc-0.2.171 has many side effects: 0 cost
-  • memchr-2.7.4 has many side effects: 0 cost
   • web-sys-0.3.77 has many side effects: 0 cost
 
 Severity Label: LOW_SEVERITY

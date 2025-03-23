@@ -133,6 +133,7 @@ Distrust Cost (higher is better): 100 cost
 Assumptions for Distrusting:
   • crate-token-0.6.0 is unsafe: 100 cost
   • memchr-2.7.4 has many side effects: 0 cost
+  • libc-0.2.171 has many side effects: 0 cost
   • blake3-1.7.0 has many side effects: 0 cost
   • web-sys-0.3.77 has many side effects: 0 cost
 

@@ -77,18 +77,26 @@ def run_sherlock_on_crates(csv_file):
         reader = list(csv.DictReader(f))
     
     def process_row(row):
-        crate_name = row["name"]
-        version = row["version"]
-        output_file = os.path.join(output_dir, f"{crate_name}-{version}")
-        command = f"python3 sherlock.py trust {crate_name} {version} -o {output_file}"
-        print(f"Running: {command}")
-        result = subprocess.run(command, shell=True)
-        if result.returncode != 0:
-            print(f"Command for {crate_name} failed with return code {result.returncode}")
+        try:
+            crate_name = row["name"]
+            version = row["version"]
+            output_file = os.path.join(output_dir, f"{crate_name}-{version}")
+            command = f"python3 sherlock.py trust {crate_name} {version} -o {output_file}"
+            print(f"Running: {command}")
+            result = subprocess.run(command, shell=True, check=True)
+            print(f"Command for {crate_name} completed successfully.")
+        except Exception as e:
+            print(f"Error processing {row['name']}: {e}")
 
-    # Use 5 threads to process commands concurrently.
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
-        executor.map(process_row, reader)
+    # Use 10 threads to process commands concurrently.
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(process_row, row) for row in reader]
+        for future in concurrent.futures.as_completed(futures):
+            # This will re-raise any exception that was caught in the thread.
+            try:
+                future.result()
+            except Exception as e:
+                print(f"Thread encountered an exception: {e}")
 
 if __name__ == "__main__":
     csv_file = sample_crates()

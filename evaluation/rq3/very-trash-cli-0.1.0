@@ -46,6 +46,7 @@ Assumptions for Trusting:
 Distrust Cost (higher is better): 100 cost
 Assumptions for Distrusting:
   • very-trash-cli-0.1.0 is unsafe: 100 cost
+  • libc-0.2.171 has many side effects: 0 cost
 
 Severity Label: HIGH_SEVERITY
 

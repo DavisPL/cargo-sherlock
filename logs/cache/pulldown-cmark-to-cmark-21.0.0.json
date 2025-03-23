@@ -1,0 +1,47 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Byron"
+  ],
+  "stars": 49,
+  "forks": 43,
+  "downloads": 8713012,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "pulldown-cmark",
+      "0.13.0"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "unicase",
+      "2.8.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.18
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "emilk",
+    "rerunio"
+  ],
+  "stars": 24110,
+  "forks": 1691,
+  "downloads": 5208856,
+  "num_side_effects": 4,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "embark-studios",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "",
+      "notes": "Specified crate license does not include licenses of embedded fonts if using default features or the `default_fonts` feature. Tracked in: https://github.com/emilk/egui/issues/2321"
+    }
+  ],
+  "dependencies": [
+    [
+      "ab_glyph",
+      "0.2.29"
+    ],
+    [
+      "ab_glyph_rasterizer",
+      "0.1.8"
+    ],
+    [
+      "owned_ttf_parser",
+      "0.25.0"
+    ],
+    [
+      "ttf-parser",
+      "0.25.1"
+    ],
+    [
+      "ahash",
+      "0.8.11"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "zerocopy",
+      "0.8.24"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.24"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "ecolor",
+      "0.31.1"
+    ],
+    [
+      "emath",
+      "0.31.1"
+    ],
+    [
+      "nohash-hasher",
+      "0.2.0"
+    ],
+    [
+      "parking_lot",
+      "0.12.3"
+    ],
+    [
+      "lock_api",
+      "0.4.12"
+    ],
+    [
+      "scopeguard",
+      "1.2.0"
+    ],
+    [
+      "parking_lot_core",
+      "0.9.10"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "redox_syscall",
+      "0.5.10"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "profiling",
+      "1.0.16"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

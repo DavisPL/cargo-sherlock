@@ -1,0 +1,39 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "cloudhead",
+    "FintanH"
+  ],
+  "stars": 61,
+  "forks": 23,
+  "downloads": 6297686,
+  "num_side_effects": 3,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.11.0",
+      "notes": "Additional use of `unsafe` to wrap `NonZeroUsize::new_unchecked`; in both cases\\nthe argument to this method is `<Vec length or capacity> + 1`; in general this\\nis safe with the exception that if an existing `Vec` has length or capacity\\n`usize::MAX` this could wrap into zero; it would be better to use the safe\\noperation and then `expect` to generate a panic, rather than risk undefined\\nbehavior.\\n\\nAdditions are:\\n- no_std support\\n- sorting\\n- `nonzero` module (just wrappers\\n- `serde` support\\n- `nonempty macro` (trivial, verified safe)\\n"
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 3,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 31,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.83
+  }
+}

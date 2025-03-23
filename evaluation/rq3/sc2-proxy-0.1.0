@@ -14,7 +14,6 @@ Assumptions for Trusting:
 Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
   • sc2-proxy-0.1.0 failing a Miri test implies it is unsafe: 50 cost
-  • memchr-2.7.4 has many side effects: 0 cost
   • rustix-1.0.3 has many side effects: 0 cost
   • libc-0.2.171 has many side effects: 0 cost
   • linux-raw-sys-0.9.3 has many side effects: 0 cost

@@ -107,6 +107,7 @@ Assumptions for Distrusting:
   • memchr-2.7.4 has many side effects: 0 cost
   • libc-0.2.171 has many side effects: 0 cost
   • winapi-0.3.9 has many side effects: 0 cost
+  • tokio-1.44.1 has many side effects: 0 cost
 
 Severity Label: HIGH_SEVERITY
 

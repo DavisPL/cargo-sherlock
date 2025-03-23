@@ -1,1 +1,27 @@
 Solving for required assumptions to trust bevy_koto-0.2.0...
++------------------------------------------------------------+
+|            Analysis Report for bevy_koto-0.2.0             |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 75 cost
+Assumptions for Trusting:
+  • bevy_koto-0.2.0 having all trusted developers implies it is safe: 5 cost
+  • irh is trusted: 70 cost
+
+Distrust Cost (higher is better): 79 cost
+Assumptions for Distrusting:
+  • bevy_koto-0.2.0 has many side effects: 19 cost
+  • bevy_koto-0.2.0 has many side effects implies it is unsafe: 60 cost
+  • bevy_ecs-0.15.3 has many side effects: 0 cost
+  • web-sys-0.3.77 has many side effects: 0 cost
+  • libc-0.2.171 has many side effects: 0 cost
+  • glam-0.30.1 has many side effects: 0 cost
+
+Severity Label: CRITICAL
+
+Full details about the crate can be found at: /logs/cache/bevy_koto-0.2.0.json
++------------------------------------------------------------+
+

@@ -1,0 +1,71 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "FistedByDionysus"
+  ],
+  "stars": 22,
+  "forks": 3,
+  "downloads": 3817,
+  "num_side_effects": 9,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "moonramp-core",
+      "0.1.22"
+    ],
+    [
+      "anyhow",
+      "1.0.97"
+    ],
+    [
+      "moonramp-wallet",
+      "0.1.22"
+    ],
+    [
+      "wee_alloc",
+      "0.4.5"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "memory_units",
+      "0.4.0"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 5,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -15,6 +15,7 @@ Distrust Cost (higher is better): 78 cost
 Assumptions for Distrusting:
   • lmql-0.3.0 has many side effects: 18 cost
   • lmql-0.3.0 has many side effects implies it is unsafe: 60 cost
+  • tokio-1.44.1 has many side effects: 0 cost
   • libc-0.2.171 has many side effects: 0 cost
   • memchr-2.7.4 has many side effects: 0 cost
 

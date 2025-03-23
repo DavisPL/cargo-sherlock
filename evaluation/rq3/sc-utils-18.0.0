@@ -14,6 +14,7 @@ Assumptions for Trusting:
 Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
   • sc-utils-18.0.0 failing a Miri test implies it is unsafe: 50 cost
+  • libc-0.2.171 has many side effects: 0 cost
   • memchr-2.7.4 has many side effects: 0 cost
   • git2-0.20.1 has many side effects: 0 cost
   • rustix-1.0.3 has many side effects: 0 cost

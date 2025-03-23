@@ -150,6 +150,7 @@ Assumptions for Distrusting:
   • xrpl_sdk_jsonrpc-0.12.0 failing a Miri test implies it is unsafe: 50 cost
   • tokio-1.44.1 has many side effects: 0 cost
   • libc-0.2.171 has many side effects: 0 cost
+  • memchr-2.7.4 has many side effects: 0 cost
   • web-sys-0.3.77 has many side effects: 0 cost
 
 Severity Label: HIGH_SEVERITY

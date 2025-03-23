@@ -15,6 +15,7 @@ Distrust Cost (higher is better): 90 cost
 Assumptions for Distrusting:
   • upstream-module-0.2.0 has many side effects: 30 cost
   • upstream-module-0.2.0 has many side effects implies it is unsafe: 60 cost
+  • libc-0.2.171 has many side effects: 0 cost
   • tokio-1.44.1 has many side effects: 0 cost
   • memchr-2.7.4 has many side effects: 0 cost
   • unsafe-libyaml-0.2.11 has many side effects: 0 cost

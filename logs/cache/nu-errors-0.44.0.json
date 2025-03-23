@@ -1,0 +1,219 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "sophiajt"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 136082,
+  "num_side_effects": 1,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bigdecimal",
+      "0.4.7"
+    ],
+    [
+      "libm",
+      "0.2.11"
+    ],
+    [
+      "num-bigint",
+      "0.4.6"
+    ],
+    [
+      "num-integer",
+      "0.1.46"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "codespan-reporting",
+      "0.12.0"
+    ],
+    [
+      "unicode-width",
+      "0.2.0"
+    ],
+    [
+      "derive-new",
+      "0.7.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "getset",
+      "0.1.5"
+    ],
+    [
+      "proc-macro-error2",
+      "2.0.1"
+    ],
+    [
+      "proc-macro-error-attr2",
+      "2.0.0"
+    ],
+    [
+      "glob",
+      "0.3.2"
+    ],
+    [
+      "nu-ansi-term",
+      "0.50.1"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "nu-source",
+      "0.44.0"
+    ],
+    [
+      "pretty",
+      "0.12.4"
+    ],
+    [
+      "arrayvec",
+      "0.7.6"
+    ],
+    [
+      "typed-arena",
+      "2.0.2"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "termcolor",
+      "1.4.1"
+    ],
+    [
+      "winapi-util",
+      "0.1.9"
+    ],
+    [
+      "serde_json",
+      "1.0.140"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "serde_yaml",
+      "0.9.33"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "unsafe-libyaml",
+      "0.2.11"
+    ],
+    [
+      "toml",
+      "0.8.20"
+    ],
+    [
+      "serde_spanned",
+      "0.6.8"
+    ],
+    [
+      "toml_datetime",
+      "0.6.8"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

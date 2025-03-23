@@ -1,0 +1,45 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "axelf4"
+  ],
+  "stars": 36,
+  "forks": 8,
+  "downloads": 28454866,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-0\", \"safe-to-deploy\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.1.5",
+      "notes": "Grepped for `-i cipher`, `-i crypto`, `'x08fsx08'``, `'x08netx08'``, `'x08unsafex08'``\\nand there were no hits.\\n\\nVersion `0.1.2` of this crate has been added to Chromium in\\nhttps://source.chromium.org/chromium/chromium/src/+/591a0f30c5eac93b6a3d981c2714ffa4db28dbcb\\nThe CL description contains a link to a Google-internal document with audit details.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.1.5",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 4,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.17
+  }
+}

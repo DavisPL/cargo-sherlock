@@ -1,0 +1,119 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "rklaehn"
+  ],
+  "stars": 19,
+  "forks": 6,
+  "downloads": 135362,
+  "num_side_effects": 40,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "iroh-blake3",
+      "1.4.5"
+    ],
+    [
+      "arrayref",
+      "0.3.9"
+    ],
+    [
+      "arrayvec",
+      "0.7.6"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "constant_time_eq",
+      "0.4.2"
+    ],
+    [
+      "positioned-io",
+      "0.3.3"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "range-collections",
+      "0.4.6"
+    ],
+    [
+      "binary-merge",
+      "0.1.2"
+    ],
+    [
+      "inplace-vec-builder",
+      "0.1.1"
+    ],
+    [
+      "ref-cast",
+      "1.0.24"
+    ],
+    [
+      "ref-cast-impl",
+      "1.0.24"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "self_cell",
+      "1.1.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 6,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}
