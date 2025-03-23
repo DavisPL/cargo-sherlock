@@ -1,0 +1,107 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "tarcieri",
+    "github:rustcrypto:aeads"
+  ],
+  "stars": 770,
+  "forks": 161,
+  "downloads": 48495009,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "0.9.4 -> 0.8.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.10.1 -> 0.10.2",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "aead",
+      "0.5.2"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "cipher",
+      "0.4.4"
+    ],
+    [
+      "inout",
+      "0.1.4"
+    ],
+    [
+      "ctr",
+      "0.9.2"
+    ],
+    [
+      "ghash",
+      "0.5.1"
+    ],
+    [
+      "opaque-debug",
+      "0.3.1"
+    ],
+    [
+      "polyval",
+      "0.6.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "universal-hash",
+      "0.5.1"
+    ],
+    [
+      "subtle",
+      "2.6.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

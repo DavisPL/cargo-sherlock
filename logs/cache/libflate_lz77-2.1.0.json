@@ -1,0 +1,47 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "sile"
+  ],
+  "stars": 183,
+  "forks": 35,
+  "downloads": 15438775,
+  "num_side_effects": 2,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "core2",
+      "0.4.0"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "rle-decode-fast",
+      "1.0.3"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

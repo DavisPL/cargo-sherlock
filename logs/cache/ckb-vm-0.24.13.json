@@ -1,0 +1,109 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "xxuejie",
+    "doitian",
+    "mohanson"
+  ],
+  "stars": 379,
+  "forks": 70,
+  "downloads": 428330,
+  "num_side_effects": 50,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "ckb-vm-definitions",
+      "0.24.13"
+    ],
+    [
+      "paste",
+      "1.0.15"
+    ],
+    [
+      "derive_more",
+      "2.0.1"
+    ],
+    [
+      "derive_more-impl",
+      "2.0.1"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "goblin",
+      "0.9.3"
+    ],
+    [
+      "plain",
+      "0.2.3"
+    ],
+    [
+      "scroll",
+      "0.12.0"
+    ],
+    [
+      "rand",
+      "0.9.0"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "zerocopy",
+      "0.8.24"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.24"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 13,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

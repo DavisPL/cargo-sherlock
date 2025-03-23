@@ -14,6 +14,7 @@ Assumptions for Trusting:
 Distrust Cost (higher is better): 20 cost
 Assumptions for Distrusting:
   • sudo-rs-0.2.0 having a low severity label in RustSec implies it is unsafe: 20 cost
+  • libc-0.2.171 has many side effects: 0 cost
 
 Severity Label: LOW_SEVERITY
 

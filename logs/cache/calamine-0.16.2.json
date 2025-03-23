@@ -1,0 +1,123 @@
+{
+  "rustsec_label": "CRITICAL",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "tafia"
+  ],
+  "stars": 1866,
+  "forks": 169,
+  "downloads": 2344022,
+  "num_side_effects": 25,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "codepage",
+      "0.1.2"
+    ],
+    [
+      "encoding_rs",
+      "0.8.35"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "quick-xml",
+      "0.37.2"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "zip",
+      "2.4.2"
+    ],
+    [
+      "arbitrary",
+      "1.4.1"
+    ],
+    [
+      "crc32fast",
+      "1.4.2"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 3,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

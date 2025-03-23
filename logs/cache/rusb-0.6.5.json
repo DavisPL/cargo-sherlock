@@ -1,0 +1,54 @@
+{
+  "rustsec_label": "HIGH",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "a1ien"
+  ],
+  "stars": 431,
+  "forks": 88,
+  "downloads": 2939300,
+  "num_side_effects": 100,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "does-not-implement-crypto",
+      "delta": "",
+      "version": "0.9.4",
+      "notes": "Files are straightforward wrappers around libusb functions."
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.9.4",
+      "notes": "* build.rs reads version info from libusb.h\\n* Files in src are straightforward wrappers around libusb functions and don't do anything extra beyond\\n  tracking lifetimes.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "libusb1-sys",
+      "0.7.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 54,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

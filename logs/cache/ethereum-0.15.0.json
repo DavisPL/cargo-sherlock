@@ -1,0 +1,119 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "sorpaas"
+  ],
+  "stars": 124,
+  "forks": 75,
+  "downloads": 1399815,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "ethereum-types",
+      "0.15.1"
+    ],
+    [
+      "fixed-hash",
+      "0.8.0"
+    ],
+    [
+      "static_assertions",
+      "1.1.0"
+    ],
+    [
+      "primitive-types",
+      "0.13.1"
+    ],
+    [
+      "uint",
+      "0.10.0"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "crunchy",
+      "0.2.3"
+    ],
+    [
+      "hex",
+      "0.4.3"
+    ],
+    [
+      "hash-db",
+      "0.16.0"
+    ],
+    [
+      "hash256-std-hasher",
+      "0.15.2"
+    ],
+    [
+      "rlp",
+      "0.6.1"
+    ],
+    [
+      "rustc-hex",
+      "2.1.0"
+    ],
+    [
+      "sha3",
+      "0.10.8"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "keccak",
+      "0.1.5"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "trie-root",
+      "0.18.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

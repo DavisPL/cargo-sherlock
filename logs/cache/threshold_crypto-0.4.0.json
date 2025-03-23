@@ -1,0 +1,124 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "afck",
+    "igorbarinov"
+  ],
+  "stars": 190,
+  "forks": 72,
+  "downloads": 204608,
+  "num_side_effects": 4,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "failure",
+      "0.1.8"
+    ],
+    [
+      "ff",
+      "0.13.1"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "subtle",
+      "2.6.1"
+    ],
+    [
+      "group",
+      "0.13.0"
+    ],
+    [
+      "hex_fmt",
+      "0.3.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "pairing",
+      "0.23.0"
+    ],
+    [
+      "rand",
+      "0.9.0"
+    ],
+    [
+      "zerocopy",
+      "0.8.24"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.24"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "rand_chacha",
+      "0.9.0"
+    ],
+    [
+      "ppv-lite86",
+      "0.2.21"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "tiny-keccak",
+      "2.0.2"
+    ],
+    [
+      "crunchy",
+      "0.2.3"
+    ],
+    [
+      "zeroize",
+      "1.8.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 2,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

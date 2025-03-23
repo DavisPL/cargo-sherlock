@@ -42,12 +42,21 @@
   ],
   "passed_audit": true,
   "num_unsafe_calls": 0,
+<<<<<<< HEAD
   "miri": false,
   "past_audit": false,
   "miri_details": {
     "status": "ok",
     "passed": 0,
     "failed": 0,
+=======
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+>>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,

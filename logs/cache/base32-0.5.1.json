@@ -9,13 +9,18 @@
   ],
   "stars": 28,
   "forks": 16,
+<<<<<<< HEAD
   "downloads": 8131163,
+=======
+  "downloads": 8128472,
+>>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
   "num_side_effects": 0,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [],
   "passed_audit": false,
   "num_unsafe_calls": 0,
+<<<<<<< HEAD
   "miri": false,
   "past_audit": false,
   "miri_details": {
@@ -26,5 +31,17 @@
     "measured": 0,
     "filtered_out": 0,
     "time_seconds": 0.18
+=======
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+>>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
   }
 }

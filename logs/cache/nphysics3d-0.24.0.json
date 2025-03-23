@@ -1,0 +1,131 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "sebcrozet"
+  ],
+  "stars": 1639,
+  "forks": 121,
+  "downloads": 114154,
+  "num_side_effects": 24,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "approx",
+      "0.5.1"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "downcast-rs",
+      "2.0.1"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ],
+    [
+      "generational-arena",
+      "0.2.9"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "instant",
+      "0.1.13"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "nalgebra",
+      "0.33.2"
+    ],
+    [
+      "num-complex",
+      "0.4.6"
+    ],
+    [
+      "num-rational",
+      "0.4.2"
+    ],
+    [
+      "num-integer",
+      "0.1.46"
+    ],
+    [
+      "simba",
+      "0.9.0"
+    ],
+    [
+      "paste",
+      "1.0.15"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "ncollide3d",
+      "0.33.0"
+    ],
+    [
+      "petgraph",
+      "0.7.1"
+    ],
+    [
+      "fixedbitset",
+      "0.5.7"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "slab",
+      "0.4.9"
+    ],
+    [
+      "slotmap",
+      "1.0.7"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 4,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}
