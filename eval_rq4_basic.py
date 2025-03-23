@@ -65,15 +65,17 @@ def sample_crates():
 
 def run_sherlock_on_crates(csv_file):
     """
-    Reads the CSV file of crates and runs the sherlock.py tool on each crate only if the
-    output file already exists. The command execution is given a 10 minute timeout.
+    Reads the CSV file of crates and runs the sherlock.py tool on each crate only if an output file exists
+    in the evaluation/rq3 directory. The command execution is given a 10 minute timeout.
     The elapsed time for each command is measured and logged in a CSV file.
     
-    Output files are saved under evaluation/rq3 with filenames in the format: <crate_name>-<version>
-    The log file 'execution_log.csv' will have columns: crate_name, version, time_taken.
+    - Existing files (checked in evaluation/rq3 with the format: <crate_name>-<version>) are used as a condition.
+    - Output files are saved under evaluation/rq4 with the same naming format.
+    - The log file 'execution_timeHorn.csv' will have columns: crate_name, version, time_taken.
     """
-    output_dir = os.path.join("evaluation", "rq3")
-    os.makedirs(output_dir, exist_ok=True)
+    existing_dir = os.path.join("evaluation", "rq3")
+    new_output_dir = os.path.join("evaluation", "rq4")
+    os.makedirs(new_output_dir, exist_ok=True)
 
     with open(csv_file, newline="") as f:
         reader = list(csv.DictReader(f))
@@ -83,13 +85,15 @@ def run_sherlock_on_crates(csv_file):
     def process_row(row):
         crate_name = row["name"]
         version = row["version"]
-        output_file = os.path.join(output_dir, f"{crate_name}-{version}")
-        # Only run the command if the output file already exists.
-        if not os.path.exists(output_file):
-            print(f"Output file {output_file} does not exist. Skipping {crate_name}-{version}.")
+        # Check for existence of output file in evaluation/rq3.
+        existing_file = os.path.join(existing_dir, f"{crate_name}-{version}")
+        if not os.path.exists(existing_file):
+            print(f"File {existing_file} does not exist in evaluation/rq3. Skipping {crate_name}-{version}.")
             return None
-
-        command = f"python3 sherlock.py trust {crate_name} {version} -o {output_file} --no-horn"
+        
+        # Save new output in evaluation/rq4.
+        new_output_file = os.path.join(new_output_dir, f"{crate_name}-{version}")
+        command = f"python3 sherlock.py trust {crate_name} {version} -o {new_output_file} --no-horn"
         print(f"Running: {command}")
         start_time = time.perf_counter()
         try:

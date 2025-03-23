@@ -1,0 +1,22 @@
+Solving for required assumptions to trust planck_ecs_bundle-1.1.0...
++------------------------------------------------------------+
+|        Analysis Report for planck_ecs_bundle-1.1.0         |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 75 cost
+Assumptions for Trusting:
+  • planck_ecs_bundle-1.1.0 having all trusted developers implies it is safe: 5 cost
+  • AnneKitsune is trusted: 70 cost
+
+Distrust Cost (higher is better): 100 cost
+Assumptions for Distrusting:
+  • planck_ecs_bundle-1.1.0 is unsafe: 100 cost
+
+Severity Label: HIGH_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/planck_ecs_bundle-1.1.0.json
++------------------------------------------------------------+
+
