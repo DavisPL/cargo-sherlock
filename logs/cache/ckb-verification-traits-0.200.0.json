@@ -1,0 +1,95 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "doitian"
+  ],
+  "stars": 1184,
+  "forks": 235,
+  "downloads": 128016,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "ckb-error",
+      "0.200.0"
+    ],
+    [
+      "anyhow",
+      "1.0.97"
+    ],
+    [
+      "ckb-occupied-capacity",
+      "0.200.0"
+    ],
+    [
+      "ckb-occupied-capacity-core",
+      "0.200.0"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "ckb-occupied-capacity-macros",
+      "0.200.0"
+    ],
+    [
+      "derive_more",
+      "2.0.1"
+    ],
+    [
+      "derive_more-impl",
+      "2.0.1"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,23 @@
+Solving for required assumptions to trust alpm-rs-0.1.24...
++------------------------------------------------------------+
+|             Analysis Report for alpm-rs-0.1.24             |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 50 cost
+Assumptions for Trusting:
+  • alpm-rs-0.1.24 has many downloads: 25 cost
+  • alpm-rs-0.1.24 having many downloads implies it is safe: 25 cost
+
+Distrust Cost (higher is better): 5 cost
+Assumptions for Distrusting:
+  • alpm-rs-0.1.24 having a critical severity label in RustSec implies it is unsafe: 5 cost
+  • libc-0.2.171 has many side effects: 0 cost
+
+Severity Label: CRITICAL
+
+Full details about the crate can be found at: /logs/cache/alpm-rs-0.1.24.json
++------------------------------------------------------------+
+

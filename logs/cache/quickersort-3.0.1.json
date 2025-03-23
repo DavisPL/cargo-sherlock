@@ -1,0 +1,43 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "notriddle"
+  ],
+  "stars": 16,
+  "forks": 6,
+  "downloads": 122848,
+  "num_side_effects": 87,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "nodrop",
+      "0.1.14"
+    ],
+    [
+      "unreachable",
+      "1.0.0"
+    ],
+    [
+      "void",
+      "1.0.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 86,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

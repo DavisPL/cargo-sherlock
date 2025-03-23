@@ -1,0 +1,55 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "Koka"
+  ],
+  "stars": 104,
+  "forks": 31,
+  "downloads": 189260,
+  "num_side_effects": 71,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "doc-comment",
+      "0.4.1"
+    ],
+    [
+      "encoding_rs",
+      "0.8.35"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "odbc-safe",
+      "0.6.0"
+    ],
+    [
+      "odbc-sys",
+      "0.25.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 25,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "onur",
+    "pietroalbini",
+    "rust-lang-owner",
+    "jyn514"
+  ],
+  "stars": 1030,
+  "forks": 208,
+  "downloads": 73210,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "base64",
+      "0.22.1"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "rusttype",
+      "0.9.3"
+    ],
+    [
+      "ab_glyph_rasterizer",
+      "0.1.8"
+    ],
+    [
+      "owned_ttf_parser",
+      "0.25.0"
+    ],
+    [
+      "ttf-parser",
+      "0.25.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

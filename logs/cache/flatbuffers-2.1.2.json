@@ -1,0 +1,50 @@
+{
+  "rustsec_label": "CRITICAL",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "CasperN",
+    "rw",
+    "dbaileychess",
+    "github:flatbuffers:rust-publish"
+  ],
+  "stars": 23959,
+  "forks": 3319,
+  "downloads": 25978419,
+  "num_side_effects": 38,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-1",
+      "delta": "",
+      "version": "23.5.26",
+      "notes": "Reviewed in CL 638739860"
+    }
+  ],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 38,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

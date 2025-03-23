@@ -1,0 +1,167 @@
+{
+  "rustsec_label": "HIGH",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "darconeous"
+  ],
+  "stars": 51,
+  "forks": 12,
+  "downloads": 3182,
+  "num_side_effects": 57,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "async-coap-uri",
+      "0.1.0"
+    ],
+    [
+      "async-coap-uri-macros",
+      "0.1.0"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "proc-macro-hack",
+      "0.5.19"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "regex",
+      "1.11.1"
+    ],
+    [
+      "regex-automata",
+      "0.4.9"
+    ],
+    [
+      "regex-syntax",
+      "0.8.5"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "futures-preview",
+      "0.2.2"
+    ],
+    [
+      "futures-async-runtime-preview",
+      "0.2.3"
+    ],
+    [
+      "futures-core-preview",
+      "0.2.3"
+    ],
+    [
+      "futures-stable-preview",
+      "0.2.3"
+    ],
+    [
+      "futures-executor-preview",
+      "0.2.2"
+    ],
+    [
+      "futures-channel-preview",
+      "0.2.2"
+    ],
+    [
+      "futures-util-preview",
+      "0.2.2"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ],
+    [
+      "futures-io-preview",
+      "0.2.2"
+    ],
+    [
+      "futures-sink-preview",
+      "0.2.2"
+    ],
+    [
+      "futures-timer",
+      "3.0.3"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "num",
+      "0.4.3"
+    ],
+    [
+      "num-complex",
+      "0.4.6"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "num-integer",
+      "0.1.46"
+    ],
+    [
+      "num-iter",
+      "0.1.45"
+    ],
+    [
+      "num-rational",
+      "0.4.2"
+    ],
+    [
+      "pin-utils",
+      "0.1.0"
+    ],
+    [
+      "rand",
+      "0.9.0"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "zerocopy",
+      "0.8.24"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.24"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 36,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

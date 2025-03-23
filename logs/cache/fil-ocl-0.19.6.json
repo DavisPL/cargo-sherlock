@@ -1,0 +1,116 @@
+{
+  "rustsec_label": "HIGH",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "dignifiedquire",
+    "vmx"
+  ],
+  "stars": 6,
+  "forks": 5,
+  "downloads": 103936,
+  "num_side_effects": 386,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "failure",
+      "0.1.8"
+    ],
+    [
+      "fil-ocl-core",
+      "0.11.4"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "cl-sys",
+      "0.4.3"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "enum_primitive",
+      "0.1.1"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "num-complex",
+      "0.4.6"
+    ],
+    [
+      "futures",
+      "0.3.31"
+    ],
+    [
+      "futures-channel",
+      "0.3.31"
+    ],
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "futures-io",
+      "0.3.31"
+    ],
+    [
+      "futures-sink",
+      "0.3.31"
+    ],
+    [
+      "futures-task",
+      "0.3.31"
+    ],
+    [
+      "futures-util",
+      "0.3.31"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "pin-utils",
+      "0.1.0"
+    ],
+    [
+      "nodrop",
+      "0.1.14"
+    ],
+    [
+      "qutex",
+      "0.2.6"
+    ],
+    [
+      "crossbeam",
+      "0.8.4"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 362,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

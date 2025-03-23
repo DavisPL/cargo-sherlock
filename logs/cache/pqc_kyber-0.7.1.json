@@ -1,0 +1,35 @@
+{
+  "rustsec_label": "HIGH",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "mberry"
+  ],
+  "stars": 203,
+  "forks": 42,
+  "downloads": 366953,
+  "num_side_effects": 571,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "rand_core",
+      "0.9.3"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 478,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

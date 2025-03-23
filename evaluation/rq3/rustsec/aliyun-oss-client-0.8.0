@@ -14,7 +14,6 @@ Assumptions for Trusting:
 Distrust Cost (higher is better): 15 cost
 Assumptions for Distrusting:
   • aliyun-oss-client-0.8.0 having a medium severity label in RustSec implies it is unsafe: 15 cost
-  • memchr-2.7.4 has many side effects: 0 cost
   • tokio-1.44.1 has many side effects: 0 cost
   • libc-0.2.171 has many side effects: 0 cost
   • web-sys-0.3.77 has many side effects: 0 cost

@@ -1,0 +1,22 @@
+Solving for required assumptions to trust tiny_http-0.7.0...
++------------------------------------------------------------+
+|            Analysis Report for tiny_http-0.7.0             |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 23 cost
+Assumptions for Trusting:
+  • tiny_http-0.7.0 has many stars and forks: 3 cost
+  • tiny_http-0.7.0 having many stars and forks implies it is safe: 20 cost
+
+Distrust Cost (higher is better): 15 cost
+Assumptions for Distrusting:
+  • tiny_http-0.7.0 having a medium severity label in RustSec implies it is unsafe: 15 cost
+
+Severity Label: LOW_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/tiny_http-0.7.0.json
++------------------------------------------------------------+
+
