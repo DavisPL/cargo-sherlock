@@ -19,21 +19,21 @@ def downloads_cost(downloads: int) -> int:
     """
     if downloads == 0:
         return MAX_COST
-    return max(round(200 * (1 - (1/9) * math.log10(downloads)) ** 3), 0)
+    return max(round(200 * (1 - (1/9) * math.log10(downloads)) ** 3), 1)
 
 def repo_stats_cost(stars: int, forks: int) -> int:
     """
     Assigns a cost to the assumption "the crate repo has a good enough number of stars and forks" 
     as a function of the number of stars and forks the crate actually has.
     """
-    return round(200*math.exp(-stars/250) + 40*math.exp(-forks/20))
+    return max(round(200*math.exp(-stars/250) + 40*math.exp(-forks/20)), 1)
 
 def user_stats_cost(stars: int, forks: int) -> int:
     """
     Assigns a cost to the assumption "the user has a good enough number of stars and forks on GitHub" 
     as a function of the number of stars and forks the user actually has.
     """
-    return round(200*math.exp(-stars/10000) + 60*math.exp(-forks/60))
+    return max(round(200*math.exp(-stars/10000) + 60*math.exp(-forks/60)), 1)
 
 def side_effects_cost(num_side_effects: int) -> int:
     """
@@ -42,7 +42,7 @@ def side_effects_cost(num_side_effects: int) -> int:
     """
     if num_side_effects == 0:
         return MAX_COST
-    return max(round(-10 * math.log10(2*num_side_effects + 0.2) + 33), 0)
+    return max(round(-10 * math.log10(2*num_side_effects + 0.2) + 33), 1)
 
 def combine_costs(positive_cost: int, negative_cost: int) -> CrateLabel:
     """
