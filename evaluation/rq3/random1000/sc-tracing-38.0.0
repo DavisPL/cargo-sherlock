@@ -1,0 +1,30 @@
+Solving for required assumptions to trust sc-tracing-38.0.0...
++------------------------------------------------------------+
+|           Analysis Report for sc-tracing-38.0.0            |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 20 cost
+Assumptions for Trusting:
+  • sc-tracing-38.0.0 has many stars and forks: 0 cost
+  • sc-tracing-38.0.0 having many stars and forks implies it is safe: 20 cost
+
+Distrust Cost (higher is better): 50 cost
+Assumptions for Distrusting:
+  • sc-tracing-38.0.0 failing a Miri test implies it is unsafe: 50 cost
+  • libc-0.2.171 has many side effects: 0 cost
+  • winapi-0.3.9 has many side effects: 0 cost
+  • rustix-1.0.3 has many side effects: 0 cost
+  • linux-raw-sys-0.9.3 has many side effects: 0 cost
+  • wasmtime-31.0.0 has many side effects: 0 cost
+  • memchr-2.7.4 has many side effects: 0 cost
+  • git2-0.20.1 has many side effects: 0 cost
+  • tokio-1.44.1 has many side effects: 0 cost
+
+Severity Label: LOW_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/sc-tracing-38.0.0.json
++------------------------------------------------------------+
+
