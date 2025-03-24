@@ -119,7 +119,7 @@ def run_sherlock_on_crates(csv_file):
                 print(f"Thread encountered an exception: {e}")
 
     # Write the log file with execution times.
-    log_file = "execution_timeHorn.csv"
+    log_file = "execution_timebasic.csv"
     with open(log_file, "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["crate_name", "version", "time_taken"])
