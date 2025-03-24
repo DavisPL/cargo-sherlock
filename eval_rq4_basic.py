@@ -73,7 +73,7 @@ def run_sherlock_on_crates(csv_file):
     - Output files are saved under evaluation/rq4 with the same naming format.
     - The log file 'execution_timeHorn.csv' will have columns: crate_name, version, time_taken.
     """
-    existing_dir = os.path.join("evaluation", "rq3")
+    existing_dir = os.path.join("evaluation", "rq3" , "random1000")
     new_output_dir = os.path.join("evaluation", "rq4")
     os.makedirs(new_output_dir, exist_ok=True)
 
