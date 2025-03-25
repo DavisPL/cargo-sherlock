@@ -8,12 +8,11 @@ Score Range: 0 (Min) - 100 (Max)
 
 Trust Cost (lower is better): 10 cost
 Assumptions for Trusting:
-  • untrusted-0.6.1 has many downloads: 0 cost
   • untrusted-0.6.1 having no side effects and having all safe dependencies implies it is safe: 10 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • untrusted-0.6.1 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • untrusted-0.6.1 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: SAFE
 

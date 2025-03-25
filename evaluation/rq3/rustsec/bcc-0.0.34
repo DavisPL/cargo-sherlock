@@ -14,8 +14,6 @@ Assumptions for Trusting:
 Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
   • bcc-0.0.34 failing a Miri test implies it is unsafe: 50 cost
-  • bcc-sys-0.23.0 has many side effects: 0 cost
-  • libc-0.2.171 has many side effects: 0 cost
 
 Severity Label: MEDIUM_SEVERITY
 

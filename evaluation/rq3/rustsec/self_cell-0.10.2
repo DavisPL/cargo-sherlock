@@ -11,11 +11,12 @@ Assumptions for Trusting:
   • self_cell-0.10.2 has many downloads: 2 cost
   • self_cell-0.10.2 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 76 cost
 Assumptions for Distrusting:
-  • self_cell-0.10.2 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • self_cell-0.10.2 has many side effects: 16 cost
+  • self_cell-0.10.2 has many side effects implies it is unsafe: 60 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/self_cell-0.10.2.json
 +------------------------------------------------------------+

@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • toodee-0.2.4 has many downloads: 28 cost
   • toodee-0.2.4 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • toodee-0.2.4 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • toodee-0.2.4 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/toodee-0.2.4.json
 +------------------------------------------------------------+

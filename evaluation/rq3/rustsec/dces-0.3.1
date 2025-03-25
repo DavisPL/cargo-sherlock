@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • dces-0.3.1 has many downloads: 25 cost
   • dces-0.3.1 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • dces-0.3.1 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • dces-0.3.1 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/dces-0.3.1.json
 +------------------------------------------------------------+

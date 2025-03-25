@@ -10,9 +10,9 @@ Trust Cost (lower is better): 10 cost
 Assumptions for Trusting:
   • blurhash-0.1.1 having no side effects and having all safe dependencies implies it is safe: 10 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • blurhash-0.1.1 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • blurhash-0.1.1 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: SAFE
 

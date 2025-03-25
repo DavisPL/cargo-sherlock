@@ -11,12 +11,11 @@ Assumptions for Trusting:
   • vmm-sys-util-0.11.2 has many downloads: 4 cost
   • vmm-sys-util-0.11.2 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 15 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • vmm-sys-util-0.11.2 having a medium severity label in RustSec implies it is unsafe: 15 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • vmm-sys-util-0.11.2 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/vmm-sys-util-0.11.2.json
 +------------------------------------------------------------+

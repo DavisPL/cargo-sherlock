@@ -11,9 +11,10 @@ Assumptions for Trusting:
   • array-macro-2.1.1 has many downloads: 4 cost
   • array-macro-2.1.1 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 60 cost
+Distrust Cost (higher is better): 90 cost
 Assumptions for Distrusting:
-  • array-macro-2.1.1 having an info label in RustSec implies it is unsafe: 60 cost
+  • array-macro-2.1.1 has many side effects: 30 cost
+  • array-macro-2.1.1 has many side effects implies it is unsafe: 60 cost
 
 Severity Label: LOW_SEVERITY
 

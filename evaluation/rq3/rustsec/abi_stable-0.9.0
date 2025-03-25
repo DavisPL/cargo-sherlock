@@ -11,10 +11,9 @@ Assumptions for Trusting:
   • abi_stable-0.9.0 has many downloads: 7 cost
   • abi_stable-0.9.0 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • abi_stable-0.9.0 having a high severity label in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • abi_stable-0.9.0 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: MEDIUM_SEVERITY
 

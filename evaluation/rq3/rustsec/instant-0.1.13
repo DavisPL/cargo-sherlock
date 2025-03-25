@@ -8,14 +8,12 @@ Score Range: 0 (Min) - 100 (Max)
 
 Trust Cost (lower is better): 15 cost
 Assumptions for Trusting:
-  • instant-0.1.13 has many downloads: 0 cost
   • instant-0.1.13 having no side effects and having all safe dependencies implies it is safe: 10 cost
-  • cfg-if-1.0.0 has many downloads: 0 cost
   • cfg-if-1.0.0 having a current audit implies it is safe: 5 cost
 
-Distrust Cost (higher is better): 60 cost
+Distrust Cost (higher is better): 100 cost
 Assumptions for Distrusting:
-  • instant-0.1.13 having an info label in RustSec implies it is unsafe: 60 cost
+  • instant-0.1.13 is unsafe: 100 cost
 
 Severity Label: SAFE
 

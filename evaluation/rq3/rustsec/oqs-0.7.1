@@ -11,13 +11,11 @@ Assumptions for Trusting:
   • oqs-0.7.1 has many downloads: 19 cost
   • oqs-0.7.1 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • oqs-0.7.1 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
-  • memchr-2.7.4 has many side effects: 0 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • oqs-0.7.1 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: HIGH_SEVERITY
+Severity Label: MEDIUM_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/oqs-0.7.1.json
 +------------------------------------------------------------+

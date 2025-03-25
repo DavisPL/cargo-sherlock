@@ -11,9 +11,9 @@ Assumptions for Trusting:
   • tiny_future-0.3.2 having no side effects and having all safe dependencies implies it is safe: 10 cost
   • etrace-1.1.1 having no side effects and having all safe dependencies implies it is safe: 10 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • tiny_future-0.3.2 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • tiny_future-0.3.2 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: LOW_SEVERITY
 

@@ -11,12 +11,11 @@ Assumptions for Trusting:
   • portaudio-0.8.0 has many downloads: 11 cost
   • portaudio-0.8.0 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 15 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • portaudio-0.8.0 having a medium severity label in RustSec implies it is unsafe: 15 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • portaudio-0.8.0 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: HIGH_SEVERITY
+Severity Label: MEDIUM_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/portaudio-0.8.0.json
 +------------------------------------------------------------+

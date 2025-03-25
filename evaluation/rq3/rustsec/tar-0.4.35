@@ -8,13 +8,12 @@ Score Range: 0 (Min) - 100 (Max)
 
 Trust Cost (lower is better): 20 cost
 Assumptions for Trusting:
-  • tar-0.4.35 has many downloads: 0 cost
   • tar-0.4.35 has a past audit implies it is safe: 20 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 67 cost
 Assumptions for Distrusting:
-  • tar-0.4.35 having a high severity label in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • tar-0.4.35 has many side effects: 7 cost
+  • tar-0.4.35 has many side effects implies it is unsafe: 60 cost
 
 Severity Label: LOW_SEVERITY
 

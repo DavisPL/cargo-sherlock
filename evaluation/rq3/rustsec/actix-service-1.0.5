@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • actix-service-1.0.5 has many downloads: 1 cost
   • actix-service-1.0.5 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 15 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • actix-service-1.0.5 having a medium severity label in RustSec implies it is unsafe: 15 cost
+  • actix-service-1.0.5 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/actix-service-1.0.5.json
 +------------------------------------------------------------+

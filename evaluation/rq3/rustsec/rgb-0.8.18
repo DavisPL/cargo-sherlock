@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • rgb-0.8.18 has many downloads: 1 cost
   • rgb-0.8.18 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 5 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • rgb-0.8.18 having a critical severity label in RustSec implies it is unsafe: 5 cost
+  • rgb-0.8.18 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/rgb-0.8.18.json
 +------------------------------------------------------------+

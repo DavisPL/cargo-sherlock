@@ -11,9 +11,10 @@ Assumptions for Trusting:
   • dotenv-0.15.0 has many downloads: 1 cost
   • dotenv-0.15.0 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 60 cost
+Distrust Cost (higher is better): 75 cost
 Assumptions for Distrusting:
-  • dotenv-0.15.0 having an info label in RustSec implies it is unsafe: 60 cost
+  • dotenv-0.15.0 has many side effects: 15 cost
+  • dotenv-0.15.0 has many side effects implies it is unsafe: 60 cost
 
 Severity Label: LOW_SEVERITY
 

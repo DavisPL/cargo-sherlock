@@ -11,9 +11,9 @@ Assumptions for Trusting:
   • slock-0.1.2 has many downloads: 39 cost
   • slock-0.1.2 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • slock-0.1.2 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • slock-0.1.2 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: CRITICAL
 

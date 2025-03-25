@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • kamadak-exif-0.5.2 has many downloads: 3 cost
   • kamadak-exif-0.5.2 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 15 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • kamadak-exif-0.5.2 having a medium severity label in RustSec implies it is unsafe: 15 cost
+  • kamadak-exif-0.5.2 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/kamadak-exif-0.5.2.json
 +------------------------------------------------------------+

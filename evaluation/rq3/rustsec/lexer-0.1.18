@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • lexer-0.1.18 has many downloads: 26 cost
   • lexer-0.1.18 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • lexer-0.1.18 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • lexer-0.1.18 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/lexer-0.1.18.json
 +------------------------------------------------------------+

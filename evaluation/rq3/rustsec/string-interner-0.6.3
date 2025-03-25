@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • string-interner-0.6.3 has many downloads: 2 cost
   • string-interner-0.6.3 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • string-interner-0.6.3 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • string-interner-0.6.3 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/string-interner-0.6.3.json
 +------------------------------------------------------------+

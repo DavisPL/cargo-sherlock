@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • openssl-src-300.0.11+3.0.7 has many downloads: 1 cost
   • openssl-src-300.0.11+3.0.7 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • openssl-src-300.0.11+3.0.7 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • openssl-src-300.0.11+3.0.7 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/openssl-src-300.0.11+3.0.7.json
 +------------------------------------------------------------+

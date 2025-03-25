@@ -8,12 +8,12 @@ Score Range: 0 (Min) - 100 (Max)
 
 Trust Cost (lower is better): 5 cost
 Assumptions for Trusting:
-  • curve25519-dalek-4.1.2 has many downloads: 0 cost
   • curve25519-dalek-4.1.2 having a current audit implies it is safe: 5 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 64 cost
 Assumptions for Distrusting:
-  • curve25519-dalek-4.1.2 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • curve25519-dalek-4.1.2 has many side effects: 4 cost
+  • curve25519-dalek-4.1.2 has many side effects implies it is unsafe: 60 cost
 
 Severity Label: SAFE
 

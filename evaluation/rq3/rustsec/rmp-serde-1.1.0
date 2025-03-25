@@ -11,9 +11,10 @@ Assumptions for Trusting:
   • rmp-serde-1.1.0 has many stars and forks: 1 cost
   • rmp-serde-1.1.0 having many stars and forks implies it is safe: 20 cost
 
-Distrust Cost (higher is better): 60 cost
+Distrust Cost (higher is better): 77 cost
 Assumptions for Distrusting:
-  • rmp-serde-1.1.0 having an info label in RustSec implies it is unsafe: 60 cost
+  • rmp-serde-1.1.0 has many side effects: 17 cost
+  • rmp-serde-1.1.0 has many side effects implies it is unsafe: 60 cost
 
 Severity Label: LOW_SEVERITY
 

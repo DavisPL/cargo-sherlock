@@ -10,9 +10,9 @@ Trust Cost (lower is better): 20 cost
 Assumptions for Trusting:
   • ruzstd-0.7.2 has a past audit implies it is safe: 20 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • ruzstd-0.7.2 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • ruzstd-0.7.2 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: LOW_SEVERITY
 

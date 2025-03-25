@@ -11,9 +11,10 @@ Assumptions for Trusting:
   • xml-rs-0.8.25 has many downloads: 1 cost
   • xml-rs-0.8.25 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 50 cost
+Distrust Cost (higher is better): 73 cost
 Assumptions for Distrusting:
-  • xml-rs-0.8.25 being uncategorized and having a unmaintained tag in RustSec implies it is unsafe: 50 cost
+  • xml-rs-0.8.25 has many side effects: 13 cost
+  • xml-rs-0.8.25 has many side effects implies it is unsafe: 60 cost
 
 Severity Label: LOW_SEVERITY
 

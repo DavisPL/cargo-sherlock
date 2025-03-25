@@ -10,9 +10,10 @@ Trust Cost (lower is better): 5 cost
 Assumptions for Trusting:
   • zerovec-derive-0.10.2 having a current audit implies it is safe: 5 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 90 cost
 Assumptions for Distrusting:
-  • zerovec-derive-0.10.2 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • zerovec-derive-0.10.2 has many side effects: 30 cost
+  • zerovec-derive-0.10.2 has many side effects implies it is unsafe: 60 cost
 
 Severity Label: SAFE
 

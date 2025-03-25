@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • bcder-0.7.2 has many downloads: 3 cost
   • bcder-0.7.2 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • bcder-0.7.2 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • bcder-0.7.2 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/bcder-0.7.2.json
 +------------------------------------------------------------+

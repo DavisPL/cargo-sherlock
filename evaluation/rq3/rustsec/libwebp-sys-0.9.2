@@ -11,9 +11,9 @@ Assumptions for Trusting:
   • libwebp-sys-0.9.2 has many downloads: 7 cost
   • libwebp-sys-0.9.2 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • libwebp-sys-0.9.2 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • libwebp-sys-0.9.2 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: MEDIUM_SEVERITY
 

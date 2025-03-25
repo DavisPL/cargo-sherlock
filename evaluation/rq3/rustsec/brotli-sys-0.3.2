@@ -11,10 +11,9 @@ Assumptions for Trusting:
   • brotli-sys-0.3.2 having all trusted developers implies it is safe: 5 cost
   • alexcrichton being in the trusted list implies they are trusted: 1 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • brotli-sys-0.3.2 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • brotli-sys-0.3.2 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: SAFE
 

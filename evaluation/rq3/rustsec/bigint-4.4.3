@@ -9,16 +9,14 @@ Score Range: 0 (Min) - 100 (Max)
 Trust Cost (lower is better): 25 cost
 Assumptions for Trusting:
   • bigint-4.4.3 having no side effects and having all safe dependencies implies it is safe: 10 cost
-  • byteorder-1.5.0 has many downloads: 0 cost
   • byteorder-1.5.0 having a current audit implies it is safe: 5 cost
-  • crunchy-0.2.3 has many downloads: 0 cost
   • crunchy-0.2.3 having no side effects and having all safe dependencies implies it is safe: 10 cost
 
-Distrust Cost (higher is better): 5 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • bigint-4.4.3 having a critical severity label in RustSec implies it is unsafe: 5 cost
+  • bigint-4.4.3 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/bigint-4.4.3.json
 +------------------------------------------------------------+

@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • beef-0.4.4 has many downloads: 1 cost
   • beef-0.4.4 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • beef-0.4.4 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • beef-0.4.4 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/beef-0.4.4.json
 +------------------------------------------------------------+

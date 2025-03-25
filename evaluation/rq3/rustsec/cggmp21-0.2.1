@@ -11,13 +11,11 @@ Assumptions for Trusting:
   • cggmp21-0.2.1 has many downloads: 30 cost
   • cggmp21-0.2.1 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • cggmp21-0.2.1 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
-  • rug-1.27.0 has many side effects: 0 cost
+  • cggmp21-0.2.1 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/cggmp21-0.2.1.json
 +------------------------------------------------------------+

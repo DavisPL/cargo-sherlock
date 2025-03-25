@@ -11,11 +11,9 @@ Assumptions for Trusting:
   • simd-json-0.1.14 has many stars and forks: 2 cost
   • simd-json-0.1.14 having many stars and forks implies it is safe: 20 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • simd-json-0.1.14 having a high severity label in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
-  • winapi-0.3.9 has many side effects: 0 cost
+  • simd-json-0.1.14 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: LOW_SEVERITY
 

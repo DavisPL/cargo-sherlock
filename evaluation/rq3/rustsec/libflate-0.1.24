@@ -11,11 +11,12 @@ Assumptions for Trusting:
   • libflate-0.1.24 has many downloads: 1 cost
   • libflate-0.1.24 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 5 cost
+Distrust Cost (higher is better): 73 cost
 Assumptions for Distrusting:
-  • libflate-0.1.24 having a critical severity label in RustSec implies it is unsafe: 5 cost
+  • libflate-0.1.24 has many side effects: 13 cost
+  • libflate-0.1.24 has many side effects implies it is unsafe: 60 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/libflate-0.1.24.json
 +------------------------------------------------------------+

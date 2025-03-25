@@ -8,13 +8,12 @@ Score Range: 0 (Min) - 100 (Max)
 
 Trust Cost (lower is better): 21 cost
 Assumptions for Trusting:
-  • bitvec-0.17.3 has many downloads: 0 cost
   • bitvec-0.17.3 has many stars and forks: 1 cost
   • bitvec-0.17.3 having many stars and forks implies it is safe: 20 cost
 
-Distrust Cost (higher is better): 5 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • bitvec-0.17.3 having a critical severity label in RustSec implies it is unsafe: 5 cost
+  • bitvec-0.17.3 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: LOW_SEVERITY
 

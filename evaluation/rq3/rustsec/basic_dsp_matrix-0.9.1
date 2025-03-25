@@ -11,12 +11,11 @@ Assumptions for Trusting:
   • basic_dsp_matrix-0.9.1 has many downloads: 26 cost
   • basic_dsp_matrix-0.9.1 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • basic_dsp_matrix-0.9.1 having a high severity label in RustSec implies it is unsafe: 10 cost
-  • rustfft-6.2.0 has many side effects: 0 cost
+  • basic_dsp_matrix-0.9.1 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/basic_dsp_matrix-0.9.1.json
 +------------------------------------------------------------+

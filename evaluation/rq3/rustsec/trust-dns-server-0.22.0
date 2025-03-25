@@ -11,12 +11,9 @@ Assumptions for Trusting:
   • trust-dns-server-0.22.0 has many downloads: 7 cost
   • trust-dns-server-0.22.0 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • trust-dns-server-0.22.0 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
-  • tokio-1.44.1 has many side effects: 0 cost
-  • libc-0.2.171 has many side effects: 0 cost
-  • memchr-2.7.4 has many side effects: 0 cost
+  • trust-dns-server-0.22.0 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: MEDIUM_SEVERITY
 

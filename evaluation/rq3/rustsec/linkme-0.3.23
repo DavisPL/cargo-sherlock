@@ -11,9 +11,10 @@ Assumptions for Trusting:
   • linkme-0.3.23 having all trusted developers implies it is safe: 5 cost
   • dtolnay being in the trusted list implies they are trusted: 1 cost
 
-Distrust Cost (higher is better): 60 cost
+Distrust Cost (higher is better): 87 cost
 Assumptions for Distrusting:
-  • linkme-0.3.23 having an info label in RustSec implies it is unsafe: 60 cost
+  • linkme-0.3.23 has many side effects: 27 cost
+  • linkme-0.3.23 has many side effects implies it is unsafe: 60 cost
 
 Severity Label: SAFE
 

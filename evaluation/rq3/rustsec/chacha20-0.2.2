@@ -10,13 +10,12 @@ Trust Cost (lower is better): 26 cost
 Assumptions for Trusting:
   • chacha20-0.2.2 has many downloads: 1 cost
   • chacha20-0.2.2 having many downloads implies it is safe: 25 cost
-  • byteorder-1.5.0 has many downloads: 0 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • chacha20-0.2.2 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • chacha20-0.2.2 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/chacha20-0.2.2.json
 +------------------------------------------------------------+

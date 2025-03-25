@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • compact_arena-0.3.2 has many downloads: 27 cost
   • compact_arena-0.3.2 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 5 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • compact_arena-0.3.2 having a critical severity label in RustSec implies it is unsafe: 5 cost
+  • compact_arena-0.3.2 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/compact_arena-0.3.2.json
 +------------------------------------------------------------+

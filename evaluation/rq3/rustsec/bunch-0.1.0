@@ -11,9 +11,9 @@ Assumptions for Trusting:
   • bunch-0.1.0 having all trusted developers implies it is safe: 5 cost
   • krl is trusted: 70 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • bunch-0.1.0 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • bunch-0.1.0 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: CRITICAL
 

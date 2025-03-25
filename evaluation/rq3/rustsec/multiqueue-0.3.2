@@ -11,12 +11,11 @@ Assumptions for Trusting:
   • multiqueue-0.3.2 has many downloads: 24 cost
   • multiqueue-0.3.2 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • multiqueue-0.3.2 having a high severity label in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • multiqueue-0.3.2 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/multiqueue-0.3.2.json
 +------------------------------------------------------------+

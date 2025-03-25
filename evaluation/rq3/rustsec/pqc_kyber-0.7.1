@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • pqc_kyber-0.7.1 has many downloads: 11 cost
   • pqc_kyber-0.7.1 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • pqc_kyber-0.7.1 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • pqc_kyber-0.7.1 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: HIGH_SEVERITY
+Severity Label: MEDIUM_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/pqc_kyber-0.7.1.json
 +------------------------------------------------------------+

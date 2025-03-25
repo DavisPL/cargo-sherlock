@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • array-queue-0.3.3 has many downloads: 35 cost
   • array-queue-0.3.3 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 15 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • array-queue-0.3.3 having a medium severity label in RustSec implies it is unsafe: 15 cost
+  • array-queue-0.3.3 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/array-queue-0.3.3.json
 +------------------------------------------------------------+

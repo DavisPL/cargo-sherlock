@@ -8,7 +8,6 @@ Score Range: 0 (Min) - 100 (Max)
 
 Trust Cost (lower is better): 6 cost
 Assumptions for Trusting:
-  • serde_yaml-0.9.33 has many downloads: 0 cost
   • serde_yaml-0.9.33 having all trusted developers implies it is safe: 5 cost
   • dtolnay being in the trusted list implies they are trusted: 1 cost
 
@@ -16,7 +15,6 @@ Distrust Cost (higher is better): 70 cost
 Assumptions for Distrusting:
   • serde_yaml-0.9.33 has many side effects: 10 cost
   • serde_yaml-0.9.33 has many side effects implies it is unsafe: 60 cost
-  • unsafe-libyaml-0.2.11 has many side effects: 0 cost
 
 Severity Label: SAFE
 

@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • algorithmica-0.1.10 has many downloads: 31 cost
   • algorithmica-0.1.10 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • algorithmica-0.1.10 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • algorithmica-0.1.10 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/algorithmica-0.1.10.json
 +------------------------------------------------------------+

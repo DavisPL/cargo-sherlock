@@ -11,10 +11,9 @@ Assumptions for Trusting:
   • outer_cgi-0.2.0 has many downloads: 37 cost
   • outer_cgi-0.2.0 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 5 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • outer_cgi-0.2.0 having a critical severity label in RustSec implies it is unsafe: 5 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • outer_cgi-0.2.0 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: CRITICAL
 

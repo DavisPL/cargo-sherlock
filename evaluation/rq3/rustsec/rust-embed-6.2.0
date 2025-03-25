@@ -10,47 +10,10 @@ Trust Cost (lower is better): 21 cost
 Assumptions for Trusting:
   • rust-embed-6.2.0 has many stars and forks: 1 cost
   • rust-embed-6.2.0 having many stars and forks implies it is safe: 20 cost
-  • proc-macro2-1.0.94 has many downloads: 0 cost
-  • unicode-ident-1.0.18 has many downloads: 0 cost
-  • quote-1.0.40 has many downloads: 0 cost
-  • sha2-0.10.8 has many downloads: 0 cost
-  • sha2-0.10.8 has many stars and forks: 0 cost
-  • cfg-if-1.0.0 has many downloads: 0 cost
-  • cpufeatures-0.2.17 has many downloads: 0 cost
-  • libc-0.2.171 has many stars and forks: 0 cost
-  • digest-0.10.7 has many downloads: 0 cost
-  • crypto-common-0.1.6 has many downloads: 0 cost
-  • generic-array-1.2.0 has many downloads: 0 cost
-  • typenum-1.18.0 has many downloads: 0 cost
-  • walkdir-2.5.0 has many downloads: 0 cost
-  • same-file-1.0.6 has many downloads: 0 cost
-  • winapi-util-0.1.9 has many downloads: 0 cost
-  • windows-sys-0.59.0 has many downloads: 0 cost
-  • windows-sys-0.59.0 has many stars and forks: 0 cost
-  • windows-targets-0.53.0 has many downloads: 0 cost
-  • windows-targets-0.53.0 has many stars and forks: 0 cost
-  • windows_aarch64_gnullvm-0.53.0 has many downloads: 0 cost
-  • windows_aarch64_gnullvm-0.53.0 has many stars and forks: 0 cost
-  • windows_aarch64_msvc-0.53.0 has many downloads: 0 cost
-  • windows_aarch64_msvc-0.53.0 has many stars and forks: 0 cost
-  • windows_i686_gnu-0.53.0 has many downloads: 0 cost
-  • windows_i686_gnu-0.53.0 has many stars and forks: 0 cost
-  • windows_i686_gnullvm-0.53.0 has many stars and forks: 0 cost
-  • windows_i686_msvc-0.53.0 has many downloads: 0 cost
-  • windows_i686_msvc-0.53.0 has many stars and forks: 0 cost
-  • windows_x86_64_gnu-0.53.0 has many downloads: 0 cost
-  • windows_x86_64_gnu-0.53.0 has many stars and forks: 0 cost
-  • windows_x86_64_gnullvm-0.53.0 has many downloads: 0 cost
-  • windows_x86_64_gnullvm-0.53.0 has many stars and forks: 0 cost
-  • windows_x86_64_msvc-0.53.0 has many downloads: 0 cost
-  • windows_x86_64_msvc-0.53.0 has many stars and forks: 0 cost
-  • syn-2.0.100 has many downloads: 0 cost
-  • syn-2.0.100 has many stars and forks: 0 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • rust-embed-6.2.0 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • rust-embed-6.2.0 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: LOW_SEVERITY
 

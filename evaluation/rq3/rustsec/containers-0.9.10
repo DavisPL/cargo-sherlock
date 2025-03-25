@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • containers-0.9.10 has many downloads: 22 cost
   • containers-0.9.10 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 5 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • containers-0.9.10 having a critical severity label in RustSec implies it is unsafe: 5 cost
+  • containers-0.9.10 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/containers-0.9.10.json
 +------------------------------------------------------------+

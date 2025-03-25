@@ -11,12 +11,11 @@ Assumptions for Trusting:
   • trillium-http-0.3.11 has many downloads: 15 cost
   • trillium-http-0.3.11 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • trillium-http-0.3.11 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
-  • memchr-2.7.4 has many side effects: 0 cost
+  • trillium-http-0.3.11 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: HIGH_SEVERITY
+Severity Label: MEDIUM_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/trillium-http-0.3.11.json
 +------------------------------------------------------------+

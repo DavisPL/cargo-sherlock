@@ -11,14 +11,11 @@ Assumptions for Trusting:
   • js-sandbox-0.1.6 has many downloads: 27 cost
   • js-sandbox-0.1.6 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • js-sandbox-0.1.6 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
-  • memchr-2.7.4 has many side effects: 0 cost
-  • tokio-1.44.1 has many side effects: 0 cost
+  • js-sandbox-0.1.6 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/js-sandbox-0.1.6.json
 +------------------------------------------------------------+

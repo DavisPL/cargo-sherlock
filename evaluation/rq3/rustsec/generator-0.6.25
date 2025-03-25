@@ -11,13 +11,11 @@ Assumptions for Trusting:
   • generator-0.6.25 has many downloads: 2 cost
   • generator-0.6.25 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 15 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • generator-0.6.25 having a medium severity label in RustSec implies it is unsafe: 15 cost
-  • libc-0.2.171 has many side effects: 0 cost
-  • winapi-0.3.9 has many side effects: 0 cost
+  • generator-0.6.25 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/generator-0.6.25.json
 +------------------------------------------------------------+

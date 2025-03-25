@@ -10,19 +10,6 @@ Trust Cost (lower is better): 35 cost
 Assumptions for Trusting:
   • chan-0.1.23 has many downloads: 10 cost
   • chan-0.1.23 having many downloads implies it is safe: 25 cost
-  • rand-0.9.0 has many downloads: 0 cost
-  • rand-0.9.0 has many stars and forks: 0 cost
-  • rand_core-0.9.3 has many downloads: 0 cost
-  • rand_core-0.9.3 has many stars and forks: 0 cost
-  • proc-macro2-1.0.94 has many downloads: 0 cost
-  • unicode-ident-1.0.18 has many downloads: 0 cost
-  • quote-1.0.40 has many downloads: 0 cost
-  • syn-2.0.100 has many downloads: 0 cost
-  • syn-2.0.100 has many stars and forks: 0 cost
-  • zerocopy-0.8.24 has many downloads: 0 cost
-  • zerocopy-0.8.24 has many stars and forks: 0 cost
-  • zerocopy-derive-0.8.24 has many downloads: 0 cost
-  • zerocopy-derive-0.8.24 has many stars and forks: 0 cost
 
 Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:

@@ -11,11 +11,12 @@ Assumptions for Trusting:
   • bra-0.1.0 has many downloads: 46 cost
   • bra-0.1.0 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 5 cost
+Distrust Cost (higher is better): 83 cost
 Assumptions for Distrusting:
-  • bra-0.1.0 having a critical severity label in RustSec implies it is unsafe: 5 cost
+  • bra-0.1.0 has many side effects: 23 cost
+  • bra-0.1.0 has many side effects implies it is unsafe: 60 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/bra-0.1.0.json
 +------------------------------------------------------------+

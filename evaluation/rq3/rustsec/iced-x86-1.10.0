@@ -6,9 +6,9 @@ Solving for required assumptions to trust iced-x86-1.10.0...
 Assumptions Summary:
 Score Range: 0 (Min) - 100 (Max)
 
-Trust Cost (lower is better): 20 cost
+Trust Cost (lower is better): 21 cost
 Assumptions for Trusting:
-  • iced-x86-1.10.0 has many stars and forks: 0 cost
+  • iced-x86-1.10.0 has many stars and forks: 1 cost
   • iced-x86-1.10.0 having many stars and forks implies it is safe: 20 cost
 
 Distrust Cost (higher is better): 50 cost

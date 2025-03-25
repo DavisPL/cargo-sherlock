@@ -11,11 +11,9 @@ Assumptions for Trusting:
   • ncurses-6.0.1 has many stars and forks: 13 cost
   • ncurses-6.0.1 having many stars and forks implies it is safe: 20 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • ncurses-6.0.1 has many side effects: 0 cost
-  • ncurses-6.0.1 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • ncurses-6.0.1 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: MEDIUM_SEVERITY
 

@@ -11,12 +11,11 @@ Assumptions for Trusting:
   • phonenumber-0.3.5+8.13.36 has many downloads: 4 cost
   • phonenumber-0.3.5+8.13.36 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • phonenumber-0.3.5+8.13.36 having a high severity label in RustSec implies it is unsafe: 10 cost
-  • memchr-2.7.4 has many side effects: 0 cost
+  • phonenumber-0.3.5+8.13.36 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/phonenumber-0.3.5+8.13.36.json
 +------------------------------------------------------------+

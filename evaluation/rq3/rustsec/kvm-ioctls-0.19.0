@@ -13,7 +13,6 @@ Assumptions for Trusting:
 Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
   • kvm-ioctls-0.19.0 failing a Miri test implies it is unsafe: 50 cost
-  • libc-0.2.171 has many side effects: 0 cost
 
 Severity Label: LOW_SEVERITY
 

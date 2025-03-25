@@ -86,9 +86,12 @@ def is_vulnerable(crate_version: str, patched_info: str) -> bool:
 def get_versions(dep_name: str):
     url = f"https://crates.io/api/v1/crates/{dep_name}/versions"
     headers = {"User-Agent": "reqwest"}
-    response = requests.get(url, headers=headers)
-    body = response.text
-    data = json.loads(body)
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+    except requests.exceptions.RequestException as e:
+        print(f"Request for {dep_name} failed: {e}")
+        return "error"
+    data = json.loads(response.text)
     if "errors" in data:
         return "error"
     versions = [v["num"] for v in data["versions"]]
@@ -118,8 +121,8 @@ def get_candidate_version_from_available(crate_name: str, threshold_str: str) ->
 
 def get_vulnerable_candidate_version(crate_name: str) -> Union[str, None]:
     """
-    For the given crate_name, iterate over all advisories from rustsec (data.txt)
-    and collect candidate vulnerable versions computed from the patched_info field.
+    For the given crate_name, iterate over the advisory records in data.txt and collect candidate
+    vulnerable versions computed from the patched_info field.
     
     For patched_info that provides a threshold version, query crates.io for available versions,
     then pick the highest available version that is strictly less than the threshold.
@@ -193,13 +196,20 @@ def run_sherlock_on_vulnerable_rustsec_crates():
         if candidate_version is None:
             print(f"Skipping {crate_name}: no candidate vulnerable version found.")
             return
-            output_file = os.path.join(output_dir, f"{crate_name}")
-            command = f"python3 sherlock.py trust {crate_name} -o {output_file}"
-        else:
-            output_file = os.path.join(output_dir, f"{crate_name}-{candidate_version}")
-            command = f"python3 sherlock.py trust {crate_name} {candidate_version} -o {output_file}"
-            print(f"Running: {command}")
-        result = subprocess.run(command, shell=True)
+        
+        output_file = os.path.join(output_dir, f"{crate_name}-{candidate_version}")
+        command = f"python3 sherlock.py trust {crate_name} {candidate_version} -o {output_file}"
+        print(f"Running: {command}")
+        
+        try:
+            result = subprocess.run(command, shell=True, timeout=300)
+        except subprocess.TimeoutExpired:
+            print(f"Command for {crate_name} timed out.")
+            with failed_lock:
+                with open("rustsec_failed.txt", "a") as f:
+                    f.write(crate_name + "\n")
+            return
+        
         if result.returncode != 0:
             print(f"Command for {crate_name} failed with return code {result.returncode}")
             with failed_lock:

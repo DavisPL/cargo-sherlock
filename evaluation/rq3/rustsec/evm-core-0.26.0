@@ -10,15 +10,10 @@ Trust Cost (lower is better): 21 cost
 Assumptions for Trusting:
   • evm-core-0.26.0 has many stars and forks: 1 cost
   • evm-core-0.26.0 having many stars and forks implies it is safe: 20 cost
-  • funty-2.0.0 has many downloads: 0 cost
-  • static_assertions-1.1.0 has many downloads: 0 cost
-  • byteorder-1.5.0 has many downloads: 0 cost
-  • crunchy-0.2.3 has many downloads: 0 cost
-  • hex-0.4.3 has many downloads: 0 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 100 cost
 Assumptions for Distrusting:
-  • evm-core-0.26.0 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • evm-core-0.26.0 is unsafe: 100 cost
 
 Severity Label: LOW_SEVERITY
 

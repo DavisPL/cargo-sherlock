@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • fil-ocl-0.19.6 has many downloads: 17 cost
   • fil-ocl-0.19.6 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • fil-ocl-0.19.6 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • fil-ocl-0.19.6 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: HIGH_SEVERITY
+Severity Label: MEDIUM_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/fil-ocl-0.19.6.json
 +------------------------------------------------------------+

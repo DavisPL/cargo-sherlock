@@ -10,35 +10,12 @@ Trust Cost (lower is better): 56 cost
 Assumptions for Trusting:
   • paillier-zk-0.3.0 has many downloads: 31 cost
   • paillier-zk-0.3.0 having many downloads implies it is safe: 25 cost
-  • digest-0.10.7 has many downloads: 0 cost
-  • crypto-common-0.1.6 has many downloads: 0 cost
-  • generic-array-1.2.0 has many downloads: 0 cost
-  • typenum-1.18.0 has many downloads: 0 cost
-  • bytemuck-1.22.0 has many downloads: 0 cost
-  • rand_core-0.9.3 has many downloads: 0 cost
-  • rand_core-0.9.3 has many stars and forks: 0 cost
-  • libc-0.2.171 has many downloads: 0 cost
-  • libc-0.2.171 has many stars and forks: 0 cost
-  • libm-0.2.11 has many downloads: 0 cost
-  • thiserror-2.0.12 has many downloads: 0 cost
-  • thiserror-2.0.12 has many stars and forks: 0 cost
-  • thiserror-impl-2.0.12 has many downloads: 0 cost
-  • thiserror-impl-2.0.12 has many stars and forks: 0 cost
-  • proc-macro2-1.0.94 has many downloads: 0 cost
-  • unicode-ident-1.0.18 has many downloads: 0 cost
-  • quote-1.0.40 has many downloads: 0 cost
-  • syn-2.0.100 has many downloads: 0 cost
-  • syn-2.0.100 has many stars and forks: 0 cost
-  • subtle-2.6.1 has many downloads: 0 cost
-  • zeroize-1.8.1 has many downloads: 0 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • paillier-zk-0.3.0 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
-  • rug-1.27.0 has many side effects: 0 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • paillier-zk-0.3.0 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/paillier-zk-0.3.0.json
 +------------------------------------------------------------+

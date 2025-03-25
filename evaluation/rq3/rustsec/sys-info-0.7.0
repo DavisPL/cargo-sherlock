@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • sys-info-0.7.0 has many downloads: 2 cost
   • sys-info-0.7.0 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 5 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • sys-info-0.7.0 having a critical severity label in RustSec implies it is unsafe: 5 cost
+  • sys-info-0.7.0 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/sys-info-0.7.0.json
 +------------------------------------------------------------+

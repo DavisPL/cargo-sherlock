@@ -10,9 +10,9 @@ Trust Cost (lower is better): 10 cost
 Assumptions for Trusting:
   • stream-cipher-0.99.99 having no side effects and having all safe dependencies implies it is safe: 10 cost
 
-Distrust Cost (higher is better): 60 cost
+Distrust Cost (higher is better): 100 cost
 Assumptions for Distrusting:
-  • stream-cipher-0.99.99 having an info label in RustSec implies it is unsafe: 60 cost
+  • stream-cipher-0.99.99 is unsafe: 100 cost
 
 Severity Label: SAFE
 

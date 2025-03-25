@@ -11,9 +11,10 @@ Assumptions for Trusting:
   • eyre-0.6.11 has many stars and forks: 2 cost
   • eyre-0.6.11 having many stars and forks implies it is safe: 20 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 71 cost
 Assumptions for Distrusting:
-  • eyre-0.6.11 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • eyre-0.6.11 has many side effects: 11 cost
+  • eyre-0.6.11 has many side effects implies it is unsafe: 60 cost
 
 Severity Label: LOW_SEVERITY
 

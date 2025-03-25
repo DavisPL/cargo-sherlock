@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • futures-intrusive-0.3.1 has many downloads: 1 cost
   • futures-intrusive-0.3.1 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 15 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • futures-intrusive-0.3.1 having a medium severity label in RustSec implies it is unsafe: 15 cost
+  • futures-intrusive-0.3.1 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/futures-intrusive-0.3.1.json
 +------------------------------------------------------------+

@@ -8,15 +8,14 @@ Score Range: 0 (Min) - 100 (Max)
 
 Trust Cost (lower is better): 22 cost
 Assumptions for Trusting:
-  • http-0.1.19 has many downloads: 0 cost
   • http-0.1.19 has many stars and forks: 2 cost
   • http-0.1.19 having many stars and forks implies it is safe: 20 cost
 
-Distrust Cost (higher is better): 5 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • http-0.1.19 having a critical severity label in RustSec implies it is unsafe: 5 cost
+  • http-0.1.19 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/http-0.1.19.json
 +------------------------------------------------------------+

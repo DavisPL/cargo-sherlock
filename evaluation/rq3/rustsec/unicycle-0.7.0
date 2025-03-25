@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • unicycle-0.7.0 has many downloads: 16 cost
   • unicycle-0.7.0 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • unicycle-0.7.0 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • unicycle-0.7.0 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: HIGH_SEVERITY
+Severity Label: MEDIUM_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/unicycle-0.7.0.json
 +------------------------------------------------------------+

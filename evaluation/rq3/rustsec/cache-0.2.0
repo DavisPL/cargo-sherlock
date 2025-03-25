@@ -11,12 +11,11 @@ Assumptions for Trusting:
   • cache-0.2.0 has many downloads: 34 cost
   • cache-0.2.0 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • cache-0.2.0 having a high severity label in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • cache-0.2.0 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: CRITICAL
+Severity Label: HIGH_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/cache-0.2.0.json
 +------------------------------------------------------------+

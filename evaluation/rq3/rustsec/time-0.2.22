@@ -8,13 +8,11 @@ Score Range: 0 (Min) - 100 (Max)
 
 Trust Cost (lower is better): 20 cost
 Assumptions for Trusting:
-  • time-0.2.22 has many downloads: 0 cost
   • time-0.2.22 has a past audit implies it is safe: 20 cost
 
-Distrust Cost (higher is better): 15 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • time-0.2.22 having a medium severity label in RustSec implies it is unsafe: 15 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • time-0.2.22 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: LOW_SEVERITY
 

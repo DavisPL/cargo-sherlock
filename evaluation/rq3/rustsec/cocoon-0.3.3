@@ -11,12 +11,11 @@ Assumptions for Trusting:
   • cocoon-0.3.3 has many downloads: 18 cost
   • cocoon-0.3.3 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 15 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • cocoon-0.3.3 having a medium severity label in RustSec implies it is unsafe: 15 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • cocoon-0.3.3 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: HIGH_SEVERITY
+Severity Label: MEDIUM_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/cocoon-0.3.3.json
 +------------------------------------------------------------+

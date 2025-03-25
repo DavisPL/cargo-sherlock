@@ -11,11 +11,11 @@ Assumptions for Trusting:
   • model-0.1.2 has many downloads: 12 cost
   • model-0.1.2 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • model-0.1.2 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • model-0.1.2 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: HIGH_SEVERITY
+Severity Label: MEDIUM_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/model-0.1.2.json
 +------------------------------------------------------------+

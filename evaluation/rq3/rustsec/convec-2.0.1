@@ -11,10 +11,9 @@ Assumptions for Trusting:
   • convec-2.0.1 has many downloads: 41 cost
   • convec-2.0.1 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • convec-2.0.1 having a high severity label in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • convec-2.0.1 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: CRITICAL
 

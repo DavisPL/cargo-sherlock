@@ -8,12 +8,11 @@ Score Range: 0 (Min) - 100 (Max)
 
 Trust Cost (lower is better): 20 cost
 Assumptions for Trusting:
-  • capnp-0.15.1 has many stars and forks: 0 cost
-  • capnp-0.15.1 having many stars and forks implies it is safe: 20 cost
+  • capnp-0.15.1 has a past audit implies it is safe: 20 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • capnp-0.15.1 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • capnp-0.15.1 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: LOW_SEVERITY
 

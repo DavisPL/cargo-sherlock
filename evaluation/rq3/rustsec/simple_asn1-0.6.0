@@ -10,28 +10,12 @@ Trust Cost (lower is better): 26 cost
 Assumptions for Trusting:
   • simple_asn1-0.6.0 has many downloads: 1 cost
   • simple_asn1-0.6.0 having many downloads implies it is safe: 25 cost
-  • num-bigint-0.4.6 has many downloads: 0 cost
-  • num-integer-0.1.46 has many downloads: 0 cost
-  • num-traits-0.2.19 has many downloads: 0 cost
-  • thiserror-2.0.12 has many downloads: 0 cost
-  • thiserror-impl-2.0.12 has many downloads: 0 cost
-  • thiserror-impl-2.0.12 has many stars and forks: 0 cost
-  • proc-macro2-1.0.94 has many downloads: 0 cost
-  • unicode-ident-1.0.18 has many downloads: 0 cost
-  • quote-1.0.40 has many downloads: 0 cost
-  • syn-2.0.100 has many downloads: 0 cost
-  • syn-2.0.100 has many stars and forks: 0 cost
-  • time-0.3.40 has many downloads: 0 cost
-  • deranged-0.4.0 has many downloads: 0 cost
-  • num-conv-0.1.0 has many downloads: 0 cost
-  • powerfmt-0.2.0 has many downloads: 0 cost
-  • time-core-0.1.4 has many downloads: 0 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 100 cost
 Assumptions for Distrusting:
-  • simple_asn1-0.6.0 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
+  • simple_asn1-0.6.0 is unsafe: 100 cost
 
-Severity Label: MEDIUM_SEVERITY
+Severity Label: LOW_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/simple_asn1-0.6.0.json
 +------------------------------------------------------------+

@@ -10,11 +10,9 @@ Trust Cost (lower is better): 5 cost
 Assumptions for Trusting:
   • vm-memory-0.12.1 having a current audit implies it is safe: 5 cost
 
-Distrust Cost (higher is better): 20 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • vm-memory-0.12.1 having a low severity label in RustSec implies it is unsafe: 20 cost
-  • libc-0.2.171 has many side effects: 0 cost
-  • winapi-0.3.9 has many side effects: 0 cost
+  • vm-memory-0.12.1 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: SAFE
 

@@ -15,8 +15,6 @@ Distrust Cost (higher is better): 70 cost
 Assumptions for Distrusting:
   • serde_yml-0.0.12 has many side effects: 10 cost
   • serde_yml-0.0.12 has many side effects implies it is unsafe: 60 cost
-  • libyml-0.0.5 has many side effects: 0 cost
-  • memchr-2.7.4 has many side effects: 0 cost
 
 Severity Label: LOW_SEVERITY
 

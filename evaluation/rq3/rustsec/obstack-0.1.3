@@ -11,9 +11,9 @@ Assumptions for Trusting:
   • obstack-0.1.3 has many downloads: 36 cost
   • obstack-0.1.3 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • obstack-0.1.3 having a high severity label in RustSec implies it is unsafe: 10 cost
+  • obstack-0.1.3 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: CRITICAL
 

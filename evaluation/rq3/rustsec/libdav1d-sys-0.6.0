@@ -11,12 +11,11 @@ Assumptions for Trusting:
   • libdav1d-sys-0.6.0 has many downloads: 16 cost
   • libdav1d-sys-0.6.0 having many downloads implies it is safe: 25 cost
 
-Distrust Cost (higher is better): 10 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • libdav1d-sys-0.6.0 being uncategorized and having a vulnerability tag in RustSec implies it is unsafe: 10 cost
-  • libc-0.2.171 has many side effects: 0 cost
+  • libdav1d-sys-0.6.0 failing a Miri test implies it is unsafe: 50 cost
 
-Severity Label: HIGH_SEVERITY
+Severity Label: MEDIUM_SEVERITY
 
 Full details about the crate can be found at: /logs/cache/libdav1d-sys-0.6.0.json
 +------------------------------------------------------------+
