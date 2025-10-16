@@ -13,10 +13,7 @@ Assumptions for Trusting:
 
 Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • supply-chain-trust-example-crate-000063-1.0.2 has many side effects: 0 cost
   • supply-chain-trust-example-crate-000063-1.0.2 failing a Miri test implies it is unsafe: 50 cost
-  • libc-0.2.171 has many side effects: 0 cost
-  • linux-raw-sys-0.9.3 has many side effects: 0 cost
 
 Severity Label: CRITICAL
 

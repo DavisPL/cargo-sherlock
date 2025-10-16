@@ -9,42 +9,46 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 670,
+  "downloads": 171.51,
   "num_side_effects": 0,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "serde",
-      "1.0.219"
+      "1.0.228"
+    ],
+    [
+      "serde_core",
+      "1.0.228"
     ],
     [
       "serde_derive",
-      "1.0.219"
+      "1.0.228"
     ],
     [
       "proc-macro2",
-      "1.0.94"
+      "1.0.101"
     ],
     [
       "unicode-ident",
-      "1.0.18"
+      "1.0.19"
     ],
     [
       "quote",
-      "1.0.40"
+      "1.0.41"
     ],
     [
       "syn",
-      "2.0.100"
+      "2.0.106"
     ],
     [
       "serde_spanned",
-      "0.6.8"
+      "1.0.3"
     ],
     [
       "toml_datetime",
-      "0.6.8"
+      "0.7.3"
     ]
   ],
   "passed_audit": false,

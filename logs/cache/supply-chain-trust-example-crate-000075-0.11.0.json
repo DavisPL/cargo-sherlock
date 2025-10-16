@@ -9,14 +9,14 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 100,
+  "downloads": 171.51,
   "num_side_effects": 0,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "cfg-if",
-      "1.0.0"
+      "1.0.3"
     ],
     [
       "cpufeatures",
@@ -24,7 +24,7 @@
     ],
     [
       "libc",
-      "0.2.171"
+      "0.2.177"
     ],
     [
       "digest",
@@ -36,11 +36,11 @@
     ],
     [
       "generic-array",
-      "1.2.0"
+      "1.2.1"
     ],
     [
       "typenum",
-      "1.18.0"
+      "1.19.0"
     ]
   ],
   "passed_audit": false,

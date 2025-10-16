@@ -9,66 +9,34 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 104,
+  "downloads": 171.51,
   "num_side_effects": 2292,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "bitflags",
-      "2.9.0"
+      "2.9.4"
     ],
     [
       "errno",
-      "0.3.10"
+      "0.3.14"
     ],
     [
       "libc",
-      "0.2.171"
+      "0.2.177"
     ],
     [
       "windows-sys",
-      "0.59.0"
+      "0.61.2"
     ],
     [
-      "windows-targets",
-      "0.53.0"
-    ],
-    [
-      "windows_aarch64_gnullvm",
-      "0.53.0"
-    ],
-    [
-      "windows_aarch64_msvc",
-      "0.53.0"
-    ],
-    [
-      "windows_i686_gnu",
-      "0.53.0"
-    ],
-    [
-      "windows_i686_gnullvm",
-      "0.53.0"
-    ],
-    [
-      "windows_i686_msvc",
-      "0.53.0"
-    ],
-    [
-      "windows_x86_64_gnu",
-      "0.53.0"
-    ],
-    [
-      "windows_x86_64_gnullvm",
-      "0.53.0"
-    ],
-    [
-      "windows_x86_64_msvc",
-      "0.53.0"
+      "windows-link",
+      "0.2.1"
     ],
     [
       "linux-raw-sys",
-      "0.9.3"
+      "0.11.0"
     ]
   ],
   "passed_audit": false,

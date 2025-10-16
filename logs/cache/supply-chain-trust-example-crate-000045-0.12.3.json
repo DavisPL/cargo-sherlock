@@ -9,14 +9,14 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 103,
+  "downloads": 171.51,
   "num_side_effects": 50,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "lock_api",
-      "0.4.12"
+      "0.4.14"
     ],
     [
       "scopeguard",
@@ -24,63 +24,31 @@
     ],
     [
       "parking_lot_core",
-      "0.9.10"
+      "0.9.12"
     ],
     [
       "cfg-if",
-      "1.0.0"
+      "1.0.3"
     ],
     [
       "libc",
-      "0.2.171"
+      "0.2.177"
     ],
     [
       "redox_syscall",
-      "0.5.10"
+      "0.5.18"
     ],
     [
       "bitflags",
-      "2.9.0"
+      "2.9.4"
     ],
     [
       "smallvec",
-      "1.14.0"
+      "1.15.1"
     ],
     [
-      "windows-targets",
-      "0.53.0"
-    ],
-    [
-      "windows_aarch64_gnullvm",
-      "0.53.0"
-    ],
-    [
-      "windows_aarch64_msvc",
-      "0.53.0"
-    ],
-    [
-      "windows_i686_gnu",
-      "0.53.0"
-    ],
-    [
-      "windows_i686_gnullvm",
-      "0.53.0"
-    ],
-    [
-      "windows_i686_msvc",
-      "0.53.0"
-    ],
-    [
-      "windows_x86_64_gnu",
-      "0.53.0"
-    ],
-    [
-      "windows_x86_64_gnullvm",
-      "0.53.0"
-    ],
-    [
-      "windows_x86_64_msvc",
-      "0.53.0"
+      "windows-link",
+      "0.2.1"
     ]
   ],
   "passed_audit": false,

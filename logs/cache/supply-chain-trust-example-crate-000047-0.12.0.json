@@ -9,7 +9,7 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 102,
+  "downloads": 171.51,
   "num_side_effects": 0,
   "failed_rudra": false,
   "audits": [],
@@ -20,11 +20,11 @@
     ],
     [
       "generic-array",
-      "1.2.0"
+      "1.2.1"
     ],
     [
       "typenum",
-      "1.18.0"
+      "1.19.0"
     ]
   ],
   "passed_audit": false,

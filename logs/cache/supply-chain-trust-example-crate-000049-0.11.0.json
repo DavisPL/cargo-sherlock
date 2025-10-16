@@ -7,20 +7,20 @@
   "developers": [
     "muhammad-hassnain"
   ],
-  "stars": 718,
-  "forks": 245,
-  "downloads": 300,
+  "stars": 0,
+  "forks": 0,
+  "downloads": 171.51,
   "num_side_effects": 0,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "hybrid-array",
-      "0.3.0"
+      "0.4.5"
     ],
     [
       "typenum",
-      "1.18.0"
+      "1.19.0"
     ]
   ],
   "passed_audit": false,
@@ -34,6 +34,6 @@
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,
-    "time_seconds": 0.19
+    "time_seconds": 0.14
   }
 }

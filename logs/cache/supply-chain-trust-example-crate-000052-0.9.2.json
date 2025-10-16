@@ -9,7 +9,7 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 659,
+  "downloads": 171.51,
   "num_side_effects": 3,
   "failed_rudra": false,
   "audits": [],
@@ -25,6 +25,6 @@
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,
-    "time_seconds": 0.46
+    "time_seconds": 0.27
   }
 }

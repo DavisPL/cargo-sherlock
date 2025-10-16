@@ -9,18 +9,18 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 673,
+  "downloads": 171.51,
   "num_side_effects": 10,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "hermit-abi",
-      "0.5.0"
+      "0.5.2"
     ],
     [
       "libc",
-      "0.2.171"
+      "0.2.177"
     ]
   ],
   "passed_audit": false,

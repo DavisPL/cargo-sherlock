@@ -9,14 +9,14 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 107,
+  "downloads": 171.51,
   "num_side_effects": 12,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "semver",
-      "1.0.26"
+      "1.0.27"
     ]
   ],
   "passed_audit": false,

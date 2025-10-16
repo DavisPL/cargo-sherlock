@@ -9,26 +9,26 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 1176,
+  "downloads": 171.51,
   "num_side_effects": 27,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "proc-macro2",
-      "1.0.94"
+      "1.0.101"
     ],
     [
       "unicode-ident",
-      "1.0.18"
+      "1.0.19"
     ],
     [
       "quote",
-      "1.0.40"
+      "1.0.41"
     ],
     [
       "syn",
-      "2.0.100"
+      "2.0.106"
     ]
   ],
   "passed_audit": false,

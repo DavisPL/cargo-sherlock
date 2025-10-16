@@ -9,38 +9,38 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 97,
-  "num_side_effects": 243,
+  "downloads": 171.51,
+  "num_side_effects": 235,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "zerocopy",
-      "0.8.23"
+      "0.8.27"
     ],
     [
       "zerocopy-derive",
-      "0.8.23"
+      "0.8.27"
     ],
     [
       "proc-macro2",
-      "1.0.94"
+      "1.0.101"
     ],
     [
       "unicode-ident",
-      "1.0.18"
+      "1.0.19"
     ],
     [
       "quote",
-      "1.0.40"
+      "1.0.41"
     ],
     [
       "syn",
-      "2.0.100"
+      "2.0.106"
     ]
   ],
   "passed_audit": false,
-  "num_unsafe_calls": 227,
+  "num_unsafe_calls": 219,
   "miri": false,
   "past_audit": false,
   "miri_details": {

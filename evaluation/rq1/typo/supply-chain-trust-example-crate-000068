@@ -14,7 +14,6 @@ Assumptions for Trusting:
 Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
   • supply-chain-trust-example-crate-000068-1.6.1 failing a Miri test implies it is unsafe: 50 cost
-  • tokio-1.44.1 has many side effects: 0 cost
 
 Severity Label: CRITICAL
 

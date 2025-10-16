@@ -9,22 +9,22 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 657,
+  "downloads": 171.51,
   "num_side_effects": 56,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "once_cell",
-      "1.21.1"
+      "1.21.3"
     ],
     [
       "rustls-pki-types",
-      "1.11.0"
+      "1.12.0"
     ],
     [
       "rustls-webpki",
-      "0.103.0"
+      "0.103.7"
     ],
     [
       "untrusted",
@@ -36,7 +36,7 @@
     ],
     [
       "zeroize",
-      "1.8.1"
+      "1.8.2"
     ]
   ],
   "passed_audit": false,

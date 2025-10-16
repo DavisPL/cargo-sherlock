@@ -11,10 +11,9 @@ Assumptions for Trusting:
   • supply-chain-trust-example-crate-000077-1.1.0 having all trusted developers implies it is safe: 5 cost
   • muhammad-hassnain is trusted: 70 cost
 
-Distrust Cost (higher is better): 72 cost
+Distrust Cost (higher is better): 50 cost
 Assumptions for Distrusting:
-  • supply-chain-trust-example-crate-000077-1.1.0 has many side effects: 12 cost
-  • supply-chain-trust-example-crate-000077-1.1.0 has many side effects implies it is unsafe: 60 cost
+  • supply-chain-trust-example-crate-000077-1.1.0 failing a Miri test implies it is unsafe: 50 cost
 
 Severity Label: CRITICAL
 

@@ -1,0 +1,172 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "INFOUnsound",
+    "Vulnerability"
+  ],
+  "developers": [
+    "carllerche",
+    "Darksonn",
+    "github:tokio-rs:core"
+  ],
+  "stars": 29761,
+  "forks": 2789,
+  "downloads": 413629989,
+  "num_side_effects": 1220,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.18.1 -> 1.18.4",
+      "version": "",
+      "notes": "This looks to be a minor release primarily to fix a security-related Windows\\nissue plus some reorganization around lazy initialization. Altogether nothing\\namiss here.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.2.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.29.1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "1.19.2 -> 1.20.5",
+      "version": "",
+      "notes": "Reviewed on http://fxrev.dev/904806"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "1.20.5 -> 1.25.2",
+      "version": "",
+      "notes": "Reviewed at https://fxrev.dev/906324"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.35.0 -> 1.35.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.35.1 -> 1.37.0",
+      "version": "",
+      "notes": "Cursory review, but new and changed uses of `unsafe` code look fine, as far as I can see."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.40.0 -> 1.42.0",
+      "version": "",
+      "notes": "Changes to unsafe code look reasonable. There are new unsafe APIs but their safety requirements are documented.\\nThis release has a vulnerability (https://rustsec.org/advisories/RUSTSEC-2025-0023) but it is not a regression relative\\nto 1.40.0. Update to 1.42.1 to fix that.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.42.0 -> 1.42.1",
+      "version": "",
+      "notes": "Plausible fix to https://rustsec.org/advisories/RUSTSEC-2025-0023 ."
+    }
+  ],
+  "dependencies": [
+    [
+      "backtrace",
+      "0.3.76"
+    ],
+    [
+      "addr2line",
+      "0.25.1"
+    ],
+    [
+      "gimli",
+      "0.32.3"
+    ],
+    [
+      "cfg-if",
+      "1.0.3"
+    ],
+    [
+      "libc",
+      "0.2.177"
+    ],
+    [
+      "miniz_oxide",
+      "0.8.9"
+    ],
+    [
+      "adler2",
+      "2.0.1"
+    ],
+    [
+      "object",
+      "0.37.3"
+    ],
+    [
+      "memchr",
+      "2.7.6"
+    ],
+    [
+      "rustc-demangle",
+      "0.1.26"
+    ],
+    [
+      "windows-link",
+      "0.2.1"
+    ],
+    [
+      "io-uring",
+      "0.7.10"
+    ],
+    [
+      "bitflags",
+      "2.9.4"
+    ],
+    [
+      "mio",
+      "1.0.4"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "windows-sys",
+      "0.61.2"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "slab",
+      "0.4.11"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 702,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

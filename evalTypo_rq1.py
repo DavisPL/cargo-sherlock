@@ -34,6 +34,9 @@ os.makedirs(output_dir, exist_ok=True)
 for i in range(1, 101):
     crate_name = f"supply-chain-trust-example-crate-{i:06d}"
     output_file = os.path.join(output_dir, crate_name)
+    if os.path.exists(output_file):
+        print(f"Output for {crate_name} already exists. Skipping.")
+        continue
     command = f"python3 sherlock.py trust {crate_name} -o {output_file}"
     
     print(f"Running command: {command}")

@@ -9,14 +9,14 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 1174,
+  "downloads": 171.51,
   "num_side_effects": 7,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "unicode-ident",
-      "1.0.18"
+      "1.0.19"
     ]
   ],
   "passed_audit": false,

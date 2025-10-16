@@ -9,9 +9,8 @@ Score Range: 0 (Min) - 100 (Max)
 Trust Cost (lower is better): 30 cost
 Assumptions for Trusting:
   • supply-chain-trust-example-crate-000050-0.11.0 having no side effects and having all safe dependencies implies it is safe: 10 cost
-  • hybrid-array-0.3.0 having no side effects and having all safe dependencies implies it is safe: 10 cost
-  • typenum-1.18.0 has many downloads: 0 cost
-  • typenum-1.18.0 having no side effects and having all safe dependencies implies it is safe: 10 cost
+  • hybrid-array-0.4.5 having no side effects and having all safe dependencies implies it is safe: 10 cost
+  • typenum-1.19.0 having no side effects and having all safe dependencies implies it is safe: 10 cost
 
 Distrust Cost (higher is better): 100 cost
 Assumptions for Distrusting:

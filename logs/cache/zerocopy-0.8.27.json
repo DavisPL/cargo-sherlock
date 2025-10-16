@@ -1,0 +1,130 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "jswrenn",
+    "joshlf"
+  ],
+  "stars": 2039,
+  "forks": 125,
+  "downloads": 296355559,
+  "num_side_effects": 195,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.7.0-alpha.1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.7.0-alpha.1 -> 0.6.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.7.0-alpha.1 -> 0.6.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.7.0-alpha.1 -> 0.7.8",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.7.8 -> 0.7.32",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.7.32 -> 0.8.14",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "",
+      "version": "0.6.1",
+      "notes": "Reviewed in CL 592374439"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-1",
+      "delta": "",
+      "version": "0.8.14",
+      "notes": "Reviewed in CL 714029246"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.7.32",
+      "notes": "This crate is `no_std` so doesn't use any side-effectful std functions. It\\ncontains quite a lot of `unsafe` code, however. I verified portions of this. It\\nalso has a large, thorough test suite. The project claims to run tests with\\nMiri to have stronger soundness checks, and also claims to use formal\\nverification tools to prove correctness.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.7.31 -> 0.7.32",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.7.32 -> 0.7.34",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "zerocopy-derive",
+      "0.8.27"
+    ],
+    [
+      "proc-macro2",
+      "1.0.101"
+    ],
+    [
+      "unicode-ident",
+      "1.0.19"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.106"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 171,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 124,
+    "failed": 0,
+    "ignored": 9,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 3.0
+  }
+}

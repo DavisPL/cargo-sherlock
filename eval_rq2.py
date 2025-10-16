@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-# List of crates with placeholder versions. Replace 'VERSION_PLACEHOLDER' with the actual versions.
+# List of crates with placeholder versions.
 crates = [
     ("serde_yaml", "0.9.33"),
     ("serde_yml", "0.0.12"),

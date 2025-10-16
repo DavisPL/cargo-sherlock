@@ -8,9 +8,9 @@
     "bluss",
     "jswrenn"
   ],
-  "stars": 2865,
-  "forks": 318,
-  "downloads": 412292014,
+  "stars": 3012,
+  "forks": 334,
+  "downloads": 660234178,
   "num_side_effects": 18,
   "failed_rudra": false,
   "audits": [
@@ -20,6 +20,13 @@
       "delta": "0.10.5 -> 0.12.1",
       "version": "",
       "notes": "Minimal `unsafe` usage. Few blocks that existed looked reasonable. Does what it\\nsays on the tin: lots of iterators.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.12.1 -> 0.14.0",
+      "version": "",
+      "notes": "Lots of new iterators and shuffling some things around. Some new unsafe code but\\nit's well-documented and well-tested. Nothing suspicious.\\n"
     },
     {
       "organization": "google",
@@ -64,6 +71,13 @@
       "notes": ""
     },
     {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.14.0 -> 0.13.0",
+      "version": "",
+      "notes": "This *downgrade* only removes `unsafe` code."
+    },
+    {
       "organization": "mozilla",
       "criteria": "safe-to-deploy",
       "delta": "0.10.3 -> 0.10.5",
@@ -77,7 +91,7 @@
       "1.15.0"
     ]
   ],
-  "passed_audit": false,
+  "passed_audit": true,
   "num_unsafe_calls": 10,
   "miri": false,
   "past_audit": true,
@@ -88,6 +102,6 @@
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,
-    "time_seconds": 4.86
+    "time_seconds": 4.14
   }
 }
