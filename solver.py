@@ -8,6 +8,14 @@ import helpers.developer_data as developer_data
 from helpers.assumption import Assumption, CrateAssumptionSummary
 from helpers.crate_data import CrateVersion
 from helpers.rustsectry import worst_label
+from rich.console import Console
+from rich.panel import Panel
+from rich.table import Table
+from rich.text import Text
+from rich.columns import Columns
+from rich import box
+from rich.rule import Rule
+
 
 MAX_MINUTES = 5 # timeout for the solver call
 
@@ -314,6 +322,80 @@ def solve_negative_mintrust(crate: CrateVersion, metadata: dict, horn_solver: bo
     solution = solve_mintrust(crate, variables, assumptions, conclusion, horn_solver)
     return solution
 
+SEVERITY_PALETTE = {
+    "SAFE":        {"border": "green",  "bg": "#B7E4B4"},
+    "LOW":         {"border": "yellow3","bg": "#E8F28C"},
+    "MEDIUM":      {"border": "cyan3",  "bg": "#BFE1F4"},
+    "HIGH":        {"border": "magenta","bg": "#CDB3DB"},
+    "CRITICAL":    {"border": "red",    "bg": "#F1A7A0"},
+}
+
+def _severity_style(label_name: str):
+    key = label_name.upper()
+    return SEVERITY_PALETTE.get(key, {"border": "white", "bg": "black"})
+
+def _bar(value: int, width: int = 20, color: str = "white"):
+    value = max(0, min(100, int(value)))
+    filled = int(round((value/100) * width))
+    empty = width - filled
+    return f"[{color}]" + "█" * filled + f"[/{color}]" + "░" * empty + f" {value}"
+
+def _assumptions_panel(title: str, assumptions, color: str) -> Panel:
+    tbl = Table.grid(padding=(0, 1))
+    tbl.add_column(justify="left")
+    if assumptions:
+        for a in assumptions:
+            tbl.add_row(f"[{color}]• {a}[/{color}]")
+    else:
+        tbl.add_row("[dim](None)[/dim]")
+    return Panel(tbl, title=title, border_style=color, box=box.ROUNDED, padding=(1, 2))
+
+def print_report_pretty(
+    crate, pos_model_result, neg_model_result, label, trust_cost, distrust_cost, file=None
+):
+    """
+    Pretty terminal report with conditional coloring.
+    If `file` is provided (open handle), writes plain text there; otherwise prints with color.
+    """
+    console = Console(file=file, record=False, soft_wrap=True)
+
+    sev = _severity_style(label.name)
+    # header = Panel.fit(
+    #     Text(f"Analysis Report for {crate}", style="bold"),
+    #     border_style=sev["border"],
+    #     box=box.DOUBLE,
+    #     style=f"black on {sev['bg']}",
+    # )
+    # console.print(header)
+
+    # Summary with mini bars
+    stats = Table.grid(padding=(0,1))
+    # stats.add_column(justify="right", ratio=1, style="bold")
+    stats.add_column(justify="left", style = "bold")
+    title = Text(f"Analysis Report for {crate}", style="bold black" )
+
+    stats.add_row("Cost Range:", "0 (Min) — 100 (Max)")
+    stats.add_row("Trust Cost (lower is better):", _bar(trust_cost, color="green"))
+    stats.add_row("Distrust Cost (higher is better):", _bar(distrust_cost, color="red"))
+    stats.add_row("Severity Label:", f"[bold]{label.name}[/bold]")
+
+    console.print(Panel(stats,title=title, border_style="white", box=box.ROUNDED, padding=(0, 2)))
+    console.print(Rule(style="dim"))
+
+    # Two assumption columns
+    trust_panel = _assumptions_panel("Assumptions for Trusting", pos_model_result.assumptions_made, "green")
+    distrust_panel = _assumptions_panel("Assumptions for Distrusting", neg_model_result.assumptions_made, "red")
+    console.print(Columns([trust_panel, distrust_panel], expand=True, equal=True))
+
+    console.print()
+    console.print(
+        Panel.fit(
+            Text(f"Details: /logs/cache/{crate.name}-{crate.version}.json", style="dim"),
+            border_style="grey50",
+            box=box.MINIMAL,
+        )
+    )
+
 
 def complete_analysis(crate: CrateVersion, horn_solver: bool, file = None):
     """
@@ -346,43 +428,53 @@ def complete_analysis(crate: CrateVersion, horn_solver: bool, file = None):
     distrust_cost = sum(a.cost for a in neg_model_result.assumptions_made)
     label = costs.combine_costs(trust_cost, distrust_cost)
 
-    border = "+" + "-" * 60 + "+"
-    header = f"|{'Analysis Report for ' + str(crate):^60}|"
+    print_report_pretty(
+        crate,
+        pos_model_result,
+        neg_model_result,
+        label,
+        trust_cost,
+        distrust_cost,
+        file=file,  # or pass an open file handle to write there
+    )
 
-    report_lines = []
-    report_lines.append(border)
-    report_lines.append(header)
-    report_lines.append(border)
-    report_lines.append("")
-    report_lines.append("Assumptions Summary:")
-    report_lines.append("Score Range: 0 (Min) - 100 (Max)")
-    report_lines.append("")
-    report_lines.append(f"Trust Cost (lower is better): {trust_cost} cost")
-    report_lines.append("Assumptions for Trusting:")
-    if pos_model_result.assumptions_made:
-        for a in pos_model_result.assumptions_made:
-            report_lines.append(f"  • {a}")
-    else:
-        report_lines.append("  (None)")
+    # border = "+" + "-" * 60 + "+"
+    # header = f"|{'Analysis Report for ' + str(crate):^60}|"
 
-    report_lines.append("")
-    report_lines.append(f"Distrust Cost (higher is better): {distrust_cost} cost")
-    report_lines.append("Assumptions for Distrusting:")
-    if neg_model_result.assumptions_made:
-        for a in neg_model_result.assumptions_made:
-            report_lines.append(f"  • {a}")
-    else:
-        report_lines.append("  (None)")
+    # report_lines = []
+    # report_lines.append(border)
+    # report_lines.append(header)
+    # report_lines.append(border)
+    # report_lines.append("")
+    # report_lines.append("Assumptions Summary:")
+    # report_lines.append("Cost Range: 0 (Min) - 100 (Max)")
+    # report_lines.append("")
+    # report_lines.append(f"Trust Cost (lower is better): {trust_cost} cost")
+    # report_lines.append("Assumptions for Trusting:")
+    # if pos_model_result.assumptions_made:
+    #     for a in pos_model_result.assumptions_made:
+    #         report_lines.append(f"  • {a}")
+    # else:
+    #     report_lines.append("  (None)")
 
-    report_lines.append("")
-    report_lines.append(f"Severity Label: {label.name}")
-    report_lines.append("")
-    report_lines.append(f"Full details about the crate can be found at: /logs/cache/{crate.name}-{crate.version}.json")
-    report_lines.append(border)
-    report_lines.append("")
+    # report_lines.append("")
+    # report_lines.append(f"Distrust Cost (higher is better): {distrust_cost} cost")
+    # report_lines.append("Assumptions for Distrusting:")
+    # if neg_model_result.assumptions_made:
+    #     for a in neg_model_result.assumptions_made:
+    #         report_lines.append(f"  • {a}")
+    # else:
+    #     report_lines.append("  (None)")
 
-    final_report = "\n".join(report_lines)
-    print(final_report, file=file)
+    # report_lines.append("")
+    # report_lines.append(f"Severity Label: {label.name}")
+    # report_lines.append("")
+    # report_lines.append(f"Full details about the crate can be found at: /logs/cache/{crate.name}-{crate.version}.json")
+    # report_lines.append(border)
+    # report_lines.append("")
+
+    # final_report = "\n".join(report_lines)
+    # print(final_report, file=file)
 
 
 

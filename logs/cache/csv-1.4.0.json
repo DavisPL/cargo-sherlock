@@ -1,0 +1,71 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "BurntSushi"
+  ],
+  "stars": 1860,
+  "forks": 233,
+  "downloads": 125545546,
+  "num_side_effects": 24,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "csv-core",
+      "0.1.13"
+    ],
+    [
+      "memchr",
+      "2.7.6"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "serde_core",
+      "1.0.228"
+    ],
+    [
+      "serde_derive",
+      "1.0.228"
+    ],
+    [
+      "proc-macro2",
+      "1.0.102"
+    ],
+    [
+      "unicode-ident",
+      "1.0.20"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 4,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 141,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 59.04
+  }
+}
