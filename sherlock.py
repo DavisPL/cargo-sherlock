@@ -35,14 +35,15 @@ def main():
         parser.print_help()
         sys.exit(0)
 
-    # Fetch the latest version if not provided
-    if args.version is None:
-        print(f"Version not specified, fetching the Latest version for analysis.")
-        args.version = get_latest_version(args.crate_name)
-        print(f"Latest version of {args.crate_name} is {args.version}.")
-    else:
-        if not verify_version(args.crate_name, args.version):
-            sys.exit(1)
+    if not args.path:
+        # Fetch the latest version if not provided
+        if args.version is None:
+            print(f"Version not specified, fetching the Latest version for analysis.")
+            args.version = get_latest_version(args.crate_name)
+            print(f"Latest version of {args.crate_name} is {args.version}.")
+        else:
+            if not verify_version(args.crate_name, args.version):
+                sys.exit(1)
 
     # Handle the 'log' subcommand
     if args.command == 'log':

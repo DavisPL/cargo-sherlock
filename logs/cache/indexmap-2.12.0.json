@@ -1,0 +1,160 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "bluss",
+    "cuviper"
+  ],
+  "stars": 2211,
+  "forks": 184,
+  "downloads": 688330644,
+  "num_side_effects": 25,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.9.3",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.9.3 -> 2.1.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "2.1.0 -> 2.2.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "",
+      "version": "2.7.1",
+      "notes": "Grepped for `-i cipher`, `-i crypto`, `'\\\\bfs\\\\b'`, `'\\\\bnet\\\\b'`\\nand there were no hits.\\n\\nThere is a little bit of `unsafe` Rust code - the audit can be found at\\nhttps://chromium-review.googlesource.com/c/chromium/src/+/6187726/2\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "2.7.1 -> 2.8.0",
+      "version": "",
+      "notes": "No `unsafe` introduced or affected in:\\n* `indexmap_with_default!` and `indexset_with_default!` macros\\n* New `PartialEq` implementations\\n* `fn slice_eq` in `util.rs`\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "",
+      "version": "2.2.6",
+      "notes": "Reviewed in CL 629033781"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.8.2 -> 1.9.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.9.1 -> 1.9.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.2.6 -> 2.5.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.2.6 -> 2.7.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.8.0 -> 2.11.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.8.0 -> 2.9.0",
+      "version": "",
+      "notes": "Doc update, a new API, one carefully annotated unsafe code block with all preconditions checked"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.8.1 -> 1.9.1",
+      "version": "",
+      "notes": "I'm satisfied that the assertion guarding the new unsafe block is correct."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.9.2 -> 1.9.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "2.0.0 -> 2.1.0",
+      "version": "",
+      "notes": "- Replaces an `unsafe` block with a safe alternative."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "2.8.0 -> 2.9.0",
+      "version": "",
+      "notes": "New `unsafe` code inside the `get_disjoint_mut` implementation is for obtaining\\nmutable references to `Bucket`s inside a mutable `Slice`. The implementation\\ntakes `&mut self` and correctly enforces that the requested indices are unique,\\nwhich makes the mutable pointer indexing sound because we are guaranteed that no\\nother mutable borrows exist outside this method, and the indexing won't produce\\ntwo mutable pointers to the same slice entry.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "2.11.4 -> 2.12.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.16.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 15,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 39,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 1.01
+  }
+}

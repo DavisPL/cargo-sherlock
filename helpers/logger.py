@@ -721,6 +721,9 @@ def get_potential_functions(file_path):
 
 def download_crate(crate_name: str, version: str):
     # Construct the output file name
+    if not os.path.exists("../processing"):
+        os.makedirs("../processing")
+
     output_file = f"../processing/{crate_name}-{version}.tar.gz"
 
     # Construct the URL for downloading

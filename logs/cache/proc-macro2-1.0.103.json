@@ -1,0 +1,351 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "dtolnay"
+  ],
+  "stars": 875,
+  "forks": 128,
+  "downloads": 790133768,
+  "num_side_effects": 9,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.51 -> 1.0.57",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.59 -> 1.0.63",
+      "version": "",
+      "notes": "This is a routine update for new nightly features and new syntax popping up on\\nnightly, nothing out of the ordinary.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.0.26",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.0.29",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.0.49",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.0.79",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.0.49 -> 1.0.56",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.0.56 -> 1.0.59",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.0.59 -> 1.0.66",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.0.66 -> 1.0.69",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.0.79 -> 1.0.86",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "",
+      "version": "1.0.78",
+      "notes": "Grepped for \\\"crypt\\\", \\\"cipher\\\", \\\"fs\\\", \\\"net\\\" - there were no hits\\n(except for a benign \\\"fs\\\" hit in a doc comment)\\n\\nNotes from the `unsafe` review can be found in https://crrev.com/c/5385745.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.0.69 -> 1.0.76",
+      "version": "",
+      "notes": "1.0.69 has been previously audited as \\\"safe-to-run\\\",\\n\\\"does-not-implement-crypto\\\" - see\\nhttps://github.com/google/rust-crate-audits/blob/c2d49cb6e80bb817f569debecf846161dcebd88c/audits.toml#L3939-L3979\\nThe \\\"1.0.69 -> 1.0.76\\\" delta meets the same criteria.\\n\\nThis is an incremental/delta audit - we don't claim any particular `ub-risk-N`\\nlevel for the baseline or for the final version.  OTOH note that additional\\nuses of `unsafe` have been reviewed in https://crrev.com/c/5178771 and the\\n**delta**  was evaluated as `ub-risk-2`.  There are some new `unsafe` blocks\\nbut they seem sound - additional `unsafe` audit notes can be found in\\nhttps://crrev.com/c/5178771/comment/32dbab4e_c7402137 and\\nhttps://crrev.com/c/5178771/4/third_party/rust/chromium_crates_io/vendor/proc-macro2-1.0.76/src/wrapper.rs#783\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.78 -> 1.0.79",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.79 -> 1.0.80",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.80 -> 1.0.81",
+      "version": "",
+      "notes": "Comment changes only"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.81 -> 1.0.82",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.82 -> 1.0.83",
+      "version": "",
+      "notes": "Substantive change is replacing String with Box<str>, saving memory."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.83 -> 1.0.84",
+      "version": "",
+      "notes": "Only doc comment changes in `src/lib.rs`."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.84 -> 1.0.85",
+      "version": "",
+      "notes": "Test-only changes."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.85 -> 1.0.86",
+      "version": "",
+      "notes": "Comment-only changes in `build.rs`.\\nReordering of `Cargo.toml` entries.\\nJust bumping up the version number in `lib.rs`.\\nConfig-related changes in `test_size.rs`.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.86 -> 1.0.87",
+      "version": "",
+      "notes": "No new unsafe interactions."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.87 -> 1.0.89",
+      "version": "",
+      "notes": "Biggest change is adding error handling in build.rs.\\nSome config related changes in wrapper.rs.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.89 -> 1.0.92",
+      "version": "",
+      "notes": "I looked at the delta and the previous discussion at\\nhttps://chromium-review.googlesource.com/c/chromium/src/+/5385745/3#message-a8e2813129fa3779dab15acede408ee26d67b7f3\\nand the changes look okay to me (including the `unsafe fn from_str_unchecked`\\nchanges in `wrapper.rs`).\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.92 -> 1.0.93",
+      "version": "",
+      "notes": "No `unsafe`-related changes."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.0.93 -> 1.0.94",
+      "version": "",
+      "notes": "Minor doc changes and clippy lint adjustments+fixes."
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.49 -> 1.0.47",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.52 -> 1.0.54",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "1.0.39",
+      "notes": "`proc-macro2` acts as either a thin(-ish) wrapper around the std-provided\\n`proc_macro` crate, or as a fallback implementation of the crate, depending on\\nwhere it is used.\\n\\nIf using this crate on older versions of rustc (1.56 and earlier), it will\\ntemporarily replace the panic handler while initializing in order to detect if\\nit is running within a `proc_macro`, which could lead to surprising behaviour.\\nThis should not be an issue for more recent compiler versions, which support\\n`proc_macro::is_available()`.\\n\\nThe `proc-macro2` crate's fallback behaviour is not identical to the complex\\nbehaviour of the rustc compiler (e.g. it does not perform unicode normalization\\nfor identifiers), however it behaves well enough for its intended use-case\\n(tests and scripts processing rust code).\\n\\n`proc-macro2` does not use unsafe code, however exposes one `unsafe` API to\\nallow bypassing checks in the fallback implementation when constructing\\n`Literal` using `from_str_unchecked`. This was intended to only be used by the\\n`quote!` macro, however it has been removed\\n(https://github.com/dtolnay/quote/commit/f621fe64a8a501cae8e95ebd6848e637bbc79078),\\nand is likely completely unused. Even when used, this API shouldn't be able to\\ncause unsoundness.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.39 -> 1.0.43",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.43 -> 1.0.49",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.49 -> 1.0.51",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.57 -> 1.0.59",
+      "version": "",
+      "notes": "Enabled on Wasm"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.63 -> 1.0.66",
+      "version": "",
+      "notes": "Removed special support for some really old Rust versions"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.37 -> 1.0.41",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.49 -> 1.0.51",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.51 -> 1.0.52",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.54 -> 1.0.56",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.59 -> 1.0.60",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.66 -> 1.0.67",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.67 -> 1.0.70",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.70 -> 1.0.71",
+      "version": "",
+      "notes": "New `unsafe` blocks are all inside `unsafe fn`s, and are added to make the\\nsafety contracts in the code clearer (instead of using the `unsafe fn`'s\\nimplicit `unsafe` block).\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.71 -> 1.0.74",
+      "version": "",
+      "notes": "Build script changes are to replace `RUSTFLAGS` string parsing with a probe file\\nthat is compiled with whatever `RUSTC` is set to (but the build script already\\nrelies on the `RUSTC` environment variable for inspecting the compiler version).\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.81 -> 1.0.82",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.94 -> 1.0.95",
+      "version": "",
+      "notes": "Refactors code handling paths to source files, but AFAICT none of the affected\\ncode involves filesystem access.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "unicode-ident",
+      "1.0.22"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 7,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 3,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.13
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "zhuxiujia"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 176842,
+  "num_side_effects": 86,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "flume",
+      "0.11.1"
+    ],
+    [
+      "spin",
+      "0.10.0"
+    ],
+    [
+      "indexmap",
+      "2.12.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.16.0"
+    ],
+    [
+      "parking_lot",
+      "0.12.5"
+    ],
+    [
+      "lock_api",
+      "0.4.14"
+    ],
+    [
+      "scopeguard",
+      "1.2.0"
+    ],
+    [
+      "parking_lot_core",
+      "0.9.12"
+    ],
+    [
+      "cfg-if",
+      "1.0.4"
+    ],
+    [
+      "libc",
+      "0.2.177"
+    ],
+    [
+      "redox_syscall",
+      "0.5.18"
+    ],
+    [
+      "bitflags",
+      "2.10.0"
+    ],
+    [
+      "smallvec",
+      "1.15.1"
+    ],
+    [
+      "windows-link",
+      "0.2.1"
+    ],
+    [
+      "serde",
+      "1.0.228"
+    ],
+    [
+      "serde_core",
+      "1.0.228"
+    ],
+    [
+      "serde_derive",
+      "1.0.228"
+    ],
+    [
+      "proc-macro2",
+      "1.0.103"
+    ],
+    [
+      "unicode-ident",
+      "1.0.22"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 79,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.31
+  }
+}

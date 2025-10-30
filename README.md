@@ -54,12 +54,12 @@ We provide you with step-by-step instructions and scripts to replicate the resul
 ### RQ1: Synthetic Tuposquatted Attacks
 
 ### RQ2: Real-World Supply Chain Risks
-We will replicate the experiment and the regenerate the table [Table 4] presented in the paper. The source code for faster_log crate is not publicly available on crates.io, therefore, we have included the results for that crate cached in the `evaluation/rq2` directory.
+We will replicate the experiment and the regenerate the table [Table 4] presented in the paper. The source code for faster_log crate is not publicly available on crates.io, therefore, we have included the source code for it in the `local_crates` directory. For faster_log, we will use the local path to analyze it, for other crates, we will fetch them from crates.io.
 
 ```Bash
 python3 eval_rq2.py
 ```
-
+This script will run Cargo-Sherlock on serde_yaml-0.9 vs serde_yml
 
 ### RQ3:
 

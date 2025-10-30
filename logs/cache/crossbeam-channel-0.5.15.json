@@ -1,0 +1,140 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "INFOUnsound",
+    "Vulnerability"
+  ],
+  "developers": [
+    "jeehoonkang",
+    "Amanieu",
+    "taiki-e",
+    "github:crossbeam-rs:admins"
+  ],
+  "stars": 8138,
+  "forks": 514,
+  "downloads": 293154273,
+  "num_side_effects": 98,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.4 -> 0.5.8",
+      "version": "",
+      "notes": "This diff does what it says on the tin for this version range, notably fixing a\\nrace condition, improving handling of durations, and additionally swapping out a\\nspin lock with a lock from the standard library. Minor bits of `unsafe` code\\nare modified but that's expected given the nature of this crate.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.5.7",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.5.7 -> 0.5.8",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.4 -> 0.5.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.12 -> 0.5.13",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.7 -> 0.5.8",
+      "version": "",
+      "notes": "Reviewed the fix, previous versions indeed had were able to trigger a race condition"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.8 -> 0.5.11",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.11 -> 0.5.12",
+      "version": "",
+      "notes": "Minimal change fixing a memory leak."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.13 -> 0.5.14",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.14 -> 0.5.15",
+      "version": "",
+      "notes": "Fixes a regression from an earlier version which could lead to a double free"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.6 -> 0.5.7",
+      "version": "",
+      "notes": "Fixes wrapping overflows for large timeouts."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.8 -> 0.5.9",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.9 -> 0.5.10",
+      "version": "",
+      "notes": "Changes to `unsafe` code are to use `MaybeUninit::assume_init_drop` (which is\\nnow usable with the new MSRV) instead of dropping via casting.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.12 -> 0.5.13",
+      "version": "",
+      "notes": "Macro changes look fine."
+    }
+  ],
+  "dependencies": [
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 94,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}
