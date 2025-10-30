@@ -18,7 +18,7 @@ install: $(VENV)/bin/activate cargo-scan/Cargo.toml
 	cargo +$(NIGHTLY_VERSION) build --manifest-path cargo-scan/Cargo.toml
 
 	# Please enter your GitHub personal access token:
-	# Instructions on how to do this can be found in the README.md file (installation step 4).
+	# Instructions on how to do this can be found in the README.md file (installation step 5).
 	@read token; \
 	if [ ! -z "$$token" ]; then \
 		echo "$$token" > helpers/token.txt; \

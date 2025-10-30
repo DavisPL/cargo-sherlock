@@ -6,6 +6,7 @@ from helpers.assumption import CrateVersion
 from pprint import pprint
 from helpers.logger import get_latest_version,verify_version
 import json 
+import os
 
 def main():
     parser = argparse.ArgumentParser(description='Rust Holmes Sherlock: A tool to analye Rust crates')
@@ -18,6 +19,7 @@ def main():
     log_parser.add_argument('version', type=str, nargs='?', default=None, help='Version of the crate (optional)')
     log_parser.add_argument('-u', '--update', action='store_true', help='Update information by running scrapper.py, getCrates.py, and aggregator.py')
     log_parser.add_argument('-o', '--output', type=str, help='Output file path to save crate information')
+    log_parser.add_argument('-p', '--path', type=str, help='Path to the local crate source code (optional)')
 
     # Subcommand for trust score
     trust_parser = subparsers.add_parser('trust', help='Solve using assumptions to assign a trust score to the crate')
@@ -25,6 +27,7 @@ def main():
     trust_parser.add_argument('version', type=str, nargs='?', default=None, help='Version of the crate (optional)')
     trust_parser.add_argument('-o', '--output', type=str, help='Output file path to save trust score information')
     trust_parser.add_argument('--no-horn', action='store_true', help='Use the naive solver instead of the Horn solver; not recommended for large crates')
+    trust_parser.add_argument('-p', '--path', type=str, help='Path to the local crate source code (optional)')
 
     args = parser.parse_args()
 
@@ -57,7 +60,10 @@ def main():
         # Get logging information about the crate
         crate = CrateVersion(args.crate_name, args.version)
         print(f"Getting logging information About crate {crate}...")
-        crate_information = crate_data.get_crate_metadata(crate)
+        if args.path:
+            crate_information = crate_data.get_crate_metadata(crate, local=args.path)
+        else:
+            crate_information = crate_data.get_crate_metadata(crate)
         print(f"Logging information for {args.crate_name}-{args.version}:")
         pprint(crate_information)
 
@@ -72,15 +78,25 @@ def main():
     elif args.command == 'trust':
         from solver import complete_analysis
         use_horn_solver = not args.no_horn
-        crate = CrateVersion(args.crate_name, args.version)
+        crate = CrateVersion(args.crate_name, args.version) 
+       
+        if not args.path:
+            args.path = False
+        else:
+            # validate the path exists, it should be an absolute path
+            result = os.path.isabs(args.path)
+            if not result:
+                print(f"The provided path {args.path} is not an absolute path.")
+                sys.exit(1)
+
         # If output is provided, open the file; otherwise, print to console
         if args.output:
             with open(args.output, 'w') as output_file:
                 print(f"Solving for required assumptions to trust {crate}...", file=output_file)
-                complete_analysis(crate, horn_solver = use_horn_solver, file = output_file)  # Pass the file object to complete_analysis
+                complete_analysis(crate, horn_solver = use_horn_solver, file = output_file, local = args.path)  # Pass the file object to complete_analysis
         else:
             print(f"Solving for required assumptions to trust {crate}...")
-            complete_analysis(crate, horn_solver = use_horn_solver, file = sys.stdout)  
+            complete_analysis(crate, horn_solver = use_horn_solver, file = sys.stdout, local = args.path)
 
 if __name__ == "__main__":
     main()

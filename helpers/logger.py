@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 import requests
 import regex as re
 from packaging import version
@@ -16,6 +17,8 @@ from tqdm import tqdm
 import copy
 import sys
 from packaging.version import parse
+from email.utils import parseaddr
+
 
 def get_github_repo_stats(username: str, repository: str, token_file: str = 'token.txt') -> dict | None:
     if not os.path.exists(token_file):
@@ -49,20 +52,28 @@ def get_github_repo_stats(username: str, repository: str, token_file: str = 'tok
         print(f"Failed to retrieve data: {response.status_code}")
         return None
 
-def get_stars_and_forks(crate_name: str) -> dict | None:
+def get_stars_and_forks(crate_name: str , local) -> dict | None:
+
+    repository_url = ""
+
+    if local!= False:
+        metadata_file_path = os.path.join(local, "metadata.json")
+        with open(metadata_file_path, "r", encoding="utf-8") as f:
+            metadata = json.load(f)
+            repository_url = metadata["packages"][0].get("repository", "")
+            if repository_url == "":
+                return None
+    else:
     # Get the repository URL for the crate
-    url = f"https://crates.io/api/v1/crates/{crate_name}"
-    response = requests.get(url)
-    data = response.json()
-    repository_url = data['crate']['repository']
-    if repository_url == None:
-        return None
-    if '.git' in repository_url:
-        repository_url = repository_url.rstrip('.git')
+        url = f"https://crates.io/api/v1/crates/{crate_name}"
+        response = requests.get(url)
+        data = response.json()
+        repository_url = data['crate']['repository']
+        if repository_url == None: 
+            repository_url = repository_url.rstrip('.git')
 
     regex = r"https:\/\/github\.com\/([^\/]+)\/([^\/]+)";
     match = re.match(regex, repository_url)
-
 
     if match:
         username = match.group(1)
@@ -560,10 +571,38 @@ def is_audited(crate_name, version=None):
         return False,{}
     return True, vessel
 
-def get_author(crate_name: str):
+def get_author(crate_name: str, local):
     '''
     query the crates.io page and get the author name
     '''
+    if local!= False:
+        try:
+            result = subprocess.run(["cargo", "metadata", "--format-version=1", "--no-deps"],
+                                    cwd=local, capture_output=True, text=True, check=True)
+            with open(Path(local) / "metadata.json", "w", encoding="utf-8") as f:
+                f.write(result.stdout)
+
+            metadata = json.loads(result.stdout)
+            authors = []
+            for package in metadata["packages"]:
+                if package["name"] == crate_name:
+                    authors = package.get("authors", [])
+                    break
+            contributors = []
+            for a in authors:
+                temp = []
+                name, email = parseaddr(a)
+                login = email.split("@", 1)[0]  
+                temp.append("local")
+                temp.append(name)
+                temp.append(login)
+                temp.append("local")
+                contributors.append(temp)
+            return contributors
+        except Exception as e:
+            print(f"Error retrieving metadata: {e}")
+            return []
+
     url = f"https://crates.io/api/v1/crates/{crate_name}/owners"
     response = requests.get(url)
 
@@ -587,10 +626,13 @@ def get_author(crate_name: str):
     else:
         return "Failed to retrieve crate data: HTTP Status Code {}".format(response.status_code)
 
-def get_downloads(crate_name: str):    
+def get_downloads(crate_name: str , local):    
     '''
     Query the crates.io API to get total download counts for a crate.
     '''
+    if local!= False: # using average downlaods a crate gets in 3 months as a proxy for downloads for local crates
+        return 171
+
     url = f"https://crates.io/api/v1/crates/{crate_name}"
     response = requests.get(url)
     if response.status_code == 200:
@@ -718,16 +760,16 @@ def extract_and_delete():
                 print(f"Failed to delete {file}: {e}")  
     os.chdir(current_directory)
 
-def rudra(crate_name, version):
-    '''
-    This function will run rudra on the crate and give the output.
-    Run ./Users/hassnain/Desktop/Research/code-sherlock/Rudra/docker-helper/docker-cargo-rudra /crate_name-version
-    '''
-    # download_crate(crate_name, version)
-    # extract_and_delete()
-    path = f"/Users/hassnain/Desktop/SQ24/289C/project/Rudra/docker-helper/docker-cargo-rudra {crate_name}-{version}"
-    result = subprocess.run(path, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    return result.stdout
+# def rudra(crate_name, version):
+#     '''
+#     This function will run rudra on the crate and give the output.
+#     Run .[absolute_path]/Rudra/docker-helper/docker-cargo-rudra /crate_name-version
+#     '''
+#     # download_crate(crate_name, version)
+#     # extract_and_delete()
+#     path = f"[absolute_path]/Rudra/docker-helper/docker-cargo-rudra {crate_name}-{version}"
+#     result = subprocess.run(path, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+#     return result.stdout
 
 def version_audit(audit_info, target):
     '''
@@ -841,13 +883,15 @@ def repo_analysis(crate_name , target, last_audited_release):
         print("****************************")
         # print(commit)
 
-def run_cargo_and_save(crate_name, crate_version):
+def run_cargo_and_save(crate_name, crate_version, local):
     if not os.path.exists("../experiments"):
         os.mkdir("../experiments") 
 
     original_directory = os.getcwd()
-    # crate_name = crate_name.replace('-', '_') # idk why this was here, but this was casuing the cargo-scan to crash, because this modified the crate-name that was supplied to cargo-scan and than cargo-scan would not be able to find the directory and cause a crash. This lead to that 2 columns passed, expeced 8 columns error. Commenting this fixed this. This might cause issues later. But the issue is yet to be encounterd. 
-    crate_path = os.path.join(original_directory, "../processing", f"{crate_name}-{crate_version}")
+    if local != False:
+        crate_path = local
+    else:
+        crate_path = os.path.join(original_directory, "../processing", f"{crate_name}-{crate_version}")
     output_file_path = os.path.join(original_directory, "../experiments", f"{crate_name}-{crate_version}.csv")
 
     cargo_scan_directory = os.path.join(original_directory, "../cargo-scan")
@@ -876,11 +920,15 @@ def get_dependencies(crate_name, version):
         print(f"Failed to fetch dependencies for {crate_name} version {version}")
         return []
 
-def run_miri_and_save(crate_name, crate_version):
+def run_miri_and_save(crate_name, crate_version , local):
     # Define paths
     base_dir = os.path.abspath(os.path.join(os.getcwd(), ".."))
     experiments_dir = os.path.join(base_dir, "experiments")
-    crate_dir = os.path.join(base_dir, "processing", f"{crate_name}-{crate_version}")
+    crate_dir = ""
+    if local != False:
+        crate_dir = local
+    else:
+        crate_dir = os.path.join(base_dir, "processing", f"{crate_name}-{crate_version}")
     output_file_path = os.path.join(experiments_dir, f"{crate_name}-{crate_version}_miri_output.csv")
 
     # Ensure the experiments directory exists
@@ -1079,8 +1127,8 @@ def parse_miri_summary(output_file_path):
 
     return summary
 
-
-def logger(crate_name: str, version: str, job_id: str):
+# not providing the type for local because it is used as a boolean if False, else it is used as a path.
+def logger(crate_name: str, version: str, job_id: str , local): 
     '''
     This function will log the results of solidifier in a file.
     '''
@@ -1126,7 +1174,7 @@ def logger(crate_name: str, version: str, job_id: str):
 
         writer.writerow(["************************************"])
 
-        author = get_author(crate_name)
+        author = get_author(crate_name, local)
         writer.writerow(["event", "timestamp", "name" , "username" , "url"])
         for entry in author:
             writer.writerow([
@@ -1140,7 +1188,7 @@ def logger(crate_name: str, version: str, job_id: str):
         writer.writerow(["************************************"])
 
         # information =  get_stars_and_forks("anyhow")
-        information = get_stars_and_forks(crate_name)
+        information = get_stars_and_forks(crate_name , local)
         writer.writerow(["event", "timestamp", "stars", "forks" , "watchers"])
         if information != None:
             # print(information)
@@ -1151,7 +1199,7 @@ def logger(crate_name: str, version: str, job_id: str):
             data.append({ "event": "github_stats", "timestamp": "-", "stars": 0, "forks": 0, "watchers": 0})
         writer.writerow(["************************************"])
 
-        downloads = get_downloads(crate_name)
+        downloads = get_downloads(crate_name, local)
         writer.writerow(["event", "timestamp", "downloads"])
         writer.writerow([
             "Downloads",
@@ -1161,9 +1209,12 @@ def logger(crate_name: str, version: str, job_id: str):
         data.append({ "event": "Downloads", "timestamp": "-", "downloads": downloads})
         writer.writerow(["************************************"])
         
-        download_crate(crate_name, version)
-        extract_and_delete()
-        file_name = run_cargo_and_save(crate_name, version)
+        if local!= False:
+            pass
+        else:
+            download_crate(crate_name, version)
+            extract_and_delete()
+        file_name = run_cargo_and_save(crate_name, version, local)
         total,flagged,unsafe= get_potential_functions(file_name)
         writer.writerow(["event", "timestamp", "total", "flagged"])
         writer.writerow([
@@ -1175,7 +1226,7 @@ def logger(crate_name: str, version: str, job_id: str):
         ])
         data.append({ "event": "Side Effects", "timestamp": "-", "total": total, "flagged": flagged , "unsafe": unsafe})
         writer.writerow(["************************************"])
-        dependency_tree = build_dependency_tree(crate_name, version)
+        dependency_tree = build_dependency_tree(crate_name, version , local)
         writer.writerow(["event", "timestamp", "dependency_tree"])
         writer.writerow([
             "dependency_tree",
@@ -1184,20 +1235,24 @@ def logger(crate_name: str, version: str, job_id: str):
         ])
         data.append({ "event": "dependency_tree", "timestamp": "-", "dependency_tree": dependency_tree})
         writer.writerow(["************************************"])
-        writer.writerow(["Rudra", "timestamp",])
-        rud = rudra(crate_name , version)
-        writer.writerow([
-            rud
-        ])
-        data.append({ "event": "Rudra", "timestamp": "-", "output": rud})
-        miri_file = run_miri_and_save(crate_name, version)
+        # writer.writerow(["Rudra", "timestamp",])
+        # rud = rudra(crate_name , version)
+        # writer.writerow([
+        #     rud
+        # ])
+        # data.append({ "event": "Rudra", "timestamp": "-", "output": rud})
+        miri_file = run_miri_and_save(crate_name, version, local)
         miri = parse_miri_summary(miri_file)
         writer.writerow(["event", "timestamp", "status", "passed", "failed", "ignored", "measured", "filtered_out", "time_seconds"])
         writer.writerow(["Miri","-",miri["status"], miri["passed"], miri["failed"], miri["ignored"], miri["measured"], miri["filtered_out"], miri["time_seconds"]
         ])
         data.append({ "event": "Miri", "timestamp": "-", "status": miri["status"], "passed": miri["passed"], "failed": miri["failed"], "ignored": miri["ignored"], "measured": miri["measured"], "filtered_out": miri["filtered_out"], "time_seconds": miri["time_seconds"]})
         os.chdir(current_directory)
-        shutil.rmtree(f"processing/{crate_name}-{version}")
+        if local != False:
+            # remove the metadata.json file created for local analysis
+            os.remove(Path(local) / "metadata.json")
+        else:
+            shutil.rmtree(f"processing/{crate_name}-{version}")
 
         return data
 
@@ -1371,7 +1426,17 @@ def verify_version(crate_name, version):
         return False
     return True
 
-def get_dependencies(crate_name, version):
+def get_dependencies(crate_name, version, local):
+
+    if local != False:
+        metadata_path = os.path.join(local, "metadata.json")
+        with open(metadata_path, 'r') as f:
+            metadata = json.load(f)
+            for crate in metadata["packages"]:
+                if crate["name"] == crate_name and crate["version"] == version:
+                    return crate["dependencies"]
+        return []
+
     try:
         url = f'https://crates.io/api/v1/crates/{crate_name}/{version}/dependencies'
         response = requests.get(url)
@@ -1380,7 +1445,7 @@ def get_dependencies(crate_name, version):
         print(f"Failed to fetch dependencies for {crate_name} version {version}")
         return []
 
-def build_dependency_tree(crate_name, version):
+def build_dependency_tree(crate_name, version, local):
     global dependency_cache
     
     # Check if the dependency tree for this crate is already cached
@@ -1388,7 +1453,7 @@ def build_dependency_tree(crate_name, version):
         return copy.deepcopy(dependency_cache[(crate_name,version)])
     
     tree = {}
-    dependencies = get_dependencies(crate_name, version)
+    dependencies = get_dependencies(crate_name, version , local)
     
     for dep in dependencies:
         # print("working" , dep)
@@ -1400,7 +1465,7 @@ def build_dependency_tree(crate_name, version):
         sub_dep_version = get_latest_version(sub_dep_name)
         
         # Recursively build the dependency tree for this sub-dependency
-        tree[(sub_dep_name, sub_dep_version)] = build_dependency_tree(sub_dep_name, sub_dep_version)
+        tree[(sub_dep_name, sub_dep_version)] = build_dependency_tree(sub_dep_name, sub_dep_version , False)
     
     # Cache the computed dependency tree for the current crate
     dependency_cache[(crate_name,version)] = copy.deepcopy(tree)

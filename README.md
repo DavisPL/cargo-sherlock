@@ -1,5 +1,6 @@
-# Cargo-Sherlock 🕵️
+# Cargo-Sherlock Artifact 🕵️
 `Cargo-Sherlock` (alternative name RHS for Rust Sherlock Holmes) is a Python-based tool designed to enhance the security of Rust projects by leveraging different metadata information about Rust crates. It is an automated reasoning tool that attempts to determine the safety of Rust crates by modeling trust. 
+This repository contains the artifact for paper[] submitted to FORMALISE 2026. 
 
 ## Installation
 
@@ -9,37 +10,59 @@ For the installation, you can either follow the steps below or download our pre-
 ```Bash
 git clone --recurse-submodules https://github.com/muhammad-hassnain/cargo-sherlock-artifact
 ```
-2. Run `rustup update` to ensure you have the latest version of Rust (or install it via the [official website]((https://www.rust-lang.org/tools/install))).
+2. Install Rust via the [official website](https://www.rust-lang.org/tools/install). After installing Rust, you can verify the installation by running:
 ```Bash
-rustup update
+rustc --version
 ```
-3. Run `make` to create a Python virtual environment, install all Python dependencies, activate the virtual environment, and build cargo-scan.
+This should display the installed Rust version.
+
+3. Ensure you have Python 3 installed. You can verify your Python installation by running:
+```Bash
+python3 --version
+```
+This should display the installed Python version. If not installed, you can download it from the [official website](https://www.python.org/downloads/).
+
+4. Run `make` to create a Python virtual environment, this will install all Python dependencies, activate the virtual environment, and build cargo-scan.
 ```Bash
 make
 ```
-4. Generate a GitHub personal access token. Go to the [token page](https://github.com/settings/tokens/new) and select Generate new token (classic). Then, name your token, select an expiration date, and grant the token at least the `public_repo` scope by checking the box. Finally, create and copy your token, pasting it into the file `helpers/token.txt`.
 
-5. You can activate the python virtual environment by running: 
+This should take 3-5 minutes and will prompt you for your GitHub personal access token (see step 5 below).
+
+5. You can Generate a GitHub personal access token from [token page](https://github.com/settings/tokens/new). Please select Generate new token (classic). Then, name your token, select an expiration date, and grant the token at least the `public_repo` scope by checking the box. Finally, create and copy your token and paste it. In case, you didn't provide a token at installation time, you can create the file `helpers/token.txt` and paste your token there later.
+
+6. You can activate the python virtual environment by running: 
 ```bash
 source .venv/bin/activate 
 ```
+You should now see a `(.venv)` prefix in your terminal indicating that the virtual environment is active.
 
 You can check your installation is successful by running:
 ```bash
 python3 sherlock.py trust anyhow 1.0.97
 ```
-You should see the output of the tool for the crate `anyhow-1.0.97`.
+You should see something like:
+ 
+![image here](output.png "Screenshot from 10/30")
 
-#TODO[add an image]
 
-## Usage
-To run the tool, run the Python interpreter on `sherlock.py`, supplying the crate name and version(optional) you would like to analyze. Additionally, you can use various flags to control its behaviour. The tool supports two modes log and trust. You will have to specify the mode while using it. 
+## Replication Instructions
 
-```bash 
-python3 sherlock.py trust <crate_name> 
+
+We provide you with step-by-step instructions and scripts to replicate the results for each research question (RQ) presented in the paper.
+
+### RQ1: Synthetic Tuposquatted Attacks
+
+### RQ2: Real-World Supply Chain Risks
+We will replicate the experiment and the regenerate the table [Table 4] presented in the paper. The source code for faster_log crate is not publicly available on crates.io, therefore, we have included the results for that crate cached in the `evaluation/rq2` directory.
+
+```Bash
+python3 eval_rq2.py
 ```
-The above command will run the tool in trust mode for specified crate. Since no version is provided, it will use the latest version by default. For `log` mode, you can run:
 
-```bash 
-python3 sherlock.py log <crate_name>
-```
+
+### RQ3:
+
+### RQ4:
+
+

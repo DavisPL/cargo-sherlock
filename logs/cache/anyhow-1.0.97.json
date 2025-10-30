@@ -7,9 +7,9 @@
   "developers": [
     "dtolnay"
   ],
-  "stars": 5815,
-  "forks": 150,
-  "downloads": 299818164,
+  "stars": 6249,
+  "forks": 172,
+  "downloads": 171,
   "num_side_effects": 77,
   "failed_rudra": false,
   "audits": [
@@ -226,13 +226,6 @@
     {
       "organization": "zcash",
       "criteria": "safe-to-deploy",
-      "delta": "1.0.82 -> 1.0.83",
-      "version": "",
-      "notes": ""
-    },
-    {
-      "organization": "zcash",
-      "criteria": "safe-to-deploy",
       "delta": "1.0.56 -> 1.0.61",
       "version": "",
       "notes": "Update does not introduce new code. Minor build script changes look fine."
@@ -285,6 +278,20 @@
       "delta": "1.0.79 -> 1.0.82",
       "version": "",
       "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.82 -> 1.0.83",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.95 -> 1.0.97",
+      "version": "",
+      "notes": ""
     }
   ],
   "dependencies": [],
@@ -299,6 +306,6 @@
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,
-    "time_seconds": 0.54
+    "time_seconds": 0.49
   }
 }

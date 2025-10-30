@@ -397,7 +397,7 @@ def print_report_pretty(
     )
 
 
-def complete_analysis(crate: CrateVersion, horn_solver: bool, file = None):
+def complete_analysis(crate: CrateVersion, horn_solver: bool, file = None , local=False ):
     """
     Performs a complete analysis for a given crate. Prints results to the specified file (or stdout if
     no file is specified).
@@ -421,7 +421,7 @@ def complete_analysis(crate: CrateVersion, horn_solver: bool, file = None):
 
     logger.info(f"Performing complete analysis for {crate}")
 
-    crate_metadata = crate_data.get_crate_metadata(crate)
+    crate_metadata = crate_data.get_crate_metadata(crate ,local=local)
     pos_model_result = solve_positive_mintrust(crate, crate_metadata, horn_solver)
     neg_model_result = solve_negative_mintrust(crate, crate_metadata, horn_solver)
     trust_cost = sum(a.cost for a in pos_model_result.assumptions_made)

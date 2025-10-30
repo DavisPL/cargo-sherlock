@@ -24,7 +24,7 @@ def pretty_print_summary(summary):
     pp = pprint.PrettyPrinter(indent=2)
     pp.pprint(summary)
 
-def get_crate_metadata(crate: CrateVersion) -> dict:
+def get_crate_metadata(crate: CrateVersion , local=False) -> dict:
     """
     Returns the metadata for a given crate.
     """
@@ -39,7 +39,7 @@ def get_crate_metadata(crate: CrateVersion) -> dict:
         print("Cache file not found, running cargo sherlock on " + crate.name + "-" + crate.version + "...")
 
     # runs cargo sherlock
-    crate_info = logger.logger(crate.name, crate.version, "exp")
+    crate_info = logger.logger(crate.name, crate.version, "exp" , local=local)
     audit_summary = create_audit_summary(crate_info,crate)
 
     if isinstance(audit_summary, collections.defaultdict):

@@ -1366,6 +1366,12 @@ criteria = "safe-to-deploy"
 delta = "2.7.0 -> 2.9.4"
 notes = "Tweaks to the macro, nothing out of order."
 
+[[audits.bitmaps]]
+who = "Nick Fitzgerald <fitzgen@gmail.com>"
+criteria = "safe-to-deploy"
+version = "2.1.0"
+notes = "No ambient I/O. Minimal unsafe, purely related to simd ISA extensions and\nobviously correct with only local reasoning.\n"
+
 [[audits.block-buffer]]
 who = "Benjamin Bouvier <public@benj.me>"
 criteria = "safe-to-deploy"
@@ -1449,6 +1455,11 @@ who = "Dan Gohman <dev@sunfishcode.online>"
 criteria = "safe-to-deploy"
 delta = "3.4.1 -> 3.4.4"
 
+[[audits.cap-fs-ext]]
+who = "Dan Gohman <dev@sunfishcode.online>"
+criteria = "safe-to-deploy"
+delta = "3.4.4 -> 3.4.5"
+
 [[audits.cap-net-ext]]
 who = "Dan Gohman <dev@sunfishcode.online>"
 criteria = "safe-to-deploy"
@@ -1468,6 +1479,11 @@ delta = "3.4.0 -> 3.4.1"
 who = "Dan Gohman <dev@sunfishcode.online>"
 criteria = "safe-to-deploy"
 delta = "3.4.1 -> 3.4.4"
+
+[[audits.cap-net-ext]]
+who = "Dan Gohman <dev@sunfishcode.online>"
+criteria = "safe-to-deploy"
+delta = "3.4.4 -> 3.4.5"
 
 [[audits.cap-primitives]]
 who = "Dan Gohman <dev@sunfishcode.online>"
@@ -1512,6 +1528,11 @@ delta = "3.4.0 -> 3.4.1"
 who = "Dan Gohman <dev@sunfishcode.online>"
 criteria = "safe-to-deploy"
 delta = "3.4.1 -> 3.4.4"
+
+[[audits.cap-primitives]]
+who = "Dan Gohman <dev@sunfishcode.online>"
+criteria = "safe-to-deploy"
+delta = "3.4.4 -> 3.4.5"
 
 [[audits.cap-rand]]
 who = "Alex Crichton <alex@alexcrichton.com>"
@@ -1551,6 +1572,11 @@ who = "Dan Gohman <dev@sunfishcode.online>"
 criteria = "safe-to-deploy"
 delta = "3.4.1 -> 3.4.4"
 
+[[audits.cap-rand]]
+who = "Dan Gohman <dev@sunfishcode.online>"
+criteria = "safe-to-deploy"
+delta = "3.4.4 -> 3.4.5"
+
 [[audits.cap-std]]
 who = "Dan Gohman <dev@sunfishcode.online>"
 criteria = "safe-to-deploy"
@@ -1594,6 +1620,11 @@ delta = "3.4.0 -> 3.4.1"
 who = "Dan Gohman <dev@sunfishcode.online>"
 criteria = "safe-to-deploy"
 delta = "3.4.1 -> 3.4.4"
+
+[[audits.cap-std]]
+who = "Dan Gohman <dev@sunfishcode.online>"
+criteria = "safe-to-deploy"
+delta = "3.4.4 -> 3.4.5"
 
 [[audits.cap-tempfile]]
 who = "Dan Gohman <dev@sunfishcode.online>"
@@ -1656,6 +1687,11 @@ delta = "3.4.0 -> 3.4.1"
 who = "Dan Gohman <dev@sunfishcode.online>"
 criteria = "safe-to-deploy"
 delta = "3.4.1 -> 3.4.4"
+
+[[audits.cap-time-ext]]
+who = "Dan Gohman <dev@sunfishcode.online>"
+criteria = "safe-to-deploy"
+delta = "3.4.4 -> 3.4.5"
 
 [[audits.capstone]]
 who = "Alex Crichton <alex@alexcrichton.com>"
@@ -2020,6 +2056,12 @@ who = "Alex Crichton <alex@alexcrichton.com>"
 criteria = "safe-to-deploy"
 delta = "0.1.0 -> 0.1.4"
 notes = "Nothing out of the ordinary for a crate finding MSVC tooling."
+
+[[audits.fixedbitset]]
+who = "Nick Fitzgerald <fitzgen@gmail.com>"
+criteria = "safe-to-deploy"
+version = "0.4.2"
+notes = "No ambient I/O. Uses some `unsafe`, but the uses look good and are guarded by\nrelevant assertions, although could use some comments and some slight\nrefactoring into helpers to dedupe unsafe blocks in my personal opinion.\n"
 
 [[audits.flate2]]
 who = "Andrew Brown <andrew.brown@intel.com>"
@@ -3293,6 +3335,11 @@ who = "Pat Hickey <phickey@fastly.com>"
 criteria = "safe-to-deploy"
 version = "1.4.1"
 
+[[audits.sized-chunks]]
+who = "Nick Fitzgerald <fitzgen@gmail.com>"
+criteria = "safe-to-deploy"
+delta = "0.6.5 -> 0.7.0"
+
 [[audits.slab]]
 who = "Pat Hickey <phickey@fastly.com>"
 criteria = "safe-to-deploy"
@@ -3691,6 +3738,12 @@ who = "Alex Crichton <alex@alexcrichton.com>"
 criteria = "safe-to-run"
 delta = "0.236.0 -> 0.237.0"
 notes = "The Bytecode Alliance is the author of this crate"
+
+[[audits.wasm-compose]]
+who = "Nick Fitzgerald <fitzgen@gmail.com>"
+criteria = "safe-to-deploy"
+delta = "0.236.0 -> 0.238.1"
+notes = "Don't know why I have to do this certification even though we have a wildcard audit for this crate because it is authored by the Bytecode Alliance..."
 
 [[audits.wasm-compose]]
 who = "Alex Crichton <alex@alexcrichton.com>"
