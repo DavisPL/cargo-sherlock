@@ -1,0 +1,648 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+trusted,-,Critical,bytecode-alliance,safe-to-deploy,,,,3
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.4.40,,
+audits,-,Critical,google,ub-risk-2,,0.4.0,Reviewed in CL 627536088,
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Crichton,alexcrichton,https://github.com/alexcrichton
+************************************
+event,timestamp,downloads
+Downloads,-,41505953
+************************************
+event,timestamp,total,flagged
+Side Effects,-,160,85
+************************************
+Rudra,timestamp
+"2024-06-21 17:35:18.016085 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:35:21.527276 |INFO | [rudra-progress] Running rudra for target lib:tar
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:34:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    archive: &'a Archive<Read + 'a>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Read + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:65:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m65[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let me: &mut Archive<Read> = self;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Read`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:91:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let me: &mut Archive<Read> = self;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Read`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:116:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m116[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl<'a> Archive<Read + 'a> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Read + 'a`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:131:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m131[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for entry in try!(self._entries()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:135:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m135[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(file.unpack_in(dst));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:132:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m132[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut file = try!(entry.map_err(|e| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:144:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m144[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let n = try!((&self.inner).read(&mut buf[..n as usize]));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:184:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m184[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.archive.skip(delta));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:188:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m188[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(read_all(&mut &self.archive.inner, header.as_mut_bytes()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:196:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m196[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(read_all(&mut &self.archive.inner,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:211:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m211[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let cksum = try!(header.cksum());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:217:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let size = try!(header.entry_size());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:294:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m294[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.parse_sparse_header(&mut fields));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:251:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m251[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let entry = match try!(self.next_entry_raw()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:266:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m266[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                gnu_longname = Some(try!(EntryFields::from(entry).read_all()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:276:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m276[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                gnu_longlink = Some(try!(EntryFields::from(entry).read_all()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:286:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m286[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                pax_extensions = Some(try!(EntryFields::from(entry).read_all()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:340:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m340[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let off = try!(block.offset());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:341:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m341[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let len = try!(block.length());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:353:23[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m353[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                cur = try!(off.checked_add(len).ok_or_else(|| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:356:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m356[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                remaining = try!(remaining.checked_sub(len).ok_or_else(|| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:364:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m364[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(add_block(block))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:370:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m370[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(read_all(&mut &self.archive.inner, ext.as_mut_bytes()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:373:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m373[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        try!(add_block(block));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:378:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m378[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if cur != try!(gnu.real_size()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/archive.rs:425:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m425[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match try!(r.read(&mut buf[read..])) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:58:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.finish());[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:146:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m146[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(prepare_header(self.inner(), header, path.as_ref()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:294:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m294[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    try!(dst.write_all(header.as_bytes()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:291:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m291[0m[0m [0m[0m[1m[38;5;12m| [0m[0mfn append(mut dst: &mut Write,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Write`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:293:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m293[0m[0m [0m[0m[1m[38;5;12m| [0m[0m          mut data: &mut Read) -> io::Result<()> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Read`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:295:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m295[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let len = try!(io::copy(&mut data, &mut dst));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:301:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m301[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(dst.write_all(&buf[..remaining as usize]));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:307:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m307[0m[0m [0m[0m[1m[38;5;12m| [0m[0mfn append_path(dst: &mut Write, path: &Path, mode: HeaderMode, follow: bool) -> io::Result<()> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Write`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:309:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m309[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(fs::metadata(path).map_err(|err| io::Error::new([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:314:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m314[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(fs::symlink_metadata(path).map_err(|err| io::Error::new([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:320:42[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m320[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        append_fs(dst, path, &stat, &mut try!(fs::File::open(path)), mode, None)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:324:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m324[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let link_name = try!(fs::read_link(path));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:331:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m331[0m[0m [0m[0m[1m[38;5;12m| [0m[0mfn append_file(dst: &mut Write, path: &Path, file: &mut fs::File, mode: HeaderMode)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Write`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:333:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m333[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let stat = try!(file.metadata());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:337:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m337[0m[0m [0m[0m[1m[38;5;12m| [0m[0mfn append_dir(dst: &mut Write, path: &Path, src_path: &Path, mode: HeaderMode) -> io::Result<()> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Write`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:338:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m338[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let stat = try!(fs::metadata(src_path));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:342:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m342[0m[0m [0m[0m[1m[38;5;12m| [0m[0mfn prepare_header(dst: &mut Write, header: &mut Header, path: &Path) -> io::Result<()> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Write`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:362:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m362[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(append(dst, &header2, &mut data2));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:366:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m366[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(header.set_path(&path));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:347:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m347[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let data = try!(path2bytes(&path));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:365:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m365[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let path = try!(bytes2path(Cow::Borrowed(&data[..max])));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:379:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m379[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    try!(prepare_header(dst, &mut header, path));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:371:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m371[0m[0m [0m[0m[1m[38;5;12m| [0m[0mfn append_fs(dst: &mut Write,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Write`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:374:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m374[0m[0m [0m[0m[1m[38;5;12m| [0m[0m             read: &mut Read,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Read`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:382:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m382[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(header.set_link_name(link_name));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:388:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m388[0m[0m [0m[0m[1m[38;5;12m| [0m[0mfn append_dir_all(dst: &mut Write, path: &Path, src_path: &Path, mode: HeaderMode, follow: bool) -> io::Result<()> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Write`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:393:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m393[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            for entry in try!(fs::read_dir(&src)) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:394:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m394[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let entry = try!(entry);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:395:33[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m395[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let file_type = try!(entry.file_type());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:399:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m399[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(append_dir(dst, &dest, &src, mode));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:404:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m404[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(append_fs(dst, &dest, &stat, &mut io::empty(), mode, Some(&link_name)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:402:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m402[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let stat = try!(fs::symlink_metadata(&src));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:403:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m403[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let link_name = try!(fs::read_link(&src));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:406:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m406[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(append_file(dst, &dest, &mut try!(fs::File::open(src)), mode));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/builder.rs:406:47[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m406[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(append_file(dst, &dest, &mut try!(fs::File::open(src)), mode));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                              [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:45:36[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Data(io::Take<&'a ArchiveInner<Read + 'a>>),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Read + 'a`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:305:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m305[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.pax_extensions = Some(try!(self.read_all()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:393:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m393[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.unpack(Some(&canon_target), &file_dst).map_err(|e| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:326:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m326[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let path = try!(self.path().map_err(|e| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:362:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m362[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(fs::create_dir_all(&parent).map_err(|e| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:369:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m369[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let canon_parent = try!(parent.canonicalize().map_err(|err| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:375:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m375[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let canon_target = try!(dst.canonicalize().map_err(|err| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:482:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m482[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(fs::File::create(dst).and_then(|mut f| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:416:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m416[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let src = match try!(self.link_name()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:487:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m487[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        if try!(io::copy(&mut d, &mut f)) != expected {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:495:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m495[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        try!(f.set_len(size));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:494:36[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m494[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        let size = try!(f.seek(to));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:509:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m509[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(filetime::set_file_times(dst, mtime, mtime).map_err(|e| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:515:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m515[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(set_perms(dst, mode, self.preserve_permissions).map_err(|e| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:521:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m521[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(set_xattrs(self, dst));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: the item `xattr` is imported redundantly[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:549:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m549[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            use xattr;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:28:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m28[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mextern crate xattr;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12mthe item `xattr` is already imported here[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/entry.rs:568:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m568[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(xattr::set(dst, key, value).map_err(|e| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:25:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&error::Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn error::Error`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: the item `libc` is imported redundantly[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:709:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m709[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            use libc;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/lib.rs:25:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m  [0m[0m[1m[38;5;12m| [0m[0mextern crate libc;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------[0m[0m [0m[0m[1m[38;5;12mthe item `libc` is already imported here[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:923:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m923[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let bytes = try!(path2bytes(path));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:926:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m926[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(copy_path_into(&mut self.name, path, false)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:946:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m946[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(copy_path_into(&mut self.prefix, prefix, false)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:952:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m952[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(copy_path_into(&mut self.name, &path, false)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:941:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m941[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                prefixlen = try!(path2bytes(prefix)).len();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:951:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m951[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let path = try!(bytes2path(Cow::Borrowed(&bytes[prefixlen + 1..])));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:1360:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1360[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(copy(&mut slot, &*bytes));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:1337:21[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1337[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let bytes = try!(path2bytes(Path::new(component.as_os_str())));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:1353:13[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1353[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(copy(&mut slot, b""/""));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:1370:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1370[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(copy(&mut slot, &[b'/']));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/header.rs:1375:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1375[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(copy_into(*slot, bytes));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+2024-06-21 17:35:29.768979 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:35:29.773034 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:35:29.773363 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:35:29.773375 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:35:29.828858 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:35:29.828886 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:35:31.184200 |WARN | [cargo_rudra] Target example:raw_list is not supported
+2024-06-21 17:35:31.184245 |WARN | [cargo_rudra] Target example:list is not supported
+2024-06-21 17:35:31.184263 |WARN | [cargo_rudra] Target example:write is not supported
+2024-06-21 17:35:31.184267 |WARN | [cargo_rudra] Target example:extract_file is not supported
+2024-06-21 17:35:31.184273 |WARN | [cargo_rudra] Target test:all is not supported
+2024-06-21 17:35:31.184277 |WARN | [cargo_rudra] Target test:entry is not supported
+2024-06-21 17:35:31.184364 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

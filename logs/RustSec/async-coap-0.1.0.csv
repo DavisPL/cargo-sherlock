@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Robert Quattlebaum,darconeous,https://github.com/darconeous
+************************************
+event,timestamp,downloads
+Downloads,-,2111
+************************************
+event,timestamp,total,flagged
+Side Effects,-,57,45
+************************************
+Rudra,timestamp
+"2024-06-21 17:20:33.471728 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:20:38.053876 |INFO | [rudra-progress] Running rudra for target lib:async-coap
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:20:41.410702 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

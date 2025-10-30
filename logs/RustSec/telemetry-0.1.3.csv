@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,David Teller,Yoric,https://github.com/Yoric
+************************************
+event,timestamp,downloads
+Downloads,-,16660
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 16:12:45.904910 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:12:49.301951 |INFO | [rudra-progress] Running rudra for target lib:telemetry
+2024-06-21 16:12:54.301314 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:12:54.305096 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:12:54.305447 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:12:54.305458 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:12:54.326503 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:12:54.326523 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:12:55.358996 |WARN | [cargo_rudra] Target example:main is not supported
+2024-06-21 16:12:55.359043 |WARN | [cargo_rudra] Target test:lib is not supported
+2024-06-21 16:12:55.359139 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,66 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "zakarumych"
+  ],
+  "stars": 50,
+  "forks": 11,
+  "downloads": 96205540,
+  "num_side_effects": 549,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.18 -> 0.2.20",
+      "version": "",
+      "notes": "The changes appear to be reasonable updates from Rust's stdlib imported into\\n`allocator-api2`'s copy of this code.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.2.18",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.14 -> 0.2.15",
+      "version": "",
+      "notes": "- Some existing `unsafe` code is moved without being altered.\\n- The new `SliceExt` extension trait uses `unsafe` methods `Vec::set_len` and\\n  `core::ptr::copy_nonoverlapping` to initialize a `Vec` efficiently. The safety\\n  requirements appear to be satisfied.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.15 -> 0.2.16",
+      "version": "",
+      "notes": "Change to `unsafe` block is to fix the `Drop` impl of `Box` to drop its value."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.16 -> 0.2.18",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 547,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 136,
+    "failed": 24,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 3.54
+  }
+}

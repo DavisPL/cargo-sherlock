@@ -1,0 +1,6 @@
+Solving for required assumptions to trust json-0.9.1...
+Trust Score for json-0.9.1: 69
+Assumptions Made:
+json-0.9.1 has many downloads: 9 wt
+json-0.9.1 having many downloads implies it is safe: 10 wt
+json-0.9.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

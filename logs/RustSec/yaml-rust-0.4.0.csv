@@ -1,0 +1,1002 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,embark-studios,safe-to-deploy,,0.4.5,No unsafe usage or ambient capabilities,
+************************************
+event,timestamp,name,username,url
+Author,-,Chen Yuheng,chyh1990,https://github.com/chyh1990
+Author,-,yaml-rust,github:dtolnay-contrib:yaml-rust,https://github.com/dtolnay-contrib
+************************************
+event,timestamp,downloads
+Downloads,-,58825730
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:30:33.907193 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:30:37.559796 |INFO | [rudra-progress] Running rudra for target lib:yaml-rust
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/yaml.rs:203:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m203[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(parser.load(&mut loader, true));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:74:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Error`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:200:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        '0'...'9' | 'a'...'z' | 'A'...'Z' => true,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(ellipsis_inclusive_range_patterns)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:200:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        '0'...'9' | 'a'...'z' | 'A'...'Z' => true,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:200:36[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        '0'...'9' | 'a'...'z' | 'A'...'Z' => true,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:214:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m214[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        '0'...'9' => (c as u32) - ('0' as u32),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:215:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m215[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        'a'...'f' => (c as u32) - ('a' as u32) + 10,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:216:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m216[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        'A'...'F' => (c as u32) - ('A' as u32) + 10,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:345:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m345[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.stale_simple_keys());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:353:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m353[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.fetch_stream_end());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:367:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m367[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.fetch_document_indicator(TokenType::DocumentStart));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:376:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m376[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.fetch_document_indicator(TokenType::DocumentEnd));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:417:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m417[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.fetch_more_tokens());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:446:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m446[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.fetch_next_token());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:436:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m436[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(self.stale_simple_keys());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:503:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m503[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.remove_simple_key());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:512:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m512[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.remove_simple_key());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:516:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m516[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let tok = try!(self.scan_directive());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:527:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m527[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let name = try!(self.scan_directive_name());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:530:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m530[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(self.scan_version_directive_value(&start_mark))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:533:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m533[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(self.scan_tag_directive_value(&start_mark))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:585:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m585[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let major = try!(self.scan_version_directive_number(mark));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:594:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m594[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let minor = try!(self.scan_version_directive_number(mark));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:652:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m652[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let handle = try!(self.scan_tag_handle(true, mark));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:662:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m662[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let prefix = try!(self.scan_tag_uri(true, is_secondary, &String::new(), mark));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:675:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m675[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.save_simple_key());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:678:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m678[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let tok = try!(self.scan_tag());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:696:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m696[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            suffix = try!(self.scan_tag_uri(false, false, &String::new(), &start_mark));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:706:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m706[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            handle = try!(self.scan_tag_handle(false, &start_mark));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:712:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m712[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                suffix = try!(self.scan_tag_uri(false, secondary, &String::new(), &start_mark));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:714:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m714[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                suffix = try!(self.scan_tag_uri(false, false, &handle, &start_mark));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:795:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m795[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                string.push(try!(self.scan_uri_escapes(directive, mark)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:866:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m866[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.save_simple_key());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:869:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m869[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let tok = try!(self.scan_anchor(alias));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:907:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m907[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.save_simple_key());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:921:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m921[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.remove_simple_key());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:934:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m934[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.remove_simple_key());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:970:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m970[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.remove_simple_key());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:982:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m982[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.remove_simple_key());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:996:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m996[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.save_simple_key());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:998:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m998[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let tok = try!(self.scan_block_scalar(literal));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:1085:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1085[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.block_scalar_breaks(&mut indent, &mut trailing_breaks));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:1122:13[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1122[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.block_scalar_breaks(&mut indent, &mut trailing_breaks));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:1184:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1184[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.save_simple_key());[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:1187:19[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1187[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let tok = try!(self.scan_flow_scalar(single));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:1376:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1376[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.save_simple_key());[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:1379:19[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1379[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let tok = try!(self.scan_plain_scalar());[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:1508:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1508[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.remove_simple_key());[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/scanner.rs:1595:13[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1595[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.remove_simple_key());[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:115:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m115[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                self.current = Some(try!(self.next()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:133:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m133[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                self.token = Some(try!(self.scan_next_token()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:172:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m172[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (ev, mark) = try!(self.state_machine());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:180:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m180[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let (ev, mark) = try!(self.next());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:198:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m198[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.load_document(ev, mark, recv));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:191:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m191[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let (ev, mark) = try!(self.next());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:212:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m212[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.load_node(ev, mark, recv));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:211:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m211[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (ev, mark) = try!(self.next());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:215:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m215[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (ev, mark) = try!(self.next());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:244:42[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m244[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (mut key_ev, mut key_mark) = try!(self.next());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:247:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m247[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.load_node(key_ev, key_mark, recv));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:251:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m251[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.load_node(ev, mark, recv));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:250:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m250[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let (ev, mark) = try!(self.next());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:254:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m254[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let (ev, mark) = try!(self.next());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:265:34[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m265[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (mut ev, mut mark) = try!(self.next());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:267:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m267[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.load_node(ev, mark, recv));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:270:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m270[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let (next_ev, next_mark) = try!(self.next());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:320:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m320[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:333:48[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m333[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            while let TokenType::DocumentEnd = try!(self.peek_token()).1 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:338:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m338[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:351:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m351[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(self.parser_process_directives());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:365:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m365[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            match try!(self.peek_token()).1 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:385:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m385[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.parser_process_directives());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:386:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m386[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:398:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m398[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:416:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m416[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let marker: Marker = match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:445:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m445[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:459:33[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m459[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    anchor_id = try!(self.register_anchor(name, &mark));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:460:49[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m460[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    if let TokenType::Tag(..) = try!(self.peek_token()).1 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:474:51[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m474[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    if let TokenType::Anchor(_) = try!(self.peek_token()).1 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:476:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m476[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   anchor_id = try!(self.register_anchor(name, &mark));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:487:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m487[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:528:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m528[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let _ = try!(self.peek_token());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:532:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m532[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:535:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m535[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:566:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m566[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:569:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m569[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:593:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m593[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let _ = try!(self.peek_token());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:597:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m597[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:601:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m601[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:608:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m608[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:611:36[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m611[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:648:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m648[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let Token(mark, _) = *try!(self.peek_token());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:652:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m652[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:655:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m655[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        match try!(self.peek_token()).1 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:677:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m677[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let _ = try!(self.peek_token());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:681:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m681[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:696:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m696[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:715:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m715[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:723:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m723[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:741:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m741[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let _ = try!(self.peek_token());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:745:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m745[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:753:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m753[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:773:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m773[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:789:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m789[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:793:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m793[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    match *try!(self.peek_token()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:21:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Error`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:42:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m42[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    writer: &'a mut fmt::Write,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn fmt::Write`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:53:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    try!(wr.write_str(""\""""));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:110:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m110[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    try!(wr.write_str(""\""""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:52:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m| [0m[0mfn escape_str(wr: &mut fmt::Write, v: &str) -> Result<(), fmt::Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn fmt::Write`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:101:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(wr.write_str(escaped));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:98:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m98[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(wr.write_str(&v[start..i]));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:107:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m107[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(wr.write_str(&v[start..]));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:115:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m115[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn new(writer: &'a mut fmt::Write) -> YamlEmitter {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn fmt::Write`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:144:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m144[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(write!(self.writer, ""---\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:153:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m153[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(write!(self.writer, "" ""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:165:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m165[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(escape_str(self.writer, v));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:168:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m168[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(self.writer, ""{}"", v));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:174:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m174[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(self.writer.write_str(""true""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:176:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m176[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(self.writer.write_str(""false""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:181:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m181[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(write!(self.writer, ""{}"", v));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:185:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m185[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(write!(self.writer, ""{}"", v));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:189:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m189[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(write!(self.writer, ""~""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:199:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m199[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(write!(self.writer, ""[]""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:207:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m207[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(write!(self.writer, ""-""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:208:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m208[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(self.emit_val(true, x));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:204:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m204[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(self.writer, ""\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:205:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m205[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(self.write_indent());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:217:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.writer.write_str(""{}""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:226:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m226[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(self.writer, ""\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:227:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m227[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(self.write_indent());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:230:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m230[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                  try!(write!(self.writer, ""?""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:231:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m231[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                  try!(self.emit_val(true, k));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:232:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m232[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                  try!(write!(self.writer, ""\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:233:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m233[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                  try!(self.write_indent());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:234:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m234[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                  try!(write!(self.writer, "":""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:235:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m235[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                  try!(self.emit_val(true, v));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:237:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m237[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                  try!(self.emit_node(k));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:238:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m238[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                  try!(write!(self.writer, "":""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:239:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m239[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                  try!(self.emit_val(false, v));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:255:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m255[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(self.writer, "" ""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:257:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m257[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(self.writer, ""\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:259:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m259[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(self.write_indent());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:266:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m266[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(self.writer, "" ""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:268:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m268[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(write!(self.writer, ""\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:270:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m270[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(self.write_indent());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:276:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m276[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(write!(self.writer, "" ""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:305:153[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m305[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m| '%' | '@' | '`' | '\""' | '\'' | '\\' | '\0' ... '\x06' | '\t' | '\n' | '\r' | '\x0e' ... '\x1a' | '\x1c' ... '\x1f' => true,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:305:194[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m305[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m'\0' ... '\x06' | '\t' | '\n' | '\r' | '\x0e' ... '\x1a' | '\x1c' ... '\x1f' => true,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:305:214[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m305[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0mt' | '\n' | '\r' | '\x0e' ... '\x1a' | '\x1c' ... '\x1f' => true,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/emitter.rs:16:49[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            EmitError::FmtError(ref err) => err.description(),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/yaml.rs:179:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m179[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    let mut cur_key = self.key_stack.last_mut().unwrap();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_mut)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `marks`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:70:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    marks: Vec<Marker>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+2024-06-21 17:30:42.773038 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:30:42.776885 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:30:42.777239 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:30:42.777248 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:30:42.780821 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:30:42.780832 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:30:44.095753 |WARN | [cargo_rudra] Target example:dump_yaml is not supported
+2024-06-21 17:30:44.095793 |WARN | [cargo_rudra] Target test:spec_test is not supported
+2024-06-21 17:30:44.095799 |WARN | [cargo_rudra] Target test:quickcheck is not supported
+2024-06-21 17:30:44.095890 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

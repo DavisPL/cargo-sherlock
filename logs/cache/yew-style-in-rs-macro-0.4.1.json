@@ -1,0 +1,107 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "MatchaChoco010"
+  ],
+  "stars": 23,
+  "forks": 0,
+  "downloads": 11142,
+  "num_side_effects": 95,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "anyhow",
+      "1.0.97"
+    ],
+    [
+      "fastrand",
+      "2.3.0"
+    ],
+    [
+      "fslock",
+      "0.2.1"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "serde_json",
+      "1.0.140"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "yew-style-in-rs-core",
+      "0.4.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "unknown",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

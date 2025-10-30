@@ -1,0 +1,6 @@
+Solving for required assumptions to trust lz4-sys-1.9.3...
+Trust Score for lz4-sys-1.9.3: 66
+Assumptions Made:
+lz4-sys-1.9.3 has many downloads: 6 wt
+lz4-sys-1.9.3 having many downloads implies it is safe: 10 wt
+lz4-sys-1.9.3 appearing in RustSec implies it is less safe (score penalty): 50 weight

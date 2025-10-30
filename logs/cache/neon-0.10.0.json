@@ -1,0 +1,48 @@
+{
+  "rustsec_label": "Uncategorized",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "dherman",
+    "kjvalencik"
+  ],
+  "stars": 8193,
+  "forks": 289,
+  "downloads": 8749554,
+  "num_side_effects": 341,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "neon-runtime",
+      "0.10.1"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "semver",
+      "1.0.26"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 176,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

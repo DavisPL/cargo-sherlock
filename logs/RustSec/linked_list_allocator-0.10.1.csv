@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Philipp Oppermann,phil-opp,https://github.com/phil-opp
+Author,-,linked_list_allocator,github:rust-osdev:linked_list_allocator,https://github.com/rust-osdev
+************************************
+event,timestamp,downloads
+Downloads,-,1150682
+************************************
+event,timestamp,total,flagged
+Side Effects,-,131,107
+************************************
+Rudra,timestamp
+"2024-06-21 16:56:50.912224 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:57:01.835066 |INFO | [rudra-progress] Running rudra for target lib:linked_list_allocator
+[0m[1m[38;5;9merror[E0015][0m[0m[1m: calls in constant functions are limited to constant functions, tuple structs and tuple variants[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:242:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m242[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        LockedHeap(Spinlock::new(Heap::empty()))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0015`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `linked_list_allocator` due to previous error
+2024-06-21 16:57:29.308881 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

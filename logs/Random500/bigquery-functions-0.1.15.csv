@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,shota kizawa,kiibo382,https://github.com/kiibo382
+************************************
+event,timestamp,downloads
+Downloads,-,5021
+************************************
+event,timestamp,total,flagged
+Side Effects,-,10,1
+************************************
+Rudra,timestamp
+"2024-06-23 13:44:08.701266 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:44:10.584484 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `regex = ""^1.10.3""`
+candidate versions found which didn't match: 1.8.4, 1.8.3, 1.8.2, ...
+location searched: crates.io index
+required by package `bigquery-functions v0.1.15 (/tmp/rudra)`
+
+"
+************************************

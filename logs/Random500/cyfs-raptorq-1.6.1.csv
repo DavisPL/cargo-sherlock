@@ -1,0 +1,40 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,CYFS Core Dev,BDTDevTeam,https://github.com/BDTDevTeam
+************************************
+event,timestamp,downloads
+Downloads,-,5191
+************************************
+event,timestamp,total,flagged
+Side Effects,-,20,20
+************************************
+Rudra,timestamp
+"2024-06-23 13:43:12.409387 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:43:17.266841 |INFO | [rudra-progress] Running rudra for target lib:cyfs-raptorq
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `K`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/raptor_decoder.rs:11:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m11[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    K: u32,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+2024-06-23 13:43:35.784640 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:43:35.790210 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:43:35.790737 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:43:35.790767 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:43:35.861259 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:43:35.861302 |INFO | [rudra-progress] Rudra finished
+2024-06-23 13:43:39.377037 |WARN | [cargo_rudra] Target example:main is not supported
+2024-06-23 13:43:39.377090 |WARN | [cargo_rudra] Target bench:codec_benchmark is not supported
+2024-06-23 13:43:39.377101 |WARN | [cargo_rudra] Target bench:matrix_sparsity is not supported
+2024-06-23 13:43:39.377110 |WARN | [cargo_rudra] Target bench:encode_benchmark is not supported
+2024-06-23 13:43:39.377118 |WARN | [cargo_rudra] Target bench:decode_benchmark is not supported
+2024-06-23 13:43:39.377226 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

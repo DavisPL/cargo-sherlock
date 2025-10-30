@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Kamila Borowska,xfix,https://github.com/xfix
+************************************
+event,timestamp,downloads
+Downloads,-,3272531
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-21 18:05:28.760569 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:05:31.822276 |INFO | [rudra-progress] Running rudra for target lib:array-macro
+2024-06-21 18:05:35.727271 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:05:35.731146 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:05:35.731538 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:05:35.731575 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:05:35.774994 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:05:35.775026 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:05:36.493104 |WARN | [cargo_rudra] Target test:test is not supported
+2024-06-21 18:05:36.493260 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

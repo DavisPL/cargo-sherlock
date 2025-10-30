@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,RJ Rybarczyk,rrybarczyk,https://github.com/rrybarczyk
+************************************
+event,timestamp,downloads
+Downloads,-,799
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:23:14.195486 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:23:22.245865 |INFO | [rudra-progress] Running rudra for target lib:bignum
+2024-06-23 14:23:31.907182 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:23:31.915460 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:23:31.923782 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:23:31.923835 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:23:31.923999 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:23:31.924015 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:23:33.095883 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

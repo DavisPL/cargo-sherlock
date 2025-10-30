@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Zakarum,zakarumych,https://github.com/zakarumych
+************************************
+event,timestamp,downloads
+Downloads,-,1119
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:03:17.325231 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:03:25.204587 |INFO | [rudra-progress] Running rudra for target lib:dave
+2024-06-23 14:03:35.985910 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:03:35.998280 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:03:36.004660 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:03:36.004689 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:03:36.004835 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:03:36.004848 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:03:37.138710 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Daniel Levin,daniel-levin,https://github.com/daniel-levin
+************************************
+event,timestamp,downloads
+Downloads,-,420
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 18:36:33.500019 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 18:36:41.802808 |INFO | [rudra-progress] Running rudra for target lib:dirty_mike
+2024-06-23 18:36:51.898902 |INFO | [rudra-progress] Rudra started
+2024-06-23 18:36:51.906900 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 18:36:51.913901 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 18:36:51.913947 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 18:36:51.916809 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 18:36:51.916851 |INFO | [rudra-progress] Rudra finished
+2024-06-23 18:36:53.377050 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

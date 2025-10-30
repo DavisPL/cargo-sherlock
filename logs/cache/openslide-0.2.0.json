@@ -1,0 +1,75 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "ojskrede"
+  ],
+  "stars": 9,
+  "forks": 5,
+  "downloads": 6326,
+  "num_side_effects": 27,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "failure",
+      "0.1.8"
+    ],
+    [
+      "image",
+      "0.25.5"
+    ],
+    [
+      "bytemuck",
+      "1.22.0"
+    ],
+    [
+      "byteorder-lite",
+      "0.1.0"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "num",
+      "0.4.3"
+    ],
+    [
+      "num-complex",
+      "0.4.6"
+    ],
+    [
+      "num-integer",
+      "0.1.46"
+    ],
+    [
+      "num-iter",
+      "0.1.45"
+    ],
+    [
+      "num-rational",
+      "0.4.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 7,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

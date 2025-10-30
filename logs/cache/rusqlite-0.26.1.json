@@ -1,0 +1,107 @@
+{
+  "rustsec_label": "Uncategorized",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "thomcc",
+    "gwenn"
+  ],
+  "stars": 3485,
+  "forks": 396,
+  "downloads": 28120201,
+  "num_side_effects": 533,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "",
+      "version": "0.32.0",
+      "notes": "Reviewed in CL 649389163\\nIssues found:\\n - https://github.com/rusqlite/rusqlite/issues/1546\\n - Technically, free_boxed_value should use catch_unwind (minor)\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.27.0 -> 0.28.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.28.0 -> 0.29.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.29.0 -> 0.30.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.30.0 -> 0.31.0",
+      "version": "",
+      "notes": "Mostly build and dependency related changes, and bump to sqlite version"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.31.0 -> 0.33.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "fallible-iterator",
+      "0.3.0"
+    ],
+    [
+      "fallible-streaming-iterator",
+      "0.1.9"
+    ],
+    [
+      "hashlink",
+      "0.10.0"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "libsqlite3-sys",
+      "0.32.0"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 392,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

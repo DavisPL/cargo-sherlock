@@ -1,0 +1,59 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Crichton,alexcrichton,https://github.com/alexcrichton
+Author,-,Jeehoon Kang,jeehoonkang,https://github.com/jeehoonkang
+Author,-,Aaron Turon,aturon,https://github.com/aturon
+Author,-,Taiki Endo,taiki-e,https://github.com/taiki-e
+Author,-,admins,github:crossbeam-rs:admins,https://github.com/crossbeam-rs
+************************************
+event,timestamp,downloads
+Downloads,-,36095771
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:02:55.459850 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:02:59.457708 |INFO | [rudra-progress] Running rudra for target lib:crossbeam
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ms_queue.rs:71:50[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            payload: Payload::Data(unsafe { mem::uninitialized() }),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/seg_queue.rs:41:51[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            data: unsafe { ManuallyDrop::new(mem::uninitialized()) },[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/seg_queue.rs:126:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m126[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                if head.low.compare_and_swap(low, low + 1, Relaxed) == low {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+2024-06-21 18:03:13.251144 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:03:13.255068 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:03:13.258997 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:03:13.259009 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:03:13.293163 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:03:13.293183 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/seg_queue.rs:36:1: 36:44
+unsafe impl<T: Send> Sync for Segment<T> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/ms_queue.rs:60:1: 60:44
+unsafe impl<T: Send> Sync for MsQueue<T> {}
+2024-06-21 18:03:14.446314 |WARN | [cargo_rudra] Target test:wait_group is not supported
+2024-06-21 18:03:14.446427 |WARN | [cargo_rudra] Target test:subcrates is not supported
+2024-06-21 18:03:14.446584 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

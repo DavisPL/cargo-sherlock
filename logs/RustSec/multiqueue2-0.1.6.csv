@@ -1,0 +1,286 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Abby,abbychau,https://github.com/abbychau
+************************************
+event,timestamp,downloads
+Downloads,-,14464
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:40:20.874268 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:40:24.421621 |INFO | [rudra-progress] Running rudra for target lib:multiqueue2
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around assigned value[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/countedindex.rs:23:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub const MASK_IND: Index = (1 << 63);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^[0m[0m       [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_parens)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;9m- [0m[0m    pub const MASK_IND: Index = [0m[0m[38;5;9m([0m[0m1 << 63[0m[0m[38;5;9m)[0m[0m;[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;10m+ [0m[0m    pub const MASK_IND: Index = 1 << 63;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:163:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m163[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub waiter: Arc<Wait>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2018) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:224:49[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m224[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn new_internal(_capacity: Index, wait: Arc<Wait>) -> (InnerSend<RW, T>, InnerRecv<RW, T>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2018) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:241:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m241[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d1: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:246:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m246[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d2: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:255:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m255[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d3: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:259:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m259[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d4: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+2024-06-21 18:40:39.738060 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:40:39.742379 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:40:39.747185 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:40:39.747202 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:40:39.784896 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:40:39.784918 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1098:1: 1098:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1100:1: 1100:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1097:1: 1097:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerSend<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1099:1: 1099:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerSend<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1096:1: 1096:61
+unsafe impl<RW: QueueRW<T>, T> Send for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/multiqueue.rs:1095:1: 1095:61
+unsafe impl<RW: QueueRW<T>, T> Sync for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1101:1: 1101:94
+unsafe impl<RW: QueueRW<T>, R, F: FnMut(&T) -> R, T> Send for FutInnerUniRecv<RW, R, F, T> {}
+2024-06-21 18:40:41.128701 |INFO | [rudra-progress] Running rudra for target bin:throughput
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around assigned value[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/countedindex.rs:23:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub const MASK_IND: Index = (1 << 63);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^[0m[0m       [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_parens)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;9m- [0m[0m    pub const MASK_IND: Index = [0m[0m[38;5;9m([0m[0m1 << 63[0m[0m[38;5;9m)[0m[0m;[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;10m+ [0m[0m    pub const MASK_IND: Index = 1 << 63;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:163:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m163[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub waiter: Arc<Wait>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2018) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:224:49[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m224[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn new_internal(_capacity: Index, wait: Arc<Wait>) -> (InnerSend<RW, T>, InnerRecv<RW, T>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2018) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:241:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m241[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d1: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:246:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m246[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d2: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:255:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m255[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d3: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:259:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m259[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d4: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+2024-06-21 18:40:48.499184 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:40:48.503056 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:40:48.507767 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:40:48.507784 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:40:48.543899 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:40:48.543917 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1098:1: 1098:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1100:1: 1100:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1097:1: 1097:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerSend<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1099:1: 1099:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerSend<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1096:1: 1096:61
+unsafe impl<RW: QueueRW<T>, T> Send for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/multiqueue.rs:1095:1: 1095:61
+unsafe impl<RW: QueueRW<T>, T> Sync for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1101:1: 1101:94
+unsafe impl<RW: QueueRW<T>, R, F: FnMut(&T) -> R, T> Send for FutInnerUniRecv<RW, R, F, T> {}
+2024-06-21 18:40:50.004197 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:40:50.007710 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:40:50.008070 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:40:50.008081 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:40:50.009514 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:40:50.009522 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:40:50.111093 |INFO | [rudra-progress] Running rudra for target bin:example
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around assigned value[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/countedindex.rs:23:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub const MASK_IND: Index = (1 << 63);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^[0m[0m       [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_parens)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;9m- [0m[0m    pub const MASK_IND: Index = [0m[0m[38;5;9m([0m[0m1 << 63[0m[0m[38;5;9m)[0m[0m;[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;10m+ [0m[0m    pub const MASK_IND: Index = 1 << 63;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:163:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m163[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub waiter: Arc<Wait>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2018) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:224:49[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m224[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn new_internal(_capacity: Index, wait: Arc<Wait>) -> (InnerSend<RW, T>, InnerRecv<RW, T>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2018) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:241:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m241[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d1: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:246:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m246[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d2: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:255:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m255[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d3: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:259:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m259[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d4: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1098:1: 1098:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1100:1: 1100:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1097:1: 1097:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerSend<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1099:1: 1099:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerSend<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1096:1: 1096:61
+unsafe impl<RW: QueueRW<T>, T> Send for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/multiqueue.rs:1095:1: 1095:61
+unsafe impl<RW: QueueRW<T>, T> Sync for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1101:1: 1101:94
+unsafe impl<RW: QueueRW<T>, R, F: FnMut(&T) -> R, T> Send for FutInnerUniRecv<RW, R, F, T> {}
+2024-06-21 18:40:51.122931 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:40:51.126483 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:40:51.127675 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:40:51.127688 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:40:51.129103 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:40:51.129113 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:40:51.179900 |WARN | [cargo_rudra] Target test:mpmc_fut is not supported
+2024-06-21 18:40:51.179955 |WARN | [cargo_rudra] Target test:multicast_fut is not supported
+2024-06-21 18:40:51.180178 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,23 @@
+Solving for required assumptions to trust ppv-lite86-0.2.21...
++------------------------------------------------------------+
+|           Analysis Report for ppv-lite86-0.2.21            |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 5 cost
+Assumptions for Trusting:
+  • ppv-lite86-0.2.21 has many downloads: 0 cost
+  • ppv-lite86-0.2.21 having a current audit implies it is safe: 5 cost
+
+Distrust Cost (higher is better): 66 cost
+Assumptions for Distrusting:
+  • ppv-lite86-0.2.21 has many side effects: 6 cost
+  • ppv-lite86-0.2.21 has many side effects implies it is unsafe: 60 cost
+
+Severity Label: SAFE
+
+Full details about the crate can be found at: /logs/cache/ppv-lite86-0.2.21.json
++------------------------------------------------------------+
+

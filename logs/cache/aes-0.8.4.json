@@ -1,0 +1,93 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "newpavlov",
+    "github:rustcrypto:block-ciphers"
+  ],
+  "stars": 699,
+  "forks": 136,
+  "downloads": 98473376,
+  "num_side_effects": 478,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "0.7.5 -> 0.8.2",
+      "version": "",
+      "notes": "Note for reviewers of future updates to this crate: There exist\\ninternal APIs such as [1] which are safe but have undocumented safety\\ninvariants.\\n\\n[1] https://fuchsia-review.git.corp.google.com/c/fuchsia/+/711365/comment/7a8cdc16_9e9f45ca/\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-1\",]",
+      "delta": "0.8.2 -> 0.8.4",
+      "version": "",
+      "notes": "Audited at https://fxrev.dev/987054"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.2 -> 0.8.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.3 -> 0.8.4",
+      "version": "",
+      "notes": "Change affects some unsafe code. The only functional change is to add an\\nassertion checking alignment and to change an `as *mut u32` cast to a\\ncall to `std::pointer::cast`.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "cipher",
+      "0.4.4"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "inout",
+      "0.1.4"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 478,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

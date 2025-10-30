@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,s4hyhzi,https://github.com/s4hyhzi
+************************************
+event,timestamp,downloads
+Downloads,-,554
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 18:35:14.708708 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 18:35:19.217983 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bevy = ""^0.12""`
+candidate versions found which didn't match: 0.11.3, 0.11.2, 0.11.1, ...
+location searched: crates.io index
+required by package `bevy_npr v0.1.0 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,35 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "DoumanAsh"
+  ],
+  "stars": 62,
+  "forks": 16,
+  "downloads": 12852178,
+  "num_side_effects": 268,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "error-code",
+      "3.3.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 238,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

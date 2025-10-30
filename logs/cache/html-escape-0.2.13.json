@@ -1,0 +1,43 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "magiclen"
+  ],
+  "stars": 44,
+  "forks": 5,
+  "downloads": 7842899,
+  "num_side_effects": 15,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-4\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.2.13",
+      "notes": "Reviewed in CL 612354454\\nIssues found:\\n - decode_impl macro should have \\\"unsafe\\\" in its name and document the safety at callsites\\n - write_hex_to_vec: The Vec::set_len is UB and should only be called after filling the buffer.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "utf8-width",
+      "0.1.7"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 15,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 4,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.29
+  }
+}

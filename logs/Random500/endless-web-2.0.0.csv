@@ -1,0 +1,243 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,zero-systems,https://github.com/zero-systems
+************************************
+event,timestamp,downloads
+Downloads,-,711
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-23 14:41:48.758398 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:42:01.749237 |INFO | [rudra-progress] Running rudra for target lib:actix_web
+[0m[1m[38;5;9merror[0m[0m[1m: unexpected token[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:217:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        futs: ($($T::Future,)+),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m255[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest1, (0, A));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unexpected token[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:217:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        futs: ($($T::Future,)+),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m256[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest2, (0, A), (1, B));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unexpected token[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:217:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        futs: ($($T::Future,)+),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m257[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest3, (0, A), (1, B), (2, C));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unexpected token[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:217:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        futs: ($($T::Future,)+),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m258[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest4, (0, A), (1, B), (2, C), (3, D));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unexpected token[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:217:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        futs: ($($T::Future,)+),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m259[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest5, (0, A), (1, B), (2, C), (3, D), (4, E));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unexpected token[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:217:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        futs: ($($T::Future,)+),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m260[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest6, (0, A), (1, B), (2, C), (3, D), (4, E), (5, F));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unexpected token[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:217:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        futs: ($($T::Future,)+),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m261[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest7, (0, A), (1, B), (2, C), (3, D), (4, E), (5, F), (6, G));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unexpected token[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:217:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        futs: ($($T::Future,)+),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m262[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest8, (0, A), (1, B), (2, C), (3, D), (4, E), (5, F), (6, G), (7, H));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unexpected token[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:217:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        futs: ($($T::Future,)+),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m263[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest9, (0, A), (1, B), (2, C), (3, D), (4, E), (5, F), (6, G), (7, H), (8, I));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unexpected token[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:217:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        futs: ($($T::Future,)+),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m264[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest10, (0, A), (1, B), (2, C), (3, D), (4, E), (5, F), (6, G), (7, H), (8, I), (9, J));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-------------------------------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `project` found for struct `std::pin::Pin<&mut extract::m::TupleFromRequest1<A>>` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:225:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let this = self.project();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `std::pin::Pin<&mut extract::m::TupleFromRequest1<A>>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m255[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest1, (0, A));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `project` found for struct `std::pin::Pin<&mut extract::m::TupleFromRequest2<A, B>>` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:225:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let this = self.project();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `std::pin::Pin<&mut extract::m::TupleFromRequest2<A, B>>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m256[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest2, (0, A), (1, B));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `project` found for struct `std::pin::Pin<&mut extract::m::TupleFromRequest3<A, B, C>>` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:225:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let this = self.project();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `std::pin::Pin<&mut extract::m::TupleFromRequest3<A, B, C>>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m257[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest3, (0, A), (1, B), (2, C));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `project` found for struct `std::pin::Pin<&mut extract::m::TupleFromRequest4<A, B, C, D>>` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:225:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let this = self.project();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `std::pin::Pin<&mut extract::m::TupleFromRequest4<A, B, C, D>>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m258[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest4, (0, A), (1, B), (2, C), (3, D));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `project` found for struct `std::pin::Pin<&mut extract::m::TupleFromRequest5<A, B, C, D, E>>` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:225:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let this = self.project();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `std::pin::Pin<&mut extract::m::TupleFromRequest5<A, B, C, D, E>>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m259[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest5, (0, A), (1, B), (2, C), (3, D), (4, E));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `project` found for struct `std::pin::Pin<&mut extract::m::TupleFromRequest6<A, B, C, D, E, F>>` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:225:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let this = self.project();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `std::pin::Pin<&mut extract::m::TupleFromRequest6<A, B, C, D, E, F>>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m260[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest6, (0, A), (1, B), (2, C), (3, D), (4, E), (5, F));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `project` found for struct `std::pin::Pin<&mut extract::m::TupleFromRequest7<A, B, C, D, E, F, G>>` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:225:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let this = self.project();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `std::pin::Pin<&mut extract::m::TupleFromRequest7<A, B, C, D, E, F, G>>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m261[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest7, (0, A), (1, B), (2, C), (3, D), (4, E), (5, F), (6, G));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `project` found for struct `std::pin::Pin<&mut extract::m::TupleFromRequest8<A, B, C, D, E, F, G, H>>` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:225:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let this = self.project();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `std::pin::Pin<&mut extract::m::TupleFromRequest8<A, B, C, D, E, F, G, H>>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m262[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest8, (0, A), (1, B), (2, C), (3, D), (4, E), (5, F), (6, G), (7, H));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m--------------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `project` found for struct `std::pin::Pin<&mut extract::m::TupleFromRequest9<A, B, C, D, E, F, G, H, I>>` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:225:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let this = self.project();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `std::pin::Pin<&mut extract::m::TupleFromRequest9<A, B, C, D, E, F, G, H, I>>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m263[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest9, (0, A), (1, B), (2, C), (3, D), (4, E), (5, F), (6, G), (7, H), (8, I));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m----------------------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `project` found for struct `std::pin::Pin<&mut extract::m::TupleFromRequest10<A, B, C, D, E, F, G, H, I, J>>` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/extract.rs:225:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let this = self.project();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `std::pin::Pin<&mut extract::m::TupleFromRequest10<A, B, C, D, E, F, G, H, I, J>>`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m264[0m[0m [0m[0m[1m[38;5;12m| [0m[0mtuple_from_req!(TupleFromRequest10, (0, A), (1, B), (2, C), (3, D), (4, E), (5, F), (6, G), (7, H), (8, I), (9, J));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-------------------------------------------------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `tuple_from_req` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0599`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `endless-web` due to 20 previous errors
+2024-06-23 14:47:24.627646 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,wcrvt,wcrvt,https://github.com/wcrvt
+************************************
+event,timestamp,downloads
+Downloads,-,154
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,4
+************************************
+Rudra,timestamp
+"2024-06-23 13:49:09.503234 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:49:28.109481 |INFO | [rudra-progress] Running rudra for target lib:cands_presentation
+2024-06-23 13:49:34.169798 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:49:34.175575 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:49:34.176015 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:49:34.176030 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:49:34.230623 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:49:34.230667 |INFO | [rudra-progress] Rudra finished
+2024-06-23 13:49:35.612367 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

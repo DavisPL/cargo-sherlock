@@ -1,0 +1,212 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "cart",
+    "github:bevyengine:publish"
+  ],
+  "stars": 38566,
+  "forks": 3794,
+  "downloads": 2361044,
+  "num_side_effects": 19,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "assert_type_match",
+      "0.1.1"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "bevy_ptr",
+      "0.15.3"
+    ],
+    [
+      "bevy_reflect_derive",
+      "0.15.3"
+    ],
+    [
+      "bevy_macro_utils",
+      "0.15.3"
+    ],
+    [
+      "toml_edit",
+      "0.22.24"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "toml_datetime",
+      "0.6.8"
+    ],
+    [
+      "uuid",
+      "1.16.0"
+    ],
+    [
+      "bevy_utils",
+      "0.15.3"
+    ],
+    [
+      "ahash",
+      "0.8.11"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "zerocopy",
+      "0.8.24"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.24"
+    ],
+    [
+      "bevy_utils_proc_macros",
+      "0.15.3"
+    ],
+    [
+      "getrandom",
+      "0.3.2"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "r-efi",
+      "5.2.0"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "tracing",
+      "0.1.41"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "tracing-core",
+      "0.1.33"
+    ],
+    [
+      "web-time",
+      "1.1.0"
+    ],
+    [
+      "js-sys",
+      "0.3.77"
+    ],
+    [
+      "wasm-bindgen",
+      "0.2.100"
+    ],
+    [
+      "wasm-bindgen-macro",
+      "0.2.100"
+    ],
+    [
+      "wasm-bindgen-macro-support",
+      "0.2.100"
+    ],
+    [
+      "wasm-bindgen-backend",
+      "0.2.100"
+    ],
+    [
+      "bumpalo",
+      "3.17.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "wasm-bindgen-shared",
+      "0.2.100"
+    ],
+    [
+      "derive_more",
+      "2.0.1"
+    ],
+    [
+      "derive_more-impl",
+      "2.0.1"
+    ],
+    [
+      "disqualified",
+      "1.0.0"
+    ],
+    [
+      "downcast-rs",
+      "2.0.1"
+    ],
+    [
+      "erased-serde",
+      "0.4.6"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "typeid",
+      "1.0.3"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 3,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 75,
+    "failed": 0,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 11.47
+  }
+}

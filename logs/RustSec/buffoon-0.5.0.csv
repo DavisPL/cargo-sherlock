@@ -1,0 +1,255 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Carl Lerche,carllerche,https://github.com/carllerche
+************************************
+event,timestamp,downloads
+Downloads,-,3103
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:08:45.368433 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:08:48.353489 |INFO | [rudra-progress] Running rudra for target lib:buffoon
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:38:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if let Some(num) = try!(self.read_unsigned_varint()) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:58:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        while let Some(byte) = try!(self.read_byte()) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:76:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if let Some(len) = try!(self.read_usize()) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:88:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if let None = try!(self.read_byte()) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:108:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m108[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let cnt = try!(self.reader.read(&mut buf[off..]));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:127:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m127[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if 1 == try!(self.reader.read(&mut buf)) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:149:34[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m149[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                if let Some(_) = try!(self.input.read_unsigned_varint()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:157:36[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m157[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                if let Some(len) = try!(self.input.read_usize()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:158:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m158[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    if len == try!(self.input.skip(len)) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:174:36[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m174[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                if let Some(val) = try!(self.input.read_u64()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:185:33[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m185[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match String::from_utf8(try!(self.read_bytes())) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:194:36[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m194[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                if let Some(val) = try!(self.input.read_length_delimited()) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:13:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.write_message_field(field, msg));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:24:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_head(field, LengthDelimited));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:25:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_usize(val.len()));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:26:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_bytes(val));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:32:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.write_byte_field(field, val));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:44:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            Some(s) => try!(self.write_str_field(field, s.borrow())),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:82:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m82[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.write_byte(bits | 0x80));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:78:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(self.write_byte(bits));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:89:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m89[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_usize(bits));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:100:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m100[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(out.write_head(field, Varint));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:101:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(out.write_usize(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:108:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m108[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(out.write_head(field, Varint));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/output_stream.rs:109:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m109[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(out.write_unsigned_varint(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_writer.rs:24:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.writer.write(bytes));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_writer.rs:39:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.write_head(field, LengthDelimited));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_writer.rs:40:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m40[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.write_usize(size));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/output_writer.rs:42:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m42[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(msg.serialize(self));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/serializer.rs:27:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(msg.serialize(&mut out));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/serializer.rs:65:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m65[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(msg.serialize(self));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/serializer.rs:72:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.write_head(field, LengthDelimited));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/serializer.rs:73:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.write_usize(nested_size));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:23:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    try!(msg.serialize(&mut serializer));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:34:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    try!(serializer.serialize_into(msg, &mut bytes));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:31:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m31[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let serializer = try!(serializer_for(msg));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/input_stream.rs:104:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut buf = slice::from_raw_parts_mut(ret.as_mut_ptr(), len);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_mut)]` on by default[0m
+
+2024-06-21 18:08:52.502879 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:08:52.506743 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:08:52.507088 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:08:52.507099 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:08:52.551636 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:08:52.551661 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:08:53.569469 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

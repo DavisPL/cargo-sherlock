@@ -1,0 +1,42 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "SimonSapin",
+    "fitzgen",
+    "pczarn",
+    "jonastepe",
+    "thomcc"
+  ],
+  "stars": 534,
+  "forks": 54,
+  "downloads": 26772622,
+  "num_side_effects": 41,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-2\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "2.0.2",
+      "notes": "Reviewed in CL 545304268"
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 33,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 14,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.63
+  }
+}

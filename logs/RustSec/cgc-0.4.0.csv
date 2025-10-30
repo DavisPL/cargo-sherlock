@@ -1,0 +1,112 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,playX,playXE,https://github.com/playXE
+************************************
+event,timestamp,downloads
+Downloads,-,6157
+************************************
+event,timestamp,total,flagged
+Side Effects,-,64,53
+************************************
+Rudra,timestamp
+"2024-06-21 18:36:08.946155 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:36:12.672537 |INFO | [rudra-progress] Running rudra for target lib:cgc
+[0m[1m[33mwarning[0m[0m[1m: unused import: `std::hash::*`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/mem.rs:799:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m799[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::hash::*;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicPtr::<T>::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/mem.rs:936:14[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m936[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            .compare_and_swap(current, other, Ordering::AcqRel)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: constant is never used: `TRACE_GC`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/heap.rs:11:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m11[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconst TRACE_GC: bool = false;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `fence_mutator`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/heap.rs:93:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m93[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fence_mutator: AtomicBool,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+2024-06-21 18:36:46.065821 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:36:46.069704 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:36:46.073909 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:36:46.073921 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:36:46.114223 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:36:46.114245 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/mem.rs:829:1: 829:34
+unsafe impl<T> Send for Ptr<T> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/mem.rs:830:1: 830:34
+unsafe impl<T> Sync for Ptr<T> {}
+2024-06-21 18:36:47.504535 |INFO | [rudra-progress] Running rudra for target bin:cgc
+[0m[1m[33mwarning[0m[0m[1m: unused import: `std::hash::*`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/mem.rs:799:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m799[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::hash::*;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicPtr::<T>::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/mem.rs:936:14[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m936[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            .compare_and_swap(current, other, Ordering::AcqRel)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: constant is never used: `TRACE_GC`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/heap.rs:11:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m11[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconst TRACE_GC: bool = false;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `fence_mutator`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/heap.rs:93:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m93[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fence_mutator: AtomicBool,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+2024-06-21 18:37:06.046918 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:37:06.050898 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:37:06.055105 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:37:06.055121 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:37:06.096044 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:37:06.096067 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/mem.rs:829:1: 829:34
+unsafe impl<T> Send for Ptr<T> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/mem.rs:830:1: 830:34
+unsafe impl<T> Sync for Ptr<T> {}
+2024-06-21 18:37:07.468042 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:37:07.471629 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:37:07.473156 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:37:07.473168 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:37:07.474413 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:37:07.474422 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:37:07.522591 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

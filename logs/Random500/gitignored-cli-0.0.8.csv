@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,PoolOfDeath20,GervinFung,https://github.com/GervinFung
+************************************
+event,timestamp,downloads
+Downloads,-,3350
+************************************
+event,timestamp,total,flagged
+Side Effects,-,39,14
+************************************
+Rudra,timestamp
+"2024-06-23 14:06:46.513358 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:06:50.837949 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `memchr = ""^2.2""`
+candidate versions found which didn't match: 2.5.0, 2.4.1, 2.4.0, ...
+location searched: crates.io index
+required by package `futures-util v0.3.21`
+    ... which satisfies dependency `futures-util = ""^0.3.0""` (locked to 0.3.21) of package `reqwest v0.11.11`
+    ... which satisfies dependency `reqwest = ""^0.11""` (locked to 0.11.11) of package `gitignored-cli v0.0.8 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Solra Bizna,SolraBizna,https://github.com/SolraBizna
+************************************
+event,timestamp,downloads
+Downloads,-,3666
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:12:25.120245 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:12:28.592756 |INFO | [rudra-progress] Running rudra for target lib:outer_cgi
+[0m[0m[1m[31merror[0m[1m:[0m package `ctrlc v3.4.4` cannot be built because it requires rustc 1.69.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:12:31.964166 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

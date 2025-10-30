@@ -1,0 +1,24 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,,0.24.0,"no unsafe, no build, no ambient capabilities",
+************************************
+event,timestamp,name,username,url
+Author,-,quininer,quininer,https://github.com/quininer
+Author,-,Dirkjan Ochtman,djc,https://github.com/djc
+************************************
+event,timestamp,downloads
+Downloads,-,103593039
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:32:57.980107 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:33:01.542758 |INFO | [rudra-progress] Running rudra for target lib:tokio-rustls
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:33:04.968582 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

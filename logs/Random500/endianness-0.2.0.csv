@@ -1,0 +1,69 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ihar Salauyou,igrslv,https://github.com/igrslv
+************************************
+event,timestamp,downloads
+Downloads,-,25631
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-23 15:12:01.143866 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:12:04.456976 |INFO | [rudra-progress] Running rudra for target lib:endianness
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:76:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&error::Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn error::Error`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:100:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m100[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Ok(try!(read_u16(data, endianness)) as i16)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:123:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m123[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Ok(try!(read_u32(data, endianness)) as i32)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:150:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m150[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Ok(try!(read_u64(data, endianness)) as i64)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:155:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m155[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let u = try!(read_u32(data, endianness));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:161:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m161[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let u = try!(read_u64(data, endianness));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+2024-06-23 15:12:08.480643 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:12:08.484786 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:12:08.485154 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:12:08.485169 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:12:08.525443 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:12:08.525466 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:12:09.340418 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

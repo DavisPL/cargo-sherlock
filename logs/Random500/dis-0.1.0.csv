@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,panicbit,https://github.com/panicbit
+Author,-,Grzegorz Szansa,sarna,https://github.com/sarna
+************************************
+event,timestamp,downloads
+Downloads,-,646
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:40:30.151547 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:40:37.633414 |INFO | [rudra-progress] Running rudra for target lib:dis
+2024-06-23 14:40:46.930983 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:40:46.937872 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:40:46.944603 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:40:46.944651 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:40:46.944788 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:40:46.944798 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:40:48.081897 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,22 @@
+Solving for required assumptions to trust raw-cpuid-9.1.0...
++------------------------------------------------------------+
+|            Analysis Report for raw-cpuid-9.1.0             |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 26 cost
+Assumptions for Trusting:
+  • raw-cpuid-9.1.0 has many downloads: 1 cost
+  • raw-cpuid-9.1.0 having many downloads implies it is safe: 25 cost
+
+Distrust Cost (higher is better): 50 cost
+Assumptions for Distrusting:
+  • raw-cpuid-9.1.0 failing a Miri test implies it is unsafe: 50 cost
+
+Severity Label: LOW_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/raw-cpuid-9.1.0.json
++------------------------------------------------------------+
+

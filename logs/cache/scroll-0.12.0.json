@@ -1,0 +1,69 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "m4b"
+  ],
+  "stars": 167,
+  "forks": 38,
+<<<<<<< HEAD
+  "downloads": 18810247,
+=======
+  "downloads": 18806890,
+>>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+  "num_side_effects": 9,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "",
+      "version": "0.12.0",
+      "notes": "Reviewed in CL 642006817"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.10.2 -> 0.11.0",
+      "version": "",
+      "notes": "Small changes to exposed traits, that look reasonable and have additional buffer boundary checks. No unsafe code touched."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.11.0 -> 0.12.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 5,
+<<<<<<< HEAD
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 26,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.49
+=======
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+>>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+  }
+}

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust orion-0.11.1...
+Trust Score for orion-0.11.1: 76
+Assumptions Made:
+orion-0.11.1 has many downloads: 16 wt
+orion-0.11.1 having many downloads implies it is safe: 10 wt
+orion-0.11.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

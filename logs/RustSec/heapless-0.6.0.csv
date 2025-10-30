@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.7.17,"does-not-implement-crypto: Hashing containers (e.g., IndexMap) defer to other\nmachinery like the hash32 crate for hashing.\n",
+************************************
+event,timestamp,name,username,url
+Author,-,Jorge Aparicio,japaric,https://github.com/japaric
+Author,-,Adam Greig,adamgreig,https://github.com/adamgreig
+Author,-,Emil Fresk,korken89,https://github.com/korken89
+Author,-,libs,github:rust-embedded:libs,https://github.com/rust-embedded
+************************************
+event,timestamp,downloads
+Downloads,-,13282651
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:07:20.565382 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:07:24.573957 |INFO | [rudra-progress] Running rudra for target lib:heapless
+[0m[0m[1m[31merror[0m[1m:[0m package `byteorder v1.5.0` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:07:27.863314 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

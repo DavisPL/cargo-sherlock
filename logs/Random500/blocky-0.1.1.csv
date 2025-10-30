@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jaden,JAD3N,https://github.com/JAD3N
+************************************
+event,timestamp,downloads
+Downloads,-,1497
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:59:54.853627 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:59:57.760825 |INFO | [rudra-progress] Running rudra for target lib:blocky
+2024-06-23 16:00:01.991910 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:00:01.995722 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:00:01.996082 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:00:01.996092 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:00:02.017399 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:00:02.017426 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:00:02.813871 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

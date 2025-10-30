@@ -1,0 +1,170 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "fitzgen",
+    "philipc"
+  ],
+  "stars": 707,
+  "forks": 159,
+  "downloads": 204871746,
+  "num_side_effects": 24,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.29.0 -> 0.30.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.30.1 -> 0.30.3",
+      "version": "",
+      "notes": "No unsafe blocks or I/O in the diff. The only changes clearly implement what\\nthe changelog says is new in these versions.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.30.3 -> 0.31.1",
+      "version": "",
+      "notes": "A large-ish update to the crate but nothing out of the ordering. Support for new formats like xcoff, new constants, minor refactorings, etc. Nothing out of the ordinary."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.31.1 -> 0.32.0",
+      "version": "",
+      "notes": "Various new features and refactorings as one would expect from an object parsing crate, all looks good."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.32.0 -> 0.33.0",
+      "version": "",
+      "notes": "No `unsafe` code in this update. Lots of changes but all\\nobject-file-format-related, everything looks good.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.36.0 -> 0.36.5",
+      "version": "",
+      "notes": "No new unsafe code, lots of new relocations/objects support, everything looks nominal"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.30.3",
+      "notes": "I'm not counting the code related to the GNU Hash section as crypto for the sake of this review."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.30.3 -> 0.30.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.30.3 -> 0.31.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.31.1 -> 0.32.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-1",
+      "delta": "",
+      "version": "0.32.0",
+      "notes": "Reviewed in CL 558738698"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.28.4 -> 0.30.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.30.0 -> 0.30.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.33.0 -> 0.36.4",
+      "version": "",
+      "notes": "Hardly any new unsafe code, no new dependencies nor side-effectful std functions. Plenty of new tests."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.30.1 -> 0.30.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.30.2 -> 0.30.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.30.3 -> 0.30.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.32.0 -> 0.32.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.32.1 -> 0.32.2",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "memchr",
+      "2.7.4"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 10,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 11,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 1.91
+  }
+}

@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Timofey Prodanov,tprodanov,https://github.com/tprodanov
+************************************
+event,timestamp,downloads
+Downloads,-,17672
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:14:59.222014 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:15:02.778371 |INFO | [rudra-progress] Running rudra for target lib:bam
+[0m[0m[1m[31merror[0m[1m:[0m package `byteorder v1.5.0` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:15:06.152304 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

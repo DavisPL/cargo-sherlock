@@ -1,0 +1,132 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,1.0.0-rc.3 -> 1.0.1,,Quite a few changes here relative to the last RC but everything is related to\nrefactorings and such. No new fundamental addition of functionality or\nsubstantially new unsafe code.\n,
+audits,-,Critical,google,safe-to-run,,0.14.20,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.14.27,,
+audits,-,Critical,google,ub-risk-4,,1.0.1,Reviewed in CL 588384310\nIssues found:\n - https://github.com/hyperium/hyper/pull/3498\n - https://github.com/hyperium/hyper/issues/3556\n - https://github.com/hyperium/hyper/issues/3500 \n(probably not a real issue)\n - https://github.com/hyperium/hyper/issues/3554 (documentation)\n,
+audits,-,Critical,mozilla,safe-to-run,0.14.19 -> 0.14.20,,,
+audits,-,Critical,mozilla,safe-to-run,0.14.20 -> 0.14.22,,,
+audits,-,Critical,mozilla,safe-to-run,0.14.22 -> 0.14.23,,,
+audits,-,Critical,mozilla,safe-to-run,0.14.23 -> 0.14.24,,,
+audits,-,Critical,zcash,safe-to-deploy,0.14.23 -> 0.14.24,,"Fixes a bug where memory was reserved based on an adversary-controllable size, before the\ncorresponding data was received.\n",
+audits,-,Critical,zcash,safe-to-deploy,0.14.25 -> 0.14.26,,,
+audits,-,Critical,zcash,safe-to-deploy,0.14.26 -> 0.14.27,,,
+audits,-,Critical,zcash,safe-to-deploy,0.14.27 -> 0.14.28,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Sean McArthur,seanmonstar,https://github.com/seanmonstar
+Author,-,Core,github:hyperium:core,https://github.com/hyperium
+************************************
+event,timestamp,downloads
+Downloads,-,161295466
+************************************
+event,timestamp,total,flagged
+Side Effects,-,35,26
+************************************
+Rudra,timestamp
+"2024-06-21 16:30:04.531420 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:30:15.894373 |INFO | [rudra-progress] Running rudra for target lib:hyper
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/body/payload.rs:68:37[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn __hyper_full_data(&mut self, FullDataArg) -> FullDataRet<Self::Data> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: FullDataArg`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(anonymous_parameters)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/client/connect/dns.rs:99:14[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m99[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.description().fmt(f)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/client/connect/http.rs:304:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m304[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        f.write_str(self.description())[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:328:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m328[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            write!(f, ""{}: {}"", self.description(), cause)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:330:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m330[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            f.write_str(self.description())[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/proto/h1/decode.rs:307:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m307[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        f.write_str(self.description())[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/upgrade.rs:247:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m247[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        f.write_str(self.description())[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `val`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/service/service.rs:183:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m183[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        val += 1;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_variables)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: did you mean to capture by reference instead?[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `val`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/service/service.rs:190:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m190[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        val += 1;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: did you mean to capture by reference instead?[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `drained_tx`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/common/drain.rs:35:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    drained_tx: mpsc::Sender<Never>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+2024-06-21 16:31:33.215666 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:31:33.225921 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:31:33.226614 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:31:33.226643 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:31:33.329612 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:31:33.329822 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:31:41.371486 |WARN | [cargo_rudra] Target example:client is not supported
+2024-06-21 16:31:41.371696 |WARN | [cargo_rudra] Target example:client_json is not supported
+2024-06-21 16:31:41.371748 |WARN | [cargo_rudra] Target example:echo is not supported
+2024-06-21 16:31:41.371767 |WARN | [cargo_rudra] Target example:hello is not supported
+2024-06-21 16:31:41.371775 |WARN | [cargo_rudra] Target example:multi_server is not supported
+2024-06-21 16:31:41.371788 |WARN | [cargo_rudra] Target example:params is not supported
+2024-06-21 16:31:41.371803 |WARN | [cargo_rudra] Target example:proxy is not supported
+2024-06-21 16:31:41.371828 |WARN | [cargo_rudra] Target example:send_file is not supported
+2024-06-21 16:31:41.371845 |WARN | [cargo_rudra] Target example:single_threaded is not supported
+2024-06-21 16:31:41.371856 |WARN | [cargo_rudra] Target example:state is not supported
+2024-06-21 16:31:41.371870 |WARN | [cargo_rudra] Target example:upgrades is not supported
+2024-06-21 16:31:41.371889 |WARN | [cargo_rudra] Target example:web_api is not supported
+2024-06-21 16:31:41.371909 |WARN | [cargo_rudra] Target test:client is not supported
+2024-06-21 16:31:41.371925 |WARN | [cargo_rudra] Target test:integration is not supported
+2024-06-21 16:31:41.371940 |WARN | [cargo_rudra] Target test:server is not supported
+2024-06-21 16:31:41.371948 |WARN | [cargo_rudra] Target bench:end_to_end is not supported
+2024-06-21 16:31:41.371961 |WARN | [cargo_rudra] Target bench:pipeline is not supported
+2024-06-21 16:31:41.371975 |WARN | [cargo_rudra] Target bench:server is not supported
+2024-06-21 16:31:41.371989 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 16:31:41.372385 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

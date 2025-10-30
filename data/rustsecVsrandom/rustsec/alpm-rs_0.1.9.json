@@ -1,0 +1,6 @@
+Solving for required assumptions to trust alpm-rs-0.1.9...
+Trust Score for alpm-rs-0.1.9: 194
+Assumptions Made:
+alpm-rs-0.1.9 has many downloads: 134 wt
+alpm-rs-0.1.9 having many downloads implies it is safe: 10 wt
+alpm-rs-0.1.9 appearing in RustSec implies it is less safe (score penalty): 50 weight

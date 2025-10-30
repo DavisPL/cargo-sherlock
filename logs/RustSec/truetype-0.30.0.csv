@@ -1,0 +1,37 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ivan Ukhov,IvanUkhov,https://github.com/IvanUkhov
+************************************
+event,timestamp,downloads
+Downloads,-,135839
+************************************
+event,timestamp,total,flagged
+Side Effects,-,7,7
+************************************
+Rudra,timestamp
+"2024-06-21 17:06:50.396936 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:06:53.354500 |INFO | [rudra-progress] Running rudra for target lib:truetype
+2024-06-21 17:06:57.873653 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:06:57.877828 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:06:57.878182 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:06:57.878196 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:06:57.917991 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:06:57.918015 |INFO | [rudra-progress] Rudra finished
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `tape::Tape::take_bytes`
+-> src/tape.rs:50:5: 55:6
+fn take_bytes(&mut self, count: usize) -> Result<Vec<u8>> {
+        let mut buffer = Vec::with_capacity(count);
+        unsafe { [0m[31mbuffer.set_len(count)[0m };
+        [0m[36mself.read_exact(&mut buffer)[0m?;
+        Ok(buffer)
+    }
+[0m
+2024-06-21 17:06:59.364748 |WARN | [cargo_rudra] Target test:common_test is not supported
+2024-06-21 17:06:59.364931 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

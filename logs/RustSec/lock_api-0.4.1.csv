@@ -1,0 +1,85 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+trusted,-,Critical,bytecode-alliance,safe-to-deploy,,,,3
+audits,-,Critical,google,safe-to-run,,0.4.2,,
+audits,-,Critical,google,safe-to-run,,0.4.9,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.4.10,,
+audits,-,Critical,google,ub-risk-2,0.4.9 -> 0.4.10,,Reviewed in CL 563851550,
+audits,-,Critical,mozilla,safe-to-deploy,0.4.7 -> 0.4.9,,,
+trusted,-,Critical,mozilla,safe-to-deploy,,,,3
+audits,-,Critical,zcash,safe-to-run,0.4.11 -> 0.4.12,,,
+audits,-,Critical,zcash,safe-to-deploy,0.4.7 -> 0.4.9,,"The unsafe changes fix soundness bugs. The unsafe additions in the new ArcMutexGuard::into_arc method seem fine, but it should probably have used ManuallyDrop instead of mem::forget.",
+************************************
+event,timestamp,name,username,url
+Author,-,Linus Färnstrand,faern,https://github.com/faern
+Author,-,Amanieu d'Antras,Amanieu,https://github.com/Amanieu
+************************************
+event,timestamp,downloads
+Downloads,-,216828544
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:14:10.141893 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:14:13.780791 |INFO | [rudra-progress] Running rudra for target lib:lock_api
+2024-06-21 18:14:18.587938 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:14:18.591865 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:14:18.613027 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:14:18.613046 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:14:18.642694 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:14:18.642715 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/rwlock.rs:1655:1: 1658:2
+unsafe impl<'a, R: RawRwLock + 'a, T: ?Sized + 'a> Send for MappedRwLockWriteGuard<'a, R, T> where
+    R::GuardMarker: Send
+{
+}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/rwlock.rs:1651:1: 1654:2
+unsafe impl<'a, R: RawRwLock + 'a, T: ?Sized + Sync + 'a> Sync
+    for MappedRwLockWriteGuard<'a, R, T>
+{
+}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/rwlock.rs:1517:1: 1520:2
+unsafe impl<'a, R: RawRwLock + 'a, T: ?Sized + 'a> Send for MappedRwLockReadGuard<'a, R, T> where
+    R::GuardMarker: Send
+{
+}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/rwlock.rs:1516:1: 1516:102
+unsafe impl<'a, R: RawRwLock + 'a, T: ?Sized + Sync + 'a> Sync for MappedRwLockReadGuard<'a, R, T> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/rwlock.rs:1277:1: 1280:2
+unsafe impl<'a, R: RawRwLockUpgrade + 'a, T: ?Sized + Sync + 'a> Sync
+    for RwLockUpgradableReadGuard<'a, R, T>
+{
+}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/mutex.rs:604:1: 607:2
+unsafe impl<'a, R: RawMutex + 'a, T: ?Sized + 'a> Send for MappedMutexGuard<'a, R, T> where
+    R::GuardMarker: Send
+{
+}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/mutex.rs:141:1: 141:74
+unsafe impl<R: RawMutex + Sync, T: ?Sized + Send> Sync for Mutex<R, T> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/rwlock.rs:1054:1: 1054:97
+unsafe impl<'a, R: RawRwLock + 'a, T: ?Sized + Sync + 'a> Sync for RwLockWriteGuard<'a, R, T> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/remutex.rs:212:1: 215:2
+unsafe impl<R: RawMutex + Sync, G: GetThreadId + Sync, T: ?Sized + Send> Sync
+    for ReentrantMutex<R, G, T>
+{
+}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/rwlock.rs:878:1: 878:96
+unsafe impl<'a, R: RawRwLock + 'a, T: ?Sized + Sync + 'a> Sync for RwLockReadGuard<'a, R, T> {}
+2024-06-21 18:14:19.679408 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

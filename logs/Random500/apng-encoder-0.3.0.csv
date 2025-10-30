@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,anekos,anekos,https://github.com/anekos
+************************************
+event,timestamp,downloads
+Downloads,-,10343
+************************************
+event,timestamp,total,flagged
+Side Effects,-,28,21
+************************************
+Rudra,timestamp
+"2024-06-23 13:42:48.340453 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:42:53.504004 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `num-traits = ""^0.2.0""`
+candidate versions found which didn't match: 0.2.18, 0.2.17, 0.2.16, ...
+location searched: crates.io index
+required by package `image v0.21.3`
+    ... which satisfies dependency `image = ""^0.21""` (locked to 0.21.3) of package `apng-encoder v0.3.0 (/tmp/rudra)`
+
+"
+************************************

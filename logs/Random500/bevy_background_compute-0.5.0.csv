@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,Demiu,https://github.com/Demiu
+************************************
+event,timestamp,downloads
+Downloads,-,2888
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:48:12.501995 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:48:14.001529 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bevy_app = ""^0.12""`
+candidate versions found which didn't match: 0.7.0, 0.6.0, 0.5.0, ...
+location searched: crates.io index
+required by package `bevy_background_compute v0.5.0 (/tmp/rudra)`
+
+"
+************************************

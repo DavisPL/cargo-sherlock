@@ -1,0 +1,21 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Eric Kidd,emk,https://github.com/emk
+************************************
+event,timestamp,downloads
+Downloads,-,9099
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:17:15.562016 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:17:16.785101 |WARN | [cargo_rudra] Target proc-macro:bigml_derive is not supported
+2024-06-23 15:17:16.785274 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

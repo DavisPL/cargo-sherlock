@@ -1,0 +1,195 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "irh"
+  ],
+  "stars": 586,
+  "forks": 32,
+  "downloads": 17687,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "getrandom",
+      "0.3.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "r-efi",
+      "5.2.0"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "koto_runtime",
+      "0.15.2"
+    ],
+    [
+      "chrono",
+      "0.4.40"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "downcast-rs",
+      "2.0.1"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "instant",
+      "0.1.13"
+    ],
+    [
+      "koto_bytecode",
+      "0.15.2"
+    ],
+    [
+      "circular-buffer",
+      "1.1.0"
+    ],
+    [
+      "derive-name",
+      "1.1.0"
+    ],
+    [
+      "derive-name-macros",
+      "1.1.1"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "dunce",
+      "1.0.5"
+    ],
+    [
+      "koto_memory",
+      "0.15.2"
+    ],
+    [
+      "koto_parser",
+      "0.15.2"
+    ],
+    [
+      "koto_lexer",
+      "0.15.2"
+    ],
+    [
+      "unicode-segmentation",
+      "1.12.0"
+    ],
+    [
+      "unicode-width",
+      "0.2.0"
+    ],
+    [
+      "unicode-xid",
+      "0.2.6"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "rustc-hash",
+      "2.1.1"
+    ],
+    [
+      "koto_derive",
+      "0.15.2"
+    ],
+    [
+      "saturating_cast",
+      "0.1.0"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "rand",
+      "0.9.0"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "zerocopy",
+      "0.8.24"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.24"
+    ],
+    [
+      "rand_chacha",
+      "0.9.0"
+    ],
+    [
+      "ppv-lite86",
+      "0.2.21"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

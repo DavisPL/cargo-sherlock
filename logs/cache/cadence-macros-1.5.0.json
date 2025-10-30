@@ -1,0 +1,43 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "56quarters"
+  ],
+  "stars": 89,
+  "forks": 28,
+  "downloads": 2953257,
+  "num_side_effects": 2,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "cadence",
+      "1.5.0"
+    ],
+    [
+      "crossbeam-channel",
+      "0.5.14"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 2,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 11,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.57
+  }
+}

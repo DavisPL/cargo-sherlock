@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,tiannian,https://github.com/tiannian
+************************************
+event,timestamp,downloads
+Downloads,-,3744
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-23 15:28:10.083809 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:28:13.745886 |INFO | [rudra-progress] Running rudra for target lib:async-abci
+2024-06-23 15:28:47.002084 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:28:47.006073 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:28:47.006433 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:28:47.006447 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:28:47.071481 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:28:47.071511 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:28:48.235459 |WARN | [cargo_rudra] Target example:tokio_appx is not supported
+2024-06-23 15:28:48.235639 |WARN | [cargo_rudra] Target example:appx is not supported
+2024-06-23 15:28:48.235822 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

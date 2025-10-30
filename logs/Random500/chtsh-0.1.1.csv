@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Daniel Hill,blazkowolf,https://github.com/blazkowolf
+************************************
+event,timestamp,downloads
+Downloads,-,1045
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-23 15:55:48.888719 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:55:50.534414 |INFO | [rudra-progress] Running rudra for target bin:chtsh
+2024-06-23 15:56:25.587392 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:56:25.591338 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:56:25.592838 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:56:25.592873 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:56:25.658516 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:56:25.658551 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:56:25.730508 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

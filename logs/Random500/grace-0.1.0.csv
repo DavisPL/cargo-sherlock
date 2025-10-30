@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Diggory Blake,Diggsey,https://github.com/Diggsey
+************************************
+event,timestamp,downloads
+Downloads,-,602
+************************************
+event,timestamp,total,flagged
+Side Effects,-,36,20
+************************************
+Rudra,timestamp
+"2024-06-23 16:42:29.481415 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:42:32.988432 |INFO | [rudra-progress] Running rudra for target lib:grace
+2024-06-23 16:42:45.024564 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:42:45.028489 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:42:45.029219 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:42:45.029234 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:42:45.075794 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:42:45.075823 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:42:46.093875 |WARN | [cargo_rudra] Target example:hello is not supported
+2024-06-23 16:42:46.094045 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

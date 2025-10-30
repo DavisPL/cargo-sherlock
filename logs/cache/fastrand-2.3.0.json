@@ -1,0 +1,137 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "taiki-e",
+    "github:smol-rs:admins"
+  ],
+  "stars": 477,
+  "forks": 38,
+  "downloads": 275382143,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "2.0.0 -> 2.0.1",
+      "version": "",
+      "notes": "This update had a few doc updates but no otherwise-substantial source code\\nupdates.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"does-not-implement-crypto\", \"safe-to-deploy\",]",
+      "delta": "",
+      "version": "1.9.0",
+      "notes": "`does-not-implement-crypto` is certified because this crate explicitly says\\nthat the RNG here is not cryptographically secure.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-0",
+      "delta": "",
+      "version": "1.9.0",
+      "notes": "`rg -i unsafe` resulted in two hits for this package:\\n1. `#![forbid(unsafe_code)]`\\n2. A CHANGELOG entry noting that unsafe code was forbidden.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "2.0.2",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.7.0 -> 1.8.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.8.0 -> 1.9.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.9.0 -> 2.0.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.0.1 -> 2.1.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.1.0 -> 2.1.1",
+      "version": "",
+      "notes": "Fairly trivial changes, no chance of security regression."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "2.0.2 -> 2.1.0",
+      "version": "",
+      "notes": "As noted in the changelog, this version produces different output for a given seed.\\nThe documentation did not mention stability. It is possible that some uses relying on\\ndeterminism across the update would be broken.\\n\\nThe new constants do appear to match WyRand v4.2 (modulo ordering issues that I have not checked):\\nhttps://github.com/wangyi-fudan/wyhash/blob/408620b6d12b7d667b3dd6ae39b7929a39e8fa05/wyhash.h#L145\\nI have no way to check whether these constants are an improvement or not.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.9.0 -> 2.0.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "2.0.0 -> 2.0.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "2.0.1 -> 2.0.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "2.0.2 -> 2.1.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "2.1.0 -> 2.1.1",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

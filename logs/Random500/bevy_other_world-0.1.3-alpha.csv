@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,jamescarterbell,https://github.com/jamescarterbell
+************************************
+event,timestamp,downloads
+Downloads,-,1803
+************************************
+event,timestamp,total,flagged
+Side Effects,-,169,168
+************************************
+Rudra,timestamp
+"2024-06-23 16:48:53.212643 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:48:54.991240 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `once_cell = ""^1.4.1""`
+candidate versions found which didn't match: 1.17.2, 1.17.1, 1.17.0, ...
+location searched: crates.io index
+required by package `bevy_render v0.5.0`
+    ... which satisfies dependency `bevy_render = ""^0.5.0""` (locked to 0.5.0) of package `bevy_internal v0.5.0`
+    ... which satisfies dependency `bevy_internal = ""^0.5.0""` (locked to 0.5.0) of package `bevy v0.5.0`
+    ... which satisfies dependency `bevy = ""^0.5.0""` (locked to 0.5.0) of package `bevy_other_world v0.1.3-alpha (/tmp/rudra)`
+
+"
+************************************

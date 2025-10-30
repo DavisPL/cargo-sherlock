@@ -1,0 +1,75 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,wspsxing,biluohc,https://github.com/biluohc
+************************************
+event,timestamp,downloads
+Downloads,-,35258
+************************************
+event,timestamp,total,flagged
+Side Effects,-,7,7
+************************************
+Rudra,timestamp
+"2024-06-21 18:12:41.123905 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:12:44.784664 |INFO | [rudra-progress] Running rudra for target lib:stderr
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/log/mod.rs:293:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m293[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct LogFmter(Box<Fn(&LogMsg) -> String>);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Fn(&LogMsg) -> String`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::atomic::ATOMIC_BOOL_INIT`: the `new` function is now preferred[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/log/mod.rs:9:37[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::sync::atomic::{AtomicBool, ATOMIC_BOOL_INIT, Ordering};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::ONCE_INIT`: the `new` function is now preferred[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/log/mod.rs:19:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0mlazy_static!{[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    static ref LOGGER:StaticMut<Logger>=StaticMut::new(Logger::default());[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    static ref LogFmterDefault:StaticMut<LogFmter> =StaticMut::new(LogFmter::default());[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m}[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `__lazy_static_create` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::atomic::ATOMIC_BOOL_INIT`: the `new` function is now preferred[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/log/mod.rs:23:42[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0mstatic LogFmterInitialized: AtomicBool = ATOMIC_BOOL_INIT;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: replace the use of the deprecated constant: `AtomicBool::new(false)`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/static_mut.rs:89:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m89[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        unsafe {self.0.into_inner()}[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_unsafe)]` on by default[0m
+
+2024-06-21 18:12:52.843560 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:12:52.847350 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:12:52.850887 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:12:52.850897 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:12:52.877493 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:12:52.877510 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/static_mut.rs:62:1: 62:40
+unsafe impl<T> Sync for StaticMut<T> {}
+2024-06-21 18:12:53.974345 |WARN | [cargo_rudra] Target example:main is not supported
+2024-06-21 18:12:53.974402 |WARN | [cargo_rudra] Target test:main is not supported
+2024-06-21 18:12:53.974506 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

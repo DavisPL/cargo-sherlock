@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Niklas Fiekas,niklasf,https://github.com/niklasf
+************************************
+event,timestamp,downloads
+Downloads,-,33680
+************************************
+event,timestamp,total,flagged
+Side Effects,-,3,3
+************************************
+Rudra,timestamp
+"2024-06-21 18:02:24.778215 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:02:28.424975 |INFO | [rudra-progress] Running rudra for target lib:double-checked-cell
+2024-06-21 18:02:33.719807 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:02:33.723781 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:02:33.750634 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:02:33.750670 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:02:33.784445 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:02:33.784474 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:02:34.624689 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

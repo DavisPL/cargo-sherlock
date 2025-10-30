@@ -1,0 +1,6 @@
+Solving for required assumptions to trust nphysics2d-0.9.4...
+Trust Score for nphysics2d-0.9.4: 67
+Assumptions Made:
+nphysics2d-0.9.4 has many stars and forks: 2 wt
+nphysics2d-0.9.4 having many stars and forks implies it is safe: 15 wt
+nphysics2d-0.9.4 appearing in RustSec implies it is less safe (score penalty): 50 weight

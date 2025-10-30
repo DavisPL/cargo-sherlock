@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Luca Barbato,lu-zero,https://github.com/lu-zero
+************************************
+event,timestamp,downloads
+Downloads,-,508873
+************************************
+event,timestamp,total,flagged
+Side Effects,-,19,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:41:29.636600 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:41:31.144985 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `toml = ""^0.8""`
+candidate versions found which didn't match: 0.5.11, 0.5.10, 0.5.9, ...
+location searched: crates.io index
+required by package `system-deps v6.2.2`
+    ... which satisfies dependency `system-deps = ""^6.2""` (locked to 6.2.2) of package `dav1d-sys v0.8.2 (/tmp/rudra)`
+
+"
+************************************

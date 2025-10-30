@@ -1,0 +1,4 @@
+Solving for required assumptions to trust drawboard-0.1.0...
+Trust Score for drawboard-0.1.0: 1
+Assumptions Made:
+drawboard-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

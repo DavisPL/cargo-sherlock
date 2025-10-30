@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mikhail Zabaluev,mzabaluev,https://github.com/mzabaluev
+************************************
+event,timestamp,downloads
+Downloads,-,13370
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,5
+************************************
+Rudra,timestamp
+"2024-06-23 16:09:40.685379 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:09:44.549515 |INFO | [rudra-progress] Running rudra for target lib:chunked-bytes
+2024-06-23 16:09:49.480416 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:09:49.484369 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:09:49.484756 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:09:49.484769 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:09:49.508211 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:09:49.508241 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:09:50.473911 |WARN | [cargo_rudra] Target example:encoder is not supported
+2024-06-23 16:09:50.473961 |WARN | [cargo_rudra] Target bench:bench is not supported
+2024-06-23 16:09:50.474056 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

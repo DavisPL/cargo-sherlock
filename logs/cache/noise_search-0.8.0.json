@@ -1,0 +1,76 @@
+{
+  "rustsec_label": "HIGH",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "Damienkatz",
+    "vmx"
+  ],
+  "stars": 327,
+  "forks": 11,
+  "downloads": 23226,
+  "num_side_effects": 107,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "noise_search_deps_rocksdb",
+      "0.1.1"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "noise_search_deps_librocksdb-sys",
+      "0.1.1"
+    ],
+    [
+      "rustc-serialize",
+      "0.3.25"
+    ],
+    [
+      "stemmer",
+      "0.3.2"
+    ],
+    [
+      "unicode-normalization",
+      "0.1.24"
+    ],
+    [
+      "tinyvec",
+      "1.9.0"
+    ],
+    [
+      "unicode-segmentation",
+      "1.12.0"
+    ],
+    [
+      "uuid",
+      "1.16.0"
+    ],
+    [
+      "varint",
+      "0.9.0"
+    ],
+    [
+      "bit_utils",
+      "0.1.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 25,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Matteo Bertini,naufraghi,https://github.com/naufraghi
+************************************
+event,timestamp,downloads
+Downloads,-,1065
+************************************
+event,timestamp,total,flagged
+Side Effects,-,55,32
+************************************
+Rudra,timestamp
+"2024-06-23 14:12:15.738312 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:12:21.865194 |INFO | [rudra-progress] Running rudra for target bin:gitlab-butler
+2024-06-23 14:17:21.306901 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:17:21.322943 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:17:21.326111 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:17:21.326181 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:17:21.417302 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:17:21.417384 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:17:21.806199 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,4 @@
+Solving for required assumptions to trust fdecimal-0.0.2...
+Trust Score for fdecimal-0.0.2: 1
+Assumptions Made:
+fdecimal-0.0.2 having no side effects and having all safe dependencies implies it is safe: 1 wt

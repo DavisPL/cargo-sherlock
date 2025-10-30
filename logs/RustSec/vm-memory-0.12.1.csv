@@ -1,0 +1,141 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,ub-risk-3,,0.12.1,Reviewed in CL 556862067\nIssues found:\n - https://github.com/rust-vmm/vm-memory/issues/250\n,
+audits,-,Critical,google,ub-risk-2,,0.12.1,Reviewed in CL 556862067\nIssues from previous review fixed\n,
+audits,-,Critical,google,"[ ""ub-risk-4"", ""does-not-implement-crypto"",]",,0.13.1,Reviewed in CL 595684339\nIssues found:\n- https://github.com/rust-vmm/vm-memory/issues/281\n,
+************************************
+event,timestamp,name,username,url
+Author,-,Andreea Florescu,andreeaflorescu,https://github.com/andreeaflorescu
+Author,-,Jiang Liu,jiangliu,https://github.com/jiangliu
+Author,-,Laura Loghin,lauralt,https://github.com/lauralt
+Author,-,Patrick Roy,roypat,https://github.com/roypat
+Author,-,gatekeepers,github:rust-vmm:gatekeepers,https://github.com/rust-vmm
+************************************
+event,timestamp,downloads
+Downloads,-,2066931
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:54:19.152144 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:54:23.027330 |INFO | [rudra-progress] Running rudra for target lib:vm-memory
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/volatile_memory.rs:1518:13[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1515[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn copy_slice(dst: *mut u8, src: *const u8, total: usize) -> usize {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1518[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            unsafe {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_unsafe)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/volatile_memory.rs:1527:13[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1515[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn copy_slice(dst: *mut u8, src: *const u8, total: usize) -> usize {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-------------------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12mbecause it's nested under this `unsafe` fn[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1527[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            unsafe {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+
+2024-06-21 18:54:39.461263 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:54:39.465170 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:54:39.465543 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:54:39.465557 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:54:39.531726 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:54:39.531752 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/CopyFlow): Potential unsafe dataflow issue in `volatile_memory::VolatileSlice::<'a, B>::copy_to_volatile_slice`
+-> src/volatile_memory.rs:527:5: 537:6
+pub fn copy_to_volatile_slice<S: BitmapSlice>(&self, slice: VolatileSlice<S>) {
+        // SAFETY: Safe because the pointers are range-checked when the slices
+        // are created, and they never escape the VolatileSlices.
+        // FIXME: ... however, is it really okay to mix non-volatile
+        // operations such as copy with read_volatile and write_volatile?
+        unsafe {
+            let count = min(self.size, slice.size);
+            [0m[31mcopy(self.addr, slice.addr, count)[0m;
+            [0m[36mslice.bitmap.mark_dirty(0, count)[0m;
+        }
+    }
+[0m
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `<volatile_memory::VolatileSlice<'_, B> as bytes::Bytes<usize>>::write_to`
+-> src/volatile_memory.rs:853:5: 880:6
+fn write_to<F>(&self, addr: usize, dst: &mut F, count: usize) -> Result<usize>
+    where
+        F: Write,
+    {
+        let _ = self.compute_end_offset(addr, count)?;
+        let mut src = Vec::with_capacity(count);
+
+        let slice = self.subslice(addr, count)?;
+
+        // SAFETY: We checked the addr and count so accessing the slice is safe.
+        // It is safe to read from volatile memory. The Vec has capacity for exactly `count`
+        // many bytes, and the memory regions pointed to definitely do not overlap, as we
+        // allocated src outside of guest memory.
+        // The call to set_len is safe because the bytes between 0 and count have been initialized
+        // via copying from guest memory, and the Vec's capacity is `count`
+        unsafe {
+            copy_from_volatile_slice(src.as_mut_ptr(), &slice, count);
+            [0m[31msrc.set_len(count)[0m;
+        }
+
+        loop {
+            match [0m[36mdst.write(&src)[0m {
+                Ok(n) => break Ok(n),
+                Err(ref e) if e.kind() == std::io::ErrorKind::Interrupted => continue,
+                Err(e) => break Err(Error::IOError(e)),
+            }
+        }
+    }
+[0m
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `<volatile_memory::VolatileSlice<'_, B> as bytes::Bytes<usize>>::write_all_to`
+-> src/volatile_memory.rs:904:5: 927:6
+fn write_all_to<F>(&self, addr: usize, dst: &mut F, count: usize) -> Result<()>
+    where
+        F: Write,
+    {
+        let _ = self.compute_end_offset(addr, count)?;
+        let mut src = Vec::with_capacity(count);
+
+        let slice = self.subslice(addr, count)?;
+
+        // SAFETY: We checked the addr and count so accessing the slice is safe.
+        // It is safe to read from volatile memory. The Vec has capacity for exactly `count`
+        // many bytes, and the memory regions pointed to definitely do not overlap, as we
+        // allocated src outside of guest memory.
+        // The call to set_len is safe because the bytes between 0 and count have been initialized
+        // via copying from guest memory, and the Vec's capacity is `count`
+        unsafe {
+            copy_from_volatile_slice(src.as_mut_ptr(), &slice, count);
+            [0m[31msrc.set_len(count)[0m;
+        }
+
+        [0m[36mdst.write_all(&src)[0m.map_err(Error::IOError)?;
+
+        Ok(())
+    }
+[0m
+Warning (UnsafeDataflow:/CopyFlow): Potential unsafe dataflow issue in `volatile_memory::VolatileArrayRef::<'a, T, B>::copy_to_volatile_slice`
+-> src/volatile_memory.rs:1358:5: 1368:6
+pub fn copy_to_volatile_slice<S: BitmapSlice>(&self, slice: VolatileSlice<S>) {
+        // SAFETY: Safe because the pointers are range-checked when the slices
+        // are created, and they never escape the VolatileSlices.
+        // FIXME: ... however, is it really okay to mix non-volatile
+        // operations such as copy with read_volatile and write_volatile?
+        unsafe {
+            let count = min(self.len() * self.element_size(), slice.size);
+            [0m[31mcopy(self.addr, slice.addr, count)[0m;
+            [0m[36mslice.bitmap.mark_dirty(0, count)[0m;
+        }
+    }
+[0m
+2024-06-21 18:54:41.064855 |WARN | [cargo_rudra] Target bench:main is not supported
+2024-06-21 18:54:41.065208 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

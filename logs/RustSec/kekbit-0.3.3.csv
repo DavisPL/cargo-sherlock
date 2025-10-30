@@ -1,0 +1,36 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,motoras,https://github.com/motoras
+************************************
+event,timestamp,downloads
+Downloads,-,5720
+************************************
+event,timestamp,total,flagged
+Side Effects,-,51,17
+************************************
+Rudra,timestamp
+"2024-06-21 17:21:11.170483 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:21:14.416189 |INFO | [rudra-progress] Running rudra for target lib:kekbit
+2024-06-21 17:21:24.294420 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:21:24.298314 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:21:24.299841 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:21:24.299856 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:21:24.356726 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:21:24.356749 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/core/writer.rs:82:1: 82:49
+unsafe impl<H: Handler> Send for ShmWriter<H> {}
+2024-06-21 17:21:25.505803 |WARN | [cargo_rudra] Target example:echo_out is not supported
+2024-06-21 17:21:25.505861 |WARN | [cargo_rudra] Target example:rep is not supported
+2024-06-21 17:21:25.505868 |WARN | [cargo_rudra] Target example:req is not supported
+2024-06-21 17:21:25.505874 |WARN | [cargo_rudra] Target example:child_ps is not supported
+2024-06-21 17:21:25.505881 |WARN | [cargo_rudra] Target example:echo_in is not supported
+2024-06-21 17:21:25.505884 |WARN | [cargo_rudra] Target example:chat is not supported
+2024-06-21 17:21:25.505980 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

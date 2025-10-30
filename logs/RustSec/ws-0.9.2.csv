@@ -1,0 +1,49 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jason Housley,housleyjk,https://github.com/housleyjk
+Author,-,Bastien Orivel,Eijebong,https://github.com/Eijebong
+************************************
+event,timestamp,downloads
+Downloads,-,1563968
+************************************
+event,timestamp,total,flagged
+Side Effects,-,107,101
+************************************
+Rudra,timestamp
+"2024-06-21 17:31:08.361796 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:31:11.749864 |INFO | [rudra-progress] Running rudra for target lib:ws
+2024-06-21 17:31:26.484197 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:31:26.488322 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:31:26.488699 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:31:26.488711 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:31:26.531588 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:31:26.531613 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:31:28.161302 |WARN | [cargo_rudra] Target example:autobahn-server is not supported
+2024-06-21 17:31:28.161410 |WARN | [cargo_rudra] Target example:channel is not supported
+2024-06-21 17:31:28.161415 |WARN | [cargo_rudra] Target example:client is not supported
+2024-06-21 17:31:28.161417 |WARN | [cargo_rudra] Target example:ssl-server is not supported
+2024-06-21 17:31:28.161427 |WARN | [cargo_rudra] Target example:threaded is not supported
+2024-06-21 17:31:28.161437 |WARN | [cargo_rudra] Target example:external_shutdown is not supported
+2024-06-21 17:31:28.161454 |WARN | [cargo_rudra] Target example:autobahn-client is not supported
+2024-06-21 17:31:28.161462 |WARN | [cargo_rudra] Target example:unsafe-ssl-client is not supported
+2024-06-21 17:31:28.161464 |WARN | [cargo_rudra] Target example:server is not supported
+2024-06-21 17:31:28.161473 |WARN | [cargo_rudra] Target example:router is not supported
+2024-06-21 17:31:28.161475 |WARN | [cargo_rudra] Target example:bench-server is not supported
+2024-06-21 17:31:28.161479 |WARN | [cargo_rudra] Target example:html_chat is not supported
+2024-06-21 17:31:28.161496 |WARN | [cargo_rudra] Target example:pong is not supported
+2024-06-21 17:31:28.161501 |WARN | [cargo_rudra] Target example:peer2peer is not supported
+2024-06-21 17:31:28.161511 |WARN | [cargo_rudra] Target example:remote_addr is not supported
+2024-06-21 17:31:28.161520 |WARN | [cargo_rudra] Target example:bench is not supported
+2024-06-21 17:31:28.161527 |WARN | [cargo_rudra] Target example:shared is not supported
+2024-06-21 17:31:28.161530 |WARN | [cargo_rudra] Target example:cli is not supported
+2024-06-21 17:31:28.161532 |WARN | [cargo_rudra] Target test:shutdown is not supported
+2024-06-21 17:31:28.161540 |WARN | [cargo_rudra] Target test:deflate is not supported
+2024-06-21 17:31:28.161548 |WARN | [cargo_rudra] Target test:bind is not supported
+2024-06-21 17:31:28.161721 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,DrBluefall,https://github.com/DrBluefall
+************************************
+event,timestamp,downloads
+Downloads,-,2178
+************************************
+event,timestamp,total,flagged
+Side Effects,-,29,7
+************************************
+Rudra,timestamp
+"2024-06-23 07:21:29.318576 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:21:30.783189 |INFO | [rudra-progress] Running rudra for target bin:dirtel
+2024-06-23 07:21:48.912100 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:21:48.916035 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:21:48.917128 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:21:48.917141 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:21:48.940977 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:21:48.941004 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:21:48.999231 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Dylan Ede,dylanede,https://github.com/dylanede
+Author,-,Jeremy Soller,jackpot51,https://github.com/jackpot51
+Author,-,Alex Butler,alexheretic,https://github.com/alexheretic
+************************************
+event,timestamp,downloads
+Downloads,-,6301363
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:57:49.151713 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:57:52.854233 |INFO | [rudra-progress] Running rudra for target lib:rusttype
+2024-06-21 17:57:58.512508 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:57:58.516504 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:57:58.516815 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:57:58.516851 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:57:58.540261 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:57:58.540285 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:57:59.643336 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

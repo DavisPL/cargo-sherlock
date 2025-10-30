@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Siyu Wang,FillZpp,https://github.com/FillZpp
+************************************
+event,timestamp,downloads
+Downloads,-,10056580
+************************************
+event,timestamp,total,flagged
+Side Effects,-,33,23
+************************************
+Rudra,timestamp
+"2024-06-21 16:17:38.231014 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:17:41.516372 |INFO | [rudra-progress] Running rudra for target lib:sys_info
+[0m[0m[1m[31merror[0m[1m:[0m package `cc v1.0.99` cannot be built because it requires rustc 1.63 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:17:44.783179 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

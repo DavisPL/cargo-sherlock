@@ -1,0 +1,67 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nyeogmi,nyeogmi,https://github.com/nyeogmi
+************************************
+event,timestamp,downloads
+Downloads,-,545
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 17:17:55.584158 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 17:17:59.491750 |INFO | [rudra-progress] Running rudra for target lib:chirpycritter
+[0m[0m[1m[31merror[0m[1m:[0m failed to run custom build command for `alsa-sys v0.3.1`
+
+Caused by:
+  process didn't exit successfully: `/tmp/rudra/target/debug/build/alsa-sys-90a2705bae667dd6/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-env-changed=ALSA_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=ALSA_STATIC
+  cargo:rerun-if-env-changed=ALSA_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+
+  --- stderr
+  thread 'main' panicked at 'Pkg-config failed - usually this is because alsa development headers are not installed.
+
+  For Fedora users:
+  # dnf install alsa-lib-devel
+
+  For Debian/Ubuntu users:
+  # apt-get install libasound2-dev
+
+  pkg_config details:
+  `""pkg-config"" ""--libs"" ""--cflags"" ""alsa""` did not exit successfully: exit status: 1
+  --- stderr
+  Package alsa was not found in the pkg-config search path.
+  Perhaps you should add the directory containing `alsa.pc'
+  to the PKG_CONFIG_PATH environment variable
+  No package 'alsa' found
+  ', /tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/alsa-sys-0.3.1/build.rs:6:50
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+[0m[0m[1m[31merror[0m[1m:[0m build failed
+2024-06-23 17:18:10.711768 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

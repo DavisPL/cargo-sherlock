@@ -1,0 +1,397 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nikolay Kim,fafhrd91,https://github.com/fafhrd91
+Author,-,Admins,github:pyo3:admins,https://github.com/pyo3
+************************************
+event,timestamp,downloads
+Downloads,-,31624382
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:46:08.709978 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:46:12.287809 |INFO | [rudra-progress] Running rudra for target lib:pyo3
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mbuild.rs:20:87[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    ($fmt: literal $(, $args: expr)+) => { return Err(format!($fmt $(,$args)+).into()); };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                        [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m136[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            None => bail!([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[38;5;12m_____________________-[0m
+[0m[1m[38;5;12m137[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                ""Must provide {} environment variable when cross-compiling"",[0m
+[0m[1m[38;5;12m138[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                var[0m
+[0m[1m[38;5;12m139[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            ),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_____________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(semicolon_in_expressions_from_macros)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `bail` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mbuild.rs:20:87[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    ($fmt: literal $(, $args: expr)+) => { return Err(format!($fmt $(,$args)+).into()); };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                      [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m143[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            bail!(""{} value of {:?} does not exist"", var, path)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m---------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: macro invocations at the end of a block are treated as expressions[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: to ignore the value produced by the macro, add a semicolon after the invocation of `bail`[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `bail` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mbuild.rs:20:87[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m    ($fmt: literal $(, $args: expr)+) => { return Err(format!($fmt $(,$args)+).into()); };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                        [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m312[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m        bail!([0m
+[0m[1m[38;5;12m313[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            ""Detected multiple possible python versions, please set the PYO3_PYTHON_VERSION \[0m
+[0m[1m[38;5;12m314[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            variable to the wanted version on your system\nsysconfigdata paths = {:?}"",[0m
+[0m[1m[38;5;12m315[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            sysconfig_paths[0m
+[0m[1m[38;5;12m316[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        )[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: macro invocations at the end of a block are treated as expressions[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: to ignore the value produced by the macro, add a semicolon after the invocation of `bail`[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `bail` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mbuild.rs:19:46[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    ($msg: expr) => { return Err($msg.into()); };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m553[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        Ok(ref ok) if !ok.status.success() => bail!(""Python script failed: {}""),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                              [0m[0m[1m[38;5;12m---------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `bail` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mbuild.rs:20:87[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    ($fmt: literal $(, $args: expr)+) => { return Err(format!($fmt $(,$args)+).into()); };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                      [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m623[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        other => bail!(""unknown linkmodel {}"", other),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;12m------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `bail` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mbuild.rs:20:87[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    ($fmt: literal $(, $args: expr)+) => { return Err(format!($fmt $(,$args)+).into()); };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                      [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        x => bail!(""unexpected Rust target pointer width: {}"", x),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `bail` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mbuild.rs:20:87[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    ($fmt: literal $(, $args: expr)+) => { return Err(format!($fmt $(,$args)+).into()); };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                      [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m804[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        Some(n) => bail!(""unexpected Python calcsize_pointer value: {}"", n),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;12m--------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `bail` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:21:81[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, *mut $crate::ffi::PyObject);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/basic.rs:163:23[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m163[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.tp_str = py_unary_func!(PyObjectStrProtocol, T::__str__);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;12m-----------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(semicolon_in_expressions_from_macros)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:21:81[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, *mut $crate::ffi::PyObject);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/basic.rs:169:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m169[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.tp_repr = py_unary_func!(PyObjectReprProtocol, T::__repr__);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;12m-------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:18:64[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, $ret_type);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                               [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/basic.rs:175:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m175[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.tp_hash = py_unary_func!(PyObjectHashProtocol, T::__hash__, ffi::Py_hash_t);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;12m-----------------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:18:64[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, $ret_type);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                               [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/basic.rs:217:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.nb_bool = py_unary_func!(PyObjectBoolProtocol, T::__bool__, c_int);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;12m--------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:213:74[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m213[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        py_ternarys_func!($trait, $class::$f, *mut $crate::ffi::PyObject);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                         [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/descr.rs:90:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m90[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        self.tp_descr_get = py_ternarys_func!(PyDescrGetProtocol, T::__get__);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_ternarys_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:18:64[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, $ret_type);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                               [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/class/mapping.rs:81:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.mp_length = py_len_func!(PyMappingLenProtocol, T::__len__);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;12m----------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:21:81[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, *mut $crate::ffi::PyObject);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/number.rs:760:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m760[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.nb_negative = py_unary_func!(PyNumberNegProtocol, T::__neg__);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-----------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:21:81[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, *mut $crate::ffi::PyObject);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/number.rs:766:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m766[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.nb_positive = py_unary_func!(PyNumberPosProtocol, T::__pos__);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-----------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:21:81[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, *mut $crate::ffi::PyObject);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/number.rs:772:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m772[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.nb_absolute = py_unary_func!(PyNumberAbsProtocol, T::__abs__);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-----------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:21:81[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, *mut $crate::ffi::PyObject);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/number.rs:778:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m778[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.nb_invert = py_unary_func!(PyNumberInvertProtocol, T::__invert__);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;12m-----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:21:81[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, *mut $crate::ffi::PyObject);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/number.rs:894:23[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m894[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.nb_int = py_unary_func!(PyNumberIntProtocol, T::__int__);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;12m-----------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:21:81[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, *mut $crate::ffi::PyObject);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/number.rs:900:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m900[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.nb_float = py_unary_func!(PyNumberFloatProtocol, T::__float__);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m---------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:21:81[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, *mut $crate::ffi::PyObject);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[33m^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m::: [0m[0msrc/class/number.rs:1044:25[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1044[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.nb_index = py_unary_func!(PyNumberIndexProtocol, T::__index__);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;12m---------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/class/macros.rs:18:64[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m        py_unary_func!($trait, $class::$f, call_ref, $ret_type);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                               [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0msrc/class/sequence.rs:137:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m137[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.sq_length = py_len_func!(PySequenceLenProtocol, T::__len__);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;12m-----------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `py_unary_func` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary trailing semicolon[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/gil.rs:230:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m230[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: remove this semicolon[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(redundant_semicolons)]` on by default[0m
+
+2024-06-21 18:46:37.610480 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:46:37.615918 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:46:37.652426 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:46:37.652455 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:46:37.765707 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:46:37.765745 |INFO | [rudra-progress] Rudra finished
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/buffer.rs:35:1: 35:39
+unsafe impl<T> Send for PyBuffer<T> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/buffer.rs:36:1: 36:39
+unsafe impl<T> Sync for PyBuffer<T> {}
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/instance.rs:54:1: 54:33
+unsafe impl<T> Send for Py<T> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/instance.rs:55:1: 55:33
+unsafe impl<T> Sync for Py<T> {}
+2024-06-21 18:46:41.646019 |WARN | [cargo_rudra] Target test:test_class_new is not supported
+2024-06-21 18:46:41.646241 |WARN | [cargo_rudra] Target test:test_exceptions is not supported
+2024-06-21 18:46:41.646254 |WARN | [cargo_rudra] Target test:test_unsendable_dict is not supported
+2024-06-21 18:46:41.646258 |WARN | [cargo_rudra] Target test:test_string is not supported
+2024-06-21 18:46:41.646271 |WARN | [cargo_rudra] Target test:test_module is not supported
+2024-06-21 18:46:41.646280 |WARN | [cargo_rudra] Target test:test_bytes is not supported
+2024-06-21 18:46:41.646284 |WARN | [cargo_rudra] Target test:test_arithmetics is not supported
+2024-06-21 18:46:41.646288 |WARN | [cargo_rudra] Target test:test_text_signature is not supported
+2024-06-21 18:46:41.646290 |WARN | [cargo_rudra] Target test:test_pyfunction is not supported
+2024-06-21 18:46:41.646292 |WARN | [cargo_rudra] Target test:test_sequence is not supported
+2024-06-21 18:46:41.646294 |WARN | [cargo_rudra] Target test:test_gc is not supported
+2024-06-21 18:46:41.646304 |WARN | [cargo_rudra] Target test:test_methods is not supported
+2024-06-21 18:46:41.646311 |WARN | [cargo_rudra] Target test:test_variable_arguments is not supported
+2024-06-21 18:46:41.646314 |WARN | [cargo_rudra] Target test:test_various is not supported
+2024-06-21 18:46:41.646317 |WARN | [cargo_rudra] Target test:test_pyself is not supported
+2024-06-21 18:46:41.646318 |WARN | [cargo_rudra] Target test:test_frompyobject is not supported
+2024-06-21 18:46:41.646321 |WARN | [cargo_rudra] Target test:test_mapping is not supported
+2024-06-21 18:46:41.646323 |WARN | [cargo_rudra] Target test:test_class_attributes is not supported
+2024-06-21 18:46:41.646333 |WARN | [cargo_rudra] Target test:test_dict_iter is not supported
+2024-06-21 18:46:41.646335 |WARN | [cargo_rudra] Target test:test_buffer_protocol is not supported
+2024-06-21 18:46:41.646337 |WARN | [cargo_rudra] Target test:test_class_basics is not supported
+2024-06-21 18:46:41.646340 |WARN | [cargo_rudra] Target test:test_inheritance is not supported
+2024-06-21 18:46:41.646350 |WARN | [cargo_rudra] Target test:test_class_conversion is not supported
+2024-06-21 18:46:41.646369 |WARN | [cargo_rudra] Target test:test_compile_error is not supported
+2024-06-21 18:46:41.646378 |WARN | [cargo_rudra] Target test:test_dunder is not supported
+2024-06-21 18:46:41.646380 |WARN | [cargo_rudra] Target test:test_getter_setter is not supported
+2024-06-21 18:46:41.646382 |WARN | [cargo_rudra] Target test:common is not supported
+2024-06-21 18:46:41.646385 |WARN | [cargo_rudra] Target test:test_datetime is not supported
+2024-06-21 18:46:41.646393 |WARN | [cargo_rudra] Target bench:bench_dict is not supported
+2024-06-21 18:46:41.646403 |WARN | [cargo_rudra] Target bench:bench_set is not supported
+2024-06-21 18:46:41.646412 |WARN | [cargo_rudra] Target bench:bench_tuple is not supported
+2024-06-21 18:46:41.646415 |WARN | [cargo_rudra] Target bench:bench_pyobject is not supported
+2024-06-21 18:46:41.646417 |WARN | [cargo_rudra] Target bench:bench_list is not supported
+2024-06-21 18:46:41.646420 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 18:46:41.646600 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

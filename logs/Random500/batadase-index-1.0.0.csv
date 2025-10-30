@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ihor Ranchynskyi,Awpteamoose,https://github.com/Awpteamoose
+************************************
+event,timestamp,downloads
+Downloads,-,644
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-23 07:26:14.466497 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:26:19.159991 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `rkyv = ""^0.7""`
+candidate versions found which didn't match: 0.7.41, 0.7.40, 0.7.39, ...
+location searched: crates.io index
+required by package `batadase-index v1.0.0 (/tmp/rudra)`
+
+"
+************************************

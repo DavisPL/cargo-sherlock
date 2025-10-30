@@ -1,0 +1,196 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "DaniPopes",
+    "github:alloy-rs:core"
+  ],
+  "stars": 794,
+  "forks": 308,
+  "downloads": 1453668,
+  "num_side_effects": 1,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "alloy-primitives",
+      "0.8.24"
+    ],
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "const-hex",
+      "1.14.0"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "derive_more",
+      "2.0.1"
+    ],
+    [
+      "derive_more-impl",
+      "2.0.1"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "paste",
+      "1.0.15"
+    ],
+    [
+      "ruint",
+      "1.13.1"
+    ],
+    [
+      "ruint-macro",
+      "1.2.1"
+    ],
+    [
+      "tiny-keccak",
+      "2.0.2"
+    ],
+    [
+      "crunchy",
+      "0.2.3"
+    ],
+    [
+      "alloy-sol-types",
+      "0.8.24"
+    ],
+    [
+      "alloy-sol-macro",
+      "0.8.24"
+    ],
+    [
+      "alloy-sol-macro-expander",
+      "0.8.24"
+    ],
+    [
+      "alloy-sol-macro-input",
+      "0.8.24"
+    ],
+    [
+      "dunce",
+      "1.0.5"
+    ],
+    [
+      "heck",
+      "0.5.0"
+    ],
+    [
+      "macro-string",
+      "0.1.4"
+    ],
+    [
+      "syn-solidity",
+      "0.8.24"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "proc-macro-error2",
+      "2.0.1"
+    ],
+    [
+      "proc-macro-error-attr2",
+      "2.0.0"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "serde_json",
+      "1.0.140"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "tracing",
+      "0.1.41"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "tracing-core",
+      "0.1.33"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 1,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

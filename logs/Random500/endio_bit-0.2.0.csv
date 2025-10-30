@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,lcdr,https://github.com/lcdr
+************************************
+event,timestamp,downloads
+Downloads,-,3055
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-23 16:44:10.128368 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:44:13.063471 |INFO | [rudra-progress] Running rudra for target lib:endio_bit
+2024-06-23 16:44:17.159243 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:44:17.163297 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:44:17.163648 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:44:17.163660 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:44:17.216023 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:44:17.216049 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:44:18.122255 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mitchell Berry,mberry,https://github.com/mberry
+************************************
+event,timestamp,downloads
+Downloads,-,245316
+************************************
+event,timestamp,total,flagged
+Side Effects,-,609,608
+************************************
+Rudra,timestamp
+"2024-06-21 16:44:32.249452 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:44:41.167818 |INFO | [rudra-progress] Running rudra for target lib:pqc_kyber
+2024-06-21 16:45:04.948963 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:45:04.958749 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:45:04.959561 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:45:04.959594 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:45:05.014617 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:45:05.014766 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:45:08.709781 |WARN | [cargo_rudra] Target example:ake is not supported
+2024-06-21 16:45:08.710181 |WARN | [cargo_rudra] Target example:uake is not supported
+2024-06-21 16:45:08.710234 |WARN | [cargo_rudra] Target example:kem is not supported
+2024-06-21 16:45:08.710283 |WARN | [cargo_rudra] Target test:kex is not supported
+2024-06-21 16:45:08.710313 |WARN | [cargo_rudra] Target test:kat is not supported
+2024-06-21 16:45:08.710322 |WARN | [cargo_rudra] Target test:kem is not supported
+2024-06-21 16:45:08.710336 |WARN | [cargo_rudra] Target bench:api is not supported
+2024-06-21 16:45:08.710374 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 16:45:08.710762 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

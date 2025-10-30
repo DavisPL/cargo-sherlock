@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alexey Galakhov,agalakhov,https://github.com/agalakhov
+Author,-,Daniel Abramov,daniel-abramov,https://github.com/daniel-abramov
+************************************
+event,timestamp,downloads
+Downloads,-,45386354
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:45:25.552987 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:45:29.630468 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `env_logger = ""^0.10.0""`
+candidate versions found which didn't match: 0.9.3, 0.9.2, 0.9.1, ...
+location searched: crates.io index
+required by package `tungstenite v0.20.0 (/tmp/rudra)`
+
+"
+************************************

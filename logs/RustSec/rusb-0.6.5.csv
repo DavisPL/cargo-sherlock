@@ -1,0 +1,43 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ilya Averyanov,a1ien,https://github.com/a1ien
+************************************
+event,timestamp,downloads
+Downloads,-,1812708
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:28:02.020084 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:28:05.175133 |INFO | [rudra-progress] Running rudra for target lib:rusb
+2024-06-21 17:28:22.046519 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:28:22.050434 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:28:22.079184 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:28:22.079209 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:28:22.115787 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:28:22.115805 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/device_handle.rs:127:1: 127:55
+unsafe impl<T: UsbContext> Send for DeviceHandle<T> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/device_handle.rs:128:1: 128:55
+unsafe impl<T: UsbContext> Sync for DeviceHandle<T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/device.rs:34:1: 34:49
+unsafe impl<T: UsbContext> Send for Device<T> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/device.rs:35:1: 35:49
+unsafe impl<T: UsbContext> Sync for Device<T> {}
+2024-06-21 17:28:23.337888 |WARN | [cargo_rudra] Target example:libusb_info is not supported
+2024-06-21 17:28:23.337948 |WARN | [cargo_rudra] Target example:list_devices is not supported
+2024-06-21 17:28:23.337960 |WARN | [cargo_rudra] Target example:read_device is not supported
+2024-06-21 17:28:23.337963 |WARN | [cargo_rudra] Target example:hotplug is not supported
+2024-06-21 17:28:23.338075 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,52 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,John-John Tedro,udoprog,https://github.com/udoprog
+************************************
+event,timestamp,downloads
+Downloads,-,45279
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:24:18.844715 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:24:22.593809 |INFO | [rudra-progress] Running rudra for target lib:unicycle
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wake_set.rs:46:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            std::sync::atomic::spin_loop_hint();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/wake_set.rs:109:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m109[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            std::sync::atomic::spin_loop_hint();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+2024-06-21 17:24:31.245954 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:24:31.250074 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:24:31.254282 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:24:31.254294 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:24:31.297535 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:24:31.297558 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/lib.rs:380:1: 380:71
+unsafe impl<T, S> Send for Unordered<T, S> where S: Send + Sentinel {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/lib.rs:381:1: 381:71
+unsafe impl<T, S> Sync for Unordered<T, S> where S: Sync + Sentinel {}
+2024-06-21 17:24:32.395947 |WARN | [cargo_rudra] Target test:benchmark_test is not supported
+2024-06-21 17:24:32.395997 |WARN | [cargo_rudra] Target test:spinning_futures_unordered_test is not supported
+2024-06-21 17:24:32.396003 |WARN | [cargo_rudra] Target test:sporadic_timer_test is not supported
+2024-06-21 17:24:32.396010 |WARN | [cargo_rudra] Target test:stream_test is not supported
+2024-06-21 17:24:32.396017 |WARN | [cargo_rudra] Target bench:unordered is not supported
+2024-06-21 17:24:32.396120 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

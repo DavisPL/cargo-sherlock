@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Muhammad Mominul Huque,mominul,https://github.com/mominul
+************************************
+event,timestamp,downloads
+Downloads,-,1999
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,1
+************************************
+Rudra,timestamp
+"2024-06-23 15:22:14.347927 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:22:16.193401 |INFO | [rudra-progress] Running rudra for target bin:gitree
+2024-06-23 15:22:30.724933 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:22:30.728686 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:22:30.730170 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:22:30.730193 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:22:30.732025 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:22:30.732041 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:22:30.779034 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

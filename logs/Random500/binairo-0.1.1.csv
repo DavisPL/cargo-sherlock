@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,Marty3000,https://github.com/Marty3000
+************************************
+event,timestamp,downloads
+Downloads,-,936
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,0
+************************************
+Rudra,timestamp
+"2024-06-23 07:22:33.808785 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:22:35.066613 |INFO | [rudra-progress] Running rudra for target bin:binairo
+2024-06-23 07:22:39.377293 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:22:39.381360 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:22:39.382477 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:22:39.382488 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:22:39.383666 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:22:39.383677 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:22:39.434681 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

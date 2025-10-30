@@ -1,0 +1,339 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Xudong Huang,Xudong-Huang,https://github.com/Xudong-Huang
+************************************
+event,timestamp,downloads
+Downloads,-,7047154
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:31:51.891256 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:31:55.048537 |INFO | [rudra-progress] Running rudra for target lib:generator
+[0m[1m[38;5;9merror[0m[0m[1m: the legacy LLVM-style asm! syntax is no longer supported[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/detail/x86_64_unix.rs:19:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        asm!([0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^[0m[0m[1m[38;5;12m---[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[38;5;9m_________[0m[0m[1m[38;5;12mhelp: replace with: `llvm_asm!`[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            ""prefetcht1 $0""[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            : // no output[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            : ""m""(*data)[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            :[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            : ""volatile""[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        );[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|_________^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: consider migrating to the new asm! syntax specified in RFC 2873[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: alternatively, switch to llvm_asm! to keep your code working as it is[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: the legacy LLVM-style asm! syntax is no longer supported[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/detail/x86_64_unix.rs:31:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m31[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        asm!([0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^[0m[0m[1m[38;5;12m---[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[38;5;9m_________[0m[0m[1m[38;5;12mhelp: replace with: `llvm_asm!`[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            ""[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m                mov %r12, %rdi     // setup the function arg[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m                mov %r13, %rsi     // setup the function arg[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            : ""volatile""[0m
+[0m[1m[38;5;12m42[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        );[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|_________^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: consider migrating to the new asm! syntax specified in RFC 2873[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: alternatively, switch to llvm_asm! to keep your code working as it is[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: the legacy LLVM-style asm! syntax is no longer supported[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/detail/x86_64_unix.rs:49:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m49[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        asm!([0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^[0m[0m[1m[38;5;12m---[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[38;5;9m_________[0m[0m[1m[38;5;12mhelp: replace with: `llvm_asm!`[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            """"[0m
+[0m[1m[38;5;12m51[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            :[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            : ""{rdi}""(out_regs), ""{rsi}""(in_regs)[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            :[0m
+[0m[1m[38;5;12m54[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            :[0m
+[0m[1m[38;5;12m55[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        );[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|_________^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: consider migrating to the new asm! syntax specified in RFC 2873[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: alternatively, switch to llvm_asm! to keep your code working as it is[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: the legacy LLVM-style asm! syntax is no longer supported[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/detail/x86_64_unix.rs:61:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            asm!([0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[38;5;9m^[0m[0m[1m[38;5;12m---[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[38;5;9m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[38;5;9m_____________[0m[0m[1m[38;5;12mhelp: replace with: `llvm_asm!`[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m                ""[0m
+[0m[1m[38;5;12m63[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m                    mov %rbx, (0*8)(%rdi)[0m
+[0m[1m[38;5;12m64[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m                    mov %rsp, (1*8)(%rdi)[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m                : ""volatile""[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            );[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|_____________^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: consider migrating to the new asm! syntax specified in RFC 2873[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: alternatively, switch to llvm_asm! to keep your code working as it is[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused attribute `cold`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/scope.rs:36:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            #[cold][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_attributes)]` on by default[0m
+[0m[1m[38;5;10mnote[0m[0m: the built-in attribute `cold` will be ignored, since it's applied to the macro invocation `panic`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/scope.rs:37:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m37[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            panic!(""yield from none generator context"");[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;10m^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused attribute `cold`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/scope.rs:46:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            #[cold][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the built-in attribute `cold` will be ignored, since it's applied to the macro invocation `panic`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/scope.rs:47:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            panic!(Error::Cancel);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;10m^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused attribute `cold`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/yield_.rs:47:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        #[cold][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the built-in attribute `cold` will be ignored, since it's applied to the macro invocation `panic`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/yield_.rs:48:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        panic!(""yield from none generator context"");[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;10m^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused attribute `cold`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/yield_.rs:57:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m57[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        #[cold][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the built-in attribute `cold` will be ignored, since it's applied to the macro invocation `panic`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/yield_.rs:58:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        panic!(Error::Cancel);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;10m^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused attribute `cold`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/yield_.rs:139:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m139[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        #[cold][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the built-in attribute `cold` will be ignored, since it's applied to the macro invocation `panic`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/yield_.rs:140:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m140[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        panic!(Error::Cancel);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;10m^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: attribute should be applied to a function[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/gen_impl.rs:191:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m191[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            #[cold][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^[0m
+[0m[1m[38;5;12m192[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            panic::resume_unwind(err);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m-------------------------[0m[0m [0m[0m[1m[38;5;12mnot a function[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+
+[0m[1m[33mwarning[0m[0m[1m: attribute should be applied to a function[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/gen_impl.rs:231:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m231[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            #[cold][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^[0m
+[0m[1m[38;5;12m232[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            return None;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m-----------[0m[0m [0m[0m[1m[38;5;12mnot a function[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+
+[0m[1m[33mwarning[0m[0m[1m: attribute should be applied to a function[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/gen_impl.rs:247:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m247[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            #[cold][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^[0m
+[0m[1m[38;5;12m248[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            return None;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m-----------[0m[0m [0m[0m[1m[38;5;12mnot a function[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+
+[0m[1m[33mwarning[0m[0m[1m: `#[cold]` is ignored on struct fields, match arms and macro defs[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rt.rs:113:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m113[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            #[cold][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: see issue #80564 <https://github.com/rust-lang/rust/issues/80564> for more information[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `#[cold]` is ignored on struct fields, match arms and macro defs[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rt.rs:156:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m156[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            #[cold][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: see issue #80564 <https://github.com/rust-lang/rust/issues/80564> for more information[0m
+
+[0m[1m[33mwarning[0m[0m[1m: attribute should be applied to a function[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rt.rs:188:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m188[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                #[cold][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^[0m
+[0m[1m[38;5;12m189[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                init_root_p();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m-------------[0m[0m [0m[0m[1m[38;5;12mnot a function[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+
+[0m[1m[33mwarning[0m[0m[1m: `#[cold]` is ignored on struct fields, match arms and macro defs[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/scope.rs:82:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m82[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                #[cold][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: see issue #80564 <https://github.com/rust-lang/rust/issues/80564> for more information[0m
+
+[0m[1m[33mwarning[0m[0m[1m: attribute should be applied to a function[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/yield_.rs:84:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m84[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        #[cold][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[33m^^^^^^^[0m
+[0m[1m[38;5;12m85[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m        {[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            error!(""get yield from none generator context"");[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            panic!(Error::ContextErr);[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_________-[0m[0m [0m[0m[1m[38;5;12mnot a function[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+
+[0m[1m[33mwarning[0m[0m[1m: `#[cold]` is ignored on struct fields, match arms and macro defs[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/yield_.rs:115:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m115[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            #[cold][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: see issue #80564 <https://github.com/rust-lang/rust/issues/80564> for more information[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `#[cold]` is ignored on struct fields, match arms and macro defs[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/yield_.rs:156:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m156[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        #[cold][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: see issue #80564 <https://github.com/rust-lang/rust/issues/80564> for more information[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `#[cold]` is ignored on struct fields, match arms and macro defs[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/yield_.rs:165:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m165[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        #[cold][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: see issue #80564 <https://github.com/rust-lang/rust/issues/80564> for more information[0m
+
+[0m[1m[33mwarning[0m[0m[1m: naked functions must contain a single asm block[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/detail/x86_64_unix.rs:30:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m    pub unsafe extern ""C"" fn bootstrap_green_task() {[0m
+[0m[1m[38;5;12m31[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        asm!([0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m            ""[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                mov %r12, %rdi     // setup the function arg[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[33m|[0m
+[0m[1m[38;5;12m42[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        );[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_____^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unsupported_naked_functions)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #32408 <https://github.com/rust-lang/rust/issues/32408>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: naked functions cannot be inlined[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/detail/x86_64_unix.rs:29:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[inline(never)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #32408 <https://github.com/rust-lang/rust/issues/32408>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: naked functions must contain a single asm block[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/detail/x86_64_unix.rs:47:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m    pub unsafe extern ""C"" fn swap_registers(out_regs: *mut Registers, in_regs: *const Registers) {[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        // The first argument is in %rdi, and the second one is in %rsi[0m
+[0m[1m[38;5;12m49[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        asm!([0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m            """"[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[33m|[0m
+[0m[1m[38;5;12m90[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        _swap_reg()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m         [0m[0m[1m[38;5;12m-----------[0m[0m [0m[0m[1m[38;5;12mnon-asm is unsupported in naked functions[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_____^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #32408 <https://github.com/rust-lang/rust/issues/32408>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: naked functions cannot be inlined[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/detail/x86_64_unix.rs:46:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    #[inline(never)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #32408 <https://github.com/rust-lang/rust/issues/32408>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: naked functions must contain a single asm block[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/detail/x86_64_unix.rs:59:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0m        unsafe extern ""C"" fn _swap_reg() {[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m            // Save registers[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m            asm!([0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m                ""[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[33m|[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m            );[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m        }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_________^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #32408 <https://github.com/rust-lang/rust/issues/32408>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/stack/mod.rs:46:45[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            StackError::IoError(ref e) => e.description(),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `generator` due to 4 previous errors; 22 warnings emitted
+2024-06-21 17:32:04.607302 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

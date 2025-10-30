@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Austin Bonander,abonander,https://github.com/abonander
+************************************
+event,timestamp,downloads
+Downloads,-,13459507
+************************************
+event,timestamp,total,flagged
+Side Effects,-,47,25
+************************************
+Rudra,timestamp
+"2024-06-21 17:44:04.037444 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:44:08.135686 |INFO | [rudra-progress] Running rudra for target lib:multipart
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:44:11.649804 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,146 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Kyle Schaffrick,edarc,https://github.com/edarc
+************************************
+event,timestamp,downloads
+Downloads,-,1832
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:35:01.150330 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:35:05.848266 |INFO | [rudra-progress] Running rudra for target lib:max7301
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/config.rs:53:14[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            0...4 => {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(ellipsis_inclusive_range_patterns)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated trait `hal::digital::InputPin`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/expander/pin.rs:4:19[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse hal::digital::InputPin;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated trait `hal::digital::OutputPin`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/expander/pin.rs:5:19[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse hal::digital::OutputPin;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated trait `hal::digital::OutputPin`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/expander/pin.rs:37:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m37[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl<'io, IO: ExpanderIO> OutputPin for PortPin<'io, IO> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated trait `hal::digital::InputPin`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/expander/pin.rs:47:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0mimpl<'io, IO: ExpanderIO> InputPin for PortPin<'io, IO> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated trait `hal::digital::OutputPin`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/interface.rs:51:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m51[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        CS: hal::digital::OutputPin,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated trait `hal::digital::OutputPin`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/interface.rs:64:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m64[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        CS: hal::digital::OutputPin,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `hal::digital::OutputPin::set_high`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/interface.rs:56:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m56[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            cs.set_high();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `hal::digital::OutputPin::set_low`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/interface.rs:71:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.cs.set_low();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `hal::digital::OutputPin::set_high`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/interface.rs:73:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.cs.set_high();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `hal::digital::OutputPin::set_low`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/interface.rs:87:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.cs.set_low();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `hal::digital::OutputPin::set_high`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/interface.rs:89:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m89[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.cs.set_high();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `hal::digital::OutputPin::set_low`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/interface.rs:100:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m100[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.cs.set_low();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `hal::digital::OutputPin::set_high`: Deprecated because the methods cannot return errors. Users should use the traits in digital::v2.[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/interface.rs:102:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m102[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.cs.set_high();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: panic message contains a brace[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/expander/transactional.rs:177:47[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m177[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            panic!(""Read of un-refreshed port;}"")[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                              [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_fmt_panics)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this message is not used as a format string, but will be in Rust 2021[0m
+[0m[1m[38;5;14mhelp[0m[0m: add a ""{}"" format string to use the message literally[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m177[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            panic!([0m[0m[38;5;10m""{}"", [0m[0m""Read of un-refreshed port;}"")[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[38;5;10m+++++[0m
+
+2024-06-21 18:35:12.385616 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:35:12.389583 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:35:12.393472 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:35:12.393484 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:35:12.396115 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:35:12.396126 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/expander/transactional.rs:65:1: 70:2
+unsafe impl<M, EI> Sync for TransactionalIO<M, EI>
+where
+    M: IOMutex<Expander<EI>>,
+    EI: ExpanderInterface,
+{
+}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/expander/immediate.rs:23:1: 28:2
+unsafe impl<M, EI> Sync for ImmediateIO<M, EI>
+where
+    M: IOMutex<Expander<EI>>,
+    EI: ExpanderInterface,
+{
+}
+2024-06-21 18:35:13.470812 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

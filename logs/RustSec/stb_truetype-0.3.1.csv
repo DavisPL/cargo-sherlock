@@ -1,0 +1,33 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Dylan Ede,dylanede,https://github.com/dylanede
+Author,-,Jeremy Soller,jackpot51,https://github.com/jackpot51
+Author,-,Alex Butler,alexheretic,https://github.com/alexheretic
+************************************
+event,timestamp,downloads
+Downloads,-,2542576
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:18:22.321145 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:18:25.426822 |INFO | [rudra-progress] Running rudra for target lib:stb_truetype
+2024-06-21 18:18:32.842378 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:18:32.846287 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:18:32.846591 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:18:32.846603 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:18:32.885925 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:18:32.885960 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:18:34.050297 |WARN | [cargo_rudra] Target example:fontnames is not supported
+2024-06-21 18:18:34.050350 |WARN | [cargo_rudra] Target example:simple is not supported
+2024-06-21 18:18:34.050355 |WARN | [cargo_rudra] Target test:mod is not supported
+2024-06-21 18:18:34.050358 |WARN | [cargo_rudra] Target bench:api is not supported
+2024-06-21 18:18:34.050453 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sebastian Thiel,Byron,https://github.com/Byron
+************************************
+event,timestamp,downloads
+Downloads,-,552382
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-21 17:47:54.196303 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:47:57.919152 |INFO | [rudra-progress] Running rudra for target lib:git-hash
+2024-06-21 17:48:14.148526 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:48:14.152464 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:48:14.152809 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:48:14.152823 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:48:14.198499 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:48:14.198527 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:48:15.363684 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

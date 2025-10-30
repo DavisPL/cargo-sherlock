@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Luminita Voicu,luminitavoicu,https://github.com/luminitavoicu
+Author,-,Patrick Roy,roypat,https://github.com/roypat
+Author,-,compute-capsule,github:firecracker-microvm:compute-capsule,https://github.com/firecracker-microvm
+************************************
+event,timestamp,downloads
+Downloads,-,1311167
+************************************
+event,timestamp,total,flagged
+Side Effects,-,9,7
+************************************
+Rudra,timestamp
+"2024-06-21 18:31:34.888359 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:31:39.602579 |INFO | [rudra-progress] Running rudra for target lib:versionize
+2024-06-21 18:31:57.658055 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:31:57.662019 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:31:57.662402 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:31:57.662420 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:31:57.697100 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:31:57.697121 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:31:58.908388 |WARN | [cargo_rudra] Target test:test is not supported
+2024-06-21 18:31:58.908643 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

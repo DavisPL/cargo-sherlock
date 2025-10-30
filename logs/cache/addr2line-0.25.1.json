@@ -1,0 +1,114 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "fitzgen",
+    "philipc"
+  ],
+  "stars": 382,
+  "forks": 73,
+  "downloads": 263342054,
+  "num_side_effects": 37,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.17.0 -> 0.19.0",
+      "version": "",
+      "notes": "This is a minor update for addr2line which looks to mainly update its\\ndependencies and refactor existing code to expose more functionality and such.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.19.0 -> 0.20.0",
+      "version": "",
+      "notes": "This version brings support for split-dwarf which while it uses the filesystem is always done at the behest of the caller, so everything is as expected for this update."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.20.0 -> 0.21.0",
+      "version": "",
+      "notes": "This version bump updated some dependencies and optimized some internals. All looks good."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.21.0 -> 0.22.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.22.0 -> 0.24.1",
+      "version": "",
+      "notes": "Lots of internal code refactorings and code movement. Nothing out of place however."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.24.1 -> 0.25.0",
+      "version": "",
+      "notes": "All minor changes, even a net reduction of `unsafe`."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.19.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.19.0 -> 0.20.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.20.0 -> 0.21.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.17.0 -> 0.19.0",
+      "version": "",
+      "notes": "Only change to unsafe code is to reduce the scope of some unsafe blocks."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.21.0 -> 0.22.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "gimli",
+      "0.32.3"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 3,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.1
+  }
+}

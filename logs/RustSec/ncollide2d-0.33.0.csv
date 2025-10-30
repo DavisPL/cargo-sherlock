@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sébastien Crozet,sebcrozet,https://github.com/sebcrozet
+************************************
+event,timestamp,downloads
+Downloads,-,273768
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:50:03.763391 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:50:07.752108 |INFO | [rudra-progress] Running rudra for target lib:ncollide2d
+[0m[0m[1m[31merror[0m[1m:[0m package `fixed v1.24.0` cannot be built because it requires rustc 1.71 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:50:11.158028 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

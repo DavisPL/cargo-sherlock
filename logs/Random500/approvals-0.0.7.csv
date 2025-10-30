@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Aleksandr Pak,aleksandrpak,https://github.com/aleksandrpak
+************************************
+event,timestamp,downloads
+Downloads,-,12653
+************************************
+event,timestamp,total,flagged
+Side Effects,-,13,1
+************************************
+Rudra,timestamp
+"2024-06-23 07:14:40.605325 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:14:43.567667 |INFO | [rudra-progress] Running rudra for target lib:approvals
+[0m[0m[1m[31merror[0m[1m:[0m package `cc v1.0.99` cannot be built because it requires rustc 1.63 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-23 07:14:46.838345 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

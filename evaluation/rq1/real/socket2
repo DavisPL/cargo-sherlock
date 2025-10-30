@@ -1,0 +1,23 @@
+Solving for required assumptions to trust socket2-0.5.8...
++------------------------------------------------------------+
+|             Analysis Report for socket2-0.5.8              |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 20 cost
+Assumptions for Trusting:
+  • socket2-0.5.8 has many downloads: 0 cost
+  • socket2-0.5.8 has a past audit implies it is safe: 20 cost
+
+Distrust Cost (higher is better): 50 cost
+Assumptions for Distrusting:
+  • socket2-0.5.8 failing a Miri test implies it is unsafe: 50 cost
+  • libc-0.2.171 has many side effects: 0 cost
+
+Severity Label: LOW_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/socket2-0.5.8.json
++------------------------------------------------------------+
+

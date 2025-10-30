@@ -1,0 +1,40 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "thehydroimpulse",
+    "blabaere"
+  ],
+  "stars": 394,
+  "forks": 56,
+  "downloads": 83512,
+  "num_side_effects": 53,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "nanomsg-sys",
+      "0.7.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 6,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 22,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Félix Saparelli,passcod,https://github.com/passcod
+************************************
+event,timestamp,downloads
+Downloads,-,6999
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 07:15:39.095824 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:15:41.963773 |INFO | [rudra-progress] Running rudra for target lib:gitignores
+2024-06-23 07:15:45.836280 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:15:45.840081 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:15:45.840411 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:15:45.840425 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:15:45.859576 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:15:45.859590 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:15:46.753114 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,43 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Robbepop"
+  ],
+  "stars": 1443,
+  "forks": 267,
+  "downloads": 5152134,
+  "num_side_effects": 1,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.91.0",
+      "notes": "I have certified that this crate is a one-to-one fork of `wasmparser` with\\nupdates exclusively for the usage on targets without the standard library.\\nThis crate is otherwise primarily authored by the Bytecode Alliance and\\notherwise certified.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "indexmap-nostd",
+      "0.4.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

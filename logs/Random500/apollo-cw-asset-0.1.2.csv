@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sturdy,apollo-sturdy,https://github.com/apollo-sturdy
+Author,-,rust-devs,github:apollodao:rust-devs,https://github.com/apollodao
+************************************
+event,timestamp,downloads
+Downloads,-,16946
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:53:20.699220 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:53:21.883943 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`: error: failed to parse manifest at `/tmp/rudra/Cargo.toml`
+
+Caused by:
+  namespaced features with the `dep:` prefix are only allowed on the nightly channel and requires the `-Z namespaced-features` flag on the command-line
+
+"
+************************************

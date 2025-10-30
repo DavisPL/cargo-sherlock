@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,寧靜,LuoZijun,https://github.com/LuoZijun
+************************************
+event,timestamp,downloads
+Downloads,-,37348
+************************************
+event,timestamp,total,flagged
+Side Effects,-,666,664
+************************************
+Rudra,timestamp
+"2024-06-21 18:06:44.779191 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:06:47.883655 |INFO | [rudra-progress] Running rudra for target lib:crypto2
+2024-06-21 18:06:55.337559 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:06:55.342353 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:06:55.342725 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:06:55.342749 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:06:55.409078 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:06:55.409108 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:06:59.849245 |WARN | [cargo_rudra] Target example:chacha20_poly1305 is not supported
+2024-06-21 18:06:59.849319 |WARN | [cargo_rudra] Target example:aes is not supported
+2024-06-21 18:06:59.849442 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

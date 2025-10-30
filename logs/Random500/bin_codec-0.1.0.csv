@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,wenzhi.yan,ywzjackal,https://github.com/ywzjackal
+************************************
+event,timestamp,downloads
+Downloads,-,1387
+************************************
+event,timestamp,total,flagged
+Side Effects,-,10,10
+************************************
+Rudra,timestamp
+"2024-06-23 06:39:39.690737 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 06:39:46.586208 |INFO | [rudra-progress] Running rudra for target lib:bin_codec
+2024-06-23 06:39:58.105248 |INFO | [rudra-progress] Rudra started
+2024-06-23 06:39:58.113239 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 06:39:58.113954 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 06:39:58.113984 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 06:39:58.273796 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 06:39:58.273868 |INFO | [rudra-progress] Rudra finished
+2024-06-23 06:40:00.997940 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

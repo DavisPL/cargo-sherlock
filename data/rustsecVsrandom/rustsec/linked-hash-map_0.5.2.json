@@ -1,0 +1,7 @@
+Solving for required assumptions to trust linked-hash-map-0.5.2...
+Trust Score for linked-hash-map-0.5.2: 61
+Assumptions Made:
+linked-hash-map-0.5.2 has many downloads: 1 wt
+linked-hash-map-0.5.2 having many downloads implies it is safe: 10 wt
+linked-hash-map-0.5.2 has all safe dependencies: 0 wt
+linked-hash-map-0.5.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

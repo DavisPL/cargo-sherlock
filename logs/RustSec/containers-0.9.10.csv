@@ -1,0 +1,41 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,M Farkas-Dyck,strake,https://github.com/strake
+************************************
+event,timestamp,downloads
+Downloads,-,31969
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:17:11.875929 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:17:15.423779 |INFO | [rudra-progress] Running rudra for target lib:containers
+[0m[1m[38;5;9merror[E0557][0m[0m[1m: feature has been removed[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:8:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![feature(const_fn)][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mfeature has been removed[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: split into finer-grained feature gates[0m
+
+[0m[1m[33mwarning[0m[0m[1m: the usage of Script Group `Greek` in this crate consists solely of mixed script confusables[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/collections/b_tree.rs:17:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    φ: PhantomData<(K, T)>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(mixed_script_confusables)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the usage includes 'φ' (U+03C6)[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: please recheck to make sure their usages are indeed what you want[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0557`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `containers` due to previous error; 1 warning emitted
+2024-06-21 16:17:22.858713 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

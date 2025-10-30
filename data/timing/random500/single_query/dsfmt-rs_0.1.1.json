@@ -1,0 +1,7 @@
+Solving for required assumptions to trust dsfmt-rs-0.1.1...
+Trust Score for dsfmt-rs-0.1.1: 204
+Assumptions Made:
+dsfmt-rs-0.1.1 has many downloads: 194 wt
+dsfmt-rs-0.1.1 having many downloads implies it is safe: 10 wt
+rand-0.8.5 has many downloads: 0 wt
+rand_core-0.6.4 has many downloads: 0 wt

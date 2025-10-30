@@ -1,0 +1,63 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jan-Erik Rediger,badboy,https://github.com/badboy
+************************************
+event,timestamp,downloads
+Downloads,-,59409
+************************************
+event,timestamp,total,flagged
+Side Effects,-,10,10
+************************************
+Rudra,timestamp
+"2024-06-21 17:55:04.497432 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:55:07.514430 |INFO | [rudra-progress] Running rudra for target lib:lzf
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around assigned value[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/compress.rs:7:25[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconst MAX_REF : usize = ((1 << 8) + (1 << 3));[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^[0m[0m                   [0m[0m[1m[33m^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_parens)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[38;5;9m- [0m[0mconst MAX_REF : usize = [0m[0m[38;5;9m([0m[0m(1 << 8) + (1 << 3)[0m[0m[38;5;9m)[0m[0m;[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[38;5;10m+ [0m[0mconst MAX_REF : usize = (1 << 8) + (1 << 3);[0m
+[0m  [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around assigned value[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/compress.rs:8:23[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m| [0m[0mconst MAX_LIT : i32 = (1 << 5);[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^[0m[0m      [0m[0m[1m[33m^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[38;5;9m- [0m[0mconst MAX_LIT : i32 = [0m[0m[38;5;9m([0m[0m1 << 5[0m[0m[38;5;9m)[0m[0m;[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[38;5;10m+ [0m[0mconst MAX_LIT : i32 = 1 << 5;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/compress.rs:58:53[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut htab : [usize; 1<<HLOG] = unsafe { mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                    [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-21 17:55:11.705942 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:55:11.709983 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:55:11.710334 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:55:11.710348 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:55:11.737967 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:55:11.737987 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:55:12.720897 |WARN | [cargo_rudra] Target example:lorem is not supported
+2024-06-21 17:55:12.720946 |WARN | [cargo_rudra] Target example:cli is not supported
+2024-06-21 17:55:12.720979 |WARN | [cargo_rudra] Target bench:bench_basic is not supported
+2024-06-21 17:55:12.721105 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

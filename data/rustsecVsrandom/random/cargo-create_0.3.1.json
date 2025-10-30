@@ -1,0 +1,5 @@
+Solving for required assumptions to trust cargo-create-0.3.1...
+Trust Score for cargo-create-0.3.1: 184
+Assumptions Made:
+cargo-create-0.3.1 has many downloads: 174 wt
+cargo-create-0.3.1 having many downloads implies it is safe: 10 wt

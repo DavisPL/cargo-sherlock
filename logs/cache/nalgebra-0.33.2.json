@@ -1,0 +1,72 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "sebcrozet",
+    "milibopp"
+  ],
+  "stars": 4216,
+  "forks": 498,
+  "downloads": 23748725,
+  "num_side_effects": 633,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.29.0 -> 0.32.6",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "approx",
+      "0.5.1"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "num-complex",
+      "0.4.6"
+    ],
+    [
+      "num-rational",
+      "0.4.2"
+    ],
+    [
+      "num-integer",
+      "0.1.46"
+    ],
+    [
+      "simba",
+      "0.9.0"
+    ],
+    [
+      "paste",
+      "1.0.15"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 615,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 18,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 2.45
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Kerollmops"
+  ],
+  "stars": 53,
+  "forks": 3,
+  "downloads": 12862470,
+  "num_side_effects": 45,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.0 -> 0.3.1",
+      "version": "",
+      "notes": "This update runs `rustfmt` for the first time in awhile and additionally fixes a\\nfew minor issues related to Stacked Borrows and running in MIRI. No fundamental\\nchange to any preexisting unsafe code is happening here.\\n"
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 38,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 7,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.29
+  }
+}

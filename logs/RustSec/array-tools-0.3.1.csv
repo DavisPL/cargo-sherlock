@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,"Mikhail ""L117"" Nikolenko",L117,https://github.com/L117
+************************************
+event,timestamp,downloads
+Downloads,-,5833
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:16:08.600765 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:16:11.579629 |INFO | [rudra-progress] Running rudra for target lib:array-tools
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `core::array::FixedSizeArray`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:39:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse core::array::FixedSizeArray;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno `FixedSizeArray` in `array`[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0432`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `array-tools` due to previous error
+2024-06-21 16:16:15.419524 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

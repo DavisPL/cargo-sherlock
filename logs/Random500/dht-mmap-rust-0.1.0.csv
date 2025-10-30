@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mathis Kruse,krusema,https://github.com/krusema
+************************************
+event,timestamp,downloads
+Downloads,-,349
+************************************
+event,timestamp,total,flagged
+Side Effects,-,31,23
+************************************
+Rudra,timestamp
+"2024-06-23 17:21:39.792185 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 17:21:42.777938 |INFO | [rudra-progress] Running rudra for target lib:dht-mmap-rust
+2024-06-23 17:21:51.612323 |INFO | [rudra-progress] Rudra started
+2024-06-23 17:21:51.616178 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 17:21:51.616525 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 17:21:51.616538 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 17:21:51.678246 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 17:21:51.678278 |INFO | [rudra-progress] Rudra finished
+2024-06-23 17:21:52.634822 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,72 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alexander Payne,myrrlyn,https://github.com/myrrlyn
+************************************
+event,timestamp,downloads
+Downloads,-,11482
+************************************
+event,timestamp,total,flagged
+Side Effects,-,12,12
+************************************
+Rudra,timestamp
+"2024-06-23 13:58:48.378050 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:58:56.201776 |INFO | [rudra-progress] Running rudra for target lib:endian_trait
+2024-06-23 13:59:24.896956 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:59:24.905959 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:59:24.909641 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:59:24.909740 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:59:25.054152 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:59:25.054218 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/ReadFlow/WriteFlow): Potential unsafe dataflow issue in `slices::<impl Endian for &'a mut [T]>::from_be`
+-> src/slices.rs:9:2: 14:3
+fn from_be(self) -> Self {
+		for elt in self.iter_mut() { unsafe {
+			[0m[33mptr::write(elt, [0m[31m[0m[36mptr::read(elt)[0m[36m.from_be()[0m[33m)[0m;
+		} }
+		self
+	}
+[0m
+Warning (UnsafeDataflow:/ReadFlow/WriteFlow): Potential unsafe dataflow issue in `slices::<impl Endian for &'a mut [T]>::from_le`
+-> src/slices.rs:15:2: 20:3
+fn from_le(self) -> Self {
+		for elt in self.iter_mut() { unsafe {
+			[0m[33mptr::write(elt, [0m[31m[0m[36mptr::read(elt)[0m[36m.from_le()[0m[33m)[0m;
+		} }
+		self
+	}
+[0m
+Warning (UnsafeDataflow:/ReadFlow/WriteFlow): Potential unsafe dataflow issue in `slices::<impl Endian for &'a mut [T]>::to_be`
+-> src/slices.rs:21:2: 26:3
+fn to_be(self) -> Self {
+		for elt in self.iter_mut() { unsafe {
+			[0m[33mptr::write(elt, [0m[31m[0m[36mptr::read(elt)[0m[36m.to_be()[0m[33m)[0m;
+		} }
+		self
+	}
+[0m
+Warning (UnsafeDataflow:/ReadFlow/WriteFlow): Potential unsafe dataflow issue in `slices::<impl Endian for &'a mut [T]>::to_le`
+-> src/slices.rs:27:2: 32:3
+fn to_le(self) -> Self {
+		for elt in self.iter_mut() { unsafe {
+			[0m[33mptr::write(elt, [0m[31m[0m[36mptr::read(elt)[0m[36m.to_le()[0m[33m)[0m;
+		} }
+		self
+	}
+[0m
+2024-06-23 13:59:27.192260 |WARN | [cargo_rudra] Target test:zst is not supported
+2024-06-23 13:59:27.192441 |WARN | [cargo_rudra] Target test:nested_struct is not supported
+2024-06-23 13:59:27.192473 |WARN | [cargo_rudra] Target test:tuple_struct is not supported
+2024-06-23 13:59:27.192491 |WARN | [cargo_rudra] Target test:invalid is not supported
+2024-06-23 13:59:27.192498 |WARN | [cargo_rudra] Target test:simple_struct is not supported
+2024-06-23 13:59:27.192504 |WARN | [cargo_rudra] Target test:generics is not supported
+2024-06-23 13:59:27.192522 |WARN | [cargo_rudra] Target test:enum is not supported
+2024-06-23 13:59:27.192529 |WARN | [cargo_rudra] Target test:slices is not supported
+2024-06-23 13:59:27.192534 |WARN | [cargo_rudra] Target test:complex_struct is not supported
+2024-06-23 13:59:27.192810 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

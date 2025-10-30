@@ -1,0 +1,44 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "SimonSapin",
+    "larsbergstrom",
+    "Manishearth",
+    "metajack",
+    "mbrubeck",
+    "github:servo:cargo-publish"
+  ],
+  "stars": 8,
+  "forks": 10,
+  "downloads": 20384374,
+  "num_side_effects": 20,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "mac",
+      "0.1.1"
+    ],
+    [
+      "new_debug_unreachable",
+      "1.0.6"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 20,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

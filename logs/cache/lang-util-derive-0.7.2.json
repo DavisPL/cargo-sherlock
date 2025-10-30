@@ -1,0 +1,67 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "alixinne"
+  ],
+  "stars": 24,
+  "forks": 4,
+  "downloads": 41094,
+  "num_side_effects": 2,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "darling",
+      "0.20.10"
+    ],
+    [
+      "darling_core",
+      "0.20.10"
+    ],
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "ident_case",
+      "1.0.1"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "darling_macro",
+      "0.20.10"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "unknown",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

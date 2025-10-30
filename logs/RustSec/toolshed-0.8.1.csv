@@ -1,0 +1,32 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Maciej Hirsz,maciejhirsz,https://github.com/maciejhirsz
+************************************
+event,timestamp,downloads
+Downloads,-,125140
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:21:45.244960 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:21:48.624656 |INFO | [rudra-progress] Running rudra for target lib:toolshed
+2024-06-21 17:21:53.365634 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:21:53.369356 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:21:53.370805 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:21:53.370815 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:21:53.409863 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:21:53.409892 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/cell.rs:22:1: 22:39
+unsafe impl<T> Send for CopyCell<T> {}
+2024-06-21 17:21:54.521853 |WARN | [cargo_rudra] Target bench:list is not supported
+2024-06-21 17:21:54.521901 |WARN | [cargo_rudra] Target bench:bloomset is not supported
+2024-06-21 17:21:54.521993 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

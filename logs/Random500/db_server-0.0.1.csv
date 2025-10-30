@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,moulo19821,https://github.com/moulo19821
+************************************
+event,timestamp,downloads
+Downloads,-,444
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:18:25.296439 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:18:27.832966 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `axum = ""^0.7""`
+candidate versions found which didn't match: 0.5.17, 0.5.16, 0.5.15, ...
+location searched: crates.io index
+required by package `db_server v0.0.1 (/tmp/rudra)`
+
+"
+************************************

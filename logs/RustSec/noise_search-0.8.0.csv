@@ -1,0 +1,56 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Damien Katz,Damienkatz,https://github.com/Damienkatz
+Author,-,Volker Mische,vmx,https://github.com/vmx
+************************************
+event,timestamp,downloads
+Downloads,-,12466
+************************************
+event,timestamp,total,flagged
+Side Effects,-,107,99
+************************************
+Rudra,timestamp
+"2024-06-21 17:08:37.219355 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:08:40.339848 |INFO | [rudra-progress] Running rudra for target lib:noise_search
+2024-06-21 17:13:45.605030 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:13:45.609131 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:13:45.632176 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:13:45.632197 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:13:45.680324 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:13:45.680349 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/index.rs:414:1: 414:41
+unsafe impl<T> Send for MvccRwLock<T> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/index.rs:415:1: 415:41
+unsafe impl<T> Sync for MvccRwLock<T> {}
+2024-06-21 17:13:47.323345 |INFO | [rudra-progress] Running rudra for target bin:noise_search
+2024-06-21 17:18:47.105269 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:18:47.109377 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:18:47.131295 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:18:47.131314 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:18:47.178264 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:18:47.178284 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/index.rs:414:1: 414:41
+unsafe impl<T> Send for MvccRwLock<T> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/index.rs:415:1: 415:41
+unsafe impl<T> Sync for MvccRwLock<T> {}
+2024-06-21 17:18:48.529005 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:18:48.532484 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:18:48.533972 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:18:48.533985 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:18:48.535227 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:18:48.535236 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:18:48.584338 |WARN | [cargo_rudra] Target test:rocksdb is not supported
+2024-06-21 17:18:48.584527 |WARN | [cargo_rudra] Target test:repl_tests is not supported
+2024-06-21 17:18:48.584545 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 17:18:48.584760 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

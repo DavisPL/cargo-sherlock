@@ -1,0 +1,36 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jim Peters,uazu,https://github.com/uazu
+************************************
+event,timestamp,downloads
+Downloads,-,144222
+************************************
+event,timestamp,total,flagged
+Side Effects,-,28,28
+************************************
+Rudra,timestamp
+"2024-06-21 18:04:58.087405 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:05:02.460711 |INFO | [rudra-progress] Running rudra for target lib:qcell
+2024-06-21 18:05:07.298417 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:05:07.302228 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:05:07.323118 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:05:07.323141 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:05:07.340318 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:05:07.340337 |INFO | [rudra-progress] Rudra finished
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/tlcell.rs:175:1: 175:58
+unsafe impl<Q, T: Send + ?Sized> Send for TLCell<Q, T> {}
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/tcell.rs:219:1: 219:57
+unsafe impl<Q, T: Send + ?Sized> Send for TCell<Q, T> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/tcell.rs:236:1: 236:64
+unsafe impl<Q, T: Send + Sync + ?Sized> Sync for TCell<Q, T> {}
+2024-06-21 18:05:08.361536 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

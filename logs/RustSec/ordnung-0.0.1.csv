@@ -1,0 +1,97 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Maciej Hirsz,maciejhirsz,https://github.com/maciejhirsz
+************************************
+event,timestamp,downloads
+Downloads,-,2130
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:31:31.010259 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:31:34.677300 |INFO | [rudra-progress] Running rudra for target lib:ordnung
+[0m[1m[33mwarning[0m[0m[1m: unused return value of `core::mem::ManuallyDrop::<T>::new` that must be used[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/compact.rs:153:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m153[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        ManuallyDrop::new(core::mem::replace(self, Self::from_stdvec_unchecked(stdvec)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_must_use)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: if you don't need the wrapper, you can use `mem::forget` instead[0m
+
+2024-06-21 17:31:47.259496 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:31:47.263280 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:31:47.268020 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:31:47.268038 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:31:47.293821 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:31:47.293839 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/ApiSendForSync): Suspicious impl of `Sync` found
+-> src/lib.rs:110:1: 110:53
+unsafe impl<K: Sync, V: Sync> Sync for Node<K, V> {}
+Error (UnsafeDataflow:/VecFromRaw): Potential unsafe dataflow issue in `compact::Vec::<T>::with`
+-> src/compact.rs:144:5: 156:6
+fn with<'a, R: 'a, F: FnOnce(&mut StdVec<T>) -> R>(&mut self, f: F) -> R {
+        let (len, cap) = self.parts();
+
+        let mut stdvec = unsafe {
+            [0m[31mStdVec::from_raw_parts(self.as_mut_ptr(), len, cap)[0m
+        };
+
+        let r = [0m[36mf(&mut stdvec)[0m;
+
+        ManuallyDrop::new(core::mem::replace(self, Self::from_stdvec_unchecked(stdvec)));
+
+        r
+    }
+[0m
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `Map::<K, V>::find`
+-> src/lib.rs:372:5: 400:6
+fn find<Q: ?Sized>(&self, key: &Q, hash: u64) -> FindResult
+    where
+        K: Borrow<Q>,
+        Q: Eq,
+    {
+        if self.len() == 0 {
+            return Miss(None);
+        }
+
+        let mut idx = 0;
+
+        loop {
+            let node = unsafe { [0m[33mself.store.get_unchecked(idx)[0m };
+
+            if hash == node.hash && key == [0m[36mnode.key.borrow()[0m {
+                return Hit(idx);
+            } else if hash < node.hash {
+                match node.left.get() {
+                    Some(i) => idx = i.get() as usize,
+                    None => return Miss(Some(&node.left)),
+                }
+            } else {
+                match node.right.get() {
+                    Some(i) => idx = i.get() as usize,
+                    None => return Miss(Some(&node.right)),
+                }
+            }
+        }
+    }
+[0m
+[0m[1m[33mwarning[0m[0m[1m: unused return value of `ManuallyDrop::<T>::new` that must be used[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/compact.rs:153:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m153[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        ManuallyDrop::new(core::mem::replace(self, Self::from_stdvec_unchecked(stdvec)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_must_use)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: if you don't need the wrapper, you can use `mem::forget` instead[0m
+
+2024-06-21 17:31:48.383383 |WARN | [cargo_rudra] Target bench:benches is not supported
+2024-06-21 17:31:48.383577 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

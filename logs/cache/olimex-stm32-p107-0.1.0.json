@@ -1,0 +1,131 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "cavokz"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 1302,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "stm32f1xx-hal",
+      "0.10.0"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "bxcan",
+      "0.8.0"
+    ],
+    [
+      "embedded-can",
+      "0.4.1"
+    ],
+    [
+      "nb",
+      "1.1.0"
+    ],
+    [
+      "vcell",
+      "0.1.3"
+    ],
+    [
+      "cortex-m",
+      "0.7.7"
+    ],
+    [
+      "bare-metal",
+      "1.0.0"
+    ],
+    [
+      "bitfield",
+      "0.19.0"
+    ],
+    [
+      "bitfield-macros",
+      "0.19.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "embedded-hal",
+      "1.0.0"
+    ],
+    [
+      "volatile-register",
+      "0.2.2"
+    ],
+    [
+      "cortex-m-rt",
+      "0.7.5"
+    ],
+    [
+      "cortex-m-rt-macros",
+      "0.7.5"
+    ],
+    [
+      "embedded-dma",
+      "0.2.0"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ],
+    [
+      "fugit",
+      "0.3.7"
+    ],
+    [
+      "gcd",
+      "2.3.0"
+    ],
+    [
+      "fugit-timer",
+      "0.1.3"
+    ],
+    [
+      "stm32f1",
+      "0.15.1"
+    ],
+    [
+      "void",
+      "1.0.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

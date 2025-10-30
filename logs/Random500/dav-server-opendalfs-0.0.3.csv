@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Xuanwo,Xuanwo,https://github.com/Xuanwo
+************************************
+event,timestamp,downloads
+Downloads,-,1418
+************************************
+event,timestamp,total,flagged
+Side Effects,-,8,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:12:44.618782 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:12:46.260853 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `opendal = ""^0.47.0""`
+candidate versions found which didn't match: 0.23.0, 0.22.6, 0.22.5, ...
+location searched: crates.io index
+required by package `dav-server-opendalfs v0.0.3 (/tmp/rudra)`
+
+"
+************************************

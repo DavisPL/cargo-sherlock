@@ -1,0 +1,6 @@
+Solving for required assumptions to trust aovec-1.1.0...
+Trust Score for aovec-1.1.0: 196
+Assumptions Made:
+aovec-1.1.0 has many downloads: 136 wt
+aovec-1.1.0 having many downloads implies it is safe: 10 wt
+aovec-1.1.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

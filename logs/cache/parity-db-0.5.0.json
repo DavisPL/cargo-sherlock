@@ -1,0 +1,205 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "cheme",
+    "arkpar",
+    "MattHalpinParity"
+  ],
+  "stars": 267,
+  "forks": 61,
+  "downloads": 5403511,
+  "num_side_effects": 106,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "blake2",
+      "0.10.6"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "crc32fast",
+      "1.4.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "fs2",
+      "0.4.3"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "hex",
+      "0.4.3"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "lz4",
+      "1.28.1"
+    ],
+    [
+      "lz4-sys",
+      "1.11.0"
+    ],
+    [
+      "memmap2",
+      "0.9.5"
+    ],
+    [
+      "parking_lot",
+      "0.12.3"
+    ],
+    [
+      "lock_api",
+      "0.4.12"
+    ],
+    [
+      "scopeguard",
+      "1.2.0"
+    ],
+    [
+      "parking_lot_core",
+      "0.9.10"
+    ],
+    [
+      "redox_syscall",
+      "0.5.10"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "rand",
+      "0.9.0"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "zerocopy",
+      "0.8.24"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.24"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "siphasher",
+      "1.0.1"
+    ],
+    [
+      "snap",
+      "1.1.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 7,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

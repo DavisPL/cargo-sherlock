@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nils,NilsIrl,https://github.com/NilsIrl
+************************************
+event,timestamp,downloads
+Downloads,-,6982
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,1
+************************************
+Rudra,timestamp
+"2024-06-21 16:31:49.199191 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:31:54.040743 |INFO | [rudra-progress] Running rudra for target bin:mozwire
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `ipv6_gateway`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/main.rs:93:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m93[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    ipv6_gateway: Ipv6Addr,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+2024-06-21 16:35:07.991385 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:35:08.000153 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:35:08.004430 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:35:08.004534 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:35:08.082138 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:35:08.082214 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:35:08.365036 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

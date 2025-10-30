@@ -1,0 +1,39 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Robbepop",
+    "parity-crate-owner"
+  ],
+  "stars": 1696,
+  "forks": 300,
+  "downloads": 4096910,
+  "num_side_effects": 3,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.1.0",
+      "notes": "This crate contains no `unsafe` code and doesn't reach in unnecessarily to the\\nstandard library or anything like that. This only contains a few data structures\\nused by `wasmi` and various idiomatic Rust trait implementations.\\n"
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

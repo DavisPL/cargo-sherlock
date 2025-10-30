@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sturdy,apollo-sturdy,https://github.com/apollo-sturdy
+Author,-,rust-devs,github:apollodao:rust-devs,https://github.com/apollodao
+************************************
+event,timestamp,downloads
+Downloads,-,9605
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-23 16:40:08.887199 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:40:11.284113 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `regex = ""^1.7.3""`
+candidate versions found which didn't match: 1.8.4, 1.8.3, 1.8.2, ...
+location searched: crates.io index
+required by package `apollo-cw-multi-test v0.18.0 (/tmp/rudra)`
+
+"
+************************************

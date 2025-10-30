@@ -1,0 +1,23 @@
+Solving for required assumptions to trust truetype-0.30.0...
++------------------------------------------------------------+
+|            Analysis Report for truetype-0.30.0             |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 39 cost
+Assumptions for Trusting:
+  • truetype-0.30.0 has many downloads: 14 cost
+  • truetype-0.30.0 having many downloads implies it is safe: 25 cost
+
+Distrust Cost (higher is better): 81 cost
+Assumptions for Distrusting:
+  • truetype-0.30.0 has many side effects: 21 cost
+  • truetype-0.30.0 has many side effects implies it is unsafe: 60 cost
+
+Severity Label: MEDIUM_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/truetype-0.30.0.json
++------------------------------------------------------------+
+

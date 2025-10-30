@@ -1,0 +1,6 @@
+Solving for required assumptions to trust odbc-0.9.9...
+Trust Score for odbc-0.9.9: 133
+Assumptions Made:
+odbc-0.9.9 has many downloads: 73 wt
+odbc-0.9.9 having many downloads implies it is safe: 10 wt
+odbc-0.9.9 appearing in RustSec implies it is less safe (score penalty): 50 weight

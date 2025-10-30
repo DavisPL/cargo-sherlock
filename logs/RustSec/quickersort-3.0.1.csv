@@ -1,0 +1,150 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Michael Howell,notriddle,https://github.com/notriddle
+************************************
+event,timestamp,downloads
+Downloads,-,110502
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:18:46.732600 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:18:50.408920 |INFO | [rudra-progress] Running rudra for target lib:quickersort
+2024-06-21 18:18:55.740893 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:18:55.744909 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:18:55.745941 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:18:55.745953 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:18:55.813791 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:18:55.813820 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/ReadFlow/WriteFlow/SliceUnchecked): Potential unsafe dataflow issue in `sort::Siftup::<'a, T>::siftup`
+-> src/sort.rs:401:5: 417:6
+fn siftup<C: Fn(&T, &T) -> Ordering>(v_: &mut [T], start: usize, pos_: usize, compare: &C) {
+        unsafe {
+            let mut this = Siftup{
+                new: NoDrop::new([0m[31mptr::read([0m[33mv_.get_unchecked_mut(pos_)[0m[31m)[0m),
+                v: v_,
+                pos: pos_,
+            };
+            let mut parent = this.pos.wrapping_sub(1) / 4;
+            while this.pos > start && [0m[36mcompare(&*this.new, [0m[33mthis.v.get_unchecked(parent)[0m[36m)[0m == Greater {
+                let x = [0m[31mptr::read([0m[33mthis.v.get_unchecked_mut(parent)[0m[31m)[0m;
+                [0m[33mptr::write([0m[33mthis.v.get_unchecked_mut(this.pos)[0m[33m, x)[0m;
+                this.pos = parent;
+                parent = this.pos.wrapping_sub(1) / 4;
+            }
+            // siftup dropped here
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/ReadFlow/CopyFlow/SliceUnchecked): Potential unsafe dataflow issue in `sort::DualPivotSort::<'a, T>::dual_pivot_sort`
+-> src/sort.rs:197:5: 290:6
+fn dual_pivot_sort<C: Fn(&T, &T) -> Ordering>(v: &mut [T], (p1, p2): (usize, usize),
+                                                  compare: &C, rec: u32, heapsort_depth: u32) {
+        debug_assert!(v.len() > 9);
+        let (left, right) = unsafe {
+            if compare_idxs(v, p1, p2, compare) == Greater {
+                unsafe_swap(v, p1, p2);
+            }
+            // Move the leftmost and rightmost list elements into the spots formerly occupied by the pivots.
+            // This leaves `v[0]` and `v[n-1]` logically uninitialized.
+            // Those gaps get filled back in by `DualPivotSort::Drop`.
+            // If `compare` unwinds, we'll put the items in p1 and p2 back into 0 and len()-1,
+            // otherwise p1 and p2 will be replaced with the last locations in the leftmost and rightmost
+            // partitions, where the pivots will be placed.
+            let mut this = DualPivotSort{
+                p1: p1,
+                pivot1: NoDrop::new([0m[31mptr::read([0m[33mv.get_unchecked(p1)[0m[31m)[0m),
+                p2: p2,
+                pivot2: NoDrop::new([0m[31mptr::read([0m[33mv.get_unchecked(p2)[0m[31m)[0m),
+                v: v,
+            };
+            [0m[31mptr::copy([0m[33mthis.v.get_unchecked(0)[0m[31m, [0m[33mthis.v.get_unchecked_mut(p1)[0m[31m, 1)[0m;
+            [0m[31mptr::copy([0m[33mthis.v.get_unchecked(this.v.len() - 1)[0m[31m, [0m[33mthis.v.get_unchecked_mut(p2)[0m[31m, 1)[0m;
+            // Start partitioning:
+            let (mut l, mut r) = (1, this.v.len() - 2);
+            while l < this.v.len() - 1 && [0m[36mcompare([0m[33mthis.v.get_unchecked(l)[0m[36m, &*this.pivot1)[0m == Less { l += 1; }
+            while r > 0 && [0m[36mcompare([0m[33mthis.v.get_unchecked(r)[0m[36m, &*this.pivot2)[0m == Greater { r -= 1; }
+            // The invariant has been established, and shall now be maintained.
+            let v = &mut *this.v;
+            let p1 = &*this.pivot1;
+            let p2 = &*this.pivot2;
+            let mut m = l;
+            while m <= r {
+                debug_assert!(l != 0);
+                debug_assert!(l <= m);
+                debug_assert!(l == m || l < r);
+                debug_assert!(r != v.len() - 1);
+                debug_assert!(m < v.len() && r < v.len() && l < v.len());
+                if cfg!(feature=""assert_working_compare"") {
+                    debug_assert!(l == m || [0m[36mcompare(&v[l], p1)[0m != Less);
+                    debug_assert!(l == 1 || [0m[36mcompare(&v[l-1], p1)[0m != Greater);
+                    debug_assert!(l <= 2 || [0m[36mcompare(&v[l-2], p1)[0m != Greater);
+                    debug_assert!([0m[36mcompare(&v[r], p2)[0m != Greater);
+                    debug_assert!(r == v.len() - 2 || [0m[36mcompare(&v[r+1], p2)[0m != Less);
+                    debug_assert!(r >= v.len() - 3 || [0m[36mcompare(&v[r+2], p2)[0m != Less);
+                }
+                let middle = NoDrop::new([0m[31mptr::read([0m[33mv.get_unchecked(m)[0m[31m)[0m);
+                let middle = &*middle;
+                if [0m[36mcompare(middle, p1)[0m == Less {
+                    [0m[31mptr::copy([0m[33mv.get_unchecked(l)[0m[31m, [0m[33mv.get_unchecked_mut(m)[0m[31m, 1)[0m;
+                    [0m[31mptr::copy(middle, [0m[33mv.get_unchecked_mut(l)[0m[31m, 1)[0m;
+                    l += 1;
+                } else if [0m[36mcompare(middle, p2)[0m == Greater {
+                    if [0m[36mcompare([0m[33mv.get_unchecked(r)[0m[36m, p1)[0m == Less {
+                        [0m[31mptr::copy([0m[33mv.get_unchecked(l)[0m[31m, [0m[33mv.get_unchecked_mut(m)[0m[31m, 1)[0m;
+                        [0m[31mptr::copy([0m[33mv.get_unchecked(r)[0m[31m, [0m[33mv.get_unchecked_mut(l)[0m[31m, 1)[0m;
+                        l += 1;
+                    } else {
+                        [0m[31mptr::copy([0m[33mv.get_unchecked(r)[0m[31m, [0m[33mv.get_unchecked_mut(m)[0m[31m, 1)[0m;
+                    }
+                    [0m[31mptr::copy(middle, [0m[33mv.get_unchecked_mut(r)[0m[31m, 1)[0m;
+                    r -= 1;
+                    while m <= r && [0m[36mcompare([0m[33mv.get_unchecked(r)[0m[36m, p2)[0m == Greater {
+                        r -= 1;
+                    }
+                }
+                m += 1;
+            }
+            this.p1 = l - 1;
+            this.p2 = r + 1;
+            (l, r)
+            // DualPivotSort dropped here
+        };
+        let left_pivot = left - 1;
+        let right_pivot = right + 1;
+        debug_assert!(right_pivot > left_pivot);
+        if cfg!(feature=""assert_working_compare"") {
+            for item in &v[..left_pivot] {
+                debug_assert!([0m[36mcompare(item, &v[left_pivot])[0m != Greater);
+                debug_assert!([0m[36mcompare(item, &v[right_pivot])[0m != Greater);
+            }
+            for item in &v[left_pivot..right_pivot] {
+                debug_assert!([0m[36mcompare(item, &v[left_pivot])[0m != Less);
+                debug_assert!([0m[36mcompare(item, &v[right_pivot])[0m != Greater);
+            }
+            for item in &v[right_pivot..] {
+                debug_assert!([0m[36mcompare(item, &v[right_pivot])[0m != Less);
+                debug_assert!([0m[36mcompare(item, &v[left_pivot])[0m != Less);
+            }
+            debug_assert!([0m[36mcompare(&v[left_pivot], &v[right_pivot])[0m == Less);
+        }
+        introsort(&mut v[..left_pivot], compare, rec + 1, heapsort_depth);
+        introsort(&mut v[left_pivot + 1..right_pivot], compare, rec + 1, heapsort_depth);
+        introsort(&mut v[right_pivot + 1..], compare, rec + 1, heapsort_depth);
+    }
+[0m
+2024-06-21 18:18:56.770556 |WARN | [cargo_rudra] Target example:perf_txt is not supported
+2024-06-21 18:18:56.770600 |WARN | [cargo_rudra] Target example:ex1 is not supported
+2024-06-21 18:18:56.770611 |WARN | [cargo_rudra] Target test:test is not supported
+2024-06-21 18:18:56.770614 |WARN | [cargo_rudra] Target test:test-floats is not supported
+2024-06-21 18:18:56.770621 |WARN | [cargo_rudra] Target bench:float is not supported
+2024-06-21 18:18:56.770624 |WARN | [cargo_rudra] Target bench:bench is not supported
+2024-06-21 18:18:56.770702 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

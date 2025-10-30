@@ -1,0 +1,63 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,diwic,https://github.com/diwic
+************************************
+event,timestamp,downloads
+Downloads,-,11019
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:41:55.982267 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:41:59.567108 |INFO | [rudra-progress] Running rudra for target lib:reffers
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rc.rs:130:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m130[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        write!(f, ""{}"", error::Error::description(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/arc.rs:102:51[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m102[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let u_cmp = unsafe { self.0.as_ref().mask.compare_and_swap(u_old, u_new, SeqCst) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+2024-06-21 18:42:04.891452 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:42:04.895606 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:42:04.900538 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:42:04.900554 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:42:04.943617 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:42:04.943642 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/arc.rs:361:1: 361:74
+unsafe impl<T: Send, M: Send + BitMask<Num=usize>> Sync for Weak<T, M> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/aref.rs:196:1: 196:52
+unsafe impl<'a, U: ?Sized> Send for ARefs<'a, U> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/arc.rs:279:1: 279:76
+unsafe impl<T: Send, M: Send + BitMask<Num=usize>> Sync for RefMut<T, M> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/arc.rs:334:1: 334:76
+unsafe impl<T: Send, M: Send + BitMask<Num=usize>> Sync for Strong<T, M> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/arc.rs:307:1: 307:80
+unsafe impl<T: Send + Sync, M: Send + BitMask<Num=usize>> Sync for Ref<T, M> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/aref.rs:206:1: 206:53
+unsafe impl<'a, U: ?Sized> Send for ARefss<'a, U> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/aref.rs:208:1: 208:53
+unsafe impl<'a, U: ?Sized> Sync for ARefss<'a, U> {}
+2024-06-21 18:42:06.445348 |WARN | [cargo_rudra] Target bench:bench is not supported
+2024-06-21 18:42:06.445519 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

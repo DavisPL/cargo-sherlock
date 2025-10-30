@@ -1,0 +1,262 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "GuillaumeGomez",
+    "sdroege",
+    "bilelmoussaoui",
+    "github:gtk-rs:crates-io"
+  ],
+  "stars": 506,
+  "forks": 88,
+  "downloads": 11587,
+  "num_side_effects": 67,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "gdk",
+      "0.18.2"
+    ],
+    [
+      "cairo-rs",
+      "0.20.7"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "cairo-sys-rs",
+      "0.20.7"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "gdk-pixbuf",
+      "0.20.9"
+    ],
+    [
+      "gdk-pixbuf-sys",
+      "0.20.7"
+    ],
+    [
+      "gio-sys",
+      "0.20.9"
+    ],
+    [
+      "glib-sys",
+      "0.20.9"
+    ],
+    [
+      "gobject-sys",
+      "0.20.9"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "gio",
+      "0.20.9"
+    ],
+    [
+      "futures-channel",
+      "0.3.31"
+    ],
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "futures-io",
+      "0.3.31"
+    ],
+    [
+      "futures-util",
+      "0.3.31"
+    ],
+    [
+      "futures-task",
+      "0.3.31"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "pin-utils",
+      "0.1.0"
+    ],
+    [
+      "glib",
+      "0.20.9"
+    ],
+    [
+      "futures-executor",
+      "0.3.31"
+    ],
+    [
+      "glib-macros",
+      "0.20.7"
+    ],
+    [
+      "heck",
+      "0.5.0"
+    ],
+    [
+      "proc-macro-crate",
+      "3.3.0"
+    ],
+    [
+      "toml_edit",
+      "0.22.24"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "toml_datetime",
+      "0.6.8"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "gdk-sys",
+      "0.18.2"
+    ],
+    [
+      "pango-sys",
+      "0.20.9"
+    ],
+    [
+      "pango",
+      "0.20.9"
+    ],
+    [
+      "gdkwayland-sys",
+      "0.18.2"
+    ],
+    [
+      "wayland-backend",
+      "0.3.8"
+    ],
+    [
+      "downcast-rs",
+      "2.0.1"
+    ],
+    [
+      "rustix",
+      "1.0.3"
+    ],
+    [
+      "errno",
+      "0.3.10"
+    ],
+    [
+      "linux-raw-sys",
+      "0.9.3"
+    ],
+    [
+      "wayland-sys",
+      "0.31.6"
+    ],
+    [
+      "wayland-client",
+      "0.31.8"
+    ],
+    [
+      "wayland-scanner",
+      "0.31.6"
+    ],
+    [
+      "quick-xml",
+      "0.37.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 43,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

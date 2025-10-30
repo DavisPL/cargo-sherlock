@@ -1,0 +1,33 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,kristoffer,krl,https://github.com/krl
+************************************
+event,timestamp,downloads
+Downloads,-,2943
+************************************
+event,timestamp,total,flagged
+Side Effects,-,11,11
+************************************
+Rudra,timestamp
+"2024-06-21 17:20:01.941297 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:20:05.503882 |INFO | [rudra-progress] Running rudra for target lib:convec
+2024-06-21 17:20:14.724125 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:20:14.728172 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:20:14.748858 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:20:14.748880 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:20:14.779458 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:20:14.779473 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/convec.rs:17:1: 17:37
+unsafe impl<T> Send for ConVec<T> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/convec.rs:16:1: 16:37
+unsafe impl<T> Sync for ConVec<T> {}
+2024-06-21 17:20:15.689343 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

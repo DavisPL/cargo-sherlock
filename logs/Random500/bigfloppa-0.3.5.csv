@@ -1,0 +1,31 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Vladimir,0xdeafbeef,https://github.com/0xdeafbeef
+************************************
+event,timestamp,downloads
+Downloads,-,2152
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:01:17.360654 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:01:21.318353 |INFO | [rudra-progress] Running rudra for target lib:bigfloppa
+2024-06-23 16:01:36.407745 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:01:36.411774 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:01:36.412134 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:01:36.412148 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:01:36.453981 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:01:36.454011 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:01:37.605083 |WARN | [cargo_rudra] Target example:simple-math is not supported
+2024-06-23 16:01:37.605176 |WARN | [cargo_rudra] Target example:floating-precision is not supported
+2024-06-23 16:01:37.605192 |WARN | [cargo_rudra] Target example:repeated_squares is not supported
+2024-06-23 16:01:37.605195 |WARN | [cargo_rudra] Target bench:basic is not supported
+2024-06-23 16:01:37.605311 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

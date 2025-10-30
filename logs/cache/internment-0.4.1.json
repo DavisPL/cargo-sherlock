@@ -1,0 +1,215 @@
+{
+  "rustsec_label": "CRITICAL",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "droundy"
+  ],
+  "stars": 95,
+  "forks": 23,
+  "downloads": 4052549,
+  "num_side_effects": 7,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "dashmap",
+      "6.1.0"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "lock_api",
+      "0.4.12"
+    ],
+    [
+      "scopeguard",
+      "1.2.0"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "parking_lot_core",
+      "0.9.10"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "redox_syscall",
+      "0.5.10"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "state",
+      "0.6.0"
+    ],
+    [
+      "loom",
+      "0.7.2"
+    ],
+    [
+      "generator",
+      "0.8.4"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "windows",
+      "0.61.1"
+    ],
+    [
+      "windows-collections",
+      "0.2.0"
+    ],
+    [
+      "windows-core",
+      "0.61.0"
+    ],
+    [
+      "windows-implement",
+      "0.60.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "windows-interface",
+      "0.59.1"
+    ],
+    [
+      "windows-link",
+      "0.1.1"
+    ],
+    [
+      "windows-result",
+      "0.3.2"
+    ],
+    [
+      "windows-strings",
+      "0.4.0"
+    ],
+    [
+      "windows-future",
+      "0.2.0"
+    ],
+    [
+      "windows-numerics",
+      "0.2.0"
+    ],
+    [
+      "scoped-tls",
+      "1.0.1"
+    ],
+    [
+      "tracing",
+      "0.1.41"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "tracing-core",
+      "0.1.33"
+    ],
+    [
+      "tracing-subscriber",
+      "0.3.19"
+    ],
+    [
+      "tinyset",
+      "0.5.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 7,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

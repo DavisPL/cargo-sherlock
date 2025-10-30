@@ -1,0 +1,111 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "driftluo"
+  ],
+  "stars": 54,
+  "forks": 24,
+  "downloads": 291362,
+  "num_side_effects": 8,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "arrayref",
+      "0.3.9"
+    ],
+    [
+      "bs58",
+      "0.5.1"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "data-encoding",
+      "2.8.0"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "sha2",
+      "0.10.8"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "unsigned-varint",
+      "0.8.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

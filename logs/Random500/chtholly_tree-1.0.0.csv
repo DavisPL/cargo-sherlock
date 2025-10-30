@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Timothy,shanmo,https://github.com/shanmo
+************************************
+event,timestamp,downloads
+Downloads,-,860
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:32:54.146267 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:32:57.045739 |INFO | [rudra-progress] Running rudra for target lib:chtholly_tree
+2024-06-23 15:33:00.982429 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:33:00.986263 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:33:00.986602 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:33:00.986613 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:33:01.005918 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:33:01.005942 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:33:01.839864 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

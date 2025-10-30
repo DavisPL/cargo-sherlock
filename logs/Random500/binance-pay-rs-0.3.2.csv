@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Akarsh,akarsh1995,https://github.com/akarsh1995
+************************************
+event,timestamp,downloads
+Downloads,-,2898
+************************************
+event,timestamp,total,flagged
+Side Effects,-,3,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:55:06.106309 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:55:21.647732 |INFO | [rudra-progress] Running rudra for target lib:bpay
+[0m[1m[38;5;9merror[0m[0m[1m: there is no argument named `key`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/c2b/webhook/verification.rs:76:46[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            .expect(&format!(""Could not find {key} in headers""))[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[38;5;9m^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: if you intended to capture `key` from the surrounding scope, add `#![feature(format_args_capture)]` to the crate attributes[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `binance-pay-rs` due to previous error
+2024-06-23 16:58:33.600277 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

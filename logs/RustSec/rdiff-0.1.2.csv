@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Daniel Yule,dyule,https://github.com/dyule
+************************************
+event,timestamp,downloads
+Downloads,-,4295
+************************************
+event,timestamp,total,flagged
+Side Effects,-,7,6
+************************************
+Rudra,timestamp
+"2024-06-21 18:10:02.421671 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:10:07.036813 |INFO | [rudra-progress] Running rudra for target lib:rdiff
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 18:10:10.475425 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust va-ts-0.0.3...
+Trust Score for va-ts-0.0.3: 279
+Assumptions Made:
+va-ts-0.0.3 has many downloads: 219 wt
+va-ts-0.0.3 having many downloads implies it is safe: 10 wt
+va-ts-0.0.3 appearing in RustSec implies it is less safe (score penalty): 50 weight

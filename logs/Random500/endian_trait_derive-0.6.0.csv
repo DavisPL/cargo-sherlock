@@ -1,0 +1,21 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alexander Payne,myrrlyn,https://github.com/myrrlyn
+************************************
+event,timestamp,downloads
+Downloads,-,13062
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:23:47.603289 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:23:50.811877 |WARN | [cargo_rudra] Target proc-macro:endian_trait_derive is not supported
+2024-06-23 14:23:50.812247 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

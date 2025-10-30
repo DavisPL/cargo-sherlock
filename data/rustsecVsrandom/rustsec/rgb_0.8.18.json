@@ -1,0 +1,7 @@
+Solving for required assumptions to trust rgb-0.8.18...
+Trust Score for rgb-0.8.18: 67
+Assumptions Made:
+rgb-0.8.18 has many downloads: 7 wt
+rgb-0.8.18 having many downloads implies it is safe: 10 wt
+rgb-0.8.18 has all safe dependencies: 0 wt
+rgb-0.8.18 appearing in RustSec implies it is less safe (score penalty): 50 weight

@@ -1,0 +1,189 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "elinorbgr",
+    "trimental",
+    "github:smithay:publishers"
+  ],
+  "stars": 30,
+  "forks": 12,
+  "downloads": 5540720,
+  "num_side_effects": 34,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "smithay-client-toolkit",
+      "0.19.2"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "cursor-icon",
+      "1.1.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "memmap2",
+      "0.9.5"
+    ],
+    [
+      "rustix",
+      "1.0.3"
+    ],
+    [
+      "errno",
+      "0.3.10"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "linux-raw-sys",
+      "0.9.3"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "wayland-backend",
+      "0.3.8"
+    ],
+    [
+      "downcast-rs",
+      "2.0.1"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "wayland-sys",
+      "0.31.6"
+    ],
+    [
+      "wayland-client",
+      "0.31.8"
+    ],
+    [
+      "wayland-scanner",
+      "0.31.6"
+    ],
+    [
+      "quick-xml",
+      "0.37.2"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "wayland-csd-frame",
+      "0.3.0"
+    ],
+    [
+      "wayland-cursor",
+      "0.31.8"
+    ],
+    [
+      "xcursor",
+      "0.3.8"
+    ],
+    [
+      "wayland-protocols",
+      "0.32.6"
+    ],
+    [
+      "wayland-protocols-wlr",
+      "0.3.6"
+    ],
+    [
+      "xkeysym",
+      "0.2.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 5,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "rustsec_label": "Uncategorized",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "magiclen"
+  ],
+  "stars": 36,
+  "forks": 5,
+  "downloads": 433439,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "aes",
+      "0.8.4"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "cipher",
+      "0.4.4"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "inout",
+      "0.1.4"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "base64",
+      "0.22.1"
+    ],
+    [
+      "cbc",
+      "0.1.2"
+    ],
+    [
+      "crc-any",
+      "2.5.0"
+    ],
+    [
+      "des",
+      "0.8.1"
+    ],
+    [
+      "md-5",
+      "0.10.6"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "sha2",
+      "0.10.8"
+    ],
+    [
+      "tiger",
+      "0.2.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

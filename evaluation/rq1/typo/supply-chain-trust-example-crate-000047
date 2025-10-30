@@ -1,0 +1,24 @@
+Solving for required assumptions to trust supply-chain-trust-example-crate-000047-0.12.0...
++------------------------------------------------------------+
+|Analysis Report for supply-chain-trust-example-crate-000047-0.12.0|
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 45 cost
+Assumptions for Trusting:
+  • supply-chain-trust-example-crate-000047-0.12.0 having no side effects and having all safe dependencies implies it is safe: 10 cost
+  • crypto-common-0.1.6 having a current audit implies it is safe: 5 cost
+  • generic-array-1.2.1 has a past audit implies it is safe: 20 cost
+  • typenum-1.19.0 having no side effects and having all safe dependencies implies it is safe: 10 cost
+
+Distrust Cost (higher is better): 100 cost
+Assumptions for Distrusting:
+  • supply-chain-trust-example-crate-000047-0.12.0 is unsafe: 100 cost
+
+Severity Label: MEDIUM_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/supply-chain-trust-example-crate-000047-0.12.0.json
++------------------------------------------------------------+
+

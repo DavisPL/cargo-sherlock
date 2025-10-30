@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Bernardo Meurer,lovesegfault,https://github.com/lovesegfault
+************************************
+event,timestamp,downloads
+Downloads,-,759
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:09:19.300753 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:09:22.293962 |INFO | [rudra-progress] Running rudra for target bin:chirp
+2024-06-23 14:09:32.337384 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:09:32.345137 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:09:32.348607 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:09:32.348641 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:09:32.351506 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:09:32.351537 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:09:32.456895 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

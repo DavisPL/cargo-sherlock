@@ -1,0 +1,769 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jonathan Reem,reem,https://github.com/reem
+************************************
+event,timestamp,downloads
+Downloads,-,10028031
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-21 17:56:51.287344 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:56:54.315250 |INFO | [rudra-progress] Running rudra for target lib:traitobject
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:3:23[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::any::Any + Send { }[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::any::Any + Send`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:4:23[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::any::Any + Sync { }[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::any::Any + Sync`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:5:23[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::any::Any + Send + Sync { }[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::any::Any + Send + Sync`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:6:34[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m6[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::borrow::Borrow<T> + Send { }[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::borrow::Borrow<T> + Send`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:7:34[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::borrow::Borrow<T> + Sync { }[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::borrow::Borrow<T> + Sync`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:8:34[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::borrow::Borrow<T> + Send + Sync { }[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::borrow::Borrow<T> + Send + Sync`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:9:34[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::borrow::BorrowMut<T> + Send { }[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::borrow::BorrowMut<T> + Send`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:10:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::borrow::BorrowMut<T> + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::borrow::BorrowMut<T> + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:11:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m11[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::borrow::BorrowMut<T> + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::borrow::BorrowMut<T> + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:12:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::convert::AsMut<T> + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::convert::AsMut<T> + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:13:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::convert::AsMut<T> + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::convert::AsMut<T> + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:14:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::convert::AsMut<T> + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::convert::AsMut<T> + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:15:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::convert::AsRef<T> + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::convert::AsRef<T> + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:16:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::convert::AsRef<T> + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::convert::AsRef<T> + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:17:34[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T: ?Sized> Trait for ::std::convert::AsRef<T> + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::convert::AsRef<T> + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:18:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::error::Error + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::error::Error + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:19:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::error::Error + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::error::Error + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:20:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::error::Error + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::error::Error + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:21:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Binary + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Binary + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:22:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Binary + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Binary + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:23:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Binary + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Binary + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:24:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Debug + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Debug + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:25:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Debug + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Debug + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:26:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Debug + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Debug + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:27:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Display + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Display + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:28:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m28[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Display + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Display + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:29:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Display + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Display + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:30:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::LowerExp + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::LowerExp + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:31:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m31[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::LowerExp + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::LowerExp + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:32:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::LowerExp + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::LowerExp + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:33:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::LowerHex + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::LowerHex + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:34:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::LowerHex + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::LowerHex + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:35:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::LowerHex + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::LowerHex + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:36:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Octal + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Octal + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:37:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m37[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Octal + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Octal + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:38:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Octal + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Octal + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:39:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Pointer + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Pointer + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:40:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m40[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Pointer + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Pointer + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:41:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Pointer + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Pointer + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:42:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m42[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::UpperExp + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::UpperExp + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:43:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::UpperExp + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::UpperExp + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:44:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::UpperExp + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::UpperExp + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:45:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::UpperHex + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::UpperHex + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:46:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::UpperHex + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::UpperHex + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:47:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::UpperHex + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::UpperHex + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:48:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Write + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Write + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:49:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m49[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Write + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Write + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:50:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::fmt::Write + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::fmt::Write + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:51:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m51[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::hash::Hasher + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::hash::Hasher + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:52:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::hash::Hasher + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::hash::Hasher + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:53:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::hash::Hasher + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::hash::Hasher + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:54:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m54[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::BufRead + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::BufRead + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:55:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m55[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::BufRead + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::BufRead + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:56:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m56[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::BufRead + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::BufRead + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:57:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m57[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::Read + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::Read + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:58:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::Read + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::Read + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:59:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::Read + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::Read + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:60:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::Seek + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::Seek + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:61:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::Seek + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::Seek + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:62:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::Seek + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::Seek + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:63:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::Write + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::Write + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:64:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m64[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::Write + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::Write + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:65:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m65[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::io::Write + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::io::Write + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:66:29[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m66[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T, I> Trait for ::std::iter::IntoIterator<IntoIter=I, Item=T> { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn (::std::iter::IntoIterator<IntoIter=I, Item=T>)`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:67:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T> Trait for ::std::iter::Iterator<Item=T> + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::iter::Iterator<Item=T> + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:68:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T> Trait for ::std::iter::Iterator<Item=T> + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::iter::Iterator<Item=T> + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:69:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl<T> Trait for ::std::iter::Iterator<Item=T> + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::iter::Iterator<Item=T> + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:70:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Send + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::marker::Send + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:71:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::marker::Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:72:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Send + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::marker::Send + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:73:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Sync + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::marker::Sync + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:74:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Sync + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::marker::Sync + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:75:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m75[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Sync + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::marker::Sync + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:76:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::ops::Drop + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::ops::Drop + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:77:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m77[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::ops::Drop + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::ops::Drop + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:78:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::ops::Drop + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::ops::Drop + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:79:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m79[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::string::ToString + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::string::ToString + Send`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:80:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m80[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::string::ToString + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::string::ToString + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:81:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::string::ToString + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn ::std::string::ToString + Send + Sync`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: conflicting implementations of trait `Trait` for type `(dyn std::marker::Send + std::marker::Sync + 'static)`: (E0119)[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:72:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------------[0m[0m [0m[0m[1m[38;5;12mfirst implementation here[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Send + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mconflicting implementation for `(dyn std::marker::Send + std::marker::Sync + 'static)`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[deny(order_dependent_trait_objects)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #56484 <https://github.com/rust-lang/rust/issues/56484>[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: conflicting implementations of trait `Trait` for type `(dyn std::marker::Send + std::marker::Sync + 'static)`: (E0119)[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:73:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Send + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m-------------------------------------------------------[0m[0m [0m[0m[1m[38;5;12mfirst implementation here[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Sync + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mconflicting implementation for `(dyn std::marker::Send + std::marker::Sync + 'static)`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #56484 <https://github.com/rust-lang/rust/issues/56484>[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: conflicting implementations of trait `Trait` for type `(dyn std::marker::Send + std::marker::Sync + 'static)`: (E0119)[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:75:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Sync + Send { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m------------------------------------------------[0m[0m [0m[0m[1m[38;5;12mfirst implementation here[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Sync + Sync { }[0m
+[0m[1m[38;5;12m75[0m[0m [0m[0m[1m[38;5;12m| [0m[0munsafe impl Trait for ::std::marker::Sync + Send + Sync { }[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mconflicting implementation for `(dyn std::marker::Send + std::marker::Sync + 'static)`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #56484 <https://github.com/rust-lang/rust/issues/56484>[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `traitobject` due to 3 previous errors; 79 warnings emitted
+2024-06-21 17:56:58.127961 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

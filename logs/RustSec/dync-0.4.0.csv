@@ -1,0 +1,60 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Egor Larionov,elrnv,https://github.com/elrnv
+************************************
+event,timestamp,downloads
+Downloads,-,9384
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:50:00.167318 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:50:03.743646 |INFO | [rudra-progress] Running rudra for target lib:dync
+2024-06-21 18:50:20.462800 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:50:20.466845 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:50:20.488947 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:50:20.488973 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:50:20.544159 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:50:20.544187 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/value.rs:410:1: 410:83
+unsafe impl<B: GetBytesMut, V: ?Sized + HasDrop + HasSend> Send for Value<B, V> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/value.rs:411:1: 411:83
+unsafe impl<B: GetBytesMut, V: ?Sized + HasDrop + HasSync> Sync for Value<B, V> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/vec_drop.rs:98:1: 98:66
+unsafe impl<V: ?Sized + HasDrop + HasSend> Send for VecDrop<V> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/vec_drop.rs:99:1: 99:66
+unsafe impl<V: ?Sized + HasDrop + HasSync> Sync for VecDrop<V> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/slice_drop.rs:722:1: 722:79
+unsafe impl<'a, V: ?Sized + HasDrop + HasSend> Send for SliceDropMut<'a, V> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/slice_drop.rs:723:1: 723:79
+unsafe impl<'a, V: ?Sized + HasDrop + HasSync> Sync for SliceDropMut<'a, V> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/value.rs:640:1: 640:75
+unsafe impl<'a, V: ?Sized + HasDrop + HasSend> Send for ValueRef<'a, V> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/value.rs:641:1: 641:75
+unsafe impl<'a, V: ?Sized + HasDrop + HasSync> Sync for ValueRef<'a, V> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/slice_drop.rs:328:1: 328:76
+unsafe impl<'a, V: ?Sized + HasDrop + HasSend> Send for SliceDrop<'a, V> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/slice_drop.rs:329:1: 329:76
+unsafe impl<'a, V: ?Sized + HasDrop + HasSync> Sync for SliceDrop<'a, V> {}
+2024-06-21 18:50:21.963333 |WARN | [cargo_rudra] Target example:cache is not supported
+2024-06-21 18:50:21.963410 |WARN | [cargo_rudra] Target example:convert is not supported
+2024-06-21 18:50:21.963420 |WARN | [cargo_rudra] Target bench:type_erasure is not supported
+2024-06-21 18:50:21.963524 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

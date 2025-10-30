@@ -1,0 +1,30 @@
+Solving for required assumptions to trust rsd-0.1.0...
++------------------------------------------------------------+
+|               Analysis Report for rsd-0.1.0                |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 75 cost
+Assumptions for Trusting:
+  • rsd-0.1.0 having all trusted developers implies it is safe: 5 cost
+  • blake2-0.10.6 has many stars and forks: 0 cost
+  • digest-0.10.7 has many downloads: 0 cost
+  • crypto-common-0.1.6 has many downloads: 0 cost
+  • typenum-1.18.0 has many downloads: 0 cost
+  • hex-0.4.3 has many downloads: 0 cost
+  • byteorder-1.5.0 has many downloads: 0 cost
+  • tiny-keccak-2.0.2 has many downloads: 0 cost
+  • crunchy-0.2.3 has many downloads: 0 cost
+  • kilpatty is trusted: 70 cost
+
+Distrust Cost (higher is better): 50 cost
+Assumptions for Distrusting:
+  • rsd-0.1.0 failing a Miri test implies it is unsafe: 50 cost
+
+Severity Label: CRITICAL
+
+Full details about the crate can be found at: /logs/cache/rsd-0.1.0.json
++------------------------------------------------------------+
+

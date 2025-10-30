@@ -1,0 +1,63 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "solana-foundation-tech"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 500,
+  "num_side_effects": 1,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "clap",
+      "4.5.32"
+    ],
+    [
+      "clap_builder",
+      "4.5.32"
+    ],
+    [
+      "anstyle",
+      "1.0.10"
+    ],
+    [
+      "clap_lex",
+      "0.7.4"
+    ],
+    [
+      "goblin",
+      "0.9.3"
+    ],
+    [
+      "plain",
+      "0.2.3"
+    ],
+    [
+      "scroll",
+      "0.12.0"
+    ],
+    [
+      "solana-include-idl",
+      "0.1.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

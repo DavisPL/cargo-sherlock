@@ -1,0 +1,39 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "vorner"
+  ],
+  "stars": 19,
+  "forks": 6,
+  "downloads": 35107774,
+  "num_side_effects": 12,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 7,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 7,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.35
+  }
+}

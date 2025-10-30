@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,lyserith,https://github.com/lyserith
+************************************
+event,timestamp,downloads
+Downloads,-,373
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:50:25.784896 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:50:28.707251 |INFO | [rudra-progress] Running rudra for target lib:endo
+2024-06-23 16:50:32.291399 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:50:32.294732 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:50:32.297879 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:50:32.297899 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:50:32.297979 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:50:32.297985 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:50:32.725402 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

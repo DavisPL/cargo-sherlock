@@ -1,0 +1,43 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,safe-to-run,,0.3.14,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.3.28,,
+audits,-,Critical,mozilla,safe-to-deploy,0.3.21 -> 0.3.23,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.3.23 -> 0.3.25,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.3.25 -> 0.3.26,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.3.26 -> 0.3.28,,,
+audits,-,Critical,zcash,safe-to-deploy,0.3.25 -> 0.3.26,,,
+audits,-,Critical,zcash,safe-to-deploy,0.3.26 -> 0.3.27,,,
+audits,-,Critical,zcash,safe-to-deploy,0.3.26 -> 0.3.28,,"Dependency updates, and an MSRV update to Rust 1.56.",
+audits,-,Critical,zcash,safe-to-deploy,0.3.27 -> 0.3.28,,"Dependency updates, and an MSRV update to Rust 1.56.",
+audits,-,Critical,zcash,safe-to-deploy,0.3.28 -> 0.3.29,,,
+audits,-,Critical,zcash,safe-to-deploy,0.3.29 -> 0.3.30,,Removes `build.rs` now that it can rely on the `target_has_atomic` attribute.,
+************************************
+event,timestamp,name,username,url
+Author,-,Taylor Cramer,cramertj,https://github.com/cramertj
+Author,-,Taiki Endo,taiki-e,https://github.com/taiki-e
+************************************
+event,timestamp,downloads
+Downloads,-,172103964
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:48:36.362008 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:48:39.402891 |INFO | [rudra-progress] Running rudra for target lib:futures-task
+2024-06-21 18:48:43.641824 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:48:43.645716 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:48:43.647219 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:48:43.647231 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:48:43.691714 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:48:43.691736 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/future_obj.rs:111:1: 111:44
+unsafe impl<T> Send for FutureObj<'_, T> {}
+2024-06-21 18:48:44.761291 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

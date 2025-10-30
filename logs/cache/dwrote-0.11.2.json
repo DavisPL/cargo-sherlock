@@ -1,0 +1,66 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "SimonSapin",
+    "vvuk",
+    "changm",
+    "github:servo:cargo-publish"
+  ],
+  "stars": 12,
+  "forks": 14,
+  "downloads": 2998072,
+  "num_side_effects": 312,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.11.0",
+      "notes": "All code written or reviewed by Mozilla staff."
+    }
+  ],
+  "dependencies": [
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "wio",
+      "0.2.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 290,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 19,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

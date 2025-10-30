@@ -1,0 +1,48 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "kdy1",
+    "swc-bot"
+  ],
+  "stars": 31910,
+  "forks": 1269,
+  "downloads": 8065587,
+  "num_side_effects": 1,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 2,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.13
+  }
+}

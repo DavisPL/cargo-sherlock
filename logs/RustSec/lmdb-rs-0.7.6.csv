@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Valerii Hiora,vhbit,https://github.com/vhbit
+************************************
+event,timestamp,downloads
+Downloads,-,399974
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:44:47.577106 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:44:49.816042 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to get `liblmdb-sys` as a dependency of package `lmdb-rs v0.7.6 (/tmp/rudra)`
+
+Caused by:
+  failed to load source for dependency `liblmdb-sys`
+
+Caused by:
+  Unable to update /tmp/rudra/liblmdb-sys
+
+Caused by:
+  failed to read `/tmp/rudra/liblmdb-sys/Cargo.toml`
+
+Caused by:
+  No such file or directory (os error 2)
+
+"
+************************************

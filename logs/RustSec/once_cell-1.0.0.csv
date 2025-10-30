@@ -1,0 +1,64 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,1.16.0 -> 1.17.0,,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,1.17.0,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,1.19.0,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",1.17.0 -> 1.18.0,,,
+audits,-,Critical,isrg,safe-to-deploy,1.14.0 -> 1.15.0,,,
+audits,-,Critical,isrg,safe-to-deploy,1.15.0 -> 1.16.0,,"Changes to unsafe code in src/lib.rs, src/impl_std.rs, and src/imp_pl.rs are\nfunctionally equivalent, and call unwrap_unchecked() on already-initialized\nOptions. The new implementation based on critical_section appears to be sound.\n",
+audits,-,Critical,isrg,safe-to-deploy,1.16.0 -> 1.17.0,,,
+audits,-,Critical,isrg,safe-to-deploy,1.17.1 -> 1.17.2,,,
+audits,-,Critical,isrg,safe-to-deploy,1.17.2 -> 1.18.0,,,
+audits,-,Critical,isrg,safe-to-deploy,1.18.0 -> 1.19.0,,,
+audits,-,Critical,mozilla,safe-to-deploy,1.12.0 -> 1.13.1,,,
+audits,-,Critical,mozilla,safe-to-deploy,1.13.1 -> 1.16.0,,,
+audits,-,Critical,mozilla,safe-to-deploy,1.16.0 -> 1.17.1,,,
+audits,-,Critical,zcash,safe-to-deploy,1.17.0 -> 1.17.1,,Small refactor that reduces the overall amount of `unsafe` code. The new strict provenance\napproach looks reasonable.\n,
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Kladov,matklad,https://github.com/matklad
+Author,-,Michal 'vorner' Vaner,vorner,https://github.com/vorner
+************************************
+event,timestamp,downloads
+Downloads,-,256525783
+************************************
+event,timestamp,total,flagged
+Side Effects,-,24,21
+************************************
+Rudra,timestamp
+"2024-06-21 17:33:08.028107 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:33:11.317330 |INFO | [rudra-progress] Running rudra for target lib:once_cell
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/imp_std.rs:153:36[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m153[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let old = my_state.compare_and_swap(state, RUNNING, Ordering::SeqCst);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/imp_std.rs:187:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m187[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    let old = my_state.compare_and_swap(state, me | RUNNING, Ordering::SeqCst);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+2024-06-21 17:33:15.483396 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:33:15.487228 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:33:15.491459 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:33:15.491470 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:33:15.520144 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:33:15.520166 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:764:5: 764:75
+unsafe impl<T, F: Send> Sync for Lazy<T, F> where OnceCell<T>: Sync {}
+2024-06-21 17:33:16.542292 |WARN | [cargo_rudra] Target example:reentrant_init_deadlocks is not supported
+2024-06-21 17:33:16.542356 |WARN | [cargo_rudra] Target example:bench is not supported
+2024-06-21 17:33:16.542362 |WARN | [cargo_rudra] Target example:lazy_static is not supported
+2024-06-21 17:33:16.542372 |WARN | [cargo_rudra] Target example:regex is not supported
+2024-06-21 17:33:16.542375 |WARN | [cargo_rudra] Target test:test is not supported
+2024-06-21 17:33:16.542469 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

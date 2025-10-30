@@ -1,0 +1,207 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Andrew Gallant,BurntSushi,https://github.com/BurntSushi
+************************************
+event,timestamp,downloads
+Downloads,-,426122
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:30:44.756828 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:30:48.087305 |INFO | [rudra-progress] Running rudra for target lib:chan
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/async.rs:193:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m193[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""AsyncInner {{""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/async.rs:194:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m194[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""    notify: {:?}"", self.notify));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/async.rs:195:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m195[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""    closed: {:?}"", queue.closed));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/async.rs:196:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m196[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""    queue: {:?}"", queue.queue));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/async.rs:197:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m197[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""}}""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/select.rs:25:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsubscribe: Box<Fn(u64) + 'c>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Fn(u64) + 'c`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/select.rs:26:14[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    try: Box<FnMut() -> bool + 'c>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn FnMut() -> bool + 'c`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/select.rs:30:12[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    No(Box<Fn() -> u64 + 'c>),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Fn() -> u64 + 'c`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/select.rs:253:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m253[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    chans: Vec<(u64, Box<Receiver<Item=T> + 'a>)>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Receiver<Item=T> + 'a`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/sync.rs:352:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m352[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""Buffered {{""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/sync.rs:353:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m353[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""    notify: {:?}"", self.notify));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/sync.rs:354:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m354[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""    cap: {:?}"", self.cap));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/sync.rs:355:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m355[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""    ring: {:?}"", *ring));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/sync.rs:356:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m356[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""}}""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/sync.rs:448:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m448[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""Unbuffered {{""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/sync.rs:449:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m449[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""    notify: {:?}"", self.notify));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/sync.rs:450:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m450[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""    val: {:?}"", *val));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/sync.rs:451:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m451[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(writeln!(f, ""}}""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::atomic::ATOMIC_USIZE_INIT`: the `new` function is now preferred[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/async.rs:4:25[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::sync::atomic::{ATOMIC_USIZE_INIT, AtomicUsize, Ordering};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::atomic::ATOMIC_USIZE_INIT`: the `new` function is now preferred[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/async.rs:10:39[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0mstatic NEXT_CHANNEL_ID: AtomicUsize = ATOMIC_USIZE_INIT;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: replace the use of the deprecated constant: `AtomicUsize::new(0)`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::atomic::ATOMIC_USIZE_INIT`: the `new` function is now preferred[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/select.rs:6:25[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m6[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::sync::atomic::{ATOMIC_USIZE_INIT, AtomicUsize, Ordering};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::atomic::ATOMIC_USIZE_INIT`: the `new` function is now preferred[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/select.rs:10:38[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0mstatic NEXT_SELECT_ID: AtomicUsize = ATOMIC_USIZE_INIT;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: replace the use of the deprecated constant: `AtomicUsize::new(0)`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::atomic::ATOMIC_USIZE_INIT`: the `new` function is now preferred[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/select.rs:11:38[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m11[0m[0m [0m[0m[1m[38;5;12m| [0m[0mstatic NEXT_CHOOSE_ID: AtomicUsize = ATOMIC_USIZE_INIT;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: replace the use of the deprecated constant: `AtomicUsize::new(0)`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::atomic::ATOMIC_USIZE_INIT`: the `new` function is now preferred[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/sync.rs:4:25[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::sync::atomic::{ATOMIC_USIZE_INIT, AtomicUsize, Ordering};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::atomic::ATOMIC_USIZE_INIT`: the `new` function is now preferred[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/sync.rs:18:39[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0mstatic NEXT_CHANNEL_ID: AtomicUsize = ATOMIC_USIZE_INIT;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: replace the use of the deprecated constant: `AtomicUsize::new(0)`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/select.rs:91:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m91[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut ids = ids.as_mut().unwrap();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_mut)]` on by default[0m
+
+2024-06-21 18:30:56.552689 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:30:56.556485 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:30:56.556825 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:30:56.556834 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:30:56.570772 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:30:56.570788 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:30:57.720796 |WARN | [cargo_rudra] Target example:web is not supported
+2024-06-21 18:30:57.720840 |WARN | [cargo_rudra] Target example:fibonacci is not supported
+2024-06-21 18:30:57.720845 |WARN | [cargo_rudra] Target example:leaky_buffer is not supported
+2024-06-21 18:30:57.720852 |WARN | [cargo_rudra] Target example:default is not supported
+2024-06-21 18:30:57.720858 |WARN | [cargo_rudra] Target bench:throughput is not supported
+2024-06-21 18:30:57.720937 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

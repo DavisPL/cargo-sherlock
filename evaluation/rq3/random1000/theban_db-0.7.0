@@ -1,0 +1,44 @@
+Solving for required assumptions to trust theban_db-0.7.0...
++------------------------------------------------------------+
+|            Analysis Report for theban_db-0.7.0             |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 56 cost
+Assumptions for Trusting:
+  • theban_db-0.7.0 has many downloads: 31 cost
+  • theban_db-0.7.0 having many downloads implies it is safe: 25 cost
+  • quick-error-2.0.1 has many downloads: 0 cost
+  • byteorder-1.5.0 has many downloads: 0 cost
+  • num-traits-0.2.19 has many downloads: 0 cost
+  • paste-1.0.15 has many downloads: 0 cost
+  • rand-0.9.0 has many downloads: 0 cost
+  • rand-0.9.0 has many stars and forks: 0 cost
+  • rand_core-0.9.3 has many downloads: 0 cost
+  • rand_core-0.9.3 has many stars and forks: 0 cost
+  • proc-macro2-1.0.94 has many downloads: 0 cost
+  • unicode-ident-1.0.18 has many downloads: 0 cost
+  • quote-1.0.40 has many downloads: 0 cost
+  • syn-2.0.100 has many downloads: 0 cost
+  • syn-2.0.100 has many stars and forks: 0 cost
+  • zerocopy-0.8.24 has many downloads: 0 cost
+  • zerocopy-0.8.24 has many stars and forks: 0 cost
+  • zerocopy-derive-0.8.24 has many downloads: 0 cost
+  • zerocopy-derive-0.8.24 has many stars and forks: 0 cost
+  • time-0.3.40 has many downloads: 0 cost
+  • deranged-0.4.0 has many downloads: 0 cost
+  • num-conv-0.1.0 has many downloads: 0 cost
+  • powerfmt-0.2.0 has many downloads: 0 cost
+  • time-core-0.1.4 has many downloads: 0 cost
+
+Distrust Cost (higher is better): 50 cost
+Assumptions for Distrusting:
+  • theban_db-0.7.0 failing a Miri test implies it is unsafe: 50 cost
+
+Severity Label: HIGH_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/theban_db-0.7.0.json
++------------------------------------------------------------+
+

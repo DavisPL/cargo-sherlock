@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Will Glozer,wg,https://github.com/wg
+************************************
+event,timestamp,downloads
+Downloads,-,454
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:15:28.202792 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:15:31.158987 |INFO | [rudra-progress] Running rudra for target lib:gitsig
+2024-06-23 15:15:34.833320 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:15:34.836545 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:15:34.839698 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:15:34.839713 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:15:34.839787 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:15:34.839793 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:15:35.297439 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

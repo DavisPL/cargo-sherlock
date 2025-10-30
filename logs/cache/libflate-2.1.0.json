@@ -1,0 +1,67 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "sile"
+  ],
+  "stars": 183,
+  "forks": 35,
+  "downloads": 19227462,
+  "num_side_effects": 66,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "adler32",
+      "1.2.0"
+    ],
+    [
+      "core2",
+      "0.4.0"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "crc32fast",
+      "1.4.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "dary_heap",
+      "0.3.7"
+    ],
+    [
+      "libflate_lz77",
+      "2.1.0"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "rle-decode-fast",
+      "1.0.3"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

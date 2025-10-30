@@ -1,0 +1,721 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Samuel Schetterer,schets,https://github.com/schets
+************************************
+event,timestamp,downloads
+Downloads,-,26213
+************************************
+event,timestamp,total,flagged
+Side Effects,-,29,28
+************************************
+Rudra,timestamp
+"2024-06-21 17:08:00.254899 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:08:04.341949 |INFO | [rudra-progress] Running rudra for target lib:multiqueue
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around assigned value[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/countedindex.rs:23:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub const MASK_IND: Index = (1 << 63);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^[0m[0m       [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_parens)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;9m- [0m[0m    pub const MASK_IND: Index = [0m[0m[38;5;9m([0m[0m1 << 63[0m[0m[38;5;9m)[0m[0m;[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;10m+ [0m[0m    pub const MASK_IND: Index = 1 << 63;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:34:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn inc_ref(&AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(anonymous_parameters)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:35:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn dec_ref(&AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:36:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn check_ref(&AtomicUsize) -> bool;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:38:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn get_val(&mut T) -> T;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &mut T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:39:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn forget_val(T);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:40:29[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m40[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn drop_in_place(&mut T);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &mut T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:160:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m160[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub waiter: Arc<Wait>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:222:49[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m222[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn new_internal(_capacity: Index, wait: Arc<Wait>) -> (InnerSend<RW, T>, InnerRecv<RW, T>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wait.rs:43:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn wait(&self, usize, &AtomicUsize, &AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: usize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wait.rs:43:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn wait(&self, usize, &AtomicUsize, &AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wait.rs:43:41[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn wait(&self, usize, &AtomicUsize, &AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `mpmc::futures::task::park`: renamed to `current`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:29:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse self::futures::task::{park, Task};[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:239:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m239[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d1: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:244:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m244[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d2: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:253:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m253[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d3: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:257:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m257[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d4: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `mpmc::futures::task::park`: renamed to `current`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:875:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m875[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        parked.push_back(park());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `mpmc::futures::task::park`: renamed to `current`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:901:34[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m901[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                parked.push_back(park());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:228:55[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m228[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let elem: &QueueEntry<T> = &*queuedat.offset(i);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                      [0m[0m[1m[33m^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(tyvar_behind_raw_pointer)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:231:46[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m231[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let refd: &RefCnt = &*refdat.offset(i);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[33m^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `mpmc::futures::task::Task::unpark`: renamed to `notify`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:913:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m913[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                val.unpark();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `mpmc::futures::task::Task::unpark`: renamed to `notify`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:931:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m931[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    val.unpark();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `mpmc::futures::task::Task::unpark`: renamed to `notify`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:938:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m938[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    val.unpark();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `wait`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:186:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m186[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    wait: Arc<FutWait>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+2024-06-21 17:08:13.867040 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:08:13.870954 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:08:13.875253 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:08:13.875268 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:08:13.911083 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:08:13.911105 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1062:1: 1062:94
+unsafe impl<RW: QueueRW<T>, R, F: FnMut(&T) -> R, T> Send for FutInnerUniRecv<RW, R, F, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1057:1: 1057:61
+unsafe impl<RW: QueueRW<T>, T> Send for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/multiqueue.rs:1056:1: 1056:61
+unsafe impl<RW: QueueRW<T>, T> Sync for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1060:1: 1060:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerSend<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1061:1: 1061:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1059:1: 1059:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1058:1: 1058:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerSend<RW, T> {}
+2024-06-21 17:08:15.218882 |INFO | [rudra-progress] Running rudra for target bin:throughput
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around assigned value[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/countedindex.rs:23:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub const MASK_IND: Index = (1 << 63);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^[0m[0m       [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_parens)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;9m- [0m[0m    pub const MASK_IND: Index = [0m[0m[38;5;9m([0m[0m1 << 63[0m[0m[38;5;9m)[0m[0m;[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;10m+ [0m[0m    pub const MASK_IND: Index = 1 << 63;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:34:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn inc_ref(&AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(anonymous_parameters)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:35:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn dec_ref(&AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:36:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn check_ref(&AtomicUsize) -> bool;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:38:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn get_val(&mut T) -> T;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &mut T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:39:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn forget_val(T);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:40:29[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m40[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn drop_in_place(&mut T);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &mut T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:160:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m160[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub waiter: Arc<Wait>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:222:49[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m222[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn new_internal(_capacity: Index, wait: Arc<Wait>) -> (InnerSend<RW, T>, InnerRecv<RW, T>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wait.rs:43:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn wait(&self, usize, &AtomicUsize, &AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: usize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wait.rs:43:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn wait(&self, usize, &AtomicUsize, &AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wait.rs:43:41[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn wait(&self, usize, &AtomicUsize, &AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `mpmc::futures::task::park`: renamed to `current`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:29:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse self::futures::task::{park, Task};[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:239:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m239[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d1: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:244:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m244[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d2: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:253:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m253[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d3: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:257:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m257[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d4: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `mpmc::futures::task::park`: renamed to `current`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:875:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m875[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        parked.push_back(park());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `mpmc::futures::task::park`: renamed to `current`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:901:34[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m901[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                parked.push_back(park());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:228:55[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m228[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let elem: &QueueEntry<T> = &*queuedat.offset(i);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                      [0m[0m[1m[33m^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(tyvar_behind_raw_pointer)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:231:46[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m231[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let refd: &RefCnt = &*refdat.offset(i);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[33m^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `mpmc::futures::task::Task::unpark`: renamed to `notify`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:913:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m913[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                val.unpark();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `mpmc::futures::task::Task::unpark`: renamed to `notify`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:931:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m931[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    val.unpark();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `mpmc::futures::task::Task::unpark`: renamed to `notify`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:938:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m938[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    val.unpark();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `wait`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:186:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m186[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    wait: Arc<FutWait>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+2024-06-21 17:08:19.546439 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:08:19.550290 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:08:19.554539 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:08:19.554562 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:08:19.590551 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:08:19.590581 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1062:1: 1062:94
+unsafe impl<RW: QueueRW<T>, R, F: FnMut(&T) -> R, T> Send for FutInnerUniRecv<RW, R, F, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1057:1: 1057:61
+unsafe impl<RW: QueueRW<T>, T> Send for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/multiqueue.rs:1056:1: 1056:61
+unsafe impl<RW: QueueRW<T>, T> Sync for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1060:1: 1060:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerSend<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1061:1: 1061:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1059:1: 1059:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1058:1: 1058:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerSend<RW, T> {}
+2024-06-21 17:08:21.008601 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:08:21.012095 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:08:21.012468 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:08:21.012508 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:08:21.014000 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:08:21.014020 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:08:21.112709 |INFO | [rudra-progress] Running rudra for target bin:example
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around assigned value[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/countedindex.rs:23:33[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub const MASK_IND: Index = (1 << 63);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^[0m[0m       [0m[0m[1m[33m^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_parens)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;9m- [0m[0m    pub const MASK_IND: Index = [0m[0m[38;5;9m([0m[0m1 << 63[0m[0m[38;5;9m)[0m[0m;[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[38;5;10m+ [0m[0m    pub const MASK_IND: Index = 1 << 63;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:34:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn inc_ref(&AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(anonymous_parameters)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:35:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn dec_ref(&AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:36:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn check_ref(&AtomicUsize) -> bool;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:38:23[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn get_val(&mut T) -> T;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &mut T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:39:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn forget_val(T);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:40:29[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m40[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn drop_in_place(&mut T);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &mut T`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:160:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m160[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub waiter: Arc<Wait>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:222:49[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m222[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn new_internal(_capacity: Index, wait: Arc<Wait>) -> (InnerSend<RW, T>, InnerRecv<RW, T>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Wait`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wait.rs:43:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn wait(&self, usize, &AtomicUsize, &AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: usize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wait.rs:43:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn wait(&self, usize, &AtomicUsize, &AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/wait.rs:43:41[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn wait(&self, usize, &AtomicUsize, &AtomicUsize);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: &AtomicUsize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `mpmc::futures::task::park`: renamed to `current`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:29:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse self::futures::task::{park, Task};[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:239:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m239[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d1: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:244:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m244[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d2: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:253:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m253[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d3: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:257:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m257[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            d4: unsafe { mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `mpmc::futures::task::park`: renamed to `current`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:875:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m875[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        parked.push_back(park());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `mpmc::futures::task::park`: renamed to `current`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:901:34[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m901[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                parked.push_back(park());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:228:55[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m228[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let elem: &QueueEntry<T> = &*queuedat.offset(i);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                      [0m[0m[1m[33m^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(tyvar_behind_raw_pointer)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:231:46[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m231[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let refd: &RefCnt = &*refdat.offset(i);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[33m^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `mpmc::futures::task::Task::unpark`: renamed to `notify`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:913:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m913[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                val.unpark();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `mpmc::futures::task::Task::unpark`: renamed to `notify`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:931:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m931[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    val.unpark();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `mpmc::futures::task::Task::unpark`: renamed to `notify`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:938:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m938[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    val.unpark();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `wait`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/multiqueue.rs:186:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m186[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    wait: Arc<FutWait>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1062:1: 1062:94
+unsafe impl<RW: QueueRW<T>, R, F: FnMut(&T) -> R, T> Send for FutInnerUniRecv<RW, R, F, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1057:1: 1057:61
+unsafe impl<RW: QueueRW<T>, T> Send for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/multiqueue.rs:1056:1: 1056:61
+unsafe impl<RW: QueueRW<T>, T> Sync for MultiQueue<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1060:1: 1060:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerSend<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1061:1: 1061:63
+unsafe impl<RW: QueueRW<T>, T> Send for FutInnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1059:1: 1059:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerRecv<RW, T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/multiqueue.rs:1058:1: 1058:60
+unsafe impl<RW: QueueRW<T>, T> Send for InnerSend<RW, T> {}
+2024-06-21 17:08:22.046965 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:08:22.050463 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:08:22.051584 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:08:22.051601 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:08:22.053023 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:08:22.053039 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:08:22.102310 |WARN | [cargo_rudra] Target test:mpmc_fut is not supported
+2024-06-21 17:08:22.102353 |WARN | [cargo_rudra] Target test:multicast_fut is not supported
+2024-06-21 17:08:22.102469 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

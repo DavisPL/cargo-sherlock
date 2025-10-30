@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Christoph Herzog,theduke,https://github.com/theduke
+************************************
+event,timestamp,downloads
+Downloads,-,974
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:54:45.019171 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:54:48.982137 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `syn = ""^2.0.46""`
+candidate versions found which didn't match: 2.0.56, 2.0.55, 2.0.54, ...
+location searched: crates.io index
+required by package `serde_derive v1.0.203`
+    ... which satisfies dependency `serde_derive = ""^1.0.27""` (locked to 1.0.203) of package `apns2 v0.1.0 (/tmp/rudra)`
+
+"
+************************************

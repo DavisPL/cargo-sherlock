@@ -1,0 +1,52 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "quodlibetor",
+    "github:chronotope:release-manager"
+  ],
+  "stars": 248,
+  "forks": 59,
+  "downloads": 43693550,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "chrono",
+      "0.4.40"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "phf",
+      "0.11.3"
+    ],
+    [
+      "phf_shared",
+      "0.11.3"
+    ],
+    [
+      "siphasher",
+      "1.0.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

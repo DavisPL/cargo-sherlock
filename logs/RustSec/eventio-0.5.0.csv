@@ -1,0 +1,250 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Min Kim,msk,https://github.com/msk
+Author,-,,minshao,https://github.com/minshao
+************************************
+event,timestamp,downloads
+Downloads,-,14748
+************************************
+event,timestamp,total,flagged
+Side Effects,-,9,8
+************************************
+Rudra,timestamp
+"2024-06-21 18:38:52.790207 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:38:56.234619 |INFO | [rudra-progress] Running rudra for target lib:eventio
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/bhcomp.rs:62:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let bytes = bits / Limb::BITS;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `usize`, found `u32`[0m
+
+[0m[1m[38;5;9merror[E0277][0m[0m[1m: cannot divide `usize` by `u32`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/bhcomp.rs:62:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let bytes = bits / Limb::BITS;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mno implementation for `usize / u32`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Div<u32>` is not implemented for `usize`[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/bigcomp.rs:157:55[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m157[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let nlz = den.leading_zeros().wrapping_sub(wlz) & (u32::BITS - 1);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                      [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `usize`, found `u32`[0m
+
+[0m[1m[38;5;9merror[E0277][0m[0m[1m: no implementation for `usize & u32`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/bigcomp.rs:157:53[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m157[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let nlz = den.leading_zeros().wrapping_sub(wlz) & (u32::BITS - 1);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                    [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mno implementation for `usize & u32`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `BitAnd<u32>` is not implemented for `usize`[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/bigcomp.rs:175:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m175[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (q, r) = shift.ceil_divmod(Limb::BITS);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `usize`, found `u32`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you can convert a `u32` to a `usize` and panic if the converted value doesn't fit[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m175[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (q, r) = shift.ceil_divmod(Limb::BITS[0m[0m[38;5;10m.try_into().unwrap()[0m[0m);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[38;5;10m++++++++++++++++++++[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:2065:27[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2065[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let rs = Limb::BITS - s;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mexpected `u32`, found `usize`[0m
+
+[0m[1m[38;5;9merror[E0277][0m[0m[1m: cannot subtract `usize` from `u32`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:2065:25[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2065[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let rs = Limb::BITS - s;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mno implementation for `u32 - usize`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Sub<usize>` is not implemented for `u32`[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1043:42[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1043[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut count = index.saturating_mul(Limb::BITS);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `usize`, found `u32`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you can convert a `u32` to a `usize` and panic if the converted value doesn't fit[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1043[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let mut count = index.saturating_mul(Limb::BITS[0m[0m[38;5;10m.try_into().unwrap()[0m[0m);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                   [0m[0m[38;5;10m++++++++++++++++++++[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1058:28[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1058[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Limb::BITS.checked_mul(x.len())[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `u32`, found `usize`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you can convert a `usize` to a `u32` and panic if the converted value doesn't fit[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1058[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Limb::BITS.checked_mul(x.len()[0m[0m[38;5;10m.try_into().unwrap()[0m[0m)[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[38;5;10m++++++++++++++++++++[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1059:22[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1059[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        .map(|v| v - nlz)[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mexpected `u32`, found `usize`[0m
+
+[0m[1m[38;5;9merror[E0277][0m[0m[1m: cannot subtract `usize` from `u32`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1059:14[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1059[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        .map(|v| v - nlz)[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;12m---[0m[0m [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno implementation for `u32 - usize`[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[38;5;12mrequired by a bound introduced by this call[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Sub<usize>` is not implemented for `u32`[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1060:20[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1060[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        .unwrap_or(usize::max_value())[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `u32`, found `usize`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you can convert a `usize` to a `u32` and panic if the converted value doesn't fit[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1060[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        .unwrap_or(usize::max_value()[0m[0m[38;5;10m.try_into().unwrap()[0m[0m)[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[38;5;10m++++++++++++++++++++[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1058:5[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1054[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0mpub fn bit_length(x: &[Limb]) -> usize {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-----[0m[0m [0m[0m[1m[38;5;12mexpected `usize` because of return type[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m1058[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m/[0m[0m [0m[0m    Limb::BITS.checked_mul(x.len())[0m
+[0m[1m[38;5;12m1059[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        .map(|v| v - nlz)[0m
+[0m[1m[38;5;12m1060[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        .unwrap_or(usize::max_value())[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m|______________________________________^[0m[0m [0m[0m[1m[38;5;9mexpected `usize`, found `u32`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you can convert a `u32` to a `usize` and panic if the converted value doesn't fit[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1060[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        .unwrap_or(usize::max_value())[0m[0m[38;5;10m.try_into().unwrap()[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[38;5;10m++++++++++++++++++++[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1085:23[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1085[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    debug_assert!(n < bits && n != 0);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `usize`, found `u32`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you can convert a `u32` to a `usize` and panic if the converted value doesn't fit[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1085[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    debug_assert!(n < bits[0m[0m[38;5;10m.try_into().unwrap()[0m[0m && n != 0);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[38;5;10m++++++++++++++++++++[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1092:25[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1092[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let lshift = bits - n;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mexpected `u32`, found `usize`[0m
+
+[0m[1m[38;5;9merror[E0277][0m[0m[1m: cannot subtract `usize` from `u32`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1092:23[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1092[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let lshift = bits - n;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mno implementation for `u32 - usize`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Sub<usize>` is not implemented for `u32`[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1134:19[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1134[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let rem = n % bits;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `usize`, found `u32`[0m
+
+[0m[1m[38;5;9merror[E0277][0m[0m[1m: cannot mod `usize` by `u32`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1134:17[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1134[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let rem = n % bits;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mno implementation for `usize % u32`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Rem<u32>` is not implemented for `usize`[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1135:19[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1135[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let div = n / bits;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `usize`, found `u32`[0m
+
+[0m[1m[38;5;9merror[E0277][0m[0m[1m: cannot divide `usize` by `u32`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1135:17[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1135[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let div = n / bits;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mno implementation for `usize / u32`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Div<u32>` is not implemented for `usize`[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1191:23[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1191[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    debug_assert!(n < bits);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `usize`, found `u32`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you can convert a `u32` to a `usize` and panic if the converted value doesn't fit[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1191[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    debug_assert!(n < bits[0m[0m[38;5;10m.try_into().unwrap()[0m[0m);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[38;5;10m++++++++++++++++++++[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1201:25[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1201[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let rshift = bits - n;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mexpected `u32`, found `usize`[0m
+
+[0m[1m[38;5;9merror[E0277][0m[0m[1m: cannot subtract `usize` from `u32`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1201:23[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1201[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let rshift = bits - n;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mno implementation for `u32 - usize`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Sub<usize>` is not implemented for `u32`[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1253:19[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1253[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let rem = n % bits;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `usize`, found `u32`[0m
+
+[0m[1m[38;5;9merror[E0277][0m[0m[1m: cannot mod `usize` by `u32`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1253:17[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1253[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let rem = n % bits;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mno implementation for `usize % u32`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Rem<u32>` is not implemented for `usize`[0m
+
+[0m[1m[38;5;9merror[E0308][0m[0m[1m: mismatched types[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1254:19[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1254[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let div = n / bits;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mexpected `usize`, found `u32`[0m
+
+[0m[1m[38;5;9merror[E0277][0m[0m[1m: cannot divide `usize` by `u32`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/lexical-core-0.7.4/src/atof/algorithm/math.rs:1254:17[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1254[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let div = n / bits;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mno implementation for `usize / u32`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Div<u32>` is not implemented for `usize`[0m
+
+[0m[1mSome errors have detailed explanations: E0277, E0308.[0m
+[0m[1mFor more information about an error, try `rustc --explain E0277`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `lexical-core` due to 27 previous errors
+[0m[0m[1m[31merror[0m[1m:[0m build failed
+2024-06-21 18:39:15.732618 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

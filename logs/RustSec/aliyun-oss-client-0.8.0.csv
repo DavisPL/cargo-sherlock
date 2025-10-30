@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,tu6ge,https://github.com/tu6ge
+************************************
+event,timestamp,downloads
+Downloads,-,22967
+************************************
+event,timestamp,total,flagged
+Side Effects,-,20,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:32:12.072579 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:32:14.486401 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `predicates = ""^2.0.1""`
+candidate versions found which didn't match: 2.1.1, 2.1.0, 2.0.3, ...
+location searched: crates.io index
+required by package `mockall v0.11.3`
+    ... which satisfies dependency `mockall = ""^0.11.2""` (locked to 0.11.3) of package `aliyun-oss-client v0.8.0 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,67 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "mbrubeck"
+  ],
+  "stars": 39,
+  "forks": 9,
+  "downloads": 2003830,
+  "num_side_effects": 20,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "nom",
+      "8.0.0"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "petgraph",
+      "0.7.1"
+    ],
+    [
+      "fixedbitset",
+      "0.5.7"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 15,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.26
+  }
+}

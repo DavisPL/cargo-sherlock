@@ -1,0 +1,240 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "abonander",
+    "mehcode"
+  ],
+  "stars": 14328,
+  "forks": 1346,
+  "downloads": 32355089,
+  "num_side_effects": 61,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "crossbeam-queue",
+      "0.3.12"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.21"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ],
+    [
+      "event-listener",
+      "5.4.0"
+    ],
+    [
+      "concurrent-queue",
+      "2.5.0"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "futures-intrusive",
+      "0.5.0"
+    ],
+    [
+      "lock_api",
+      "0.4.12"
+    ],
+    [
+      "scopeguard",
+      "1.2.0"
+    ],
+    [
+      "futures-io",
+      "0.3.31"
+    ],
+    [
+      "futures-util",
+      "0.3.31"
+    ],
+    [
+      "futures-task",
+      "0.3.31"
+    ],
+    [
+      "pin-utils",
+      "0.1.0"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "hashlink",
+      "0.10.0"
+    ],
+    [
+      "indexmap",
+      "2.8.0"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "percent-encoding",
+      "2.3.1"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "tracing",
+      "0.1.41"
+    ],
+    [
+      "tracing-core",
+      "0.1.33"
+    ],
+    [
+      "url",
+      "2.5.4"
+    ],
+    [
+      "form_urlencoded",
+      "1.2.1"
+    ],
+    [
+      "idna",
+      "1.0.3"
+    ],
+    [
+      "idna_adapter",
+      "1.2.0"
+    ],
+    [
+      "icu_normalizer",
+      "1.5.0"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "icu_collections",
+      "1.5.0"
+    ],
+    [
+      "yoke",
+      "0.8.0"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ],
+    [
+      "zerofrom",
+      "0.1.6"
+    ],
+    [
+      "zerovec",
+      "0.11.1"
+    ],
+    [
+      "icu_properties",
+      "1.5.1"
+    ],
+    [
+      "icu_provider",
+      "1.5.0"
+    ],
+    [
+      "icu_locid",
+      "1.5.0"
+    ],
+    [
+      "litemap",
+      "0.7.5"
+    ],
+    [
+      "tinystr",
+      "0.8.1"
+    ],
+    [
+      "writeable",
+      "0.6.1"
+    ],
+    [
+      "utf16_iter",
+      "1.0.5"
+    ],
+    [
+      "utf8_iter",
+      "1.0.4"
+    ],
+    [
+      "write16",
+      "1.0.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 21,
+    "failed": 5,
+    "ignored": 26,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 1.55
+  }
+}

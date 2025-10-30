@@ -1,0 +1,19 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,gluax,gluax,https://github.com/gluax
+************************************
+event,timestamp,downloads
+Downloads,-,464
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"cyk-0.0.0 is not a directory
+"
+************************************

@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Aumetra Weisman,aumetra,https://github.com/aumetra
+************************************
+event,timestamp,downloads
+Downloads,-,71414
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:37:45.705476 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:37:49.110553 |INFO | [rudra-progress] Running rudra for target lib:rsa-export
+2024-06-21 17:38:13.293377 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:38:13.297326 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:38:13.297687 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:38:13.297699 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:38:13.320093 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:38:13.320120 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:38:14.309309 |WARN | [cargo_rudra] Target example:pem is not supported
+2024-06-21 17:38:14.309417 |WARN | [cargo_rudra] Target example:pem_custom_line_ending is not supported
+2024-06-21 17:38:14.309657 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

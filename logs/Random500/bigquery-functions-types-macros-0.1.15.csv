@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,shota kizawa,kiibo382,https://github.com/kiibo382
+************************************
+event,timestamp,downloads
+Downloads,-,6725
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:48:40.764495 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:48:42.149102 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `syn = ""^2.0.46""`
+candidate versions found which didn't match: 2.0.56, 2.0.55, 2.0.54, ...
+location searched: crates.io index
+required by package `serde_derive v1.0.203`
+    ... which satisfies dependency `serde_derive = ""=1.0.203""` (locked to 1.0.203) of package `serde v1.0.203`
+    ... which satisfies dependency `serde = ""^1.0.194""` (locked to 1.0.203) of package `serde_json v1.0.117`
+    ... which satisfies dependency `serde_json = ""^1.0""` (locked to 1.0.117) of package `bigquery-functions-types-macros v0.1.15 (/tmp/rudra)`
+
+"
+************************************

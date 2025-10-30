@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Artyom Pavlov,newpavlov,https://github.com/newpavlov
+Author,-,block-ciphers,github:rustcrypto:block-ciphers,https://github.com/rustcrypto
+************************************
+event,timestamp,downloads
+Downloads,-,13680159
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:10:44.887657 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:10:47.862522 |INFO | [rudra-progress] Running rudra for target lib:aes-soft
+[0m[1m[38;5;9merror[0m[0m[1m: `aes-soft` is deprecated. Please switch to `aes`: https://github.com/RustCrypto/block-ciphers/tree/master/aes[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:1[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0mcompile_error!(""`aes-soft` is deprecated. Please switch to `aes`: https://github.com/RustCrypto/block-ciphers/tree/master/aes"");[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `aes-soft` due to previous error
+2024-06-21 18:10:51.410036 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

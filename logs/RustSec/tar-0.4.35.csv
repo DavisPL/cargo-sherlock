@@ -1,0 +1,36 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+trusted,-,Critical,bytecode-alliance,safe-to-deploy,,,,3
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.4.40,,
+audits,-,Critical,google,ub-risk-2,,0.4.0,Reviewed in CL 627536088,
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Crichton,alexcrichton,https://github.com/alexcrichton
+************************************
+event,timestamp,downloads
+Downloads,-,41500950
+************************************
+event,timestamp,total,flagged
+Side Effects,-,219,109
+************************************
+Rudra,timestamp
+"2024-06-21 17:02:42.202344 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:02:45.470426 |INFO | [rudra-progress] Running rudra for target lib:tar
+2024-06-21 17:02:54.032697 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:02:54.036866 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:02:54.037181 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:02:54.037192 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:02:54.089543 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:02:54.089571 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:02:55.547426 |WARN | [cargo_rudra] Target example:raw_list is not supported
+2024-06-21 17:02:55.547483 |WARN | [cargo_rudra] Target example:list is not supported
+2024-06-21 17:02:55.547493 |WARN | [cargo_rudra] Target example:write is not supported
+2024-06-21 17:02:55.547499 |WARN | [cargo_rudra] Target example:extract_file is not supported
+2024-06-21 17:02:55.547502 |WARN | [cargo_rudra] Target test:all is not supported
+2024-06-21 17:02:55.547505 |WARN | [cargo_rudra] Target test:entry is not supported
+2024-06-21 17:02:55.547580 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

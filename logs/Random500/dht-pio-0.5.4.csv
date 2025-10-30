@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jonathan BAUDIN,jnthbdn,https://github.com/jnthbdn
+************************************
+event,timestamp,downloads
+Downloads,-,3231
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:54:23.590399 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:54:25.751991 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `rp2040-hal = ""^0.9.0""`
+candidate versions found which didn't match: 0.8.0, 0.7.0, 0.6.1, ...
+location searched: crates.io index
+required by package `dht-pio v0.5.4 (/tmp/rudra)`
+
+"
+************************************

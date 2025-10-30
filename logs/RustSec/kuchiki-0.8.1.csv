@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Simon Sapin,SimonSapin,https://github.com/SimonSapin
+************************************
+event,timestamp,downloads
+Downloads,-,2168512
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:50:47.187679 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:50:50.675734 |INFO | [rudra-progress] Running rudra for target lib:kuchiki
+2024-06-21 17:51:33.764533 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:51:33.768573 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:51:33.768943 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:51:33.768956 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:51:33.812702 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:51:33.812725 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:51:35.162576 |WARN | [cargo_rudra] Target example:stack-overflow is not supported
+2024-06-21 17:51:35.162691 |WARN | [cargo_rudra] Target example:find_matches is not supported
+2024-06-21 17:51:35.162811 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

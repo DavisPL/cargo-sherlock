@@ -1,0 +1,120 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "gakonst",
+    "github:alloy-rs:core"
+  ],
+  "stars": 838,
+  "forks": 183,
+  "downloads": 2549853,
+  "num_side_effects": 15,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "alloy-primitives",
+      "0.8.24"
+    ],
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "const-hex",
+      "1.14.0"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "derive_more",
+      "2.0.1"
+    ],
+    [
+      "derive_more-impl",
+      "2.0.1"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "paste",
+      "1.0.15"
+    ],
+    [
+      "ruint",
+      "1.13.1"
+    ],
+    [
+      "ruint-macro",
+      "1.2.1"
+    ],
+    [
+      "tiny-keccak",
+      "2.0.2"
+    ],
+    [
+      "crunchy",
+      "0.2.3"
+    ],
+    [
+      "alloy-sol-type-parser",
+      "0.8.24"
+    ],
+    [
+      "winnow",
+      "0.7.4"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 11,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 2.89
+  }
+}

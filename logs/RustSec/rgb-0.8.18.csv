@@ -1,0 +1,31 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Kornel,kornelski,https://github.com/kornelski
+Author,-,Dylan DPC,Dylan-DPC,https://github.com/Dylan-DPC
+Author,-,maintainers,github:rust-bus:maintainers,https://github.com/rust-bus
+************************************
+event,timestamp,downloads
+Downloads,-,14651352
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:38:23.238940 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:38:33.559365 |INFO | [rudra-progress] Running rudra for target lib:rgb
+2024-06-21 16:38:45.372611 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:38:45.380983 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:38:45.381860 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:38:45.381898 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:38:45.509805 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:38:45.509900 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:38:48.526669 |WARN | [cargo_rudra] Target example:serde is not supported
+2024-06-21 16:38:48.526884 |WARN | [cargo_rudra] Target example:example is not supported
+2024-06-21 16:38:48.527200 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

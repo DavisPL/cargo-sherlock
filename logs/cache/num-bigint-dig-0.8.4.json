@@ -1,0 +1,67 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "dignifiedquire"
+  ],
+  "stars": 12,
+  "forks": 25,
+  "downloads": 47964575,
+  "num_side_effects": 5,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "",
+      "version": "0.8.4",
+      "notes": "Reviewed in CL 598457101\\nIssues found:\\n - to_str_radix_reversed is required to return a valid string by unsafe code, but this is not documented, nor is it easy to verify. It should probably return a String (at least internally), and have better safety documentation, or a double check when converting from UTF8\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "libm",
+      "0.2.11"
+    ],
+    [
+      "num-integer",
+      "0.1.46"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "num-iter",
+      "0.1.45"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 2,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

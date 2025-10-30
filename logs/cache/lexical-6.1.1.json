@@ -1,0 +1,52 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "myrrlyn",
+    "Alexhuszagh"
+  ],
+  "stars": 318,
+  "forks": 40,
+  "downloads": 15972658,
+  "num_side_effects": 9,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-4\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "6.1.1",
+      "notes": "Reviewed in CL 545304248\\nMany issues found across the `lexical` family of crates:\\n - https://github.com/Alexhuszagh/rust-lexical/pull/103\\n - https://github.com/Alexhuszagh/rust-lexical/issues/104\\n - https://github.com/Alexhuszagh/rust-lexical/issues/101\\n - https://github.com/Alexhuszagh/rust-lexical/issues/95\\n - Beyond the above issues, review was not completed on the unchecked indexing\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "lexical-core",
+      "1.0.5"
+    ],
+    [
+      "lexical-util",
+      "1.0.6"
+    ],
+    [
+      "static_assertions",
+      "1.1.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 9,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

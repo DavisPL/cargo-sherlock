@@ -1,0 +1,5 @@
+Solving for required assumptions to trust dot-cli-0.5.0...
+Trust Score for dot-cli-0.5.0: 232
+Assumptions Made:
+dot-cli-0.5.0 has many downloads: 222 wt
+dot-cli-0.5.0 having many downloads implies it is safe: 10 wt

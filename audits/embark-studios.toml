@@ -1,0 +1,1306 @@
+[wildcard-audits]
+[[wildcard-audits.ark-api]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark"
+
+[[wildcard-audits.ark-api-ffi]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark"
+
+[[wildcard-audits.ark-api-macros]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark"
+
+[[wildcard-audits.ark-module]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark"
+
+[[wildcard-audits.cervo]]
+who = "Tom Solberg <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark"
+
+[[wildcard-audits.cervo-asset]]
+who = "Tom Solberg <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark"
+
+[[wildcard-audits.cervo-core]]
+who = "Tom Solberg <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark"
+
+[[wildcard-audits.cervo-nnef]]
+who = "Tom Solberg <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark"
+
+[[wildcard-audits.cervo-onnx]]
+who = "Tom Solberg <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark"
+
+[[wildcard-audits.cervo-runtime]]
+who = "Tom Solberg <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark"
+
+[[wildcard-audits.egui-ark]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark"
+
+[[wildcard-audits.kollect]]
+who = "Gray Olson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark.\nSmall crate with no dependencies and no ambient capabilities.\n"
+
+[[wildcard-audits.macaw]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark"
+
+[[wildcard-audits.perchance]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark"
+
+[[wildcard-audits.physx]]
+who = "Tom Solberg <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark"
+
+[[wildcard-audits.physx-sys]]
+who = "Tom Solberg <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark. Note that this is a unsafe FFI layer on top of a complex C++ library so may be some unknown unsoundness, but we have been using it in games production for a couple of years"
+
+[[wildcard-audits.presser]]
+who = "Gray Olson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Small crate with no dependencies and no ambient capabilities. The safe interface of the crate\nis gated behind unsafe implementation of a core trait, and care must be taken to ensure that\nthe relevant invariants are guaranteed when doing so. Maintained by the Ark team at Embark\nand used in production.\n"
+
+[[wildcard-audits.puffin]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark & emilk"
+
+[[wildcard-audits.puffin-imgui]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark & emilk"
+
+[[wildcard-audits.puffin_egui]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark & emilk"
+
+[[wildcard-audits.puffin_http]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark & emilk"
+
+[[wildcard-audits.rymder]]
+who = "Jake Shadle <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark"
+
+[[wildcard-audits.sadness-generator]]
+who = "Jake Shadle <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark.\nNote that this crate is explicitly for the purpose of testing aborting & crashing your application in different ways, \nwhich we use to verify that our crash reporting systems work properly\n"
+
+[[wildcard-audits.saft]]
+who = "Niklas Nummelin <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark"
+
+[[wildcard-audits.saft-sdf]]
+who = "Niklas Nummelin <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark"
+
+[[wildcard-audits.ash-molten]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the Ark team at Embark.\n\nTiny crate that with sane unsafe usage and no ambient runtime capabilities in the Rust code.\n\nNote it has a complex build setup where it downloads over HTTP a specific a pinned pre-built static binary for the C++ MoltenVK library.\n\nThis audit does NOT cover the very large C++ MoltenVK codebase.\n"
+
+[[wildcard-audits.spirv-std]]
+who = "eddyb <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the rust-gpu team at Embark"
+
+[[wildcard-audits.spirv-std-macros]]
+who = "eddyb <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the rust-gpu team at Embark"
+
+[[wildcard-audits.spirv-std-types]]
+who = "eddyb <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by the rust-gpu team at Embark"
+
+[[wildcard-audits.superluminal-perf]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "I created and maintain this crate with Embark. It has been stable for 3 years, is for Windows only, and is a thin safe layer over FFI"
+
+[[wildcard-audits.superluminal-perf-sys]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2020-01-01"
+end = "2024-05-23"
+notes = "I created and maintain this crate with Embark. It has been stable for 3 years, It is for Windows only and is an FFI layer over a pre-built static library provided by Superluminal.io"
+
+[[wildcard-audits.tame-webpurify]]
+who = "Mathias Tervo <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark. sans-io network types for service, no unsafe or ambient capabilities"
+
+[[wildcard-audits.tiny-bench]]
+who = "Marcus Grass <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark"
+
+[[wildcard-audits.tracing-logfmt]]
+who = "Fredrik Enestad <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark. No unsafe or ambient capabilities"
+
+[[wildcard-audits.tryhard]]
+who = "David Pedersen <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark. No unsafe usage or ambient capabilities"
+
+[[wildcard-audits.mirror-mirror]]
+who = "David Pedersen <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 12432
+start = "2023-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark. No unsafe usage or ambient capabilities"
+
+[[wildcard-audits.mirror-mirror-macros]]
+who = "David Pedersen <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 12432
+start = "2023-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark. No unsafe usage or ambient capabilities"
+
+[[wildcard-audits.cfg-expr]]
+who = "Jake Shadle <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2020-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark. No unsafe usage or ambient capabilities"
+
+[[wildcard-audits.krates]]
+who = "Jake Shadle <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2020-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark.\n\nNo unsafe usage but does allow calling of cargo via the cargo_metadata crate\n"
+
+[[wildcard-audits.tame-gcs]]
+who = "Jake Shadle <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2020-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark. No unsafe usage or ambient capabilities"
+
+[[wildcard-audits.spdx]]
+who = "Jake Shadle <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2020-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark. No unsafe usage or ambient capabilities"
+
+[[wildcard-audits.discord-sdk]]
+who = "Jake Shadle <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2021-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark.\n\nNo unsafe usage, but can get the path to the process it is running in\n"
+
+[[wildcard-audits.crash-context]]
+who = "Jake Shadle <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2023-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark.\n\nThis crate contains a large amount of unsafe code as it is provides assembly\ncode for capturing CPU contexts, as well as a large chunk of unsafe code on\nMacOS for interacting with mach ports, but is fairly thoroughly tested.\n"
+
+[[wildcard-audits.crash-handler]]
+who = "Jake Shadle <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2023-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark.\n\nThis crate contains a large amount of unsafe code as it is interacting with OS\nsignal/exception handling functionality, but is fairly thoroughly tested. Note\non Linux targets, this also performs an interposition of pthread_create.\n"
+
+[[wildcard-audits.minidumper]]
+who = "Jake Shadle <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+user-id = 52553
+start = "2023-01-01"
+end = "2024-05-23"
+notes = "Maintained by Embark.\n\nThis crate contains a large amount of unsafe code for implementing IPC between 2\nlocal processes, as well as calling into the minidump-writer crate which also\ncontains a significant amount of unsafe to dump a processes state, but is fairly\nthoroughly tested.\n"
+
+[audits]
+[[audits.tinyvec_macros]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.0"
+notes = "Inspected it and is a tiny crate with single safe macro"
+
+[[audits.anyhow]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.58"
+
+[[audits.anyhow]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "1.0.58 -> 1.0.66"
+notes = "New unsafe usage, looks sane. Expert maintainer"
+
+[[audits.cty]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.2.2"
+notes = "Inspected it and is a tiny crate with just type definitions"
+
+[[audits.natord]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.9"
+notes = "Inspected and it is a tiny crate with no unsafe or system interactions, just string comparisons"
+
+[[audits.pollster]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.2.5"
+notes = "Inspected it and it is a minimal crate for blocking on futures and does nothing else"
+
+[[audits.serial_test]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+version = "0.6.0"
+
+[[audits.serial_test]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.6.0 -> 0.8.0"
+notes = "No unsafe and ambient capability with lock file creation is not exposed"
+
+[[audits.serial_test_derive]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+version = "0.6.0"
+
+[[audits.serial_test_derive]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.6.0 -> 0.8.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.uname]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.1"
+notes = "Inspected it and is tiny crate wrapping libc function with some unsafe usage for string handling"
+
+[[audits.webpki-roots]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.22.4"
+notes = "Inspected it to confirm that it only contains data definitions and no runtime code"
+
+[[audits.rustdoc-json]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+version = "0.6.0"
+notes = "Fairly trivial crate that invokes rustdoc through Cargo, didn't spot any other visible ambient capabilities or unsafe usage"
+
+[[audits.rustdoc-json]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.6.0 -> 0.7.4"
+
+[[audits.rustdoc-json]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.7.4 -> 0.8.4"
+
+[[audits.rustdoc-json]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.8.4 -> 0.8.6"
+
+[[audits.rustdoc-json]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.8.6 -> 0.8.7"
+
+[[audits.rustdoc-types]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+version = "0.18.0"
+notes = "Contains just data definitions, no unsafe"
+
+[[audits.rustdoc-types]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.18.0 -> 0.20.0"
+notes = "Contains just data definitions, no unsafe"
+
+[[audits.rustdoc-types]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.20.0 -> 0.22.0"
+notes = "Contains just data definitions, no unsafe"
+
+[[audits.rustdoc-types]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.22.0 -> 0.23.0"
+notes = "Contains just data definitions, no unsafe"
+
+[[audits.public-api]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+version = "0.22.0"
+notes = "No unsafe code, does interact with Cargo and launches processes with rustdoc which at a casual inspection looks sane"
+
+[[audits.public-api]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.22.0 -> 0.23.0"
+
+[[audits.public-api]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.23.0 -> 0.26.0"
+
+[[audits.public-api]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.26.0 -> 0.29.1"
+
+[[audits.public-api]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.29.1 -> 0.30.0"
+
+[[audits.public-api]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.30.0 -> 0.31.1"
+
+[[audits.public-api]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+delta = "0.31.1 -> 0.31.2"
+
+[[audits.strum]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.24.1"
+notes = "Tiny layer on top of the proc macro crate, found no unsafe or system usage"
+
+[[audits.strum_macros]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.24.3"
+notes = "Proc macro. No unsafe or added ambient capabilities"
+
+[[audits.mimalloc]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.31"
+notes = "Inspected it and it is a tiny crate implementing allocator wrapping a the allocator C++ sys crate but with simple unsafe code that looks sound"
+
+[[audits.mimalloc]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.37"
+notes = "Tiny allocator layer on top of the C sys crate. No ambient capabilities"
+
+[[audits.nohash-hasher]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.2.0"
+notes = "Tiny crate with no dependencies, no unsafe, and no ambient capabilities"
+
+[[audits.dolly]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.3.1"
+notes = "No unsafe and no dependencies except math (glam), used it in production since 2021.\n\nWritten by Tomasz Stachowiak as side-project while employed with us at Embark Studios.\n"
+
+[[audits.dolly]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.3.1 -> 0.4.0"
+notes = "No unsafe or added ambient capabilities"
+
+[[audits.similar-asserts]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.2.0"
+notes = "Small crate with no unsafe or ambient capabilities"
+
+[[audits.cap-std]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.26.0 -> 0.26.1"
+notes = "No changes, only version bump"
+
+[[audits.ndk-context]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.1"
+notes = "Tiny crate that initializes Android with FFI, looks sane. No other ambient capabilities"
+
+[[audits.egui]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.18.0"
+notes = "No unsafe usage or ambient capabilities itself, used in production since 2020.\n\nWritten by Emil Ernerfeldt who used to work with us at Embark Studios.\n"
+
+[[audits.egui]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.18.0 -> 0.19.0"
+notes = "No unsafe usage and no ambient capabilities"
+
+[[audits.epaint]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+violation = "<0.20.0"
+notes = "Specified crate license does not include licenses of embedded fonts if using default features or the `default_fonts` feature. Tracked in: https://github.com/emilk/egui/issues/2321"
+
+[[audits.emath]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.18.0"
+notes = "Math crate with no unsafe usage or ambient capabilities, used in production since 2020.\n\nWritten by Emil Ernerfeldt who used to work with us at Embark Studios.\n"
+
+[[audits.emath]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.18.0 -> 0.19.0"
+notes = "No unsafe usage and no ambient capabilities"
+
+[[audits.egui-winit]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.18.0"
+notes = "No unsafe usage, does layer with windowing system (which is the point of the crate). Used in production since 2020.\nDoes optionally interact with clipboard, webbrowser, and screen-reader; but through separate crates.\n\nWritten by Emil Ernerfeldt who used to work with us at Embark Studios.\n"
+
+[[audits.egui-winit]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.18.0 -> 0.19.0"
+notes = "Minor sane unsafe usage and no new ambient capabilities"
+
+[[audits.raw-window-handle]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.4.3 -> 0.5.0"
+notes = "No new unsafe usage or ambient capabilities"
+
+[[audits.thiserror]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.40"
+notes = "Wrapper over implementation crate, found no unsafe or ambient capabilities used"
+
+[[audits.thiserror-impl]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.40"
+notes = "Found no unsafe or ambient capabilities used"
+
+[[audits.headers]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.3.8"
+notes = "HTTP type definitions. Single sound unsafe usage, no ambient capabilities used"
+
+[[audits.convert_case]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.4.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.sentry-types]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.30.0"
+notes = "Type definitions. No unsafe usage, can read files but only based on user-provided paths, no other ambient capabilities"
+
+[[audits.tap]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.1"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.unic-ucd-version]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.9.0"
+notes = "Only few constants. No unsafe usage or other ambient capabilities"
+
+[[audits.cargo_metadata]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.15.3 -> 0.15.4"
+notes = "No notable changes"
+
+[[audits.cargo_metadata]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.15.4 -> 0.17.0"
+notes = "No notable changes"
+
+[[audits.toml_datetime]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.6.1 -> 0.6.2"
+notes = "No notable changes"
+
+[[audits.ident_case]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.1"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.png]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.17.8"
+notes = "Forbids unsafe, no ambient capabilities"
+
+[[audits.png]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.17.9"
+notes = "No unsafe usage (forbidden) or ambient capabilities"
+
+[[audits.png]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.17.9"
+notes = "No unsafe usage (forbidden) or ambient capabilities"
+
+[[audits.vec1]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.10.1"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.rspirv-reflect]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.8.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.rspirv]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.11.0+1.5.4"
+notes = "Single sound unsafe usage, no ambient capabilities"
+
+[[audits.embed-resource]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+version = "2.1.1"
+notes = "No unsafe usage, does use file system at time and runs resource compiler to embed it into executable which looks sound. Intended to be used only at build time"
+
+[[audits.num_enum]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.5.11"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.num_enum]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.5.11 -> 0.6.1"
+notes = "Minor changes"
+
+[[audits.num_enum]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.6.1 -> 0.7.0"
+
+[[audits.num_enum_derive]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.5.11"
+notes = "Proc macro that generates some unsafe code for conversion but looks sound, no ambient capabilities"
+
+[[audits.num_enum_derive]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.5.11 -> 0.6.1"
+notes = "Minor changes"
+
+[[audits.num_enum_derive]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.6.1 -> 0.7.0"
+
+[[audits.cfg_aliases]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.1"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.derive_more]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.99.17"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.which]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+version = "4.4.0"
+notes = "Small build-time crate to find path of binary. Single unsafe usage, file system access, both look sound"
+
+[[audits.wasmbin-derive]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.2.2"
+notes = "Proc macro. No unsafe usage or ambient capabilities"
+
+[[audits.version-compare]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.1"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.valuable]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.0"
+notes = "No unsafe usage or ambient capabilities, sane build script"
+
+[[audits.vec_map]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.8.2"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.no-std-compat]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.2.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.no-std-compat]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.2.0 -> 0.4.1"
+
+[[audits.array-init]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "2.1.0"
+notes = "Some unsafe usage but with safety comments and tests, and appear sound but didn't do detailed evaluation. No ambient capabilities"
+
+[[audits.assert-json-diff]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-run"
+version = "2.0.2"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.async-recursion]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.2"
+notes = "Proc macro. No unsafe usage or ambient capabilities"
+
+[[audits.quickcheck_macros]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.0"
+notes = "Proc macro. No unsafe usage or ambient capabilities"
+
+[[audits.async-channel]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.8.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.autometrics]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.4.1"
+notes = "Minor unsafe usage with safety comments, looks sound. No ambient capabilities"
+
+[[audits.autometrics]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.4.1 -> 0.5.0"
+
+[[audits.autometrics-macros]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.4.1"
+notes = "No unsafe usage. Minor ambient capabilities with reading an environment variable"
+
+[[audits.autometrics-macros]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.4.1 -> 0.5.0"
+
+[[audits.jsonwebtoken]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "8.3.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.lewton]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.10.2"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.line-wrap]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.1"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.yaml-rust]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.4.5"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.toml]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.7.4"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.ittapi]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.3.3"
+notes = "Lots of unsafe code for calling into C FFI functions, looks pretty simple and sound though. No ambient capabilities"
+
+[[audits.ittapi-sys]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.3.3"
+notes = "Builds C/asm dependency which this review has not audited in detail, but is well established from Intel.\nExposes FFI types & functions generated through bindgen. No other logic.\nNo ambient capabilities\n"
+
+[[audits.lyon_geom]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.4"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.lyon_path]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.3"
+notes = "Some unsafe usage in optimized iterators, looks sound. No ambient capabilities"
+
+[[audits.lyon_tessellation]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.10"
+notes = "Single unsafe usage that looks sound. No ambient capabilities"
+
+[[audits.unicode_ident]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.9"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.similar]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "2.2.1"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.ttf-parser]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.19.0"
+notes = "No unsafe usage (forbidden) or ambient capabilities"
+
+[[audits.ab_glyph]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.2.21"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.ogg]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.9.0"
+notes = "No unsafe usage (forbidden) or ambient capabilities"
+
+[[audits.data-url]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.3.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.rustc-workspace-hack]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.0"
+notes = "No unsafe usage or ambient capabilities. No functionality in it beyond a #[test]. "
+
+[[audits.android-activity]]
+who = "Robert Bragg <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.4.1"
+notes = "Some unsafe usage for JNI/FFI, such as implementing extern \"C\" functions for\nNativeActivity and to use the `ndk_sys` FFI bindings for the Android NDK libraries.\n\nThe GameActivity backend depends on around 2k lines of third-party C/C++ code from Google\nas well as around 500 lines of C++ code for the GameText (input method) support.\nThe C/C++ code is compiled with the `cc` crate.\n\nAlthough I have reviewed all of the C/C++ code for GameActivity + GameText there\ncould be unknown soundness issues in there or potentially in any of the Android\nNDK APIs used, which are generally also implemented in C/C++.\n\nWritten by Robert Bragg who now works at Embark Studios.\n"
+
+[[audits.case]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.0"
+notes = "No unsafe usage or ambient capabilities. Stable for 4+ years"
+
+[[audits.gltf-json]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.2.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.gltf-derive]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.2.0"
+notes = "Tiny proc marcro. No unsafe usage or ambient capabilities"
+
+[[audits.jni]]
+who = "Robert Bragg <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.21.1"
+notes = "Aims to provide a safe JNI (Java Native Interface) API over the\nunsafe `jni_sys` crate.\n\nThis is a very general FFI abstraction for Java VMs with a lot of unsafe code\nthroughout the API. There are almost certainly some edge cases with its design\nthat could lead to unsound behaviour but it should still be considerably safer\nthan working with JNI directly.\n\nA lot of the unsafe usage relates to quite-simple use of `from_raw` APIs to\nconstruct or cast wrapper types (around JNI pointers) which are fairly\nstraight-forward to verify/trust in context.\n\nSome unsafe code has good `// # Safety` documentation (this has been enforced for\nnewer code) but a lot of unsafe code doesn't document invariants that are\nbeing relied on.\n\nThe design depends on non-trivial named lifetimes across many APIs to associate\nJava local references with JNI stack frames.\n\nThe crate is not very actively maintained and was practically unmaintained for\nover a year before the 0.20 release.\n\nRobert Bragg who now works at Embark Studios became the maintainer of this\ncrate in October 2022.\n\nIn the process of working on the `jni` crate since becoming maintainer it's\nworth noting that I came across multiple APIs that I found needed to be\nre-worked to address safety issues, including ensuring that APIs that are not\nimplemented safely are correctly declared as `unsafe`.\n\nThere has been a focus on improving safety in the last two release.\n\nThe jni crate has been used in production with the Signal messaging application\nfor over two years:\nhttps://github.com/signalapp/libsignal/blob/main/rust/bridge/jni/Cargo.toml\n\n# Some Notable Open Issues\n- https://github.com/jni-rs/jni-rs/issues/422 - questions soundness of linking\n  multiple versions of jni crate into an application, considering the use\n  of (separately scoped) thread-local-storage to track thread attachments\n- https://github.com/jni-rs/jni-rs/issues/405 - discusses the ease with which\n  code may expose the JVM to invalid booleans with undefined behaviour\n"
+
+[[audits.colorchoice]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "1.0.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.utf8parse]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.2.1"
+notes = "Single unsafe usage that looks sound, no ambient capabilities"
+
+[[audits.spez]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.2"
+notes = "Proc macro. No unsafe usage or ambient capabilities"
+
+[[audits.schemars]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.8.12"
+notes = "No unsafe usage (forbidden) or ambient capabilities"
+
+[[audits.schemars_derive]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.8.12"
+notes = "Proc macro. No unsafe usage (forbidden) or ambient capabilities"
+
+[[audits.typed-builder]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.12.0"
+notes = "Proc macro. No unsafe usage or ambient capabilities"
+
+[[audits.typed-builder]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.12.0 -> 0.14.0"
+
+[[audits.derive-new]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.5.9"
+notes = "Proc macro. No unsafe usage or ambient capabilities"
+
+[[audits.google-cloud-googleapis]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.9.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.idna]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+delta = "0.3.0 -> 0.4.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.postgres-types]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.2.5"
+notes = "No unsafe usage or ambient capabilities. Only type definitions & conversions"
+
+[[audits.std_prelude]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.2.12"
+notes = "No unsafe usage or ambient capabilities. Only re-exports std types. However I would not recommend using this crate as it is an unnecessary dependency and indirection, and makes it harder to audit other code over standard explicit std imports"
+
+[[audits.custom_debug]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.5.1"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.custom_debug_derive]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.5.1"
+notes = "Proc macro. No unsafe usage or ambient capabilities"
+
+[[audits.multibase]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.9.1"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.scan_fmt]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.2.6"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.fixedvec]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.2.4"
+notes = "No unsafe usage or ambient capabilities. Clean, simple, no dependencies, no std"
+
+[[audits.fdeflate]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.3.0"
+notes = "No unsafe usage or ambient capabilities"
+
+[[audits.stringprep]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.2"
+notes = "No unsafe usage or ambient capabilities. Old crate from released and unchanged from 2017"
+
+[[audits.hashbag]]
+who = "Johan Andersson <opensource@embark-studios.com>"
+criteria = "safe-to-deploy"
+version = "0.1.11"
+notes = "No unsafe usage or ambient capabilities"
+
+[trusted]
+[[trusted.cranelift-bforest]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.cranelift-codegen]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.cranelift-codegen-meta]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.cranelift-codegen-shared]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.cranelift-control]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.cranelift-entity]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.cranelift-frontend]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.cranelift-isle]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.cranelift-native]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.cranelift-wasm]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasi-cap-std-sync]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasi-common]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasmtime]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasmtime-asm-macros]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasmtime-cranelift]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasmtime-cranelift-shared]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasmtime-environ]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasmtime-jit]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasmtime-jit-debug]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasmtime-jit-icache-coherence]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasmtime-runtime]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasmtime-types]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wasmtime-wasi]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wiggle]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wiggle-generate]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+
+[[trusted.wiggle-macro]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2023-01-01"
+end = "2024-05-26"
+notes = "Maintained by Bytecode Alliance that we (Embark) are part of and we trust their review & release process on https://github.com/bytecodealliance/wasmtime"
+

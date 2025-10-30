@@ -1,0 +1,112 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,neptunepink,purpleposeidon,https://github.com/purpleposeidon
+************************************
+event,timestamp,downloads
+Downloads,-,5755
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:22:43.016131 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:22:46.118361 |INFO | [rudra-progress] Running rudra for target lib:v9
+[0m[1m[33mwarning[0m[0m[1m: unused attribute `doc`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table.rs:509:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m509[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m                    #[doc(hidden)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m625[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    decl_table! {[0m
+[0m[1m[38;5;12m626[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        /// Our many fine cheeses![0m
+[0m[1m[38;5;12m627[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub struct cheeses {[0m
+[0m[1m[38;5;12m628[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            pub quantity: f64,[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m631[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        }[0m
+[0m[1m[38;5;12m632[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_____-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_attributes)]` on by default[0m
+[0m[1m[38;5;10mnote[0m[0m: the built-in attribute `doc` will be ignored, since it's applied to the macro invocation `crate::decl_context`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table.rs:510:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m510[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m                    $crate::decl_context! {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;10m^^^^^^^^^^^^^^^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m625[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    decl_table! {[0m
+[0m[1m[38;5;12m626[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        /// Our many fine cheeses![0m
+[0m[1m[38;5;12m627[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub struct cheeses {[0m
+[0m[1m[38;5;12m628[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            pub quantity: f64,[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m631[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        }[0m
+[0m[1m[38;5;12m632[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_____-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `$crate::decl_table` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+2024-06-21 17:23:06.420023 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:23:06.423901 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:23:06.446576 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:23:06.446602 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:23:06.478921 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:23:06.478940 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/event.rs:221:1: 221:65
+unsafe impl<M: TableMarker, T: 'static> Send for Edited<M, T> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/event.rs:222:1: 222:65
+unsafe impl<M: TableMarker, T: 'static> Sync for Edited<M, T> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/util.rs:27:1: 27:38
+unsafe impl<T> Sync for SyncRef<T> {}
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `<column::EditColumn<'a, M, T> as std::ops::IndexMut<I>>::index_mut`
+-> src/column.rs:129:5: 153:6
+fn index_mut(&mut self, i: I) -> &mut T {
+        unsafe {
+            let i = [0m[36mi.check_from_len(PhantomData, self.col.data.len())[0m;
+            let i = i.uncheck();
+            if !self.must_log {
+                return [0m[33mself.col.data.get_unchecked_mut(i.to_usize())[0m;
+            }
+            let prev = self.log.last().map(|(i, _)| i);
+            let prev = prev.map(|prev| i.cmp(prev));
+            let prev = prev.unwrap_or(Ordering::Greater);
+            match prev {
+                Ordering::Less => disordered_column_access(),
+                Ordering::Equal => (),
+                Ordering::Greater => {
+                    let val = [0m[33m[0m[36mself.col.data.get_unchecked(i.to_usize())[0m[36m.clone()[0m;
+                    self.log.push((i, val))
+                }
+            }
+            if let Some((_i, v)) = self.log.last_mut() {
+                v
+            } else {
+                unreachable_unchecked()
+            }
+        }
+    }
+[0m
+2024-06-21 17:23:08.369715 |WARN | [cargo_rudra] Target example:stinky_cheeses is not supported
+2024-06-21 17:23:08.369818 |WARN | [cargo_rudra] Target example:nice_panic is not supported
+2024-06-21 17:23:08.369838 |WARN | [cargo_rudra] Target test:recursive is not supported
+2024-06-21 17:23:08.369844 |WARN | [cargo_rudra] Target test:serde is not supported
+2024-06-21 17:23:08.369855 |WARN | [cargo_rudra] Target test:range is not supported
+2024-06-21 17:23:08.369857 |WARN | [cargo_rudra] Target test:nice_paths is not supported
+2024-06-21 17:23:08.369859 |WARN | [cargo_rudra] Target test:property is not supported
+2024-06-21 17:23:08.369861 |WARN | [cargo_rudra] Target test:kernel_arg is not supported
+2024-06-21 17:23:08.369863 |WARN | [cargo_rudra] Target test:iter is not supported
+2024-06-21 17:23:08.369865 |WARN | [cargo_rudra] Target test:no_orphan_silliness is not supported
+2024-06-21 17:23:08.369874 |WARN | [cargo_rudra] Target test:event is not supported
+2024-06-21 17:23:08.369877 |WARN | [cargo_rudra] Target test:kernels is not supported
+2024-06-21 17:23:08.369879 |WARN | [cargo_rudra] Target test:doc is not supported
+2024-06-21 17:23:08.369881 |WARN | [cargo_rudra] Target test:ice is not supported
+2024-06-21 17:23:08.369883 |WARN | [cargo_rudra] Target test:move is not supported
+2024-06-21 17:23:08.369887 |WARN | [cargo_rudra] Target test:monkey is not supported
+2024-06-21 17:23:08.370039 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Abnormal Brain Studios,abnormalbrain,https://github.com/abnormalbrain
+************************************
+event,timestamp,downloads
+Downloads,-,8305
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:43:05.979835 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:43:07.540629 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bevy_app = ""^0.13""`
+candidate versions found which didn't match: 0.7.0, 0.6.0, 0.5.0, ...
+location searched: crates.io index
+required by package `bevy_particle_systems v0.12.0 (/tmp/rudra)`
+
+"
+************************************

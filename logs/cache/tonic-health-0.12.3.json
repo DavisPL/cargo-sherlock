@@ -1,0 +1,212 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "LucioFranco",
+    "github:hyperium:tonic"
+  ],
+  "stars": 10648,
+  "forks": 1058,
+  "downloads": 19683308,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "async-stream",
+      "0.3.6"
+    ],
+    [
+      "async-stream-impl",
+      "0.3.6"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "prost",
+      "0.13.5"
+    ],
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "tokio",
+      "1.44.1"
+    ],
+    [
+      "backtrace",
+      "0.3.74"
+    ],
+    [
+      "addr2line",
+      "0.24.2"
+    ],
+    [
+      "gimli",
+      "0.31.1"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "miniz_oxide",
+      "0.8.5"
+    ],
+    [
+      "adler2",
+      "2.0.0"
+    ],
+    [
+      "object",
+      "0.36.7"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "rustc-demangle",
+      "0.1.24"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "tokio-stream",
+      "0.1.17"
+    ],
+    [
+      "tonic",
+      "0.12.3"
+    ],
+    [
+      "base64",
+      "0.22.1"
+    ],
+    [
+      "http",
+      "1.3.1"
+    ],
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "http-body",
+      "1.0.1"
+    ],
+    [
+      "http-body-util",
+      "0.1.3"
+    ],
+    [
+      "percent-encoding",
+      "2.3.1"
+    ],
+    [
+      "pin-project",
+      "1.1.10"
+    ],
+    [
+      "pin-project-internal",
+      "1.1.10"
+    ],
+    [
+      "tower-layer",
+      "0.3.3"
+    ],
+    [
+      "tower-service",
+      "0.3.3"
+    ],
+    [
+      "tracing",
+      "0.1.41"
+    ],
+    [
+      "tracing-core",
+      "0.1.33"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

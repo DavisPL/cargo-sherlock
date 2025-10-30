@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Safe,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,1.1.1,,
+************************************
+event,timestamp,name,username,url
+Author,-,Jorge Aparicio,japaric,https://github.com/japaric
+Author,-,Caleb Meredith,calebmer,https://github.com/calebmer
+************************************
+event,timestamp,downloads
+Downloads,-,4040138
+************************************
+event,timestamp,total,flagged
+Side Effects,-,9,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:51:39.172005 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:51:42.119906 |INFO | [rudra-progress] Running rudra for target lib:inflections
+2024-06-23 16:51:46.062680 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:51:46.066443 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:51:46.067476 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:51:46.067489 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:51:46.088663 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:51:46.088687 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:51:46.960494 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

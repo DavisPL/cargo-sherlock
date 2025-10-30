@@ -1,0 +1,33 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ross Delinger,rossdylan,https://github.com/rossdylan
+************************************
+event,timestamp,downloads
+Downloads,-,1778
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-21 17:20:44.430503 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:20:47.349920 |INFO | [rudra-progress] Running rudra for target lib:scottqueue
+2024-06-21 17:20:51.143880 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:20:51.147684 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:20:51.168819 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:20:51.168842 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:20:51.196756 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:20:51.196774 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/tlqueue.rs:28:1: 28:36
+unsafe impl<T> Send for Queue<T> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/tlqueue.rs:27:1: 27:36
+unsafe impl<T> Sync for Queue<T> {}
+2024-06-21 17:20:51.975438 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

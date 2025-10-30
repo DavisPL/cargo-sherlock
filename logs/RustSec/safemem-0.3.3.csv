@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,mozilla,safe-to-run,,0.3.3,I didn't review the allocation code carefully but it's not malicious.,
+************************************
+event,timestamp,name,username,url
+Author,-,Austin Bonander,abonander,https://github.com/abonander
+************************************
+event,timestamp,downloads
+Downloads,-,29838647
+************************************
+event,timestamp,total,flagged
+Side Effects,-,9,8
+************************************
+Rudra,timestamp
+"2024-06-21 17:39:15.825733 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:39:18.901282 |INFO | [rudra-progress] Running rudra for target lib:safemem
+2024-06-21 17:39:22.964014 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:39:22.967783 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:39:22.969280 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:39:22.969297 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:39:23.007168 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:39:23.007192 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:39:23.756991 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

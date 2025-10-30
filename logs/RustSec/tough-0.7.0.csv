@@ -1,0 +1,25 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,iliana etaoin,iliana,https://github.com/iliana
+Author,-,Tom Kirchner,tjkirch,https://github.com/tjkirch
+Author,-,Samuel Karp,samuelkarp,https://github.com/samuelkarp
+Author,-,tough,github:awslabs:tough,https://github.com/awslabs
+************************************
+event,timestamp,downloads
+Downloads,-,809454
+************************************
+event,timestamp,total,flagged
+Side Effects,-,64,9
+************************************
+Rudra,timestamp
+"2024-06-21 17:33:19.507063 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:33:24.675078 |INFO | [rudra-progress] Running rudra for target lib:tough
+[0m[0m[1m[31merror[0m[1m:[0m package `cc v1.0.99` cannot be built because it requires rustc 1.63 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:33:28.117755 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

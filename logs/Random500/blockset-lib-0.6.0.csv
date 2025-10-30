@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sergey Shandar,sergey-shandar,https://github.com/sergey-shandar
+************************************
+event,timestamp,downloads
+Downloads,-,5578
+************************************
+event,timestamp,total,flagged
+Side Effects,-,14,12
+************************************
+Rudra,timestamp
+"2024-06-23 17:39:23.683151 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 17:39:26.432765 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `syn = ""^2.0""`
+candidate versions found which didn't match: 2.0.56, 2.0.55, 2.0.54, ...
+location searched: crates.io index
+required by package `wasm-bindgen-test-macro v0.3.42`
+    ... which satisfies dependency `wasm-bindgen-test-macro = ""=0.3.42""` (locked to 0.3.42) of package `wasm-bindgen-test v0.3.42`
+    ... which satisfies dependency `wasm-bindgen-test = ""^0.3.42""` (locked to 0.3.42) of package `blockset-lib v0.6.0 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Crichton,alexcrichton,https://github.com/alexcrichton
+Author,-,Huon Wilson,huonw,https://github.com/huonw
+Author,-,Steven Allen,Stebalien,https://github.com/Stebalien
+************************************
+event,timestamp,downloads
+Downloads,-,41070684
+************************************
+event,timestamp,total,flagged
+Side Effects,-,103,63
+************************************
+Rudra,timestamp
+"2024-06-21 18:17:21.284169 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:17:25.058939 |INFO | [rudra-progress] Running rudra for target lib:term
+2024-06-21 18:17:33.898990 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:17:33.903059 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:17:33.903422 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:17:33.903435 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:17:33.950255 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:17:33.950280 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:17:35.206167 |WARN | [cargo_rudra] Target test:terminfo is not supported
+2024-06-21 18:17:35.206329 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

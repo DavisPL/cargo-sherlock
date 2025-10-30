@@ -1,0 +1,45 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "rust-lang-owner",
+    "github:rust-lang:website",
+    "github:rust-lang:crate-maintainers"
+  ],
+  "stars": 201,
+  "forks": 33,
+  "downloads": 497502,
+  "num_side_effects": 2,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "textwrap",
+      "0.16.2"
+    ],
+    [
+      "unicode-width",
+      "0.2.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 1,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

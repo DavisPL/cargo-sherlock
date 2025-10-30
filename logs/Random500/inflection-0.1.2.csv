@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,bestgopher,bestgopher,https://github.com/bestgopher
+************************************
+event,timestamp,downloads
+Downloads,-,2794
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 06:50:53.281023 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 06:50:57.682678 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `regex = ""^1.5.4""`
+candidate versions found which didn't match: 1.8.4, 1.8.3, 1.8.2, ...
+location searched: crates.io index
+required by package `inflection v0.1.2 (/tmp/rudra)`
+
+"
+************************************

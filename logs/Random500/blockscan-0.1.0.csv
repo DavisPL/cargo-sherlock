@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,p7m,perpetuum7,https://github.com/perpetuum7
+************************************
+event,timestamp,downloads
+Downloads,-,535
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 17:16:41.197941 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 17:16:42.351627 |INFO | [rudra-progress] Running rudra for target bin:blockscan
+2024-06-23 17:16:46.374481 |INFO | [rudra-progress] Rudra started
+2024-06-23 17:16:46.377885 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 17:16:46.379436 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 17:16:46.379447 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 17:16:46.380861 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 17:16:46.380876 |INFO | [rudra-progress] Rudra finished
+2024-06-23 17:16:46.420142 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,36 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,наб,nabijaczleweli,https://github.com/nabijaczleweli
+************************************
+event,timestamp,downloads
+Downloads,-,750422
+************************************
+event,timestamp,total,flagged
+Side Effects,-,23,22
+************************************
+Rudra,timestamp
+"2024-06-21 16:19:15.229501 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:19:18.201448 |INFO | [rudra-progress] Running rudra for target lib:safe-transmute
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:36:38[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            Error::Guard(ref e) => e.description(),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-21 16:19:22.334513 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:19:22.338450 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:19:22.338807 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:19:22.338819 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:19:22.363236 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:19:22.363257 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:19:23.474779 |WARN | [cargo_rudra] Target test:lib is not supported
+2024-06-21 16:19:23.474953 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

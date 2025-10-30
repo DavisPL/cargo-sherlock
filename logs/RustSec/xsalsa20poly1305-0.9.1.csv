@@ -1,0 +1,23 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tony Arcieri,tarcieri,https://github.com/tarcieri
+Author,-,AEADs,github:rustcrypto:aeads,https://github.com/rustcrypto
+************************************
+event,timestamp,downloads
+Downloads,-,1303127
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:46:18.252967 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:46:22.130690 |INFO | [rudra-progress] Running rudra for target lib:xsalsa20poly1305
+[0m[0m[1m[31merror[0m[1m:[0m package `zeroize v1.8.1` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:46:25.493491 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

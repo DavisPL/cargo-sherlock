@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Artyom Pavlov,newpavlov,https://github.com/newpavlov
+Author,-,block-ciphers,github:rustcrypto:block-ciphers,https://github.com/rustcrypto
+************************************
+event,timestamp,downloads
+Downloads,-,5296830
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:11:04.152106 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:11:07.126275 |INFO | [rudra-progress] Running rudra for target lib:aesni
+[0m[1m[38;5;9merror[0m[0m[1m: `aesni` is deprecated. Please switch to `aes`: https://github.com/RustCrypto/block-ciphers/tree/master/aes[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:1[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0mcompile_error!(""`aesni` is deprecated. Please switch to `aes`: https://github.com/RustCrypto/block-ciphers/tree/master/aes"");[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `aesni` due to previous error
+2024-06-21 18:11:10.639412 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

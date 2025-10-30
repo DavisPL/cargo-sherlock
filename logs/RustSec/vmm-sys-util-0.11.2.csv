@@ -1,0 +1,109 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Samuel Ortiz,sameo,https://github.com/sameo
+Author,-,Andreea Florescu,andreeaflorescu,https://github.com/andreeaflorescu
+Author,-,Jonathan Woollett-Light,JonathanWoollett-Light,https://github.com/JonathanWoollett-Light
+Author,-,Laura Loghin,lauralt,https://github.com/lauralt
+Author,-,Patrick Roy,roypat,https://github.com/roypat
+Author,-,gatekeepers,github:rust-vmm:gatekeepers,https://github.com/rust-vmm
+************************************
+event,timestamp,downloads
+Downloads,-,2876263
+************************************
+event,timestamp,total,flagged
+Side Effects,-,238,134
+************************************
+Rudra,timestamp
+"2024-06-21 18:31:00.545707 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:31:04.873116 |INFO | [rudra-progress] Running rudra for target lib:vmm-sys-util
+2024-06-21 18:31:12.210284 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:31:12.214037 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:31:12.214367 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:31:12.214379 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:31:12.280075 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:31:12.280102 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/ReadFlow): Potential unsafe dataflow issue in `<fam::FamStructWrapper<T> as std::clone::Clone>::clone`
+-> src/fam.rs:446:5: 476:6
+fn clone(&self) -> Self {
+        // The number of entries (self.as_slice().len()) can't be > T::max_len() since `self` is a
+        // valid `FamStructWrapper`.
+        let required_mem_allocator_capacity =
+            FamStructWrapper::<T>::mem_allocator_len(self.as_slice().len());
+
+        let mut mem_allocator = Vec::with_capacity(required_mem_allocator_capacity);
+
+        // SAFETY: This is safe as long as the requirements for the `FamStruct` trait to be safe
+        // are met (the implementing type and the entries elements are POD, therefore `Copy`, so
+        // memory safety can't be violated by the ownership of `fam_struct`). It is also safe
+        // because we're trying to read a T from a `&T` that is pointing to a properly initialized
+        // and aligned T.
+        unsafe {
+            let fam_struct: T = [0m[31mstd::ptr::read(self.as_fam_struct_ref())[0m;
+            mem_allocator.push(fam_struct);
+        }
+        for _ in 1..required_mem_allocator_capacity {
+            mem_allocator.push(
+                // SAFETY: This is safe as long as T respects the FamStruct trait and is a POD.
+                unsafe { mem::zeroed() },
+            )
+        }
+
+        let mut adapter = FamStructWrapper { mem_allocator };
+        {
+            let wrapper_entries = [0m[36madapter.as_mut_fam_struct().as_mut_slice()[0m;
+            wrapper_entries.copy_from_slice(self.as_slice());
+        }
+        adapter
+    }
+[0m
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `fam::FamStructWrapper::<T>::set_len`
+-> src/fam.rs:354:5: 393:6
+fn set_len(&mut self, len: usize) -> Result<(), Error> {
+        let additional_elements: isize = len as isize - self.len() as isize;
+        // If len == self.len there's nothing to do.
+        if additional_elements == 0 {
+            return Ok(());
+        }
+
+        // If the len needs to be increased:
+        if additional_elements > 0 {
+            // Check if the new len is valid.
+            if len > [0m[36mT::max_len()[0m {
+                return Err(Error::SizeLimitExceeded);
+            }
+            // Reserve additional capacity.
+            self.reserve(additional_elements as usize);
+        }
+
+        let current_mem_allocator_len = self.mem_allocator.len();
+        let required_mem_allocator_len = FamStructWrapper::<T>::mem_allocator_len(len);
+        // Update the len of the `mem_allocator`.
+        // SAFETY: This is safe since enough capacity has been reserved.
+        unsafe {
+            [0m[31mself.mem_allocator.set_len(required_mem_allocator_len)[0m;
+        }
+        // Zero-initialize the additional elements if any.
+        for i in current_mem_allocator_len..required_mem_allocator_len {
+            // SAFETY: Safe as long as the trait is only implemented for POD. This is a requirement
+            // for the trait implementation.
+            self.mem_allocator[i] = unsafe { mem::zeroed() }
+        }
+        // Update the len of the underlying `FamStruct`.
+        [0m[36mself.as_mut_fam_struct().set_len(len)[0m;
+
+        // If the len needs to be decreased, deallocate unnecessary memory
+        if additional_elements < 0 {
+            self.mem_allocator.shrink_to_fit();
+        }
+
+        Ok(())
+    }
+[0m
+2024-06-21 18:31:13.663035 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jamie Blondin,jblondin,https://github.com/jblondin
+************************************
+event,timestamp,downloads
+Downloads,-,18638
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:08:25.150782 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:08:28.909296 |INFO | [rudra-progress] Running rudra for target lib:csv-sniffer
+[0m[0m[1m[31merror[0m[1m:[0m package `csv v1.3.0` cannot be built because it requires rustc 1.61 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 18:08:32.288233 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

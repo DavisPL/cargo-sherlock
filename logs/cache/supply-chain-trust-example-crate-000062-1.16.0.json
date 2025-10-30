@@ -1,0 +1,39 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "muhammad-hassnain"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 171.51,
+  "num_side_effects": 10,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "hermit-abi",
+      "0.5.2"
+    ],
+    [
+      "libc",
+      "0.2.177"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 5,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

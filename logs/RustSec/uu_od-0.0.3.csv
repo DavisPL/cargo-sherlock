@@ -1,0 +1,119 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Roy Ivy III,rivy,https://github.com/rivy
+Author,-,Maintainers,github:uutils:maintainers,https://github.com/uutils
+************************************
+event,timestamp,downloads
+Downloads,-,23171
+************************************
+event,timestamp,total,flagged
+Side Effects,-,17,15
+************************************
+Rudra,timestamp
+"2024-06-21 17:04:14.553885 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:04:17.662106 |INFO | [rudra-progress] Running rudra for target lib:uu_od
+2024-06-21 17:04:31.588850 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:04:31.592888 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:04:31.593919 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:04:31.593929 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:04:31.655663 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:04:31.655696 |INFO | [rudra-progress] Rudra finished
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `<partialreader::PartialReader<R> as std::io::Read>::read`
+-> src/partialreader.rs:32:5: 67:6
+fn read(&mut self, out: &mut [u8]) -> io::Result<usize> {
+        if self.skip > 0 {
+            let buf_size = cmp::min(self.skip, MAX_SKIP_BUFFER);
+            let mut bytes: Vec<u8> = Vec::with_capacity(buf_size);
+            unsafe {
+                [0m[31mbytes.set_len(buf_size)[0m;
+            }
+
+            while self.skip > 0 {
+                let skip_count = cmp::min(self.skip, buf_size);
+
+                match [0m[36mself.inner.read_exact(&mut bytes[..skip_count])[0m {
+                    Err(e) => return Err(e),
+                    Ok(()) => self.skip -= skip_count,
+                }
+            }
+        }
+        match self.limit {
+            None => [0m[36mself.inner.read(out)[0m,
+            Some(0) => Ok(0),
+            Some(ref mut limit) => {
+                let slice = if *limit > out.len() {
+                    out
+                } else {
+                    &mut out[0..*limit]
+                };
+                match [0m[36mself.inner.read(slice)[0m {
+                    Err(e) => Err(e),
+                    Ok(r) => {
+                        *limit -= r;
+                        Ok(r)
+                    }
+                }
+            }
+        }
+    }
+[0m
+2024-06-21 17:04:32.960554 |INFO | [rudra-progress] Running rudra for target bin:od
+2024-06-21 17:04:41.339023 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:04:41.342847 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:04:41.343819 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:04:41.343835 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:04:41.411875 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:04:41.411917 |INFO | [rudra-progress] Rudra finished
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `<partialreader::PartialReader<R> as std::io::Read>::read`
+-> src/partialreader.rs:32:5: 67:6
+fn read(&mut self, out: &mut [u8]) -> io::Result<usize> {
+        if self.skip > 0 {
+            let buf_size = cmp::min(self.skip, MAX_SKIP_BUFFER);
+            let mut bytes: Vec<u8> = Vec::with_capacity(buf_size);
+            unsafe {
+                [0m[31mbytes.set_len(buf_size)[0m;
+            }
+
+            while self.skip > 0 {
+                let skip_count = cmp::min(self.skip, buf_size);
+
+                match [0m[36mself.inner.read_exact(&mut bytes[..skip_count])[0m {
+                    Err(e) => return Err(e),
+                    Ok(()) => self.skip -= skip_count,
+                }
+            }
+        }
+        match self.limit {
+            None => [0m[36mself.inner.read(out)[0m,
+            Some(0) => Ok(0),
+            Some(ref mut limit) => {
+                let slice = if *limit > out.len() {
+                    out
+                } else {
+                    &mut out[0..*limit]
+                };
+                match [0m[36mself.inner.read(slice)[0m {
+                    Err(e) => Err(e),
+                    Ok(r) => {
+                        *limit -= r;
+                        Ok(r)
+                    }
+                }
+            }
+        }
+    }
+[0m
+2024-06-21 17:04:42.658317 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:04:42.661760 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:04:42.663263 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:04:42.663274 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:04:42.664670 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:04:42.664682 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:04:42.703472 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,147 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Inokentiy Babushkin,ibabushkin,https://github.com/ibabushkin
+************************************
+event,timestamp,downloads
+Downloads,-,1598
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:05:32.616457 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:05:36.428593 |INFO | [rudra-progress] Running rudra for target lib:arenavec
+2024-06-21 17:05:43.598348 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:05:43.602140 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:05:43.602492 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:05:43.602504 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:05:43.683374 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:05:43.683409 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `common::SliceVec::<T, H>::resize_with`
+-> src/common.rs:418:5: 443:6
+pub fn resize_with<F>(&mut self, len: usize, mut f: F)
+    where
+        F: FnMut() -> T,
+    {
+        let old_len = self.slice.len;
+
+        if self.capacity < len {
+            self.reserve(len - old_len);
+        }
+
+        for i in old_len..len.saturating_sub(1) {
+            unsafe { [0m[33mptr::write(self.slice.ptr.as_ptr().add(i), [0m[36mf()[0m[33m)[0m }
+        }
+
+        if len > old_len {
+            unsafe {
+                [0m[33mptr::write(self.slice.ptr.as_ptr().add(len - 1), [0m[36mf()[0m[33m)[0m;
+            }
+        } else if len < old_len {
+            unsafe {
+                [0m[36mptr::drop_in_place(&mut self.slice[len..old_len])[0m;
+            }
+        }
+
+        self.slice.len = len;
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `common::SliceVec::<T, H>::resize`
+-> src/common.rs:446:5: 471:6
+pub fn resize(&mut self, len: usize, value: T)
+    where
+        T: Clone,
+    {
+        let old_len = self.slice.len;
+
+        if self.capacity < len {
+            self.reserve(len - old_len);
+        }
+
+        for i in old_len..len.saturating_sub(1) {
+            unsafe { [0m[33mptr::write(self.slice.ptr.as_ptr().add(i), [0m[36mvalue.clone()[0m[33m)[0m }
+        }
+
+        if len > old_len {
+            unsafe {
+                [0m[33mptr::write(self.slice.ptr.as_ptr().add(len - 1), value)[0m;
+            }
+        } else if len < old_len {
+            unsafe {
+                [0m[36mptr::drop_in_place(&mut self.slice[len..old_len])[0m;
+            }
+        }
+
+        self.slice.len = len;
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<common::SliceVec<T, H> as std::clone::Clone>::clone`
+-> src/common.rs:493:5: 509:6
+fn clone(&self) -> Self {
+        let mut vec: SliceVec<T, H> =
+            SliceVec::with_capacity([0m[36mself.slice.handle.clone()[0m, self.capacity);
+
+        for i in 0..self.slice.len() {
+            unsafe {
+                [0m[33mptr::write(
+                    vec.slice.ptr.as_ptr().add(i),
+                    [0m[36m(*self.slice.ptr.as_ptr().add(i)).clone()[0m[33m,
+                )[0m;
+            }
+        }
+
+        vec.slice.len = self.slice.len();
+
+        vec
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `common::Slice::<T, H>::new`
+-> src/common.rs:75:5: 89:6
+pub fn new(handle: H, len: usize) -> Self
+    where
+        T: Default,
+    {
+        let mut res = unsafe { Self::new_empty(handle, len) };
+        res.len = len;
+
+        for i in 0..len {
+            unsafe {
+                [0m[33mptr::write(res.ptr.as_ptr().add(i), [0m[36mT::default()[0m[33m)[0m;
+            }
+        }
+
+        res
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<common::Slice<T, H> as std::clone::Clone>::clone`
+-> src/common.rs:108:5: 122:6
+fn clone(&self) -> Self {
+        let ptr: NonNull<T> = [0m[36mself.handle.allocate(self.len)[0m;
+
+        for i in 0..self.len {
+            unsafe {
+                [0m[33mptr::write(ptr.as_ptr().add(i), [0m[36m(*self.ptr.as_ptr().add(i)).clone()[0m[33m)[0m;
+            }
+        }
+
+        Slice {
+            ptr,
+            len: self.len,
+            handle: [0m[36mself.handle.clone()[0m,
+        }
+    }
+[0m
+2024-06-21 17:05:44.672760 |WARN | [cargo_rudra] Target test:region_static is not supported
+2024-06-21 17:05:44.672803 |WARN | [cargo_rudra] Target test:rc_static is not supported
+2024-06-21 17:05:44.672808 |WARN | [cargo_rudra] Target test:region is not supported
+2024-06-21 17:05:44.672811 |WARN | [cargo_rudra] Target test:rc is not supported
+2024-06-21 17:05:44.672814 |WARN | [cargo_rudra] Target test:rc_dynamic is not supported
+2024-06-21 17:05:44.672817 |WARN | [cargo_rudra] Target test:region_dynamic is not supported
+2024-06-21 17:05:44.672903 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

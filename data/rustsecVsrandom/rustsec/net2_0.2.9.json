@@ -1,0 +1,6 @@
+Solving for required assumptions to trust net2-0.2.9...
+Trust Score for net2-0.2.9: 63
+Assumptions Made:
+net2-0.2.9 has many downloads: 3 wt
+net2-0.2.9 having many downloads implies it is safe: 10 wt
+net2-0.2.9 appearing in RustSec implies it is less safe (score penalty): 50 weight

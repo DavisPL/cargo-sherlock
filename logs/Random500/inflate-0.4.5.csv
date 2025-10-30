@@ -1,0 +1,563 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jonathan Behrens,fintelia,https://github.com/fintelia
+Author,-,Andreas Molzer,HeroicKatora,https://github.com/HeroicKatora
+Author,-,Publish,github:image-rs:publish,https://github.com/image-rs
+************************************
+event,timestamp,downloads
+Downloads,-,5278478
+************************************
+event,timestamp,total,flagged
+Side Effects,-,13,13
+************************************
+Rudra,timestamp
+"2024-06-23 16:43:06.966791 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:43:10.048028 |INFO | [rudra-progress] Running rudra for target lib:inflate
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/writer.rs:37:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m37[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.flush());[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/writer.rs:54:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m54[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.writer.write(result));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/writer.rs:52:44[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let (num_bytes_read, result) = try!(update(&mut self.inflater, &buf[n..]));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/writer.rs:61:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.writer.write(result));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/writer.rs:60:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (_, result) = try!(update(&mut self.inflater, &[]));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/utils.rs:20:39[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let (num_bytes_read, bytes) = try!(inflater.update(&data[n..]));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/reader.rs:180:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m180[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let input = try!(self.reader.fill_buf());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:289:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m289[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        code = try!([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m327[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m        with_codes!(clens, 7 => u8, |i: u8, code: u8, bits| -> _ {[0m
+[0m[1m[38;5;12m328[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            /*let base = match BIT_REV_U8.get((code << (8 - bits)) as usize) {[0m
+[0m[1m[38;5;12m329[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                Some(&base) => base,[0m
+[0m[1m[38;5;12m330[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                None => return Err(""invalid length code"".to_owned())[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m336[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            Ok(())[0m
+[0m[1m[38;5;12m337[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        });[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `with_codes` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:302:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m302[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            let new_code = try!([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m327[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m        with_codes!(clens, 7 => u8, |i: u8, code: u8, bits| -> _ {[0m
+[0m[1m[38;5;12m328[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            /*let base = match BIT_REV_U8.get((code << (8 - bits)) as usize) {[0m
+[0m[1m[38;5;12m329[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                Some(&base) => base,[0m
+[0m[1m[38;5;12m330[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                None => return Err(""invalid length code"".to_owned())[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m336[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            Ok(())[0m
+[0m[1m[38;5;12m337[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        });[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `with_codes` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:368:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m368[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                0...15 => self.result.push(code),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(ellipsis_inclusive_range_patterns)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:397:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m397[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let lit = try!(DynHuffman16::new(&self.result[..num_lit]));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:398:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m398[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let dist = try!(DynHuffman16::new(&self.result[num_lit..]));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:289:16[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m289[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        code = try!([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m419[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m        with_codes!(clens, 15 => u16, |i: u16, code: u16, bits: u8| -> _ {[0m
+[0m[1m[38;5;12m420[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let entry = i | ((bits as u16) << 12);[0m
+[0m[1m[38;5;12m421[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            if bits <= 8 {[0m
+[0m[1m[38;5;12m422[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                let base = match BIT_REV_U8.get((code << (8 - bits)) as usize) {[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m471[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            Ok(())[0m
+[0m[1m[38;5;12m472[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        });[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `with_codes` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:302:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m302[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            let new_code = try!([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m419[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m        with_codes!(clens, 15 => u16, |i: u16, code: u16, bits: u8| -> _ {[0m
+[0m[1m[38;5;12m420[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let entry = i | ((bits as u16) << 12);[0m
+[0m[1m[38;5;12m421[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            if bits <= 8 {[0m
+[0m[1m[38;5;12m422[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                let base = match BIT_REV_U8.get((code << (8 - bits)) as usize) {[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m471[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            Ok(())[0m
+[0m[1m[38;5;12m472[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        });[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|__________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `with_codes` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:855:53[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m855[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   ok!(BlockDynCodeLengths(try!(CodeLengthReader::new(clens, hlit as u16 + 256, hdist))))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                              [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:859:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m859[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        let finished = try!(reader.read(&mut stream));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:861:47[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m861[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   let (lit, dist) = try!(reader.to_lit_and_dist());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:875:60[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m875[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   let (save, code16) = match try!(huff_lit_len.read(&mut stream)) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:882:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m882[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   0...255 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:886:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m886[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   256...285 => {}[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:910:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m910[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   1...8 => len!(code, 0),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:911:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m911[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   9...12 => len!(code, 1),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:912:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m912[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   13...16 => len!(code, 2),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:913:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m913[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   17...20 => len!(code, 3),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:914:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m914[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   21...24 => len!(code, 4),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:915:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m915[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   25...28 => len!(code, 5),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:921:59[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m921[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   let (save, dist_code) = match try!(huff_dist.read(&mut stream)) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:930:34[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m930[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   0...3 => len_dist_case!(0),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m930[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                0...3 => len_dist_case!(0),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:931:34[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m931[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   4...5 => len_dist_case!(1),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m931[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                4...5 => len_dist_case!(1),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:932:34[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m932[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   6...7 => len_dist_case!(2),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m932[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                6...7 => len_dist_case!(2),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:933:34[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m933[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   8...9 => len_dist_case!(3),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m933[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                8...9 => len_dist_case!(3),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:934:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m934[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   10...11 => len_dist_case!(4),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m934[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                10...11 => len_dist_case!(4),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:935:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m935[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   12...13 => len_dist_case!(5),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m935[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                12...13 => len_dist_case!(5),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:936:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m936[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   14...15 => len_dist_case!(6),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m936[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                14...15 => len_dist_case!(6),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:937:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m937[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   16...17 => len_dist_case!(7),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m937[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                16...17 => len_dist_case!(7),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:938:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m938[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   18...19 => len_dist_case!(8),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m938[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                18...19 => len_dist_case!(8),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:939:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m939[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   20...21 => len_dist_case!(9),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m939[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                20...21 => len_dist_case!(9),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;12m-----------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:940:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m940[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   22...23 => len_dist_case!(10),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m940[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                22...23 => len_dist_case!(10),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;12m------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:941:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m941[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   24...25 => len_dist_case!(11),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m941[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                24...25 => len_dist_case!(11),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;12m------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:942:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m942[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   26...27 => len_dist_case!(12),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m942[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                26...27 => len_dist_case!(12),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;12m------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:943:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m943[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   28...29 => len_dist_case!(13),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m943[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                                28...29 => len_dist_case!(13),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;12m------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:690:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m690[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let left = try!(self.run_len_dist($len, dist));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m951[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                run_len_dist!(len, dist => (0, next, state));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m--------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `run_len_dist` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1027:13[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1027[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.checksum.check(c));[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+2024-06-23 16:43:15.045773 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:43:15.049667 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:43:15.050033 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:43:15.050044 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:43:15.122036 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:43:15.122066 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:43:16.312298 |WARN | [cargo_rudra] Target test:test is not supported
+2024-06-23 16:43:16.312412 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

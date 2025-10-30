@@ -1,0 +1,23 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Steven Fackler,sfackler,https://github.com/sfackler
+Author,-,Alex Gaynor,alex,https://github.com/alex
+************************************
+event,timestamp,downloads
+Downloads,-,100125297
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:23:50.542168 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:24:00.883677 |INFO | [rudra-progress] Running rudra for target lib:openssl
+[0m[0m[1m[31merror[0m[1m:[0m package `cc v1.0.99` cannot be built because it requires rustc 1.63 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:24:10.081156 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

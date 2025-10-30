@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Matt Wright,longfellowone,https://github.com/longfellowone
+************************************
+event,timestamp,downloads
+Downloads,-,623
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:22:12.287640 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:22:19.864930 |INFO | [rudra-progress] Running rudra for target lib:ebc
+2024-06-23 14:22:29.132962 |INFO | [rudra-progress] Rudra started
+2024-06-23 14:22:29.139717 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 14:22:29.146582 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 14:22:29.146638 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 14:22:29.146766 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 14:22:29.146823 |INFO | [rudra-progress] Rudra finished
+2024-06-23 14:22:30.251586 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

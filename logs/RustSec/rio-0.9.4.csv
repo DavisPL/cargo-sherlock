@@ -1,0 +1,40 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tyler Neely,spacejam,https://github.com/spacejam
+************************************
+event,timestamp,downloads
+Downloads,-,3631203
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:26:39.644450 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:26:47.879236 |INFO | [rudra-progress] Running rudra for target lib:rio
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicBool::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lazy.rs:61:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        while self.init_mu.compare_and_swap(false, true, SeqCst) {}[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-21 16:27:08.008906 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:27:08.018228 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:27:08.028134 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:27:08.028183 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:27:08.174395 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:27:08.174642 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:27:11.781759 |WARN | [cargo_rudra] Target example:o_direct is not supported
+2024-06-21 16:27:11.781967 |WARN | [cargo_rudra] Target example:async_echo is not supported
+2024-06-21 16:27:11.781989 |WARN | [cargo_rudra] Target example:nop is not supported
+2024-06-21 16:27:11.782002 |WARN | [cargo_rudra] Target example:http_bench is not supported
+2024-06-21 16:27:11.782011 |WARN | [cargo_rudra] Target test:vec is not supported
+2024-06-21 16:27:11.782258 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

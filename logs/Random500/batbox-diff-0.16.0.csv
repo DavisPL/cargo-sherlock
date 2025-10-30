@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Vitaliy,kuviman,https://github.com/kuviman
+************************************
+event,timestamp,downloads
+Downloads,-,2726
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:48:58.068062 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:49:00.901107 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `syn = ""^2""`
+candidate versions found which didn't match: 2.0.56, 2.0.55, 2.0.54, ...
+location searched: crates.io index
+required by package `batbox-diff-derive v0.16.0`
+    ... which satisfies dependency `batbox-diff-derive = ""^0.16""` (locked to 0.16.0) of package `batbox-diff v0.16.0 (/tmp/rudra)`
+
+"
+************************************

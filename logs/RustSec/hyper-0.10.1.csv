@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-deploy,1.0.0-rc.3 -> 1.0.1,,Quite a few changes here relative to the last RC but everything is related to\nrefactorings and such. No new fundamental addition of functionality or\nsubstantially new unsafe code.\n,
+audits,-,Critical,google,safe-to-run,,0.14.20,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.14.27,,
+audits,-,Critical,google,ub-risk-4,,1.0.1,Reviewed in CL 588384310\nIssues found:\n - https://github.com/hyperium/hyper/pull/3498\n - https://github.com/hyperium/hyper/issues/3556\n - https://github.com/hyperium/hyper/issues/3500 \n(probably not a real issue)\n - https://github.com/hyperium/hyper/issues/3554 (documentation)\n,
+audits,-,Critical,mozilla,safe-to-run,0.14.19 -> 0.14.20,,,
+audits,-,Critical,mozilla,safe-to-run,0.14.20 -> 0.14.22,,,
+audits,-,Critical,mozilla,safe-to-run,0.14.22 -> 0.14.23,,,
+audits,-,Critical,mozilla,safe-to-run,0.14.23 -> 0.14.24,,,
+audits,-,Critical,zcash,safe-to-deploy,0.14.23 -> 0.14.24,,"Fixes a bug where memory was reserved based on an adversary-controllable size, before the\ncorresponding data was received.\n",
+audits,-,Critical,zcash,safe-to-deploy,0.14.25 -> 0.14.26,,,
+audits,-,Critical,zcash,safe-to-deploy,0.14.26 -> 0.14.27,,,
+audits,-,Critical,zcash,safe-to-deploy,0.14.27 -> 0.14.28,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Sean McArthur,seanmonstar,https://github.com/seanmonstar
+Author,-,Core,github:hyperium:core,https://github.com/hyperium
+************************************
+event,timestamp,downloads
+Downloads,-,161359540
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:53:50.504448 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:53:53.918680 |INFO | [rudra-progress] Running rudra for target lib:hyper
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 18:53:57.256720 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

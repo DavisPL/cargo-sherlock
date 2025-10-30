@@ -1,0 +1,223 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "funbiscuit"
+  ],
+  "stars": 81,
+  "forks": 4,
+  "downloads": 2724,
+  "num_side_effects": 71,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "byte-unit",
+      "5.1.6"
+    ],
+    [
+      "utf8-width",
+      "0.1.7"
+    ],
+    [
+      "crc",
+      "3.2.1"
+    ],
+    [
+      "crc-catalog",
+      "2.4.0"
+    ],
+    [
+      "derivative",
+      "2.2.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "fsevent",
+      "2.1.2"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "fsevent-sys",
+      "4.1.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "inotify",
+      "0.11.0"
+    ],
+    [
+      "inotify-sys",
+      "0.1.5"
+    ],
+    [
+      "libproc",
+      "0.14.10"
+    ],
+    [
+      "errno",
+      "0.3.10"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "mountpoints",
+      "0.2.1"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "nix",
+      "0.29.0"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "page_size",
+      "0.6.0"
+    ],
+    [
+      "proc-mounts",
+      "0.3.0"
+    ],
+    [
+      "partition-identity",
+      "0.3.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "procfs",
+      "0.17.0"
+    ],
+    [
+      "hex",
+      "0.4.3"
+    ],
+    [
+      "procfs-core",
+      "0.17.0"
+    ],
+    [
+      "rustix",
+      "1.0.3"
+    ],
+    [
+      "linux-raw-sys",
+      "0.9.3"
+    ],
+    [
+      "ptree",
+      "0.5.2"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "widestring",
+      "1.2.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 28,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

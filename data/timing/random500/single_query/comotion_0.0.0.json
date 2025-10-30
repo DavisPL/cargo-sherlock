@@ -1,0 +1,4 @@
+Solving for required assumptions to trust comotion-0.0.0...
+Trust Score for comotion-0.0.0: 1
+Assumptions Made:
+comotion-0.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

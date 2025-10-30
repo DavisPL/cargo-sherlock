@@ -1,0 +1,58 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Bodil Stokke,bodil,https://github.com/bodil
+************************************
+event,timestamp,downloads
+Downloads,-,9148634
+************************************
+event,timestamp,total,flagged
+Side Effects,-,21,11
+************************************
+Rudra,timestamp
+"2024-06-21 18:41:33.557807 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:41:37.389059 |INFO | [rudra-progress] Running rudra for target lib:im
+[0m[1m[33mwarning[0m[0m[1m: the feature `specialization` is incomplete and may not be safe to use and/or cause compiler crashes[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:341:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m341[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![cfg_attr(has_specialisation, feature(specialization))][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(incomplete_features)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: see issue #31844 <https://github.com/rust-lang/rust/issues/31844> for more information[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: consider using `min_specialization` instead, which is more stable and complete[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused return value of `std::mem::replace` that must be used[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/vector/mod.rs:986:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m986[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            replace(self, other);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_must_use)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: if you don't need the old value, you can just assign the new value directly[0m
+
+2024-06-21 18:41:50.632016 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:41:50.636446 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:41:50.640350 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:41:50.640365 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:41:50.668707 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:41:50.668728 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/vector/focus.rs:282:1: 282:40
+unsafe impl<A> Send for TreeFocus<A> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/vector/focus.rs:285:1: 285:40
+unsafe impl<A> Sync for TreeFocus<A> {}
+2024-06-21 18:41:52.826989 |WARN | [cargo_rudra] Target bench:native is not supported
+2024-06-21 18:41:52.827076 |WARN | [cargo_rudra] Target bench:sort is not supported
+2024-06-21 18:41:52.827086 |WARN | [cargo_rudra] Target bench:vector is not supported
+2024-06-21 18:41:52.827090 |WARN | [cargo_rudra] Target bench:ordmap is not supported
+2024-06-21 18:41:52.827094 |WARN | [cargo_rudra] Target bench:hashmap is not supported
+2024-06-21 18:41:52.827100 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 18:41:52.827277 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,58 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "zhangsoledad",
+    "jjyr",
+    "quake",
+    "eval-exec"
+  ],
+  "stars": 87,
+  "forks": 16,
+  "downloads": 10708589,
+  "num_side_effects": 5,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-4\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.8.1",
+      "notes": "Reviewed in CL 579318683\\nIssues found:\\n- https://github.com/nervosnetwork/faster-hex/pull/39\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "heapless",
+      "0.8.0"
+    ],
+    [
+      "hash32",
+      "0.3.1"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 4,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,34 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,David Roundy,droundy,https://github.com/droundy
+************************************
+event,timestamp,downloads
+Downloads,-,3024196
+************************************
+event,timestamp,total,flagged
+Side Effects,-,14,14
+************************************
+Rudra,timestamp
+"2024-06-21 17:35:45.298243 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:35:48.838102 |INFO | [rudra-progress] Running rudra for target lib:internment
+2024-06-21 17:36:02.782291 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:36:02.786322 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:36:02.810338 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:36:02.810362 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:36:02.830549 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:36:02.830569 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:115:1: 115:37
+unsafe impl<T> Send for Intern<T> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:116:1: 116:37
+unsafe impl<T> Sync for Intern<T> {}
+2024-06-21 17:36:03.959652 |WARN | [cargo_rudra] Target bench:bench is not supported
+2024-06-21 17:36:03.959909 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,132 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,bytecode-alliance,safe-to-run,,0.9.4,"I've verified the contents of this crate and that while they contain `unsafe`\nit's exclusively around implementing atomic primitive where some `unsafe` is to\nbe expected. Otherwise this crate does not unduly access ambient capabilities\nand does what it says on the tin, providing spin-based synchronization\nprimitives.\n",
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.9.8,,
+************************************
+event,timestamp,name,username,url
+Author,-,Mathijs van de Nes,mvdnes,https://github.com/mvdnes
+Author,-,Joshua Barretto,zesterer,https://github.com/zesterer
+************************************
+event,timestamp,downloads
+Downloads,-,158521147
+************************************
+event,timestamp,total,flagged
+Side Effects,-,6,6
+************************************
+Rudra,timestamp
+"2024-06-21 17:33:50.253889 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:33:53.213349 |INFO | [rudra-progress] Running rudra for target lib:spin
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/mutex.rs:1:48[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse core::sync::atomic::{AtomicBool, Ordering, spin_loop_hint as cpu_relax};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/mutex.rs:136:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m136[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                cpu_relax();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/rw_lock.rs:1:49[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse core::sync::atomic::{AtomicUsize, Ordering, spin_loop_hint as cpu_relax};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rw_lock.rs:152:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m152[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                cpu_relax();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rw_lock.rs:163:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m163[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            cpu_relax();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rw_lock.rs:268:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m268[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    cpu_relax();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/once.rs:2:49[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m2[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse core::sync::atomic::{AtomicUsize, Ordering, spin_loop_hint as cpu_relax};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/once.rs:125:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m125[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    cpu_relax();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/once.rs:149:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m149[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                RUNNING    => cpu_relax(), // We spin[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `core::sync::atomic::AtomicBool::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/mutex.rs:131:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m131[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        while self.lock.compare_and_swap(false, true, Ordering::Acquire) != false[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `core::sync::atomic::AtomicBool::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/mutex.rs:181:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m181[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if self.lock.compare_and_swap(false, true, Ordering::Acquire) == false[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `core::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rw_lock.rs:161:23[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m161[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.lock.compare_and_swap(old, new, Ordering::SeqCst) != old[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `core::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rw_lock.rs:201:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m201[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if self.lock.compare_and_swap(old,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `core::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rw_lock.rs:262:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m262[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if self.lock.compare_and_swap(old,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `core::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/rw_lock.rs:301:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m301[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if self.lock.compare_and_swap(0,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `core::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/once.rs:104:33[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            status = self.state.compare_and_swap(INCOMPLETE,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+2024-06-21 17:33:57.258341 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:33:57.262203 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:33:57.266137 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:33:57.266150 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:33:57.288107 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:33:57.288122 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/mutex.rs:89:1: 89:51
+unsafe impl<T: ?Sized + Send> Sync for Mutex<T> {}
+2024-06-21 17:33:58.257456 |WARN | [cargo_rudra] Target example:debug is not supported
+2024-06-21 17:33:58.257623 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

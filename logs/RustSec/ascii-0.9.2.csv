@@ -1,0 +1,245 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,1.1.0,,
+************************************
+event,timestamp,name,username,url
+Author,-,Simon Sapin,SimonSapin,https://github.com/SimonSapin
+Author,-,Thomas Bahn,tomprogrammer,https://github.com/tomprogrammer
+Author,-,Tobias Bucher,tbu-,https://github.com/tbu-
+Author,-,Torbjørn Birch Moltu,tormol,https://github.com/tormol
+************************************
+event,timestamp,downloads
+Downloads,-,24526284
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:52:01.067531 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:52:05.525743 |INFO | [rudra-progress] Running rudra for target lib:ascii
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_char.rs:478:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m478[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b' '...b'~' => self.as_char(),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(ellipsis_inclusive_range_patterns)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_char.rs:500:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m500[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'a'...b'z' => AsciiChar::from_unchecked(self.as_byte() - (b'a' - b'A')),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_char.rs:511:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m511[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'A'...b'Z' => AsciiChar::from_unchecked(self.as_byte() + (b'a' - b'A')),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_string.rs:558:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m558[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let astr = try!(AsciiStr::from_ascii(s).map_err(|_| fmt::Error));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_string.rs:564:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m564[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let achar = try!(AsciiChar::from(c).map_err(|_| fmt::Error));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_string.rs:722:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&Error> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Error`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_string.rs:723:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m723[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        Some(&self.error as &Error)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Error`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/free_functions.rs:60:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'?'...b'_' => Some(AsciiChar::from_unchecked(c.into() ^ 0b0100_0000)),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_string.rs:719:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m719[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.error.description()[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `ascii_char::AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:216:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m216[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        &self[self.chars().take_while(|a| a.is_whitespace()).count()..][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bindings_with_variant_name)]` on by default[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `ascii_char::AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:230:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m230[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            .take_while(|a| a.is_whitespace())[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `ascii_char::AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:238:51[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m238[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.chars().zip(other.chars()).all(|(a, b)| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `b` is named the same as one of the variants of the type `ascii_char::AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:238:54[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m238[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.chars().zip(other.chars()).all(|(a, b)| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                     [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `ascii_char::AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:245:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m245[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for a in self.chars_mut() {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `ascii_char::AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:252:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m252[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for a in self.chars_mut() {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `ascii_char::AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:492:51[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m492[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.chars().zip(other.chars()).all(|(a, b)| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `b` is named the same as one of the variants of the type `ascii_char::AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:492:54[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m492[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.chars().zip(other.chars()).all(|(a, b)| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                     [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `c` is named the same as one of the variants of the type `ascii_char::AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:550:53[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m550[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if let Some(at) = self.chars.position(|&c| c == split_on) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                    [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `c` is named the same as one of the variants of the type `ascii_char::AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:566:54[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m566[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if let Some(at) = self.chars.rposition(|&c| c == split_on) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                     [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `c` is named the same as one of the variants of the type `ascii_char::AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_string.rs:461:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m461[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        s.into_iter().map(|c| *c).collect()[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^[0m
+
+2024-06-21 17:52:09.956326 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:52:09.960297 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:52:09.960618 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:52:09.960652 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:52:09.989043 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:52:09.989063 |INFO | [rudra-progress] Rudra finished
+[0m[1mFor more information about this error, try `rustc --explain E0170`.[0m
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:216:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m216[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        &self[self.chars().take_while(|a| a.is_whitespace()).count()..][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bindings_with_variant_name)]` on by default[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:230:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m230[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            .take_while(|a| a.is_whitespace())[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:238:51[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m238[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.chars().zip(other.chars()).all(|(a, b)| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `b` is named the same as one of the variants of the type `AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:238:54[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m238[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.chars().zip(other.chars()).all(|(a, b)| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                     [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:245:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m245[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for a in self.chars_mut() {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:252:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m252[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for a in self.chars_mut() {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `a` is named the same as one of the variants of the type `AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:492:51[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m492[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.chars().zip(other.chars()).all(|(a, b)| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                  [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `b` is named the same as one of the variants of the type `AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:492:54[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m492[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.chars().zip(other.chars()).all(|(a, b)| {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                     [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `c` is named the same as one of the variants of the type `AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:550:53[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m550[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if let Some(at) = self.chars.position(|&c| c == split_on) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                    [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `c` is named the same as one of the variants of the type `AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_str.rs:566:54[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m566[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if let Some(at) = self.chars.rposition(|&c| c == split_on) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                     [0m[0m[1m[33m^[0m
+
+[0m[1m[33mwarning[E0170][0m[0m[1m: pattern binding `c` is named the same as one of the variants of the type `AsciiChar`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ascii_string.rs:461:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m461[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        s.into_iter().map(|c| *c).collect()[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^[0m
+
+2024-06-21 17:52:11.260251 |WARN | [cargo_rudra] Target test:tests is not supported
+2024-06-21 17:52:11.260427 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

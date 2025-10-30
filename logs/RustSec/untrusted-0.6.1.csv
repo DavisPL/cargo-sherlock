@@ -1,0 +1,68 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,isrg,safe-to-deploy,,0.7.1,,
+************************************
+event,timestamp,name,username,url
+Author,-,Brian Smith,briansmith,https://github.com/briansmith
+************************************
+event,timestamp,downloads
+Downloads,-,121128181
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:34:23.787694 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:34:26.797274 |INFO | [rudra-progress] Running rudra for target lib:untrusted
+[0m[1m[33mwarning[0m[0m[1m: lint `fat_ptr_transmutes` has been removed: was accidentally removed back in 2014[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/untrusted.rs:101:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fat_ptr_transmutes,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(renamed_and_removed_lints)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: lint `legacy_directory_ownership` has been removed: converted into hard error, see issue #37872 <https://github.com/rust-lang/rust/issues/37872> for more information[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/untrusted.rs:102:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m102[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    legacy_directory_ownership,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/untrusted.rs:158:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m158[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let result = try!(read(&mut input));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/untrusted.rs:112:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m112[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    warnings,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[forbid(deprecated)]` implied by `#[forbid(warnings)]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/untrusted.rs:172:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m172[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let result = try!(read(&mut input));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/untrusted.rs:218:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m218[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let result = try!(read(Some(&mut input)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/untrusted.rs:319:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m319[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let new_i = try!(self.i.checked_add(num_bytes).ok_or(EndOfInput));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `untrusted` due to 4 previous errors; 2 warnings emitted
+2024-06-21 17:34:30.655301 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

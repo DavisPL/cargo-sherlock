@@ -1,0 +1,35 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "aurexav"
+  ],
+  "stars": 20,
+  "forks": 6,
+  "downloads": 6995681,
+  "num_side_effects": 7,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "smallvec",
+      "1.14.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 5,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

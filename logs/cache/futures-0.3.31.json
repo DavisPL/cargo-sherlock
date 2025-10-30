@@ -1,0 +1,136 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "alexcrichton",
+    "cramertj",
+    "taiki-e"
+  ],
+  "stars": 5549,
+  "forks": 641,
+  "downloads": 254447913,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.3.27",
+      "notes": "There are no definitions in this crate, just exports of definitions from child crates."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.3.31",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.3.14",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"does-not-implement-crypto\", \"safe-to-deploy\",]",
+      "delta": "",
+      "version": "0.3.28",
+      "notes": "`futures` has no logic other than tests - it simply `pub use`s things from\\nother crates.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-0",
+      "delta": "",
+      "version": "0.3.28",
+      "notes": "`rg -i unsafe` in this crate had one hit: a comment in a test\\nmentioning UnsafeFutureObj. UnsafeFutureObj is implemented in\\nfutures-task-0.3.28, not here.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.21 -> 0.3.23",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.23 -> 0.3.25",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.25 -> 0.3.26",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.26 -> 0.3.28",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.28 -> 0.3.30",
+      "version": "",
+      "notes": "Only sub-crate updates and corresponding changes to tests."
+    }
+  ],
+  "dependencies": [
+    [
+      "futures-channel",
+      "0.3.31"
+    ],
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "futures-io",
+      "0.3.31"
+    ],
+    [
+      "futures-sink",
+      "0.3.31"
+    ],
+    [
+      "futures-task",
+      "0.3.31"
+    ],
+    [
+      "futures-util",
+      "0.3.31"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "pin-utils",
+      "0.1.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

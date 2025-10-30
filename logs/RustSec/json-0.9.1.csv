@@ -1,0 +1,1376 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Maciej Hirsz,maciejhirsz,https://github.com/maciejhirsz
+************************************
+event,timestamp,downloads
+Downloads,-,12377132
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:52:47.262005 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:52:51.316950 |INFO | [rudra-progress] Running rudra for target lib:json
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:485:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m485[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let slice = try!([0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:508:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m508[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'0' ... b'9' => (ch - b'0'),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(ellipsis_inclusive_range_patterns)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:509:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m509[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'a' ... b'f' => (ch + 10 - b'a'),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:510:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m510[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'A' ... b'F' => (ch + 10 - b'A'),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:521:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m521[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.read_hexdec_digit())[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:518:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m518[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.read_hexdec_digit()) << 12 |[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:519:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m519[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.read_hexdec_digit()) << 8  |[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:520:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m520[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.read_hexdec_digit()) << 4  |[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:529:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m529[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut codepoint = try!(self.read_hexdec_codepoint());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:532:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m532[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            0x0000 ... 0xD7FF => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:533:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m533[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            0xD800 ... 0xDBFF => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:539:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m539[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let lower = try!(self.read_hexdec_codepoint());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:541:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m541[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                if let 0xDC00 ... 0xDFFF = lower {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:547:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m547[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            0xE000 ... 0xFFFF => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:552:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m552[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            0x0000 ... 0x007F => self.buffer.push(codepoint as u8),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:553:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m553[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            0x0080 ... 0x07FF => self.buffer.extend_from_slice(&[[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:557:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m557[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            0x0800 ... 0xFFFF => self.buffer.extend_from_slice(&[[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:562:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m562[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            0x10000 ... 0x10FFFF => self.buffer.extend_from_slice(&[[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:601:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m601[0m[0m [0m[0m[1m[38;5;12m| ...[0m[0m                   try!(self.read_codepoint());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:651:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m651[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:337:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m337[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m657[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    return Ok(expect_fracton!(self, num, e));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;12m-----------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:346:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m346[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    result = try!($parser.expect_exponent($num, $e));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m657[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    return Ok(expect_fracton!(self, num, e));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;12m-----------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:689:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m689[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'0' ... b'9' => (ch - b'0') as i32,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:699:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m699[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m713[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        let key = expect!{ self,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[38;5;12m___________________-[0m
+[0m[1m[38;5;12m714[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            b'}'  => return Ok(Object::new()),[0m
+[0m[1m[38;5;12m715[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            b'\""' => expect_string!(self)[0m
+[0m[1m[38;5;12m716[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m713[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m        let key = expect!{ self,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[38;5;12m___________________-[0m
+[0m[1m[38;5;12m714[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            b'}'  => return Ok(Object::new()),[0m
+[0m[1m[38;5;12m715[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            b'\""' => expect_string!(self)[0m
+[0m[1m[38;5;12m716[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:200:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_complex_string(start));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m715[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'\""' => expect_string!(self)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;12m--------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_string` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m720[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        expect!(self, b':');[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m720[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        expect!(self, b':');[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:374:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m374[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'[' => JsonValue::Array(try!($parser.read_array())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:375:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m375[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'{' => JsonValue::Object(try!($parser.read_object())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:200:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_complex_string(start));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_string` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:337:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m337[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:346:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m346[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    result = try!($parser.expect_exponent($num, $e));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:305:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m305[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!($parser.expect_exponent($num, $e))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `allow_number_extensions` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:378:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m378[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'1' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:264:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m264[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_big_number(num));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:276:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m276[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:385:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m385[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    b'1' ... b'9' => expect_number!($parser, ch),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m722[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m725[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            let key = expect!{ self,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[38;5;12m_______________________-[0m
+[0m[1m[38;5;12m726[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                b'}' => break,[0m
+[0m[1m[38;5;12m727[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                b',' => {[0m
+[0m[1m[38;5;12m728[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                    expect!(self, b'""');[0m
+[0m[1m[38;5;12m729[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                    expect_string!(self)[0m
+[0m[1m[38;5;12m730[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                }[0m
+[0m[1m[38;5;12m731[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_____________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m725[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            let key = expect!{ self,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m [0m[0m[1m[38;5;12m_______________________-[0m
+[0m[1m[38;5;12m726[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                b'}' => break,[0m
+[0m[1m[38;5;12m727[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                b',' => {[0m
+[0m[1m[38;5;12m728[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                    expect!(self, b'""');[0m
+[0m[1m[38;5;12m729[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                    expect_string!(self)[0m
+[0m[1m[38;5;12m730[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                }[0m
+[0m[1m[38;5;12m731[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_____________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m728[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    expect!(self, b'""');[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m728[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    expect!(self, b'""');[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:200:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_complex_string(start));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m729[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    expect_string!(self)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m--------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_string` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m733[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            expect!(self, b':');[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m733[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            expect!(self, b':');[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:374:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m374[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'[' => JsonValue::Array(try!($parser.read_array())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:375:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m375[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'{' => JsonValue::Object(try!($parser.read_object())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:200:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_complex_string(start));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_string` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:337:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m337[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:346:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m346[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    result = try!($parser.expect_exponent($num, $e));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:305:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m305[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!($parser.expect_exponent($num, $e))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `allow_number_extensions` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:378:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m378[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'1' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:264:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m264[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_big_number(num));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:276:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m276[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:385:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m385[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    b'1' ... b'9' => expect_number!($parser, ch),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m735[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            object.insert(key, expect_value!(self));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:374:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m374[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'[' => JsonValue::Array(try!($parser.read_array())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:375:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m375[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'{' => JsonValue::Object(try!($parser.read_object())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:200:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_complex_string(start));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_string` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:337:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m337[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:346:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m346[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    result = try!($parser.expect_exponent($num, $e));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:305:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m305[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!($parser.expect_exponent($num, $e))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `allow_number_extensions` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:378:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m378[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'1' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:264:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m264[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_big_number(num));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:276:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m276[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:385:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m385[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    b'1' ... b'9' => expect_number!($parser, ch),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m743[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let first = expect_value!{ self, b']' => return Ok(Vec::new()) };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----------------------------------------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m758[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m        expect!{[0m
+[0m[1m[38;5;12m759[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self,[0m
+[0m[1m[38;5;12m760[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            b']' => return Ok(array),[0m
+[0m[1m[38;5;12m761[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            b',' => {[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m773[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            }[0m
+[0m[1m[38;5;12m774[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m758[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m        expect!{[0m
+[0m[1m[38;5;12m759[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self,[0m
+[0m[1m[38;5;12m760[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            b']' => return Ok(array),[0m
+[0m[1m[38;5;12m761[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            b',' => {[0m
+[0m[1m[38;5;12m...[0m[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m773[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            }[0m
+[0m[1m[38;5;12m774[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:374:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m374[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'[' => JsonValue::Array(try!($parser.read_array())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:375:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m375[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'{' => JsonValue::Object(try!($parser.read_object())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:200:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_complex_string(start));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_string` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:337:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m337[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:346:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m346[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    result = try!($parser.expect_exponent($num, $e));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:305:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m305[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!($parser.expect_exponent($num, $e))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `allow_number_extensions` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:378:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m378[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'1' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:264:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m264[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_big_number(num));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:276:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m276[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:385:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m385[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    b'1' ... b'9' => expect_number!($parser, ch),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m763[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m777[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m            expect!{ self,[0m
+[0m[1m[38;5;12m778[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                b']' => break,[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m[1m[38;5;12m780[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_____________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m777[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0m            expect!{ self,[0m
+[0m[1m[38;5;12m778[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                b']' => break,[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m[1m[38;5;12m780[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_____________-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:374:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m374[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'[' => JsonValue::Array(try!($parser.read_array())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:375:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m375[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'{' => JsonValue::Object(try!($parser.read_object())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:200:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_complex_string(start));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_string` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:337:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m337[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:346:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m346[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    result = try!($parser.expect_exponent($num, $e));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:305:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m305[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!($parser.expect_exponent($num, $e))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `allow_number_extensions` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:378:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m378[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'1' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:264:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m264[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_big_number(num));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:276:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m276[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:385:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m385[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    b'1' ... b'9' => expect_number!($parser, ch),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b',' => array.push(expect_value!(self))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:103:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            9 ... 13 | 32 => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:106:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        9 ... 13 | 32 => {},[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_byte_ignore_whitespace` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:374:38[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m374[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'[' => JsonValue::Array(try!($parser.read_array())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:375:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m375[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'{' => JsonValue::Object(try!($parser.read_object())),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:200:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m200[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_complex_string(start));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_string` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:337:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m337[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:346:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m346[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    result = try!($parser.expect_exponent($num, $e));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_fracton` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:305:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m305[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!($parser.expect_exponent($num, $e))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `allow_number_extensions` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:378:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m378[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            b'1' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:264:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m264[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                result = try!($parser.read_big_number(num));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:276:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m276[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                b'0' ... b'9' => {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_number` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:385:26[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m385[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    b'1' ... b'9' => expect_number!($parser, ch),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m788[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let value = expect_value!(self);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-------------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `expect_value` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: `...` range patterns are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/parser.rs:794:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m794[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                9 ... 13 | 32 => self.bump(),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: use `..=` for an inclusive range[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/object.rs:121:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m121[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                key_buf: mem::uninitialized(),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/object.rs:123:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m123[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                key_ptr: mem::uninitialized(),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/object.rs:197:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m197[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    key_buf: mem::uninitialized(),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/object.rs:209:35[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m209[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    key_ptr: mem::uninitialized(),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                  [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/object.rs:433:52[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m433[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut removed: JsonValue = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                   [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+2024-06-21 17:52:56.518096 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:52:56.522096 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:52:56.524746 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:52:56.524756 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:52:56.577884 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:52:56.577910 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:52:58.049115 |WARN | [cargo_rudra] Target test:lib is not supported
+2024-06-21 17:52:58.049300 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

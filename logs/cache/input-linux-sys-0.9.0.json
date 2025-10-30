@@ -1,0 +1,47 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "arcnmx"
+  ],
+  "stars": 5,
+  "forks": 1,
+  "downloads": 77440,
+  "num_side_effects": 12,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "nix",
+      "0.29.0"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 12,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust git-path-0.7.2...
+Trust Score for git-path-0.7.2: 65
+Assumptions Made:
+git-path-0.7.2 has many stars and forks: 0 wt
+git-path-0.7.2 having many stars and forks implies it is safe: 15 wt
+git-path-0.7.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

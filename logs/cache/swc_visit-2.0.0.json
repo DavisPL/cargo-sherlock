@@ -1,0 +1,48 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "kdy1",
+    "swc-bot"
+  ],
+  "stars": 31910,
+  "forks": 1269,
+  "downloads": 7999296,
+  "num_side_effects": 16,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-2\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.5.7",
+      "notes": "Reviewed in CL 546872016"
+    }
+  ],
+  "dependencies": [
+    [
+      "either",
+      "1.15.0"
+    ],
+    [
+      "new_debug_unreachable",
+      "1.0.6"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 16,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

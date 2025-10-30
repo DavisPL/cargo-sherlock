@@ -1,0 +1,84 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,mozilla,safe-to-deploy,,0.3.8,,
+************************************
+event,timestamp,name,username,url
+Author,-,Amanieu d'Antras,Amanieu,https://github.com/Amanieu
+Author,-,Taiki Endo,taiki-e,https://github.com/taiki-e
+Author,-,admins,github:crossbeam-rs:admins,https://github.com/crossbeam-rs
+************************************
+event,timestamp,downloads
+Downloads,-,72303879
+************************************
+event,timestamp,total,flagged
+Side Effects,-,39,39
+************************************
+Rudra,timestamp
+"2024-06-21 18:02:37.452167 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:02:41.189791 |INFO | [rudra-progress] Running rudra for target lib:crossbeam-queue
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicPtr::<T>::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/seg_queue.rs:218:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m218[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    .compare_and_swap(block, new, Ordering::Release)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-21 18:02:51.562348 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:02:51.566131 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:02:51.570081 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:02:51.570091 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:02:51.602996 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:02:51.603019 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/array_queue.rs:85:1: 85:47
+unsafe impl<T: Send> Sync for ArrayQueue<T> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/seg_queue.rs:149:1: 149:45
+unsafe impl<T: Send> Sync for SegQueue<T> {}
+Info (UnsafeDataflow:/SliceUnchecked): Potential unsafe dataflow issue in `<seg_queue::SegQueue<T> as std::ops::Drop>::drop`
+-> src/seg_queue.rs:441:5: 475:6
+fn drop(&mut self) {
+        let mut head = self.head.index.load(Ordering::Relaxed);
+        let mut tail = self.tail.index.load(Ordering::Relaxed);
+        let mut block = self.head.block.load(Ordering::Relaxed);
+
+        // Erase the lower bits.
+        head &= !((1 << SHIFT) - 1);
+        tail &= !((1 << SHIFT) - 1);
+
+        unsafe {
+            // Drop all values between `head` and `tail` and deallocate the heap-allocated blocks.
+            while head != tail {
+                let offset = (head >> SHIFT) % LAP;
+
+                if offset < BLOCK_CAP {
+                    // Drop the value in the slot.
+                    let slot = [0m[33m(*block).slots.get_unchecked(offset)[0m;
+                    let p = &mut *slot.value.get();
+                    [0m[36mp.as_mut_ptr().drop_in_place()[0m;
+                } else {
+                    // Deallocate the block and move to the next one.
+                    let next = (*block).next.load(Ordering::Relaxed);
+                    drop(Box::from_raw(block));
+                    block = next;
+                }
+
+                head = head.wrapping_add(1 << SHIFT);
+            }
+
+            // Deallocate the last remaining block.
+            if !block.is_null() {
+                drop(Box::from_raw(block));
+            }
+        }
+    }
+[0m
+2024-06-21 18:02:52.618910 |WARN | [cargo_rudra] Target test:seg_queue is not supported
+2024-06-21 18:02:52.618970 |WARN | [cargo_rudra] Target test:array_queue is not supported
+2024-06-21 18:02:52.619077 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

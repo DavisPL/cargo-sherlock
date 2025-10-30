@@ -1,0 +1,77 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Hibariya,hibariya,https://github.com/hibariya
+************************************
+event,timestamp,downloads
+Downloads,-,211262
+************************************
+event,timestamp,total,flagged
+Side Effects,-,13,12
+************************************
+Rudra,timestamp
+"2024-06-21 18:03:51.846401 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:03:55.571385 |INFO | [rudra-progress] Running rudra for target lib:pty
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/descriptor/err.rs:36:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Error`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/fork/pty/master/err.rs:41:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Error`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/fork/pty/slave/err.rs:36:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Error`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/fork/err.rs:67:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Error`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type alias is never used: `Result`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/descriptor/err.rs:6:1[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m6[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub type Result<T> = ::std::result::Result<T, DescriptorError>;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+2024-06-21 18:04:03.563752 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:04:03.567657 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:04:03.568019 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:04:03.568030 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:04:03.626868 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:04:03.626892 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:04:04.612241 |WARN | [cargo_rudra] Target example:main is not supported
+2024-06-21 18:04:04.612318 |WARN | [cargo_rudra] Target example:new is not supported
+2024-06-21 18:04:04.612327 |WARN | [cargo_rudra] Target test:lib is not supported
+2024-06-21 18:04:04.612330 |WARN | [cargo_rudra] Target test:it_fork_with_new_pty is not supported
+2024-06-21 18:04:04.612335 |WARN | [cargo_rudra] Target test:it_can_read_write is not supported
+2024-06-21 18:04:04.612427 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

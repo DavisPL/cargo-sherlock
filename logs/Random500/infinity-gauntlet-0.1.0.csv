@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Dan Greco,dangreco,https://github.com/dangreco
+************************************
+event,timestamp,downloads
+Downloads,-,868
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,3
+************************************
+Rudra,timestamp
+"2024-06-23 15:27:07.950106 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:27:09.172668 |INFO | [rudra-progress] Running rudra for target bin:infinity-gauntlet
+2024-06-23 15:27:13.320258 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:27:13.323829 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:27:13.324925 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:27:13.324938 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:27:13.326373 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:27:13.326386 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:27:13.368653 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,134 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "zbraniecki",
+    "github:unicode-org:icu4x-release"
+  ],
+  "stars": 1631,
+  "forks": 224,
+  "downloads": 123346438,
+  "num_side_effects": 17,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.5.0",
+      "notes": "This crate contains a custom impl of FxHash. The maintainers needed a custom\\nhashing function that was `const` and self-contained. Since FxHash isn't built\\nto be crypto secure, this does-not-implement-crypto.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-1\",]",
+      "delta": "",
+      "version": "2.0.0-beta1",
+      "notes": "All unsafe code commented:\\n  - Minor unsafe transmutes between types which are identical but not type-system-provably so.\\n  - One unsafe EqULE impl\\n  - Some repr(transparent) transmutes\\n  - A from_utf8_unchecked for an ascii-validated string\\n\\nComment improvements can be found in https://github.com/unicode-org/icu4x/pull/6056\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-1\",]",
+      "delta": "2.0.0-beta1 -> 2.0.0-beta2",
+      "version": "",
+      "notes": "from_utf8_unchecked unsafe remove, all other unsafe not meaningfully changed"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "1.2.0",
+      "notes": "Although this has unsafe block, this has a commnet why this is safety and I audited code. Also, this doesn't have file access and network access."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.2.0 -> 1.4.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.4.0 -> 1.5.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.0.0-beta2 -> 2.0.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "proc-macro2",
+      "1.0.101"
+    ],
+    [
+      "unicode-ident",
+      "1.0.19"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.106"
+    ],
+    [
+      "icu_locale_core",
+      "2.0.0"
+    ],
+    [
+      "litemap",
+      "0.8.0"
+    ],
+    [
+      "tinystr",
+      "0.8.1"
+    ],
+    [
+      "writeable",
+      "0.6.1"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.1"
+    ],
+    [
+      "yoke",
+      "0.8.0"
+    ],
+    [
+      "zerofrom",
+      "0.1.6"
+    ],
+    [
+      "zerovec",
+      "0.11.4"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 7,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

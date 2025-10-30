@@ -1,0 +1,32 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,mozilla,safe-to-run,0.2.37 -> 0.2.38,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Alex Crichton,alexcrichton,https://github.com/alexcrichton
+Author,-,Patrick Mooney,pfmooney,https://github.com/pfmooney
+Author,-,libs,github:rust-lang:libs,https://github.com/rust-lang
+Author,-,libs,github:rust-lang-nursery:libs,https://github.com/rust-lang-nursery
+Author,-,crates,github:deprecrated:crates,https://github.com/deprecrated
+************************************
+event,timestamp,downloads
+Downloads,-,42268062
+************************************
+event,timestamp,total,flagged
+Side Effects,-,92,64
+************************************
+Rudra,timestamp
+"2024-06-21 18:45:44.280472 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:45:47.635229 |INFO | [rudra-progress] Running rudra for target lib:net2
+2024-06-21 18:45:54.836229 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:45:54.840019 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:45:54.840365 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:45:54.840374 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:45:54.914684 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:45:54.914711 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:45:55.968918 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

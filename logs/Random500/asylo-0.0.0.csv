@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,jethrogb,https://github.com/jethrogb
+Author,-,crates-owners,github:fortanix:crates-owners,https://github.com/fortanix
+************************************
+event,timestamp,downloads
+Downloads,-,714
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 17:18:17.624833 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 17:18:20.554077 |INFO | [rudra-progress] Running rudra for target lib:asylo
+2024-06-23 17:18:24.193195 |INFO | [rudra-progress] Rudra started
+2024-06-23 17:18:24.196633 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 17:18:24.199821 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 17:18:24.199835 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 17:18:24.199893 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 17:18:24.199902 |INFO | [rudra-progress] Rudra finished
+2024-06-23 17:18:24.627039 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

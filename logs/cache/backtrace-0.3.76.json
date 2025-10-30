@@ -1,0 +1,128 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "rust-lang-owner"
+  ],
+  "stars": 597,
+  "forks": 272,
+  "downloads": 265625719,
+  "num_side_effects": 364,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.3.66",
+      "notes": "I am the author of this crate."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-run",
+      "delta": "0.3.66 -> 0.3.67",
+      "version": "",
+      "notes": "This change introduced a new means of learning the current exe by parsing\\nLinux-specific constructs and does not constitute any major changes to the\\ncrate.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.3.67",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.3.67 -> 0.3.68",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.3.68 -> 0.3.69",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.66 -> 0.3.65",
+      "version": "",
+      "notes": "Only changes were to the miri backend, which will be checked"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.67 -> 0.3.69",
+      "version": "",
+      "notes": "Changes to `unsafe` blocks:\\n- New call to `GetCurrentProcessId` on Windows, to help generate a process-unique name to\\n  use inside an existing `CreateMutexA` call.\\n- Uses `libc::mmap64` on Linux instead of `libc::mmap`.\\n- Alters `Stash` to allow caching more than one `Mmap`; the existing `unsafe` safety\\n  condition continues to be applicable.\\n\\nThere are also several more places where DWARF data is mmapped from a filesystem path and\\nthen loaded. These appear to all derive from existing paths that themselves were already\\nbeing mmapped and loaded.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.69 -> 0.3.71",
+      "version": "",
+      "notes": "This crate inherently requires a lot of `unsafe` code, but the changes look plausible."
+    }
+  ],
+  "dependencies": [
+    [
+      "addr2line",
+      "0.25.1"
+    ],
+    [
+      "gimli",
+      "0.32.3"
+    ],
+    [
+      "cfg-if",
+      "1.0.3"
+    ],
+    [
+      "libc",
+      "0.2.177"
+    ],
+    [
+      "miniz_oxide",
+      "0.8.9"
+    ],
+    [
+      "adler2",
+      "2.0.1"
+    ],
+    [
+      "object",
+      "0.37.3"
+    ],
+    [
+      "memchr",
+      "2.7.6"
+    ],
+    [
+      "rustc-demangle",
+      "0.1.26"
+    ],
+    [
+      "windows-link",
+      "0.2.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 321,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 5,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.61
+  }
+}

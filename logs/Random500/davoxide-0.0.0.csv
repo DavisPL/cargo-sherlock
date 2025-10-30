@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alexander Krantz,akrantz01,https://github.com/akrantz01
+************************************
+event,timestamp,downloads
+Downloads,-,662
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 09:32:02.325719 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 09:32:04.000933 |INFO | [rudra-progress] Running rudra for target bin:davoxide
+2024-06-23 10:47:56.658698 |INFO | [rudra-progress] Rudra started
+2024-06-23 10:47:56.663594 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 10:47:56.665659 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 10:47:56.665678 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 10:47:56.667626 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 10:47:56.667675 |INFO | [rudra-progress] Rudra finished
+2024-06-23 10:47:56.724923 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

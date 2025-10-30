@@ -1,0 +1,60 @@
+{
+  "rustsec_label": [
+    "Uncategorized",
+    "INFO"
+  ],
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "Vulnerability",
+    "INFOUnsound",
+    "INFOUnmaintained"
+  ],
+  "developers": [
+    "mvdnes",
+    "zesterer"
+  ],
+  "stars": 509,
+  "forks": 94,
+  "downloads": 256570927,
+  "num_side_effects": 69,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.9.4",
+      "notes": "I've verified the contents of this crate and that while they contain `unsafe`\\nit's exclusively around implementing atomic primitive where some `unsafe` is to\\nbe expected. Otherwise this crate does not unduly access ambient capabilities\\nand does what it says on the tin, providing spin-based synchronization\\nprimitives.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.4 -> 0.9.8",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.9.8",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 60,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 43,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 121.38
+  }
+}

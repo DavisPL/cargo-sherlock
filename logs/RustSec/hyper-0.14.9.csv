@@ -1,0 +1,64 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Low,bytecode-alliance,safe-to-deploy,1.0.0-rc.3 -> 1.0.1,,Quite a few changes here relative to the last RC but everything is related to\nrefactorings and such. No new fundamental addition of functionality or\nsubstantially new unsafe code.\n,
+audits,-,Low,google,safe-to-run,,0.14.20,,
+audits,-,Low,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.14.27,,
+audits,-,Low,google,ub-risk-4,,1.0.1,Reviewed in CL 588384310\nIssues found:\n - https://github.com/hyperium/hyper/pull/3498\n - https://github.com/hyperium/hyper/issues/3556\n - https://github.com/hyperium/hyper/issues/3500 \n(probably not a real issue)\n - https://github.com/hyperium/hyper/issues/3554 (documentation)\n,
+audits,-,Low,mozilla,safe-to-run,0.14.19 -> 0.14.20,,,
+audits,-,Low,mozilla,safe-to-run,0.14.20 -> 0.14.22,,,
+audits,-,Low,mozilla,safe-to-run,0.14.22 -> 0.14.23,,,
+audits,-,Low,mozilla,safe-to-run,0.14.23 -> 0.14.24,,,
+audits,-,Low,zcash,safe-to-deploy,0.14.23 -> 0.14.24,,"Fixes a bug where memory was reserved based on an adversary-controllable size, before the\ncorresponding data was received.\n",
+audits,-,Low,zcash,safe-to-deploy,0.14.25 -> 0.14.26,,,
+audits,-,Low,zcash,safe-to-deploy,0.14.26 -> 0.14.27,,,
+audits,-,Low,zcash,safe-to-deploy,0.14.27 -> 0.14.28,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Sean McArthur,seanmonstar,https://github.com/seanmonstar
+Author,-,Core,github:hyperium:core,https://github.com/hyperium
+************************************
+event,timestamp,downloads
+Downloads,-,161359540
+************************************
+event,timestamp,total,flagged
+Side Effects,-,62,41
+************************************
+Rudra,timestamp
+"2024-06-21 18:34:30.231234 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:34:33.772664 |INFO | [rudra-progress] Running rudra for target lib:hyper
+2024-06-21 18:34:55.027203 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:34:55.031257 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:34:55.031644 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:34:55.031660 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:34:55.097433 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:34:55.097469 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:34:56.468361 |WARN | [cargo_rudra] Target example:client is not supported
+2024-06-21 18:34:56.468499 |WARN | [cargo_rudra] Target example:client_json is not supported
+2024-06-21 18:34:56.468506 |WARN | [cargo_rudra] Target example:echo is not supported
+2024-06-21 18:34:56.468526 |WARN | [cargo_rudra] Target example:gateway is not supported
+2024-06-21 18:34:56.468535 |WARN | [cargo_rudra] Target example:hello is not supported
+2024-06-21 18:34:56.468538 |WARN | [cargo_rudra] Target example:http_proxy is not supported
+2024-06-21 18:34:56.468540 |WARN | [cargo_rudra] Target example:multi_server is not supported
+2024-06-21 18:34:56.468546 |WARN | [cargo_rudra] Target example:params is not supported
+2024-06-21 18:34:56.468554 |WARN | [cargo_rudra] Target example:send_file is not supported
+2024-06-21 18:34:56.468561 |WARN | [cargo_rudra] Target example:service_struct_impl is not supported
+2024-06-21 18:34:56.468564 |WARN | [cargo_rudra] Target example:single_threaded is not supported
+2024-06-21 18:34:56.468570 |WARN | [cargo_rudra] Target example:state is not supported
+2024-06-21 18:34:56.468577 |WARN | [cargo_rudra] Target example:tower_client is not supported
+2024-06-21 18:34:56.468579 |WARN | [cargo_rudra] Target example:tower_server is not supported
+2024-06-21 18:34:56.468594 |WARN | [cargo_rudra] Target example:upgrades is not supported
+2024-06-21 18:34:56.468610 |WARN | [cargo_rudra] Target example:web_api is not supported
+2024-06-21 18:34:56.468613 |WARN | [cargo_rudra] Target test:client is not supported
+2024-06-21 18:34:56.468633 |WARN | [cargo_rudra] Target test:integration is not supported
+2024-06-21 18:34:56.468642 |WARN | [cargo_rudra] Target test:server is not supported
+2024-06-21 18:34:56.468645 |WARN | [cargo_rudra] Target bench:body is not supported
+2024-06-21 18:34:56.468647 |WARN | [cargo_rudra] Target bench:connect is not supported
+2024-06-21 18:34:56.468656 |WARN | [cargo_rudra] Target bench:end_to_end is not supported
+2024-06-21 18:34:56.468666 |WARN | [cargo_rudra] Target bench:pipeline is not supported
+2024-06-21 18:34:56.468668 |WARN | [cargo_rudra] Target bench:server is not supported
+2024-06-21 18:34:56.468950 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

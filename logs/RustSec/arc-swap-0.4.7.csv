@@ -1,0 +1,54 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Michal 'vorner' Vaner,vorner,https://github.com/vorner
+Author,-,maintainers,github:rust-bus:maintainers,https://github.com/rust-bus
+************************************
+event,timestamp,downloads
+Downloads,-,54758452
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:28:50.873013 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:28:54.445325 |INFO | [rudra-progress] Running rudra for target lib:arc-swap
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated function `std::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1032:29[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1032[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    atomic::spin_loop_hint();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:5:23[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m    [0m[0m[1m[38;5;12m| [0m[0m#![deny(missing_docs, warnings)][0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[deny(deprecated)]` implied by `#[deny(warnings)]`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicBool::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/debt.rs:46:29[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            if !node.in_use.compare_and_swap(false, true, Ordering::Relaxed) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicPtr::<T>::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:948:37[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m948[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let previous_ptr = self.ptr.compare_and_swap(cur_ptr, new, Ordering::SeqCst);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1017:22[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1017[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    .compare_and_swap(gen, next_gen, Ordering::Relaxed);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `arc-swap` due to 4 previous errors
+2024-06-21 17:28:58.540213 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

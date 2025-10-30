@@ -1,0 +1,6 @@
+Solving for required assumptions to trust rusttype-0.9.3...
+Trust Score for rusttype-0.9.3: 74
+Assumptions Made:
+rusttype-0.9.3 has many downloads: 14 wt
+rusttype-0.9.3 having many downloads implies it is safe: 10 wt
+rusttype-0.9.3 appearing in RustSec implies it is less safe (score penalty): 50 weight

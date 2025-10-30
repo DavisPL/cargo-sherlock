@@ -1,0 +1,142 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Alexander Huszagh,Alexhuszagh,https://github.com/Alexhuszagh
+************************************
+event,timestamp,downloads
+Downloads,-,319583
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:03:41.079046 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:03:44.750598 |INFO | [rudra-progress] Running rudra for target lib:stackvector
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:307:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m307[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                data: mem::uninitialized(),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:332:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m332[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut data: A = mem::uninitialized();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:677:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m677[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let mut data: A = mem::uninitialized();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+2024-06-21 17:03:53.583814 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:03:53.588067 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:03:53.589662 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:03:53.589683 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:03:53.643662 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:03:53.643699 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:991:1: 992:2
+unsafe impl<A: Array> Send for StackVec<A> where A::Item: Send {
+}
+Warning (UnsafeDataflow:/CopyFlow/WriteFlow): Potential unsafe dataflow issue in `StackVec::<A>::insert_many`
+-> src/lib.rs:543:5: 585:6
+pub fn insert_many<I: iter::IntoIterator<Item=A::Item>>(&mut self, index: usize, iterable: I) {
+        let iter = [0m[36miterable.into_iter()[0m;
+        if index == self.len() {
+            return self.extend(iter);
+        }
+
+        let (lower_size_bound, _) = [0m[36miter.size_hint()[0m;
+        assert!(lower_size_bound <= std::isize::MAX as usize);  // Ensure offset is indexable
+        assert!(index + lower_size_bound >= index);             // Protect against overflow
+        assert!(self.len() + lower_size_bound <= self.capacity());
+
+        unsafe {
+            let old_len = self.len();
+            assert!(index <= old_len);
+            let mut ptr = self.as_mut_ptr().padd(index);
+
+            // Move the trailing elements.
+            [0m[31mptr::copy(ptr, ptr.padd(lower_size_bound), old_len - index)[0m;
+
+            // In case the iterator panics, don't double-drop the items we just copied above.
+            self.set_len(index);
+
+            let mut num_added = 0;
+            for element in [0m[36miter[0m {
+                let mut cur = ptr.padd(num_added);
+                if num_added >= lower_size_bound {
+                    // Iterator provided more elements than the hint.  Move trailing items again.
+                    assert!(self.len() + 1 <= self.capacity());
+                    ptr = self.as_mut_ptr().padd(index);
+                    cur = ptr.padd(num_added);
+                    [0m[31mptr::copy(cur, cur.padd(1), old_len - index)[0m;
+                }
+                [0m[33mptr::write(cur, element)[0m;
+                num_added += 1;
+            }
+            if num_added < lower_size_bound {
+                // Iterator provided fewer elements than the hint
+                [0m[31mptr::copy(ptr.padd(lower_size_bound), ptr.padd(num_added), old_len - index)[0m;
+            }
+
+            self.set_len(old_len + num_added);
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<StackVec<A> as std::iter::Extend<<A as Array>::Item>>::extend`
+-> src/lib.rs:896:5: 920:6
+fn extend<I: iter::IntoIterator<Item=A::Item>>(&mut self, iterable: I) {
+        let mut iter = [0m[36miterable.into_iter()[0m;
+        let (lower_bound, upper_bound) = [0m[36miter.size_hint()[0m;
+        let upper_bound = upper_bound.expect(""iterable must provide upper bound."");
+        assert!(self.len() + upper_bound <= self.capacity());
+
+        unsafe {
+            let len = self.len();
+            let ptr = self.as_mut_ptr().padd(len);
+            let mut count = 0;
+            while count < lower_bound {
+                if let Some(out) = [0m[36miter.next()[0m {
+                    [0m[33mptr::write(ptr.padd(count), out)[0m;
+                    count += 1;
+                } else {
+                    break;
+                }
+            }
+            self.set_len(len + count);
+        }
+
+        for elem in [0m[36miter[0m {
+            self.push(elem);
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `StackVec::<A>::from_elem`
+-> src/lib.rs:734:5: 746:6
+pub fn from_elem(elem: A::Item, n: usize) -> Self {
+        assert!(n <= [0m[36mA::size()[0m);
+        let mut v = StackVec::<A>::new();
+        unsafe {
+            let ptr = v.as_mut_ptr();
+            let mut local_len = SetLenOnDrop::new(&mut v.length);
+            for i in 0..n as isize {
+                [0m[33mptr::write(ptr.offset(i), [0m[36melem.clone()[0m[33m)[0m;
+                local_len.increment_len(1);
+            }
+        }
+        v
+    }
+[0m
+2024-06-21 17:03:54.800450 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 17:03:54.800588 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

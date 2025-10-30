@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mitchell Mosure,mosure,https://github.com/mosure
+************************************
+event,timestamp,downloads
+Downloads,-,8113
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,1
+************************************
+Rudra,timestamp
+"2024-06-23 14:06:19.534933 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:06:23.358749 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bevy = ""^0.13""`
+candidate versions found which didn't match: 0.11.3, 0.11.2, 0.11.1, ...
+location searched: crates.io index
+required by package `bevy_ort v0.12.8 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust linea-0.9.3...
+Trust Score for linea-0.9.3: 189
+Assumptions Made:
+linea-0.9.3 has many downloads: 129 wt
+linea-0.9.3 having many downloads implies it is safe: 10 wt
+linea-0.9.3 appearing in RustSec implies it is less safe (score penalty): 50 weight

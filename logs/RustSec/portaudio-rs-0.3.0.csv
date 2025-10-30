@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mathijs van de Nes,mvdnes,https://github.com/mvdnes
+************************************
+event,timestamp,downloads
+Downloads,-,74916
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 16:43:15.632442 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:43:19.120448 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to get `portaudio-sys` as a dependency of package `portaudio-rs v0.3.0 (/tmp/rudra)`
+
+Caused by:
+  failed to load source for dependency `portaudio-sys`
+
+Caused by:
+  Unable to update /tmp/rudra/portaudio-sys
+
+Caused by:
+  failed to read `/tmp/rudra/portaudio-sys/Cargo.toml`
+
+Caused by:
+  No such file or directory (os error 2)
+
+"
+************************************

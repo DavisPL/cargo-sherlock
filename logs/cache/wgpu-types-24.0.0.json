@@ -1,0 +1,183 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "kvark",
+    "grovesNL",
+    "cwfitzgerald",
+    "github:gfx-rs:wgpu"
+  ],
+  "stars": 13687,
+  "forks": 1015,
+  "downloads": 7582288,
+  "num_side_effects": 8,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.12.0",
+      "notes": "This crate, up through the indicated version, was written or reviewed\\nby Dzmitry Malyshau while he was a Mozilla employee. Dzmitry left\\nMozilla at the beginning of February 2022. This audit statement was\\ncollected by Jim Blandy, a Mozilla employee, over email in July 2022:\\nDzmitry was shown, and agreed to, the 'safe-to-deploy' text.\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.12.0 -> 0.13.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.13.0 -> 0.14.0",
+      "version": "",
+      "notes": "Audit by Erich Gubler, Jim Blandy, Nicolas Silva, and Teodor Tanasoaia."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.0 -> 0.15.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.15.0 -> 0.16.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.16.0 -> 0.17.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.17.0 -> 0.18.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.18.0 -> 0.19.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.19.2 -> 0.20.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.20.0 -> 22.0.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "22.0.0 -> 23.0.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "23.0.0 -> 24.0.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "js-sys",
+      "0.3.77"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "wasm-bindgen",
+      "0.2.100"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "wasm-bindgen-macro",
+      "0.2.100"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "wasm-bindgen-macro-support",
+      "0.2.100"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "wasm-bindgen-backend",
+      "0.2.100"
+    ],
+    [
+      "bumpalo",
+      "3.17.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "wasm-bindgen-shared",
+      "0.2.100"
+    ],
+    [
+      "web-sys",
+      "0.3.77"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 5,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 5,
+    "failed": 0,
+    "ignored": 18,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.22
+  }
+}

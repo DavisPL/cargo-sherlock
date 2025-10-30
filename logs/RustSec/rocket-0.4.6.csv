@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sergio Benitez,SergioBenitez,https://github.com/SergioBenitez
+************************************
+event,timestamp,downloads
+Downloads,-,4847040
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:04:45.819883 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:04:50.241870 |INFO | [rudra-progress] Running rudra for target lib:rocket
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:04:53.678810 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

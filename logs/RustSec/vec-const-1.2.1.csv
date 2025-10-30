@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Griffin O'Neill,Eolu,https://github.com/Eolu
+************************************
+event,timestamp,downloads
+Downloads,-,3360
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:09:17.328028 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:09:20.535816 |INFO | [rudra-progress] Running rudra for target lib:vec-const
+2024-06-21 18:09:24.226823 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:09:24.230313 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:09:24.230668 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:09:24.230680 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:09:24.230752 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:09:24.230759 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:09:24.766919 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

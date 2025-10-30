@@ -1,0 +1,39 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "abonander"
+  ],
+  "stars": 40,
+  "forks": 17,
+  "downloads": 15131135,
+  "num_side_effects": 62,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "safemem",
+      "0.3.3"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 24,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

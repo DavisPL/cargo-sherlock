@@ -1,0 +1,56 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",,0.8.15,,
+audits,-,Critical,google,"[ ""safe-to-run"", ""does-not-implement-crypto"",]",0.8.15 -> 0.8.16,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.8.8 -> 0.8.11,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.8.11 -> 0.8.14,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.8.14 -> 0.8.19,,,
+audits,-,Critical,zcash,safe-to-deploy,0.8.14 -> 0.8.15,,- Fixes a wrapping overflow for large timeouts.\n- Marks some BPF and Sony Vita targets as not having atomics.\n,
+audits,-,Critical,zcash,safe-to-deploy,0.8.15 -> 0.8.16,,- Fixes cache line alignment for some targets.\n- Replaces `mem::replace` with `Option::take` inside `unsafe` blocks.\n- Unmarks some ARMv7r and Sony Vita targets as not having 64-bit atomics.\n,
+audits,-,Critical,zcash,safe-to-deploy,0.8.16 -> 0.8.17,,"- Build script change removes some now-unused config flags, and checks for thread\n  sanitization to enable this on `crossbeam`.\n- Changes to `unsafe` blocks are to move them, or to introduce a couple of new\n  blocks identical to equivalent earlier blocks (now that MSRV is new enough to\n  access newer `Atomic*` methods).\n",
+audits,-,Critical,zcash,safe-to-deploy,0.8.17 -> 0.8.18,,Changes to `unsafe` code are to construct and drop `MaybeUninit<T>` directly\nvia its methods (one of which is now usable with the new MSRV) instead of via\ncasting.\n,
+************************************
+event,timestamp,name,username,url
+Author,-,Jeehoon Kang,jeehoonkang,https://github.com/jeehoonkang
+Author,-,Amanieu d'Antras,Amanieu,https://github.com/Amanieu
+Author,-,Taiki Endo,taiki-e,https://github.com/taiki-e
+Author,-,admins,github:crossbeam-rs:admins,https://github.com/crossbeam-rs
+************************************
+event,timestamp,downloads
+Downloads,-,211750704
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:00:08.103026 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:00:11.996264 |INFO | [rudra-progress] Running rudra for target lib:crossbeam-utils
+2024-06-21 18:00:18.682489 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:00:18.686681 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:00:18.710227 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:00:18.710250 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:00:18.739719 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:00:18.739742 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/thread.rs:469:1: 469:51
+unsafe impl<T> Send for ScopedJoinHandle<'_, T> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/thread.rs:470:1: 470:51
+unsafe impl<T> Sync for ScopedJoinHandle<'_, T> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/atomic/atomic_cell.rs:45:1: 45:47
+unsafe impl<T: Send> Sync for AtomicCell<T> {}
+2024-06-21 18:00:19.996215 |WARN | [cargo_rudra] Target test:wait_group is not supported
+2024-06-21 18:00:19.996302 |WARN | [cargo_rudra] Target test:sharded_lock is not supported
+2024-06-21 18:00:19.996307 |WARN | [cargo_rudra] Target test:thread is not supported
+2024-06-21 18:00:19.996310 |WARN | [cargo_rudra] Target test:cache_padded is not supported
+2024-06-21 18:00:19.996317 |WARN | [cargo_rudra] Target test:atomic_cell is not supported
+2024-06-21 18:00:19.996324 |WARN | [cargo_rudra] Target test:parker is not supported
+2024-06-21 18:00:19.996327 |WARN | [cargo_rudra] Target bench:atomic_cell is not supported
+2024-06-21 18:00:19.996330 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 18:00:19.996454 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

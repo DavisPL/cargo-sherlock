@@ -1,0 +1,38 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Fangdun Tsai,fundon,https://github.com/fundon
+************************************
+event,timestamp,downloads
+Downloads,-,25681
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 16:10:35.069354 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:10:39.679570 |INFO | [rudra-progress] Running rudra for target lib:nano-id
+[0m[1m[38;5;9merror[0m[0m[1m: there is no argument named `err`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:18:80[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m                .unwrap_or_else(|err| panic!(""could not retreive random bytes: {err}""));[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                                 [0m[0m[1m[38;5;9m^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0mgen!([0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    base64,[0m
+[0m[1m[38;5;12m46[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    64,[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    b""ModuleSymbhasOwnPr-0123456789ABCDEFGHNRVfgctiUvz_KqYTJkLxpZXIjQW""[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: if you intended to capture `err` from the surrounding scope, add `#![feature(format_args_capture)]` to the crate attributes[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `gen` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `nano-id` due to previous error
+2024-06-21 16:10:48.046969 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

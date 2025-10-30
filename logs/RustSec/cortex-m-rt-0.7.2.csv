@@ -1,0 +1,23 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Adam Greig,adamgreig,https://github.com/adamgreig
+Author,-,Cortex-M,github:rust-embedded:cortex-m,https://github.com/rust-embedded
+************************************
+event,timestamp,downloads
+Downloads,-,2390094
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:52:14.488274 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:52:17.989291 |INFO | [rudra-progress] Running rudra for target lib:cortex-m-rt
+[0m[0m[1m[31merror[0m[1m:[0m package `cortex-m-rt v0.7.2 (/tmp/rudra)` cannot be built because it requires rustc 1.59 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:52:21.356842 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

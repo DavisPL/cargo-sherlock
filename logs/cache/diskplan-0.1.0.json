@@ -1,0 +1,171 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "quornian"
+  ],
+  "stars": 5,
+  "forks": 0,
+  "downloads": 1057,
+  "num_side_effects": 3,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "anyhow",
+      "1.0.97"
+    ],
+    [
+      "camino",
+      "1.1.9"
+    ],
+    [
+      "clap",
+      "4.5.32"
+    ],
+    [
+      "clap_builder",
+      "4.5.32"
+    ],
+    [
+      "anstyle",
+      "1.0.10"
+    ],
+    [
+      "clap_lex",
+      "0.7.4"
+    ],
+    [
+      "diskplan-config",
+      "0.1.0"
+    ],
+    [
+      "diskplan-filesystem",
+      "0.1.0"
+    ],
+    [
+      "nix",
+      "0.29.0"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "tracing",
+      "0.1.41"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "tracing-core",
+      "0.1.33"
+    ],
+    [
+      "users",
+      "0.11.0"
+    ],
+    [
+      "diskplan-schema",
+      "0.1.0"
+    ],
+    [
+      "nom",
+      "8.0.0"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "elsa",
+      "1.11.2"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "toml",
+      "0.8.20"
+    ],
+    [
+      "serde_spanned",
+      "0.6.8"
+    ],
+    [
+      "toml_datetime",
+      "0.6.8"
+    ],
+    [
+      "diskplan-traversal",
+      "0.1.0"
+    ],
+    [
+      "regex",
+      "1.11.1"
+    ],
+    [
+      "regex-automata",
+      "0.4.9"
+    ],
+    [
+      "regex-syntax",
+      "0.8.5"
+    ],
+    [
+      "tracing-subscriber",
+      "0.3.19"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

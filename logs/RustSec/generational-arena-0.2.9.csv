@@ -1,0 +1,32 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nick Fitzgerald,fitzgen,https://github.com/fitzgen
+************************************
+event,timestamp,downloads
+Downloads,-,4945173
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:39:43.127445 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:39:47.427049 |INFO | [rudra-progress] Running rudra for target lib:generational-arena
+2024-06-21 17:39:52.278292 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:39:52.282236 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:39:52.282584 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:39:52.282594 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:39:52.304229 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:39:52.304252 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:39:53.364332 |WARN | [cargo_rudra] Target test:serde is not supported
+2024-06-21 17:39:53.364372 |WARN | [cargo_rudra] Target test:readme is not supported
+2024-06-21 17:39:53.364377 |WARN | [cargo_rudra] Target test:quickchecks is not supported
+2024-06-21 17:39:53.364395 |WARN | [cargo_rudra] Target test:tests is not supported
+2024-06-21 17:39:53.364403 |WARN | [cargo_rudra] Target bench:benches is not supported
+2024-06-21 17:39:53.364487 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

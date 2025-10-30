@@ -1,0 +1,6 @@
+Solving for required assumptions to trust tectonic_xdv-0.1.11...
+Trust Score for tectonic_xdv-0.1.11: 65
+Assumptions Made:
+tectonic_xdv-0.1.11 has many stars and forks: 0 wt
+tectonic_xdv-0.1.11 having many stars and forks implies it is safe: 15 wt
+tectonic_xdv-0.1.11 appearing in RustSec implies it is less safe (score penalty): 50 weight

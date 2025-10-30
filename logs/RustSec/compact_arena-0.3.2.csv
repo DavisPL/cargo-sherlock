@@ -1,0 +1,32 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,llogiq,https://github.com/llogiq
+************************************
+event,timestamp,downloads
+Downloads,-,16991
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:35:13.917005 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:35:24.272608 |INFO | [rudra-progress] Running rudra for target lib:compact_arena
+2024-06-21 16:35:34.779526 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:35:34.792894 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:35:34.793641 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:35:34.793669 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:35:34.919354 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:35:34.919429 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:35:37.664443 |WARN | [cargo_rudra] Target test:tiny_arena is not supported
+2024-06-21 16:35:37.664701 |WARN | [cargo_rudra] Target test:ui_tests is not supported
+2024-06-21 16:35:37.664727 |WARN | [cargo_rudra] Target test:tree is not supported
+2024-06-21 16:35:37.664741 |WARN | [cargo_rudra] Target test:nano_arena is not supported
+2024-06-21 16:35:37.664785 |WARN | [cargo_rudra] Target test:threads is not supported
+2024-06-21 16:35:37.665264 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,61 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "japaric",
+    "bheisler",
+    "lemmih",
+    "github:rust-bus:maintainers"
+  ],
+  "stars": 4892,
+  "forks": 322,
+  "downloads": 74559751,
+  "num_side_effects": 17,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-run",
+      "delta": "0.4.4 -> 0.4.5",
+      "version": "",
+      "notes": "No major changes in this update, it was almost entirely stylistic with what\\nappears to be a few clippy fixes here and there.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.5 -> 0.5.0",
+      "version": "",
+      "notes": "Just a version bump, only change to code is to remove an allow(deprecated)"
+    }
+  ],
+  "dependencies": [
+    [
+      "cast",
+      "0.3.0"
+    ],
+    [
+      "itertools",
+      "0.14.0"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 12,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

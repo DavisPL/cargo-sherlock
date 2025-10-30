@@ -1,0 +1,23 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,David Irvine,dirvine,https://github.com/dirvine
+Author,-,MaidSafe-QA,MaidSafe-QA,https://github.com/MaidSafe-QA
+************************************
+event,timestamp,downloads
+Downloads,-,48489
+************************************
+event,timestamp,total,flagged
+Side Effects,-,39,28
+************************************
+Rudra,timestamp
+"2024-06-21 18:15:46.587349 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:15:51.284712 |INFO | [rudra-progress] Running rudra for target lib:ffi_utils
+[0m[0m[1m[31merror[0m[1m:[0m package `byteorder v1.5.0` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 18:15:54.931765 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

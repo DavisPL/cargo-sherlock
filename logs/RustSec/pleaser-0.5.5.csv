@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,ed neville,edneville,https://github.com/edneville
+************************************
+event,timestamp,downloads
+Downloads,-,16462
+************************************
+event,timestamp,total,flagged
+Side Effects,-,221,126
+************************************
+Rudra,timestamp
+"2024-06-21 18:31:30.347532 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:31:31.844682 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `chrono = ""^0.4""`
+candidate versions found which didn't match: 0.4.31, 0.4.30, 0.4.29, ...
+location searched: crates.io index
+required by package `pleaser v0.5.5 (/tmp/rudra)`
+
+"
+************************************

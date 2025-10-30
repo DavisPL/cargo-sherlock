@@ -1,0 +1,8 @@
+Solving for required assumptions to trust http-1.1.0...
+Trust Score for http-1.1.0: 60
+Assumptions Made:
+http-1.1.0 has many downloads: 0 wt
+http-1.1.0 having many downloads implies it is safe: 10 wt
+http-1.1.0 appearing in RustSec implies it is less safe (score penalty): 50 wt
+fnv-1.0.7 has many downloads: 0 wt
+itoa-1.0.11 has many downloads: 0 wt

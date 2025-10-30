@@ -1,0 +1,24 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Marvin Löbel,Kimundi,https://github.com/Kimundi
+************************************
+event,timestamp,downloads
+Downloads,-,2125
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:45:46.784409 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:45:48.376416 |WARN | [cargo_rudra] Target dylib:apply_pub is not supported
+2024-06-23 13:45:48.376511 |WARN | [cargo_rudra] Target test:struct-fields-only is not supported
+2024-06-23 13:45:48.376524 |WARN | [cargo_rudra] Target test:run-pass is not supported
+2024-06-23 13:45:48.376528 |WARN | [cargo_rudra] Target test:example is not supported
+2024-06-23 13:45:48.376672 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

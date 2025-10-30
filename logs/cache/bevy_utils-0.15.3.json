@@ -1,0 +1,140 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "cart",
+    "github:bevyengine:publish"
+  ],
+  "stars": 38566,
+  "forks": 3794,
+  "downloads": 2446527,
+  "num_side_effects": 6,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "ahash",
+      "0.8.11"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "once_cell",
+      "1.21.1"
+    ],
+    [
+      "zerocopy",
+      "0.8.24"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.24"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "bevy_utils_proc_macros",
+      "0.15.3"
+    ],
+    [
+      "getrandom",
+      "0.3.2"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "r-efi",
+      "5.2.0"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "tracing",
+      "0.1.41"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "tracing-core",
+      "0.1.33"
+    ],
+    [
+      "web-time",
+      "1.1.0"
+    ],
+    [
+      "js-sys",
+      "0.3.77"
+    ],
+    [
+      "wasm-bindgen",
+      "0.2.100"
+    ],
+    [
+      "wasm-bindgen-macro",
+      "0.2.100"
+    ],
+    [
+      "wasm-bindgen-macro-support",
+      "0.2.100"
+    ],
+    [
+      "wasm-bindgen-backend",
+      "0.2.100"
+    ],
+    [
+      "bumpalo",
+      "3.17.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "wasm-bindgen-shared",
+      "0.2.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 5,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 5,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.31
+  }
+}

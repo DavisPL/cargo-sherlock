@@ -1,0 +1,24 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Noemi Lapresta,purpliminal,https://github.com/purpliminal
+Author,-,Sage Griffin,sgrif,https://github.com/sgrif
+Author,-,dotenv,github:dotenv-rs:dotenv,https://github.com/dotenv-rs
+************************************
+event,timestamp,downloads
+Downloads,-,395609
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:57:39.003458 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:57:42.733179 |INFO | [rudra-progress] Running rudra for target lib:dotenv_codegen
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:57:46.093716 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

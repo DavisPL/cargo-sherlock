@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,:Levi.,levifeldman,https://github.com/levifeldman
+************************************
+event,timestamp,downloads
+Downloads,-,3114
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 14:36:42.507974 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:36:45.832695 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `candid = ""^0.10.3""`
+candidate versions found which didn't match: 0.9.11, 0.9.10, 0.9.9, ...
+location searched: crates.io index
+required by package `canister-tools v0.2.3 (/tmp/rudra)`
+
+"
+************************************

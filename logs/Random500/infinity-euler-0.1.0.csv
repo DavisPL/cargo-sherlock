@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Aalekh Patel,aalekhpatel07,https://github.com/aalekhpatel07
+************************************
+event,timestamp,downloads
+Downloads,-,666
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:42:54.504283 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:42:55.726236 |INFO | [rudra-progress] Running rudra for target bin:infinity-euler
+2024-06-23 16:42:59.742164 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:42:59.745718 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:42:59.746754 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:42:59.746777 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:42:59.748259 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:42:59.748275 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:42:59.794320 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust columnar-0.0.9...
+Trust Score for columnar-0.0.9: 51
+Assumptions Made:
+columnar-0.0.9 has all safe dependencies: 0 wt
+columnar-0.0.9 having no side effects and having all safe dependencies implies it is safe: 1 wt
+columnar-0.0.9 appearing in RustSec implies it is less safe (score penalty): 50 weight

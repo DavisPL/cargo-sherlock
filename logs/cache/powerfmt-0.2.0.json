@@ -1,0 +1,45 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "jhpratt"
+  ],
+  "stars": 12,
+  "forks": 0,
+  "downloads": 96600452,
+  "num_side_effects": 6,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-1",
+      "delta": "",
+      "version": "0.2.0",
+      "notes": "Reviewed in CL 578897702"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.2.0",
+      "notes": "A tiny bit of unsafe code to implement functionality that isn't in stable rust\\nyet, but it's all valid. Otherwise it's a pretty simple crate.\\n"
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 6,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 5,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.14
+  }
+}

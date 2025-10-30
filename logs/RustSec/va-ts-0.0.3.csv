@@ -1,0 +1,90 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ivan Egorov,vany-egorov,https://github.com/vany-egorov
+************************************
+event,timestamp,downloads
+Downloads,-,2561
+************************************
+event,timestamp,total,flagged
+Side Effects,-,18,10
+************************************
+Rudra,timestamp
+"2024-06-21 18:38:34.324466 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:38:37.484842 |INFO | [rudra-progress] Running rudra for target lib:va-ts
+[0m[1m[33mwarning[0m[0m[1m: unnecessary parentheses around type[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/demuxer.rs:462:58[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m462[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn demux_tables(&mut self, raw: &[u8]) -> Result<(bool)> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[33m^[0m[0m    [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_parens)]` on by default[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m462[0m[0m [0m[0m[38;5;9m- [0m[0m    pub fn demux_tables(&mut self, raw: &[u8]) -> Result<[0m[0m[38;5;9m([0m[0mbool[0m[0m[38;5;9m)[0m[0m> {[0m
+[0m[1m[38;5;12m462[0m[0m [0m[0m[38;5;10m+ [0m[0m    pub fn demux_tables(&mut self, raw: &[u8]) -> Result<bool> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:42:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m42[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.description()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/error.rs:88:38[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            Kind::Io(ref err) => err.description(),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `buf`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/descriptor/desc_dvb_0x4e.rs:10:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    buf: &'buf [u8],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `buf`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/descriptor/desc_dvb_0x53.rs:10:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    buf: &'buf [u8],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `buf`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/descriptor/desc_dvb_0x54.rs:10:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    buf: &'buf [u8],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `buf`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/descriptor/desc_dvb_0x56.rs:10:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    buf: &'buf [u8],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `buf`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/descriptor/desc_dvb_0x6a.rs:10:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    buf: &'buf [u8],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+2024-06-21 18:38:47.992950 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:38:47.998814 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:38:48.000796 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:38:48.000821 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:38:48.048867 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:38:48.048901 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/demuxer.rs:265:1: 265:61
+unsafe impl<T> Send for Demuxer<T> where T: DemuxerEvents {}
+2024-06-21 18:38:49.491018 |WARN | [cargo_rudra] Target example:probe is not supported
+2024-06-21 18:38:49.491266 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

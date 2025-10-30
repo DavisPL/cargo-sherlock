@@ -1,0 +1,55 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ogier Bouvier,SonicFrog,https://github.com/SonicFrog
+************************************
+event,timestamp,downloads
+Downloads,-,4778
+************************************
+event,timestamp,total,flagged
+Side Effects,-,2,2
+************************************
+Rudra,timestamp
+"2024-06-21 17:23:58.016676 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:24:00.965407 |INFO | [rudra-progress] Running rudra for target lib:abox
+[0m[1m[33mwarning[0m[0m[1m: unused import: `std::mem`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::mem;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused import: `std::ops::Deref`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:4:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::ops::Deref;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicPtr::<T>::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:34:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.ptr.compare_and_swap(current, new, order)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-21 17:24:04.999670 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:24:05.003393 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:24:05.007377 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:24:05.007394 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:24:05.032785 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:24:05.032804 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:93:1: 93:47
+unsafe impl<T: Sized> Send for AtomicBox<T> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:92:1: 92:47
+unsafe impl<T: Sized> Sync for AtomicBox<T> {}
+2024-06-21 17:24:05.861891 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

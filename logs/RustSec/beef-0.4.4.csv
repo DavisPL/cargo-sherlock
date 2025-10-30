@@ -1,0 +1,34 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Maciej Hirsz,maciejhirsz,https://github.com/maciejhirsz
+************************************
+event,timestamp,downloads
+Downloads,-,12809250
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:23:21.502423 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:23:24.930700 |INFO | [rudra-progress] Running rudra for target lib:beef
+2024-06-21 17:23:28.934540 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:23:28.938406 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:23:28.958825 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:23:28.958848 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:23:28.979332 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:23:28.979351 |INFO | [rudra-progress] Rudra finished
+Warning (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/generic.rs:531:1: 531:76
+unsafe impl<T: Beef + Send + ?Sized, U: Capacity> Send for Cow<'_, T, U> {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/generic.rs:530:1: 530:76
+unsafe impl<T: Beef + Sync + ?Sized, U: Capacity> Sync for Cow<'_, T, U> {}
+2024-06-21 17:23:29.945008 |WARN | [cargo_rudra] Target bench:bench is not supported
+2024-06-21 17:23:29.945153 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

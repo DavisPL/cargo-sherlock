@@ -1,0 +1,6 @@
+Solving for required assumptions to trust markdown-0.3.0...
+Trust Score for markdown-0.3.0: 98
+Assumptions Made:
+markdown-0.3.0 has many downloads: 38 wt
+markdown-0.3.0 having many downloads implies it is safe: 10 wt
+markdown-0.3.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

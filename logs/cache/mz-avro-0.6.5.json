@@ -1,0 +1,188 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "umanwizard",
+    "github:materializeinc:crate-owners"
+  ],
+  "stars": 5911,
+  "forks": 468,
+  "downloads": 4304,
+  "num_side_effects": 42,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "chrono",
+      "0.4.40"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "failure",
+      "0.1.8"
+    ],
+    [
+      "itertools",
+      "0.14.0"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ],
+    [
+      "libflate",
+      "2.1.0"
+    ],
+    [
+      "adler32",
+      "1.2.0"
+    ],
+    [
+      "core2",
+      "0.4.0"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "crc32fast",
+      "1.4.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "dary_heap",
+      "0.3.7"
+    ],
+    [
+      "libflate_lz77",
+      "2.1.0"
+    ],
+    [
+      "hashbrown",
+      "0.15.2"
+    ],
+    [
+      "rle-decode-fast",
+      "1.0.3"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "rand",
+      "0.9.0"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "zerocopy",
+      "0.8.24"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.24"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "regex",
+      "1.11.1"
+    ],
+    [
+      "regex-automata",
+      "0.4.9"
+    ],
+    [
+      "regex-syntax",
+      "0.8.5"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "serde_json",
+      "1.0.140"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "sha2",
+      "0.10.8"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 1,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

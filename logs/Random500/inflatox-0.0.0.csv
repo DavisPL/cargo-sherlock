@@ -1,0 +1,19 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Raúl,smups,https://github.com/smups
+************************************
+event,timestamp,downloads
+Downloads,-,732
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"inflatox-0.0.0 is not a directory
+"
+************************************

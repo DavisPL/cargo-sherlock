@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,kdy1997,https://github.com/kdy1997
+************************************
+event,timestamp,downloads
+Downloads,-,2293
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 13:46:50.771116 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:46:52.901822 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `num-traits = ""^0.2.0""`
+candidate versions found which didn't match: 0.2.18, 0.2.17, 0.2.16, ...
+location searched: crates.io index
+required by package `num-traits v0.1.43`
+    ... which satisfies dependency `num-traits = ""~0.1.32""` (locked to 0.1.43) of package `serde_json v0.7.4`
+    ... which satisfies dependency `serde_json = ""^0.7""` (locked to 0.7.4) of package `caniuse v1.0.30000471 (/tmp/rudra)`
+
+"
+************************************

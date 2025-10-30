@@ -1,0 +1,120 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,gnzlbg,gnzlbg,https://github.com/gnzlbg
+************************************
+event,timestamp,downloads
+Downloads,-,1495844
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:07:15.554039 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:07:19.377148 |INFO | [rudra-progress] Running rudra for target lib:slice-deque
+2024-06-21 18:07:26.970915 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:07:26.974897 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:07:27.008727 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:07:27.008755 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:07:27.065713 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:07:27.065738 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `SliceDeque::<T>::extend_with`
+-> src/lib.rs:1669:5: 1692:6
+fn extend_with<E: ExtendWith<T>>(&mut self, n: usize, value: E) {
+        self.reserve(n);
+
+        unsafe {
+            let mut ptr = self.as_mut_ptr().add(self.len());
+
+            // Write all elements except the last one
+            for _ in 1..n {
+                [0m[33mptr::write(ptr, [0m[36mvalue.next()[0m[33m)[0m;
+                ptr = ptr.add(1);
+                // Increment the length in every step in case next() panics
+                self.move_tail_unchecked(1);
+            }
+
+            if n > 0 {
+                // We can write the last element directly without cloning
+                // needlessly
+                [0m[33mptr::write(ptr, [0m[36mvalue.last()[0m[33m)[0m;
+                self.move_tail_unchecked(1);
+            }
+
+            // len set by scope guard
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow/SliceUnchecked): Potential unsafe dataflow issue in `SliceDeque::<T>::extend_desugared`
+-> src/lib.rs:1702:5: 1726:6
+fn extend_desugared<I: Iterator<Item = T>>(&mut self, mut iterator: I) {
+        #[allow(clippy::while_let_on_iterator)]
+        while let Some(element) = [0m[36miterator.next()[0m {
+            let len = self.len();
+            let cap = self.capacity();
+            if len == cap {
+                let (lower, upper) = [0m[36miterator.size_hint()[0m;
+                let additional_cap = if let Some(upper) = upper {
+                    upper
+                } else {
+                    lower
+                }
+                .checked_add(1)
+                .expect(""overflow"");
+                self.reserve(additional_cap);
+            }
+            debug_assert!(self.len() < self.capacity());
+            unsafe {
+                [0m[33mptr::write([0m[33mself.get_unchecked_mut(len)[0m[33m, element)[0m;
+                // NB can't overflow since we would have had to alloc the
+                // address space
+                self.move_tail_unchecked(1);
+            }
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/CopyFlow): Potential unsafe dataflow issue in `<DrainFilter<'a, T, F> as std::iter::Iterator>::next`
+-> src/lib.rs:3016:5: 3040:6
+fn next(&mut self) -> Option<T> {
+        unsafe {
+            while self.idx != self.old_len {
+                let i = self.idx;
+                self.idx += 1;
+                let v = slice::from_raw_parts_mut(
+                    self.deq.as_mut_ptr(),
+                    self.old_len,
+                );
+                if [0m[36m(self.pred)(&mut v[i])[0m {
+                    self.del += 1;
+                    return Some([0m[31mptr::read(&v[i])[0m);
+                } else if self.del > 0 {
+                    let del = self.del;
+                    let src: *const T = &v[i];
+                    let dst: *mut T = &mut v[i - del];
+                    // This is safe because self.deq has length 0
+                    // thus its elements will not have Drop::drop
+                    // called on them in the event of a panic.
+                    [0m[31mptr::copy_nonoverlapping(src, dst, 1)[0m;
+                }
+            }
+            None
+        }
+    }
+[0m
+2024-06-21 18:07:28.340052 |WARN | [cargo_rudra] Target bench:pop_back is not supported
+2024-06-21 18:07:28.340102 |WARN | [cargo_rudra] Target bench:remove is not supported
+2024-06-21 18:07:28.340117 |WARN | [cargo_rudra] Target bench:index is not supported
+2024-06-21 18:07:28.340126 |WARN | [cargo_rudra] Target bench:iter is not supported
+2024-06-21 18:07:28.340136 |WARN | [cargo_rudra] Target bench:get is not supported
+2024-06-21 18:07:28.340146 |WARN | [cargo_rudra] Target bench:alloc is not supported
+2024-06-21 18:07:28.340148 |WARN | [cargo_rudra] Target bench:push_back is not supported
+2024-06-21 18:07:28.340151 |WARN | [cargo_rudra] Target bench:pop_front is not supported
+2024-06-21 18:07:28.340153 |WARN | [cargo_rudra] Target bench:insert is not supported
+2024-06-21 18:07:28.340160 |WARN | [cargo_rudra] Target bench:push_front is not supported
+2024-06-21 18:07:28.340266 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

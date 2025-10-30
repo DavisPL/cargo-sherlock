@@ -1,0 +1,250 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Matt McCoy,mattnenterprise,https://github.com/mattnenterprise
+************************************
+event,timestamp,downloads
+Downloads,-,442447
+************************************
+event,timestamp,total,flagged
+Side Effects,-,27,17
+************************************
+Rudra,timestamp
+"2024-06-21 17:45:10.819850 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:45:14.908449 |INFO | [rudra-progress] Running rudra for target lib:ftp
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:192:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m192[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(format!(""USER {}\r\n"", user)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:196:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m196[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(self.write_str(format!(""PASS {}\r\n"", password)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:197:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m197[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(self.read_response(status::LOGGED_IN));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:205:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m205[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(format!(""CWD {}\r\n"", path)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:211:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m211[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(""CDUP\r\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:217:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m217[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(""PWD\r\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:234:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m234[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(""NOOP\r\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:240:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m240[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(format!(""MKD {}\r\n"", pathname)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:246:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m246[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(""PASV\r\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:248:29[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m248[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let Line(_, line) = try!(self.read_response(status::PASSIVE_MODE));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:274:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m274[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(&type_command));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:280:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m280[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(""QUIT\r\n""));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:290:42[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m290[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let data_stream = BufReader::new(try!(self.data_command(&retr_command)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:296:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m296[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(format!(""RNFR {}\r\n"", from_name)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:299:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m299[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(self.write_str(format!(""RNTO {}\r\n"", to_name)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:325:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m325[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    where F: Fn(&mut Read) -> Result<T> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Read`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:328:50[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m328[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut data_stream = BufReader::new(try!(self.data_command(&retr_command)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:359:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m359[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(format!(""RMD {}\r\n"", pathname)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:365:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m365[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(format!(""DELE {}\r\n"", filename)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:372:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m372[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.read_response_in(&[status::ALREADY_OPEN, status::ABOUT_TO_SEND]));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:371:46[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m371[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut data_stream = BufWriter::new(try!(self.data_command(&stor_command)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:380:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m380[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.put_file(filename, r));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:390:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m390[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            try!(self.read_response_in(&[open_code, status::ALREADY_OPEN]));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:389:50[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m389[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut data_stream = BufReader::new(try!(self.data_command(&cmd)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:426:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m426[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(format!(""MDTM {}\r\n"", pathname)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:427:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m427[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let Line(_, content) = try!(self.read_response(status::FILE));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:450:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m450[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.write_str(format!(""SIZE {}\r\n"", pathname)));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:451:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m451[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let Line(_, content) = try!(self.read_response(status::FILE));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:476:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m476[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        try!(self.reader.read_line(&mut line)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:487:25[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m487[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let code: u32 = try!(line[0..3].parse()[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:94:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m94[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&Error> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Error`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated constant `std::sync::ONCE_INIT`: the `new` function is now preferred[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/ftp.rs:20:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m/[0m[0m [0m[0mlazy_static! {[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    // This regex extracts IP and Port details from PASV command response.[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    // The regex looks for the pattern (h1,h2,h3,h4,p1,p2).[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    static ref PORT_RE: Regex = Regex::new(r""\((\d+),(\d+),(\d+),(\d+),(\d+),(\d+)\)"").unwrap();[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[33m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m    static ref SIZE_RE: Regex = Regex::new(r""\s+(\d+)\s*$"").unwrap();[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|[0m[0m [0m[0m}[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m|_^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `lazy_static` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:87:59[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            FtpError::ConnectionError(ref ioerr) => ioerr.description(),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                          [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/types.rs:90:58[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m90[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            FtpError::InvalidAddress(ref perr)   => perr.description(),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+2024-06-21 17:45:31.429086 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:45:31.433073 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:45:31.433459 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:45:31.433469 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:45:31.441645 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:45:31.441661 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:45:32.604266 |WARN | [cargo_rudra] Target example:connecting is not supported
+2024-06-21 17:45:32.604500 |WARN | [cargo_rudra] Target test:lib is not supported
+2024-06-21 17:45:32.604658 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

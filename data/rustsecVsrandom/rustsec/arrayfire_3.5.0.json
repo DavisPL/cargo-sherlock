@@ -1,0 +1,6 @@
+Solving for required assumptions to trust arrayfire-3.5.0...
+Trust Score for arrayfire-3.5.0: 115
+Assumptions Made:
+arrayfire-3.5.0 has many stars and forks: 50 wt
+arrayfire-3.5.0 having many stars and forks implies it is safe: 15 wt
+arrayfire-3.5.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

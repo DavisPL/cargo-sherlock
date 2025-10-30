@@ -1,0 +1,49 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,qDot,qdot,https://github.com/qdot
+************************************
+event,timestamp,downloads
+Downloads,-,59853
+************************************
+event,timestamp,total,flagged
+Side Effects,-,14,10
+************************************
+Rudra,timestamp
+"2024-06-21 18:39:19.178513 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:39:23.453193 |INFO | [rudra-progress] Running rudra for target lib:buttplug
+[0m[0m[1m[31merror[0m[1m:[0m failed to run custom build command for `libudev-sys v0.1.4`
+
+Caused by:
+  process didn't exit successfully: `/tmp/rudra/target/debug/build/libudev-sys-50d1508ede402556/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-env-changed=LIBUDEV_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=LIBUDEV_STATIC
+  cargo:rerun-if-env-changed=LIBUDEV_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+
+  --- stderr
+  thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: ""`\""pkg-config\"" \""--libs\"" \""--cflags\"" \""libudev\""` did not exit successfully: exit status: 1\n--- stderr\nPackage libudev was not found in the pkg-config search path.\nPerhaps you should add the directory containing `libudev.pc'\nto the PKG_CONFIG_PATH environment variable\nNo package 'libudev' found\n""', /tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/libudev-sys-0.1.4/build.rs:38:41
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+[0m[0m[1m[31merror[0m[1m:[0m build failed
+2024-06-21 18:39:53.935884 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

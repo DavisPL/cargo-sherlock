@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Guillaume Balaine,Igosuki,https://github.com/Igosuki
+************************************
+event,timestamp,downloads
+Downloads,-,23100
+************************************
+event,timestamp,total,flagged
+Side Effects,-,16,0
+************************************
+Rudra,timestamp
+"2024-06-23 07:29:52.782851 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:29:57.961908 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `env_logger = ""^0.10""`
+candidate versions found which didn't match: 0.9.3, 0.9.2, 0.9.1, ...
+location searched: crates.io index
+required by package `binance-rs-async v1.3.3 (/tmp/rudra)`
+
+"
+************************************

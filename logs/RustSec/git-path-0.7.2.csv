@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sebastian Thiel,Byron,https://github.com/Byron
+************************************
+event,timestamp,downloads
+Downloads,-,299620
+************************************
+event,timestamp,total,flagged
+Side Effects,-,35,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:47:49.512321 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:47:51.337153 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bstr = ""^1.0.1""`
+candidate versions found which didn't match: 0.2.17, 0.2.16, 0.2.15, ...
+location searched: crates.io index
+required by package `git-path v0.7.2 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,169 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "huonw",
+    "sfackler",
+    "KodrAus",
+    "rust-lang-owner",
+    "github:rust-lang-nursery:log-owners",
+    "github:rust-lang-nursery:libs"
+  ],
+  "stars": 2427,
+  "forks": 275,
+  "downloads": 578706606,
+  "num_side_effects": 4,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.20 -> 0.4.22",
+      "version": "",
+      "notes": "Mostly updates around the key-value implementation of this crate, but nothing out of place."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.22 -> 0.4.27",
+      "version": "",
+      "notes": "Lots of minor updates to macros and such, nothing touching `unsafe`"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.27 -> 0.4.28",
+      "version": "",
+      "notes": "Minor doc updates and lots new tests, nothing out of the ordinary."
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.4.14",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.4.17",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.4.17 -> 0.4.20",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "",
+      "version": "0.4.22",
+      "notes": "Unsafe review in https://docs.google.com/document/d/1IXQbD1GhTRqNHIGxq6yy7qHqxeO4CwN5noMFXnqyDIM/edit?usp=sharing\\n\\nUnsafety is generally very well-documented, with one exception, which we\\ndescribe in the review doc.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.4.20 -> 0.4.21",
+      "version": "",
+      "notes": "I grepped for \\\"crypt\\\", \\\"cipher\\\", \\\"fs\\\", \\\"net\\\" - there were no hits.  I also skimmed\\nthrough the 0.4.20 => 0.4.21 delta and there was no new crypto-related code AFAICT.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.4.21 -> 0.4.22",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "0.4.22 -> 0.4.25",
+      "version": "",
+      "notes": "No impact on `unsafe` usage in `lib.rs`."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "0.4.25 -> 0.4.26",
+      "version": "",
+      "notes": "Only trivial code and documentation changes."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-1\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.4.20",
+      "notes": "Reviewed in CL 563853923"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.4.17",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.17 -> 0.4.18",
+      "version": "",
+      "notes": "One dependency removed, others updated (which we don't rely on), some APIs (which we don't use) changed."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.18 -> 0.4.20",
+      "version": "",
+      "notes": "Only cfg attribute and internal macro changes and module refactorings"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.16 -> 0.4.17",
+      "version": "",
+      "notes": "I confirmed that the unsafe transmutes are fine; NonZeroU128 and NonZeroI128 are `#[repr(transparent)]` wrappers around u128 and i128 respectively."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.18 -> 0.4.19",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.19 -> 0.4.20",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.20 -> 0.4.21",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 26,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.47
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "huonw",
+    "joshtriplett",
+    "gnzlbg",
+    "JohnTitor",
+    "rust-lang-owner",
+    "github:rust-lang:libs",
+    "github:rust-lang:libc"
+  ],
+  "stars": 2342,
+  "forks": 1163,
+  "downloads": 742237443,
+  "num_side_effects": 7248,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.133 -> 0.2.141",
+      "version": "",
+      "notes": "I have performed a very rough survey of the changes and didn't see anything\\nobviously out of place, or that looks like a silent ABI break on a platform\\nWasmtime supports. I didn't check all the new struct layouts, constants,\\nfunction signatures, and so on for ABI conformance though.\\n\\nThis crate is maintained by the Rust project and is a dependency of the Rust\\nstandard library itself. It contains tests that generate C source files to\\nensure that the ABI it describes matches the ABI described by the C header\\nfiles in the correspond to match.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.146 -> 0.2.147",
+      "version": "",
+      "notes": "Only new type definitions and updating others for some platforms, no major changes"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.148 -> 0.2.149",
+      "version": "",
+      "notes": "Lots of new functions and constants for new platforms and nothing out of the ordinary for what one would expect of the `libc` crate."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.149 -> 0.2.151",
+      "version": "",
+      "notes": "More new functions, types, and constants, as is usual for the `libc` crate, as well as various minor code cleanups."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.151 -> 0.2.153",
+      "version": "",
+      "notes": "More bindings for more platforms. I have not verified that everything is exactly as-is on the platform as specified but nothing major is otherwise introduced as part of this bump."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.153 -> 0.2.158",
+      "version": "",
+      "notes": "More platforms, more definitions, more headers, it's still just `libc`"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.158 -> 0.2.161",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.161 -> 0.2.171",
+      "version": "",
+      "notes": "Lots of unsafe, but that's par for the course with libc, it's all FFI type\\ndefinitions updates/adjustments/etc.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.2.86",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.2.146",
+      "notes": "Much like the getrandom crate, this exports interfaces to APIs which perform\\ncrypto, but does not implement any crypto itself.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.2.146 -> 0.2.147",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.2.147 -> 0.2.153",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.2.153 -> 0.2.170",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "0.2.142 -> 0.2.149",
+      "version": "",
+      "notes": "Audited at https://fxrev.dev/932979"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-4",
+      "delta": "0.2.150 -> 0.2.153",
+      "version": "",
+      "notes": "Reviewed in CL 622219230"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.139 -> 0.2.141",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.149 -> 0.2.150",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.126 -> 0.2.132",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.132 -> 0.2.138",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.138 -> 0.2.139",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.147 -> 0.2.148",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.154 -> 0.2.158",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.171 -> 0.2.176",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.141 -> 0.2.146",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 132,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

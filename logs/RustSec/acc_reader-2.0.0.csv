@@ -1,0 +1,107 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Vladimir Matveev,netvl,https://github.com/netvl
+************************************
+event,timestamp,downloads
+Downloads,-,4696
+************************************
+event,timestamp,total,flagged
+Side Effects,-,15,15
+************************************
+Rudra,timestamp
+"2024-06-21 18:09:39.389881 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:09:42.405557 |INFO | [rudra-progress] Running rudra for target lib:acc_reader
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:236:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m236[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let read = try!(self.source.read(buf));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:281:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m281[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(self.source.read_to_end(&mut self.buf));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:298:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m298[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                try!(self.read_up_to(need_to_read));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated macro `try`: use the `?` operator instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:320:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m320[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                    try!(self.read_up_to(need_to_read));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^[0m
+
+2024-06-21 18:09:46.360811 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:09:46.364941 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:09:46.365298 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:09:46.365311 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:09:46.421601 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:09:46.421634 |INFO | [rudra-progress] Rudra finished
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `AccReader::<R>::read_up_to`
+-> src/lib.rs:194:5: 219:6
+fn read_up_to(&mut self, n: u64) -> io::Result<()> {
+        let old_len = self.buf.len();
+        self.buf.reserve(n as usize);
+        unsafe { [0m[31mself.buf.set_len(old_len + n as usize)[0m; }
+
+        let mut error = None;
+        let mut read = 0;
+        {
+            let mut target = &mut self.buf[old_len..];
+            while !target.is_empty() {
+                match [0m[36mself.source.read(target)[0m {
+                    Ok(0) => break,
+                    Ok(n) => { read += n; let tmp = target; target = &mut tmp[n..]; }
+                    Err(ref e) if e.kind() == io::ErrorKind::Interrupted => {}
+                    Err(e) => { error = Some(e); break; },
+                }
+            }
+        }
+        unsafe { [0m[31mself.buf.set_len(old_len + read as usize)[0m; }
+
+        if let Some(e) = error {
+            Err(e)
+        } else {
+            Ok(())
+        }
+    }
+[0m
+Error (UnsafeDataflow:/VecSetLen): Potential unsafe dataflow issue in `<AccReader<R> as std::io::BufRead>::fill_buf`
+-> src/lib.rs:245:5: 266:6
+fn fill_buf(&mut self) -> io::Result<&[u8]> {
+        let available = self.buf.len() - self.pos;  // self.buf.len() >= pos
+        if available == 0 {
+            let old_len = self.buf.len();
+            self.buf.reserve(self.inc);
+            unsafe { [0m[31mself.buf.set_len(old_len + self.inc)[0m; }
+
+            let (read, error) = match [0m[36mself.source.read(&mut self.buf[self.pos..])[0m {
+                Ok(n) => (n, None),
+                Err(e) => (0, Some(e)),
+            };
+            unsafe { [0m[31mself.buf.set_len(old_len + read)[0m; }
+
+            if let Some(e) = error {
+                Err(e)
+            } else {
+                Ok(&self.buf[self.pos..])
+            }
+        } else {
+            Ok(&self.buf[self.pos..])
+        }
+    }
+[0m
+2024-06-21 18:09:47.269372 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

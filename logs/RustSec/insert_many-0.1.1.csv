@@ -1,0 +1,39 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,asynchronous rob,rphmeier,https://github.com/rphmeier
+************************************
+event,timestamp,downloads
+Downloads,-,2345
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:04:56.567966 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:05:00.127580 |INFO | [rudra-progress] Running rudra for target lib:insert_many
+2024-06-21 17:05:04.593417 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:05:04.597228 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:05:04.599015 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:05:04.599027 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:05:04.661794 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:05:04.661822 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/CopyFlow/WriteFlow): Potential unsafe dataflow issue in `<std::vec::Vec<T> as InsertMany<T>>::insert_many`
+-> src/lib.rs:52:5: 54:6
+fn insert_many<I>(&mut self, index: usize, iterable: I) where I: IntoIterator<Item=T>, I::IntoIter: ExactSizeIterator {
+        impl_veclike!(self, index, iterable);
+    }
+[0m
+Warning (UnsafeDataflow:/CopyFlow/WriteFlow): Potential unsafe dataflow issue in `<smallvec::SmallVec<A> as InsertMany<<A as smallvec::Array>::Item>>::insert_many`
+-> src/lib.rs:59:5: 61:6
+fn insert_many<I>(&mut self, index: usize, iterable: I) where I: IntoIterator<Item=A::Item>, I::IntoIter: ExactSizeIterator {
+        impl_veclike!(self, index, iterable);
+    }
+[0m
+2024-06-21 17:05:05.442273 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

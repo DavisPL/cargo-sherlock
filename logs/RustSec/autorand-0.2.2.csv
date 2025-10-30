@@ -1,0 +1,523 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mike Lubinets,mersinvald,https://github.com/mersinvald
+************************************
+event,timestamp,downloads
+Downloads,-,6088
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:25:46.973714 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:25:50.333492 |INFO | [rudra-progress] Running rudra for target lib:autorand
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:163:56[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m163[0m[0m [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m                    let mut array: [T; $s] = std::mem::uninitialized();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m176[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m/[0m[0m [0m[0mimpl_arrays!([0m
+[0m[1m[38;5;12m177[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,[0m
+[0m[1m[38;5;12m178[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 31, 32,[0m
+[0m[1m[38;5;12m179[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384,[0m
+[0m[1m[38;5;12m180[0m[0m [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|[0m[0m [0m[0m);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m|_-[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `impl_arrays` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+2024-06-21 17:26:04.514350 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:26:04.518156 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:26:04.519177 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:26:04.519189 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:26:04.544709 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:26:04.544725 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 3] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 512] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 5] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 17] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 2048] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 16384] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 13] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 21] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 25] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 26] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 8] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 2] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 12] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 20] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 32] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 9] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 15] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 64] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 1024] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 4] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 31] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 28] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 1] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 29] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 7] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 11] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 16] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 19] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 8192] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 256] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 4096] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 27] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 23] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 24] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 14] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 22] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 10] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 18] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 128] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `<[T; 6] as Random>::random`
+-> src/lib.rs:161:13: 169:14
+fn random() -> Self {
+                unsafe {
+                    let mut array: [T; $s] = std::mem::uninitialized();
+                    for i in 0..$s {
+                        [0m[33mstd::ptr::write(&mut array[i], [0m[36mT::random()[0m[33m)[0m;
+                    }
+                    array
+                }
+            }
+[0m
+2024-06-21 17:26:05.537953 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

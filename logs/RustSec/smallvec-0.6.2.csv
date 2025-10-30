@@ -1,0 +1,86 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Low,bytecode-alliance,safe-to-deploy,1.8.0 -> 1.11.0,,"The main change is the switch to use `NonNull<T>` internally instead of\n`*mut T`. This seems reasonable, as `Vec` also never stores a null pointer,\nand in particular the new `NonNull::new_unchecked`s look ok.\n\nMost of the rest of the changes are adding some new unstable features which\naren't enabled by default.\n",
+audits,-,Low,google,safe-to-run,,1.6.1,,
+audits,-,Low,google,"[ ""ub-risk-3"", ""does-not-implement-crypto"",]",,1.11.0,Reviewed in CL 552492992,
+audits,-,Low,mozilla,safe-to-deploy,1.8.0 -> 1.9.0,,,
+audits,-,Low,mozilla,safe-to-deploy,1.9.0 -> 1.10.0,,,
+trusted,-,Low,mozilla,safe-to-deploy,,,,3
+audits,-,Low,zcash,safe-to-deploy,1.11.1 -> 1.13.2,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Simon Sapin,SimonSapin,https://github.com/SimonSapin
+Author,-,,Ms2ger,https://github.com/Ms2ger
+Author,-,cargo publish,github:servo:cargo-publish,https://github.com/servo
+************************************
+event,timestamp,downloads
+Downloads,-,248225997
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:36:55.455072 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:37:03.972686 |INFO | [rudra-progress] Running rudra for target lib:smallvec
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mlib.rs:317:44[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m317[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                data: Inline { array: mem::uninitialized() },[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mlib.rs:544:65[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m544[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                ptr::write(&mut self.data, Inline { array: mem::uninitialized() });[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+2024-06-21 16:37:15.477274 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:37:15.485936 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:37:15.492716 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:37:15.492795 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:37:15.626090 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:37:15.626156 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> lib.rs:1087:1: 1087:66
+unsafe impl<A: Array> Send for SmallVec<A> where A::Item: Send {}
+Warning (UnsafeDataflow:/CopyFlow): Potential unsafe dataflow issue in `SmallVec::<A>::insert_many`
+-> lib.rs:640:5: 668:6
+pub fn insert_many<I: IntoIterator<Item=A::Item>>(&mut self, index: usize, iterable: I) {
+        let iter = [0m[36miterable.into_iter()[0m;
+        let (lower_size_bound, _) = [0m[36miter.size_hint()[0m;
+        assert!(lower_size_bound <= std::isize::MAX as usize);  // Ensure offset is indexable
+        assert!(index + lower_size_bound >= index);  // Protect against overflow
+        self.reserve(lower_size_bound);
+
+        unsafe {
+            let old_len = self.len;
+            assert!(index <= old_len);
+            let ptr = self.as_mut_ptr().offset(index as isize);
+            [0m[31mptr::copy(ptr, ptr.offset(lower_size_bound as isize), old_len - index)[0m;
+            for (off, element) in [0m[36miter.enumerate()[0m {
+                if off < lower_size_bound {
+                    [0m[33mptr::write(ptr.offset(off as isize), element)[0m;
+                    self.len = self.len + 1;
+                } else {
+                    // Iterator provided more elements than the hint.
+                    assert!(index + off >= index);  // Protect against overflow.
+                    self.insert(index + off, element);
+                }
+            }
+            let num_added = self.len - old_len;
+            if num_added < lower_size_bound {
+                // Iterator provided fewer elements than the hint
+                [0m[31mptr::copy(ptr.offset(lower_size_bound as isize), ptr.offset(num_added as isize), old_len - index)[0m;
+            }
+        }
+    }
+[0m
+2024-06-21 16:37:18.869239 |WARN | [cargo_rudra] Target bench:bench is not supported
+2024-06-21 16:37:18.869768 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

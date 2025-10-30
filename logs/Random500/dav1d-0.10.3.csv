@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Luca Barbato,lu-zero,https://github.com/lu-zero
+************************************
+event,timestamp,downloads
+Downloads,-,278957
+************************************
+event,timestamp,total,flagged
+Side Effects,-,27,26
+************************************
+Rudra,timestamp
+"2024-06-23 07:20:28.851814 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:20:30.215264 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `num-rational = ""^0.4.0""`
+candidate versions found which didn't match: 0.4.1, 0.4.0, 0.3.2, ...
+location searched: crates.io index
+required by package `av-data v0.4.2`
+    ... which satisfies dependency `av-data = ""^0.4.2""` (locked to 0.4.2) of package `dav1d v0.10.3 (/tmp/rudra)`
+
+"
+************************************

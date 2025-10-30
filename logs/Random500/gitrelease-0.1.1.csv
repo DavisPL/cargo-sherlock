@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Hengfeng Li,hengfengli,https://github.com/hengfengli
+************************************
+event,timestamp,downloads
+Downloads,-,1236
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:12:56.402014 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:12:58.866705 |INFO | [rudra-progress] Running rudra for target bin:gitrelease
+2024-06-23 15:13:39.207992 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:13:39.211964 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:13:39.213218 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:13:39.213229 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:13:39.235757 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:13:39.235772 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:13:39.300609 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

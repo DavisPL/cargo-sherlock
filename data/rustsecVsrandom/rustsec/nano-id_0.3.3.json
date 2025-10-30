@@ -1,0 +1,6 @@
+Solving for required assumptions to trust nano-id-0.3.3...
+Trust Score for nano-id-0.3.3: 61
+Assumptions Made:
+nano-id-0.3.3 has all safe dependencies: 10 wt
+nano-id-0.3.3 having no side effects and having all safe dependencies implies it is safe: 1 wt
+nano-id-0.3.3 appearing in RustSec implies it is less safe (score penalty): 50 weight

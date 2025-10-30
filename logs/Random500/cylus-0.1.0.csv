@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sinatra,Vikaton,https://github.com/Vikaton
+************************************
+event,timestamp,downloads
+Downloads,-,1706
+************************************
+event,timestamp,total,flagged
+Side Effects,-,19,13
+************************************
+Rudra,timestamp
+"2024-06-23 13:48:08.157066 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:48:12.457914 |INFO | [rudra-progress] Running rudra for target lib:cylus
+2024-06-23 13:48:25.710835 |INFO | [rudra-progress] Rudra started
+2024-06-23 13:48:25.716173 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 13:48:25.716622 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 13:48:25.716637 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 13:48:25.789105 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 13:48:25.789137 |INFO | [rudra-progress] Rudra finished
+2024-06-23 13:48:26.932947 |WARN | [cargo_rudra] Target example:blink is not supported
+2024-06-23 13:48:26.933098 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

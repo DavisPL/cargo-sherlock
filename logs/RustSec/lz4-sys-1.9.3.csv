@@ -1,0 +1,24 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Patrick Marks,pmarks,https://github.com/pmarks
+Author,-,,jheyens,https://github.com/jheyens
+Author,-,crates_io,github:10xgenomics:crates_io,https://github.com/10xgenomics
+************************************
+event,timestamp,downloads
+Downloads,-,16085630
+************************************
+event,timestamp,total,flagged
+Side Effects,-,27,1
+************************************
+Rudra,timestamp
+"2024-06-21 16:10:50.681311 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:10:54.081876 |INFO | [rudra-progress] Running rudra for target lib:lz4-sys
+[0m[0m[1m[31merror[0m[1m:[0m package `cc v1.0.99` cannot be built because it requires rustc 1.63 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:10:57.494367 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

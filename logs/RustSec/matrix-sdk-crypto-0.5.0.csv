@@ -1,0 +1,24 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jonas Platte,jplatte,https://github.com/jplatte
+Author,-,Damir Jelić,poljar,https://github.com/poljar
+Author,-,Rust,github:matrix-org:rust,https://github.com/matrix-org
+************************************
+event,timestamp,downloads
+Downloads,-,55429
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:53:30.001531 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:53:44.027145 |INFO | [rudra-progress] Running rudra for target lib:matrix-sdk-crypto
+[0m[0m[1m[31merror[0m[1m:[0m package `dashmap v5.4.0` cannot be built because it requires rustc 1.59 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 16:53:53.864241 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

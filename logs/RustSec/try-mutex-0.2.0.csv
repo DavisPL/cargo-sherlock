@@ -1,0 +1,40 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mike Pedersen,mpdn,https://github.com/mpdn
+************************************
+event,timestamp,downloads
+Downloads,-,7553
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:44:54.575143 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:45:02.281615 |INFO | [rudra-progress] Running rudra for target lib:try-mutex
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicBool::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:35:24[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if self.locked.compare_and_swap(false, true, Ordering::Acquire) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+2024-06-21 18:45:06.216126 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:45:06.220316 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:45:06.223987 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:45:06.223998 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:45:06.234233 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:45:06.234246 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:127:1: 127:39
+unsafe impl<T> Sync for TryMutex<T> {}
+2024-06-21 18:45:07.084789 |WARN | [cargo_rudra] Target test:tests is not supported
+2024-06-21 18:45:07.084839 |WARN | [cargo_rudra] Target bench:bench is not supported
+2024-06-21 18:45:07.084935 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

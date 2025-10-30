@@ -1,0 +1,37 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,FrankKai,https://github.com/FrankKai
+************************************
+event,timestamp,downloads
+Downloads,-,775
+************************************
+event,timestamp,total,flagged
+Side Effects,-,9,1
+************************************
+Rudra,timestamp
+"2024-06-23 15:10:57.474879 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:11:00.530762 |INFO | [rudra-progress] Running rudra for target lib:eatnp
+2024-06-23 15:11:06.226338 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:11:06.230021 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:11:06.231184 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:11:06.231197 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:11:06.288389 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:11:06.288413 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:11:07.131100 |INFO | [rudra-progress] Running rudra for target bin:eatnp
+[0m[1m[38;5;9merror[0m[0m[1m: there is no argument named `e`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/main.rs:10:36[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        println!(""eatnp run error: {e}"");[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: if you intended to capture `e` from the surrounding scope, add `#![feature(format_args_capture)]` to the crate attributes[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `eatnp` due to previous error
+2024-06-23 15:11:07.873076 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

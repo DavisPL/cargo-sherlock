@@ -1,0 +1,31 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,2ndTaleStudio,https://github.com/2ndTaleStudio
+************************************
+event,timestamp,downloads
+Downloads,-,13084
+************************************
+event,timestamp,total,flagged
+Side Effects,-,7,7
+************************************
+Rudra,timestamp
+"2024-06-21 17:24:57.978508 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:25:01.236193 |INFO | [rudra-progress] Running rudra for target lib:ruspiro-singleton
+[0m[1m[38;5;9merror[E0557][0m[0m[1m: feature has been removed[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:9:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![feature(const_fn)][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;9m^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mfeature has been removed[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: split into finer-grained feature gates[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0557`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `ruspiro-singleton` due to previous error
+2024-06-21 17:25:05.553223 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

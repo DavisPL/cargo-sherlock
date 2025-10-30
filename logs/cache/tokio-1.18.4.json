@@ -1,0 +1,90 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "Vulnerability",
+    "INFOUnsound"
+  ],
+  "developers": [
+    "carllerche",
+    "Darksonn",
+    "github:tokio-rs:core"
+  ],
+  "stars": 28183,
+  "forks": 2583,
+  "downloads": 290134003,
+  "num_side_effects": 899,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.18.1 -> 1.18.4",
+      "version": "",
+      "notes": "This looks to be a minor release primarily to fix a security-related Windows\\nissue plus some reorganization around lazy initialization. Altogether nothing\\namiss here.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.2.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.29.1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "1.19.2 -> 1.20.5",
+      "version": "",
+      "notes": "Reviewed on http://fxrev.dev/904806"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "1.20.5 -> 1.25.2",
+      "version": "",
+      "notes": "Reviewed at https://fxrev.dev/906324"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.35.0 -> 1.35.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "1.35.1 -> 1.37.0",
+      "version": "",
+      "notes": "Cursory review, but new and changed uses of `unsafe` code look fine, as far as I can see."
+    }
+  ],
+  "dependencies": [
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 515,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

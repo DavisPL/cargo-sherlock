@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Matteo Bertini,naufraghi,https://github.com/naufraghi
+************************************
+event,timestamp,downloads
+Downloads,-,1597
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:58:31.939236 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:58:33.540888 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `chrono = ""^0.4.15""`
+candidate versions found which didn't match: 0.4.31, 0.4.30, 0.4.29, ...
+location searched: crates.io index
+required by package `gitlab-butler-lib v0.9.1 (/tmp/rudra)`
+
+"
+************************************

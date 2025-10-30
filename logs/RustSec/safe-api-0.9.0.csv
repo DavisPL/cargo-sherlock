@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,MaidSafe-QA,MaidSafe-QA,https://github.com/MaidSafe-QA
+************************************
+event,timestamp,downloads
+Downloads,-,8718
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:12:14.145336 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:12:16.002956 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: no matching package named `miscreant` found
+location searched: registry `crates-io`
+required by package `safe_app v0.14.0`
+    ... which satisfies dependency `safe_app = ""^0.14.0""` of package `safe-api v0.9.0 (/tmp/rudra)`
+
+"
+************************************

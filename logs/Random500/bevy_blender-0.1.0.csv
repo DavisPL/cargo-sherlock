@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jerald Thomas,jeraldamo,https://github.com/jeraldamo
+************************************
+event,timestamp,downloads
+Downloads,-,725
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,0
+************************************
+Rudra,timestamp
+"2024-06-23 16:26:08.752484 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:26:14.121101 |INFO | [rudra-progress] Running rudra for target lib:bevy_blender
+2024-06-23 16:37:40.621503 |INFO | [rudra-progress] Rudra started
+2024-06-23 16:37:40.625483 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 16:37:40.625855 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 16:37:40.625866 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 16:37:40.679507 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 16:37:40.679540 |INFO | [rudra-progress] Rudra finished
+2024-06-23 16:37:41.893035 |WARN | [cargo_rudra] Target example:demo is not supported
+2024-06-23 16:37:41.893180 |WARN | [cargo_rudra] Target example:camera is not supported
+2024-06-23 16:37:41.893386 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

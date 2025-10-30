@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sunli,sunli829,https://github.com/sunli829
+************************************
+event,timestamp,downloads
+Downloads,-,5868315
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:57:35.385865 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:57:40.910878 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `ahash = ""^0.7.0""`
+candidate versions found which didn't match: 0.4.8, 0.4.1, 0.4.0, ...
+location searched: crates.io index
+required by package `hashbrown v0.12.0`
+    ... which satisfies dependency `hashbrown = ""^0.12.0""` of package `async-graphql v4.0.5 (/tmp/rudra)`
+
+"
+************************************

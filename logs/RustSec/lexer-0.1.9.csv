@@ -1,0 +1,37 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nathan Faucett,nathanfaucett,https://github.com/nathanfaucett
+************************************
+event,timestamp,downloads
+Downloads,-,14648
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:22:31.213734 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:22:34.442616 |INFO | [rudra-progress] Running rudra for target lib:lexer
+[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Chars` in module `io`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/tmp/rudra-runner-home/cargo_home/registry/src/github.com-1ecc6299db9ec823/chars_input-0.2.2/src/chars.rs:140:20[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m140[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        chars: io::Chars<R>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in `io`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing one of these items[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m118[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[38;5;10muse Chars;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m118[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[38;5;10muse alloc::str::Chars;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0412`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `chars_input` due to previous error
+[0m[0m[1m[31merror[0m[1m:[0m build failed
+2024-06-21 17:22:39.904185 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,152 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "mattsse",
+    "github:alloy-rs:core"
+  ],
+  "stars": 7,
+  "forks": 1,
+  "downloads": 12860,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "alloy-chains",
+      "0.1.66"
+    ],
+    [
+      "alloy-primitives",
+      "0.8.24"
+    ],
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "const-hex",
+      "1.14.0"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "derive_more",
+      "2.0.1"
+    ],
+    [
+      "derive_more-impl",
+      "2.0.1"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "paste",
+      "1.0.15"
+    ],
+    [
+      "ruint",
+      "1.13.1"
+    ],
+    [
+      "ruint-macro",
+      "1.2.1"
+    ],
+    [
+      "tiny-keccak",
+      "2.0.2"
+    ],
+    [
+      "crunchy",
+      "0.2.3"
+    ],
+    [
+      "num_enum",
+      "0.7.3"
+    ],
+    [
+      "num_enum_derive",
+      "0.7.3"
+    ],
+    [
+      "strum",
+      "0.27.1"
+    ],
+    [
+      "alloy-eip2124",
+      "0.1.0"
+    ],
+    [
+      "alloy-rlp",
+      "0.3.11"
+    ],
+    [
+      "crc",
+      "3.2.1"
+    ],
+    [
+      "crc-catalog",
+      "2.4.0"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "auto_impl",
+      "1.2.1"
+    ],
+    [
+      "dyn-clone",
+      "1.0.19"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

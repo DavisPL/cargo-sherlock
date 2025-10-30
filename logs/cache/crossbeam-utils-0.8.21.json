@@ -1,0 +1,118 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "jeehoonkang",
+    "Amanieu",
+    "taiki-e",
+    "github:crossbeam-rs:admins"
+  ],
+  "stars": 7723,
+  "forks": 483,
+  "downloads": 312554539,
+  "num_side_effects": 30,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.10 -> 0.8.11",
+      "version": "",
+      "notes": "No changes of substance, only minor updates around how `unsafe` code is managed but it's all trivially the same as before"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.8.15",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.8.15 -> 0.8.16",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.8 -> 0.8.11",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.11 -> 0.8.14",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.19 -> 0.8.20",
+      "version": "",
+      "notes": "Minor changes."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.14 -> 0.8.19",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.14 -> 0.8.15",
+      "version": "",
+      "notes": "- Fixes a wrapping overflow for large timeouts.\\n- Marks some BPF and Sony Vita targets as not having atomics.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.15 -> 0.8.16",
+      "version": "",
+      "notes": "- Fixes cache line alignment for some targets.\\n- Replaces `mem::replace` with `Option::take` inside `unsafe` blocks.\\n- Unmarks some ARMv7r and Sony Vita targets as not having 64-bit atomics.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.16 -> 0.8.17",
+      "version": "",
+      "notes": "- Build script change removes some now-unused config flags, and checks for thread\\n  sanitization to enable this on `crossbeam`.\\n- Changes to `unsafe` blocks are to move them, or to introduce a couple of new\\n  blocks identical to equivalent earlier blocks (now that MSRV is new enough to\\n  access newer `Atomic*` methods).\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.17 -> 0.8.18",
+      "version": "",
+      "notes": "Changes to `unsafe` code are to construct and drop `MaybeUninit<T>` directly\\nvia its methods (one of which is now usable with the new MSRV) instead of via\\ncasting.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.20 -> 0.8.21",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 23,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 10,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 1.17
+  }
+}

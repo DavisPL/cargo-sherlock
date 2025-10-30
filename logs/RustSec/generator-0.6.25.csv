@@ -1,0 +1,48 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Xudong Huang,Xudong-Huang,https://github.com/Xudong-Huang
+************************************
+event,timestamp,downloads
+Downloads,-,7049605
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:35:47.702416 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:35:51.053352 |INFO | [rudra-progress] Running rudra for target lib:generator
+[0m[1m[33mwarning[0m[0m[1m: lint `non_fmt_panic` has been renamed to `non_fmt_panics`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:11:10[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m11[0m[0m [0m[0m[1m[38;5;12m| [0m[0m#![allow(non_fmt_panic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use the new name: `non_fmt_panics`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(renamed_and_removed_lints)]` on by default[0m
+
+2024-06-21 18:36:04.207290 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:36:04.211260 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:36:04.212771 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:36:04.212782 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:36:04.277907 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:36:04.277937 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/gen_impl.rs:27:1: 27:55
+unsafe impl<A, T> Send for Generator<'static, A, T> {}
+2024-06-21 18:36:05.524478 |WARN | [cargo_rudra] Target example:yield_from is not supported
+2024-06-21 18:36:05.524689 |WARN | [cargo_rudra] Target example:fib is not supported
+2024-06-21 18:36:05.524701 |WARN | [cargo_rudra] Target example:send is not supported
+2024-06-21 18:36:05.524708 |WARN | [cargo_rudra] Target example:range is not supported
+2024-06-21 18:36:05.524711 |WARN | [cargo_rudra] Target example:number is not supported
+2024-06-21 18:36:05.524718 |WARN | [cargo_rudra] Target example:pipe is not supported
+2024-06-21 18:36:05.524724 |WARN | [cargo_rudra] Target example:get_yield is not supported
+2024-06-21 18:36:05.524726 |WARN | [cargo_rudra] Target example:cd is not supported
+2024-06-21 18:36:05.524729 |WARN | [cargo_rudra] Target test:lib is not supported
+2024-06-21 18:36:05.524731 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 18:36:05.525033 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

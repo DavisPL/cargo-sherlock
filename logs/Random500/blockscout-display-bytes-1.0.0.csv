@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Rim Rakhimov,rimrakhimov,https://github.com/rimrakhimov
+Author,-,Rust,github:blockscout:rust,https://github.com/blockscout
+************************************
+event,timestamp,downloads
+Downloads,-,7186
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 17:22:03.076220 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 17:22:04.631508 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `chrono = ""^0.4""`
+candidate versions found which didn't match: 0.4.31, 0.4.30, 0.4.29, ...
+location searched: crates.io index
+required by package `ethers-core v1.0.2`
+    ... which satisfies dependency `ethers-core = ""^1.0""` (locked to 1.0.2) of package `blockscout-display-bytes v1.0.0 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,73 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "droundy"
+  ],
+  "stars": 84,
+  "forks": 18,
+  "downloads": 81820154,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.3.6",
+      "notes": "Unsafe code, but its logic looks good to me. Necessary given what it is\\ndoing. Well tested, has quickchecks.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "",
+      "version": "0.3.7",
+      "notes": "Reviewed in CL 636647431\\nIssues found:\\n - Macros do not overflow check before adding pre/post and can cause hard-to-trigger UB. https://github.com/droundy/arrayref/issues/26\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-2",
+      "delta": "0.3.7 -> 0.3.9",
+      "version": "",
+      "notes": "Reviewed in CL 693504716\\nDiff fixes https://github.com/droundy/arrayref/issues/26\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.6 -> 0.3.7",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.6 -> 0.3.8",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.3.8 -> 0.3.9",
+      "version": "",
+      "notes": "Changes to `unsafe` lines are to make some existing `unsafe fn`s `const`."
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 5,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.2
+  }
+}

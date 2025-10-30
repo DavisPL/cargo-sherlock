@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Kevin K.,kbknapp,https://github.com/kbknapp
+Author,-,Admins,github:clap-rs:admins,https://github.com/clap-rs
+************************************
+event,timestamp,downloads
+Downloads,-,9622584
+************************************
+event,timestamp,total,flagged
+Side Effects,-,22,20
+************************************
+Rudra,timestamp
+"2024-06-21 18:01:55.160680 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:01:58.912455 |INFO | [rudra-progress] Running rudra for target lib:term_size
+2024-06-21 18:02:06.175224 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:02:06.179082 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:02:06.180196 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:02:06.180208 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:02:06.198348 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:02:06.198368 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:02:06.895557 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

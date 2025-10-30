@@ -1,0 +1,60 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "myrrlyn",
+    "github:ferrilab:maintainers"
+  ],
+  "stars": 1269,
+  "forks": 119,
+  "downloads": 86925335,
+  "num_side_effects": 525,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.19.5",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "funty",
+      "2.0.0"
+    ],
+    [
+      "radium",
+      "1.1.0"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "tap",
+      "1.0.1"
+    ],
+    [
+      "wyz",
+      "0.6.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 440,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

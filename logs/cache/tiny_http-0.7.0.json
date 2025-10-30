@@ -1,0 +1,157 @@
+{
+  "rustsec_label": "MEDIUM",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "tomaka",
+    "frewsxcv",
+    "bradfier"
+  ],
+  "stars": 1060,
+  "forks": 131,
+  "downloads": 17805525,
+  "num_side_effects": 58,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "ascii",
+      "1.1.0"
+    ],
+    [
+      "chrono",
+      "0.4.40"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "chunked_transfer",
+      "1.5.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "url",
+      "2.5.4"
+    ],
+    [
+      "form_urlencoded",
+      "1.2.1"
+    ],
+    [
+      "percent-encoding",
+      "2.3.1"
+    ],
+    [
+      "idna",
+      "1.0.3"
+    ],
+    [
+      "idna_adapter",
+      "1.2.0"
+    ],
+    [
+      "icu_normalizer",
+      "1.5.0"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "icu_collections",
+      "1.5.0"
+    ],
+    [
+      "yoke",
+      "0.8.0"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.0"
+    ],
+    [
+      "zerofrom",
+      "0.1.6"
+    ],
+    [
+      "zerovec",
+      "0.11.1"
+    ],
+    [
+      "icu_properties",
+      "1.5.1"
+    ],
+    [
+      "icu_provider",
+      "1.5.0"
+    ],
+    [
+      "icu_locid",
+      "1.5.0"
+    ],
+    [
+      "litemap",
+      "0.7.5"
+    ],
+    [
+      "tinystr",
+      "0.8.1"
+    ],
+    [
+      "writeable",
+      "0.6.1"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "utf16_iter",
+      "1.0.5"
+    ],
+    [
+      "utf8_iter",
+      "1.0.4"
+    ],
+    [
+      "write16",
+      "1.0.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

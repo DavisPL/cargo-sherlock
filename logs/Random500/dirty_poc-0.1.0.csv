@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Lucas @ StarkWare,LucasLvy,https://github.com/LucasLvy
+************************************
+event,timestamp,downloads
+Downloads,-,451
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:15:02.690694 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:15:05.623703 |INFO | [rudra-progress] Running rudra for target lib:dirty_poc
+2024-06-23 15:15:09.160230 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:15:09.163518 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:15:09.166643 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:15:09.166652 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:15:09.166726 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:15:09.166732 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:15:09.596749 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

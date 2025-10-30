@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Marko Lalic,mlalic,https://github.com/mlalic
+************************************
+event,timestamp,downloads
+Downloads,-,1137124
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:38:35.896763 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:38:39.311906 |INFO | [rudra-progress] Running rudra for target lib:hpack
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:38:42.712094 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

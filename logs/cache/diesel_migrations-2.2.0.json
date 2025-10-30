@@ -1,0 +1,120 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "sgrif",
+    "github:diesel-rs:core"
+  ],
+  "stars": 13213,
+  "forks": 1116,
+  "downloads": 9275247,
+  "num_side_effects": 24,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "diesel",
+      "2.2.8"
+    ],
+    [
+      "diesel_derives",
+      "2.2.4"
+    ],
+    [
+      "diesel_table_macro_syntax",
+      "0.2.0"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "dsl_auto_type",
+      "0.1.3"
+    ],
+    [
+      "darling",
+      "0.20.10"
+    ],
+    [
+      "darling_core",
+      "0.20.10"
+    ],
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "ident_case",
+      "1.0.1"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "darling_macro",
+      "0.20.10"
+    ],
+    [
+      "either",
+      "1.15.0"
+    ],
+    [
+      "heck",
+      "0.5.0"
+    ],
+    [
+      "migrations_internals",
+      "2.2.0"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "toml",
+      "0.8.20"
+    ],
+    [
+      "serde_spanned",
+      "0.6.8"
+    ],
+    [
+      "toml_datetime",
+      "0.6.8"
+    ],
+    [
+      "migrations_macros",
+      "2.2.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

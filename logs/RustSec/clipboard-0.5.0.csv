@@ -1,0 +1,24 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Simon Sapin,SimonSapin,https://github.com/SimonSapin
+Author,-,Avi Weinstock,aweinstock314,https://github.com/aweinstock314
+Author,-,cargo publish,github:servo:cargo-publish,https://github.com/servo
+************************************
+event,timestamp,downloads
+Downloads,-,1265432
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,5
+************************************
+Rudra,timestamp
+"2024-06-21 17:56:41.055872 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:56:44.944044 |INFO | [rudra-progress] Running rudra for target lib:clipboard
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.21` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 17:56:48.356004 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

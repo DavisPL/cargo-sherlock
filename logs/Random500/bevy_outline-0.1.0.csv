@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Yoshiera,YoshieraHuang,https://github.com/YoshieraHuang
+************************************
+event,timestamp,downloads
+Downloads,-,516
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 17:57:58.797219 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 17:58:20.018271 |INFO | [rudra-progress] Running rudra for target lib:bevy_outline
+2024-06-23 18:08:54.515596 |INFO | [rudra-progress] Rudra started
+2024-06-23 18:08:54.535847 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 18:08:54.536694 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 18:08:54.536733 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 18:08:54.713924 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 18:08:54.714021 |INFO | [rudra-progress] Rudra finished
+2024-06-23 18:09:03.619179 |WARN | [cargo_rudra] Target example:scene is not supported
+2024-06-23 18:09:03.619945 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

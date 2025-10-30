@@ -1,0 +1,23 @@
+Solving for required assumptions to trust plotchart-0.2.12...
++------------------------------------------------------------+
+|            Analysis Report for plotchart-0.2.12            |
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 75 cost
+Assumptions for Trusting:
+  • plotchart-0.2.12 having all trusted developers implies it is safe: 5 cost
+  • hugcoday is trusted: 70 cost
+
+Distrust Cost (higher is better): 50 cost
+Assumptions for Distrusting:
+  • plotchart-0.2.12 failing a Miri test implies it is unsafe: 50 cost
+  • web-sys-0.3.77 has many side effects: 0 cost
+
+Severity Label: CRITICAL
+
+Full details about the crate can be found at: /logs/cache/plotchart-0.2.12.json
++------------------------------------------------------------+
+

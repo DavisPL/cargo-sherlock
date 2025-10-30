@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Riccardo Casatta,RCasatta,https://github.com/RCasatta
+************************************
+event,timestamp,downloads
+Downloads,-,10434
+************************************
+event,timestamp,total,flagged
+Side Effects,-,17,5
+************************************
+Rudra,timestamp
+"2024-06-23 16:38:13.900302 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:38:15.677227 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bitcoin_slices = ""^0.6.2""`
+candidate versions found which didn't match: 0.4.3, 0.4.2
+location searched: crates.io index
+required by package `blocks_iterator v1.0.4 (/tmp/rudra)`
+
+"
+************************************

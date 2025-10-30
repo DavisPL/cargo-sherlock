@@ -1,0 +1,6 @@
+Solving for required assumptions to trust dotenv_codegen-0.9.3...
+Trust Score for dotenv_codegen-0.9.3: 113
+Assumptions Made:
+dotenv_codegen-0.9.3 has many downloads: 53 wt
+dotenv_codegen-0.9.3 having many downloads implies it is safe: 10 wt
+dotenv_codegen-0.9.3 appearing in RustSec implies it is less safe (score penalty): 50 weight

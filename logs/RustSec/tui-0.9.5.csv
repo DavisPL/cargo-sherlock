@@ -1,0 +1,52 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Florian Dehau,fdehau,https://github.com/fdehau
+************************************
+event,timestamp,downloads
+Downloads,-,4658347
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:44:15.186119 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:44:18.519010 |INFO | [rudra-progress] Running rudra for target lib:tui
+2024-06-21 17:44:27.483824 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:44:27.488072 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:44:27.488509 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:44:27.488547 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:44:27.526548 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:44:27.526579 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:44:29.418159 |WARN | [cargo_rudra] Target example:canvas is not supported
+2024-06-21 17:44:29.418233 |WARN | [cargo_rudra] Target example:user_input is not supported
+2024-06-21 17:44:29.418239 |WARN | [cargo_rudra] Target example:gauge is not supported
+2024-06-21 17:44:29.418256 |WARN | [cargo_rudra] Target example:barchart is not supported
+2024-06-21 17:44:29.418269 |WARN | [cargo_rudra] Target example:chart is not supported
+2024-06-21 17:44:29.418271 |WARN | [cargo_rudra] Target example:paragraph is not supported
+2024-06-21 17:44:29.418273 |WARN | [cargo_rudra] Target example:list is not supported
+2024-06-21 17:44:29.418285 |WARN | [cargo_rudra] Target example:table is not supported
+2024-06-21 17:44:29.418293 |WARN | [cargo_rudra] Target example:tabs is not supported
+2024-06-21 17:44:29.418304 |WARN | [cargo_rudra] Target example:custom_widget is not supported
+2024-06-21 17:44:29.418315 |WARN | [cargo_rudra] Target example:layout is not supported
+2024-06-21 17:44:29.418325 |WARN | [cargo_rudra] Target example:popup is not supported
+2024-06-21 17:44:29.418329 |WARN | [cargo_rudra] Target example:block is not supported
+2024-06-21 17:44:29.418339 |WARN | [cargo_rudra] Target example:sparkline is not supported
+2024-06-21 17:44:29.418341 |WARN | [cargo_rudra] Target example:termion_demo is not supported
+2024-06-21 17:44:29.418344 |WARN | [cargo_rudra] Target example:rustbox_demo is not supported
+2024-06-21 17:44:29.418346 |WARN | [cargo_rudra] Target example:crossterm_demo is not supported
+2024-06-21 17:44:29.418348 |WARN | [cargo_rudra] Target example:curses_demo is not supported
+2024-06-21 17:44:29.418350 |WARN | [cargo_rudra] Target test:chart is not supported
+2024-06-21 17:44:29.418352 |WARN | [cargo_rudra] Target test:size is not supported
+2024-06-21 17:44:29.418357 |WARN | [cargo_rudra] Target test:list is not supported
+2024-06-21 17:44:29.418360 |WARN | [cargo_rudra] Target test:gauge is not supported
+2024-06-21 17:44:29.418363 |WARN | [cargo_rudra] Target test:block is not supported
+2024-06-21 17:44:29.418370 |WARN | [cargo_rudra] Target test:table is not supported
+2024-06-21 17:44:29.418374 |WARN | [cargo_rudra] Target test:paragraph is not supported
+2024-06-21 17:44:29.418550 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,74 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,oliver-giersch,https://github.com/oliver-giersch
+************************************
+event,timestamp,downloads
+Downloads,-,418462
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:26:51.932624 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:26:55.119455 |INFO | [rudra-progress] Running rudra for target lib:conquer-once
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/spin.rs:4:26[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse core::sync::atomic::{spin_loop_hint, Ordering};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::sync::atomic::spin_loop_hint`: use hint::spin_loop instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/spin.rs:81:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            spin_loop_hint()[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/state.rs:53:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let prev = self.0.compare_and_swap(UNINIT, WOULD_BLOCK, order);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/state.rs:82:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m82[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        match self.0.compare_and_swap(current.into(), new.into(), success) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: panic message is not a string literal[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/cell.rs:220:47[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m220[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            Err(_) if !ignore_panic => panic!(POISON_PANIC_MSG),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                              [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_fmt_panics)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this usage of panic!() is deprecated; it will be a hard error in Rust 2021[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>[0m
+[0m[1m[38;5;14mhelp[0m[0m: add a ""{}"" format string to Display the message[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m220[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            Err(_) if !ignore_panic => panic!([0m[0m[38;5;10m""{}"", [0m[0mPOISON_PANIC_MSG),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                              [0m[0m[38;5;10m+++++[0m
+
+2024-06-21 17:26:59.828775 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:26:59.832458 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:26:59.836496 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:26:59.836507 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:26:59.864636 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:26:59.864654 |INFO | [rudra-progress] Rudra finished
+Info (SendSyncVariance:/NaiveSendForSend): Suspicious impl of `Send` found
+-> src/cell.rs:64:1: 64:59
+unsafe impl<T, B> Send for OnceCell<T, B> where T: Send {}
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/cell.rs:65:1: 65:59
+unsafe impl<T, B> Sync for OnceCell<T, B> where T: Sync {}
+2024-06-21 17:27:00.999978 |WARN | [cargo_rudra] Target bench:once is not supported
+2024-06-21 17:27:01.000102 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

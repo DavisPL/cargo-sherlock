@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Vi,mistodon,https://github.com/mistodon
+************************************
+event,timestamp,downloads
+Downloads,-,1499
+************************************
+event,timestamp,total,flagged
+Side Effects,-,1,1
+************************************
+Rudra,timestamp
+"2024-06-23 15:38:04.259846 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:38:07.276685 |INFO | [rudra-progress] Running rudra for target lib:dirty_static
+2024-06-23 15:38:11.481514 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:38:11.485366 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:38:11.507652 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:38:11.507682 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:38:11.518834 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:38:11.518853 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/ApiSendForSync): Suspicious impl of `Sync` found
+-> src/lib.rs:33:5: 33:60
+unsafe impl<T> Sync for DirtyStatic<T> where T: Sync {}
+2024-06-23 15:38:12.258769 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

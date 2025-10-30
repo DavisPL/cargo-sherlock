@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Flux Xu,fluxxu,https://github.com/fluxxu
+************************************
+event,timestamp,downloads
+Downloads,-,5049
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-23 16:44:58.982112 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:45:00.470721 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `security-framework = ""^0.1.13""`
+candidate versions found which didn't match: 2.8.1, 2.8.0, 2.7.0, ...
+location searched: crates.io index
+required by package `native-tls v0.1.3`
+    ... which satisfies dependency `native-tls = ""^0.1.3""` of package `reqwest v0.8.2`
+    ... which satisfies dependency `reqwest = ""^0.8.2""` of package `ebay v0.1.4 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,32 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,srrrse,withoutboats,https://github.com/withoutboats
+************************************
+event,timestamp,downloads
+Downloads,-,477232
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:42:18.108338 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:42:21.230128 |INFO | [rudra-progress] Running rudra for target lib:fehler
+2024-06-21 17:42:36.816578 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:42:36.820591 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:42:36.822470 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:42:36.822487 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:42:36.842236 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:42:36.842258 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:42:37.517429 |WARN | [cargo_rudra] Target example:throwing-main is not supported
+2024-06-21 17:42:37.517544 |WARN | [cargo_rudra] Target test:option is not supported
+2024-06-21 17:42:37.517558 |WARN | [cargo_rudra] Target test:no_std is not supported
+2024-06-21 17:42:37.517561 |WARN | [cargo_rudra] Target test:throws is not supported
+2024-06-21 17:42:37.517567 |WARN | [cargo_rudra] Target test:throw is not supported
+2024-06-21 17:42:37.517690 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

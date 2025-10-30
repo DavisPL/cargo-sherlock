@@ -1,0 +1,203 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "epage",
+    "github:rust-cli:maintainers",
+    "github:clap-rs:admins"
+  ],
+  "stars": 15603,
+  "forks": 1127,
+  "downloads": 268424439,
+  "num_side_effects": 130,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "4.1.14",
+      "notes": "This was a diff audit between clap 4.0.32 sources, and sources in clap_builder\\n4.1.14. clap_builder is primarily stuff refactored out of `clap`.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "4.5.2",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "4.4.8",
+      "notes": "Reviewed in https://crrev.com/c/5171063\\n\\nPreviously reviewed during security review and the audit is grandparented in.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-0",
+      "delta": "",
+      "version": "4.5.0",
+      "notes": "No `unsafe`"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "",
+      "version": "4.5.15",
+      "notes": "Grepped for `-i cipher`, `-i crypto`, `'\\\\bfs\\\\b'`, `'\\\\bnet\\\\b'`, `'\\\\bunsafe\\\\b'`\\nand there were no hits.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.4.8 -> 4.4.14",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.4.14 -> 4.5.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.5.0 -> 4.5.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.5.1 -> 4.5.2",
+      "version": "",
+      "notes": "Reviewed in https://crrev.com/c/5362201"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.5.2 -> 4.5.7",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.5.7 -> 4.5.8",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.5.8 -> 4.5.9",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "4.5.15 -> 4.5.17",
+      "version": "",
+      "notes": "No new unsafe, net, fs"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "4.5.17 -> 4.5.18",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "4.5.18 -> 4.5.20",
+      "version": "",
+      "notes": "No new unsafe"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.5.20 -> 4.5.21",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.5.21 -> 4.5.23",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.5.23 -> 4.5.27",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.5.27 -> 4.5.29",
+      "version": "",
+      "notes": "Only changed `args_present` method a bit and added a `value` method to `flat_map`."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.5.29 -> 4.5.31",
+      "version": "",
+      "notes": "No unsafe uses added or changed. Delta consists of miscellaneous fixes and cleanups (e.g. improvements for ValueRange) and a new parser for Saturating<T>."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "4.5.31 -> 4.5.32",
+      "version": "",
+      "notes": "Just a new `fn remove` method in `src/error/mod.rs`."
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "4.1.14 -> 4.3.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-run",
+      "delta": "4.5.0 -> 4.4.18",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "anstyle",
+      "1.0.13"
+    ],
+    [
+      "clap_lex",
+      "0.7.6"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 344,
+    "failed": 0,
+    "ignored": 3,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 21.86
+  }
+}

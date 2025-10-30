@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,shenggan,Shenggan,https://github.com/Shenggan
+************************************
+event,timestamp,downloads
+Downloads,-,811
+************************************
+event,timestamp,total,flagged
+Side Effects,-,101,15
+************************************
+Rudra,timestamp
+"2024-06-23 15:26:07.753500 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:26:10.006434 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `cc = ""^1""`
+candidate versions found which didn't match: 1.0.99, 1.0.98, 1.0.97, ...
+location searched: crates.io index
+required by package `nix v0.11.1`
+    ... which satisfies dependency `nix = ""^0.11.0""` (locked to 0.11.1) of package `cylun v0.1.0 (/tmp/rudra)`
+
+"
+************************************

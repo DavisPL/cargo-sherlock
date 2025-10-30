@@ -1,0 +1,48 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Keith Wansbrough,kw217,https://github.com/kw217
+Author,-,Angus Ireland,angusi,https://github.com/angusi
+Author,-,,johnbatty,https://github.com/johnbatty
+************************************
+event,timestamp,downloads
+Downloads,-,61786
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:38:45.756460 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:38:49.283636 |INFO | [rudra-progress] Running rudra for target lib:cassandra-cpp
+2024-06-21 17:39:09.590024 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:39:09.594359 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:39:09.644661 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:39:09.644690 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:39:09.727065 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:39:09.727096 |INFO | [rudra-progress] Rudra finished
+Info (SendSyncVariance:/NaiveSyncForSync): Suspicious impl of `Sync` found
+-> src/cassandra/future.rs:66:1: 66:41
+unsafe impl<T> Sync for CassFuture<T> {}
+2024-06-21 17:39:11.665247 |WARN | [cargo_rudra] Target example:cloud is not supported
+2024-06-21 17:39:11.665399 |WARN | [cargo_rudra] Target example:ssl is not supported
+2024-06-21 17:39:11.665411 |WARN | [cargo_rudra] Target example:simple is not supported
+2024-06-21 17:39:11.665418 |WARN | [cargo_rudra] Target example:collections is not supported
+2024-06-21 17:39:11.665420 |WARN | [cargo_rudra] Target test:futures is not supported
+2024-06-21 17:39:11.665424 |WARN | [cargo_rudra] Target test:types is not supported
+2024-06-21 17:39:11.665435 |WARN | [cargo_rudra] Target test:send_static_future is not supported
+2024-06-21 17:39:11.665438 |WARN | [cargo_rudra] Target test:batch is not supported
+2024-06-21 17:39:11.665440 |WARN | [cargo_rudra] Target test:bind_by_name is not supported
+2024-06-21 17:39:11.665442 |WARN | [cargo_rudra] Target test:logging is not supported
+2024-06-21 17:39:11.665444 |WARN | [cargo_rudra] Target test:uuids is not supported
+2024-06-21 17:39:11.665446 |WARN | [cargo_rudra] Target test:maps is not supported
+2024-06-21 17:39:11.665466 |WARN | [cargo_rudra] Target test:paging is not supported
+2024-06-21 17:39:11.665472 |WARN | [cargo_rudra] Target test:async is not supported
+2024-06-21 17:39:11.665474 |WARN | [cargo_rudra] Target test:basic is not supported
+2024-06-21 17:39:11.665476 |WARN | [cargo_rudra] Target test:collections is not supported
+2024-06-21 17:39:11.665692 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

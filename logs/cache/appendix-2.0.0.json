@@ -1,0 +1,131 @@
+{
+  "rustsec_label": "MEDIUM",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "krl"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 17654,
+  "num_side_effects": 29,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "arrayvec",
+      "0.7.6"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "memmap",
+      "0.7.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "parking_lot",
+      "0.12.3"
+    ],
+    [
+      "lock_api",
+      "0.4.12"
+    ],
+    [
+      "scopeguard",
+      "1.2.0"
+    ],
+    [
+      "parking_lot_core",
+      "0.9.10"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "redox_syscall",
+      "0.5.10"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "seahash",
+      "4.1.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 9,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

@@ -1,0 +1,29 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Andrew Gallant,BurntSushi,https://github.com/BurntSushi
+Author,-,Dan Burkert,danburkert,https://github.com/danburkert
+************************************
+event,timestamp,downloads
+Downloads,-,13863377
+************************************
+event,timestamp,total,flagged
+Side Effects,-,75,55
+************************************
+Rudra,timestamp
+"2024-06-21 18:13:55.301740 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:13:58.855466 |INFO | [rudra-progress] Running rudra for target lib:memmap
+2024-06-21 18:14:06.140001 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:14:06.144131 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:14:06.147353 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:14:06.147372 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:14:06.205076 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:14:06.205100 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:14:07.158110 |WARN | [cargo_rudra] Target example:cat is not supported
+2024-06-21 18:14:07.158308 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

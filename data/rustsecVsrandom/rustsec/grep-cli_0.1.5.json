@@ -1,0 +1,6 @@
+Solving for required assumptions to trust grep-cli-0.1.5...
+Trust Score for grep-cli-0.1.5: 65
+Assumptions Made:
+grep-cli-0.1.5 has many stars and forks: 0 wt
+grep-cli-0.1.5 having many stars and forks implies it is safe: 15 wt
+grep-cli-0.1.5 appearing in RustSec implies it is less safe (score penalty): 50 weight

@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ossi Herrala,oherrala,https://github.com/oherrala
+Author,-,Joachim Viide,jviide,https://github.com/jviide
+************************************
+event,timestamp,downloads
+Downloads,-,16244
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,1
+************************************
+Rudra,timestamp
+"2024-06-23 07:23:16.711691 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:23:20.327461 |INFO | [rudra-progress] Running rudra for target lib:cymrust
+2024-06-23 07:23:45.741649 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:23:45.745844 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:23:45.746268 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:23:45.746283 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:23:45.771534 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:23:45.771567 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:23:46.926546 |WARN | [cargo_rudra] Target example:asn is not supported
+2024-06-23 07:23:46.926704 |WARN | [cargo_rudra] Target example:whois is not supported
+2024-06-23 07:23:46.926898 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

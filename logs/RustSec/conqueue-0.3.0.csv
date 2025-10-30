@@ -1,0 +1,37 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jason Longshore,longshorej,https://github.com/longshorej
+Author,-,,longshorej-tools,https://github.com/longshorej-tools
+************************************
+event,timestamp,downloads
+Downloads,-,157772
+************************************
+event,timestamp,total,flagged
+Side Effects,-,9,9
+************************************
+Rudra,timestamp
+"2024-06-21 17:24:47.692770 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:24:50.564811 |INFO | [rudra-progress] Running rudra for target lib:conqueue
+2024-06-21 17:24:54.288934 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:24:54.292643 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:24:54.311965 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:24:54.311989 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:24:54.341994 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:24:54.342011 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:184:1: 184:44
+unsafe impl<T> Send for QueueReceiver<T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:81:1: 81:42
+unsafe impl<T> Send for QueueSender<T> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:79:1: 79:42
+unsafe impl<T> Sync for QueueSender<T> {}
+2024-06-21 17:24:55.090379 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

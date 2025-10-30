@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jack,jackwchoi,https://github.com/jackwchoi
+************************************
+event,timestamp,downloads
+Downloads,-,689
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 07:24:01.946708 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 07:24:03.449416 |INFO | [rudra-progress] Running rudra for target bin:chunk
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `args`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/main.rs:8:9[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    let args = Opts::from_args();[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_args`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_variables)]` on by default[0m
+
+2024-06-23 07:25:18.404054 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:25:18.418171 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:25:18.420979 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:25:18.421080 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:25:18.497911 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:25:18.498108 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:25:18.725618 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

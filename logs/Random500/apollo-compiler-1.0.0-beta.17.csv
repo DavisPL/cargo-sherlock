@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Iryna Shestak,lrlna,https://github.com/lrlna
+Author,-,Rust Platform,github:apollographql:rust-platform,https://github.com/apollographql
+************************************
+event,timestamp,downloads
+Downloads,-,181450
+************************************
+event,timestamp,total,flagged
+Side Effects,-,28,8
+************************************
+Rudra,timestamp
+"2024-06-23 14:07:47.520042 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:07:52.795163 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `uuid = ""^1.6""`
+candidate versions found which didn't match: 1.6.1, 1.6.0, 1.5.0, ...
+location searched: crates.io index
+required by package `apollo-compiler v1.0.0-beta.17 (/tmp/rudra)`
+
+"
+************************************

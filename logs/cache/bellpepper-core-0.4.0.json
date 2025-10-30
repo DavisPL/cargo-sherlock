@@ -1,0 +1,96 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "huitseeker",
+    "porcuquine"
+  ],
+  "stars": 71,
+  "forks": 18,
+  "downloads": 904713,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "blake2s_simd",
+      "1.0.3"
+    ],
+    [
+      "arrayref",
+      "0.3.9"
+    ],
+    [
+      "arrayvec",
+      "0.7.6"
+    ],
+    [
+      "constant_time_eq",
+      "0.4.2"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "ff",
+      "0.13.1"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "subtle",
+      "2.6.1"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

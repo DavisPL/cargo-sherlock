@@ -1,0 +1,31 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nick Fitzgerald,fitzgen,https://github.com/fitzgen
+Author,-,Sergei Shulepov,pepyakin,https://github.com/pepyakin
+Author,-,Matt Howell,DrGoldfire,https://github.com/DrGoldfire
+Author,-,Zack Pierce,ZackPierce,https://github.com/ZackPierce
+************************************
+event,timestamp,downloads
+Downloads,-,2137723
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:57:12.486812 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:57:16.172671 |INFO | [rudra-progress] Running rudra for target lib:wee_alloc
+2024-06-21 17:57:23.826627 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:57:23.830758 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:57:23.832525 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:57:23.832537 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:57:23.886536 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:57:23.886567 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:57:24.978329 |WARN | [cargo_rudra] Target custom-build:build-script-build is not supported
+2024-06-21 17:57:24.978478 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

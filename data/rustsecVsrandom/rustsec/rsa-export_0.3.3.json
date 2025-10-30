@@ -1,0 +1,6 @@
+Solving for required assumptions to trust rsa-export-0.3.3...
+Trust Score for rsa-export-0.3.3: 153
+Assumptions Made:
+rsa-export-0.3.3 has many downloads: 93 wt
+rsa-export-0.3.3 having many downloads implies it is safe: 10 wt
+rsa-export-0.3.3 appearing in RustSec implies it is less safe (score penalty): 50 weight

@@ -1,0 +1,30 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,google,"[ ""ub-risk-4"", ""does-not-implement-crypto"",]",,6.1.1,"Reviewed in CL 545304248\nMany issues found across the `lexical` family of crates:\n - https://github.com/Alexhuszagh/rust-lexical/pull/103\n - https://github.com/Alexhuszagh/rust-lexical/issues/104\n - https://github.com/Alexhuszagh/rust-lexical/issues/101\n - https://github.com/Alexhuszagh/rust-lexical/issues/95\n - Beyond the above issues, review was not completed on the unchecked indexing\n",
+************************************
+event,timestamp,name,username,url
+Author,-,Alexander Payne,myrrlyn,https://github.com/myrrlyn
+Author,-,Alexander Huszagh,Alexhuszagh,https://github.com/Alexhuszagh
+************************************
+event,timestamp,downloads
+Downloads,-,12237758
+************************************
+event,timestamp,total,flagged
+Side Effects,-,9,9
+************************************
+Rudra,timestamp
+"2024-06-21 17:43:43.500779 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:43:47.824423 |INFO | [rudra-progress] Running rudra for target lib:lexical
+2024-06-21 17:43:55.083099 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:43:55.086786 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:43:55.087791 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:43:55.087805 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:43:55.109122 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:43:55.109149 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:43:55.833857 |WARN | [cargo_rudra] Target test:api_tests is not supported
+2024-06-21 17:43:55.834040 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Joshua J. Bouw,joshuajbouw,https://github.com/joshuajbouw
+************************************
+event,timestamp,downloads
+Downloads,-,583
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:32:10.666766 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:32:13.576196 |INFO | [rudra-progress] Running rudra for target lib:bevy_p2p
+2024-06-23 15:32:17.542286 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:32:17.545857 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:32:17.548836 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:32:17.548855 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:32:17.550021 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:32:17.550036 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:32:18.060079 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

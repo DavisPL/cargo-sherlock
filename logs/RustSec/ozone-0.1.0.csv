@@ -1,0 +1,1059 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Mike Marcacci,mike-marcacci,https://github.com/mike-marcacci
+Author,-,Tony O,bqv,https://github.com/bqv
+************************************
+event,timestamp,downloads
+Downloads,-,2878
+************************************
+event,timestamp,total,flagged
+Side Effects,-,526,524
+************************************
+Rudra,timestamp
+"2024-06-21 16:20:28.186107 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:20:31.711131 |INFO | [rudra-progress] Running rudra for target lib:ozone
+[0m[1m[33mwarning[0m[0m[1m: unused imports: `AnonymousBuffer`, `Buffer`, `FileBuffer`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:3:14[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse buffer::{Buffer, AnonymousBuffer, FileBuffer};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[33m^^^^^^[0m[0m  [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m[0m  [0m[0m[1m[33m^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused import: `Page`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:4:13[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse table::{Page};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused imports: `Rng`, `StdRng`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:5:12[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse rand::{Rng, StdRng};[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^[0m[0m  [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused import: `TypeId`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:21:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0muse std::any::{Any, TypeId};[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/buffer.rs:12:25[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn new_sized(&self, usize) -> Result<Self>;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                        [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: usize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(anonymous_parameters)]` on by default[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: anonymous parameters are deprecated and will be removed in the next edition[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/buffer.rs:13:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn resize(&mut self, usize) -> Result<()>;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: try naming the parameter or explicitly ignoring it: `_: usize`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/map.rs:95:40[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m95[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut key: K = unsafe { mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/map.rs:96:42[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m96[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut value: V = unsafe { mem::uninitialized() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/map.rs:122:42[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m122[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut value: V = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/map.rs:138:40[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m138[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut key: K = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/map.rs:268:39[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m268[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let value = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/map.rs:377:42[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m377[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let k: K = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/map.rs:378:42[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m378[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                let v: V = unsafe { mem::uninitialized() };[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:372:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m372[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                keys: mem::uninitialized(),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:391:28[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m391[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                keys: mem::uninitialized(),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:408:30[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m408[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                values: mem::uninitialized(),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                             [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:445:46[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m445[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut temp_keys: [K; ORDER] = mem::uninitialized();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:446:50[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m446[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut temp_ptrs: [isize; ORDER] = mem::uninitialized();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:530:54[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m530[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut temp_ptrs: [isize; ORDER + 1] = mem::uninitialized();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                     [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:531:46[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m531[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut temp_keys: [K; ORDER] = mem::uninitialized();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:250:57[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m250[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            c = (self.meta.as_meta().start as *const _).offset(*Self::nth_ptr(c, i));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                        [0m[0m[1m[33m^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(tyvar_behind_raw_pointer)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:319:64[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m319[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                Some(&*(self.meta.as_meta().start as *const _).offset(*Self::nth_ptr(c, i)))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                               [0m[0m[1m[33m^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:338:65[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m338[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                Some(&mut*(self.meta.as_meta().start as *mut _).offset(*Self::nth_ptr(c, i)))[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                [0m[0m[1m[33m^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1034:110[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1034[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            self.find_block(key).and_then(|ref x| Some(&x.as_bucket().values[0] as *const _)).and_then(|x| x.as_ref())[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                                                                             [0m[0m[1m[33m^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1057:98[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1057[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            btree.meta.as_meta_mut().start = (&mut btree.meta.as_meta_mut() as *mut _ as *mut _).offset(0);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                                                                 [0m[0m[1m[33m^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1058:61[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1058[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            btree.meta.as_meta_mut().end = (data as *mut _).offset(1) as *mut _;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                            [0m[0m[1m[33m^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1067:74[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1067[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            btree.meta.as_meta_mut().start = (&mut btree.meta as *mut _).offset(0);[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                                         [0m[0m[1m[33m^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: type annotations needed[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1069:61[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1069[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            btree.meta.as_meta_mut().end = (data as *mut _).offset(1) as *mut _;[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                            [0m[0m[1m[33m^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018![0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `vec`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:409:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m409[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        Entry::Data(ref vec) => mem::size_of_val(value),[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[33m^^^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_vec`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_variables)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `entry`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:410:42[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m410[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                        Entry::Entry(ref entry) => mem::size_of::<(usize, usize)>()[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_entry`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: value assigned to `i` is never read[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:239:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m239[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut i = 0usize;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_assignments)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: maybe it is overwritten before being read?[0m
+
+[0m[1m[33mwarning[0m[0m[1m: value assigned to `i` is never read[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:259:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m259[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut i = 0usize;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: maybe it is overwritten before being read?[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `i`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:712:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m712[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for i in 0..Self::offset_to(self.meta.as_meta().start, self.meta.as_meta().end) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_i`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `i`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:768:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m768[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for i in 0..Self::offset_to(self.meta.as_meta().start, self.meta.as_meta().end) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_i`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `i`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:775:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m775[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for i in 0..Self::offset_to(self.meta.as_meta().start, self.meta.as_meta().end) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_i`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `i`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:780:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m780[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for i in 0..Self::offset_to(self.meta.as_meta().start, self.meta.as_meta().end) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_i`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `i`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:797:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m797[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for i in 0..Self::offset_to(self.meta.as_meta().start, self.meta.as_meta().end) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_i`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `i`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:854:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m854[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for i in 0..Self::offset_to(self.meta.as_meta().start, self.meta.as_meta().end) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_i`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `i`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:881:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m881[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for i in 0..Self::offset_to(self.meta.as_meta().start, self.meta.as_meta().end) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_i`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `i`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:886:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m886[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for i in 0..Self::offset_to(self.meta.as_meta().start, self.meta.as_meta().end) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_i`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `i`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:894:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m894[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for i in 0..Self::offset_to(self.meta.as_meta().start, self.meta.as_meta().end) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_i`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused variable: `i`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:950:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m950[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        for i in 0..Self::offset_to(self.meta.as_meta().start, self.meta.as_meta().end) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[33m^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_i`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/map.rs:172:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m172[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut hash = h.elem_hash_mut(i);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_mut)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/map.rs:203:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m203[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut hash = h.elem_hash_mut(i);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/map.rs:355:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m355[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut hash = self.elem_hash_mut(i);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:311:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m311[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if let Some(mut c) = self.find_leaf(key) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:330:21[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m330[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if let Some(mut c) = self.find_leaf_mut(key) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:562:13[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m562[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut pivot = temp_keys[split];[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:903:17[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m903[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut next_smallest = if Self::num_keys(n) == 0 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/buffer.rs:87:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut slice_from: &mut[u8] = unsafe { old_map.as_mut_slice() };[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unnecessary `unsafe` block[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1088:9[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1088[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        unsafe {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^[0m[0m [0m[0m[1m[33munnecessary `unsafe` block[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_unsafe)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `average_probe_count`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/map.rs:452:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m452[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn average_probe_count(&self) -> f64 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `next`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:11:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m11[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    next: isize,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `leaf`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:18:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    leaf: bool,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `key_count`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:19:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    key_count: u8,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `keys`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:20:2[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    keys: [K; ORDER - 1],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `ptrs`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:21:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    ptrs: [isize; ORDER],[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `parent`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:22:2[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    parent: Option<isize>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `values`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:29:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    values: [V; 1][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `start`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:37:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m37[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    start: *mut Block<K, V>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `next`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:38:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    next: isize,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `end`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:39:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    end: *mut Block<K, V>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `root`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:40:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m40[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    root: isize,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `Free`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:48:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Free(Free),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `Node`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:49:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m49[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Node(Node<K>),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `Bucket`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:50:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Bucket(Bucket<V>),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `Meta`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:51:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m51[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Meta(Meta<K, V>),[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `as_free`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:58:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn as_free(&self) -> &Free {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `as_free_mut`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:67:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn as_free_mut(&mut self) -> &mut Free {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `as_node`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:76:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn as_node(&self) -> &Node<K> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `as_node_mut`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:85:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn as_node_mut(&mut self) -> &mut Node<K> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `as_bucket`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:94:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m94[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn as_bucket(&self) -> &Bucket<V> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `as_bucket_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:103:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m103[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn as_bucket_mut(&mut self) -> &mut Bucket<V> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `as_meta`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:112:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m112[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn as_meta(&self) -> &Meta<K, V> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `as_meta_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:121:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m121[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn as_meta_mut(&mut self) -> &mut Meta<K, V> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: field is never read: `meta`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:135:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m135[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    meta: Block<K, V>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `is_leaf`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:149:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m149[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn is_leaf(node: *const Block<K, V>) -> bool {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `parent`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:159:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m159[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn parent(node: *const Block<K, V>) -> Option<isize> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `parent_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:169:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m169[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn parent_mut(node: *mut Block<K, V>) -> *mut Option<isize> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `num_keys`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:179:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m179[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn num_keys(node: *const Block<K, V>) -> u8 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `num_keys_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:189:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m189[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn num_keys_mut(node: *mut Block<K, V>) -> *mut u8 {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `nth_key`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:199:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m199[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn nth_key(node: *const Block<K, V>, n: usize) -> *const K {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `nth_key_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:209:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m209[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn nth_key_mut(node: *mut Block<K, V>, n: usize) -> *mut K {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `nth_ptr`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:219:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m219[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn nth_ptr(node: *const Block<K, V>, n: usize) -> *const isize {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `nth_ptr_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:229:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m229[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn nth_ptr_mut(node: *mut Block<K, V>, n: usize) -> *mut isize {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `find_leaf`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:238:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m238[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn find_leaf(&self, key: &K) -> Option<*const Block<K, V>> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `find_leaf_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:258:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m258[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn find_leaf_mut(&mut self, key: &K) -> Option<*mut Block<K, V>> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `range_find_blocks`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:278:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m278[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn range_find_blocks<'a>(&self, key_start: &K, key_end: &K) -> Vec<(&K, &'a Block<K, V>)> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `find_block`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:309:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m309[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn find_block<'a>(&self, key: &K) -> Option<&'a Block<K, V>> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `find_block_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:328:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m328[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn find_block_mut<'a>(&mut self, key: &K) -> Option<&'a mut Block<K, V>> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `cut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:348:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m348[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cut(length: usize) -> usize {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `offset_to`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:357:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m357[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn offset_to(from: *const Block<K, V>, to: *const Block<K, V>) -> isize {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `make_node`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:361:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m361[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn make_node(&mut self) -> isize {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `make_leaf`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:380:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m380[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn make_leaf(&mut self) -> isize {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `make_bucket`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:399:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m399[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn make_bucket(&mut self) -> isize {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `get_left_index`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:414:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m414[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn get_left_index(&self, parent: *const Block<K, V>, left: *const Block<K, V>) -> usize {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `insert_into_leaf`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:422:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m422[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn insert_into_leaf(&mut self, leaf: *mut Block<K, V>, key: K, value: *mut Block<K, V>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `split_and_insert_into_leaf`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:444:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m444[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn split_and_insert_into_leaf(&mut self, leaf: *mut Block<K, V>, key: K, value: *mut Block<K, V>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `insert_into_node`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:512:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m512[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn insert_into_node(&mut self, n: *mut Block<K, V>, left_index: usize, key: K, right: *mut Block<K, V>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `split_and_insert_into_node`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:529:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m529[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn split_and_insert_into_node(&mut self, old_node: *mut Block<K, V>, left_index: usize, key: K, right: *mut Block<K, V>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `insert_into_parent`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:590:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m590[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn insert_into_parent(&mut self, left: *mut Block<K, V>, key: K, right: *mut Block<K, V>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `insert_into_new_root`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:606:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m606[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn insert_into_new_root(&mut self, left: *mut Block<K, V>, key: K, right: *mut Block<K, V>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `start_new_tree`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:627:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m627[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn start_new_tree(&mut self, key: K, value: *mut Block<K, V>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `get_neighbour_index`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:639:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m639[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn get_neighbour_index(&self, n: *mut Block<K, V>) -> Option<usize> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `remove_entry_from_node`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:650:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m650[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn remove_entry_from_node(&mut self, n: *mut Block<K, V>, key: &K, value: *mut Block<K, V>) -> usize {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `adjust_root`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:695:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m695[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn adjust_root(&mut self) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `merge_nodes`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:711:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m711[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn merge_nodes(&mut self, mut n: *mut Block<K, V>, mut neighbour: *mut Block<K, V>, neighbour_index: Option<usize>, pivot: *co[0m[0m[1m[38;5;12m...[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `redistribute_nodes`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:779:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m779[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn redistribute_nodes(&mut self, n: *mut Block<K, V>, neighbour: *mut Block<K, V>, neighbour_index: Option<usize>, pivot_index[0m[0m[1m[38;5;12m...[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `delete_entry`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:885:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m885[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    unsafe fn delete_entry(&mut self, n: *mut Block<K, V>, key: &K, value: *mut Block<K, V>) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m              [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `pop_front`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:954:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m954[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn pop_front(&mut self) -> Option<(K, V)> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `pop_back`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:972:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m972[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn pop_back(&mut self) -> Option<(K, V)> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `delete`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:990:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m990[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn delete(&mut self, key: &K) -> bool {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `insert`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1005:12[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1005[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn insert(&mut self, key: K, value: V) -> bool {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `find`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1032:12[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1032[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn find(&self, key: &K) -> Option<&V> {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `range_find`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1038:12[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1038[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn range_find(&self, key_start: &K, key_end: &K) -> Vec<(&K, &V)> {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `is_empty`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1044:12[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1044[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn is_empty(&self) -> bool {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `is_full`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1048:12[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1048[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn is_full(&self) -> bool {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `load_from`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1054:12[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1054[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn load_from<'a, T>(data: &mut T) -> &'a mut Self {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `create_from`[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/table/btree.rs:1063:12[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1063[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn create_from<T>(data: &mut T) -> &mut Self {[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: constant is never used: `PAGE_SIZE`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:26:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub const PAGE_SIZE: usize = 4095;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: constant is never used: `PAGE_USED`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:29:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub const PAGE_USED: u8 = !0;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: constant is never used: `PAGE_AVAIL`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:30:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub const PAGE_AVAIL: u8 = 1;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: constant is never used: `PAGE_FREE`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:31:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m31[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub const PAGE_FREE: u8 = 0;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `Unallocated`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:79:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m79[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Unallocated = 00,       // Free page: uninitialised data[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `Metadata`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:80:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m80[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Metadata = 01,          // Metadata page: global variables[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `PageTrunk`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:81:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m81[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    PageTrunk = 02,         // Page data array: ArrayList<usize>(cursor)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `Directory`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:82:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m82[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Directory = 03,         // Table directory: BPlusTree<ByteString, usize>(tblname, pageidx) -> ColumnDirectory[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `IndexRoot`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:83:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m83[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    IndexRoot = 04,         // Leaf pages tree: BPlusTree<Vn, usize>(keyval, pageidx) -> IndexLeaf[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `IndexLeaf`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:84:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m84[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    IndexLeaf = 05,         // Index data tree: BPlusTree<Vn, (usize, usize)>(keyval, (pageidx,offset)) -> FreeListPage[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `RowData`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:85:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    RowData = 06,           // Row values: FreeList<(size(V1),..,size(VN),V1,..,VN)>[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: struct is never constructed: `Page`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:106:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct Page {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: struct is never constructed: `MetadataPage`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:111:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m111[0m[0m [0m[0m[1m[38;5;12m| [0m[0mstruct MetadataPage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: struct is never constructed: `BPlusTreePage`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:115:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m115[0m[0m [0m[0m[1m[38;5;12m| [0m[0mstruct BPlusTreePage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: struct is never constructed: `ArrayListPage`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:120:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m120[0m[0m [0m[0m[1m[38;5;12m| [0m[0mstruct ArrayListPage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: struct is never constructed: `FreeListPage`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:125:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m125[0m[0m [0m[0m[1m[38;5;12m| [0m[0mstruct FreeListPage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: struct is never constructed: `Database`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:131:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m131[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub struct Database<B>[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `Table`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:140:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m140[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Table,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variant is never constructed: `Index`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:141:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m141[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    Index,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `new`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:145:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m145[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn new() -> Self {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `try_new`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:149:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m149[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn try_new() -> Result<Self> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `new`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:158:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m158[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn new<P>(path: P) -> Self[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `try_new`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:164:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m164[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn try_new<P>(path: P) -> Result<Self>[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `metadata`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:177:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m177[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn metadata(&self) -> &'static MetadataPage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `metadata_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:183:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m183[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn metadata_mut(&mut self) -> &'static mut MetadataPage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `arraylist`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:189:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m189[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn arraylist(&self, page_ix: usize, pagetype: PageType) -> &'static ArrayListPage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `arraylist_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:195:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m195[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn arraylist_mut(&mut self, page_ix: usize, pagetype: PageType) -> &'static mut ArrayListPage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `freelist`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:201:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m201[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn freelist(&self, page_ix: usize, pagetype: PageType) -> &'static FreeListPage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `freelist_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:207:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m207[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn freelist_mut(&mut self, page_ix: usize, pagetype: PageType) -> &'static mut FreeListPage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `bplustree`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:213:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m213[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn bplustree(&self, page_ix: usize, pagetype: PageType) -> &'static BPlusTreePage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `bplustree_mut`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:219:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m219[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn bplustree_mut(&mut self, page_ix: usize, pagetype: PageType) -> &'static mut BPlusTreePage {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `init`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:225:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m225[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn init(&mut self) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `freelist_insert`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:277:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m277[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn freelist_insert(&mut self, data: &Entry) -> (usize, usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `freelist_insert_into_page`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:293:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m293[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn freelist_insert_into_page(&mut self, page_ix: usize, data: &Entry) -> Option<usize> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `freelist_insert_row`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:321:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m321[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn freelist_insert_row(&mut self, entry: &Vec<Entry>) -> (usize, usize) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `freelist_insert_row_into_page`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:337:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m337[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn freelist_insert_row_into_page(&mut self, page_ix: usize, entry: &Vec<Entry>) -> Option<usize> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `create_page`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:369:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m369[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn create_page(&mut self, pagetype: PageType) -> usize {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: enum is never used: `Entry`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:391:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m391[0m[0m [0m[0m[1m[38;5;12m| [0m[0mpub enum Entry {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m         [0m[0m[1m[33m^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `new`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:397:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m397[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn new() -> Self {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `size`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:401:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m401[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn size(&self) -> usize {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `from`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:418:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m418[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn from<T>(value: &T) -> Self[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: associated function is never used: `bytes`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/table/mod.rs:424:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m424[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn bytes<T>(value: &T) -> Vec<u8>[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[33m^^^^^[0m
+
+2024-06-21 16:20:53.610135 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:20:53.619147 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:20:53.619919 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:20:53.619942 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:20:53.788564 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:20:53.788695 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:20:58.446302 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

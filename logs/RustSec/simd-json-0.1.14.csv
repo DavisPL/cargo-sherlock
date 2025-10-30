@@ -1,0 +1,60 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Heinz N. Gies,Licenser,https://github.com/Licenser
+Author,-,,sunnybot,https://github.com/sunnybot
+Author,-,Matthias Wahl,mfelsche,https://github.com/mfelsche
+Author,-,SIMD-lite bot,simd-lite-bot,https://github.com/simd-lite-bot
+************************************
+event,timestamp,downloads
+Downloads,-,1719556
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:30:06.423204 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:30:10.024788 |INFO | [rudra-progress] Running rudra for target lib:simd-json
+[0m[1m[38;5;9merror[0m[0m[1m: unnecessary parentheses around block return value[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/numberparse.rs:114:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m114[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    (((val & 0xF0F0_F0F0_F0F0_F0F0)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^[0m
+[0m[1m[38;5;12m115[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        | (((val + 0x0606_0606_0606_0606) & 0xF0F0_F0F0_F0F0_F0F0) >> 4))[0m
+[0m[1m[38;5;12m116[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        == 0x3333_3333_3333_3333)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                [0m[0m[1m[38;5;9m^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m#![deny(warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[deny(unused_parens)]` implied by `#[deny(warnings)]`[0m
+[0m[1m[38;5;14mhelp[0m[0m: remove these parentheses[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m114[0m[0m [0m[0m[38;5;10m~ [0m[0m    ((val & 0xF0F0_F0F0_F0F0_F0F0)[0m
+[0m[1m[38;5;12m115[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        | (((val + 0x0606_0606_0606_0606) & 0xF0F0_F0F0_F0F0_F0F0) >> 4))[0m
+[0m[1m[38;5;12m116[0m[0m [0m[0m[38;5;10m~ [0m[0m        == 0x3333_3333_3333_3333[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: unnecessary trailing semicolon[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/numberparse.rs:218:64[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m218[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                fraction += f64::from(digit) / fraction_weight;;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                               [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mhelp: remove this semicolon[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the lint level is defined here[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m   [0m[0m[1m[38;5;12m| [0m[0m#![deny(warnings)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[deny(redundant_semicolons)]` implied by `#[deny(warnings)]`[0m
+
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `simd-json` due to 2 previous errors
+2024-06-21 17:30:31.097086 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

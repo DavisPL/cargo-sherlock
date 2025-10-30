@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Diogo Sousa,orium,https://github.com/orium
+************************************
+event,timestamp,downloads
+Downloads,-,1161
+************************************
+event,timestamp,total,flagged
+Side Effects,-,10,3
+************************************
+Rudra,timestamp
+"2024-06-23 15:14:54.916737 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:14:57.031296 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `once_cell = ""^1.15.0""`
+candidate versions found which didn't match: 1.17.2, 1.17.1, 1.17.0, ...
+location searched: crates.io index
+required by package `dirty-debug v0.2.0 (/tmp/rudra)`
+
+"
+************************************

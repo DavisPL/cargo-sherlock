@@ -1,0 +1,145 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "epage",
+    "github:rust-cli:maintainers",
+    "github:clap-rs:admins"
+  ],
+  "stars": 14821,
+  "forks": 1084,
+  "downloads": 232628839,
+  "num_side_effects": 30,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.2.4",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.4.1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.7.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "does-not-implement-crypto",
+      "delta": "0.4.1 -> 0.2.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.6.0",
+      "notes": "Reviewed in https://crrev.com/c/5171063\\n\\nPreviously reviewed during security review and the audit is grandparented in.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.6.0 -> 0.7.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.7.0 -> 0.7.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.7.1 -> 0.7.2",
+      "version": "",
+      "notes": "No `.rs` changes in the delta."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.7.2 -> 0.7.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.7.3 -> 0.7.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-3\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.5.0",
+      "notes": "Reviewed in CL 559377426\\nIssues:\\n - Unsound transmutes from OsStr to [u8] (https://github.com/clap-rs/clap/issues/5280)\\n - (optional) Incorrect safety comment (https://github.com/clap-rs/clap/pull/5281)\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "0.5.1 -> 0.6.0",
+      "version": "",
+      "notes": "Reviewed in CL 596708333\\nIssues:\\n - Unsound transmutes from OsStr to [u8] (https://github.com/clap-rs/clap/issues/5280)\\n - (optional) Incorrect safety comment (https://github.com/clap-rs/clap/pull/5281)\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "0.7.2 -> 0.7.3",
+      "version": "",
+      "notes": "Reviewed in CL 701531434"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.4.1 -> 0.5.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.0 -> 0.2.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.2 -> 0.2.4",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 2,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 17,
+    "failed": 0,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.37
+  }
+}

@@ -1,0 +1,26 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,harudagondi,harudagondi,https://github.com/harudagondi
+************************************
+event,timestamp,downloads
+Downloads,-,2638
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,3
+************************************
+Rudra,timestamp
+"2024-06-23 17:19:03.962499 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 17:19:05.529121 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `bevy_math = ""^0.11""`
+candidate versions found which didn't match: 0.8.1, 0.8.0, 0.7.0, ...
+location searched: crates.io index
+required by package `bevy_oddio v0.5.0 (/tmp/rudra)`
+
+"
+************************************

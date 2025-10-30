@@ -1,0 +1,30 @@
+{
+  "rustsec_label": "CRITICAL",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "bennetthardwick"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 8883,
+  "num_side_effects": 2,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 2,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

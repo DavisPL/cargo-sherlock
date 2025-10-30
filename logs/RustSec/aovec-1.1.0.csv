@@ -1,0 +1,33 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,kristoffer,krl,https://github.com/krl
+************************************
+event,timestamp,downloads
+Downloads,-,21596
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,4
+************************************
+Rudra,timestamp
+"2024-06-21 17:27:29.273210 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:27:32.853138 |INFO | [rudra-progress] Running rudra for target lib:aovec
+2024-06-21 17:27:41.977559 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:27:41.981390 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:27:42.001875 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:27:42.001894 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:27:42.024038 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:27:42.024053 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:17:1: 17:36
+unsafe impl<T> Send for Aovec<T> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:16:1: 16:36
+unsafe impl<T> Sync for Aovec<T> {}
+2024-06-21 17:27:42.812873 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

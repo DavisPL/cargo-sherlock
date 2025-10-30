@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Lucas Swart,modulitos,https://github.com/modulitos
+************************************
+event,timestamp,downloads
+Downloads,-,2875
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-23 15:51:35.348868 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:51:37.776222 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `syn = ""^2.0.46""`
+candidate versions found which didn't match: 2.0.56, 2.0.55, 2.0.54, ...
+location searched: crates.io index
+required by package `thiserror-impl v1.0.61`
+    ... which satisfies dependency `thiserror-impl = ""=1.0.61""` (locked to 1.0.61) of package `thiserror v1.0.61`
+    ... which satisfies dependency `thiserror = ""^1.0.20""` (locked to 1.0.61) of package `bin_packer_3d v2.0.0-beta-1 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Low
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,dfinity-publish,https://github.com/dfinity-publish
+Author,-,Yan,chenyan2002,https://github.com/chenyan2002
+************************************
+event,timestamp,downloads
+Downloads,-,2241368
+************************************
+event,timestamp,total,flagged
+Side Effects,-,66,26
+************************************
+Rudra,timestamp
+"2024-06-21 16:45:14.466965 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:45:19.789180 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `lalrpop-util = ""^0.20.0""`
+candidate versions found which didn't match: 0.19.12, 0.19.11, 0.19.9, ...
+location searched: crates.io index
+required by package `candid v0.9.9 (/tmp/rudra)`
+
+"
+************************************

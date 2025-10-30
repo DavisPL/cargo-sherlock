@@ -1,0 +1,107 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "bluss",
+    "jswrenn"
+  ],
+  "stars": 3012,
+  "forks": 334,
+  "downloads": 660234178,
+  "num_side_effects": 18,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.10.5 -> 0.12.1",
+      "version": "",
+      "notes": "Minimal `unsafe` usage. Few blocks that existed looked reasonable. Does what it\\nsays on the tin: lots of iterators.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.12.1 -> 0.14.0",
+      "version": "",
+      "notes": "Lots of new iterators and shuffling some things around. Some new unsafe code but\\nit's well-documented and well-tested. Nothing suspicious.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.9.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.10.5",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "0.10.5 -> 0.11.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.11.0",
+      "notes": "This is 12K lines of code, plus 6K lines of tests and benchmarks.\\nIt has minimal use of unsafe and so I have paged though it all with \\\"::\\\"\\nhighlighted and paid attention to which imported functions are being called.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-1\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.11.0",
+      "notes": "Reviewed in CL 566337310"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.10.5 -> 0.11.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.14.0 -> 0.13.0",
+      "version": "",
+      "notes": "This *downgrade* only removes `unsafe` code."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.10.3 -> 0.10.5",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "either",
+      "1.15.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 10,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 192,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 4.14
+  }
+}

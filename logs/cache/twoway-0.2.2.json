@@ -1,0 +1,39 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnmaintained",
+  "developers": [
+    "bluss"
+  ],
+  "stars": 64,
+  "forks": 5,
+  "downloads": 18337573,
+  "num_side_effects": 115,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "unchecked-index",
+      "0.2.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 114,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

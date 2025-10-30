@@ -1,0 +1,4 @@
+Solving for required assumptions to trust debug_unwrap-1.0.3...
+Trust Score for debug_unwrap-1.0.3: 1
+Assumptions Made:
+debug_unwrap-1.0.3 having no side effects and having all safe dependencies implies it is safe: 1 wt

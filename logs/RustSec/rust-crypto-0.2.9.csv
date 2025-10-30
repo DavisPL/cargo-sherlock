@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,,DaGenix,https://github.com/DaGenix
+************************************
+event,timestamp,downloads
+Downloads,-,4822568
+************************************
+event,timestamp,total,flagged
+Side Effects,-,3,3
+************************************
+Rudra,timestamp
+"2024-06-21 18:30:21.695902 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:30:24.951488 |INFO | [rudra-progress] Running rudra for target lib:crypto
+[0m[0m[1m[31merror[0m[1m:[0m package `time v0.3.15` cannot be built because it requires rustc 1.59.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-21 18:30:28.165362 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

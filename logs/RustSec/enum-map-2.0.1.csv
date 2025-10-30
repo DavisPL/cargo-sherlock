@@ -1,0 +1,78 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,mozilla,safe-to-deploy,,2.7.3,,
+************************************
+event,timestamp,name,username,url
+Author,-,Kamila Borowska,xfix,https://github.com/xfix
+************************************
+event,timestamp,downloads
+Downloads,-,7364254
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:04:07.630527 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:04:11.701679 |INFO | [rudra-progress] Running rudra for target lib:enum-map
+2024-06-21 18:04:25.994761 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:04:25.998997 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:04:25.999387 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:04:25.999400 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:04:26.042949 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:04:26.042971 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/ReadFlow): Potential unsafe dataflow issue in `EnumMap::<K, V>::map`
+-> src/lib.rs:332:5: 365:6
+pub fn map<F, T>(self, mut f: F) -> EnumMap<K, T>
+    where
+        F: FnMut(K, V) -> T,
+        K: EnumArray<T>,
+    {
+        struct DropOnPanic<K, V>
+        where
+            K: EnumArray<V>,
+        {
+            position: usize,
+            map: ManuallyDrop<EnumMap<K, V>>,
+        }
+        impl<K, V> Drop for DropOnPanic<K, V>
+        where
+            K: EnumArray<V>,
+        {
+            fn drop(&mut self) {
+                unsafe {
+                    ptr::drop_in_place(&mut self.map.as_mut_slice()[self.position..]);
+                }
+            }
+        }
+        let mut drop_protect = DropOnPanic {
+            position: 0,
+            map: ManuallyDrop::new(self),
+        };
+        enum_map! {
+            k => {
+                let value = unsafe { [0m[31mptr::read(&drop_protect.map.as_slice()[drop_protect.position])[0m };
+                drop_protect.position += 1;
+                [0m[36mf(k, value)[0m
+            }
+        }
+    }
+[0m
+Info (UnsafeDataflow:/SliceFromRaw): Potential unsafe dataflow issue in `<ArrayVec<K, V> as core::ops::Drop>::drop`
+-> src/lib.rs:107:5: 114:6
+fn drop(&mut self) {
+        // This is safe as arr[..len] is initialized due to
+        // __ArrayVecInner's type invariant.
+        unsafe {
+            [0m[33m[0m[36mptr::slice_from_raw_parts_mut(self.array.as_mut_ptr().cast::<V>(), self.length)[0m[36m
+                .drop_in_place()[0m;
+        }
+    }
+[0m
+2024-06-21 18:04:27.075217 |WARN | [cargo_rudra] Target test:test is not supported
+2024-06-21 18:04:27.075338 |WARN | [cargo_rudra] Target test:serde is not supported
+2024-06-21 18:04:27.075504 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

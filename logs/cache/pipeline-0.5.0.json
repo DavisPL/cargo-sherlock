@@ -1,0 +1,38 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "johannhof"
+  ],
+  "stars": 251,
+  "forks": 6,
+<<<<<<< HEAD
+  "downloads": 351576,
+=======
+  "downloads": 351147,
+>>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+<<<<<<< HEAD
+    "failed": 5,
+=======
+    "failed": 1,
+>>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

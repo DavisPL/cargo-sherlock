@@ -1,0 +1,76 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "alexcrichton",
+    "huonw",
+    "SimonSapin",
+    "Manishearth",
+    "kwantam",
+    "sujayakar"
+  ],
+  "stars": 174,
+  "forks": 43,
+  "downloads": 259434896,
+  "num_side_effects": 6,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.1.19",
+      "notes": "This crate contains one usage of `unsafe` which I have manually checked to see\\nit as correct. This crate's size comes in large part due to the generated\\nunicode tables that it contains. This crate is additionally widely used\\nthroughout the ecosystem and skimming the crate shows no usage of `std::*` APIs\\nand nothing suspicious.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.1.22",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.19 -> 0.1.20",
+      "version": "",
+      "notes": "I am the author of most of these changes upstream, and prepared the release myself, at which point I looked at the other changes since 0.1.19."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.20 -> 0.1.21",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.21 -> 0.1.22",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "tinyvec",
+      "1.9.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 6,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "timeout",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

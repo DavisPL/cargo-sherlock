@@ -1,0 +1,44 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Keziah Biermann,KizzyCode,https://github.com/KizzyCode
+************************************
+event,timestamp,downloads
+Downloads,-,3841
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 17:24:36.076679 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:24:39.314698 |INFO | [rudra-progress] Running rudra for target lib:tiny_future
+[0m[1m[33mwarning[0m[0m[1m: the item `Clone` is imported redundantly[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:182:6[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m182[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    use std::clone::Clone;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+2024-06-21 17:24:43.909496 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:24:43.913388 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:24:43.934219 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:24:43.934243 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:24:43.936526 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:24:43.936544 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:165:1: 165:43
+unsafe impl<T, U> Send for Future<T, U> {}
+Error (SendSyncVariance:/ApiSendForSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:166:1: 166:43
+unsafe impl<T, U> Sync for Future<T, U> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:16:1: 16:42
+unsafe impl<T, U> Sync for Inner<T, U> {}
+2024-06-21 17:24:44.813537 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,26 @@
+Solving for required assumptions to trust aws-sdk-bedrockdataautomationruntime-1.13.0...
++------------------------------------------------------------+
+|Analysis Report for aws-sdk-bedrockdataautomationruntime-1.13.0|
++------------------------------------------------------------+
+
+Assumptions Summary:
+Score Range: 0 (Min) - 100 (Max)
+
+Trust Cost (lower is better): 20 cost
+Assumptions for Trusting:
+  • aws-sdk-bedrockdataautomationruntime-1.13.0 has many stars and forks: 0 cost
+  • aws-sdk-bedrockdataautomationruntime-1.13.0 having many stars and forks implies it is safe: 20 cost
+
+Distrust Cost (higher is better): 80 cost
+Assumptions for Distrusting:
+  • aws-sdk-bedrockdataautomationruntime-1.13.0 has many side effects: 20 cost
+  • aws-sdk-bedrockdataautomationruntime-1.13.0 has many side effects implies it is unsafe: 60 cost
+  • tokio-1.44.1 has many side effects: 0 cost
+  • libc-0.2.171 has many side effects: 0 cost
+  • memchr-2.7.4 has many side effects: 0 cost
+
+Severity Label: LOW_SEVERITY
+
+Full details about the crate can be found at: /logs/cache/aws-sdk-bedrockdataautomationruntime-1.13.0.json
++------------------------------------------------------------+
+

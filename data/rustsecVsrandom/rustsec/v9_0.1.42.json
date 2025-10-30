@@ -1,0 +1,6 @@
+Solving for required assumptions to trust v9-0.1.42...
+Trust Score for v9-0.1.42: 239
+Assumptions Made:
+v9-0.1.42 has many downloads: 179 wt
+v9-0.1.42 having many downloads implies it is safe: 10 wt
+v9-0.1.42 appearing in RustSec implies it is less safe (score penalty): 50 weight

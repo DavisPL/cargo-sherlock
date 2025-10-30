@@ -1,0 +1,6 @@
+Solving for required assumptions to trust containers-0.9.10...
+Trust Score for containers-0.9.10: 174
+Assumptions Made:
+containers-0.9.10 has many downloads: 114 wt
+containers-0.9.10 having many downloads implies it is safe: 10 wt
+containers-0.9.10 appearing in RustSec implies it is less safe (score penalty): 50 weight

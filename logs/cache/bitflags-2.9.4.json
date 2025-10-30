@@ -1,0 +1,209 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "huonw",
+    "KodrAus",
+    "github:rust-lang-nursery:libs",
+    "github:bitflags:owners"
+  ],
+  "stars": 1059,
+  "forks": 158,
+  "downloads": 822727857,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "2.1.0 -> 2.2.1",
+      "version": "",
+      "notes": "This version adds unsafe impls of traits from the bytemuck crate when built\\nwith that library enabled, but I believe the impls satisfy the documented\\nsafety requirements for bytemuck. The other changes are minor.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "2.3.2 -> 2.3.3",
+      "version": "",
+      "notes": "Nothing outside the realm of what one would expect from a bitflags generator,\\nall as expected.\\n"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "2.4.1 -> 2.6.0",
+      "version": "",
+      "notes": "Changes in how macros are invoked and various bits and pieces of macro-fu.\\nOtherwise no major changes and nothing dealing with `unsafe`.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "1.2.1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.3.2",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "2.6.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "1.3.2 -> 2.2.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "2.2.1 -> 2.3.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "2.3.1 -> 2.3.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "2.3.2 -> 2.4.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-1\",]",
+      "delta": "",
+      "version": "1.3.2",
+      "notes": "Security review of earlier versions of the crate can be found at\\n(Google-internal, sorry): go/image-crate-chromium-security-review\\n\\nThe crate exposes a function marked as `unsafe`, but doesn't use any\\n`unsafe` blocks (except for tests of the single `unsafe` function).  I\\nthink this justifies marking this crate as `ub-risk-1`.\\n\\nAdditional review comments can be found at https://crrev.com/c/4723145/31\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-1\",]",
+      "delta": "",
+      "version": "2.4.2",
+      "notes": "Audit notes:\\n\\n* I've checked for any discussion in Google-internal cl/546819168 (where audit\\n  of version 2.3.3 happened)\\n* `src/lib.rs` contains `#![cfg_attr(not(test), forbid(unsafe_code))]`\\n* There are 2 cases of `unsafe` in `src/external.rs` but they seem to be\\n  correct in a straightforward way - they just propagate the marker trait's\\n  impl (e.g. `impl bytemuck::Pod`) from the inner to the outer type\\n* Additional discussion and/or notes may be found in https://crrev.com/c/5238056\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "2.4.2 -> 2.5.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "2.5.0 -> 2.6.0",
+      "version": "",
+      "notes": "The changes from the previous version are negligible and thus it retains the same properties."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "2.6.0 -> 2.8.0",
+      "version": "",
+      "notes": "No changes related to `unsafe impl ... bytemuck` pieces from `src/external.rs`."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "2.8.0 -> 2.9.0",
+      "version": "",
+      "notes": "Adds a straightforward clear() function, but no new unsafe code."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-1\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "2.3.3",
+      "notes": "Reviewed in CL 545304270"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "1.3.2 -> 2.0.2",
+      "version": "",
+      "notes": "Removal of some unsafe code/methods. No changes to externals, just some refactoring (mostly internal)."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.0.2 -> 2.1.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.2.1 -> 2.3.2",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.3.3 -> 2.4.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.6.0 -> 2.7.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.9.0 -> 2.9.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.4.0 -> 2.4.1",
+      "version": "",
+      "notes": "Only allowing new clippy lints"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "2.3.3 -> 2.4.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 19,
+    "failed": 0,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.53
+  }
+}

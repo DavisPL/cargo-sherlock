@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Artyom Pavlov,newpavlov,https://github.com/newpavlov
+Author,-,traits,github:rustcrypto:traits,https://github.com/rustcrypto
+************************************
+event,timestamp,downloads
+Downloads,-,2114571
+************************************
+event,timestamp,total,flagged
+Side Effects,-,0,0
+************************************
+Rudra,timestamp
+"2024-06-21 18:16:59.214995 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:17:00.473338 |INFO | [rudra-progress] Running rudra for target bin:block-cipher
+2024-06-21 18:17:04.225192 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:17:04.228772 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:17:04.230322 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:17:04.230331 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:17:04.231668 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:17:04.231697 |INFO | [rudra-progress] Rudra finished
+2024-06-21 18:17:04.272141 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

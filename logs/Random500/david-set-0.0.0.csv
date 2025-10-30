@@ -1,0 +1,19 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,David Roundy,droundy,https://github.com/droundy
+************************************
+event,timestamp,downloads
+Downloads,-,2129
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"david-set-0.0.0 is not a directory
+"
+************************************

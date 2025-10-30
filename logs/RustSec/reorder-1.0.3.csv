@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Ken Reed,tiby312,https://github.com/tiby312
+************************************
+event,timestamp,downloads
+Downloads,-,8795
+************************************
+event,timestamp,total,flagged
+Side Effects,-,7,7
+************************************
+Rudra,timestamp
+"2024-06-21 17:03:28.943822 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:03:32.812889 |INFO | [rudra-progress] Running rudra for target lib:reorder
+2024-06-21 17:03:36.975695 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:03:36.979441 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:03:36.981102 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:03:36.981119 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:03:37.026661 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:03:37.026686 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:03:37.861085 |WARN | [cargo_rudra] Target bench:benches is not supported
+2024-06-21 17:03:37.861304 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

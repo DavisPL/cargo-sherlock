@@ -1,0 +1,73 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,mozilla,safe-to-deploy,,0.5.4,"I own this crate (I am contain-rs) and 0.5.4 passes miri. This code is very old and used by lots of people, so I'm pretty confident in it, even though it's in maintenance-mode and missing some nice-to-have APIs.",
+audits,-,Critical,mozilla,safe-to-deploy,0.5.4 -> 0.5.6,,New unsafe code has debug assertions and meets invariants. All other changes are formatting-related.,
+audits,-,Critical,mozilla,safe-to-run,0.5.4 -> 0.5.6,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Aria Beingessner,Gankra,https://github.com/Gankra
+Author,-,Peter Blackson,pczarn,https://github.com/pczarn
+Author,-,Owners,github:contain-rs:owners,https://github.com/contain-rs
+************************************
+event,timestamp,downloads
+Downloads,-,87656369
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 16:18:04.230524 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:18:07.733412 |INFO | [rudra-progress] Running rudra for target lib:linked-hash-map
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:174:57[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m174[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                self.head = Box::into_raw(Box::new(mem::uninitialized()));[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                        [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1137:34[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1137[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.map = unsafe { mem::uninitialized() };[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: the type `std::collections::HashMap<KeyRef<K>, *mut Node<K, V>, S>` does not permit being left uninitialized[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1137:29[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1137[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.map = unsafe { mem::uninitialized() };[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m|[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33mthis code causes undefined behavior when executed[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33mhelp: use `MaybeUninit<T>` instead, and only call `assume_init` after initialization is done[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(invalid_value)]` on by default[0m
+[0m[1m[38;5;10mnote[0m[0m: `std::ptr::NonNull<u8>` must be non-null (in this struct field)[0m
+
+2024-06-21 16:18:11.936717 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:18:11.940354 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:18:11.944017 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:18:11.944029 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:18:11.983983 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:18:11.984014 |INFO | [rudra-progress] Rudra finished
+[0m[1m[33mwarning[0m[0m[1m: the type `HashMap<KeyRef<K>, *mut Node<K, V>, S>` does not permit being left uninitialized[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1137:29[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1137[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        self.map = unsafe { mem::uninitialized() };[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33m|[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33mthis code causes undefined behavior when executed[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[33mhelp: use `MaybeUninit<T>` instead, and only call `assume_init` after initialization is done[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(invalid_value)]` on by default[0m
+[0m[1m[38;5;10mnote[0m[0m: `std::ptr::NonNull<u8>` must be non-null (in this struct field)[0m
+
+2024-06-21 16:18:13.016851 |WARN | [cargo_rudra] Target test:test is not supported
+2024-06-21 16:18:13.016903 |WARN | [cargo_rudra] Target test:serde is not supported
+2024-06-21 16:18:13.016909 |WARN | [cargo_rudra] Target test:heapsize is not supported
+2024-06-21 16:18:13.017061 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

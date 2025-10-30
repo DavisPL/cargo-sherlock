@@ -1,0 +1,50 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Remi Thebault,rtbo,https://github.com/rtbo
+************************************
+event,timestamp,downloads
+Downloads,-,2925197
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:40:57.270226 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:41:00.397989 |INFO | [rudra-progress] Running rudra for target lib:xcb
+2024-06-21 18:41:15.839883 |INFO | [rudra-progress] Rudra started
+2024-06-21 18:41:15.844496 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 18:41:15.872577 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 18:41:15.872608 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 18:41:15.967933 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 18:41:15.967960 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/base.rs:167:1: 167:36
+unsafe impl<T> Send for Error<T> {}
+Warning (SendSyncVariance:/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/base.rs:168:1: 168:36
+unsafe impl<T> Sync for Error<T> {}
+2024-06-21 18:41:18.036467 |WARN | [cargo_rudra] Target example:basic_window is not supported
+2024-06-21 18:41:18.036594 |WARN | [cargo_rudra] Target example:connect_str is not supported
+2024-06-21 18:41:18.036606 |WARN | [cargo_rudra] Target example:connect is not supported
+2024-06-21 18:41:18.036624 |WARN | [cargo_rudra] Target example:draw_root_window is not supported
+2024-06-21 18:41:18.036633 |WARN | [cargo_rudra] Target example:drawing is not supported
+2024-06-21 18:41:18.036636 |WARN | [cargo_rudra] Target example:opengl_window is not supported
+2024-06-21 18:41:18.036638 |WARN | [cargo_rudra] Target example:randr_crtc_info is not supported
+2024-06-21 18:41:18.036642 |WARN | [cargo_rudra] Target example:ffi_randr_crtc_info is not supported
+2024-06-21 18:41:18.036645 |WARN | [cargo_rudra] Target example:randr_crtc_listen is not supported
+2024-06-21 18:41:18.036649 |WARN | [cargo_rudra] Target example:randr_screen_info is not supported
+2024-06-21 18:41:18.036652 |WARN | [cargo_rudra] Target example:randr_screen_modes is not supported
+2024-06-21 18:41:18.036671 |WARN | [cargo_rudra] Target example:screen_info is not supported
+2024-06-21 18:41:18.036678 |WARN | [cargo_rudra] Target example:ffi_screen_info is not supported
+2024-06-21 18:41:18.036680 |WARN | [cargo_rudra] Target example:threaded_window is not supported
+2024-06-21 18:41:18.036682 |WARN | [cargo_rudra] Target example:xkb_init is not supported
+2024-06-21 18:41:18.036688 |WARN | [cargo_rudra] Target example:ffi_xkb_init is not supported
+2024-06-21 18:41:18.036697 |WARN | [cargo_rudra] Target custom-build:build-script-main is not supported
+2024-06-21 18:41:18.036893 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

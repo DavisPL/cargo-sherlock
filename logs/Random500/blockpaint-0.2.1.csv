@@ -1,0 +1,22 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Wooster,wooster0,https://github.com/wooster0
+************************************
+event,timestamp,downloads
+Downloads,-,796
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,4
+************************************
+Rudra,timestamp
+"2024-06-23 13:35:53.296392 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 13:35:55.226805 |INFO | [rudra-progress] Running rudra for target bin:blockpaint
+[0m[0m[1m[31merror[0m[1m:[0m package `log v0.4.20` cannot be built because it requires rustc 1.60.0 or newer, while the currently active rustc version is 1.58.0-nightly
+2024-06-23 13:36:12.708306 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Matthew Henderson,5mattmatt1,https://github.com/5mattmatt1
+************************************
+event,timestamp,downloads
+Downloads,-,671
+************************************
+event,timestamp,total,flagged
+Side Effects,-,5,1
+************************************
+Rudra,timestamp
+"2024-06-23 15:24:51.067225 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:24:54.344678 |INFO | [rudra-progress] Running rudra for target bin:apod_wallpaper
+2024-06-23 15:25:58.343044 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:25:58.347150 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:25:58.347534 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:25:58.347548 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:25:58.370070 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:25:58.370095 |INFO | [rudra-progress] Rudra finished
+2024-06-23 15:25:58.455455 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

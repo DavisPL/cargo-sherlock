@@ -1,0 +1,119 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "jackpot51"
+  ],
+  "stars": 1721,
+  "forks": 118,
+  "downloads": 892161,
+  "num_side_effects": 3,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "fontdb",
+      "0.23.0"
+    ],
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "slotmap",
+      "1.0.7"
+    ],
+    [
+      "tinyvec",
+      "1.9.0"
+    ],
+    [
+      "ttf-parser",
+      "0.25.1"
+    ],
+    [
+      "rangemap",
+      "1.5.1"
+    ],
+    [
+      "rustc-hash",
+      "2.1.1"
+    ],
+    [
+      "rustybuzz",
+      "0.20.1"
+    ],
+    [
+      "bytemuck",
+      "1.22.0"
+    ],
+    [
+      "core_maths",
+      "0.1.1"
+    ],
+    [
+      "libm",
+      "0.2.11"
+    ],
+    [
+      "smallvec",
+      "1.14.0"
+    ],
+    [
+      "unicode-bidi-mirroring",
+      "0.4.0"
+    ],
+    [
+      "unicode-ccc",
+      "0.4.0"
+    ],
+    [
+      "unicode-properties",
+      "0.1.3"
+    ],
+    [
+      "unicode-script",
+      "0.5.7"
+    ],
+    [
+      "self_cell",
+      "1.1.0"
+    ],
+    [
+      "smol_str",
+      "0.3.2"
+    ],
+    [
+      "unicode-bidi",
+      "0.3.18"
+    ],
+    [
+      "unicode-linebreak",
+      "0.1.5"
+    ],
+    [
+      "unicode-segmentation",
+      "1.12.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

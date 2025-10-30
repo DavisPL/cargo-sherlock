@@ -1,0 +1,73 @@
+{
+  "rustsec_label": "INFO",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "meithecatte"
+  ],
+  "stars": 117,
+  "forks": 19,
+  "downloads": 27690279,
+  "num_side_effects": 11,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "does-not-implement-crypto",
+      "delta": "",
+      "version": "0.7.7",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.7.7",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-1\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.7.8",
+      "notes": "Reviewed in CL 603523557"
+    }
+  ],
+  "dependencies": [
+    [
+      "enumflags2_derive",
+      "0.7.11"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 11,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 20,
+    "failed": 0,
+    "ignored": 2,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.67
+  }
+}

@@ -1,0 +1,6 @@
+Solving for required assumptions to trust clipboard-0.5.0...
+Trust Score for clipboard-0.5.0: 93
+Assumptions Made:
+clipboard-0.5.0 has many downloads: 33 wt
+clipboard-0.5.0 having many downloads implies it is safe: 10 wt
+clipboard-0.5.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

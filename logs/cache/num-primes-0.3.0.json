@@ -1,0 +1,95 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "AtropineTears"
+  ],
+  "stars": 9,
+  "forks": 7,
+  "downloads": 46160,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "log",
+      "0.4.26"
+    ],
+    [
+      "num",
+      "0.4.3"
+    ],
+    [
+      "num-complex",
+      "0.4.6"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "num-integer",
+      "0.1.46"
+    ],
+    [
+      "num-iter",
+      "0.1.45"
+    ],
+    [
+      "num-rational",
+      "0.4.2"
+    ],
+    [
+      "num-bigint",
+      "0.4.6"
+    ],
+    [
+      "rand",
+      "0.9.0"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "zerocopy",
+      "0.8.24"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.24"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

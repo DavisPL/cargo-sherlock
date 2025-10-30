@@ -1,0 +1,40 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jun Wu,quark-zju,https://github.com/quark-zju
+************************************
+event,timestamp,downloads
+Downloads,-,5033
+************************************
+event,timestamp,total,flagged
+Side Effects,-,10,0
+************************************
+Rudra,timestamp
+"2024-06-23 06:58:41.757428 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 06:58:50.700661 |INFO | [rudra-progress] Running rudra for target lib:gitrevset
+2024-06-23 07:02:22.808864 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:02:22.821246 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:02:22.823537 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:02:22.823624 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:02:22.888101 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:02:22.888230 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:02:27.712765 |INFO | [rudra-progress] Running rudra for target bin:git-revs
+2024-06-23 07:13:45.377196 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:13:45.381167 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:13:45.381569 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:13:45.381583 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:13:45.405133 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:13:45.405157 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:13:48.248810 |INFO | [rudra-progress] Rudra started
+2024-06-23 07:13:48.252226 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 07:13:48.253695 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 07:13:48.253708 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 07:13:48.255081 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 07:13:48.255093 |INFO | [rudra-progress] Rudra finished
+2024-06-23 07:13:48.309894 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

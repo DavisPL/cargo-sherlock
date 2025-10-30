@@ -1,0 +1,280 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "jedisct1",
+    "github:fastly:octo"
+  ],
+  "stars": 4053,
+  "forks": 165,
+  "downloads": 24231,
+  "num_side_effects": 214,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bincode",
+      "2.0.1"
+    ],
+    [
+      "unty",
+      "0.0.4"
+    ],
+    [
+      "bitflags",
+      "2.9.0"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "failure",
+      "0.1.8"
+    ],
+    [
+      "getrandom",
+      "0.3.2"
+    ],
+    [
+      "cfg-if",
+      "1.0.0"
+    ],
+    [
+      "libc",
+      "0.2.171"
+    ],
+    [
+      "r-efi",
+      "5.2.0"
+    ],
+    [
+      "wasi",
+      "0.7.0"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "libloading",
+      "0.8.6"
+    ],
+    [
+      "windows-targets",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_aarch64_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_i686_msvc",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnu",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_gnullvm",
+      "0.53.0"
+    ],
+    [
+      "windows_x86_64_msvc",
+      "0.53.0"
+    ],
+    [
+      "lucet-module",
+      "0.6.1"
+    ],
+    [
+      "anyhow",
+      "1.0.97"
+    ],
+    [
+      "cranelift-entity",
+      "0.118.0"
+    ],
+    [
+      "cranelift-bitset",
+      "0.118.0"
+    ],
+    [
+      "derivative",
+      "2.2.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.94"
+    ],
+    [
+      "unicode-ident",
+      "1.0.18"
+    ],
+    [
+      "quote",
+      "1.0.40"
+    ],
+    [
+      "syn",
+      "2.0.100"
+    ],
+    [
+      "memoffset",
+      "0.9.1"
+    ],
+    [
+      "minisign",
+      "0.7.9"
+    ],
+    [
+      "ct-codecs",
+      "1.1.3"
+    ],
+    [
+      "rpassword",
+      "7.3.1"
+    ],
+    [
+      "rtoolbox",
+      "0.0.2"
+    ],
+    [
+      "windows-sys",
+      "0.59.0"
+    ],
+    [
+      "scrypt",
+      "0.11.0"
+    ],
+    [
+      "pbkdf2",
+      "0.12.2"
+    ],
+    [
+      "digest",
+      "0.10.7"
+    ],
+    [
+      "crypto-common",
+      "0.1.6"
+    ],
+    [
+      "generic-array",
+      "1.2.0"
+    ],
+    [
+      "typenum",
+      "1.18.0"
+    ],
+    [
+      "salsa20",
+      "0.10.2"
+    ],
+    [
+      "cipher",
+      "0.4.4"
+    ],
+    [
+      "inout",
+      "0.1.4"
+    ],
+    [
+      "sha2",
+      "0.10.8"
+    ],
+    [
+      "cpufeatures",
+      "0.2.17"
+    ],
+    [
+      "num-derive",
+      "0.4.2"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "object",
+      "0.36.7"
+    ],
+    [
+      "memchr",
+      "2.7.4"
+    ],
+    [
+      "serde",
+      "1.0.219"
+    ],
+    [
+      "serde_derive",
+      "1.0.219"
+    ],
+    [
+      "serde-big-array",
+      "0.5.1"
+    ],
+    [
+      "serde_json",
+      "1.0.140"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "thiserror",
+      "2.0.12"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.12"
+    ],
+    [
+      "nix",
+      "0.29.0"
+    ],
+    [
+      "raw-cpuid",
+      "11.5.0"
+    ],
+    [
+      "xfailure",
+      "0.1.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 141,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 1,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

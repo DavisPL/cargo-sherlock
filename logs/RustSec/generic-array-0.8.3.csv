@@ -1,0 +1,94 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+audits,-,Critical,isrg,safe-to-run,0.14.6 -> 0.13.3,,,
+audits,-,Critical,mozilla,safe-to-deploy,0.14.5 -> 0.14.6,,,
+audits,-,Critical,zcash,safe-to-deploy,0.14.6 -> 0.14.7,,,
+************************************
+event,timestamp,name,username,url
+Author,-,Bartłomiej Kamiński,fizyk20,https://github.com/fizyk20
+Author,-,Nova,novacrazy,https://github.com/novacrazy
+************************************
+event,timestamp,downloads
+Downloads,-,196250126
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:07:02.409567 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:07:06.261318 |INFO | [rudra-progress] Running rudra for target lib:generic_array
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:201:68[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m201[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let mut res: NoDrop<GenericArray<T, N>> = NoDrop::new(mem::uninitialized());[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                   [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:15:72[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut res: NoDrop<GenericArray<T, N>> = NoDrop::new(mem::uninitialized());[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated function `core::mem::uninitialized`: use `mem::MaybeUninit` instead[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/impls.rs:30:72[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut res: NoDrop<GenericArray<T, N>> = NoDrop::new(mem::uninitialized());[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                       [0m[0m[1m[33m^^^^^^^^^^^^^[0m
+
+2024-06-21 17:07:16.418266 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:07:16.422355 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:07:16.422704 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:07:16.422716 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:07:16.467095 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:07:16.467127 |INFO | [rudra-progress] Rudra finished
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `map_inner`
+-> src/lib.rs:195:1: 207:2
+fn map_inner<S, F, T, N>(list: &[S], f: F) -> GenericArray<T, N>
+where
+    F: Fn(&S) -> T,
+    N: ArrayLength<T>,
+{
+    unsafe {
+        let mut res: NoDrop<GenericArray<T, N>> = NoDrop::new(mem::uninitialized());
+        for (s, r) in list.iter().zip(res.iter_mut()) {
+            [0m[33mcore::ptr::write(r, [0m[36mf(s)[0m[33m)[0m
+        }
+        res.into_inner()
+    }
+}
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `impls::<impl core::default::Default for GenericArray<T, N>>::default`
+-> src/impls.rs:13:5: 21:6
+fn default() -> Self {
+        unsafe {
+            let mut res: NoDrop<GenericArray<T, N>> = NoDrop::new(mem::uninitialized());
+            for r in res.iter_mut() {
+                [0m[33mptr::write(r, [0m[36mT::default()[0m[33m)[0m
+            }
+            res.into_inner()
+        }
+    }
+[0m
+Warning (UnsafeDataflow:/WriteFlow): Potential unsafe dataflow issue in `impls::<impl core::clone::Clone for GenericArray<T, N>>::clone`
+-> src/impls.rs:28:5: 36:6
+fn clone(&self) -> GenericArray<T, N> {
+        unsafe {
+            let mut res: NoDrop<GenericArray<T, N>> = NoDrop::new(mem::uninitialized());
+            for i in 0..[0m[36mN::to_usize()[0m {
+                [0m[33mptr::write(&mut res[i], [0m[36mself[i].clone()[0m[33m)[0m
+            }
+            res.into_inner()
+        }
+    }
+[0m
+2024-06-21 17:07:17.485533 |WARN | [cargo_rudra] Target test:import_name is not supported
+2024-06-21 17:07:17.485575 |WARN | [cargo_rudra] Target test:mod is not supported
+2024-06-21 17:07:17.485586 |WARN | [cargo_rudra] Target test:hex is not supported
+2024-06-21 17:07:17.485671 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

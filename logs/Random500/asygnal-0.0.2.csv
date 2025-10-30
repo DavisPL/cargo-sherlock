@@ -1,0 +1,28 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nikolai Vazquez,nvzqz,https://github.com/nvzqz
+************************************
+event,timestamp,downloads
+Downloads,-,1209
+************************************
+event,timestamp,total,flagged
+Side Effects,-,4,4
+************************************
+Rudra,timestamp
+"2024-06-23 14:11:21.647749 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 14:11:25.189849 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `memchr = ""^2.2""`
+candidate versions found which didn't match: 2.5.0, 2.4.1, 2.4.0, ...
+location searched: crates.io index
+required by package `futures-util v0.3.30`
+    ... which satisfies dependency `futures-util = ""^0.3.30""` (locked to 0.3.30) of package `futures v0.3.30`
+    ... which satisfies dependency `futures = ""^0.3.1""` (locked to 0.3.30) of package `asygnal v0.0.2 (/tmp/rudra)`
+
+"
+************************************

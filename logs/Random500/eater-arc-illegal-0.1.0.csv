@@ -1,0 +1,40 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,eater,the-eater,https://github.com/the-eater
+************************************
+event,timestamp,downloads
+Downloads,-,592
+************************************
+event,timestamp,total,flagged
+Side Effects,-,44,44
+************************************
+Rudra,timestamp
+"2024-06-23 15:47:52.026774 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 15:47:54.951017 |INFO | [rudra-progress] Running rudra for target lib:eater-arc-illegal
+2024-06-23 15:47:58.883566 |INFO | [rudra-progress] Rudra started
+2024-06-23 15:47:58.887404 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-23 15:47:58.908608 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-23 15:47:58.908633 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-23 15:47:58.938609 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-23 15:47:58.938627 |INFO | [rudra-progress] Rudra finished
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:46:1: 46:41
+unsafe impl<T> Send for ArcIllegal<T> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:47:1: 47:41
+unsafe impl<T> Sync for ArcIllegal<T> {}
+Error (SendSyncVariance:/PhantomSendForSend/NaiveSendForSend/RelaxSend): Suspicious impl of `Send` found
+-> src/lib.rs:226:1: 226:42
+unsafe impl<T> Send for WeakIllegal<T> {}
+Warning (SendSyncVariance:/ApiSyncforSync/NaiveSyncForSync/RelaxSync): Suspicious impl of `Sync` found
+-> src/lib.rs:225:1: 225:42
+unsafe impl<T> Sync for WeakIllegal<T> {}
+2024-06-23 15:47:59.725516 |WARN | [cargo_rudra] Target example:thread_num is not supported
+2024-06-23 15:47:59.725659 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

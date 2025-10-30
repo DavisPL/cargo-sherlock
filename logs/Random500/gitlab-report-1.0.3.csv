@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Safe
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Tobias Pfeiffer,TobiP64,https://github.com/TobiP64
+************************************
+event,timestamp,downloads
+Downloads,-,26083
+************************************
+event,timestamp,total,flagged
+Side Effects,-,56,33
+************************************
+Rudra,timestamp
+"2024-06-23 16:44:40.717371 |INFO | [rudra-progress] Running cargo rudra
+2024-06-23 16:44:42.274297 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`:     Updating crates.io index
+error: failed to select a version for the requirement `memchr = ""^2.1""`
+candidate versions found which didn't match: 2.5.0, 2.4.1, 2.4.0, ...
+location searched: crates.io index
+required by package `quick-xml v0.28.2`
+    ... which satisfies dependency `quick-xml = ""^0.28""` (locked to 0.28.2) of package `gitlab-report v1.0.3 (/tmp/rudra)`
+
+"
+************************************

@@ -1,0 +1,124 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Austin Bonander,abonander,https://github.com/abonander
+************************************
+event,timestamp,downloads
+Downloads,-,13288104
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:48:18.198842 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:48:21.919207 |INFO | [rudra-progress] Running rudra for target lib:buf_redux
+[0m[1m[33mwarning[0m[0m[1m: trailing semicolon in macro used in expression position[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/policy.rs:25:57[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m  [0m[0m[1m[38;5;12m| [0m[0m    ($val:expr) => ( return $crate::policy::DoRead($val); );[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                        [0m[0m[1m[33m^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m118[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        if buffer.len() >= self.0 { do_read!(false) }[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[38;5;12m---------------[0m[0m [0m[0m[1m[38;5;12min this macro invocation[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(semicolon_in_expressions_from_macros)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: macro invocations at the end of a block are treated as expressions[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: to ignore the value produced by the macro, add a semicolon after the invocation of `do_read`[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this warning originates in the macro `do_read` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:373:45[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m373[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub fn boxed<'a>(self) -> BufReader<Box<Read + 'a>, P> where R: 'a {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                            [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Read + 'a`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(bare_trait_objects)]` on by default[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:374:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m374[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        let inner: Box<Read + 'a> = Box::new(self.inner);[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                       [0m[0m[1m[33m^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Read + 'a`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:871:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m871[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    fn cause(&self) -> Option<&error::Error> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[33m^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn error::Error`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1273:42[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1273[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    static DROP_ERR_HANDLER: RefCell<Box<Fn(&mut Write, &mut Buffer, io::Error)>>[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                         [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Fn(&mut Write, &mut Buffer, io::Error)`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1273:50[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1273[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    static DROP_ERR_HANDLER: RefCell<Box<Fn(&mut Write, &mut Buffer, io::Error)>>[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Write`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: trait objects without an explicit `dyn` are deprecated[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1286:18[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1286[0m[0m [0m[0m[1m[38;5;12m| [0m[0mwhere F: Fn(&mut Write, &mut Buffer, io::Error)[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[33m^^^^^[0m[0m [0m[0m[1m[33mhelp: use `dyn`: `dyn Write`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mwarning[0m[0m: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021![0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>[0m
+
+[0m[1m[33mwarning[0m[0m[1m: use of deprecated associated function `std::error::Error::description`: use the Display impl or to_string()[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:868:23[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m868[0m[0m [0m[0m[1m[38;5;12m| [0m[0m        error::Error::description(self.error())[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(deprecated)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1050:17[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1050[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut buf = unsafe { self.buf.write_buf() };[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_mut)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable does not need to be mutable[0m
+[0m    [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:1068:17[0m
+[0m     [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1068[0m[0m [0m[0m[1m[38;5;12m| [0m[0m            let mut buf = self.buf.write_buf();[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m----[0m[0m[1m[33m^^^[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12m|[0m
+[0m     [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;12mhelp: remove this `mut`[0m
+
+2024-06-21 17:48:29.972057 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:48:29.975816 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:48:29.976159 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:48:29.976170 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:48:30.006222 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:48:30.006244 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:48:31.172532 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

@@ -1,0 +1,35 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,srrrse,withoutboats,https://github.com/withoutboats
+Author,-,failure,github:rust-lang-nursery:failure,https://github.com/rust-lang-nursery
+************************************
+event,timestamp,downloads
+Downloads,-,31959478
+************************************
+event,timestamp,total,flagged
+Side Effects,-,33,29
+************************************
+Rudra,timestamp
+"2024-06-21 16:18:40.020649 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 16:18:43.228246 |INFO | [rudra-progress] Running rudra for target lib:failure
+2024-06-21 16:18:59.968123 |INFO | [rudra-progress] Rudra started
+2024-06-21 16:18:59.972137 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 16:18:59.973864 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 16:18:59.973880 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 16:19:00.016296 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 16:19:00.016327 |INFO | [rudra-progress] Rudra finished
+2024-06-21 16:19:01.155578 |WARN | [cargo_rudra] Target example:string_custom_error_pattern is not supported
+2024-06-21 16:19:01.155667 |WARN | [cargo_rudra] Target example:bail_ensure is not supported
+2024-06-21 16:19:01.155675 |WARN | [cargo_rudra] Target example:simple is not supported
+2024-06-21 16:19:01.155686 |WARN | [cargo_rudra] Target example:error_as_cause is not supported
+2024-06-21 16:19:01.155695 |WARN | [cargo_rudra] Target test:macro_trailing_comma is not supported
+2024-06-21 16:19:01.155698 |WARN | [cargo_rudra] Target test:basic_fail is not supported
+2024-06-21 16:19:01.155714 |WARN | [cargo_rudra] Target test:fail_compat is not supported
+2024-06-21 16:19:01.155856 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

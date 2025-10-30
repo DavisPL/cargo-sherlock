@@ -1,0 +1,33 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Jorge Aparicio,japaric,https://github.com/japaric
+Author,-,Ruben Nijveld,rnijveld,https://github.com/rnijveld
+Author,-,Christian Poveda Ruiz,pvdrz,https://github.com/pvdrz
+Author,-,Marlon,marlonbaeten,https://github.com/marlonbaeten
+Author,-,Marc R. Schoolderman,squell,https://github.com/squell
+************************************
+event,timestamp,downloads
+Downloads,-,3575
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 18:54:16.013251 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 18:54:16.378937 |ERROR| [rudra-progress] Could not obtain Cargo metadata
+Error during execution of `cargo metadata`: error: failed to parse manifest at `/tmp/rudra/Cargo.toml`
+
+Caused by:
+  feature `strip` is required
+
+  The package requires the Cargo feature called `strip`, but that feature is not stabilized in this version of Cargo (1.57.0-nightly (7fbbf4e8f 2021-10-19)).
+  Consider adding `cargo-features = [""strip""]` to the top of Cargo.toml (above the [package] table) to tell Cargo you are opting in to use this unstable feature.
+  See https://doc.rust-lang.org/nightly/cargo/reference/unstable.html#profile-strip-option for more information about the status of this feature.
+
+"
+************************************

@@ -1,0 +1,27 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Sébastien Crozet,sebcrozet,https://github.com/sebcrozet
+************************************
+event,timestamp,downloads
+Downloads,-,446954
+************************************
+event,timestamp,total,flagged
+Side Effects,-,,
+************************************
+Rudra,timestamp
+"2024-06-21 17:49:14.956928 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:49:18.778178 |INFO | [rudra-progress] Running rudra for target lib:ncollide3d
+2024-06-21 17:49:42.901356 |INFO | [rudra-progress] Rudra started
+2024-06-21 17:49:42.906025 |INFO | [rudra-progress] SendSyncVariance analysis started
+2024-06-21 17:49:42.906420 |INFO | [rudra-progress] SendSyncVariance analysis finished
+2024-06-21 17:49:42.906432 |INFO | [rudra-progress] UnsafeDataflow analysis started
+2024-06-21 17:49:42.968344 |INFO | [rudra-progress] UnsafeDataflow analysis finished
+2024-06-21 17:49:42.968378 |INFO | [rudra-progress] Rudra finished
+2024-06-21 17:49:47.371397 |INFO | [rudra-progress] cargo rudra finished
+"
+************************************

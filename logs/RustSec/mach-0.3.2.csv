@@ -1,0 +1,36 @@
+************************************
+event,timestamp,label
+RustSec,-,Critical
+************************************
+event,timestamp,organization,type,criteria,delta,version,notes
+************************************
+event,timestamp,name,username,url
+Author,-,Nick Fitzgerald,fitzgen,https://github.com/fitzgen
+Author,-,David Cuddeback,dcuddeback,https://github.com/dcuddeback
+Author,-,gnzlbg,gnzlbg,https://github.com/gnzlbg
+Author,-,Markus Stange,mstange,https://github.com/mstange
+************************************
+event,timestamp,downloads
+Downloads,-,17071639
+************************************
+event,timestamp,total,flagged
+Side Effects,-,70,1
+************************************
+Rudra,timestamp
+"2024-06-21 17:49:04.858231 |INFO | [rudra-progress] Running cargo rudra
+2024-06-21 17:49:08.548477 |INFO | [rudra-progress] Running rudra for target lib:mach
+[0m[1m[38;5;9merror[E0464][0m[0m[1m: multiple matching crates for `libc`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/lib.rs:21:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m| [0m[0mextern crate libc;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: candidates:[0m
+[0m           crate `libc`: /usr/local/rustup/toolchains/nightly-2021-10-21-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-08dbb7feabf67599.rlib[0m
+[0m           crate `libc`: /usr/local/rustup/toolchains/nightly-2021-10-21-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-4c8538056bf4b633.rlib[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0464`.[0m
+[0m[0m[1m[31merror[0m[1m:[0m could not compile `mach` due to previous error
+2024-06-21 17:49:12.140978 |ERROR| [rudra-progress] Finished with non-zero exit code
+"
+************************************
