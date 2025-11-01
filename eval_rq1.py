@@ -6,6 +6,10 @@ import requests
 import toml
 import time
 import re
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
 
 CRATE_PREFIX = "supply-chain-trust-example-crate-"
 CSV_FILE = "top100_crates.csv"
@@ -14,6 +18,7 @@ TARGET_DIR = "./local_crates/typo"
 OUTPUT_DIR_REAL = os.path.join("evaluation", "rq1", "real")
 OUTPUT_DIR_TYPO = os.path.join("evaluation", "rq1", "typo")
 RATE_LIMIT_SECONDS = 1.0  # wait between crates.io requests
+OUTPUT_SEVERITY_CSV = "rq1_severities.csv"
 
 os.makedirs(OUTPUT_DIR_REAL, exist_ok=True)
 os.makedirs(OUTPUT_DIR_TYPO, exist_ok=True)
@@ -69,13 +74,24 @@ def _rewrite_cargo_toml(crate_dir: str, original: str, new_name: str):
             pass
 
 def run_top100_crates(csv_file: str = CSV_FILE, out_dir: str = OUTPUT_DIR_REAL) -> None:
-    crates = _load_crate_ids(csv_file)
-    for crate_name in crates:
-        output_file = os.path.join(out_dir, crate_name)
-        os.makedirs(os.path.dirname(output_file), exist_ok=True)
-        cmd = ["python3", "sherlock.py", "trust", crate_name, "-o", output_file]
-        print(f"Running: {' '.join(cmd)}")
-        subprocess.run(cmd, check=False)
+
+    os.makedirs(out_dir, exist_ok=True)
+
+    with open(csv_file, "r", newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            crate_name = (row.get("id") or row.get("name") or "").strip()
+            version = (row.get("version") or "").strip()
+            if not crate_name or not version:
+                # skip rows missing required fields
+                continue
+
+            output_file = os.path.join(out_dir, f"{crate_name}-{version}")
+            os.makedirs(os.path.dirname(output_file), exist_ok=True)
+
+            cmd = ["python3", "sherlock.py", "trust", crate_name, version, "-o", output_file]
+            print(f"Running: {' '.join(cmd)}")
+            subprocess.run(cmd, check=False)
 
 def prepare_typo_crates(csv_file: str = CSV_FILE, target_dir: str = TARGET_DIR, log_path: str = LOG_FILE):
     crates = _load_crate_ids(csv_file)
@@ -202,11 +218,176 @@ def run_typo_crates(typo_output_dir: str = OUTPUT_DIR_TYPO, target_dir: str = TA
         print(f"Running: {' '.join(cmd)}")
         subprocess.run(cmd, check=False)
 
+ANSI_RE = re.compile(r"\x1B\[[0-?]*[ -/]*[@-~]")
+
+def strip_ansi(s: str) -> str:
+    return ANSI_RE.sub("", s)
+
+def _last_int_on_line_containing(t: str, needle: str):
+    for line in t.splitlines():
+        if needle.lower() in line.lower():
+            ints = re.findall(r"(\d{1,3})\b", line)
+            if ints: return ints[-1]
+    return None
+
+def _value_after_colon_on_line_containing(t: str, needle: str):
+    for line in t.splitlines():
+        if needle.lower() in line.lower():
+            m = re.search(r":\s*([A-Z0-9_\-]+)", line, flags=re.IGNORECASE)
+            if m: return m.group(1)
+    return None
+
+def parse_analysis_report(text: str):
+    t = strip_ansi(text).replace("\u00A0", " ")
+    def first_int_on_same_line(label_pat: str):
+        m = re.search(label_pat, t, flags=re.IGNORECASE)
+        if not m: return None
+        start = t.rfind("\n", 0, m.start()) + 1
+        end = t.find("\n", m.end()); end = len(t) if end == -1 else end
+        line = t[start:end]
+        n = re.search(r"(\d{1,3})\b", line)
+        return n.group(1) if n else None
+    trust = first_int_on_same_line(r"Trust\s*Cost")
+    distrust = first_int_on_same_line(r"Distrust\s*Cost")
+    m = re.search(r"Severity\s*Label:\s*([A-Z0-9_\-]+)", t, flags=re.IGNORECASE)
+    sev = m.group(1) if m else None
+    if trust is None:
+        trust = _last_int_on_line_containing(t, "Trust Cost")
+    if distrust is None:
+        distrust = _last_int_on_line_containing(t, "Distrust Cost")
+    if sev is None:
+        sev = _value_after_colon_on_line_containing(t, "Severity Label")
+    return {"trust_cost": trust, "distrust_cost": distrust, "severity_label": sev}
+
+def _read_dir_reports(dir_path: str):
+    out = {}
+    if not os.path.isdir(dir_path):
+        return out
+    for fname in os.listdir(dir_path):
+        fpath = os.path.join(dir_path, fname)
+        if not os.path.isfile(fpath):
+            continue
+        try:
+            with open(fpath, "r", encoding="utf-8", errors="replace") as fh:
+                parsed = parse_analysis_report(fh.read())
+            out[fname] = parsed
+        except Exception:
+            pass
+    return out
+
+def build_severity_csv(csv_in: str = CSV_FILE,
+                       real_dir: str = OUTPUT_DIR_REAL,
+                       typo_dir: str = OUTPUT_DIR_TYPO,
+                       csv_out: str = OUTPUT_SEVERITY_CSV):
+    # read reports once
+    real_reports = _read_dir_reports(real_dir)   # keys are filenames like "syn-2.0.100"
+    typo_reports = _read_dir_reports(typo_dir)   # keys are names like "supply-chain-trust-example-crate-000001"
+
+    rows = []
+    with open(csv_in, "r", newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for idx, row in enumerate(reader, start=1):
+            crate_id = (row.get("id") or row.get("name") or "").strip()
+            version = (row.get("version") or "").strip()
+
+            # real file key is "<id>-<version>"
+            real_key = f"{crate_id}-{version}" if crate_id and version else crate_id
+
+            # typo key is index-based synthetic name
+            typo_key = f"{CRATE_PREFIX}{idx:06d}"
+
+            real_label = (real_reports.get(real_key) or {}).get("severity_label", "")
+            typo_label = (typo_reports.get(typo_key) or {}).get("severity_label", "")
+
+            rows.append({"name": crate_id, "real_label": real_label, "typo_label": typo_label})
+
+    with open(csv_out, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["name", "real_label", "typo_label"])
+        w.writeheader()
+        w.writerows(rows)
+
+    print(f"Wrote {len(rows)} rows to {csv_out}")
+
+SEVERITY_COLORS = {
+    "SAFE":            (55, 126, 33),    # bold green
+    "LOW_SEVERITY":    (167, 94, 33),    # bold dark_orange
+    "MEDIUM_SEVERITY": (134, 198, 227),  # bold cyan
+    "HIGH_SEVERITY":   (194, 102, 204),  # bold violet
+    "CRITICAL":        (187, 39, 26),    # bold red
+}
+
+def _rgb01_for_label(label: str):
+    """Return an RGB tuple normalized to 0..1 for Matplotlib."""
+    lab = (label or "").upper()
+    # resolve by substring to be robust
+    if "CRITICAL" in lab:
+        key = "CRITICAL"
+    elif "HIGH" in lab:
+        key = "HIGH_SEVERITY"
+    elif "MEDIUM" in lab:
+        key = "MEDIUM_SEVERITY"
+    elif "LOW" in lab:
+        key = "LOW_SEVERITY"
+    elif "SAFE" in lab:
+        key = "SAFE"
+    else:
+        return (0, 0, 0)
+    r, g, b = SEVERITY_COLORS[key]
+    return (r/255.0, g/255.0, b/255.0)
+
+def plot_severity_heatmap_from_csv(
+    csv_path: str,
+    x_order = ("SAFE", "LOW_SEVERITY"),
+    y_order = ("CRITICAL", "HIGH_SEVERITY", "MEDIUM_SEVERITY", "LOW_SEVERITY", "SAFE"),
+):
+    df = pd.read_csv(csv_path)
+    df["real_label"] = df["real_label"].astype(str).str.strip().str.upper()
+    df["typo_label"] = df["typo_label"].astype(str).str.strip().str.upper()
+
+    ct = pd.crosstab(df["typo_label"], df["real_label"])
+    ct = ct.reindex(index=list(y_order), columns=list(x_order), fill_value=0)
+
+    sns.set_theme(style="whitegrid", context="talk")
+    plt.figure(figsize=(6, 5))
+    ax = sns.heatmap(
+        ct,
+        annot=True,         # numbers shown
+        fmt="d",
+        cmap="Blues",       # keep cells in Blues
+        cbar=False,
+        linewidths=1,       # grid/boundaries
+        linecolor="white",  # boundaries stay white
+    )
+
+    ax.set_xlabel("Real Crate Severity Label", fontsize=14, fontweight="bold")
+    ax.set_ylabel("Typosquatted Crate Severity Label", fontsize=14, fontweight="bold")
+    
+    # Bold + LaTeX color for tick labels ONLY (numbers remain default)
+    for lbl in ax.get_xticklabels():
+        sev = lbl.get_text().upper()
+        lbl.set_color(_rgb01_for_label(sev))
+        lbl.set_fontweight("bold")
+
+    for lbl in ax.get_yticklabels():
+        sev = lbl.get_text().upper()
+        lbl.set_color(_rgb01_for_label(sev))
+        lbl.set_fontweight("bold")
+
+    plt.tight_layout()
+    plt.savefig("severity_heatmap.pdf", bbox_inches="tight")
+
 def main():
     run_top100_crates(CSV_FILE, OUTPUT_DIR_REAL)
     prepare_typo_crates(CSV_FILE, TARGET_DIR, LOG_FILE)
     patch_typo_crates_from_tmp(CSV_FILE, TARGET_DIR, LOG_FILE)
     run_typo_crates(OUTPUT_DIR_TYPO, TARGET_DIR)
+    build_severity_csv(CSV_FILE, OUTPUT_DIR_REAL, OUTPUT_DIR_TYPO, OUTPUT_SEVERITY_CSV)
+    plot_severity_heatmap_from_csv(
+        OUTPUT_SEVERITY_CSV,
+        x_order=("SAFE", "LOW_SEVERITY"),
+        y_order=("CRITICAL", "HIGH_SEVERITY", "MEDIUM_SEVERITY", "LOW_SEVERITY", "SAFE"),
+    )    
+
 
 if __name__ == "__main__":
     main()
