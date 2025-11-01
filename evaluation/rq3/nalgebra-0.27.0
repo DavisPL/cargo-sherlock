@@ -1,0 +1,23 @@
+Solving for required assumptions to trust nalgebra-0.27.0...
+╭────────────────────── Analysis Report for nalgebra-0.27.0 ───────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                           │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 21                       │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                       │
+│  Severity Label:                   LOW_SEVERITY                                  │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────────────────
+╭───────────────────────── Assumptions for Trusting ──────────────────────────╮     
+│                                                                             │     
+│  • nalgebra-0.27.0 has many stars and forks: 1 cost                         │     
+│  • nalgebra-0.27.0 having many stars and forks implies it is safe: 20 cost  │     
+│                                                                             │     
+╰─────────────────────────────────────────────────────────────────────────────╯     
+╭──────────────────────── Assumptions for Distrusting ────────────────────────╮     
+│                                                                             │     
+│  • nalgebra-0.27.0 failing a Miri test implies it is unsafe: 50 cost        │     
+│                                                                             │     
+╰─────────────────────────────────────────────────────────────────────────────╯     
+
+                                             
+  Details: /logs/cache/nalgebra-0.27.0.json  
+                                             

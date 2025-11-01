@@ -1,0 +1,23 @@
+Solving for required assumptions to trust temporary-0.6.3...
+╭────────────────────── Analysis Report for temporary-0.6.3 ───────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                           │
+│  Trust Cost (lower is better):     █████████░░░░░░░░░░░ 44                       │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                       │
+│  Severity Label:                   MEDIUM_SEVERITY                               │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ───────────────────────╮           
+│                                                                       │           
+│  • temporary-0.6.3 has many downloads: 19 cost                        │           
+│  • temporary-0.6.3 having many downloads implies it is safe: 25 cost  │           
+│                                                                       │           
+╰───────────────────────────────────────────────────────────────────────╯           
+╭───────────────────── Assumptions for Distrusting ─────────────────────╮           
+│                                                                       │           
+│  • temporary-0.6.3 failing a Miri test implies it is unsafe: 50 cost  │           
+│                                                                       │           
+╰───────────────────────────────────────────────────────────────────────╯           
+
+                                             
+  Details: /logs/cache/temporary-0.6.3.json  
+                                             

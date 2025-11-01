@@ -1,0 +1,40 @@
+[package]
+edition = "2018"
+rust-version = "1.36"
+name = "supply-chain-trust-example-crate-000095"
+version = "0.3.31"
+build = false
+autobins = false
+autoexamples = false
+autotests = false
+autobenches = false
+description = "The `AsyncRead`, `AsyncWrite`, `AsyncSeek`, and `AsyncBufRead` traits for the futures-rs library.\n"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+authors = [ "Anonymous",]
+
+[lib]
+name = "futures_io"
+path = "src/lib.rs"
+
+[dependencies]
+
+[features]
+default = [ "std",]
+std = []
+unstable = []
+
+[lints.rust]
+missing_debug_implementations = "warn"
+rust_2018_idioms = "warn"
+single_use_lifetimes = "warn"
+unreachable_pub = "warn"
+
+[lints.rust.unexpected_cfgs]
+level = "warn"
+priority = 0
+check-cfg = [ "cfg(futures_sanitizer)",]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = [ "--cfg", "docsrs",]

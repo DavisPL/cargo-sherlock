@@ -3,12 +3,10 @@ test.txt
 /logs/exp/
 /experiments/
 run_random.py
-*.txt
 typo_crates
 cloned_crates
 processing/*
-
-
+**/.git/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

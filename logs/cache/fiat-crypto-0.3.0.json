@@ -1,0 +1,129 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "JasonGross"
+  ],
+  "stars": 776,
+  "forks": 156,
+  "downloads": 38413712,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.1.17",
+      "notes": "This crate does not contain any unsafe code, and does not use any items from\\nthe standard library or other crates, aside from operations backed by\\n`std::ops`. All paths with array indexing use integer literals for indexes, so\\nthere are no panics due to indexes out of bounds (as rustc would catch an\\nout-of-bounds literal index). I did not check whether arithmetic overflows\\ncould cause a panic, and I am relying on the Coq code having satisfied the\\nnecessary preconditions to ensure panics due to overflows are unreachable.\\n"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.17 -> 0.1.18",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.18 -> 0.1.19",
+      "version": "",
+      "notes": "This release renames many items and adds a new module. The code in the new\\nmodule is entirely composed of arithmetic and array accesses.\\n"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.19 -> 0.1.20",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.1.20 -> 0.2.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.0 -> 0.2.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.1 -> 0.2.2",
+      "version": "",
+      "notes": "No changes to `unsafe` code, or any functional changes that I can detect at all."
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.2 -> 0.2.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.4 -> 0.2.5",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.5 -> 0.2.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.6 -> 0.2.7",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.7 -> 0.2.8",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.8 -> 0.2.9",
+      "version": "",
+      "notes": "No changes to Rust code between 0.2.8 and 0.2.9"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.9 -> 0.3.0",
+      "version": "",
+      "notes": "The diff is huge, but that's because it introduces a wrapper around indexing into arrays which is used in many many places. There is no new unsafe code and no change to build scripts I can detect."
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

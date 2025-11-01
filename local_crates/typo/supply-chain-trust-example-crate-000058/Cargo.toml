@@ -1,0 +1,28 @@
+[package]
+edition = "2018"
+rust-version = "1.51"
+name = "supply-chain-trust-example-crate-000058"
+version = "2.3.2"
+authors = [ "Anonymous",]
+build = false
+autolib = false
+autobins = false
+autoexamples = false
+autotests = false
+autobenches = false
+description = "Percent encoding and decoding"
+readme = false
+categories = [ "no-std",]
+license = "MIT OR Apache-2.0"
+
+[features]
+alloc = []
+default = [ "std",]
+std = [ "alloc",]
+
+[lib]
+name = "percent_encoding"
+path = "src/lib.rs"
+
+[package.metadata.docs.rs]
+rustdoc-args = [ "--generate-link-to-definition",]

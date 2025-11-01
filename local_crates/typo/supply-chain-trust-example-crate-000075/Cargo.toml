@@ -1,0 +1,64 @@
+[[test]]
+name = "mod"
+path = "tests/mod.rs"
+
+[[bench]]
+name = "mod"
+path = "benches/mod.rs"
+
+[package]
+edition = "2024"
+rust-version = "1.85"
+name = "supply-chain-trust-example-crate-000075"
+version = "0.11.0-rc.2"
+authors = [ "Anonymous",]
+build = false
+autolib = false
+autobins = false
+autoexamples = false
+autotests = false
+autobenches = false
+description = "Pure Rust implementation of the SHA-2 hash function family\nincluding SHA-224, SHA-256, SHA-384, and SHA-512.\n"
+documentation = "https://docs.rs/sha2"
+readme = "README.md"
+keywords = [ "sha2", "hash", "digest",]
+categories = [ "cryptography", "no-std",]
+license = "MIT OR Apache-2.0"
+
+[features]
+alloc = [ "digest/alloc",]
+default = [ "alloc", "oid",]
+oid = [ "digest/oid",]
+zeroize = [ "digest/zeroize",]
+
+[lib]
+name = "sha2"
+path = "src/lib.rs"
+
+[dependencies.cfg-if]
+version = "1"
+
+[dependencies.digest]
+version = "0.11.0-rc.1"
+
+[dev-dependencies.base16ct]
+version = "0.3"
+features = [ "alloc",]
+
+[dev-dependencies.digest]
+version = "0.11.0-rc.1"
+features = [ "dev",]
+
+[dev-dependencies.hex-literal]
+version = "1"
+
+[lints.rust.unexpected_cfgs]
+level = "warn"
+priority = 0
+check-cfg = [ "cfg(sha2_backend, values(\"soft\", \"soft-compact\", \"riscv-zknh\", \"riscv-zknh-compact\"))",]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[target."cfg(any(target_arch = \"aarch64\", target_arch = \"x86_64\", target_arch = \"x86\"))".dependencies.cpufeatures]
+version = "0.2"

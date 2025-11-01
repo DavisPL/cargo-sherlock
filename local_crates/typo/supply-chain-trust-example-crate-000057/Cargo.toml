@@ -1,0 +1,33 @@
+[package]
+edition = "2021"
+rust-version = "1.61"
+name = "supply-chain-trust-example-crate-000057"
+version = "0.2.21"
+authors = [ "Anonymous",]
+build = false
+autobins = false
+autoexamples = false
+autotests = false
+autobenches = false
+description = "Cross-platform cryptography-oriented low-level SIMD library."
+readme = false
+keywords = [ "crypto", "simd", "x86",]
+categories = [ "cryptography", "no-std",]
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "ppv_lite86"
+path = "src/lib.rs"
+
+[features]
+default = [ "std",]
+no_simd = []
+simd = []
+std = []
+
+[dependencies.zerocopy]
+version = "0.8.23"
+features = [ "simd",]
+
+[badges.travis-ci]
+repository = "cryptocorrosion/cryptocorrosion"

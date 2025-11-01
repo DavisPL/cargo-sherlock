@@ -1,0 +1,202 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Stebalien",
+    "KodrAus"
+  ],
+  "stars": 1357,
+  "forks": 139,
+  "downloads": 373309683,
+  "num_side_effects": 165,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "3.3.0 -> 3.5.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "3.5.0 -> 3.6.0",
+      "version": "",
+      "notes": "Dependency updates and new optimized trait implementations, but otherwise everything looks normal."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "3.16.0 -> 3.19.1",
+      "version": "",
+      "notes": "Idiom and platform updates, but nothing major and nothing out of line."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "3.20.0 -> 3.21.0",
+      "version": "",
+      "notes": "Only minor manifest/CI changes."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "3.21.0 -> 3.23.0",
+      "version": "",
+      "notes": "Doc/test/platform updates, nothing out of the ordinary."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "3.4.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "3.10.1",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "3.6.0 -> 3.8.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "3.8.0 -> 3.9.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "3.9.0 -> 3.10.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "3.10.1 -> 3.16.0",
+      "version": "",
+      "notes": "Big change, but nothing unsafe and lots of it is documentation and convenience APIs"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "3.19.1 -> 3.20.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "3.4.0 -> 3.5.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "3.5.0 -> 3.6.0",
+      "version": "",
+      "notes": "New `build.rs` file uses `autocfg` crate to conditionally enable new trait impls."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-run",
+      "delta": "3.5.0 -> 3.12.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "3.6.0 -> 3.8.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "3.8.0 -> 3.8.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "3.8.1 -> 3.9.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "3.9.0 -> 3.10.1",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "fastrand",
+      "2.3.0"
+    ],
+    [
+      "once_cell",
+      "1.21.3"
+    ],
+    [
+      "rustix",
+      "1.1.2"
+    ],
+    [
+      "bitflags",
+      "2.10.0"
+    ],
+    [
+      "errno",
+      "0.3.14"
+    ],
+    [
+      "libc",
+      "0.2.177"
+    ],
+    [
+      "windows-sys",
+      "0.61.2"
+    ],
+    [
+      "windows-link",
+      "0.2.1"
+    ],
+    [
+      "linux-raw-sys",
+      "0.12.0"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 20,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.2
+  }
+}

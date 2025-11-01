@@ -1,0 +1,81 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Lokathor",
+    "github:rust-bus:maintainers"
+  ],
+  "stars": 708,
+  "forks": 54,
+  "downloads": 348261211,
+  "num_side_effects": 13,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "1.6.0",
+      "notes": "This crate, while it implements collections, does so without `std::*` APIs and\\nwithout `unsafe`. Skimming the crate everything looks reasonable and what one\\nwould expect from idiomatic safe collections in Rust.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-0\", \"safe-to-deploy\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.6.0",
+      "notes": "Grepped for `-i cipher`, `-i crypto`, `'x08fsx08'``, `'x08netx08'``, `'x08unsafex08'``\\nand there were no hits except for some \\\"unsafe\\\" appearing in comments:\\n\\n```\\nsrc/arrayvec.rs:    // Note: This shouldn't use A::CAPACITY, because unsafe code can't rely on\\nsrc/lib.rs://! All of this is done with no `unsafe` code within the crate. Technically the\\nsrc/lib.rs://! `Vec` type from the standard library uses `unsafe` internally, but *this\\nsrc/lib.rs://! crate* introduces no new `unsafe` code into your project.\\nsrc/array.rs:/// Just a reminder: this trait is 100% safe, which means that `unsafe` code\\n```\\n\\nThis crate has been added to Chromium in\\nhttps://source.chromium.org/chromium/chromium/src/+/24773c33e1b7a1b5069b9399fd034375995f290b\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.6.0 -> 1.6.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.6.1 -> 1.7.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.7.0 -> 1.8.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.8.0 -> 1.8.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-0\",]",
+      "delta": "1.8.1 -> 1.9.0",
+      "version": "",
+      "notes": "Larger delta, but no unsafe code introduced. Deltas for:\\n- borsh (Binary Object Representation Serializer for Hashing) serialization/deserialization support behind the `borsh` feature.\\n- trait implementations to interoperate with the generic-array crate\\n- miscellaneous helper functions and support code, e.g. `into_vec()`.\\n"
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 38,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.98
+  }
+}

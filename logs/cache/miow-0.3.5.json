@@ -1,0 +1,61 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "faern",
+    "yoshuawuyts",
+    "dpaoliello"
+  ],
+  "stars": 117,
+  "forks": 44,
+  "downloads": 44824193,
+  "num_side_effects": 234,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "socket2",
+      "0.6.1"
+    ],
+    [
+      "libc",
+      "0.2.177"
+    ],
+    [
+      "windows-sys",
+      "0.61.2"
+    ],
+    [
+      "windows-link",
+      "0.2.1"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 194,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

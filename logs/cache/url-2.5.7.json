@@ -1,0 +1,192 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "SimonSapin",
+    "Hoverbear",
+    "seanmonstar",
+    "github:servo:cargo-publish",
+    "github:servo:rust-url"
+  ],
+  "stars": 1481,
+  "forks": 358,
+  "downloads": 411527567,
+  "num_side_effects": 20,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "2.3.1",
+      "notes": "This crate contains no `unsafe` code and otherwise doesn't use any functionality\\nit's not supposed to from `std` or such. This crate is the defacto standard for\\nURL parsing in the Rust community with widespread usage to battle-test, harden,\\nand suss out bugs. I've historically reviewed this crate in the past and it\\nis similar to what it once was back then. Skimming over the crate there is\\nnothing suspicious and it's everything you'd expect a Rust URL parser to be.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "2.3.1",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "2.4.0",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.4.0 -> 2.4.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.4.1 -> 2.5.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.5.0 -> 2.5.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.5.1 -> 2.5.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "2.5.4 -> 2.5.7",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "form_urlencoded",
+      "1.2.2"
+    ],
+    [
+      "percent-encoding",
+      "2.3.2"
+    ],
+    [
+      "idna",
+      "1.1.0"
+    ],
+    [
+      "idna_adapter",
+      "1.2.1"
+    ],
+    [
+      "icu_normalizer",
+      "2.1.1"
+    ],
+    [
+      "icu_collections",
+      "2.1.1"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "proc-macro2",
+      "1.0.103"
+    ],
+    [
+      "unicode-ident",
+      "1.0.22"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ],
+    [
+      "potential_utf",
+      "0.1.4"
+    ],
+    [
+      "yoke",
+      "0.8.1"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.1"
+    ],
+    [
+      "zerofrom",
+      "0.1.6"
+    ],
+    [
+      "zerovec",
+      "0.11.5"
+    ],
+    [
+      "icu_provider",
+      "2.1.1"
+    ],
+    [
+      "icu_locale_core",
+      "2.1.1"
+    ],
+    [
+      "litemap",
+      "0.8.1"
+    ],
+    [
+      "tinystr",
+      "0.8.2"
+    ],
+    [
+      "writeable",
+      "0.6.2"
+    ],
+    [
+      "smallvec",
+      "1.15.1"
+    ],
+    [
+      "icu_properties",
+      "2.1.1"
+    ],
+    [
+      "zerotrie",
+      "0.2.3"
+    ],
+    [
+      "utf8_iter",
+      "1.0.4"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 1,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.35
+  }
+}

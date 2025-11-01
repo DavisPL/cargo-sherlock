@@ -1,0 +1,23 @@
+Solving for required assumptions to trust lexer-0.1.18...
+╭──────────────────────── Analysis Report for lexer-0.1.18 ────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                           │
+│  Trust Cost (lower is better):     ██████████░░░░░░░░░░ 51                       │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                       │
+│  Severity Label:                   HIGH_SEVERITY                                 │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────────────────
+╭───────────────────── Assumptions for Trusting ─────────────────────╮              
+│                                                                    │              
+│  • lexer-0.1.18 has many downloads: 26 cost                        │              
+│  • lexer-0.1.18 having many downloads implies it is safe: 25 cost  │              
+│                                                                    │              
+╰────────────────────────────────────────────────────────────────────╯              
+╭─────────────────── Assumptions for Distrusting ────────────────────╮              
+│                                                                    │              
+│  • lexer-0.1.18 failing a Miri test implies it is unsafe: 50 cost  │              
+│                                                                    │              
+╰────────────────────────────────────────────────────────────────────╯              
+
+                                          
+  Details: /logs/cache/lexer-0.1.18.json  
+                                          

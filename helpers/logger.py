@@ -61,8 +61,8 @@ def get_stars_and_forks(crate_name: str , local) -> dict | None:
         with open(metadata_file_path, "r", encoding="utf-8") as f:
             metadata = json.load(f)
             repository_url = metadata["packages"][0].get("repository", "")
-            if repository_url == "":
-                return None
+            if repository_url == None:
+                repository_url = ""
     else:
     # Get the repository URL for the crate
         url = f"https://crates.io/api/v1/crates/{crate_name}"

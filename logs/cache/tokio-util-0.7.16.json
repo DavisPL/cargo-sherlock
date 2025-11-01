@@ -1,0 +1,75 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "carllerche",
+    "Darksonn",
+    "github:tokio-rs:core"
+  ],
+  "stars": 30096,
+  "forks": 2821,
+  "downloads": 369531431,
+  "num_side_effects": 40,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.7.4",
+      "notes": "Alex Crichton audited the safety of src/sync/reusable_box.rs, I audited the remainder of the crate."
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.7.3",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.7.10 -> 0.7.11",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "futures-sink",
+      "0.3.31"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "tokio",
+      "1.48.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 21,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

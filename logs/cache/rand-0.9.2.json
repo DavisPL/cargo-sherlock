@@ -1,0 +1,80 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "dhardy",
+    "github:rust-lang-nursery:libs",
+    "github:rust-random:maintainers"
+  ],
+  "stars": 1929,
+  "forks": 477,
+  "downloads": 728520583,
+  "num_side_effects": 10,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.8.3",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "",
+      "version": "0.8.5",
+      "notes": "For more detailed unsafe review notes please see https://crrev.com/c/6362797\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.8.5",
+      "notes": "Reviewed in https://crrev.com/c/5171063\\n\\nPreviously reviewed during security review and the audit is grandparented in.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-1",
+      "delta": "",
+      "version": "0.9.1",
+      "notes": "Reviewed in CL 755137509"
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.8.5 -> 0.9.1",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.1 -> 0.9.2",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "rand_core",
+      "0.9.3"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 9,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 56,
+    "failed": 0,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 5.32
+  }
+}

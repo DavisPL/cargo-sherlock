@@ -1,0 +1,151 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Lokathor",
+    "github:rust-bus:maintainers"
+  ],
+  "stars": 907,
+  "forks": 99,
+  "downloads": 154612937,
+  "num_side_effects": 94,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.13.0",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.13.1",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "1.16.3",
+      "notes": "Review notes from the original audit (of 1.14.3) may be found in\\nhttps://crrev.com/c/5362675.  Note that this audit has initially missed UB risk\\nthat was fixed in 1.16.2 - see https://github.com/Lokathor/bytemuck/pull/258.\\nBecause of this, the original audit has been edited to certify version `1.16.3`\\ninstead (see also https://crrev.com/c/5771867).\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"does-not-implement-crypto\", \"ub-risk-4\",]",
+      "delta": "1.13.1 -> 1.14.3",
+      "version": "",
+      "notes": "Review notes from the original audit may be found in\\nhttps://crrev.com/c/5362675.  Note that this audit has initially missed UB risk\\nthat was fixed in 1.16.2 - see https://github.com/Lokathor/bytemuck/pull/258.\\nBecause of this, the original audit has been edited to certify `ub-risk-4`\\ninstead.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.13.1 -> 1.16.3",
+      "version": "",
+      "notes": "The certification of the 1.13.1 => 1.16.1 delta is based on:\\n\\n* 1.13.1 -> 1.14.3 audit in https://crrev.com/c/5362675.  Note that this audit\\n  has initially missed UB risk that was fixed in 1.16.2 - see\\n  https://github.com/Lokathor/bytemuck/pull/258.\\n* 1.14.3 -> 1.15.0 audit in https://crrev.com/c/5380327\\n* 1.15.0 -> 1.16.0 audit in https://crrev.com/c/5535688\\n* 1.16.0 -> 1.16.1 audit in https://crrev.com/c/5650895\\n\\nWhen auditing the changes in the 1.16.1 -> 1.16.3 delta it seems that:\\n\\n* The changes correctly account for ZSTs:\\n    * Avoiding division-by-zero errors\\n    * Avoiding UB in `BoxBytes::drop`\\n* The changes preserve safety gurantees for nearby `unsafe` blocks\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.14.3 -> 1.15.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.15.0 -> 1.16.0",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.16.0 -> 1.16.1",
+      "version": "",
+      "notes": "The delta only adds `f16` and `f128` support (with some other minor changes)\\nand has no impact on the audit criteria.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-3",
+      "delta": "1.16.3 -> 1.17.0",
+      "version": "",
+      "notes": "1.17.0 may rely on `union` layout that is not guaranteed by the compiler.\\nSee https://github.com/Lokathor/bytemuck/pull/268\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.16.3 -> 1.17.1",
+      "version": "",
+      "notes": "Unsafe review comments can be found in https://crrev.com/c/5813463"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.17.1 -> 1.18.0",
+      "version": "",
+      "notes": "No code changes - just altering feature flag arrangements"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.18.0 -> 1.19.0",
+      "version": "",
+      "notes": "No code changes - just comment changes and adding the track_caller attribute."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.19.0 -> 1.20.0",
+      "version": "",
+      "notes": "`unsafe` review can be found at https://crrev.com/c/6096767"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.20.0 -> 1.21.0",
+      "version": "",
+      "notes": "Unsafe review at https://chromium-review.googlesource.com/c/chromium/src/+/6111154/"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "1.21.0 -> 1.22.0",
+      "version": "",
+      "notes": "This adds new instances of unsafe, but the uses are justified:\\n- BoxBytes is essentially a Box<[u8], which is Send + Sync, so also marking BoxBytes as Send + Sync is justified.\\n- core::num::Saturating<T> meets the criteria for Zeroable + Pod, so marking it as such is justified.\\n\\nSee https://crrev.com/c/6321863 for more audit notes.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-2\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "1.13.1",
+      "notes": "Reviewed in CL 561111794"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-run",
+      "delta": "1.15.0 -> 1.16.0",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [],
+  "passed_audit": false,
+  "num_unsafe_calls": 93,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 9,
+    "failed": 0,
+    "ignored": 2,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.26
+  }
+}

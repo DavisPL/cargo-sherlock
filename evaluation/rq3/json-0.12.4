@@ -1,0 +1,23 @@
+Solving for required assumptions to trust json-0.12.4...
+╭──────────────────────── Analysis Report for json-0.12.4 ─────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                           │
+│  Trust Cost (lower is better):     █████░░░░░░░░░░░░░░░ 27                       │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                       │
+│  Severity Label:                   LOW_SEVERITY                                  │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────────────────
+╭──────────────────── Assumptions for Trusting ─────────────────────╮               
+│                                                                   │               
+│  • json-0.12.4 has many downloads: 2 cost                         │               
+│  • json-0.12.4 having many downloads implies it is safe: 25 cost  │               
+│                                                                   │               
+╰───────────────────────────────────────────────────────────────────╯               
+╭─────────────────── Assumptions for Distrusting ───────────────────╮               
+│                                                                   │               
+│  • json-0.12.4 failing a Miri test implies it is unsafe: 50 cost  │               
+│                                                                   │               
+╰───────────────────────────────────────────────────────────────────╯               
+
+                                         
+  Details: /logs/cache/json-0.12.4.json  
+                                         

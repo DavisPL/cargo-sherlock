@@ -53,6 +53,8 @@ We provide you with step-by-step instructions and scripts to replicate the resul
 
 ### RQ1: Synthetic Tuposquatted Attacks
 
+Here first we will create 100 synthetic typosquatted crates using the script `generate_typosquatted_crates.py`. We also need to run cargo-sherlock on 100 popular crates. 
+
 ### RQ2: Real-World Supply Chain Risks
 We will replicate the experiment and the regenerate the table [Table 4] presented in the paper. The source code for faster_log crate is not publicly available on crates.io, therefore, we have included the source code for it in the `local_crates` directory. For faster_log, we will use the local path to analyze it, for other crates, we will fetch them from crates.io.
 
@@ -62,6 +64,23 @@ python3 eval_rq2.py
 This script will run Cargo-Sherlock on serde_yaml-0.9 vs serde_yml
 
 ### RQ3:
+
+For this we need to disable the assumptions made in Cargo-Sherlock about RustSec advisories. For this , please follow the steps below:
+1. Open the file `solver.py` in a text editor.
+2. Comment out the line 139-144. The lines are: (some more lines as well)
+```Python
+    if metadata["rustsec_tag"] is not None:
+        uncategorized = z3.BoolVal(rustsec_label == "Uncategorized") # crate has an uncategorized label
+        vulnerability_tag = z3.BoolVal("Vulnerability" in metadata["rustsec_tag"]) # crate has a vulnerability tag
+        info_unmaintained_tag = z3.BoolVal("INFOUnmaintained" in metadata["rustsec_tag"]) # crate has an info unmaintained tag
+        info_unsound_tag = z3.BoolVal("INFOUnsound" in metadata["rustsec_tag"]) # crate has an info unsound tag
+        info_notice_tag = z3.BoolVal("INFONotice" in metadata["rustsec_tag"]) # crate has an info notice tag
+        assumptions.append(Assumption(f"{crate} being uncategorized and having a vulnerability tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, vulnerability_tag), unsafe), 10))
+        assumptions.append(Assumption(f"{crate} being uncategorized and having a unsound tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_unsound_tag), unsafe), 20))
+        assumptions.append(Assumption(f"{crate} being uncategorized and having a notice tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_notice_tag), unsafe), 60))
+        assumptions.append(Assumption(f"{crate} being uncategorized and having a unmaintained tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_unmaintained_tag), unsafe), 50))
+```
+These are the assumptions that Cargo-Sherlock makes about RustSec advisories. By commenting them out, we deny Cargo-Sherlock about any information of these crates being in the RustSec database.
 
 ### RQ4:
 

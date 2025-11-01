@@ -1,0 +1,69 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "fizyk20",
+    "novacrazy"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 403869349,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.14.7",
+      "notes": ""
+    },
+    {
+      "organization": "isrg",
+      "criteria": "safe-to-run",
+      "delta": "0.14.6 -> 0.13.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.5 -> 0.14.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.6 -> 0.14.7",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "rustversion",
+      "1.0.22"
+    ],
+    [
+      "typenum",
+      "1.19.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 30,
+    "failed": 0,
+    "ignored": 4,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.75
+  }
+}

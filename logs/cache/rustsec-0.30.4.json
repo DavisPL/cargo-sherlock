@@ -1,0 +1,191 @@
+{
+  "rustsec_label": "Uncategorized",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": true,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "alex",
+    "tarcieri",
+    "djc",
+    "Shnatsel",
+    "github:rustsec:working-group"
+  ],
+  "stars": 1767,
+  "forks": 158,
+  "downloads": 5791764,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "cargo-lock",
+      "10.1.0"
+    ],
+    [
+      "semver",
+      "1.0.27"
+    ],
+    [
+      "serde",
+      "1.0.228"
+    ],
+    [
+      "serde_core",
+      "1.0.228"
+    ],
+    [
+      "serde_derive",
+      "1.0.228"
+    ],
+    [
+      "proc-macro2",
+      "1.0.103"
+    ],
+    [
+      "unicode-ident",
+      "1.0.22"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ],
+    [
+      "toml",
+      "0.9.8"
+    ],
+    [
+      "serde_spanned",
+      "1.0.3"
+    ],
+    [
+      "toml_datetime",
+      "0.7.3"
+    ],
+    [
+      "url",
+      "2.5.7"
+    ],
+    [
+      "form_urlencoded",
+      "1.2.2"
+    ],
+    [
+      "percent-encoding",
+      "2.3.2"
+    ],
+    [
+      "idna",
+      "1.1.0"
+    ],
+    [
+      "idna_adapter",
+      "1.2.1"
+    ],
+    [
+      "icu_normalizer",
+      "2.1.1"
+    ],
+    [
+      "icu_collections",
+      "2.1.1"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "potential_utf",
+      "0.1.4"
+    ],
+    [
+      "yoke",
+      "0.8.1"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.1"
+    ],
+    [
+      "zerofrom",
+      "0.1.6"
+    ],
+    [
+      "zerovec",
+      "0.11.5"
+    ],
+    [
+      "icu_provider",
+      "2.1.1"
+    ],
+    [
+      "icu_locale_core",
+      "2.1.1"
+    ],
+    [
+      "litemap",
+      "0.8.1"
+    ],
+    [
+      "tinystr",
+      "0.8.2"
+    ],
+    [
+      "writeable",
+      "0.6.2"
+    ],
+    [
+      "smallvec",
+      "1.15.1"
+    ],
+    [
+      "icu_properties",
+      "2.1.1"
+    ],
+    [
+      "zerotrie",
+      "0.2.3"
+    ],
+    [
+      "utf8_iter",
+      "1.0.4"
+    ],
+    [
+      "cvss",
+      "2.1.1"
+    ],
+    [
+      "fs-err",
+      "3.1.3"
+    ],
+    [
+      "platforms",
+      "3.7.0"
+    ],
+    [
+      "thiserror",
+      "2.0.17"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.17"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 41,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 6.67
+  }
+}

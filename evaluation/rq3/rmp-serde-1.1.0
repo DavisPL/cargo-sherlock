@@ -1,0 +1,24 @@
+Solving for required assumptions to trust rmp-serde-1.1.0...
+╭────────────────────── Analysis Report for rmp-serde-1.1.0 ───────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                           │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 21                       │
+│  Distrust Cost (higher is better): ███████████████░░░░░ 77                       │
+│  Severity Label:                   LOW_SEVERITY                                  │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────────────────
+╭───────────────────────── Assumptions for Trusting ──────────────────────────╮     
+│                                                                             │     
+│  • rmp-serde-1.1.0 has many stars and forks: 1 cost                         │     
+│  • rmp-serde-1.1.0 having many stars and forks implies it is safe: 20 cost  │     
+│                                                                             │     
+╰─────────────────────────────────────────────────────────────────────────────╯     
+╭──────────────────────── Assumptions for Distrusting ────────────────────────╮     
+│                                                                             │     
+│  • rmp-serde-1.1.0 has many side effects: 17 cost                           │     
+│  • rmp-serde-1.1.0 has many side effects implies it is unsafe: 60 cost      │     
+│                                                                             │     
+╰─────────────────────────────────────────────────────────────────────────────╯     
+
+                                             
+  Details: /logs/cache/rmp-serde-1.1.0.json  
+                                             

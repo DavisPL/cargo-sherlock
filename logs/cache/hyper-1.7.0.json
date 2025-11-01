@@ -1,0 +1,155 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": [
+    "INFOUnsound",
+    "Vulnerability"
+  ],
+  "developers": [
+    "seanmonstar",
+    "github:hyperium:core"
+  ],
+  "stars": 15635,
+  "forks": 1683,
+  "downloads": 420539451,
+  "num_side_effects": 61,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "1.0.0-rc.3 -> 1.0.1",
+      "version": "",
+      "notes": "Quite a few changes here relative to the last RC but everything is related to\\nrefactorings and such. No new fundamental addition of functionality or\\nsubstantially new unsafe code.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "safe-to-run",
+      "delta": "",
+      "version": "0.14.20",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.14.27",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "ub-risk-4",
+      "delta": "",
+      "version": "1.0.1",
+      "notes": "Reviewed in CL 588384310\\nIssues found:\\n - https://github.com/hyperium/hyper/pull/3498\\n - https://github.com/hyperium/hyper/issues/3556\\n - https://github.com/hyperium/hyper/issues/3500\\n(probably not a real issue)\\n - https://github.com/hyperium/hyper/issues/3554 (documentation)\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.14.19 -> 0.14.20",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.14.20 -> 0.14.22",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.14.22 -> 0.14.23",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-run",
+      "delta": "0.14.23 -> 0.14.24",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.23 -> 0.14.24",
+      "version": "",
+      "notes": "Fixes a bug where memory was reserved based on an adversary-controllable size, before the\\ncorresponding data was received.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.25 -> 0.14.26",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.26 -> 0.14.27",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.27 -> 0.14.28",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.14.30 -> 0.14.32",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "bytes",
+      "1.10.1"
+    ],
+    [
+      "http",
+      "1.3.1"
+    ],
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "http-body",
+      "1.0.1"
+    ],
+    [
+      "tokio",
+      "1.48.0"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 27,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 3,
+    "failed": 4,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.2
+  }
+}

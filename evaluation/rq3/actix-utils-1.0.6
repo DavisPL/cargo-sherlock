@@ -1,0 +1,23 @@
+Solving for required assumptions to trust actix-utils-1.0.6...
+╭───────────────────── Analysis Report for actix-utils-1.0.6 ──────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                           │
+│  Trust Cost (lower is better):     █████░░░░░░░░░░░░░░░ 26                       │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                       │
+│  Severity Label:                   LOW_SEVERITY                                  │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────────────────
+╭─────────────────────── Assumptions for Trusting ────────────────────────╮         
+│                                                                         │         
+│  • actix-utils-1.0.6 has many downloads: 1 cost                         │         
+│  • actix-utils-1.0.6 having many downloads implies it is safe: 25 cost  │         
+│                                                                         │         
+╰─────────────────────────────────────────────────────────────────────────╯         
+╭────────────────────── Assumptions for Distrusting ──────────────────────╮         
+│                                                                         │         
+│  • actix-utils-1.0.6 failing a Miri test implies it is unsafe: 50 cost  │         
+│                                                                         │         
+╰─────────────────────────────────────────────────────────────────────────╯         
+
+                                               
+  Details: /logs/cache/actix-utils-1.0.6.json  
+                                               

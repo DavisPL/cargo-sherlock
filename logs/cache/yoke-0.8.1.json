@@ -1,0 +1,100 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Manishearth",
+    "github:unicode-org:icu4x-release"
+  ],
+  "stars": 1644,
+  "forks": 231,
+  "downloads": 138578692,
+  "num_side_effects": 47,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.7.4 -> 0.7.5",
+      "version": "",
+      "notes": "Good safety comments."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.7.5",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.7.5",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"does-not-implement-crypto\", \"ub-risk-2\",]",
+      "delta": "0.7.5 -> 0.8.0",
+      "version": "",
+      "notes": "Cleaning up a previous hack for adding trait bounds to yoke objects. Unsafe changes:\\n- deleting the hack itself removes a lot of unsafe use required in the hack's implementation\\n- changes another unsafe use to remove the use of the hack, now that it's no longer needed\\n\\n\\nSee https://crrev.com/c/6323349 for more audit notes.\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-2\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.7.4",
+      "notes": "Reviewed in https://github.com/unicode-org/icu4x/pull/5046\\nReview performed as PR: https://github.com/unicode-org/icu4x/pull/5046. Minor docs improvements, plus known currently-unsolvable issue around potential future noalias UB (https://github.com/unicode-org/icu4x/issues/2095)\\n"
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-2\", \"does-not-implement-crypto\",]",
+      "delta": "0.7.4 -> 0.7.5",
+      "version": "",
+      "notes": "Reviewed in CL 700087030\\nPatches from last review all applied\\n"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.7.1",
+      "notes": "This crate is for zero-copy serialization for ICU4X data structure, and maintained by ICU4X team. Since this uses unsafe block for serialization, I audited code."
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.7.1 -> 0.7.3",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.7.3 -> 0.7.4",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "stable_deref_trait",
+      "1.2.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 40,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 43,
+    "failed": 5,
+    "ignored": 5,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.79
+  }
+}

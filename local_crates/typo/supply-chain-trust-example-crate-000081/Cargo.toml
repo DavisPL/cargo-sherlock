@@ -1,0 +1,76 @@
+[[test]]
+name = "channel"
+path = "tests/channel.rs"
+
+[[test]]
+name = "mpsc"
+path = "tests/mpsc.rs"
+
+[[test]]
+name = "mpsc-close"
+path = "tests/mpsc-close.rs"
+
+[[test]]
+name = "mpsc-size_hint"
+path = "tests/mpsc-size_hint.rs"
+
+[[test]]
+name = "oneshot"
+path = "tests/oneshot.rs"
+
+[[bench]]
+name = "sync_mpsc"
+path = "benches/sync_mpsc.rs"
+
+[package]
+edition = "2018"
+rust-version = "1.56"
+name = "supply-chain-trust-example-crate-000081"
+version = "0.3.31"
+build = false
+autobins = false
+autoexamples = false
+autotests = false
+autobenches = false
+description = "Channels for asynchronous communication using futures-rs.\n"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+authors = [ "Anonymous",]
+
+[lib]
+name = "futures_channel"
+path = "src/lib.rs"
+
+[dev-dependencies]
+
+[features]
+alloc = [ "futures-core/alloc",]
+cfg-target-has-atomic = []
+default = [ "std",]
+sink = [ "futures-sink",]
+std = [ "alloc", "futures-core/std",]
+unstable = []
+
+[dependencies.futures-core]
+version = "0.3.31"
+default-features = false
+
+[dependencies.futures-sink]
+version = "0.3.31"
+optional = true
+default-features = false
+
+[lints.rust]
+missing_debug_implementations = "warn"
+rust_2018_idioms = "warn"
+single_use_lifetimes = "warn"
+unreachable_pub = "warn"
+
+[lints.rust.unexpected_cfgs]
+level = "warn"
+priority = 0
+check-cfg = [ "cfg(futures_sanitizer)",]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = [ "--cfg", "docsrs",]

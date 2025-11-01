@@ -1,0 +1,23 @@
+Solving for required assumptions to trust aes-ctr-0.99.99...
+╭────────────────────── Analysis Report for aes-ctr-0.99.99 ───────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                           │
+│  Trust Cost (lower is better):     ██░░░░░░░░░░░░░░░░░░ 10                       │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                       │
+│  Severity Label:                   SAFE                                          │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────────────────
+╭──────────────────────────── Assumptions for Trusting ────────────────────────────╮
+│                                                                                  │
+│  • aes-ctr-0.99.99 having no side effects and having all safe dependencies       │
+│  implies it is safe: 10 cost                                                     │
+│                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────── Assumptions for Distrusting ───────────────────────────╮
+│                                                                                  │
+│  • aes-ctr-0.99.99 failing a Miri test implies it is unsafe: 50 cost             │
+│                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+
+                                             
+  Details: /logs/cache/aes-ctr-0.99.99.json  
+                                             

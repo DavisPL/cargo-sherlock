@@ -1,0 +1,47 @@
+[package]
+edition = "2021"
+rust-version = "1.56"
+name = "supply-chain-trust-example-crate-000009"
+version = "1.0.228"
+authors = [ "Anonymous",]
+build = "build.rs"
+autolib = false
+autobins = false
+autoexamples = false
+autotests = false
+autobenches = false
+description = "A generic serialization/deserialization framework"
+documentation = "https://docs.rs/serde"
+readme = "crates-io.md"
+keywords = [ "serde", "serialization", "no_std",]
+categories = [ "encoding", "no-std", "no-std::no-alloc",]
+license = "MIT OR Apache-2.0"
+
+[features]
+alloc = [ "serde_core/alloc",]
+default = [ "std",]
+derive = [ "serde_derive",]
+rc = [ "serde_core/rc",]
+std = [ "serde_core/std",]
+unstable = [ "serde_core/unstable",]
+
+[lib]
+name = "serde"
+path = "src/lib.rs"
+
+[dependencies.serde_core]
+version = "=1.0.228"
+features = [ "result",]
+default-features = false
+
+[dependencies.serde_derive]
+version = "1"
+optional = true
+
+[package.metadata.playground]
+features = [ "derive", "rc",]
+
+[package.metadata.docs.rs]
+features = [ "derive", "rc", "unstable",]
+targets = [ "x86_64-unknown-linux-gnu",]
+rustdoc-args = [ "--generate-link-to-definition", "--generate-macro-expansion", "--extern-html-root-url=core=https://doc.rust-lang.org", "--extern-html-root-url=alloc=https://doc.rust-lang.org", "--extern-html-root-url=std=https://doc.rust-lang.org",]

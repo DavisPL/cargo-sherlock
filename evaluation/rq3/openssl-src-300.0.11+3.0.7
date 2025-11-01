@@ -1,0 +1,23 @@
+Solving for required assumptions to trust openssl-src-300.0.11+3.0.7...
+╭───────────────── Analysis Report for openssl-src-300.0.11+3.0.7 ─────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                           │
+│  Trust Cost (lower is better):     █████░░░░░░░░░░░░░░░ 26                       │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                       │
+│  Severity Label:                   LOW_SEVERITY                                  │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────────────────
+╭──────────────────────────── Assumptions for Trusting ────────────────────────────╮
+│                                                                                  │
+│  • openssl-src-300.0.11+3.0.7 has many downloads: 1 cost                         │
+│  • openssl-src-300.0.11+3.0.7 having many downloads implies it is safe: 25 cost  │
+│                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────── Assumptions for Distrusting ───────────────────────────╮
+│                                                                                  │
+│  • openssl-src-300.0.11+3.0.7 failing a Miri test implies it is unsafe: 50 cost  │
+│                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+
+                                                        
+  Details: /logs/cache/openssl-src-300.0.11+3.0.7.json  
+                                                        

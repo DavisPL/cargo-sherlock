@@ -1,39 +1,24 @@
-Solving for required assumptions to trust windows-sys-0.59.0...
-+------------------------------------------------------------+
-|           Analysis Report for windows-sys-0.59.0           |
-+------------------------------------------------------------+
+Solving for required assumptions to trust windows-sys-0.61.2...
+╭────────────────────── Analysis Report for windows-sys-0.61.2 ──────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                             │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 21                         │
+│  Distrust Cost (higher is better): ████████████░░░░░░░░ 61                         │
+│  Severity Label:                   LOW_SEVERITY                                    │
+╰────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────
+╭─────────────────────────── Assumptions for Trusting ───────────────────────────╮    
+│                                                                                │    
+│  • windows-sys-0.61.2 has many stars and forks: 1 cost                         │    
+│  • windows-sys-0.61.2 having many stars and forks implies it is safe: 20 cost  │    
+│                                                                                │    
+╰────────────────────────────────────────────────────────────────────────────────╯    
+╭───────────────────────── Assumptions for Distrusting ──────────────────────────╮    
+│                                                                                │    
+│  • windows-sys-0.61.2 has many side effects: 1 cost                            │    
+│  • windows-sys-0.61.2 has many side effects implies it is unsafe: 60 cost      │    
+│                                                                                │    
+╰────────────────────────────────────────────────────────────────────────────────╯    
 
-Assumptions Summary:
-Score Range: 0 (Min) - 100 (Max)
-
-Trust Cost (lower is better): 20 cost
-Assumptions for Trusting:
-  • windows-sys-0.59.0 has many downloads: 0 cost
-  • windows-sys-0.59.0 has many stars and forks: 0 cost
-  • windows-sys-0.59.0 having many stars and forks implies it is safe: 20 cost
-  • windows-targets-0.53.0 has many downloads: 0 cost
-  • windows-targets-0.53.0 has many stars and forks: 0 cost
-  • windows_aarch64_gnullvm-0.53.0 has many downloads: 0 cost
-  • windows_aarch64_gnullvm-0.53.0 has many stars and forks: 0 cost
-  • windows_aarch64_msvc-0.53.0 has many downloads: 0 cost
-  • windows_aarch64_msvc-0.53.0 has many stars and forks: 0 cost
-  • windows_i686_gnu-0.53.0 has many downloads: 0 cost
-  • windows_i686_gnu-0.53.0 has many stars and forks: 0 cost
-  • windows_i686_gnullvm-0.53.0 has many stars and forks: 0 cost
-  • windows_i686_msvc-0.53.0 has many downloads: 0 cost
-  • windows_i686_msvc-0.53.0 has many stars and forks: 0 cost
-  • windows_x86_64_gnu-0.53.0 has many downloads: 0 cost
-  • windows_x86_64_gnullvm-0.53.0 has many downloads: 0 cost
-  • windows_x86_64_gnullvm-0.53.0 has many stars and forks: 0 cost
-  • windows_x86_64_msvc-0.53.0 has many downloads: 0 cost
-  • windows_x86_64_msvc-0.53.0 has many stars and forks: 0 cost
-
-Distrust Cost (higher is better): 100 cost
-Assumptions for Distrusting:
-  • windows-sys-0.59.0 is unsafe: 100 cost
-
-Severity Label: SAFE
-
-Full details about the crate can be found at: /logs/cache/windows-sys-0.59.0.json
-+------------------------------------------------------------+
-
+                                                
+  Details: /logs/cache/windows-sys-0.61.2.json  
+                                                

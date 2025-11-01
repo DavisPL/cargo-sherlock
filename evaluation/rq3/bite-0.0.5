@@ -1,0 +1,23 @@
+Solving for required assumptions to trust bite-0.0.5...
+╭───────────────────────── Analysis Report for bite-0.0.5 ─────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                           │
+│  Trust Cost (lower is better):     ████████░░░░░░░░░░░░ 41                       │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                       │
+│  Severity Label:                   MEDIUM_SEVERITY                               │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────────────────
+╭──────────────────── Assumptions for Trusting ────────────────────╮                
+│                                                                  │                
+│  • bite-0.0.5 has many downloads: 16 cost                        │                
+│  • bite-0.0.5 having many downloads implies it is safe: 25 cost  │                
+│                                                                  │                
+╰──────────────────────────────────────────────────────────────────╯                
+╭────────────────── Assumptions for Distrusting ───────────────────╮                
+│                                                                  │                
+│  • bite-0.0.5 failing a Miri test implies it is unsafe: 50 cost  │                
+│                                                                  │                
+╰──────────────────────────────────────────────────────────────────╯                
+
+                                        
+  Details: /logs/cache/bite-0.0.5.json  
+                                        

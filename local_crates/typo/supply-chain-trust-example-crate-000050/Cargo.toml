@@ -1,0 +1,37 @@
+[[test]]
+name = "mod"
+path = "tests/mod.rs"
+
+[package]
+edition = "2024"
+rust-version = "1.85"
+name = "supply-chain-trust-example-crate-000050"
+version = "0.11.0-rc.5"
+authors = [ "Anonymous",]
+build = false
+autolib = false
+autobins = false
+autoexamples = false
+autotests = false
+autobenches = false
+description = "Buffer type for block processing of data"
+documentation = "https://docs.rs/block-buffer"
+readme = "README.md"
+keywords = [ "block", "buffer",]
+categories = [ "cryptography", "no-std",]
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "block_buffer"
+path = "src/lib.rs"
+
+[dependencies.hybrid-array]
+version = "0.4"
+
+[dependencies.zeroize]
+version = "1.4"
+optional = true
+default-features = false
+
+[dev-dependencies.hex-literal]
+version = "1"

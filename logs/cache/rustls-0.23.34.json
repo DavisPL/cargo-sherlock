@@ -1,0 +1,86 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "ctz",
+    "djc",
+    "github:rustls:publishers"
+  ],
+  "stars": 7046,
+  "forks": 755,
+  "downloads": 400209800,
+  "num_side_effects": 46,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.21.0",
+      "notes": "no unsafe code, ambient capabilities only used in tests"
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.21.0 -> 0.21.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.22.4 -> 0.23.7",
+      "version": "",
+      "notes": "No new unsafe code."
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.21.8 -> 0.21.12",
+      "version": "",
+      "notes": "A comment in get_sni_extension asks whether the behaviour of parsing an IPv4 or IPv6 address\\nin a host_name field of a server_name extension, but then ignoring the extension (because\\n'Literal IPv4 and IPv6 addresses are not permitted in \\\"HostName\\\"'), as the server, is\\ncompliant with RFC 6066. As an original author of RFC 3546 which has very similar wording,\\nI can speak to the intent: yes this is fine. The client is clearly nonconformant in this\\ncase, but the server isn't.\\n\\nRFC 3546 said \\\"If the server understood the client hello extension but does not recognize\\nthe server name, it SHOULD send an \\\"unrecognized_name\\\" alert (which MAY be fatal).\\\"\\nThis wording was preserved in RFC 5746, and then updated in RFC 6066 to:\\n\\n   If the server understood the ClientHello extension but\\n   does not recognize the server name, the server SHOULD take one of two\\n   actions: either abort the handshake by sending a fatal-level\\n   unrecognized_name(112) alert or continue the handshake.  It is NOT\\n   RECOMMENDED to send a warning-level unrecognized_name(112) alert,\\n   because the client's behavior in response to warning-level alerts is\\n   unpredictable.  If there is a mismatch between the server name used\\n   by the client application and the server name of the credential\\n   chosen by the server, this mismatch will become apparent when the\\n   client application performs the server endpoint identification, at\\n   which point the client application will have to decide whether to\\n   proceed with the communication.\\n\\nTo me it's clear that it is reasonable to consider an IP address as a name that the\\nserver does not recognize. And so the server SHOULD *either* send a fatal unrecognized_name\\nalert, *or* continue the handshake and let the client application decide when it \\\"performs\\nthe server endpoint identification\\\". There's no conformance requirement for the server to\\ntake any notice of a host_name that is \\\"not permitted\\\". (It would have been clearer to\\nexpress this by specifying the allowed client and server behaviour separately, i.e. saying\\nthat the client MUST NOT send an IP address in host_name, and then explicitly specifying\\nthe server behaviour if it does so anyway. That's how I would write it now. But honestly\\nthis extension was one of the most bikeshedded parts of RFC 3546, to a much greater extent\\nthan I'd anticipated, and I was tired.)\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "once_cell",
+      "1.21.3"
+    ],
+    [
+      "rustls-pki-types",
+      "1.13.0"
+    ],
+    [
+      "rustls-webpki",
+      "0.103.8"
+    ],
+    [
+      "untrusted",
+      "0.9.0"
+    ],
+    [
+      "subtle",
+      "2.6.1"
+    ],
+    [
+      "zeroize",
+      "1.8.2"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 39,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

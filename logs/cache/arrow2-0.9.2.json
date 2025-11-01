@@ -1,0 +1,53 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "Vulnerability",
+  "developers": [
+    "houqp",
+    "ritchie46",
+    "jorgecarleitao"
+  ],
+  "stars": 1067,
+  "forks": 227,
+  "downloads": 4746665,
+  "num_side_effects": 476,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bytemuck",
+      "1.24.0"
+    ],
+    [
+      "chrono",
+      "0.4.42"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "hash_hasher",
+      "2.0.4"
+    ],
+    [
+      "simdutf8",
+      "0.1.5"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 331,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 19,
+    "failed": 2,
+    "ignored": 1,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.94
+  }
+}

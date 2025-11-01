@@ -1,0 +1,23 @@
+Solving for required assumptions to trust chan-0.1.23...
+╭──────────────────────── Analysis Report for chan-0.1.23 ─────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                           │
+│  Trust Cost (lower is better):     ███████░░░░░░░░░░░░░ 35                       │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                       │
+│  Severity Label:                   MEDIUM_SEVERITY                               │
+╰──────────────────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────────────────
+╭──────────────────── Assumptions for Trusting ─────────────────────╮               
+│                                                                   │               
+│  • chan-0.1.23 has many downloads: 10 cost                        │               
+│  • chan-0.1.23 having many downloads implies it is safe: 25 cost  │               
+│                                                                   │               
+╰───────────────────────────────────────────────────────────────────╯               
+╭─────────────────── Assumptions for Distrusting ───────────────────╮               
+│                                                                   │               
+│  • chan-0.1.23 failing a Miri test implies it is unsafe: 50 cost  │               
+│                                                                   │               
+╰───────────────────────────────────────────────────────────────────╯               
+
+                                         
+  Details: /logs/cache/chan-0.1.23.json  
+                                         

@@ -1,0 +1,123 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "sfackler",
+    "Thomasdezeeuw",
+    "github:tokio-rs:socket2"
+  ],
+  "stars": 804,
+  "forks": 273,
+  "downloads": 497631342,
+  "num_side_effects": 201,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.7 -> 0.4.9",
+      "version": "",
+      "notes": "Minor OS compat updates but otherwise nothing major here."
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.9 -> 0.4.4",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "bytecode-alliance",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.7 -> 0.6.0",
+      "version": "",
+      "notes": "Lots of cfg changes and such but nothing out of the ordinary."
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-run\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.4.9",
+      "notes": ""
+    },
+    {
+      "organization": "google",
+      "criteria": "[ \"safe-to-deploy\", \"ub-risk-2\",]",
+      "delta": "0.4.4 -> 0.5.5",
+      "version": "",
+      "notes": "Reviewed at https://fxrev.dev/946307"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.4 -> 0.4.7",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.5 -> 0.5.7",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.4.9 -> 0.4.10",
+      "version": "",
+      "notes": "Adds support for ESP-IDF and Sony Vita targets. New `unsafe` blocks are for a\\nVita-specific `libc` call to `setsockopt` for non-blocking behaviour.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.4 -> 0.5.5",
+      "version": "",
+      "notes": "Adds support for Sony Vita targets. New `unsafe` blocks are for Vita-specific\\n`libc` calls to `getsockopt` and `setsockopt` for non-blocking behaviour.\\n"
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.5 -> 0.5.6",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.5.6 -> 0.5.7",
+      "version": "",
+      "notes": "The new uses of unsafe to access getsockopt/setsockopt look reasonable."
+    }
+  ],
+  "dependencies": [
+    [
+      "libc",
+      "0.2.177"
+    ],
+    [
+      "windows-sys",
+      "0.61.2"
+    ],
+    [
+      "windows-link",
+      "0.2.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 157,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 3,
+    "failed": 9,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.57
+  }
+}

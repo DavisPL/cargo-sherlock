@@ -35,16 +35,21 @@ def main():
         parser.print_help()
         sys.exit(0)
 
-    if not args.path:
-        # Fetch the latest version if not provided
-        if args.version is None:
+    
+    # Fetch the latest version if not provided
+    if args.version is None:
+        if args.path is None:
             print(f"Version not specified, fetching the Latest version for analysis.")
             args.version = get_latest_version(args.crate_name)
             print(f"Latest version of {args.crate_name} is {args.version}.")
         else:
+            print(f"Version not specified, assuming version to be 1.0.0 for local crate analysis.")
+            args.version = "1.0.0"
+    else:
+        if args.path is None: # we want to verify version only for published crates
             if not verify_version(args.crate_name, args.version):
                 sys.exit(1)
-
+           
     # Handle the 'log' subcommand
     if args.command == 'log':
         if args.update:
