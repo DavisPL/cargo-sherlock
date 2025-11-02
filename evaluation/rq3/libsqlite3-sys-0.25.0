@@ -1,24 +1,23 @@
 Solving for required assumptions to trust libsqlite3-sys-0.25.0...
-╭─────────────────── Analysis Report for libsqlite3-sys-0.25.0 ────────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)                           │
-│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 21                       │
-│  Distrust Cost (higher is better): █████████████████░░░ 85                       │
-│  Severity Label:                   LOW_SEVERITY                                  │
-╰──────────────────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────────────────
-╭──────────────────────────── Assumptions for Trusting ────────────────────────────╮
-│                                                                                  │
-│  • libsqlite3-sys-0.25.0 has many stars and forks: 1 cost                        │
-│  • libsqlite3-sys-0.25.0 having many stars and forks implies it is safe: 20      │
-│  cost                                                                            │
-│                                                                                  │
-╰──────────────────────────────────────────────────────────────────────────────────╯
-╭────────────────────────── Assumptions for Distrusting ───────────────────────────╮
-│                                                                                  │
-│  • libsqlite3-sys-0.25.0 has many side effects: 25 cost                          │
-│  • libsqlite3-sys-0.25.0 has many side effects implies it is unsafe: 60 cost     │
-│                                                                                  │
-╰──────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Analysis Report for libsqlite3-sys-0.25.0 ─────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                             │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 21                         │
+│  Distrust Cost (higher is better): █████████████████░░░ 85                         │
+│  Severity Label:                   LOW_SEVERITY                                    │
+╰────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────
+╭──────────────────────────── Assumptions for Trusting ─────────────────────────────╮ 
+│                                                                                   │ 
+│  • libsqlite3-sys-0.25.0 has many stars and forks: 1 cost                         │ 
+│  • libsqlite3-sys-0.25.0 having many stars and forks implies it is safe: 20 cost  │ 
+│                                                                                   │ 
+╰───────────────────────────────────────────────────────────────────────────────────╯ 
+╭─────────────────────────── Assumptions for Distrusting ───────────────────────────╮ 
+│                                                                                   │ 
+│  • libsqlite3-sys-0.25.0 has many side effects: 25 cost                           │ 
+│  • libsqlite3-sys-0.25.0 has many side effects implies it is unsafe: 60 cost      │ 
+│                                                                                   │ 
+╰───────────────────────────────────────────────────────────────────────────────────╯ 
 
                                                    
   Details: /logs/cache/libsqlite3-sys-0.25.0.json  

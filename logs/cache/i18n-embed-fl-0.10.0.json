@@ -1,0 +1,183 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "kellpossible"
+  ],
+  "stars": 136,
+  "forks": 36,
+  "downloads": 1424682,
+  "num_side_effects": 3,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.9.2 -> 0.9.3",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "find-crate",
+      "0.6.3"
+    ],
+    [
+      "toml",
+      "0.9.8"
+    ],
+    [
+      "serde_spanned",
+      "1.0.3"
+    ],
+    [
+      "toml_datetime",
+      "0.7.3"
+    ],
+    [
+      "fluent",
+      "0.17.0"
+    ],
+    [
+      "fluent-bundle",
+      "0.16.0"
+    ],
+    [
+      "fluent-langneg",
+      "0.14.2"
+    ],
+    [
+      "icu_locid",
+      "2.0.0"
+    ],
+    [
+      "fluent-syntax",
+      "0.12.0"
+    ],
+    [
+      "memchr",
+      "2.7.6"
+    ],
+    [
+      "thiserror",
+      "2.0.17"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.17"
+    ],
+    [
+      "proc-macro2",
+      "1.0.103"
+    ],
+    [
+      "unicode-ident",
+      "1.0.22"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ],
+    [
+      "intl-memoizer",
+      "0.5.3"
+    ],
+    [
+      "type-map",
+      "0.5.1"
+    ],
+    [
+      "rustc-hash",
+      "2.1.1"
+    ],
+    [
+      "unic-langid",
+      "0.9.6"
+    ],
+    [
+      "unic-langid-impl",
+      "0.9.6"
+    ],
+    [
+      "tinystr",
+      "0.8.2"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "intl_pluralrules",
+      "7.0.2"
+    ],
+    [
+      "self_cell",
+      "1.2.1"
+    ],
+    [
+      "smallvec",
+      "1.15.1"
+    ],
+    [
+      "i18n-config",
+      "0.4.8"
+    ],
+    [
+      "basic-toml",
+      "0.1.10"
+    ],
+    [
+      "serde",
+      "1.0.228"
+    ],
+    [
+      "serde_core",
+      "1.0.228"
+    ],
+    [
+      "serde_derive",
+      "1.0.228"
+    ],
+    [
+      "log",
+      "0.4.28"
+    ],
+    [
+      "i18n-embed",
+      "0.16.0"
+    ],
+    [
+      "proc-macro-error2",
+      "2.0.1"
+    ],
+    [
+      "proc-macro-error-attr2",
+      "2.0.0"
+    ],
+    [
+      "strsim",
+      "0.11.1"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 3,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

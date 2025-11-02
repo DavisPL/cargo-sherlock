@@ -7,13 +7,9 @@
   "developers": [
     "m4b"
   ],
-  "stars": 1263,
-  "forks": 166,
-<<<<<<< HEAD
-  "downloads": 17018515,
-=======
-  "downloads": 17015729,
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+  "stars": 1373,
+  "forks": 177,
+  "downloads": 27576063,
   "num_side_effects": 4,
   "failed_rudra": false,
   "audits": [
@@ -88,7 +84,7 @@
     ],
     [
       "scroll",
-      "0.12.0"
+      "0.13.0"
     ]
   ],
   "passed_audit": false,
@@ -98,11 +94,7 @@
   "miri_details": {
     "status": "crash",
     "passed": 0,
-<<<<<<< HEAD
-    "failed": 4,
-=======
-    "failed": 1,
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+    "failed": 17,
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,

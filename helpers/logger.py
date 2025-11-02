@@ -70,6 +70,8 @@ def get_stars_and_forks(crate_name: str , local) -> dict | None:
         data = response.json()
         repository_url = data['crate']['repository']
         if repository_url == None: 
+            repository_url = ""
+        else:
             repository_url = repository_url.rstrip('.git')
 
     regex = r"https:\/\/github\.com\/([^\/]+)\/([^\/]+)";

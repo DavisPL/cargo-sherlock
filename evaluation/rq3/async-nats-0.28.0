@@ -1,0 +1,23 @@
+Solving for required assumptions to trust async-nats-0.28.0...
+╭────────────────────── Analysis Report for async-nats-0.28.0 ───────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                             │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 22                         │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                         │
+│  Severity Label:                   LOW_SEVERITY                                    │
+╰────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────
+╭────────────────────────── Assumptions for Trusting ───────────────────────────╮     
+│                                                                               │     
+│  • async-nats-0.28.0 has many stars and forks: 2 cost                         │     
+│  • async-nats-0.28.0 having many stars and forks implies it is safe: 20 cost  │     
+│                                                                               │     
+╰───────────────────────────────────────────────────────────────────────────────╯     
+╭───────────────────────── Assumptions for Distrusting ─────────────────────────╮     
+│                                                                               │     
+│  • async-nats-0.28.0 failing a Miri test implies it is unsafe: 50 cost        │     
+│                                                                               │     
+╰───────────────────────────────────────────────────────────────────────────────╯     
+
+                                               
+  Details: /logs/cache/async-nats-0.28.0.json  
+                                               

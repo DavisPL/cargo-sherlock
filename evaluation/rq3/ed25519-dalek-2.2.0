@@ -1,0 +1,24 @@
+Solving for required assumptions to trust ed25519-dalek-2.2.0...
+╭───────────────────── Analysis Report for ed25519-dalek-2.2.0 ──────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                             │
+│  Trust Cost (lower is better):     █████░░░░░░░░░░░░░░░ 23                         │
+│  Distrust Cost (higher is better): ██████████████████░░ 90                         │
+│  Severity Label:                   LOW_SEVERITY                                    │
+╰────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────
+╭─────────────────────────── Assumptions for Trusting ────────────────────────────╮   
+│                                                                                 │   
+│  • ed25519-dalek-2.2.0 has many stars and forks: 3 cost                         │   
+│  • ed25519-dalek-2.2.0 having many stars and forks implies it is safe: 20 cost  │   
+│                                                                                 │   
+╰─────────────────────────────────────────────────────────────────────────────────╯   
+╭────────────────────────── Assumptions for Distrusting ──────────────────────────╮   
+│                                                                                 │   
+│  • ed25519-dalek-2.2.0 has many side effects: 30 cost                           │   
+│  • ed25519-dalek-2.2.0 has many side effects implies it is unsafe: 60 cost      │   
+│                                                                                 │   
+╰─────────────────────────────────────────────────────────────────────────────────╯   
+
+                                                 
+  Details: /logs/cache/ed25519-dalek-2.2.0.json  
+                                                 

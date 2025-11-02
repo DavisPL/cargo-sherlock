@@ -1,0 +1,103 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "daxpedda",
+    "guybedford"
+  ],
+  "stars": 8593,
+  "forks": 1160,
+  "downloads": 221023345,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-1",
+      "delta": "",
+      "version": "0.2.92",
+      "notes": "Reviewed in CL 643989420"
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.99 -> 0.2.100",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.87 -> 0.2.89",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.88 -> 0.2.89",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.89 -> 0.2.92",
+      "version": "",
+      "notes": ""
+    },
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.2.100 -> 0.2.105",
+      "version": "",
+      "notes": "Change to generated code is to replace a feature flag with a cfg flag for controlling\\ndebug output.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "proc-macro2",
+      "1.0.103"
+    ],
+    [
+      "unicode-ident",
+      "1.0.22"
+    ],
+    [
+      "wasm-bindgen-macro-support",
+      "0.2.105"
+    ],
+    [
+      "bumpalo",
+      "3.19.0"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ],
+    [
+      "wasm-bindgen-shared",
+      "0.2.105"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": true,
+  "past_audit": true,
+  "miri_details": {
+    "status": "unknown",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

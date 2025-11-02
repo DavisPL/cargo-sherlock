@@ -9,12 +9,8 @@
     "danielzfranklin"
   ],
   "stars": 7,
-  "forks": 11,
-<<<<<<< HEAD
-  "downloads": 1379278,
-=======
-  "downloads": 1379541,
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+  "forks": 12,
+  "downloads": 2448342,
   "num_side_effects": 0,
   "failed_rudra": false,
   "audits": [
@@ -29,7 +25,6 @@
   "dependencies": [],
   "passed_audit": true,
   "num_unsafe_calls": 0,
-<<<<<<< HEAD
   "miri": false,
   "past_audit": false,
   "miri_details": {
@@ -39,18 +34,6 @@
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,
-    "time_seconds": 0.42
-=======
-  "miri": true,
-  "past_audit": false,
-  "miri_details": {
-    "status": "crash",
-    "passed": 0,
-    "failed": 1,
-    "ignored": 0,
-    "measured": 0,
-    "filtered_out": 0,
-    "time_seconds": 0.0
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+    "time_seconds": 0.3
   }
 }

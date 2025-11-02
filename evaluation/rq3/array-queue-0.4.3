@@ -1,1 +1,24 @@
 Solving for required assumptions to trust array-queue-0.4.3...
+╭────────────────────── Analysis Report for array-queue-0.4.3 ───────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                             │
+│  Trust Cost (lower is better):     ███████████░░░░░░░░░ 57                         │
+│  Distrust Cost (higher is better): ████████████████░░░░ 81                         │
+│  Severity Label:                   HIGH_SEVERITY                                   │
+╰────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────
+╭──────────────────────── Assumptions for Trusting ─────────────────────────╮         
+│                                                                           │         
+│  • array-queue-0.4.3 has many downloads: 32 cost                          │         
+│  • array-queue-0.4.3 having many downloads implies it is safe: 25 cost    │         
+│                                                                           │         
+╰───────────────────────────────────────────────────────────────────────────╯         
+╭─────────────────────── Assumptions for Distrusting ───────────────────────╮         
+│                                                                           │         
+│  • array-queue-0.4.3 has many side effects: 21 cost                       │         
+│  • array-queue-0.4.3 has many side effects implies it is unsafe: 60 cost  │         
+│                                                                           │         
+╰───────────────────────────────────────────────────────────────────────────╯         
+
+                                               
+  Details: /logs/cache/array-queue-0.4.3.json  
+                                               

@@ -1,0 +1,23 @@
+Solving for required assumptions to trust gitoxide-core-0.49.0...
+╭───────────────────── Analysis Report for gitoxide-core-0.49.0 ─────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                             │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 21                         │
+│  Distrust Cost (higher is better): ████████████████████ 100                        │
+│  Severity Label:                   LOW_SEVERITY                                    │
+╰────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────
+╭──────────────────────────── Assumptions for Trusting ────────────────────────────╮  
+│                                                                                  │  
+│  • gitoxide-core-0.49.0 has many stars and forks: 1 cost                         │  
+│  • gitoxide-core-0.49.0 having many stars and forks implies it is safe: 20 cost  │  
+│                                                                                  │  
+╰──────────────────────────────────────────────────────────────────────────────────╯  
+╭────────────────────────── Assumptions for Distrusting ───────────────────────────╮  
+│                                                                                  │  
+│  • gitoxide-core-0.49.0 is unsafe: 100 cost                                      │  
+│                                                                                  │  
+╰──────────────────────────────────────────────────────────────────────────────────╯  
+
+                                                  
+  Details: /logs/cache/gitoxide-core-0.49.0.json  
+                                                  

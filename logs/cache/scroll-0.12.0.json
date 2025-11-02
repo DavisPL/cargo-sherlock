@@ -7,13 +7,9 @@
   "developers": [
     "m4b"
   ],
-  "stars": 167,
-  "forks": 38,
-<<<<<<< HEAD
-  "downloads": 18810247,
-=======
-  "downloads": 18806890,
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+  "stars": 176,
+  "forks": 41,
+  "downloads": 32984447,
   "num_side_effects": 9,
   "failed_rudra": false,
   "audits": [
@@ -42,7 +38,6 @@
   "dependencies": [],
   "passed_audit": true,
   "num_unsafe_calls": 5,
-<<<<<<< HEAD
   "miri": false,
   "past_audit": true,
   "miri_details": {
@@ -52,18 +47,6 @@
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,
-    "time_seconds": 0.49
-=======
-  "miri": true,
-  "past_audit": true,
-  "miri_details": {
-    "status": "crash",
-    "passed": 0,
-    "failed": 1,
-    "ignored": 0,
-    "measured": 0,
-    "filtered_out": 0,
-    "time_seconds": 0.0
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+    "time_seconds": 0.52
   }
 }

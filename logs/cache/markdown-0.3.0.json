@@ -5,18 +5,11 @@
   "in_rust_sec": true,
   "rustsec_tag": "INFOUnmaintained",
   "developers": [
-    "johannhof",
     "wooorm"
   ],
-<<<<<<< HEAD
-  "stars": 1114,
-  "forks": 60,
-  "downloads": 1247535,
-=======
-  "stars": 1113,
-  "forks": 60,
-  "downloads": 1246777,
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+  "stars": 1351,
+  "forks": 73,
+  "downloads": 3811629,
   "num_side_effects": 4,
   "failed_rudra": false,
   "audits": [],
@@ -31,20 +24,19 @@
     ],
     [
       "regex",
-      "1.11.1"
+      "1.12.2"
     ],
     [
       "regex-automata",
-      "0.4.9"
+      "0.4.13"
     ],
     [
       "regex-syntax",
-      "0.8.5"
+      "0.8.8"
     ]
   ],
   "passed_audit": false,
   "num_unsafe_calls": 0,
-<<<<<<< HEAD
   "miri": false,
   "past_audit": false,
   "miri_details": {
@@ -55,17 +47,5 @@
     "measured": 0,
     "filtered_out": 0,
     "time_seconds": 0.03
-=======
-  "miri": true,
-  "past_audit": false,
-  "miri_details": {
-    "status": "crash",
-    "passed": 0,
-    "failed": 1,
-    "ignored": 0,
-    "measured": 0,
-    "filtered_out": 0,
-    "time_seconds": 0.0
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
   }
 }

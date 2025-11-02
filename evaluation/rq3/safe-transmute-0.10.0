@@ -1,23 +1,23 @@
 Solving for required assumptions to trust safe-transmute-0.10.0...
-╭─────────────────── Analysis Report for safe-transmute-0.10.0 ────────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)                           │
-│  Trust Cost (lower is better):     ██████░░░░░░░░░░░░░░ 32                       │
-│  Distrust Cost (higher is better): ███████████████░░░░░ 76                       │
-│  Severity Label:                   LOW_SEVERITY                                  │
-╰──────────────────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────────────────
-╭────────────────────────── Assumptions for Trusting ───────────────────────────╮   
-│                                                                               │   
-│  • safe-transmute-0.10.0 has many downloads: 7 cost                           │   
-│  • safe-transmute-0.10.0 having many downloads implies it is safe: 25 cost    │   
-│                                                                               │   
-╰───────────────────────────────────────────────────────────────────────────────╯   
-╭───────────────────────── Assumptions for Distrusting ─────────────────────────╮   
-│                                                                               │   
-│  • safe-transmute-0.10.0 has many side effects: 16 cost                       │   
-│  • safe-transmute-0.10.0 has many side effects implies it is unsafe: 60 cost  │   
-│                                                                               │   
-╰───────────────────────────────────────────────────────────────────────────────╯   
+╭──────────────────── Analysis Report for safe-transmute-0.10.0 ─────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                             │
+│  Trust Cost (lower is better):     ██████░░░░░░░░░░░░░░ 32                         │
+│  Distrust Cost (higher is better): ███████████████░░░░░ 76                         │
+│  Severity Label:                   LOW_SEVERITY                                    │
+╰────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────
+╭────────────────────────── Assumptions for Trusting ───────────────────────────╮     
+│                                                                               │     
+│  • safe-transmute-0.10.0 has many downloads: 7 cost                           │     
+│  • safe-transmute-0.10.0 having many downloads implies it is safe: 25 cost    │     
+│                                                                               │     
+╰───────────────────────────────────────────────────────────────────────────────╯     
+╭───────────────────────── Assumptions for Distrusting ─────────────────────────╮     
+│                                                                               │     
+│  • safe-transmute-0.10.0 has many side effects: 16 cost                       │     
+│  • safe-transmute-0.10.0 has many side effects implies it is unsafe: 60 cost  │     
+│                                                                               │     
+╰───────────────────────────────────────────────────────────────────────────────╯     
 
                                                    
   Details: /logs/cache/safe-transmute-0.10.0.json  

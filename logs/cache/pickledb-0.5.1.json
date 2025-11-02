@@ -7,45 +7,44 @@
   "developers": [
     "seladb"
   ],
-  "stars": 262,
+  "stars": 266,
   "forks": 30,
-<<<<<<< HEAD
-  "downloads": 942016,
-=======
-  "downloads": 942118,
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+  "downloads": 1362031,
   "num_side_effects": 8,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "serde",
-      "1.0.219"
+      "1.0.228"
+    ],
+    [
+      "serde_core",
+      "1.0.228"
     ],
     [
       "serde_derive",
-      "1.0.219"
+      "1.0.228"
     ],
     [
       "proc-macro2",
-      "1.0.94"
+      "1.0.103"
     ],
     [
       "unicode-ident",
-      "1.0.18"
+      "1.0.22"
     ],
     [
       "quote",
-      "1.0.40"
+      "1.0.41"
     ],
     [
       "syn",
-      "2.0.100"
+      "2.0.108"
     ]
   ],
   "passed_audit": false,
   "num_unsafe_calls": 0,
-<<<<<<< HEAD
   "miri": false,
   "past_audit": false,
   "miri_details": {
@@ -56,17 +55,5 @@
     "measured": 0,
     "filtered_out": 0,
     "time_seconds": 0.03
-=======
-  "miri": true,
-  "past_audit": false,
-  "miri_details": {
-    "status": "crash",
-    "passed": 0,
-    "failed": 1,
-    "ignored": 0,
-    "measured": 0,
-    "filtered_out": 0,
-    "time_seconds": 0.0
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
   }
 }

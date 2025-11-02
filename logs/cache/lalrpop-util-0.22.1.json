@@ -8,9 +8,9 @@
     "nikomatsakis",
     "github:lalrpop:publish"
   ],
-  "stars": 3189,
-  "forks": 294,
-  "downloads": 21772263,
+  "stars": 3373,
+  "forks": 299,
+  "downloads": 41006299,
   "num_side_effects": 0,
   "failed_rudra": false,
   "audits": [
@@ -25,12 +25,11 @@
   "dependencies": [
     [
       "rustversion",
-      "1.0.20"
+      "1.0.22"
     ]
   ],
   "passed_audit": false,
   "num_unsafe_calls": 0,
-<<<<<<< HEAD
   "miri": false,
   "past_audit": true,
   "miri_details": {
@@ -38,15 +37,6 @@
     "passed": 0,
     "failed": 0,
     "ignored": 2,
-=======
-  "miri": true,
-  "past_audit": true,
-  "miri_details": {
-    "status": "crash",
-    "passed": 0,
-    "failed": 1,
-    "ignored": 0,
->>>>>>> a58e3b65f6df8ef947afb2d050108505fe03b577
     "measured": 0,
     "filtered_out": 0,
     "time_seconds": 0.0

@@ -67,7 +67,7 @@ This script will run Cargo-Sherlock on serde_yaml-0.9 vs serde_yml
 
 For this we need to disable the assumptions made in Cargo-Sherlock about RustSec advisories. For this , please follow the steps below:
 1. Open the file `solver.py` in a text editor.
-2. Comment out the line 139-144. The lines are: (some more lines as well)
+2. Comment out the line 139-144 and 151-160. The lines are: (some more lines as well)
 ```Python
     if metadata["rustsec_tag"] is not None:
         uncategorized = z3.BoolVal(rustsec_label == "Uncategorized") # crate has an uncategorized label

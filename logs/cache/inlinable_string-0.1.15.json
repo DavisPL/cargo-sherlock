@@ -9,15 +9,14 @@
     "fitzgen"
   ],
   "stars": 68,
-  "forks": 11,
-  "downloads": 8307200,
+  "forks": 10,
+  "downloads": 14165034,
   "num_side_effects": 25,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [],
   "passed_audit": false,
   "num_unsafe_calls": 25,
-<<<<<<< HEAD
   "miri": false,
   "past_audit": false,
   "miri_details": {
@@ -27,18 +26,6 @@
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,
-    "time_seconds": 2.0
-=======
-  "miri": true,
-  "past_audit": false,
-  "miri_details": {
-    "status": "crash",
-    "passed": 0,
-    "failed": 1,
-    "ignored": 0,
-    "measured": 0,
-    "filtered_out": 0,
-    "time_seconds": 0.0
->>>>>>> a58e3b65f6df8ef947afb2d050108505fe03b577
+    "time_seconds": 0.94
   }
 }

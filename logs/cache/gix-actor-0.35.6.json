@@ -1,0 +1,111 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "Byron"
+  ],
+  "stars": 10484,
+  "forks": 397,
+  "downloads": 22633216,
+  "num_side_effects": 15,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "bstr",
+      "1.12.1"
+    ],
+    [
+      "memchr",
+      "2.7.6"
+    ],
+    [
+      "gix-date",
+      "0.10.7"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "jiff",
+      "0.2.15"
+    ],
+    [
+      "jiff-static",
+      "0.2.15"
+    ],
+    [
+      "proc-macro2",
+      "1.0.103"
+    ],
+    [
+      "unicode-ident",
+      "1.0.22"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ],
+    [
+      "portable-atomic",
+      "1.11.1"
+    ],
+    [
+      "portable-atomic-util",
+      "0.2.4"
+    ],
+    [
+      "smallvec",
+      "1.15.1"
+    ],
+    [
+      "thiserror",
+      "2.0.17"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.17"
+    ],
+    [
+      "gix-utils",
+      "0.3.1"
+    ],
+    [
+      "fastrand",
+      "2.3.0"
+    ],
+    [
+      "unicode-normalization",
+      "0.1.25"
+    ],
+    [
+      "tinyvec",
+      "1.10.0"
+    ],
+    [
+      "winnow",
+      "0.7.13"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 1,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 2,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

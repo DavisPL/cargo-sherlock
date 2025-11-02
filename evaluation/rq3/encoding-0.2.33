@@ -1,22 +1,22 @@
 Solving for required assumptions to trust encoding-0.2.33...
-╭────────────────────── Analysis Report for encoding-0.2.33 ───────────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)                           │
-│  Trust Cost (lower is better):     █████░░░░░░░░░░░░░░░ 27                       │
-│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                       │
-│  Severity Label:                   LOW_SEVERITY                                  │
-╰──────────────────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ───────────────────────╮           
-│                                                                       │           
-│  • encoding-0.2.33 has many downloads: 2 cost                         │           
-│  • encoding-0.2.33 having many downloads implies it is safe: 25 cost  │           
-│                                                                       │           
-╰───────────────────────────────────────────────────────────────────────╯           
-╭───────────────────── Assumptions for Distrusting ─────────────────────╮           
-│                                                                       │           
-│  • encoding-0.2.33 failing a Miri test implies it is unsafe: 50 cost  │           
-│                                                                       │           
-╰───────────────────────────────────────────────────────────────────────╯           
+╭─────────────────────── Analysis Report for encoding-0.2.33 ────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                             │
+│  Trust Cost (lower is better):     █████░░░░░░░░░░░░░░░ 27                         │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                         │
+│  Severity Label:                   LOW_SEVERITY                                    │
+╰────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ───────────────────────╮             
+│                                                                       │             
+│  • encoding-0.2.33 has many downloads: 2 cost                         │             
+│  • encoding-0.2.33 having many downloads implies it is safe: 25 cost  │             
+│                                                                       │             
+╰───────────────────────────────────────────────────────────────────────╯             
+╭───────────────────── Assumptions for Distrusting ─────────────────────╮             
+│                                                                       │             
+│  • encoding-0.2.33 failing a Miri test implies it is unsafe: 50 cost  │             
+│                                                                       │             
+╰───────────────────────────────────────────────────────────────────────╯             
 
                                              
   Details: /logs/cache/encoding-0.2.33.json  

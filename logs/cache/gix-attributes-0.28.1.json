@@ -1,0 +1,147 @@
+{
+  "rustsec_label": "Patched",
+  "in_rustsec_patched": true,
+  "in_rustsec_current": false,
+  "in_rust_sec": true,
+  "rustsec_tag": "INFOUnsound",
+  "developers": [
+    "Byron"
+  ],
+  "stars": 10485,
+  "forks": 397,
+  "downloads": 16628059,
+  "num_side_effects": 5,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "ub-risk-4",
+      "delta": "",
+      "version": "0.22.2",
+      "notes": "Reviewed in CL 653264864\\nIssues found:\\n - https://github.com/Byron/gitoxide/issues/1460\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "bstr",
+      "1.12.1"
+    ],
+    [
+      "memchr",
+      "2.7.6"
+    ],
+    [
+      "gix-glob",
+      "0.22.1"
+    ],
+    [
+      "bitflags",
+      "2.10.0"
+    ],
+    [
+      "gix-features",
+      "0.44.1"
+    ],
+    [
+      "gix-trace",
+      "0.1.15"
+    ],
+    [
+      "libc",
+      "0.2.177"
+    ],
+    [
+      "gix-path",
+      "0.10.21"
+    ],
+    [
+      "gix-validate",
+      "0.10.1"
+    ],
+    [
+      "thiserror",
+      "2.0.17"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.17"
+    ],
+    [
+      "proc-macro2",
+      "1.0.103"
+    ],
+    [
+      "unicode-ident",
+      "1.0.22"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ],
+    [
+      "home",
+      "0.5.12"
+    ],
+    [
+      "windows-sys",
+      "0.61.2"
+    ],
+    [
+      "windows-link",
+      "0.2.1"
+    ],
+    [
+      "gix-quote",
+      "0.6.1"
+    ],
+    [
+      "gix-utils",
+      "0.3.1"
+    ],
+    [
+      "fastrand",
+      "2.3.0"
+    ],
+    [
+      "unicode-normalization",
+      "0.1.25"
+    ],
+    [
+      "tinyvec",
+      "1.10.0"
+    ],
+    [
+      "kstring",
+      "2.0.2"
+    ],
+    [
+      "static_assertions",
+      "1.1.0"
+    ],
+    [
+      "smallvec",
+      "1.15.1"
+    ],
+    [
+      "unicode-bom",
+      "2.0.3"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.03
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "waywardmonkeys",
+    "zbraniecki",
+    "alerque",
+    "nordzilla",
+    "dminor",
+    "gregtatum"
+  ],
+  "stars": 1253,
+  "forks": 106,
+  "downloads": 3218578,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "",
+      "version": "0.16.0",
+      "notes": ""
+    },
+    {
+      "organization": "mozilla",
+      "criteria": "safe-to-deploy",
+      "delta": "0.16.0 -> 0.17.0",
+      "version": "",
+      "notes": "Style and dependency changes"
+    }
+  ],
+  "dependencies": [
+    [
+      "fluent-bundle",
+      "0.16.0"
+    ],
+    [
+      "fluent-langneg",
+      "0.14.2"
+    ],
+    [
+      "icu_locid",
+      "2.0.0"
+    ],
+    [
+      "fluent-syntax",
+      "0.12.0"
+    ],
+    [
+      "memchr",
+      "2.7.6"
+    ],
+    [
+      "thiserror",
+      "2.0.17"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.17"
+    ],
+    [
+      "proc-macro2",
+      "1.0.103"
+    ],
+    [
+      "unicode-ident",
+      "1.0.22"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ],
+    [
+      "intl-memoizer",
+      "0.5.3"
+    ],
+    [
+      "type-map",
+      "0.5.1"
+    ],
+    [
+      "rustc-hash",
+      "2.1.1"
+    ],
+    [
+      "unic-langid",
+      "0.9.6"
+    ],
+    [
+      "unic-langid-impl",
+      "0.9.6"
+    ],
+    [
+      "tinystr",
+      "0.8.2"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "intl_pluralrules",
+      "7.0.2"
+    ],
+    [
+      "self_cell",
+      "1.2.1"
+    ],
+    [
+      "smallvec",
+      "1.15.1"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 3.08
+  }
+}

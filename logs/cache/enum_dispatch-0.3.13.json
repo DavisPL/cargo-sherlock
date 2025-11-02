@@ -9,35 +9,34 @@
   ],
   "stars": 0,
   "forks": 0,
-  "downloads": 19755729,
+  "downloads": 32643025,
   "num_side_effects": 4,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "once_cell",
-      "1.21.1"
+      "1.21.3"
     ],
     [
       "proc-macro2",
-      "1.0.94"
+      "1.0.103"
     ],
     [
       "unicode-ident",
-      "1.0.18"
+      "1.0.22"
     ],
     [
       "quote",
-      "1.0.40"
+      "1.0.41"
     ],
     [
       "syn",
-      "2.0.100"
+      "2.0.108"
     ]
   ],
   "passed_audit": false,
   "num_unsafe_calls": 0,
-<<<<<<< HEAD
   "miri": false,
   "past_audit": false,
   "miri_details": {
@@ -47,18 +46,6 @@
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,
-    "time_seconds": 0.14
-=======
-  "miri": true,
-  "past_audit": false,
-  "miri_details": {
-    "status": "crash",
-    "passed": 0,
-    "failed": 1,
-    "ignored": 0,
-    "measured": 0,
-    "filtered_out": 0,
-    "time_seconds": 0.0
->>>>>>> a58e3b65f6df8ef947afb2d050108505fe03b577
+    "time_seconds": 0.16
   }
 }

@@ -1,0 +1,103 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "kellpossible"
+  ],
+  "stars": 136,
+  "forks": 36,
+  "downloads": 1476468,
+  "num_side_effects": 7,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "zcash",
+      "criteria": "safe-to-deploy",
+      "delta": "0.15.2 -> 0.15.3",
+      "version": "",
+      "notes": ""
+    }
+  ],
+  "dependencies": [
+    [
+      "fluent-langneg",
+      "0.14.2"
+    ],
+    [
+      "icu_locid",
+      "2.0.0"
+    ],
+    [
+      "intl-memoizer",
+      "0.5.3"
+    ],
+    [
+      "type-map",
+      "0.5.1"
+    ],
+    [
+      "rustc-hash",
+      "2.1.1"
+    ],
+    [
+      "unic-langid",
+      "0.9.6"
+    ],
+    [
+      "unic-langid-impl",
+      "0.9.6"
+    ],
+    [
+      "tinystr",
+      "0.8.2"
+    ],
+    [
+      "displaydoc",
+      "0.2.5"
+    ],
+    [
+      "proc-macro2",
+      "1.0.103"
+    ],
+    [
+      "unicode-ident",
+      "1.0.22"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ],
+    [
+      "log",
+      "0.4.28"
+    ],
+    [
+      "thiserror",
+      "2.0.17"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.17"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": true,
+  "miri_details": {
+    "status": "ok",
+    "passed": 5,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.24
+  }
+}

@@ -22,7 +22,7 @@ bitvec-0.17.3,LOW_SEVERITY
 actix-http-2.2.2,UNKNOWN
 safemem-0.3.3,SAFE
 arrayfire-3.5.0,LOW_SEVERITY
-aliyun-oss-client-0.8.0,UNKNOWN
+aliyun-oss-client-0.8.0,HIGH_SEVERITY
 security-framework-0.1.11,LOW_SEVERITY
 webpki-0.22.1,LOW_SEVERITY
 gtk-sys-0.18.2,LOW_SEVERITY
@@ -42,7 +42,7 @@ multiqueue-0.3.2,HIGH_SEVERITY
 secp256k1-0.24.1,LOW_SEVERITY
 lexical-core-0.8.5,SAFE
 pancurses-0.17.0,UNKNOWN
-wasmtime-2.0.1,UNKNOWN
+wasmtime-2.0.1,LOW_SEVERITY
 office-0.8.2,LOW_SEVERITY
 streebog-0.7.0,LOW_SEVERITY
 linea-0.9.3,HIGH_SEVERITY
@@ -56,7 +56,7 @@ lz4-sys-1.9.3,LOW_SEVERITY
 juniper-0.15.9,LOW_SEVERITY
 cache-0.2.0,HIGH_SEVERITY
 term-1.2.0,LOW_SEVERITY
-quic-p2p-0.7.1,UNKNOWN
+quic-p2p-0.7.1,HIGH_SEVERITY
 gfwx-0.2.0,CRITICAL
 alg_ds-0.3.1,HIGH_SEVERITY
 quickersort-3.0.1,MEDIUM_SEVERITY
@@ -80,7 +80,7 @@ serial-0.4.0,MEDIUM_SEVERITY
 cargo-0.92.0,UNKNOWN
 bzip2-0.4.3,LOW_SEVERITY
 atk-sys-0.18.2,LOW_SEVERITY
-cosmwasm-std-2.0.1,UNKNOWN
+cosmwasm-std-2.0.1,LOW_SEVERITY
 instant-0.1.13,SAFE
 glsl-layout-0.3.2,UNKNOWN
 gix-ref-0.43.0,LOW_SEVERITY
@@ -104,7 +104,7 @@ ordered-float-2.0.0,LOW_SEVERITY
 rusqlite-0.26.1,LOW_SEVERITY
 raw-cpuid-9.1.0,LOW_SEVERITY
 svix-1.16.0,UNKNOWN
-arrow2-0.9.2,UNKNOWN
+arrow2-0.9.2,LOW_SEVERITY
 scratchpad-1.3.0,HIGH_SEVERITY
 arc-swap-1.0.0,LOW_SEVERITY
 libp2p-deflate-0.27.0,LOW_SEVERITY
@@ -117,8 +117,8 @@ appendix-2.0.0,HIGH_SEVERITY
 spirv_headers-1.5.1,LOW_SEVERITY
 reffers-0.6.0,HIGH_SEVERITY
 crypto2-0.1.2,HIGH_SEVERITY
-libp2p-0.45.0,UNKNOWN
-buttplug-1.0.3,UNKNOWN
+libp2p-0.45.0,LOW_SEVERITY
+buttplug-1.0.3,MEDIUM_SEVERITY
 ferris-says-0.2.1,MEDIUM_SEVERITY
 age-0.11.0,UNKNOWN
 bam-0.1.2,MEDIUM_SEVERITY
@@ -176,7 +176,7 @@ branca-0.9.2,UNKNOWN
 algorithmica-0.1.10,HIGH_SEVERITY
 socket2-0.3.15,LOW_SEVERITY
 gtk-layer-shell-0.8.2,MEDIUM_SEVERITY
-fyrox-core-0.36.2,UNKNOWN
+fyrox-core-0.36.2,LOW_SEVERITY
 generational-arena-0.2.9,SAFE
 basic_dsp_matrix-0.9.1,HIGH_SEVERITY
 rosenpass-0.2.0,LOW_SEVERITY
@@ -237,7 +237,7 @@ zerovec-0.10.3,LOW_SEVERITY
 signal-simple-0.1.1,CRITICAL
 derivative-2.2.0,LOW_SEVERITY
 trillium-http-0.3.11,MEDIUM_SEVERITY
-matrix-sdk-0.6.1,UNKNOWN
+matrix-sdk-0.6.1,LOW_SEVERITY
 internment-0.4.1,LOW_SEVERITY
 columnar-0.0.19,SAFE
 tokio-1.24.1,LOW_SEVERITY
@@ -321,7 +321,7 @@ cdr-0.2.3,LOW_SEVERITY
 pqc_kyber-0.7.1,MEDIUM_SEVERITY
 trust-dns-proto-0.4.2,LOW_SEVERITY
 qcell-0.4.2,MEDIUM_SEVERITY
-ed25519-dalek-2.2.0,UNKNOWN
+ed25519-dalek-2.2.0,LOW_SEVERITY
 telemetry-0.1.3,MEDIUM_SEVERITY
 lzf-0.3.1,MEDIUM_SEVERITY
 ouch-0.2.0,UNKNOWN
@@ -408,7 +408,7 @@ safe-api-0.15.1,UNKNOWN
 anymap-0.12.1,LOW_SEVERITY
 self_cell-1.0.1,LOW_SEVERITY
 nano_arena-0.5.1,HIGH_SEVERITY
-gix-worktree-0.33.1,UNKNOWN
+gix-worktree-0.33.1,LOW_SEVERITY
 safe_bindgen-0.13.3,HIGH_SEVERITY
 hwloc-0.5.0,MEDIUM_SEVERITY
 simple-slab-0.3.2,HIGH_SEVERITY
@@ -526,7 +526,7 @@ libsbc-0.1.4,HIGH_SEVERITY
 nphysics2d-0.24.0,LOW_SEVERITY
 rage-0.11.0,UNKNOWN
 slack-morphism-1.3.1,MEDIUM_SEVERITY
-cw0-0.10.3,UNKNOWN
+cw0-0.10.3,MEDIUM_SEVERITY
 lettre-0.9.6,LOW_SEVERITY
 ordnung-0.0.1,CRITICAL
 hashconsing-1.0.1,MEDIUM_SEVERITY
@@ -571,7 +571,7 @@ tree_magic-0.2.3,MEDIUM_SEVERITY
 oqs-0.7.1,MEDIUM_SEVERITY
 cgc-0.4.0,HIGH_SEVERITY
 plutonium-0.5.2,MEDIUM_SEVERITY
-git-delta-0.8.2,UNKNOWN
+git-delta-0.8.2,LOW_SEVERITY
 nats-0.24.0,UNKNOWN
 failure-0.1.8,LOW_SEVERITY
 may_queue-0.1.7,LOW_SEVERITY

@@ -7,13 +7,9 @@
   "developers": [
     "gentoo90"
   ],
-  "stars": 176,
+  "stars": 187,
   "forks": 41,
-<<<<<<< HEAD
-  "downloads": 85143225,
-=======
-  "downloads": 85139109,
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
+  "downloads": 118877967,
   "num_side_effects": 104,
   "failed_rudra": false,
   "audits": [
@@ -28,47 +24,15 @@
   "dependencies": [
     [
       "cfg-if",
-      "1.0.0"
+      "1.0.4"
     ],
     [
       "windows-sys",
-      "0.59.0"
+      "0.61.2"
     ],
     [
-      "windows-targets",
-      "0.53.0"
-    ],
-    [
-      "windows_aarch64_gnullvm",
-      "0.53.0"
-    ],
-    [
-      "windows_aarch64_msvc",
-      "0.53.0"
-    ],
-    [
-      "windows_i686_gnu",
-      "0.53.0"
-    ],
-    [
-      "windows_i686_gnullvm",
-      "0.53.0"
-    ],
-    [
-      "windows_i686_msvc",
-      "0.53.0"
-    ],
-    [
-      "windows_x86_64_gnu",
-      "0.53.0"
-    ],
-    [
-      "windows_x86_64_gnullvm",
-      "0.53.0"
-    ],
-    [
-      "windows_x86_64_msvc",
-      "0.53.0"
+      "windows-link",
+      "0.2.1"
     ]
   ],
   "passed_audit": false,
@@ -78,11 +42,7 @@
   "miri_details": {
     "status": "crash",
     "passed": 0,
-<<<<<<< HEAD
     "failed": 2,
-=======
-    "failed": 1,
->>>>>>> a8b86a0fe7275e0889de26d38155945873134a5c
     "ignored": 0,
     "measured": 0,
     "filtered_out": 0,
