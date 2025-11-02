@@ -1,1 +1,23 @@
 Solving for required assumptions to trust bellhop-0.2.1...
+╭───────────────── Analysis Report for bellhop-0.2.1 ──────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     █████████████░░░░░░░ 64           │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
+│  Severity Label:                   CRITICAL                          │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭───────────────────── Assumptions for Trusting ──────────────────────╮ 
+│                                                                     │ 
+│  • bellhop-0.2.1 has many downloads: 39 cost                        │ 
+│  • bellhop-0.2.1 having many downloads implies it is safe: 25 cost  │ 
+│                                                                     │ 
+╰─────────────────────────────────────────────────────────────────────╯ 
+╭──────────────────── Assumptions for Distrusting ────────────────────╮ 
+│                                                                     │ 
+│  • bellhop-0.2.1 failing a Miri test implies it is unsafe: 50 cost  │ 
+│                                                                     │ 
+╰─────────────────────────────────────────────────────────────────────╯ 
+
+                                           
+  Details: /logs/cache/bellhop-0.2.1.json  
+                                           

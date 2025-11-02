@@ -1,23 +1,26 @@
 Solving for required assumptions to trust pic32mx2xx-0.7.0...
-+------------------------------------------------------------+
-|            Analysis Report for pic32mx2xx-0.7.0            |
-+------------------------------------------------------------+
+╭──────────────── Analysis Report for pic32mx2xx-0.7.0 ────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ███████░░░░░░░░░░░░░ 37           │
+│  Distrust Cost (higher is better): ████████████░░░░░░░░ 61           │
+│  Severity Label:                   MEDIUM_SEVERITY                   │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • pic32mx2xx-0.7.0 has many downloads: 12 cost                      │
+│  • pic32mx2xx-0.7.0 having many downloads implies it is safe: 25     │
+│  cost                                                                │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • pic32mx2xx-0.7.0 has many side effects: 1 cost                    │
+│  • pic32mx2xx-0.7.0 has many side effects implies it is unsafe: 60   │
+│  cost                                                                │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
 
-Assumptions Summary:
-Score Range: 0 (Min) - 100 (Max)
-
-Trust Cost (lower is better): 37 cost
-Assumptions for Trusting:
-  • pic32mx2xx-0.7.0 has many downloads: 12 cost
-  • pic32mx2xx-0.7.0 having many downloads implies it is safe: 25 cost
-
-Distrust Cost (higher is better): 60 cost
-Assumptions for Distrusting:
-  • pic32mx2xx-0.7.0 has many side effects: 0 cost
-  • pic32mx2xx-0.7.0 has many side effects implies it is unsafe: 60 cost
-
-Severity Label: MEDIUM_SEVERITY
-
-Full details about the crate can be found at: /logs/cache/pic32mx2xx-0.7.0.json
-+------------------------------------------------------------+
-
+                                              
+  Details: /logs/cache/pic32mx2xx-0.7.0.json  
+                                              

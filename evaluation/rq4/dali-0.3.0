@@ -1,0 +1,23 @@
+Solving for required assumptions to trust dali-0.3.0...
+╭─────────────────── Analysis Report for dali-0.3.0 ───────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     █████████████░░░░░░░ 64           │
+│  Distrust Cost (higher is better): ████████████████████ 100          │
+│  Severity Label:                   HIGH_SEVERITY                     │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭──────────────────── Assumptions for Trusting ────────────────────╮    
+│                                                                  │    
+│  • dali-0.3.0 has many downloads: 39 cost                        │    
+│  • dali-0.3.0 having many downloads implies it is safe: 25 cost  │    
+│                                                                  │    
+╰──────────────────────────────────────────────────────────────────╯    
+╭────────────────── Assumptions for Distrusting ───────────────────╮    
+│                                                                  │    
+│  • dali-0.3.0 is unsafe: 100 cost                                │    
+│                                                                  │    
+╰──────────────────────────────────────────────────────────────────╯    
+
+                                        
+  Details: /logs/cache/dali-0.3.0.json  
+                                        

@@ -1,1 +1,26 @@
 Solving for required assumptions to trust bevy_koto-0.2.0...
+╭──────────────── Analysis Report for bevy_koto-0.2.0 ─────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ███████████████░░░░░ 75           │
+│  Distrust Cost (higher is better): ████████████████░░░░ 79           │
+│  Severity Label:                   CRITICAL                          │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • bevy_koto-0.2.0 having all trusted developers implies it is       │
+│  safe: 5 cost                                                        │
+│  • irh is trusted: 70 cost                                           │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • bevy_koto-0.2.0 has many side effects: 19 cost                    │
+│  • bevy_koto-0.2.0 has many side effects implies it is unsafe: 60    │
+│  cost                                                                │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+
+                                             
+  Details: /logs/cache/bevy_koto-0.2.0.json  
+                                             

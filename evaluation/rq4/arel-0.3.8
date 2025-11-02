@@ -1,0 +1,23 @@
+Solving for required assumptions to trust arel-0.3.8...
+╭─────────────────── Analysis Report for arel-0.3.8 ───────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ██████████░░░░░░░░░░ 49           │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
+│  Severity Label:                   HIGH_SEVERITY                     │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭──────────────────── Assumptions for Trusting ────────────────────╮    
+│                                                                  │    
+│  • arel-0.3.8 has many downloads: 24 cost                        │    
+│  • arel-0.3.8 having many downloads implies it is safe: 25 cost  │    
+│                                                                  │    
+╰──────────────────────────────────────────────────────────────────╯    
+╭────────────────── Assumptions for Distrusting ───────────────────╮    
+│                                                                  │    
+│  • arel-0.3.8 failing a Miri test implies it is unsafe: 50 cost  │    
+│                                                                  │    
+╰──────────────────────────────────────────────────────────────────╯    
+
+                                        
+  Details: /logs/cache/arel-0.3.8.json  
+                                        

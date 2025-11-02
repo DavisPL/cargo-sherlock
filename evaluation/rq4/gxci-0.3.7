@@ -1,0 +1,23 @@
+Solving for required assumptions to trust gxci-0.3.7...
+╭─────────────────── Analysis Report for gxci-0.3.7 ───────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ████████████░░░░░░░░ 58           │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
+│  Severity Label:                   HIGH_SEVERITY                     │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭──────────────────── Assumptions for Trusting ────────────────────╮    
+│                                                                  │    
+│  • gxci-0.3.7 has many downloads: 33 cost                        │    
+│  • gxci-0.3.7 having many downloads implies it is safe: 25 cost  │    
+│                                                                  │    
+╰──────────────────────────────────────────────────────────────────╯    
+╭────────────────── Assumptions for Distrusting ───────────────────╮    
+│                                                                  │    
+│  • gxci-0.3.7 failing a Miri test implies it is unsafe: 50 cost  │    
+│                                                                  │    
+╰──────────────────────────────────────────────────────────────────╯    
+
+                                        
+  Details: /logs/cache/gxci-0.3.7.json  
+                                        

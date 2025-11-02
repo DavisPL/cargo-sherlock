@@ -1,0 +1,23 @@
+Solving for required assumptions to trust rarena-0.4.0...
+╭────────────────── Analysis Report for rarena-0.4.0 ──────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ██████████████░░░░░░ 68           │
+│  Distrust Cost (higher is better): ████████████████████ 100          │
+│  Severity Label:                   HIGH_SEVERITY                     │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭───────────────────── Assumptions for Trusting ─────────────────────╮  
+│                                                                    │  
+│  • rarena-0.4.0 has many downloads: 43 cost                        │  
+│  • rarena-0.4.0 having many downloads implies it is safe: 25 cost  │  
+│                                                                    │  
+╰────────────────────────────────────────────────────────────────────╯  
+╭─────────────────── Assumptions for Distrusting ────────────────────╮  
+│                                                                    │  
+│  • rarena-0.4.0 is unsafe: 100 cost                                │  
+│                                                                    │  
+╰────────────────────────────────────────────────────────────────────╯  
+
+                                          
+  Details: /logs/cache/rarena-0.4.0.json  
+                                          

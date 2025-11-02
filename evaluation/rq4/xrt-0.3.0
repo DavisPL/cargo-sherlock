@@ -1,22 +1,23 @@
 Solving for required assumptions to trust xrt-0.3.0...
-+------------------------------------------------------------+
-|               Analysis Report for xrt-0.3.0                |
-+------------------------------------------------------------+
+╭─────────────────── Analysis Report for xrt-0.3.0 ────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ███████████████░░░░░ 73           │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
+│  Severity Label:                   CRITICAL                          │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭─────────────────── Assumptions for Trusting ────────────────────╮     
+│                                                                 │     
+│  • xrt-0.3.0 has many downloads: 48 cost                        │     
+│  • xrt-0.3.0 having many downloads implies it is safe: 25 cost  │     
+│                                                                 │     
+╰─────────────────────────────────────────────────────────────────╯     
+╭────────────────── Assumptions for Distrusting ──────────────────╮     
+│                                                                 │     
+│  • xrt-0.3.0 failing a Miri test implies it is unsafe: 50 cost  │     
+│                                                                 │     
+╰─────────────────────────────────────────────────────────────────╯     
 
-Assumptions Summary:
-Score Range: 0 (Min) - 100 (Max)
-
-Trust Cost (lower is better): 73 cost
-Assumptions for Trusting:
-  • xrt-0.3.0 has many downloads: 48 cost
-  • xrt-0.3.0 having many downloads implies it is safe: 25 cost
-
-Distrust Cost (higher is better): 50 cost
-Assumptions for Distrusting:
-  • xrt-0.3.0 failing a Miri test implies it is unsafe: 50 cost
-
-Severity Label: CRITICAL
-
-Full details about the crate can be found at: /logs/cache/xrt-0.3.0.json
-+------------------------------------------------------------+
-
+                                       
+  Details: /logs/cache/xrt-0.3.0.json  
+                                       

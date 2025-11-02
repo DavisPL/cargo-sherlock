@@ -1,0 +1,26 @@
+Solving for required assumptions to trust aws-sdk-b2bi-1.67.0...
+╭────────────── Analysis Report for aws-sdk-b2bi-1.67.0 ───────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 21           │
+│  Distrust Cost (higher is better): ██████████████░░░░░░ 72           │
+│  Severity Label:                   LOW_SEVERITY                      │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • aws-sdk-b2bi-1.67.0 has many stars and forks: 1 cost              │
+│  • aws-sdk-b2bi-1.67.0 having many stars and forks implies it is     │
+│  safe: 20 cost                                                       │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • aws-sdk-b2bi-1.67.0 has many side effects: 12 cost                │
+│  • aws-sdk-b2bi-1.67.0 has many side effects implies it is unsafe:   │
+│  60 cost                                                             │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+
+                                                 
+  Details: /logs/cache/aws-sdk-b2bi-1.67.0.json  
+                                                 

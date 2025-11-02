@@ -1,0 +1,25 @@
+Solving for required assumptions to trust bellandeos_file_system_test-0.0.1...
+╭─────── Analysis Report for bellandeos_file_system_test-0.0.1 ────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ███████████████░░░░░ 75           │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
+│  Severity Label:                   CRITICAL                          │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • bellandeos_file_system_test-0.0.1 having all trusted developers   │
+│  implies it is safe: 5 cost                                          │
+│  • RonaldsonBellande is trusted: 70 cost                             │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • bellandeos_file_system_test-0.0.1 failing a Miri test implies it  │
+│  is unsafe: 50 cost                                                  │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+
+                                                               
+  Details: /logs/cache/bellandeos_file_system_test-0.0.1.json  
+                                                               

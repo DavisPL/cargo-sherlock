@@ -1,0 +1,26 @@
+Solving for required assumptions to trust theattyr-0.1.10...
+╭──────────────── Analysis Report for theattyr-0.1.10 ─────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     █████████████░░░░░░░ 65           │
+│  Distrust Cost (higher is better): █████████████████░░░ 83           │
+│  Severity Label:                   HIGH_SEVERITY                     │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • theattyr-0.1.10 has many downloads: 40 cost                       │
+│  • theattyr-0.1.10 having many downloads implies it is safe: 25      │
+│  cost                                                                │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • theattyr-0.1.10 has many side effects: 23 cost                    │
+│  • theattyr-0.1.10 has many side effects implies it is unsafe: 60    │
+│  cost                                                                │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+
+                                             
+  Details: /logs/cache/theattyr-0.1.10.json  
+                                             

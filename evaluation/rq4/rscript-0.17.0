@@ -1,0 +1,25 @@
+Solving for required assumptions to trust rscript-0.17.0...
+╭───────────────── Analysis Report for rscript-0.17.0 ─────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ██████████░░░░░░░░░░ 50           │
+│  Distrust Cost (higher is better): ███████████████░░░░░ 74           │
+│  Severity Label:                   MEDIUM_SEVERITY                   │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • rscript-0.17.0 has many downloads: 25 cost                        │
+│  • rscript-0.17.0 having many downloads implies it is safe: 25 cost  │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • rscript-0.17.0 has many side effects: 14 cost                     │
+│  • rscript-0.17.0 has many side effects implies it is unsafe: 60     │
+│  cost                                                                │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+
+                                            
+  Details: /logs/cache/rscript-0.17.0.json  
+                                            

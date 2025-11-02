@@ -1,0 +1,25 @@
+Solving for required assumptions to trust danube-core-0.3.4...
+╭─────────────── Analysis Report for danube-core-0.3.4 ────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ███████████████░░░░░ 75           │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
+│  Severity Label:                   CRITICAL                          │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • danube-core-0.3.4 having all trusted developers implies it is     │
+│  safe: 5 cost                                                        │
+│  • danrusei is trusted: 70 cost                                      │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • danube-core-0.3.4 failing a Miri test implies it is unsafe: 50    │
+│  cost                                                                │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+
+                                               
+  Details: /logs/cache/danube-core-0.3.4.json  
+                                               

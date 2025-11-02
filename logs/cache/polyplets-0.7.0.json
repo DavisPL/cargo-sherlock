@@ -1,0 +1,98 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "folex",
+    "mikevoronov",
+    "ValeryAntopol",
+    "fluencebot"
+  ],
+  "stars": 151,
+  "forks": 16,
+  "downloads": 66428,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "marine-call-parameters",
+      "0.14.0"
+    ],
+    [
+      "marine-macro",
+      "0.14.0"
+    ],
+    [
+      "marine-macro-impl",
+      "0.14.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.103"
+    ],
+    [
+      "unicode-ident",
+      "1.0.22"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "serde",
+      "1.0.228"
+    ],
+    [
+      "serde_core",
+      "1.0.228"
+    ],
+    [
+      "serde_derive",
+      "1.0.228"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ],
+    [
+      "serde_json",
+      "1.0.145"
+    ],
+    [
+      "itoa",
+      "1.0.15"
+    ],
+    [
+      "memchr",
+      "2.7.6"
+    ],
+    [
+      "ryu",
+      "1.0.20"
+    ],
+    [
+      "marine-rs-sdk-main",
+      "0.14.0"
+    ],
+    [
+      "log",
+      "0.4.28"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

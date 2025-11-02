@@ -1,0 +1,47 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "shepmaster"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 1411513,
+  "num_side_effects": 122,
+  "failed_rudra": false,
+  "audits": [
+    {
+      "organization": "google",
+      "criteria": "[ \"ub-risk-2\", \"does-not-implement-crypto\",]",
+      "delta": "",
+      "version": "0.3.2",
+      "notes": "Reviewed in CL 764633109\\nIssues found:\\n - Large quantities of mostly undocumented, difficult-to-audit raw pointer manipulation, but these seem to all bake down to sound use of arena-owned memory.\\n"
+    }
+  ],
+  "dependencies": [
+    [
+      "peresil",
+      "0.3.0"
+    ],
+    [
+      "typed-arena",
+      "2.0.2"
+    ]
+  ],
+  "passed_audit": true,
+  "num_unsafe_calls": 101,
+  "miri": true,
+  "past_audit": false,
+  "miri_details": {
+    "status": "crash",
+    "passed": 0,
+    "failed": 9,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

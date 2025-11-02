@@ -1,0 +1,31 @@
+Solving for required assumptions to trust iasthk-1.0.1...
+╭────────────────── Analysis Report for iasthk-1.0.1 ──────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ██████████░░░░░░░░░░ 50           │
+│  Distrust Cost (higher is better): ████████████████████ 100          │
+│  Severity Label:                   MEDIUM_SEVERITY                   │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • iasthk-1.0.1 having no side effects and having all safe           │
+│  dependencies implies it is safe: 10 cost                            │
+│  • regex-1.11.1 having a current audit implies it is safe: 5 cost    │
+│  • regex-automata-0.4.9 having a current audit implies it is safe:   │
+│  5 cost                                                              │
+│  • regex-syntax-0.8.5 having a current audit implies it is safe: 5   │
+│  cost                                                                │
+│  • unicode-normalization-0.1.24 has a past audit implies it is       │
+│  safe: 20 cost                                                       │
+│  • tinyvec-1.9.0 having a current audit implies it is safe: 5 cost   │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • iasthk-1.0.1 is unsafe: 100 cost                                  │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+
+                                          
+  Details: /logs/cache/iasthk-1.0.1.json  
+                                          

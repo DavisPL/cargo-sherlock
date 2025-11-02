@@ -1,0 +1,25 @@
+Solving for required assumptions to trust flexible-hyper-server-tls-0.6.0...
+╭──────── Analysis Report for flexible-hyper-server-tls-0.6.0 ─────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ██████████░░░░░░░░░░ 52           │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
+│  Severity Label:                   HIGH_SEVERITY                     │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • flexible-hyper-server-tls-0.6.0 has many downloads: 27 cost       │
+│  • flexible-hyper-server-tls-0.6.0 having many downloads implies it  │
+│  is safe: 25 cost                                                    │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • flexible-hyper-server-tls-0.6.0 failing a Miri test implies it    │
+│  is unsafe: 50 cost                                                  │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+
+                                                             
+  Details: /logs/cache/flexible-hyper-server-tls-0.6.0.json  
+                                                             
