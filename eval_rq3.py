@@ -354,6 +354,68 @@ def combine_rq3_and_rustsec(
     os.makedirs(os.path.dirname(out_csv) or ".", exist_ok=True)
     out.to_csv(out_csv, index=False)
 
+def plot_rustsec_download_distribution(cached=True):
+    # Data from the table
+    data = {}
+    if cached:
+        data = {
+                "Top Percent of crates.io": [
+                    "Top 5%", "Top 10%", "Top 20%", "Top 30%", "Top 40%",
+                "Top 50%", "Top 60%", "Top 70%", "Top 80%"
+            ],
+            "Percentage of RustSec Crates": [
+                63.62, 75.09, 86.28, 92.19, 95.36, 97.89, 99.37, 99.58, 100.00
+            ]
+        }
+    else:
+        pass
+
+    df = pd.DataFrame(data)
+
+    # Use a pleasant style.
+    plt.style.use("ggplot")
+
+    fig, ax = plt.subplots(figsize=(6, 4))
+
+    # Create a numeric index for bars
+    x = np.arange(len(df))
+
+    # Generate a gradient of blues for the bars
+    bar_colors = plt.cm.Blues(np.linspace(0.5, 0.9, len(df)))
+
+    # Plot a bar chart
+    bars = ax.bar(x, df["Percentage of RustSec Crates"], 
+                color=bar_colors, edgecolor="black")
+
+    # X-axis labels
+    ax.set_xticks(x)
+    ax.set_xticklabels(df["Top Percent of crates.io"], rotation=45, ha="right")
+
+    # Axis labels and title
+    ax.set_xlabel("Top Percent of crates.io", fontsize=12)
+    ax.set_ylabel("Percentage of RustSec Crates", fontsize=12)
+    ax.set_title("Distribution of crates in RustSec by downloads", 
+                fontsize=14, fontweight="bold")
+
+    # Remove top/right spines for a cleaner look
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+
+    # Annotate each bar with its value, skipping 0 if any
+    for bar in bars:
+        height = bar.get_height()
+        if height > 0:
+            ax.annotate(f"{height:.2f}%",
+                        xy=(bar.get_x() + bar.get_width() / 2, height),
+                        xytext=(0, 3),  # 3 points vertical offset
+                        textcoords="offset points",
+                        ha="center", va="bottom", fontsize=10)
+
+    plt.tight_layout()
+    plt.savefig("rustsec-percentiles.pdf", bbox_inches="tight")
+    # plt.show()
+
+
 def plot_rustsec_grouped_by_sherlock(
     in_csv: str,
     out_pdf: str,
@@ -443,7 +505,6 @@ def plot_rustsec_grouped_by_sherlock(
 
     return counts
 
-
 if __name__ == "__main__":
     print("Running Cargo-Sherlock on RustSec crates...")
     # run_sherlock_all()
@@ -455,3 +516,5 @@ if __name__ == "__main__":
     combine_rq3_and_rustsec()
     print("Plotting RustSec distribution grouped by Cargo-Sherlock labels - saved at 'rustsec-distribution.pdf'...")
     plot_rustsec_grouped_by_sherlock(MERGED_CSV, "rustsec-distribution.pdf")
+    print("Plotting rustsec downloads distribution - saved at 'rustsec-percentiles.pdf'...")
+    plot_rustsec_download_distribution()
