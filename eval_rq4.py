@@ -11,6 +11,9 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.optimize import curve_fit
+import argparse
+import textwrap
+import logging 
 
 CSV_FILE = "random1000_crates.csv"
 OUTPUT_HORN_CSV = "random_horn_results.csv"
@@ -19,7 +22,17 @@ DEP_COUNT_CSV = "random1000_dep_count.csv"
 CACHE_DIR = "logs/cache"
 TIMEOUT_SECS = 600
 MAX_WORKERS = 10
-TOTAL_EXPECTED = 1000  # unused
+
+# logging
+RUN_LOG_FILE = "rq4_run.log"
+logging.basicConfig(
+    filename=RUN_LOG_FILE,
+    filemode="a",
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s",
+    encoding="utf-8"
+)
+LOGGER = logging.getLogger("rq4")
 
 def _process_one(crate_name: str, version: str, base_out_dir: str, naive: bool = False) -> tuple[str, float, int | None]:
     crate_ver = f"{crate_name}-{version}"
@@ -27,17 +40,27 @@ def _process_one(crate_name: str, version: str, base_out_dir: str, naive: bool =
     cmd = ["python3", "sherlock.py", "trust", crate_name, version, "-o", output_file]
     if naive:
         cmd.insert(4, "--no-horn")
-    print(f"[START] {' '.join(cmd)}")
+    LOGGER.info("[START] %s", " ".join(cmd))
     start = time.perf_counter()
     try:
-        proc = subprocess.run(cmd, timeout=TIMEOUT_SECS)
+        proc = subprocess.run(cmd, timeout=TIMEOUT_SECS, text=True, capture_output=True)
         rc = proc.returncode
-    except subprocess.TimeoutExpired:
+        if proc.stdout:
+            LOGGER.info(proc.stdout.rstrip("\n"))
+        if proc.stderr:
+            LOGGER.error(proc.stderr.rstrip("\n"))
+    except subprocess.TimeoutExpired as e:
         elapsed = time.perf_counter() - start
-        print(f"[TIMEOUT] {crate_ver} after {elapsed:.2f}s")
+        out = getattr(e, "output", None)
+        err = getattr(e, "stderr", None)
+        if out:
+            LOGGER.info(str(out).rstrip("\n"))
+        if err:
+            LOGGER.error(str(err).rstrip("\n"))
+        LOGGER.warning("[TIMEOUT] %s after %.2fs", crate_ver, elapsed)
         return crate_ver, elapsed, None
     elapsed = time.perf_counter() - start
-    print(f"[DONE] {crate_ver} in {elapsed:.2f}s (rc={rc})")
+    LOGGER.info("[DONE] %s in %.2fs (rc=%s)", crate_ver, elapsed, rc)
     return crate_ver, elapsed, rc
 
 def run_top_crates_horn():
@@ -60,7 +83,7 @@ def run_top_crates_horn():
                     crate_ver, elapsed, rc = fut.result()
                 except Exception as e:
                     crate_ver, elapsed, rc = f"{crate}-{ver}", 0.0, -1
-                    print(f"[ERROR] {crate_ver}: {e}")
+                    LOGGER.error("[ERROR] %s: %s", crate_ver, e)
                 writer.writerow([crate_ver, f"{elapsed:.2f}", "" if rc is None else rc])
                 out_f.flush()
 
@@ -84,7 +107,7 @@ def run_top_crates_naive():
                     crate_ver, elapsed, rc = fut.result()
                 except Exception as e:
                     crate_ver, elapsed, rc = f"{crate}-{ver}", 0.0, -1
-                    print(f"[ERROR] {crate_ver}: {e}")
+                    LOGGER.error("[ERROR] %s: %s", crate_ver, e)
                 writer.writerow([crate_ver, f"{elapsed:.2f}", "" if rc is None else rc])
                 out_f.flush()
 
@@ -106,17 +129,15 @@ def get_dependency_counts(
                 with open(path, "r", encoding="utf-8") as f:
                     data = json.load(f)
             except json.JSONDecodeError as e:
-                print(f"JSON decode error in file {filename}: {e}")
+                LOGGER.warning("JSON decode error in file %s: %s", filename, e)
                 failed_files.append(filename)
                 continue
             deps = data.get("dependencies", [])
             rows.append({"crate_name": crate_name, "version": crate_version, "dependency_count": len(deps)})
     else:
-        print(f"[WARN] Cache dir not found: {cache_dir}")
+        LOGGER.warning("[WARN] Cache dir not found: %s", cache_dir)
 
     df_deps = pd.DataFrame(rows)
-    print("Dependency counts extracted:")
-    print(df_deps.head())
 
     df_crates = pd.read_csv(input_crates_csv)
     if "crate_name" not in df_crates.columns and "name" in df_crates.columns:
@@ -131,7 +152,7 @@ def get_dependency_counts(
         df_out["dependency_count"] = np.nan
 
     df_out.to_csv(output_dep_csv, index=False)
-    print(f"[OK] Wrote dependency counts to {output_dep_csv}")
+    LOGGER.info("[OK] Wrote dependency counts to %s", output_dep_csv)
     return df_out
 
 def _split_crate_ver(col: pd.Series) -> pd.DataFrame:
@@ -177,7 +198,6 @@ def make_cdf_plot(df_times: pd.DataFrame, out_path: str = "rq4_cdf.pdf") -> None
     mask_horn_exists = df_times.apply(lambda r: _file_exists(HORN_DIR, r["name"], r["version"]), axis=1)
     df_keep = df_times[mask_horn_exists].copy()
 
-    # times → numeric; NaN means timeout in CSV semantics
     t_horn  = pd.to_numeric(df_keep.get("time_horn"),  errors="coerce")
     t_naive = pd.to_numeric(df_keep.get("time_naive"), errors="coerce")
 
@@ -187,7 +207,7 @@ def make_cdf_plot(df_times: pd.DataFrame, out_path: str = "rq4_cdf.pdf") -> None
     cdf_horn    = np.arange(1, len(times_horn)  + 1) / len(times_horn)  if len(times_horn)  else np.array([])
     cdf_naive   = np.arange(1, len(times_naive) + 1) / len(times_naive) if len(times_naive) else np.array([])
 
-    # counts (success=0, crash=1, timeout=blank), among ran-only
+    # counts (success=0, crash=1, timeout=blank), among those that ran
     def _counts_from_rc_present(df: pd.DataFrame, rc_col: str) -> dict:
         rc_raw = df[rc_col]
         rc_num = pd.to_numeric(rc_raw, errors="coerce")
@@ -200,7 +220,7 @@ def make_cdf_plot(df_times: pd.DataFrame, out_path: str = "rq4_cdf.pdf") -> None
     horn_counts  = _counts_from_rc_present(df_keep, "rc_horn")
     naive_counts = _counts_from_rc_present(df_keep, "rc_naive")
 
-    # ---- plotting (match your style/colors) ----
+    # plot timee
     sns.set_style("white")
     fig, ax = plt.subplots(figsize=(8, 6))
 
@@ -244,8 +264,7 @@ def make_cdf_plot(df_times: pd.DataFrame, out_path: str = "rq4_cdf.pdf") -> None
 
     plt.tight_layout()
     plt.savefig(out_path, bbox_inches="tight")
-    print(f"[OK] Saved CDF to {out_path}")
-
+    LOGGER.info("[OK] Saved CDF to %s", out_path)
 
 def _file_has_more_than_one_line(directory: str, name: str, version: str) -> bool:
     file_path = os.path.join(directory, f"{name}-{version}")
@@ -405,12 +424,77 @@ def make_scatter_plot(df_times: pd.DataFrame, df_dep: pd.DataFrame, out_path: st
 
     plt.tight_layout()
     plt.savefig(out_path, bbox_inches="tight")
-    print(f"[OK] Saved scatter (focused + exponential fit) to {out_path}")
+    LOGGER.info("[OK] Saved scatter (focused + exponential fit) to %s", out_path)
+
+def main():
+
+    parser = argparse.ArgumentParser(
+        prog="eval_rq4.py",
+        description="Evaluate RQ4: Naive vs Horn Clause Optimized Solver Performance",
+        formatter_class=argparse.RawTextHelpFormatter,
+        epilog=textwrap.dedent("""\
+            Examples:
+              # Full experiment: run Cargo-Sherlock on random 1000 crates in both Naive and Horn modes - make a CDF of time taken and a scatter plot of time vs dependency count
+              python3 eval_rq4.py -m full
+
+              # Partial: reuse existing time measurements, and generate the CDF and scatter plot only
+              python3 eval_rq4.py -m cached
+        """),
+    )
+
+    parser.add_argument(
+        "-m", "--mode",
+        choices=["full", "cached"],
+        default="cached",
+        metavar="MODE",
+        help=textwrap.dedent("""\
+            Choose how much work to do:
+
+              full
+                • Run Cargo-Sherlock on Random 1000 crates with Naive Algorithm
+                • Run Cargo-Sherlock on Random 1000 crates with Horn Clause Optimized Algorithm
+                • Get Dependency counts for all crates
+                • Make a CDF plot of time taken
+                • Make a scatter plot of time vs dependency count
+
+              cached  (default)
+                • Skip all runs
+                • Get Dependency counts for all crates
+                • Make a CDF plot of time taken
+                • Make a scatter plot of time vs dependency count
+        """),
+    )
+
+    parsed_args = parser.parse_args()
+    mode = parsed_args.mode
+
+    if mode == "full":
+        print("Running in full mode:")
+
+        print("1) Running Horn Clause Optimized Algorithm on top crates...")
+        run_top_crates_horn()
+        print("2) Running Naive Algorithm on top crates...")
+        run_top_crates_naive()
+        print("3) Getting dependency counts...")
+        df_dep = get_dependency_counts(cache_dir=CACHE_DIR, input_crates_csv=CSV_FILE, output_dep_csv=DEP_COUNT_CSV)
+        print("4) Analyzing the time taken by both algorithms...")
+        df_times = _load_times(OUTPUT_HORN_CSV, OUTPUT_NAIVE_CSV)
+        print("5) Making a CDF plot comparing both algorithms for time taken (stored rq4_cdf.pdf)...")
+        make_cdf_plot(df_times, out_path="rq4_cdf.pdf")
+        print("6) Making a scatter plot of time vs dependency count (stored rq4_scatter.pdf)...")
+        make_scatter_plot(df_times, df_dep, out_path="rq4_scatter.pdf")
+
+    elif mode == "cached":
+        print("Running in cached mode:")
+
+        print("1) Getting dependency counts...")
+        df_dep = get_dependency_counts(cache_dir=CACHE_DIR, input_crates_csv=CSV_FILE, output_dep_csv=DEP_COUNT_CSV)
+        print("2) Analyzing the time taken by both algorithms...")
+        df_times = _load_times(OUTPUT_HORN_CSV, OUTPUT_NAIVE_CSV)
+        print("3) Making a CDF plot comparing both algorithms for time taken (stored rq4_cdf.pdf)...")
+        make_cdf_plot(df_times, out_path="rq4_cdf.pdf")
+        print("4) Making a scatter plot of time vs dependency count (stored rq4_scatter.pdf)...")
+        make_scatter_plot(df_times, df_dep, out_path="rq4_scatter.pdf")
 
 if __name__ == "__main__":
-    # run_top_crates_horn()
-    # run_top_crates_naive()
-    df_dep = get_dependency_counts(cache_dir=CACHE_DIR, input_crates_csv=CSV_FILE, output_dep_csv=DEP_COUNT_CSV)
-    df_times = _load_times(OUTPUT_HORN_CSV, OUTPUT_NAIVE_CSV)
-    make_cdf_plot(df_times, out_path="rq4_cdf.pdf")
-    make_scatter_plot(df_times, df_dep, out_path="rq4_scatter.pdf")
+    main()
