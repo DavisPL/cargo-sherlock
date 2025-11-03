@@ -6,14 +6,13 @@ import requests
 import toml
 import time
 import re
-import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 import argparse
-import sys
 import logging
-from pathlib import Path
+import textwrap
+
 
 CRATE_PREFIX = "supply-chain-trust-example-crate-"
 CSV_FILE = "top100_crates.csv"
@@ -416,13 +415,49 @@ def plot_severity_heatmap_from_csv(
 
 def main():
 
-    args = argparse.ArgumentParser(description="Evaluate RQ1: Real vs Typosquatted Crates Analysis")
-    args.add_argument("-m", "--mode", choices=["full", "partial", "cached"], default="cached", help="Evaluation mode :" \
-    "full = Run Cargo Sherlock on top 100 crates generate their typosquatted versions and run Cargo Sherlock on these typosquatted versions and than analyze the results; " \
-    "partial = Use existing typosquatting Crates, run the tool on both sets and analyze the results; " \
-    "cached = Skip running the tool and use existing ouptut file to analyze the results (default).")
+    parser = argparse.ArgumentParser(
+        prog="eval_rq1.py",
+        description="Evaluate RQ1: Real vs Typosquatted Crates Analysis",
+        formatter_class=argparse.RawTextHelpFormatter,
+        epilog=textwrap.dedent("""\
+            Examples:
+              # Full experiment: run on top100, synthesize typos, run on typos, then analyze & plot
+              python3 eval_rq1.py -m full
 
-    parsed_args = args.parse_args()
+              # Partial: reuse existing typos (in local_crates/typo), run, then analyze & plot
+              python3 eval_rq1.py -m partial
+
+              # Cached: skip running, analyze precomputed outputs only (default)
+              python3 eval_rq1.py -m cached
+        """),
+    )
+
+    parser.add_argument(
+        "-m", "--mode",
+        choices=["full", "partial", "cached"],
+        default="cached",
+        metavar="MODE",
+        help=textwrap.dedent("""\
+            Choose how much work to do:
+
+              full
+                • Run Cargo-Sherlock on the top 100 crates
+                • Generate typosquatted versions
+                • Run Cargo-Sherlock on those typo crates
+                • Analyze results and plot the heatmap
+
+              partial
+                • Reuses existing typosquatted crates (skip generation)
+                • Run Cargo-Sherlock on real + typo crates
+                • Analyze results and plot the heatmap
+
+              cached  (default)
+                • Skip all runs
+                • Use existing outputs to analyze and plot
+        """),
+    )
+
+    parsed_args = parser.parse_args()
     mode = parsed_args.mode
 
     if mode == "full":

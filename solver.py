@@ -136,28 +136,28 @@ def get_negative_assumptions(
 
     assumptions = [
         Assumption(f"{crate} is unsafe", unsafe, costs.MAX_COST),
-        # Assumption(f"{crate} previously being in RustSec implies it is unsafe", z3.Implies(previously_in_rustsec, unsafe), 90),
-        # Assumption(f"{crate} having an info label in RustSec implies it is unsafe", z3.Implies(in_rustsec_info, unsafe), 60),
-        # Assumption(f"{crate} having a low severity label in RustSec implies it is unsafe", z3.Implies(low_severity, unsafe), 20),
-        # Assumption(f"{crate} having a medium severity label in RustSec implies it is unsafe", z3.Implies(med_severity, unsafe), 15),
-        # Assumption(f"{crate} having a high severity label in RustSec implies it is unsafe", z3.Implies(high_severity, unsafe), 10),
-        # Assumption(f"{crate} having a critical severity label in RustSec implies it is unsafe", z3.Implies(critical_severity, unsafe), 5),
+        Assumption(f"{crate} previously being in RustSec implies it is unsafe", z3.Implies(previously_in_rustsec, unsafe), 90),
+        Assumption(f"{crate} having an info label in RustSec implies it is unsafe", z3.Implies(in_rustsec_info, unsafe), 60),
+        Assumption(f"{crate} having a low severity label in RustSec implies it is unsafe", z3.Implies(low_severity, unsafe), 20),
+        Assumption(f"{crate} having a medium severity label in RustSec implies it is unsafe", z3.Implies(med_severity, unsafe), 15),
+        Assumption(f"{crate} having a high severity label in RustSec implies it is unsafe", z3.Implies(high_severity, unsafe), 10),
+        Assumption(f"{crate} having a critical severity label in RustSec implies it is unsafe", z3.Implies(critical_severity, unsafe), 5),
         Assumption(f"{crate} has an unsafe dependency implies it is unsafe", z3.Implies(z3.Or(dependencies_unsafe), unsafe), 70),
         Assumption(f"{crate} has many side effects", many_side_effects, costs.side_effects_cost(metadata["num_side_effects"])),
         Assumption(f"{crate} has many side effects implies it is unsafe", z3.Implies(many_side_effects, unsafe), 60),
         Assumption(f"{crate} failing a Miri test implies it is unsafe", z3.Implies(fails_miri, unsafe), 50),
     ]
 
-    # if metadata["rustsec_tag"] is not None:
-    #     uncategorized = z3.BoolVal(rustsec_label == "Uncategorized") # crate has an uncategorized label
-    #     vulnerability_tag = z3.BoolVal("Vulnerability" in metadata["rustsec_tag"]) # crate has a vulnerability tag
-    #     info_unmaintained_tag = z3.BoolVal("INFOUnmaintained" in metadata["rustsec_tag"]) # crate has an info unmaintained tag
-    #     info_unsound_tag = z3.BoolVal("INFOUnsound" in metadata["rustsec_tag"]) # crate has an info unsound tag
-    #     info_notice_tag = z3.BoolVal("INFONotice" in metadata["rustsec_tag"]) # crate has an info notice tag
-    #     assumptions.append(Assumption(f"{crate} being uncategorized and having a vulnerability tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, vulnerability_tag), unsafe), 10))
-    #     assumptions.append(Assumption(f"{crate} being uncategorized and having a unsound tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_unsound_tag), unsafe), 20))
-    #     assumptions.append(Assumption(f"{crate} being uncategorized and having a notice tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_notice_tag), unsafe), 60))
-    #     assumptions.append(Assumption(f"{crate} being uncategorized and having a unmaintained tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_unmaintained_tag), unsafe), 50))
+    if metadata["rustsec_tag"] is not None:
+        uncategorized = z3.BoolVal(rustsec_label == "Uncategorized") # crate has an uncategorized label
+        vulnerability_tag = z3.BoolVal("Vulnerability" in metadata["rustsec_tag"]) # crate has a vulnerability tag
+        info_unmaintained_tag = z3.BoolVal("INFOUnmaintained" in metadata["rustsec_tag"]) # crate has an info unmaintained tag
+        info_unsound_tag = z3.BoolVal("INFOUnsound" in metadata["rustsec_tag"]) # crate has an info unsound tag
+        info_notice_tag = z3.BoolVal("INFONotice" in metadata["rustsec_tag"]) # crate has an info notice tag
+        assumptions.append(Assumption(f"{crate} being uncategorized and having a vulnerability tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, vulnerability_tag), unsafe), 10))
+        assumptions.append(Assumption(f"{crate} being uncategorized and having a unsound tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_unsound_tag), unsafe), 20))
+        assumptions.append(Assumption(f"{crate} being uncategorized and having a notice tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_notice_tag), unsafe), 60))
+        assumptions.append(Assumption(f"{crate} being uncategorized and having a unmaintained tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_unmaintained_tag), unsafe), 50))
 
     analyzed_crates.add(crate)
     dependency: CrateVersion

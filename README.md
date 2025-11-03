@@ -86,19 +86,26 @@ python3 eval_rq2.py
 ```
 This experiment is expected to take around _ minutes to run so we do not provide any caching or partial modes for this experiment. The table will be printed on the terminal and also saved to `rq2_results.txt`. This plot corresponds to the severity heatmap presented in Figure 5(b) in the paper.
 
-### RQ3:
+### RQ3: Analyzing RustSec Crates
 
-For this we need to disable the assumptions made in Cargo-Sherlock about RustSec advisories. For this , please follow the steps below:
+In this experiment, we will analyze all the crates listed in the RustSec advisory database. You can run the evaluation script for RQ3 using:
+```Bash
+python3 eval_rq3.py
+``` 
+This will run the experiment in cached mode using the existing Cargo-Sherlock reports for RustSec crates, and recreate the Figure 6(a) and Figure 6(b) in the paper stored at `rustsec-distribution.pdf` and `rustsec-percentiles.pdf` respectively.
+
+However, if you want to run the full experiment without using cached results, you will have to follow these steps:
+
 1. Open the file `solver.py` in a text editor.
 2. Comment out the line 139-144 and 151-160. These lines are responsible for adding assumptions based on RustSec advisories. We do not want these assumptions to be included in our analysis for RQ3.
 3. Save the file after making these changes.
 Now, we can run the evaluation script for RQ3:
 ```Bash
-python3 eval_rq3.py
-``` 
-4. This should generate the plots `rustsec-distribution.pdf` and `rustsec-percentiles.pdf` in the current directory. These plots correspond to the distribution of RustSec advisories grouped by Cargo-Sherlock labels and the distribution of downloads for crates with RustSec advisories, respectively and are Figure 6(a) and Figure 6(b) in the paper.
+python3 eval_rq3.py --mode full
+```
+This will run Cargo-Sherlock on all RustSec crates, generate new reports, and then recreate the plots. This is expected to take around 2-3 hours to run depending on your system capabilities and store the output plots in `rustsec-distribution.pdf` and `rustsec-percentiles.pdf`.
 
-### RQ4:
+### RQ4: Evaluating Algorithm Performance
 
 For this first we will revert the changes made in step 2 of RQ3 to re-enable the assumptions based on RustSec advisories. For this please open the file `solver.py` in a text editor and uncomment the lines 
 139-144 and 151-160. Save the file after making these changes. This question aims to evaluate the perforance of algorithms so we already provide you with the log file output for the crates, so we only measure the time taken by the algorithms to solve the mintrust problem.

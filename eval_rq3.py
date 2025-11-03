@@ -5,16 +5,15 @@ import csv
 import subprocess
 from datetime import datetime
 from typing import Dict, List, Union, Optional
-
 import requests
 from packaging import version as pkg_version
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
+import argparse
+import textwrap
 
 # Constants
 DATA_FILE   = "helpers/data.txt"
@@ -505,16 +504,67 @@ def plot_rustsec_grouped_by_sherlock(
 
     return counts
 
+def main():
+
+    parser = argparse.ArgumentParser(
+        prog="eval_rq3.py",
+        description="Evaluate RQ3: Cargo-Sherlock on RustSec crates",
+        formatter_class=argparse.RawTextHelpFormatter,
+        epilog=textwrap.dedent("""\
+            Examples:
+            # Full: run Cargo-Sherlock on all RustSec crates, plot the label and download distributions
+            python3 eval_rq3.py --mode full
+
+            # Cached: use existing reports only (default)
+            python3 eval_rq3.py --mode cached
+        """),
+    )
+
+    parser.add_argument(
+        "--mode", "-m",
+        choices=["full", "cached"],
+        default="cached",
+        metavar="MODE",
+        help=textwrap.dedent("""\
+            Mode of operation:
+
+            full
+                • Run Cargo-Sherlock on all RustSec crates
+                • Compare RustSec labels to Cargo-Sherlock labels
+                • Plot label distribution and RustSec downloads distribution
+
+            cached (default)
+                • Skip running Cargo-Sherlock
+                • Use existing reports to compile CSVs and plot distributions
+        """),
+    )
+
+    args = parser.parse_args()
+    mode = args.mode
+
+
+    if mode == "full":
+        print("Running in 'full' mode...")
+        print("1) Running Cargo-Sherlock on RustSec crates...")
+        # run_sherlock_all()
+        print("2) Compiling Results into a CSV...")
+        build_rq3_csv()
+        print("3) Building a CSV with RustSec advisories labels...")
+        build_rustsec_advisories_csv()
+        print("4) Combining Cargo-Sherlock and RustSec Labels...")
+        combine_rq3_and_rustsec()
+        print("5) Plotting RustSec distribution grouped by Cargo-Sherlock labels - saved at 'rustsec-distribution.pdf'...")
+        plot_rustsec_grouped_by_sherlock(MERGED_CSV, "rustsec-distribution.pdf")
+        print("6) Plotting rustsec downloads distribution - saved at 'rustsec-percentiles.pdf'...")
+        plot_rustsec_download_distribution()
+
+    elif mode == "cached":
+        print("Running in 'cached' mode...")
+        print("1) Plotting RustSec distribution grouped by Cargo-Sherlock labels - saved at 'rustsec-distribution.pdf'...")
+        plot_rustsec_grouped_by_sherlock(MERGED_CSV, "rustsec-distribution.pdf")
+        print("2) Plotting rustsec downloads distribution - saved at 'rustsec-percentiles.pdf'...")
+        plot_rustsec_download_distribution()
+
+
 if __name__ == "__main__":
-    print("Running Cargo-Sherlock on RustSec crates...")
-    # run_sherlock_all()
-    print("Compiling Results into a CSV...")
-    build_rq3_csv()
-    print("Building RustSec advisories CSV...")
-    build_rustsec_advisories_csv()
-    print("Combining Cargo-Sherlock and RustSec Labels...")
-    combine_rq3_and_rustsec()
-    print("Plotting RustSec distribution grouped by Cargo-Sherlock labels - saved at 'rustsec-distribution.pdf'...")
-    plot_rustsec_grouped_by_sherlock(MERGED_CSV, "rustsec-distribution.pdf")
-    print("Plotting rustsec downloads distribution - saved at 'rustsec-percentiles.pdf'...")
-    plot_rustsec_download_distribution()
+    main()
