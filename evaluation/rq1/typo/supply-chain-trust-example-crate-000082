@@ -1,25 +1,25 @@
 Solving for required assumptions to trust supply-chain-trust-example-crate-000082-1.0.0...
-╭─ Analysis Report for supply-chain-trust-example-crate-000082-1.0.0 ──╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     ███████████████░░░░░ 75           │
-│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
-│  Severity Label:                   CRITICAL                          │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • supply-chain-trust-example-crate-000082-1.0.0 having all trusted  │
-│  developers implies it is safe: 5 cost                               │
-│  • Annonymous is trusted: 70 cost                                    │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • supply-chain-trust-example-crate-000082-1.0.0 failing a Miri      │
-│  test implies it is unsafe: 50 cost                                  │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────── Analysis Report for supply-chain-trust-example-crate-000082-1.0.0 ─────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     ███████████████░░░░░ 75                                         │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                                         │
+│  Severity Label:                   CRITICAL                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭───────────────────────────────────── Assumptions for Trusting ─────────────────────────────────────╮
+│                                                                                                    │
+│  • supply-chain-trust-example-crate-000082-1.0.0 having all trusted developers implies it is       │
+│  safe: 5 cost                                                                                      │
+│  • Annonymous is trusted: 70 cost                                                                  │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────── Assumptions for Distrusting ────────────────────────────────────╮
+│                                                                                                    │
+│  • supply-chain-trust-example-crate-000082-1.0.0 failing a Miri test implies it is unsafe: 50      │
+│  cost                                                                                              │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-                                                                        
-  Details: /logs/cache/supply-chain-trust-example-crate-000082-1.0.0.j  
-                                                                        
+                                                                           
+  Details: /logs/cache/supply-chain-trust-example-crate-000082-1.0.0.json  
+                                                                           

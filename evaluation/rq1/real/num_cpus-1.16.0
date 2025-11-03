@@ -1,23 +1,21 @@
 Solving for required assumptions to trust num_cpus-1.16.0...
-╭──────────────── Analysis Report for num_cpus-1.16.0 ─────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     █░░░░░░░░░░░░░░░░░░░ 5            │
-│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
-│  Severity Label:                   SAFE                              │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • num_cpus-1.16.0 having a current audit implies it is safe: 5      │
-│  cost                                                                │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • num_cpus-1.16.0 failing a Miri test implies it is unsafe: 50      │
-│  cost                                                                │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────── Analysis Report for num_cpus-1.16.0 ────────────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     █░░░░░░░░░░░░░░░░░░░ 5                                          │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                                         │
+│  Severity Label:                   SAFE                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ───────────────────────╮                             
+│                                                                       │                             
+│  • num_cpus-1.16.0 having a current audit implies it is safe: 5 cost  │                             
+│                                                                       │                             
+╰───────────────────────────────────────────────────────────────────────╯                             
+╭───────────────────── Assumptions for Distrusting ─────────────────────╮                             
+│                                                                       │                             
+│  • num_cpus-1.16.0 failing a Miri test implies it is unsafe: 50 cost  │                             
+│                                                                       │                             
+╰───────────────────────────────────────────────────────────────────────╯                             
 
                                              
   Details: /logs/cache/num_cpus-1.16.0.json  

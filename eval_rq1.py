@@ -12,23 +12,61 @@ import pandas as pd
 import seaborn as sns
 import argparse
 import sys
+import logging
 from pathlib import Path
 
 CRATE_PREFIX = "supply-chain-trust-example-crate-"
 CSV_FILE = "top100_crates.csv"
-LOG_FILE = "prepare_log.txt"
+LOG_FILE = "prepare_log.txt"          # existing per-crate progress log (kept)
+RUN_LOG_FILE = "rq1_run.log"          # NEW: global run log for all non-main output
+
 TARGET_DIR = "./local_crates/typo"
 OUTPUT_DIR_REAL = os.path.join("evaluation", "rq1", "real")
 OUTPUT_DIR_TYPO = os.path.join("evaluation", "rq1", "typo")
 RATE_LIMIT_SECONDS = 1.0  # wait between crates.io requests
 OUTPUT_SEVERITY_CSV = "rq1_severities.csv"
 
+# --- Logging setup (for all code outside main) ---
+LOGGER = logging.getLogger("rq1_eval")
+LOGGER.setLevel(logging.INFO)
+
+os.makedirs(os.path.dirname(RUN_LOG_FILE) or ".", exist_ok=True)
+_file_handler = logging.FileHandler(RUN_LOG_FILE, encoding="utf-8")
+_file_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
+LOGGER.addHandler(_file_handler)
+
+# Ensure these dirs exist early
 os.makedirs(OUTPUT_DIR_REAL, exist_ok=True)
 os.makedirs(OUTPUT_DIR_TYPO, exist_ok=True)
 os.makedirs(TARGET_DIR, exist_ok=True)
 
 TMP_PREFIX = "__tmp__" + CRATE_PREFIX
 TMP_PATTERN = re.compile(rf"^__tmp__{re.escape(CRATE_PREFIX)}(\d{{6}})$")
+
+def _run_and_log(cmd, *, cwd=None, log_prefix=None, check=False):
+    """Run a subprocess, capture stdout/stderr, and log them."""
+    try:
+        if log_prefix:
+            LOGGER.info(f"{log_prefix} Running: {' '.join(cmd)} (cwd={cwd or os.getcwd()})")
+        else:
+            LOGGER.info(f"Running: {' '.join(cmd)} (cwd={cwd or os.getcwd()})")
+        res = subprocess.run(cmd, cwd=cwd, text=True, capture_output=True, check=check)
+        if res.stdout:
+            LOGGER.info(res.stdout.rstrip("\n"))
+        if res.stderr:
+            # treat any stderr as error-level for visibility
+            LOGGER.error(res.stderr.rstrip("\n"))
+        return res
+    except subprocess.CalledProcessError as e:
+        # CalledProcessError contains returncode, stdout, stderr
+        stdout = e.stdout or ""
+        stderr = e.stderr or ""
+        if stdout:
+            LOGGER.info(stdout.rstrip("\n"))
+        if stderr:
+            LOGGER.error(stderr.rstrip("\n"))
+        LOGGER.error(f"Command failed with exit code {e.returncode}: {' '.join(cmd)}")
+        raise
 
 def _load_crate_ids(csv_path: str):
     ids = []
@@ -77,24 +115,20 @@ def _rewrite_cargo_toml(crate_dir: str, original: str, new_name: str):
             pass
 
 def run_top100_crates(csv_file: str = CSV_FILE, out_dir: str = OUTPUT_DIR_REAL) -> None:
-
     os.makedirs(out_dir, exist_ok=True)
-
     with open(csv_file, "r", newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             crate_name = (row.get("id") or row.get("name") or "").strip()
             version = (row.get("version") or "").strip()
             if not crate_name or not version:
-                # skip rows missing required fields
                 continue
 
             output_file = os.path.join(out_dir, f"{crate_name}-{version}")
             os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
             cmd = ["python3", "sherlock.py", "trust", crate_name, version, "-o", output_file]
-            print(f"Running: {' '.join(cmd)}")
-            subprocess.run(cmd, check=False)
+            _run_and_log(cmd, log_prefix="[real]")
 
 def prepare_typo_crates(csv_file: str = CSV_FILE, target_dir: str = TARGET_DIR, log_path: str = LOG_FILE):
     crates = _load_crate_ids(csv_file)
@@ -111,16 +145,16 @@ def prepare_typo_crates(csv_file: str = CSV_FILE, target_dir: str = TARGET_DIR, 
             repo_url = _crates_io_repo_url(crate)
             if not repo_url:
                 msg = f"No repo URL for {crate}"
-                print(msg)
+                LOGGER.info(msg)
                 log.write(f"FAIL {i}/{total}: {crate} -> {new_name}: {msg}\n")
                 continue
 
-            print(f"[{i}/{total}] Cloning {crate} from {repo_url} into {tmp_dir}...")
+            LOGGER.info(f"[{i}/{total}] Cloning {crate} from {repo_url} into {tmp_dir}...")
             try:
-                subprocess.run(["git", "clone", "--depth", "1", repo_url, tmp_dir], check=True)
+                _run_and_log(["git", "clone", "--depth", "1", repo_url, tmp_dir], check=True)
             except subprocess.CalledProcessError as e:
                 msg = f"git clone failed: {e}"
-                print(msg)
+                LOGGER.error(msg)
                 log.write(f"FAIL {i}/{total}: {crate} -> {new_name}: {msg}\n")
                 # keep tmp_dir for inspection
                 continue
@@ -131,13 +165,13 @@ def prepare_typo_crates(csv_file: str = CSV_FILE, target_dir: str = TARGET_DIR, 
                 if os.path.exists(dest_dir):
                     shutil.rmtree(dest_dir, ignore_errors=True)
                 shutil.move(tmp_dir, dest_dir)
-                print(f"OK  {crate} -> {new_name} at {dest_dir}")
+                LOGGER.info(f"OK  {crate} -> {new_name} at {dest_dir}")
                 log.write(f"OK   {i}/{total}: {crate} -> {new_name}\n")
             except Exception as e:
                 msg = f"rewrite/move failed: {e}"
-                print(msg)
+                LOGGER.error(msg)
                 log.write(f"FAIL {i}/{total}: {crate} -> {new_name}: {msg}\n")
-                # keep tmp_dir for inspection
+                # keep tmp_dir for patching
                 continue
 
 def _first_extracted_crate_root(path: str):
@@ -163,7 +197,7 @@ def patch_typo_crates_from_tmp(csv_file: str = CSV_FILE, target_dir: str = TARGE
             idx_str = m.group(1)
             i = int(idx_str)  # 1-based index from the six digits
             if i < 1 or i > len(crates):
-                print(f"[patch] index {i} out of range for {tmp_name}")
+                LOGGER.error(f"[patch] index {i} out of range for {tmp_name}")
                 log.write(f"PATCH FAIL ?: {tmp_name}: index out of range\n")
                 continue
             crate = crates[i - 1]
@@ -171,7 +205,7 @@ def patch_typo_crates_from_tmp(csv_file: str = CSV_FILE, target_dir: str = TARGE
             tmp_dir = os.path.join(target_dir, tmp_name)
             dest_dir = os.path.join(target_dir, final_name)
 
-            print(f"[patch {i}/{total}] Re-trying via cargo download: {crate} -> {final_name}")
+            LOGGER.info(f"[patch {i}/{total}] Re-trying via cargo download: {crate} -> {final_name}")
 
             # Delete existing tmp dir, recreate it empty (as requested)
             shutil.rmtree(tmp_dir, ignore_errors=True)
@@ -179,10 +213,10 @@ def patch_typo_crates_from_tmp(csv_file: str = CSV_FILE, target_dir: str = TARGE
 
             try:
                 # Download and extract into tmp_dir (creates <crate>-<ver>/...)
-                subprocess.run(["cargo", "download", crate, "-x"], cwd=tmp_dir, check=True)
+                _run_and_log(["cargo", "download", crate, "-x"], cwd=tmp_dir, check=True)
             except subprocess.CalledProcessError as e:
                 msg = f"cargo download failed: {e}"
-                print(msg)
+                LOGGER.error(msg)
                 log.write(f"PATCH FAIL {i}/{total}: {crate} -> {final_name}: {msg}\n")
                 # leave tmp_dir as-is for inspection
                 continue
@@ -190,7 +224,7 @@ def patch_typo_crates_from_tmp(csv_file: str = CSV_FILE, target_dir: str = TARGE
             extracted_root = _first_extracted_crate_root(tmp_dir)
             if not extracted_root:
                 msg = "no extracted crate root with Cargo.toml found"
-                print(msg)
+                LOGGER.error(msg)
                 log.write(f"PATCH FAIL {i}/{total}: {crate} -> {final_name}: {msg}\n")
                 # leave tmp_dir
                 continue
@@ -202,11 +236,11 @@ def patch_typo_crates_from_tmp(csv_file: str = CSV_FILE, target_dir: str = TARGE
                 shutil.move(extracted_root, dest_dir)
                 # success → remove the empty tmp shell (the __tmp__ name disappears)
                 shutil.rmtree(tmp_dir, ignore_errors=True)
-                print(f"PATCH OK {crate} -> {final_name} at {dest_dir}")
+                LOGGER.info(f"PATCH OK {crate} -> {final_name} at {dest_dir}")
                 log.write(f"PATCH OK {i}/{total}: {crate} -> {final_name}\n")
             except Exception as e:
                 msg = f"patch rewrite/move failed: {e}"
-                print(msg)
+                LOGGER.error(msg)
                 log.write(f"PATCH FAIL {i}/{total}: {crate} -> {final_name}: {msg}\n")
                 # keep tmp_dir
 
@@ -218,8 +252,7 @@ def run_typo_crates(typo_output_dir: str = OUTPUT_DIR_TYPO, target_dir: str = TA
         output_file = os.path.join(typo_output_dir, crate_name)
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         cmd = ["python3", "sherlock.py", "trust", crate_name, "--path", crate_path, "-o", output_file]
-        print(f"Running: {' '.join(cmd)}")
-        subprocess.run(cmd, check=False)
+        _run_and_log(cmd, log_prefix="[typo]")
 
 ANSI_RE = re.compile(r"\x1B\[[0-?]*[ -/]*[@-~]")
 
@@ -309,7 +342,7 @@ def build_severity_csv(csv_in: str = CSV_FILE,
         w.writeheader()
         w.writerows(rows)
 
-    print(f"Wrote {len(rows)} rows to {csv_out}")
+    LOGGER.info(f"Wrote {len(rows)} rows to {csv_out}")
 
 SEVERITY_COLORS = {
     "SAFE":            (55, 126, 33),    # bold green
@@ -378,19 +411,63 @@ def plot_severity_heatmap_from_csv(
 
     plt.tight_layout()
     plt.savefig("severity_heatmap.pdf", bbox_inches="tight")
+    LOGGER.info("Saved severity heatmap to 'severity_heatmap.pdf'")
     print("Saved severity heatmap to 'severity_heatmap.pdf'")
 
 def main():
-    run_top100_crates(CSV_FILE, OUTPUT_DIR_REAL)
-    prepare_typo_crates(CSV_FILE, TARGET_DIR, LOG_FILE)
-    patch_typo_crates_from_tmp(CSV_FILE, TARGET_DIR, LOG_FILE)
-    run_typo_crates(OUTPUT_DIR_TYPO, TARGET_DIR)
-    build_severity_csv(CSV_FILE, OUTPUT_DIR_REAL, OUTPUT_DIR_TYPO, OUTPUT_SEVERITY_CSV)
-    plot_severity_heatmap_from_csv(
-        OUTPUT_SEVERITY_CSV,
-        x_order=("SAFE", "LOW_SEVERITY"),
-        y_order=("CRITICAL", "HIGH_SEVERITY", "MEDIUM_SEVERITY", "LOW_SEVERITY", "SAFE"),
-    )    
+
+    args = argparse.ArgumentParser(description="Evaluate RQ1: Real vs Typosquatted Crates Analysis")
+    args.add_argument("-m", "--mode", choices=["full", "partial", "cached"], default="cached", help="Evaluation mode :" \
+    "full = Run Cargo Sherlock on top 100 crates generate their typosquatted versions and run Cargo Sherlock on these typosquatted versions and than analyze the results; " \
+    "partial = Use existing typosquatting Crates, run the tool on both sets and analyze the results; " \
+    "cached = Skip running the tool and use existing ouptut file to analyze the results (default).")
+
+    parsed_args = args.parse_args()
+    mode = parsed_args.mode
+
+    if mode == "full":
+        print("Running in full mode")
+
+        print("1) Running on real crates...")
+        run_top100_crates(CSV_FILE, OUTPUT_DIR_REAL)
+        print("2) Deleting existing typosquatted crates...")
+        if os.path.exists(TARGET_DIR):
+            shutil.rmtree(TARGET_DIR, ignore_errors=True)
+        os.makedirs(TARGET_DIR, exist_ok=True)
+        print("3) Preparing typosquatted crates...")
+        prepare_typo_crates(CSV_FILE, TARGET_DIR, LOG_FILE)
+        patch_typo_crates_from_tmp(CSV_FILE, TARGET_DIR, LOG_FILE)
+        print("4) Running on typosquatted crates...")
+        run_typo_crates(OUTPUT_DIR_TYPO, TARGET_DIR)
+        print("5) Analyzing results and plotting heatmap...")
+        build_severity_csv(CSV_FILE, OUTPUT_DIR_REAL, OUTPUT_DIR_TYPO, OUTPUT_SEVERITY_CSV)
+        plot_severity_heatmap_from_csv(
+            OUTPUT_SEVERITY_CSV,
+            x_order=("SAFE", "LOW_SEVERITY"),
+            y_order=("CRITICAL", "HIGH_SEVERITY", "MEDIUM_SEVERITY", "LOW_SEVERITY", "SAFE"),
+        )
+    elif mode == "partial":
+        print("Running in partial mode")
+
+        print("1) Running on real crates...")
+        run_top100_crates(CSV_FILE, OUTPUT_DIR_REAL)
+        print("2) Running on typosquatted crates...")
+        run_typo_crates(OUTPUT_DIR_TYPO, TARGET_DIR)
+        print("3) Analyzing results and plotting heatmap...")
+        build_severity_csv(CSV_FILE, OUTPUT_DIR_REAL, OUTPUT_DIR_TYPO, OUTPUT_SEVERITY_CSV)
+        plot_severity_heatmap_from_csv(
+            OUTPUT_SEVERITY_CSV,
+            x_order=("SAFE", "LOW_SEVERITY"),
+            y_order=("CRITICAL", "HIGH_SEVERITY", "MEDIUM_SEVERITY", "LOW_SEVERITY", "SAFE"),
+        )  
+    elif mode == "cached":
+        print("Running in cached mode: using existing output files for analysis.")
+        print("Plotting heatmap from existing severity CSV...")
+        plot_severity_heatmap_from_csv(
+            OUTPUT_SEVERITY_CSV,
+            x_order=("SAFE", "LOW_SEVERITY"),
+            y_order=("CRITICAL", "HIGH_SEVERITY", "MEDIUM_SEVERITY", "LOW_SEVERITY", "SAFE"),
+        )  
 
 
 if __name__ == "__main__":
