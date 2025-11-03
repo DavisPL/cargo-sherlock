@@ -1,25 +1,23 @@
 Solving for required assumptions to trust theframework-0.1.33...
-╭────────────── Analysis Report for theframework-0.1.33 ───────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     ██████████░░░░░░░░░░ 52           │
-│  Distrust Cost (higher is better): ████████████████░░░░ 78           │
-│  Severity Label:                   MEDIUM_SEVERITY                   │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • theframework-0.1.33 has many downloads: 27 cost                   │
-│  • theframework-0.1.33 having many downloads implies it is safe: 25  │
-│  cost                                                                │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • theframework-0.1.33 has many side effects: 18 cost                │
-│  • theframework-0.1.33 has many side effects implies it is unsafe:   │
-│  60 cost                                                             │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────── Analysis Report for theframework-0.1.33 ──────────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     ██████████░░░░░░░░░░ 52                                         │
+│  Distrust Cost (higher is better): ████████████████░░░░ 78                                         │
+│  Severity Label:                   MEDIUM_SEVERITY                                                 │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭───────────────────────── Assumptions for Trusting ──────────────────────────╮                       
+│                                                                             │                       
+│  • theframework-0.1.33 has many downloads: 27 cost                          │                       
+│  • theframework-0.1.33 having many downloads implies it is safe: 25 cost    │                       
+│                                                                             │                       
+╰─────────────────────────────────────────────────────────────────────────────╯                       
+╭──────────────────────── Assumptions for Distrusting ────────────────────────╮                       
+│                                                                             │                       
+│  • theframework-0.1.33 has many side effects: 18 cost                       │                       
+│  • theframework-0.1.33 has many side effects implies it is unsafe: 60 cost  │                       
+│                                                                             │                       
+╰─────────────────────────────────────────────────────────────────────────────╯                       
 
                                                  
   Details: /logs/cache/theframework-0.1.33.json  

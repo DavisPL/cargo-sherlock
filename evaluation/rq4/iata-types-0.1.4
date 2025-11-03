@@ -1,34 +1,29 @@
 Solving for required assumptions to trust iata-types-0.1.4...
-╭──────────────── Analysis Report for iata-types-0.1.4 ────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     ████████░░░░░░░░░░░░ 41           │
-│  Distrust Cost (higher is better): ████████████████████ 100          │
-│  Severity Label:                   MEDIUM_SEVERITY                   │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • iata-types-0.1.4 having no side effects and having all safe       │
-│  dependencies implies it is safe: 10 cost                            │
-│  • serde-1.0.219 having a current audit implies it is safe: 5 cost   │
-│  • serde_derive-1.0.219 having a current audit implies it is safe:   │
-│  5 cost                                                              │
-│  • proc-macro2-1.0.94 having a current audit implies it is safe: 5   │
-│  cost                                                                │
-│  • unicode-ident-1.0.18 having a current audit implies it is safe:   │
-│  5 cost                                                              │
-│  • dtolnay being in the trusted list implies they are trusted: 1     │
-│  cost                                                                │
-│  • quote-1.0.40 having a current audit implies it is safe: 5 cost    │
-│  • syn-2.0.100 having all trusted developers implies it is safe: 5   │
-│  cost                                                                │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • iata-types-0.1.4 is unsafe: 100 cost                              │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────── Analysis Report for iata-types-0.1.4 ───────────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     ████████░░░░░░░░░░░░ 41                                         │
+│  Distrust Cost (higher is better): ████████████████████ 100                                        │
+│  Severity Label:                   MEDIUM_SEVERITY                                                 │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭───────────────────────────────────── Assumptions for Trusting ─────────────────────────────────────╮
+│                                                                                                    │
+│  • iata-types-0.1.4 having no side effects and having all safe dependencies implies it is safe:    │
+│  10 cost                                                                                           │
+│  • serde-1.0.219 having a current audit implies it is safe: 5 cost                                 │
+│  • serde_derive-1.0.219 having a current audit implies it is safe: 5 cost                          │
+│  • proc-macro2-1.0.94 having a current audit implies it is safe: 5 cost                            │
+│  • unicode-ident-1.0.18 having a current audit implies it is safe: 5 cost                          │
+│  • dtolnay being in the trusted list implies they are trusted: 1 cost                              │
+│  • quote-1.0.40 having a current audit implies it is safe: 5 cost                                  │
+│  • syn-2.0.100 having all trusted developers implies it is safe: 5 cost                            │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────── Assumptions for Distrusting ────────────────────────────────────╮
+│                                                                                                    │
+│  • iata-types-0.1.4 is unsafe: 100 cost                                                            │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
 
                                               
   Details: /logs/cache/iata-types-0.1.4.json  

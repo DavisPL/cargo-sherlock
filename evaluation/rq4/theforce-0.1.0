@@ -1,25 +1,23 @@
 Solving for required assumptions to trust theforce-0.1.0...
-╭───────────────── Analysis Report for theforce-0.1.0 ─────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     ███████████████░░░░░ 75           │
-│  Distrust Cost (higher is better): ████████████████░░░░ 82           │
-│  Severity Label:                   CRITICAL                          │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • theforce-0.1.0 having all trusted developers implies it is safe:  │
-│  5 cost                                                              │
-│  • mirdaki is trusted: 70 cost                                       │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • theforce-0.1.0 has many side effects: 22 cost                     │
-│  • theforce-0.1.0 has many side effects implies it is unsafe: 60     │
-│  cost                                                                │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────── Analysis Report for theforce-0.1.0 ────────────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     ███████████████░░░░░ 75                                         │
+│  Distrust Cost (higher is better): ████████████████░░░░ 82                                         │
+│  Severity Label:                   CRITICAL                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭───────────────────────── Assumptions for Trusting ──────────────────────────╮                       
+│                                                                             │                       
+│  • theforce-0.1.0 having all trusted developers implies it is safe: 5 cost  │                       
+│  • mirdaki is trusted: 70 cost                                              │                       
+│                                                                             │                       
+╰─────────────────────────────────────────────────────────────────────────────╯                       
+╭──────────────────────── Assumptions for Distrusting ────────────────────────╮                       
+│                                                                             │                       
+│  • theforce-0.1.0 has many side effects: 22 cost                            │                       
+│  • theforce-0.1.0 has many side effects implies it is unsafe: 60 cost       │                       
+│                                                                             │                       
+╰─────────────────────────────────────────────────────────────────────────────╯                       
 
                                             
   Details: /logs/cache/theforce-0.1.0.json  

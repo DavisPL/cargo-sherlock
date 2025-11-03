@@ -99,7 +99,7 @@ def main():
         if args.output:
             with open(args.output, 'w') as output_file:
                 print(f"Solving for required assumptions to trust {crate}...", file=output_file)
-                complete_analysis(crate, horn_solver = use_horn_solver, file = output_file, local = args.path)  # Pass the file object to complete_analysis
+                complete_analysis(crate, horn_solver = use_horn_solver, file = output_file, local = args.path)  
         else:
             print(f"Solving for required assumptions to trust {crate}...")
             complete_analysis(crate, horn_solver = use_horn_solver, file = sys.stdout, local = args.path)

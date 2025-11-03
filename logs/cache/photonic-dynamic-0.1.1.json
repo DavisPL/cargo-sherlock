@@ -1,0 +1,147 @@
+{
+  "rustsec_label": "Safe",
+  "in_rustsec_patched": false,
+  "in_rustsec_current": false,
+  "in_rust_sec": false,
+  "rustsec_tag": null,
+  "developers": [
+    "fooker"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "downloads": 2021,
+  "num_side_effects": 0,
+  "failed_rudra": false,
+  "audits": [],
+  "dependencies": [
+    [
+      "anyhow",
+      "1.0.100"
+    ],
+    [
+      "palette",
+      "0.7.6"
+    ],
+    [
+      "fast-srgb8",
+      "1.0.0"
+    ],
+    [
+      "palette_derive",
+      "0.7.6"
+    ],
+    [
+      "by_address",
+      "2.1.0"
+    ],
+    [
+      "proc-macro2",
+      "1.0.103"
+    ],
+    [
+      "unicode-ident",
+      "1.0.22"
+    ],
+    [
+      "quote",
+      "1.0.41"
+    ],
+    [
+      "syn",
+      "2.0.108"
+    ],
+    [
+      "photonic",
+      "0.1.1"
+    ],
+    [
+      "futures",
+      "0.3.31"
+    ],
+    [
+      "futures-channel",
+      "0.3.31"
+    ],
+    [
+      "futures-core",
+      "0.3.31"
+    ],
+    [
+      "futures-io",
+      "0.3.31"
+    ],
+    [
+      "futures-sink",
+      "0.3.31"
+    ],
+    [
+      "futures-task",
+      "0.3.31"
+    ],
+    [
+      "futures-util",
+      "0.3.31"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.16"
+    ],
+    [
+      "pin-utils",
+      "0.1.0"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "rand",
+      "0.9.2"
+    ],
+    [
+      "rand_core",
+      "0.9.3"
+    ],
+    [
+      "serde",
+      "1.0.228"
+    ],
+    [
+      "serde_core",
+      "1.0.228"
+    ],
+    [
+      "serde_derive",
+      "1.0.228"
+    ],
+    [
+      "tokio",
+      "1.48.0"
+    ],
+    [
+      "tokio-stream",
+      "0.1.17"
+    ],
+    [
+      "serde-value",
+      "0.7.0"
+    ],
+    [
+      "ordered-float",
+      "5.1.0"
+    ]
+  ],
+  "passed_audit": false,
+  "num_unsafe_calls": 0,
+  "miri": false,
+  "past_audit": false,
+  "miri_details": {
+    "status": "ok",
+    "passed": 0,
+    "failed": 0,
+    "ignored": 0,
+    "measured": 0,
+    "filtered_out": 0,
+    "time_seconds": 0.0
+  }
+}

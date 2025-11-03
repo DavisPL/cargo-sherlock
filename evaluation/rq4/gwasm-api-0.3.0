@@ -1,24 +1,22 @@
 Solving for required assumptions to trust gwasm-api-0.3.0...
-╭──────────────── Analysis Report for gwasm-api-0.3.0 ─────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     █████████████░░░░░░░ 65           │
-│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
-│  Severity Label:                   CRITICAL                          │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • gwasm-api-0.3.0 has many downloads: 40 cost                       │
-│  • gwasm-api-0.3.0 having many downloads implies it is safe: 25      │
-│  cost                                                                │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • gwasm-api-0.3.0 failing a Miri test implies it is unsafe: 50      │
-│  cost                                                                │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────── Analysis Report for gwasm-api-0.3.0 ────────────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     █████████████░░░░░░░ 65                                         │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                                         │
+│  Severity Label:                   CRITICAL                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ───────────────────────╮                             
+│                                                                       │                             
+│  • gwasm-api-0.3.0 has many downloads: 40 cost                        │                             
+│  • gwasm-api-0.3.0 having many downloads implies it is safe: 25 cost  │                             
+│                                                                       │                             
+╰───────────────────────────────────────────────────────────────────────╯                             
+╭───────────────────── Assumptions for Distrusting ─────────────────────╮                             
+│                                                                       │                             
+│  • gwasm-api-0.3.0 failing a Miri test implies it is unsafe: 50 cost  │                             
+│                                                                       │                             
+╰───────────────────────────────────────────────────────────────────────╯                             
 
                                              
   Details: /logs/cache/gwasm-api-0.3.0.json  

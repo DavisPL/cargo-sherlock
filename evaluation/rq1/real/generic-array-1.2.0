@@ -1,22 +1,23 @@
 Solving for required assumptions to trust generic-array-1.2.0...
-╭─────────────────────────────────── Analysis Report for generic-array-1.2.0 ────────────────────────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)                                                         │
-│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 20                                                     │
-│  Distrust Cost (higher is better): ██████████████░░░░░░ 68                                                     │
-│  Severity Label:                   LOW_SEVERITY                                                                │
-╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-╭───────────────────────── Assumptions for Trusting ──────────────────────────╮                                   
-│                                                                             │                                   
-│  • generic-array-1.2.0 has a past audit implies it is safe: 20 cost         │                                   
-│                                                                             │                                   
-╰─────────────────────────────────────────────────────────────────────────────╯                                   
-╭──────────────────────── Assumptions for Distrusting ────────────────────────╮                                   
-│                                                                             │                                   
-│  • generic-array-1.2.0 has many side effects: 8 cost                        │                                   
-│  • generic-array-1.2.0 has many side effects implies it is unsafe: 60 cost  │                                   
-│                                                                             │                                   
-╰─────────────────────────────────────────────────────────────────────────────╯                                   
+╭────────────── Analysis Report for generic-array-1.2.0 ───────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 20           │
+│  Distrust Cost (higher is better): ██████████████░░░░░░ 68           │
+│  Severity Label:                   LOW_SEVERITY                      │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • generic-array-1.2.0 has a past audit implies it is safe: 20 cost  │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • generic-array-1.2.0 has many side effects: 8 cost                 │
+│  • generic-array-1.2.0 has many side effects implies it is unsafe:   │
+│  60 cost                                                             │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
 
                                                  
   Details: /logs/cache/generic-array-1.2.0.json  

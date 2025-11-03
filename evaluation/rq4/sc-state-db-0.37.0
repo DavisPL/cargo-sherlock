@@ -1,25 +1,23 @@
 Solving for required assumptions to trust sc-state-db-0.37.0...
-╭─────────────── Analysis Report for sc-state-db-0.37.0 ───────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 21           │
-│  Distrust Cost (higher is better): ██████████████████░░ 90           │
-│  Severity Label:                   LOW_SEVERITY                      │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • sc-state-db-0.37.0 has many stars and forks: 1 cost               │
-│  • sc-state-db-0.37.0 having many stars and forks implies it is      │
-│  safe: 20 cost                                                       │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • sc-state-db-0.37.0 has many side effects: 30 cost                 │
-│  • sc-state-db-0.37.0 has many side effects implies it is unsafe:    │
-│  60 cost                                                             │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────── Analysis Report for sc-state-db-0.37.0 ──────────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 21                                         │
+│  Distrust Cost (higher is better): ██████████████████░░ 90                                         │
+│  Severity Label:                   LOW_SEVERITY                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭─────────────────────────── Assumptions for Trusting ───────────────────────────╮                    
+│                                                                                │                    
+│  • sc-state-db-0.37.0 has many stars and forks: 1 cost                         │                    
+│  • sc-state-db-0.37.0 having many stars and forks implies it is safe: 20 cost  │                    
+│                                                                                │                    
+╰────────────────────────────────────────────────────────────────────────────────╯                    
+╭───────────────────────── Assumptions for Distrusting ──────────────────────────╮                    
+│                                                                                │                    
+│  • sc-state-db-0.37.0 has many side effects: 30 cost                           │                    
+│  • sc-state-db-0.37.0 has many side effects implies it is unsafe: 60 cost      │                    
+│                                                                                │                    
+╰────────────────────────────────────────────────────────────────────────────────╯                    
 
                                                 
   Details: /logs/cache/sc-state-db-0.37.0.json  

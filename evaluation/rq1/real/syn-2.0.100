@@ -1,22 +1,24 @@
 Solving for required assumptions to trust syn-2.0.100...
-╭─────────────────────────────────────── Analysis Report for syn-2.0.100 ────────────────────────────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)                                                         │
-│  Trust Cost (lower is better):     █░░░░░░░░░░░░░░░░░░░ 6                                                      │
-│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                                                     │
-│  Severity Label:                   SAFE                                                                        │
-╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-╭──────────────────────── Assumptions for Trusting ────────────────────────╮                                      
-│                                                                          │                                      
-│  • syn-2.0.100 having all trusted developers implies it is safe: 5 cost  │                                      
-│  • dtolnay being in the trusted list implies they are trusted: 1 cost    │                                      
-│                                                                          │                                      
-╰──────────────────────────────────────────────────────────────────────────╯                                      
-╭────────────────────── Assumptions for Distrusting ───────────────────────╮                                      
-│                                                                          │                                      
-│  • syn-2.0.100 failing a Miri test implies it is unsafe: 50 cost         │                                      
-│                                                                          │                                      
-╰──────────────────────────────────────────────────────────────────────────╯                                      
+╭────────────────── Analysis Report for syn-2.0.100 ───────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     █░░░░░░░░░░░░░░░░░░░ 6            │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
+│  Severity Label:                   SAFE                              │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • syn-2.0.100 having all trusted developers implies it is safe: 5   │
+│  cost                                                                │
+│  • dtolnay being in the trusted list implies they are trusted: 1     │
+│  cost                                                                │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • syn-2.0.100 failing a Miri test implies it is unsafe: 50 cost     │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
 
                                          
   Details: /logs/cache/syn-2.0.100.json  

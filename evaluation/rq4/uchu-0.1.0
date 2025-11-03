@@ -1,27 +1,25 @@
 Solving for required assumptions to trust uchu-0.1.0...
-╭─────────────────── Analysis Report for uchu-0.1.0 ───────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     ██████░░░░░░░░░░░░░░ 30           │
-│  Distrust Cost (higher is better): ████████████████████ 100          │
-│  Severity Label:                   LOW_SEVERITY                      │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • uchu-0.1.0 having no side effects and having all safe             │
-│  dependencies implies it is safe: 10 cost                            │
-│  • clap-4.5.32 having a current audit implies it is safe: 5 cost     │
-│  • clap_builder-4.5.32 having a current audit implies it is safe: 5  │
-│  cost                                                                │
-│  • anstyle-1.0.10 having a current audit implies it is safe: 5 cost  │
-│  • clap_lex-0.7.4 having a current audit implies it is safe: 5 cost  │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • uchu-0.1.0 is unsafe: 100 cost                                    │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────── Analysis Report for uchu-0.1.0 ──────────────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     ██████░░░░░░░░░░░░░░ 30                                         │
+│  Distrust Cost (higher is better): ████████████████████ 100                                        │
+│  Severity Label:                   LOW_SEVERITY                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭───────────────────────────────────── Assumptions for Trusting ─────────────────────────────────────╮
+│                                                                                                    │
+│  • uchu-0.1.0 having no side effects and having all safe dependencies implies it is safe: 10 cost  │
+│  • clap-4.5.32 having a current audit implies it is safe: 5 cost                                   │
+│  • clap_builder-4.5.32 having a current audit implies it is safe: 5 cost                           │
+│  • anstyle-1.0.10 having a current audit implies it is safe: 5 cost                                │
+│  • clap_lex-0.7.4 having a current audit implies it is safe: 5 cost                                │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────── Assumptions for Distrusting ────────────────────────────────────╮
+│                                                                                                    │
+│  • uchu-0.1.0 is unsafe: 100 cost                                                                  │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
 
                                         
   Details: /logs/cache/uchu-0.1.0.json  

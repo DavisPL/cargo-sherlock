@@ -1,22 +1,23 @@
 Solving for required assumptions to trust tracing-core-0.1.33...
-╭─────────────────────────────────── Analysis Report for tracing-core-0.1.33 ────────────────────────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)                                                         │
-│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 20                                                     │
-│  Distrust Cost (higher is better): ███████████████░░░░░ 77                                                     │
-│  Severity Label:                   LOW_SEVERITY                                                                │
-╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-╭───────────────────────── Assumptions for Trusting ──────────────────────────╮                                   
-│                                                                             │                                   
-│  • tracing-core-0.1.33 has a past audit implies it is safe: 20 cost         │                                   
-│                                                                             │                                   
-╰─────────────────────────────────────────────────────────────────────────────╯                                   
-╭──────────────────────── Assumptions for Distrusting ────────────────────────╮                                   
-│                                                                             │                                   
-│  • tracing-core-0.1.33 has many side effects: 17 cost                       │                                   
-│  • tracing-core-0.1.33 has many side effects implies it is unsafe: 60 cost  │                                   
-│                                                                             │                                   
-╰─────────────────────────────────────────────────────────────────────────────╯                                   
+╭────────────── Analysis Report for tracing-core-0.1.33 ───────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 20           │
+│  Distrust Cost (higher is better): ███████████████░░░░░ 77           │
+│  Severity Label:                   LOW_SEVERITY                      │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • tracing-core-0.1.33 has a past audit implies it is safe: 20 cost  │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • tracing-core-0.1.33 has many side effects: 17 cost                │
+│  • tracing-core-0.1.33 has many side effects implies it is unsafe:   │
+│  60 cost                                                             │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
 
                                                  
   Details: /logs/cache/tracing-core-0.1.33.json  

@@ -10,6 +10,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+import argparse
+import sys
+from pathlib import Path
 
 CRATE_PREFIX = "supply-chain-trust-example-crate-"
 CSV_FILE = "top100_crates.csv"
@@ -375,6 +378,7 @@ def plot_severity_heatmap_from_csv(
 
     plt.tight_layout()
     plt.savefig("severity_heatmap.pdf", bbox_inches="tight")
+    print("Saved severity heatmap to 'severity_heatmap.pdf'")
 
 def main():
     run_top100_crates(CSV_FILE, OUTPUT_DIR_REAL)

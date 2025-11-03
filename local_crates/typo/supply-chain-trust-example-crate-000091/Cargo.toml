@@ -91,6 +91,10 @@ name = "task_join_map"
 path = "tests/task_join_map.rs"
 
 [[test]]
+name = "task_join_queue"
+path = "tests/task_join_queue.rs"
+
+[[test]]
 name = "task_tracker"
 path = "tests/task_tracker.rs"
 
@@ -104,9 +108,9 @@ path = "tests/udp.rs"
 
 [package]
 edition = "2021"
-rust-version = "1.70"
+rust-version = "1.71"
 name = "supply-chain-trust-example-crate-000091"
-version = "0.7.16"
+version = "0.7.17"
 authors = [ "Anonymous",]
 build = false
 autolib = false
@@ -206,9 +210,9 @@ features = [ "full",]
 [lints.rust.unexpected_cfgs]
 level = "warn"
 priority = 0
-check-cfg = [ "cfg(fuzzing)", "cfg(loom)", "cfg(mio_unsupported_force_poll_poll)", "cfg(tokio_allow_from_blocking_fd)", "cfg(tokio_internal_mt_counters)", "cfg(tokio_no_parking_lot)", "cfg(tokio_no_tuning_tests)", "cfg(tokio_taskdump)", "cfg(tokio_unstable)", "cfg(tokio_uring)", "cfg(target_os, values(\"cygwin\"))",]
+check-cfg = [ "cfg(fuzzing)", "cfg(loom)", "cfg(mio_unsupported_force_poll_poll)", "cfg(tokio_allow_from_blocking_fd)", "cfg(tokio_internal_mt_counters)", "cfg(tokio_no_parking_lot)", "cfg(tokio_no_tuning_tests)", "cfg(tokio_unstable)", "cfg(target_os, values(\"cygwin\"))",]
 
 [package.metadata.docs.rs]
 all-features = true
-rustc-args = [ "--cfg", "docsrs", "--cfg", "tokio_unstable",]
 rustdoc-args = [ "--cfg", "docsrs", "--cfg", "tokio_unstable",]
+rustc-args = [ "--cfg", "docsrs", "--cfg", "tokio_unstable",]

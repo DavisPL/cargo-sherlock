@@ -1,23 +1,22 @@
 Solving for required assumptions to trust air-execution-info-collector-0.7.14...
-╭────── Analysis Report for air-execution-info-collector-0.7.14 ───────╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     ███████████░░░░░░░░░ 57           │
-│  Distrust Cost (higher is better): ████████████████████ 100          │
-│  Severity Label:                   MEDIUM_SEVERITY                   │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • air-execution-info-collector-0.7.14 has many downloads: 32 cost   │
-│  • air-execution-info-collector-0.7.14 having many downloads         │
-│  implies it is safe: 25 cost                                         │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • air-execution-info-collector-0.7.14 is unsafe: 100 cost           │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭───────────────────── Analysis Report for air-execution-info-collector-0.7.14 ──────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     ███████████░░░░░░░░░ 57                                         │
+│  Distrust Cost (higher is better): ████████████████████ 100                                        │
+│  Severity Label:                   MEDIUM_SEVERITY                                                 │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭──────────────────────────────── Assumptions for Trusting ─────────────────────────────────╮         
+│                                                                                           │         
+│  • air-execution-info-collector-0.7.14 has many downloads: 32 cost                        │         
+│  • air-execution-info-collector-0.7.14 having many downloads implies it is safe: 25 cost  │         
+│                                                                                           │         
+╰───────────────────────────────────────────────────────────────────────────────────────────╯         
+╭─────────────────────────────── Assumptions for Distrusting ───────────────────────────────╮         
+│                                                                                           │         
+│  • air-execution-info-collector-0.7.14 is unsafe: 100 cost                                │         
+│                                                                                           │         
+╰───────────────────────────────────────────────────────────────────────────────────────────╯         
 
                                                                  
   Details: /logs/cache/air-execution-info-collector-0.7.14.json  

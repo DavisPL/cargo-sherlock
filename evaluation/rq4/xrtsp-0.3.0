@@ -1,23 +1,22 @@
 Solving for required assumptions to trust xrtsp-0.3.0...
-╭────────────────── Analysis Report for xrtsp-0.3.0 ───────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 21           │
-│  Distrust Cost (higher is better): ████████████████████ 100          │
-│  Severity Label:                   LOW_SEVERITY                      │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • xrtsp-0.3.0 has many stars and forks: 1 cost                      │
-│  • xrtsp-0.3.0 having many stars and forks implies it is safe: 20    │
-│  cost                                                                │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • xrtsp-0.3.0 is unsafe: 100 cost                                   │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────── Analysis Report for xrtsp-0.3.0 ──────────────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 21                                         │
+│  Distrust Cost (higher is better): ████████████████████ 100                                        │
+│  Severity Label:                   LOW_SEVERITY                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭─────────────────────── Assumptions for Trusting ────────────────────────╮                           
+│                                                                         │                           
+│  • xrtsp-0.3.0 has many stars and forks: 1 cost                         │                           
+│  • xrtsp-0.3.0 having many stars and forks implies it is safe: 20 cost  │                           
+│                                                                         │                           
+╰─────────────────────────────────────────────────────────────────────────╯                           
+╭────────────────────── Assumptions for Distrusting ──────────────────────╮                           
+│                                                                         │                           
+│  • xrtsp-0.3.0 is unsafe: 100 cost                                      │                           
+│                                                                         │                           
+╰─────────────────────────────────────────────────────────────────────────╯                           
 
                                          
   Details: /logs/cache/xrtsp-0.3.0.json  

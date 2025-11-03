@@ -1,25 +1,24 @@
 Solving for required assumptions to trust sc16is752-0.1.1...
-╭──────────────── Analysis Report for sc16is752-0.1.1 ─────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 20           │
-│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50           │
-│  Severity Label:                   LOW_SEVERITY                      │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • sc16is752-0.1.1 having no side effects and having all safe        │
-│  dependencies implies it is safe: 10 cost                            │
-│  • embedded-hal-1.0.0 having no side effects and having all safe     │
-│  dependencies implies it is safe: 10 cost                            │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • sc16is752-0.1.1 failing a Miri test implies it is unsafe: 50      │
-│  cost                                                                │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────── Analysis Report for sc16is752-0.1.1 ────────────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     ████░░░░░░░░░░░░░░░░ 20                                         │
+│  Distrust Cost (higher is better): ██████████░░░░░░░░░░ 50                                         │
+│  Severity Label:                   LOW_SEVERITY                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭───────────────────────────────────── Assumptions for Trusting ─────────────────────────────────────╮
+│                                                                                                    │
+│  • sc16is752-0.1.1 having no side effects and having all safe dependencies implies it is safe: 10  │
+│  cost                                                                                              │
+│  • embedded-hal-1.0.0 having no side effects and having all safe dependencies implies it is safe:  │
+│  10 cost                                                                                           │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────── Assumptions for Distrusting ────────────────────────────────────╮
+│                                                                                                    │
+│  • sc16is752-0.1.1 failing a Miri test implies it is unsafe: 50 cost                               │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
 
                                              
   Details: /logs/cache/sc16is752-0.1.1.json  

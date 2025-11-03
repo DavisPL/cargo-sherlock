@@ -1,22 +1,24 @@
 Solving for required assumptions to trust scopeguard-1.2.0...
-╭───────────────────────────────────── Analysis Report for scopeguard-1.2.0 ─────────────────────────────────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)                                                         │
-│  Trust Cost (lower is better):     █░░░░░░░░░░░░░░░░░░░ 5                                                      │
-│  Distrust Cost (higher is better): █████████████████░░░ 84                                                     │
-│  Severity Label:                   SAFE                                                                        │
-╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-╭──────────────────────── Assumptions for Trusting ────────────────────────╮                                      
-│                                                                          │                                      
-│  • scopeguard-1.2.0 having a current audit implies it is safe: 5 cost    │                                      
-│                                                                          │                                      
-╰──────────────────────────────────────────────────────────────────────────╯                                      
-╭────────────────────── Assumptions for Distrusting ───────────────────────╮                                      
-│                                                                          │                                      
-│  • scopeguard-1.2.0 has many side effects: 24 cost                       │                                      
-│  • scopeguard-1.2.0 has many side effects implies it is unsafe: 60 cost  │                                      
-│                                                                          │                                      
-╰──────────────────────────────────────────────────────────────────────────╯                                      
+╭──────────────── Analysis Report for scopeguard-1.2.0 ────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)               │
+│  Trust Cost (lower is better):     █░░░░░░░░░░░░░░░░░░░ 5            │
+│  Distrust Cost (higher is better): █████████████████░░░ 84           │
+│  Severity Label:                   SAFE                              │
+╰──────────────────────────────────────────────────────────────────────╯
+────────────────────────────────────────────────────────────────────────
+╭────────────────────── Assumptions for Trusting ──────────────────────╮
+│                                                                      │
+│  • scopeguard-1.2.0 having a current audit implies it is safe: 5     │
+│  cost                                                                │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
+╭──────────────────── Assumptions for Distrusting ─────────────────────╮
+│                                                                      │
+│  • scopeguard-1.2.0 has many side effects: 24 cost                   │
+│  • scopeguard-1.2.0 has many side effects implies it is unsafe: 60   │
+│  cost                                                                │
+│                                                                      │
+╰──────────────────────────────────────────────────────────────────────╯
 
                                               
   Details: /logs/cache/scopeguard-1.2.0.json  

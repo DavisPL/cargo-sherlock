@@ -1,22 +1,22 @@
 Solving for required assumptions to trust agave-move-loader-program-0.1.0...
-╭──────── Analysis Report for agave-move-loader-program-0.1.0 ─────────╮
-│  Cost Range:                       0 (Min) — 100 (Max)               │
-│  Trust Cost (lower is better):     ██░░░░░░░░░░░░░░░░░░ 10           │
-│  Distrust Cost (higher is better): ████████████████████ 100          │
-│  Severity Label:                   SAFE                              │
-╰──────────────────────────────────────────────────────────────────────╯
-────────────────────────────────────────────────────────────────────────
-╭────────────────────── Assumptions for Trusting ──────────────────────╮
-│                                                                      │
-│  • agave-move-loader-program-0.1.0 having no side effects and        │
-│  having all safe dependencies implies it is safe: 10 cost            │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-╭──────────────────── Assumptions for Distrusting ─────────────────────╮
-│                                                                      │
-│  • agave-move-loader-program-0.1.0 is unsafe: 100 cost               │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
+╭─────────────────────── Analysis Report for agave-move-loader-program-0.1.0 ────────────────────────╮
+│  Cost Range:                       0 (Min) — 100 (Max)                                             │
+│  Trust Cost (lower is better):     ██░░░░░░░░░░░░░░░░░░ 10                                         │
+│  Distrust Cost (higher is better): ████████████████████ 100                                        │
+│  Severity Label:                   SAFE                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+╭───────────────────────────────────── Assumptions for Trusting ─────────────────────────────────────╮
+│                                                                                                    │
+│  • agave-move-loader-program-0.1.0 having no side effects and having all safe dependencies         │
+│  implies it is safe: 10 cost                                                                       │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────── Assumptions for Distrusting ────────────────────────────────────╮
+│                                                                                                    │
+│  • agave-move-loader-program-0.1.0 is unsafe: 100 cost                                             │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
 
                                                              
   Details: /logs/cache/agave-move-loader-program-0.1.0.json  
