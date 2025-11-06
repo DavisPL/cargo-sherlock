@@ -70,7 +70,7 @@ hyper,LOW_SEVERITY,CRITICAL
 ahash,SAFE,SAFE
 num_cpus,SAFE,CRITICAL
 futures-core,SAFE,CRITICAL
-windows-sys,LOW_SEVERITY,SAFE
+windows-sys,LOW_SEVERITY,CRITICAL
 futures-util,SAFE,CRITICAL
 futures-task,SAFE,CRITICAL
 sha2,SAFE,CRITICAL

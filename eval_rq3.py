@@ -486,13 +486,13 @@ def plot_rustsec_grouped_by_sherlock(
 
     # axes/labels
     ax.set_xticks(x)
-    ax.set_xticklabels(rustsec_order, fontsize=13)
-    ax.set_xlabel("RustSec Label", fontsize=14)
-    ax.set_ylabel("Number of Crates", fontsize=14)
-    ax.tick_params(axis="y", labelsize=12)
+    ax.set_xticklabels(rustsec_order, fontsize=14)
+    ax.set_xlabel("RustSec Label", fontsize=16)
+    ax.set_ylabel("Number of Crates", fontsize=16)
+    ax.tick_params(axis="y", labelsize=14)
 
     # legend
-    leg = ax.legend(title="Cargo-Sherlock Label", fontsize=12, title_fontsize=12, ncol=2,
+    leg = ax.legend(title="Cargo-Sherlock Label", fontsize=14, title_fontsize=14, ncol=2,
                     frameon=True, framealpha=0.95)
     leg.get_frame().set_facecolor("white")
     leg.get_frame().set_edgecolor("black")

@@ -5,17 +5,17 @@
   "in_rust_sec": false,
   "rustsec_tag": null,
   "developers": [
-    "Annonymous"
+    "Anonymous"
   ],
   "stars": 0,
   "forks": 0,
   "downloads": 171,
-  "num_side_effects": 0,
+  "num_side_effects": 7248,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [],
   "passed_audit": false,
-  "num_unsafe_calls": 0,
+  "num_unsafe_calls": 7248,
   "miri": true,
   "past_audit": false,
   "miri_details": {

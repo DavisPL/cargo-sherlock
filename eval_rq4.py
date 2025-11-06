@@ -189,8 +189,8 @@ def _counts_from_rc_present(df: pd.DataFrame, rc_col: str) -> dict:
     return {"total": total, "success": int(success), "timeout": int(timeout), "crash": int(crash)}
 
 def make_cdf_plot(df_times: pd.DataFrame, out_path: str = "rq4_cdf.pdf") -> None:
-    HORN_LABEL  = "Horn Clause Optimized"
-    NAIVE_LABEL = "Naive"
+    HORN_LABEL  = "Algorithm 2"
+    NAIVE_LABEL = "Algorithm 1"
     HORN_DIR    = os.path.join("evaluation", "rq4")
     timeout_threshold = TIMEOUT_SECS
 
@@ -232,15 +232,15 @@ def make_cdf_plot(df_times: pd.DataFrame, out_path: str = "rq4_cdf.pdf") -> None
     ax.axvline(timeout_threshold, color="black", linestyle="--",
                label=f"Timeout ({timeout_threshold}s)")
 
-    ax.set_xlabel("Time Taken (seconds)", fontsize=12)
-    ax.set_ylabel("Cumulative Probability", fontsize=12)
-    ax.set_title("CDF of Execution Time (with Timeouts)", fontsize=14, fontweight="bold")
+    ax.set_xlabel("Time Taken (seconds)", fontsize=14)
+    ax.set_ylabel("Cumulative Probability", fontsize=14)
+    # ax.set_title("CDF of Execution Time (with Timeouts)", fontsize=14, fontweight="bold")
     ax.legend(loc="lower right")
 
     table_data = [
-        ["Algorithm",   "Successful", "Timeout", "Crashed"],
-        ["Naive",       naive_counts["success"], naive_counts["timeout"], naive_counts["crash"]],
-        ["Horn Clause", horn_counts["success"],  horn_counts["timeout"],  horn_counts["crash"]],
+        ["",   "Successful", "Timeout", "Crashed"],
+        ["Algorithm 1",       naive_counts["success"], naive_counts["timeout"], naive_counts["crash"]],
+        ["Algorithm 2", horn_counts["success"],  horn_counts["timeout"],  horn_counts["crash"]],
     ]
 
     the_table = ax.table(
@@ -279,49 +279,102 @@ def _file_has_more_than_one_line(directory: str, name: str, version: str) -> boo
             return True
     return True
 
+from matplotlib.lines import Line2D  # at top of file
+
 def make_scatter_plot(df_times: pd.DataFrame, df_dep: pd.DataFrame, out_path: str = "rq4_scatter.pdf") -> None:
     HORN_DIR  = os.path.join("evaluation", "rq4")
     NAIVE_DIR = os.path.join("evaluation", "naive", "rq4")
 
-    mask_horn_exists = df_times.apply(lambda r: _file_exists(HORN_DIR, r["name"], r["version"]), axis=1)
-    df_times = df_times[mask_horn_exists].copy()
+    # Upper cap for y-axis
+    Y_CAP = 650.0
 
+    # ---- merge dependency counts ----
     if "crate_name" in df_dep.columns and "name" not in df_dep.columns:
         df_dep = df_dep.rename(columns={"crate_name": "name"})
-    df_m = pd.merge(df_times, df_dep[["name", "version", "dependency_count"]],
-                    on=["name", "version"], how="left")
+    df_m = pd.merge(
+        df_times,
+        df_dep[["name", "version", "dependency_count"]],
+        on=["name", "version"],
+        how="left",
+    )
 
+    # numeric times
     df_m["time_naive_num"] = pd.to_numeric(df_m.get("time_naive"), errors="coerce")
     df_m["time_horn_num"]  = pd.to_numeric(df_m.get("time_horn"),  errors="coerce")
 
+    # numeric return codes (0 = success, 1 = crash, NaN = timeout/unknown)
+    df_m["rc_naive_num"] = pd.to_numeric(df_m.get("rc_naive"), errors="coerce")
+    df_m["rc_horn_num"]  = pd.to_numeric(df_m.get("rc_horn"),  errors="coerce")
+
+    # limit to "reasonable" dependency counts
     df_m = df_m[df_m["dependency_count"] <= 400].copy()
 
-    df_m["keep_basic"] = df_m.apply(lambda r: _file_has_more_than_one_line(NAIVE_DIR, r["name"], r["version"]), axis=1)
-    df_m["keep_horn"]  = df_m.apply(lambda r: _file_has_more_than_one_line(HORN_DIR,  r["name"], r["version"]), axis=1)
+    # filters for "usable" outputs (for normal points only)
+    df_m["keep_basic"] = df_m.apply(
+        lambda r: _file_has_more_than_one_line(NAIVE_DIR, r["name"], r["version"]),
+        axis=1,
+    )
+    df_m["keep_horn"] = df_m.apply(
+        lambda r: _file_has_more_than_one_line(HORN_DIR, r["name"], r["version"]),
+        axis=1,
+    )
 
-    df_plot_basic = df_m.loc[
-        df_m["keep_basic"] & df_m["time_naive_num"].notna(),
-        ["name", "version", "dependency_count", "time_naive_num"]
+    # ---------- split into success / crash / timeout ----------
+
+    # Naive successes (circles)
+    df_plot_basic_ok = df_m.loc[
+        df_m["keep_basic"]
+        & df_m["time_naive_num"].notna()
+        & (df_m["rc_naive_num"] == 0),
+        ["name", "version", "dependency_count", "time_naive_num"],
     ].rename(columns={"time_naive_num": "time_basic_numeric"})
 
-    df_plot_horn = df_m.loc[
-        df_m["keep_horn"] & df_m["time_horn_num"].notna(),
-        ["name", "version", "dependency_count", "time_horn_num"]
+    # Naive crashes (crosses)
+    df_plot_basic_crash = df_m.loc[
+        (df_m["rc_naive_num"] == 1) & df_m["dependency_count"].notna(),
+        ["name", "version", "dependency_count"],
+    ]
+
+    # Naive timeouts (squares)
+    df_plot_basic_timeout = df_m.loc[
+        df_m["rc_naive_num"].isna() & df_m["dependency_count"].notna(),
+        ["name", "version", "dependency_count"],
+    ]
+
+    # Horn successes (circles)
+    df_plot_horn_ok = df_m.loc[
+        df_m["keep_horn"]
+        & df_m["time_horn_num"].notna()
+        & (df_m["rc_horn_num"] == 0),
+        ["name", "version", "dependency_count", "time_horn_num"],
     ].rename(columns={"time_horn_num": "time_horn_numeric"})
+
+    # Horn crashes (crosses)
+    df_plot_horn_crash = df_m.loc[
+        (df_m["rc_horn_num"] == 1) & df_m["dependency_count"].notna(),
+        ["name", "version", "dependency_count"],
+    ]
+
+    # Horn timeouts (squares)
+    df_plot_horn_timeout = df_m.loc[
+        df_m["rc_horn_num"].isna() & df_m["dependency_count"].notna(),
+        ["name", "version", "dependency_count"],
+    ]
+
+    # ---------- exponential fit (Horn successes only) ----------
 
     def f(x, A, B, C):
         return A * np.exp(B * x) + C
 
-    xh = df_plot_horn["dependency_count"].to_numpy(float)
-    yh = df_plot_horn["time_horn_numeric"].to_numpy(float)
+    xh = df_plot_horn_ok["dependency_count"].to_numpy(float)
+    yh = df_plot_horn_ok["time_horn_numeric"].to_numpy(float)
     m_fit = np.isfinite(xh) & np.isfinite(yh) & (yh > 0)
     xh_fit, yh_fit = xh[m_fit], yh[m_fit]
 
     fit_ok = False
-    A = B = C = np.nan
     R2 = np.nan
-    AIC = np.nan
     x_seg = y_seg = None
+    fit_label = None
 
     if yh_fit.size >= 3:
         order = np.argsort(xh_fit)
@@ -332,8 +385,7 @@ def make_scatter_plot(df_times: pd.DataFrame, df_dep: pd.DataFrame, out_path: st
         bounds = ([0.0, -np.inf, -np.inf], [np.inf, np.inf, np.inf])
 
         try:
-            popt, pcov = curve_fit(f, xh_fit, yh_fit, p0=p0, bounds=bounds, maxfev=30000)
-            A, B, C = popt
+            popt, _ = curve_fit(f, xh_fit, yh_fit, p0=p0, bounds=bounds, maxfev=30000)
             x_line = np.linspace(xh_fit.min(), xh_fit.max(), 700)
             y_line = f(x_line, *popt)
 
@@ -342,89 +394,213 @@ def make_scatter_plot(df_times: pd.DataFrame, df_dep: pd.DataFrame, out_path: st
             ss_tot = float(np.sum((yh_fit - yh_fit.mean())**2))
             R2 = 1 - ss_res / ss_tot if ss_tot > 0 else np.nan
 
-            n = len(yh_fit)
-            k = 3
-            if n > k and ss_res > 0:
-                AIC = n * float(np.log(ss_res / n)) + 2 * k
-
-            fit_ok = True
-
-            Y_CAP = 650.0
             under = y_line <= Y_CAP
             if not under.all():
                 idx = np.argmax(~under)
                 x_seg, y_seg = x_line[:idx], y_line[:idx]
             else:
                 x_seg, y_seg = x_line, y_line
+
+            fit_ok = True
+            fit_label = f"Exponential fit"
         except Exception:
             fit_ok = False
 
     sns.set_style("whitegrid")
     mpl.rcParams.update({
         "figure.dpi": 170, "savefig.dpi": 300,
-        "font.size": 10, "axes.labelsize": 12, "axes.titlesize": 16,
-        "legend.fontsize": 12,
+        "font.size": 16, "axes.labelsize": 16, "axes.titlesize": 118,
+        "legend.fontsize": 16,
         "pdf.fonttype": 42, "ps.fonttype": 42,
         "axes.spines.top": False, "axes.spines.right": False,
     })
 
     fig, ax = plt.subplots(figsize=(12.0, 6.8))
 
+    # successes: circles
     ax.scatter(
-        df_plot_basic["dependency_count"], df_plot_basic["time_basic_numeric"],
+        df_plot_basic_ok["dependency_count"], df_plot_basic_ok["time_basic_numeric"],
         color="#d62728", alpha=0.75, marker="o",
-        edgecolors="black", linewidths=0.9, s=46, label="Naive"
+        edgecolors="black", linewidths=0.9, s=46, label="_nolegend_",
     )
     ax.scatter(
-        df_plot_horn["dependency_count"], df_plot_horn["time_horn_numeric"],
+        df_plot_horn_ok["dependency_count"], df_plot_horn_ok["time_horn_numeric"],
         color="#1f77b4", alpha=0.85, marker="o",
-        edgecolors="black", linewidths=0.9, s=46, label="Horn Clause Optimized"
+        edgecolors="black", linewidths=0.9, s=46, label="_nolegend_",
     )
 
+    # fit line
     if fit_ok:
-        fit_label = f"Exponential fit: y = A e^{{Bx}} + C (R²={R2:.3f})"
-        ax.plot(x_seg, y_seg, linestyle="--", linewidth=2.2, color="#1f77b4", label=fit_label)
+        ax.plot(x_seg, y_seg, linestyle="--", linewidth=2.2, color="#1f77b4")
 
-    ax.axhline(TIMEOUT_SECS, linestyle="--", linewidth=1.2, color="#555555", alpha=0.9)
-    ax.annotate("Timeout (600 s)",
-                xy=(0.01, TIMEOUT_SECS), xycoords=("axes fraction", "data"),
-                xytext=(6, 4), textcoords="offset points",
-                fontsize=10, color="#555555",
-                ha="left", va="bottom",
-                bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="none", alpha=0.9))
+    # timeout line (uses module-level TIMEOUT_SECS)
+    ax.axhline(
+        TIMEOUT_SECS,
+        linestyle="--",
+        linewidth=1.0,
+        color="#555555",
+        alpha=0.7,
+        zorder=1,
+    )
+    # caption BELOW the line
+    ax.annotate(
+        f"Timeout ({TIMEOUT_SECS} s)",
+        xy=(0.01, TIMEOUT_SECS), xycoords=("axes fraction", "data"),
+        xytext=(6, -6), textcoords="offset points",
+        fontsize=14, color="#555555",
+        ha="left", va="top",
+        bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="none", alpha=0.9),
+    )
 
-    ax.set_xlabel("Number of Dependencies")
-    ax.set_ylabel("Time Taken (seconds)")
-    ax.set_title("Time Taken vs Number of Dependencies")
-
-    Y_CAP = 650.0
+    # y limits from successes
     LOWER_PAD_FRAC = 0.06
     LOWER_FLOOR = -10.0
     y_all = np.concatenate([
-        df_plot_basic["time_basic_numeric"].to_numpy(float),
-        df_plot_horn["time_horn_numeric"].to_numpy(float)
-    ])
+        df_plot_basic_ok["time_basic_numeric"].to_numpy(float),
+        df_plot_horn_ok["time_horn_numeric"].to_numpy(float),
+    ]) if (len(df_plot_basic_ok) or len(df_plot_horn_ok)) else np.array([0.0])
     y_all = y_all[np.isfinite(y_all) & (y_all >= 0)]
     y_lo = np.percentile(y_all, 0.5) if y_all.size else 0.0
     margin = LOWER_PAD_FRAC * (Y_CAP - y_lo)
     y_min = max(LOWER_FLOOR, y_lo - margin)
     ax.set_ylim(y_min, Y_CAP)
 
+    # x limits from successes
     x_all = np.concatenate([
-        df_plot_basic["dependency_count"].to_numpy(float),
-        df_plot_horn["dependency_count"].to_numpy(float)
-    ])
+        df_plot_basic_ok["dependency_count"].to_numpy(float),
+        df_plot_horn_ok["dependency_count"].to_numpy(float),
+    ]) if (len(df_plot_basic_ok) or len(df_plot_horn_ok)) else np.array([0.0, 1.0])
     x_all = x_all[np.isfinite(x_all)]
-    x_min, x_max = (x_all.min(), x_all.max()) if x_all.size else (0, 1)
-    x_pad = 0.02 * (x_max - x_min if x_max > x_min else 1)
+    x_min, x_max = (x_all.min(), x_all.max()) if x_all.size else (0.0, 1.0)
+    x_pad = 0.02 * (x_max - x_min if x_max > x_min else 1.0)
     ax.set_xlim(x_min - x_pad, x_max + x_pad)
 
+    # timeouts and crashes  
+    # Put timeouts a bit above the line, crashes even higher
+    TIMEOUT_Y = min(TIMEOUT_SECS + 18.0, Y_CAP - 10.0)
+    CRASH_Y   = min(TIMEOUT_SECS + 36.0, Y_CAP - 5.0)
+
+    # crashes: crosses above line
+    if not df_plot_basic_crash.empty:
+        ax.scatter(
+            df_plot_basic_crash["dependency_count"],
+            np.full(len(df_plot_basic_crash), CRASH_Y),
+            color="#d62728",
+            marker="x",
+            linewidths=1.8,
+            s=70,
+            zorder=6,
+            label="_nolegend_",
+        )
+    if not df_plot_horn_crash.empty:
+        ax.scatter(
+            df_plot_horn_crash["dependency_count"],
+            np.full(len(df_plot_horn_crash), CRASH_Y),
+            color="#1f77b4",
+            marker="x",
+            linewidths=1.8,
+            s=70,
+            zorder=6,
+            label="_nolegend_",
+        )
+
+    # timeouts: hollow squares above line (but below crashes)
+    if not df_plot_basic_timeout.empty:
+        ax.scatter(
+            df_plot_basic_timeout["dependency_count"],
+            np.full(len(df_plot_basic_timeout), TIMEOUT_Y),
+            facecolors="none",
+            edgecolors="#d62728",
+            marker="s",
+            linewidths=1.8,
+            s=80,
+            zorder=6,
+            label="_nolegend_",
+        )
+    if not df_plot_horn_timeout.empty:
+        ax.scatter(
+            df_plot_horn_timeout["dependency_count"],
+            np.full(len(df_plot_horn_timeout), TIMEOUT_Y),
+            facecolors="none",
+            edgecolors="#1f77b4",
+            marker="s",
+            linewidths=1.8,
+            s=80,
+            zorder=6,
+            label="_nolegend_",
+        )
+
     ax.grid(True, which="both", linewidth=0.6, alpha=0.28)
-    ax.legend(loc="lower right", frameon=True, fancybox=True, framealpha=0.95)
+
+    # 2×3 table (Naive/Horn × success/timeout/crash)
+    table_handles = [
+        # col 1: success
+        Line2D([0], [0], marker="o", linestyle="none",
+               markerfacecolor="#d62728", markeredgecolor="black",
+               label="Algorithm 1: success"),
+        Line2D([0], [0], marker="o", linestyle="none",
+               markerfacecolor="#1f77b4", markeredgecolor="black",
+               label="Algorithm 2: success"),
+
+        # col 2: timeout
+        Line2D([0], [0], marker="s", linestyle="none",
+               markerfacecolor="none", markeredgecolor="#d62728",
+               label="Algorithm 1: timeout"),
+        Line2D([0], [0], marker="s", linestyle="none",
+               markerfacecolor="none", markeredgecolor="#1f77b4",
+               label="Algorithm 2: timeout"),
+        
+        # col 3: crash
+        Line2D([0], [0], marker="x", linestyle="none",
+               color="#d62728", markeredgewidth=1.8,
+               label="Algorithm 1: crash"),
+        Line2D([0], [0], marker="x", linestyle="none",
+               color="#1f77b4", markeredgewidth=1.8,
+               label="Algorithm 2: crash"),
+    ]
+
+    legend_table = ax.legend(
+        handles=table_handles,
+        ncol=3,
+        loc="lower right",
+        bbox_to_anchor=(1.0, 0.06),   # slightly above bottom
+        frameon=True,
+        fancybox=True,
+        framealpha=0.95,
+        columnspacing=1.5,
+        handletextpad=0.8,
+        borderpad=0.8,
+        labelspacing=0.4,
+        fontsize=14,
+    )
+
+    # fit label, drawn just below the table, without its own frame,
+    # so it visually appears inside the same box
+    if fit_ok and fit_label is not None:
+        fit_handle = Line2D(
+            [0], [0],
+            linestyle="--",
+            color="#1f77b4",
+            linewidth=2.0,
+            label=fit_label,
+        )
+        legend_fit = ax.legend(
+            handles=[fit_handle],
+            loc="lower right",
+            bbox_to_anchor=(1.0, 0.013),  # a little below the table, same x
+            frameon=False,
+            handlelength=3.0,
+            fontsize=14,
+        )
+        ax.add_artist(legend_table)
+
+    ax.set_xlabel("Number of Dependencies")
+    ax.set_ylabel("Time Taken (seconds)")
 
     plt.tight_layout()
     plt.savefig(out_path, bbox_inches="tight")
-    LOGGER.info("[OK] Saved scatter (focused + exponential fit) to %s", out_path)
+    LOGGER.info("[OK] Saved scatter (with crashes + timeouts + table+fit legend) to %s", out_path)
+
 
 def main():
 

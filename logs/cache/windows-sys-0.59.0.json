@@ -7,48 +7,52 @@
   "developers": [
     "kennykerr"
   ],
-  "stars": 11086,
-  "forks": 538,
-  "downloads": 272483764,
+  "stars": 11686,
+  "forks": 583,
+  "downloads": 499403450,
   "num_side_effects": 0,
   "failed_rudra": false,
   "audits": [],
   "dependencies": [
     [
       "windows-targets",
-      "0.53.0"
+      "0.53.5"
+    ],
+    [
+      "windows-link",
+      "0.2.1"
     ],
     [
       "windows_aarch64_gnullvm",
-      "0.53.0"
+      "0.53.1"
     ],
     [
       "windows_aarch64_msvc",
-      "0.53.0"
+      "0.53.1"
     ],
     [
       "windows_i686_gnu",
-      "0.53.0"
+      "0.53.1"
     ],
     [
       "windows_i686_gnullvm",
-      "0.53.0"
+      "0.53.1"
     ],
     [
       "windows_i686_msvc",
-      "0.53.0"
+      "0.53.1"
     ],
     [
       "windows_x86_64_gnu",
-      "0.53.0"
+      "0.53.1"
     ],
     [
       "windows_x86_64_gnullvm",
-      "0.53.0"
+      "0.53.1"
     ],
     [
       "windows_x86_64_msvc",
-      "0.53.0"
+      "0.53.1"
     ]
   ],
   "passed_audit": false,
