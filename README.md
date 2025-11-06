@@ -71,21 +71,19 @@ This default command will use our cached results to generate the heatmap (Figure
 
 We also provide an option to run the experiment in different modes based on your time and resource availability:
 
-
-
-1. Full Experiment (Expected to take around _ hours):
+1. Full Experiment 
 ```Bash
 python3 eval_rq1.py -m full
 ```
-This version will run Cargo-Sherlock on top 100 crates, create their typosquatted versions, run Cargo-Sherlock on these typosquatted crates, and analyze the results to produce the heatmap.
+This version will run Cargo-Sherlock on top 100 crates, delete existing typosquatted crates, create them again, run Cargo-Sherlock on these typosquatted crates, and analyze the results to produce the heatmap.
 
-2. Partial Experiment using Existing Crates (Expected to take around _ minutes):
+2. Partial Experiment using Existing Crates:
 ```Bash
 python3 eval_rq1.py -m partial
 ```
 This version will skip the recreating of synthetic typosquatted crates and will use the already provided files in `local_crates/typo_crates` directory. It will run Cargo-Sherlock on these crates and analyze the results to produce the heatmap.
 
-3. Most Efficient Experiment using Pre-computed Results (Expected to take around _ minutes):
+3. Most Efficient Experiment using Pre-computed Results:
 ```Bash
 python3 eval_rq1.py -m cache
 ```
@@ -98,7 +96,7 @@ We will replicate the experiment and the regenerate the figure 5(b) presented in
 ```Bash
 python3 eval_rq2.py
 ```
-This experiment is expected to take around _ minutes to run so we do not provide any caching or partial modes for this experiment. The table will be printed on the terminal and also saved to `rq2_results.txt`. This table corresponds to Figure 5(b) in the paper. The output should look something like this:
+This experiment is expected to take around 10-15 minutes to run so we do not provide any caching or partial modes for this experiment. The table will be printed on the terminal and also saved to `rq2_results.txt`. This table corresponds to Figure 5(b) in the paper. The output should look something like this:
 
 ![image here](rq2_table.png "Real World Supply Chain Risks Output Table")
 
@@ -158,6 +156,8 @@ python3 eval_rq4.py -m full
 
 This should run Cargo-Sherlock on 1000 random crates from crates.io using both algorithms, measure the time taken, and then recreate the plots.
 
+Note: Even in full mode, the cache files are used for metadata. This is because, the question aimed to evaluate the performance of the two algorithms - so the metadata collection time is not relevant to this research question. If you really want to re-collect metadata for all crates, you can delete the files in `logs/` directory before running the full experiment. But than you will have to run the experiment twice, the first run should build the cache files and than second run can be used to measure the time taken by both algorithms.
+
 ## Directory structure
 
 The repository contains:
@@ -191,7 +191,19 @@ The repository contains:
 
 ## Running the tool on your own examples
 
-Cargo-Sherlock can be run on any Rust crate available on crates.io or on a local path. It has two modes: logs mode and trust mode.
+Cargo-Sherlock can be used to analyze any Rust crate available on crates.io or on a local path. It has two modes: logs mode and trust mode. The tool can be run as follows:
+
+```Bash
+python3 sherlock.py <mode> <crate-name> <crate-version> [-p <absolute-path-to-local-crate>] [-o <output-file>] [-u] [--no-horn]
+```
+The flags are defined as follows:
+- `<crate-name>` is a required argument specifying the name of the crate to analyze.
+- `<crate-version>` is the version of the crate to analyze (optional, if not specified, latest version will be used). For local crates, if version is not specified, it is assumed to be 1.0.0.
+- `<mode>` can be either `logs` or `trust` (more on these modes below).
+- `-p <absolute-path-to-local-crate>`: Optional - Specifies a local path to the crate instead of fetching it from crates.io.
+- `-o <output-file>`: Optional - Specifies an output file to save the results. If not provided, results will be printed to the console and saved to logs directory.
+- `-u`: Optional - If provided, tool updates the metadata cache for RustSec advisories before running the analysis.
+- `--no-horn`: Optional - If provided, tool uses only the Algorithm 1 (Naive) from the paper to solve the mintrust problem - If not provided, tool uses Algorithm 2 (Horn) by default.
 
 ### Logs Mode
 
@@ -257,7 +269,7 @@ Logging information for anyhow-1.0.100:
  'stars': 6249}
 ```
 
-The tool can also be run on a local path by providing the path instead of crate name:
+An example usage on a local crate is also shown below. You can run logs mode on a local path by providing the path instead of crate name:
 
 ```Bash
 python3 sherlock.py logs <crate-name> <crate-version> --path <absolute-path-to-local-crate>
@@ -318,7 +330,7 @@ python3 sherlock.py trust anyhow
 You should see the output similar to this:
 ![image here](anyhow.png "Screenshot from 11/06")
 
-The trust mode can also be run on a local path by providing the path instead of crate name:
+An example usage on a local crate is also shown below. You can run trust mode on a local path by providing the path instead of crate name:
 
 ```Bash
 python3 sherlock.py trust <crate-name> <crate-version> --path <absolute-path-to-local-crate>
@@ -335,16 +347,6 @@ You should see the output similar to this:
 
 ## Reusing and Extending Cargo-Sherlock
 
-Cargo-Sherlock is open source and is easily reusable as shown in the previous section. It is also very customizable and extensible. Users can modify the trust costs, trusted author list and other parameters by editing the files listed in Directory structure section. Users can also extend the tool by adding new assumptions, more static or dynamic analysis tools, or by integrating it with other systems. Cargo-Sherlock features a MIT license which allows reuse and repurposing of the artifact. There is no specific system or VM requirement to run the tool beyond the installation steps mentioned above.
-<!-- ## Criteria for reusable badge
-
-<TODO>: mention the following
-
-<!--
-    Does the artifact have a license which allows reuse, repurposing, and which is easy to use?
-    Are all dependencies and used libraries well documented and up to date?
-    Does the artifact README explain in sufficient detail how the artifact can be used beyond the paper?
-    Does the artifact provide documented interfaces for extensions, or is the artifact open source?
-    Can the artifact be used in a different environment, e.g., built on another system, used outside of the VM image, etc.? --> 
+Cargo-Sherlock is open source and is easily reusable as shown in the previous section. It is also very customizable and extensible. Users can modify the trust costs, trusted author list and other parameters by editing the files listed in Directory structure section. Users can also extend the tool by adding new assumptions, more static or dynamic analysis tools, or by integrating it with other systems. Cargo-Sherlock features a MIT license which allows reuse and repurposing of the artifact. There is no specific system or VM requirement to run the tool beyond the installation steps mentioned above. We encourage other researchers to build upon our work and contribute to the open-source community.
 
 
