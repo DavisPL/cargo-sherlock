@@ -1,5 +1,0 @@
-Solving for required assumptions to trust dispatchtable-0.2.0...
-Trust Score for dispatchtable-0.2.0: 1
-Assumptions Made:
-dispatchtable-0.2.0 has all safe dependencies: 0 wt
-dispatchtable-0.2.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

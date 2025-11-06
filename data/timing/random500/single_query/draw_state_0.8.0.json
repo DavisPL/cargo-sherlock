@@ -1,5 +1,0 @@
-Solving for required assumptions to trust draw_state-0.8.0...
-Trust Score for draw_state-0.8.0: 2
-Assumptions Made:
-bitflags-2.6.0 having no side effects and having all safe dependencies implies it is safe: 1 wt
-draw_state-0.8.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

@@ -1,5 +1,0 @@
-Solving for required assumptions to trust altcha-lib-rs-0.1.1...
-Trust Score for altcha-lib-rs-0.1.1: 77
-Assumptions Made:
-altcha-lib-rs-0.1.1 has all safe dependencies: 76 wt
-altcha-lib-rs-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt

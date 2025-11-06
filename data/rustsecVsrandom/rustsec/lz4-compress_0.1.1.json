@@ -1,6 +1,0 @@
-Solving for required assumptions to trust lz4-compress-0.1.1...
-Trust Score for lz4-compress-0.1.1: 65
-Assumptions Made:
-lz4-compress-0.1.1 has many stars and forks: 0 wt
-lz4-compress-0.1.1 having many stars and forks implies it is safe: 15 wt
-lz4-compress-0.1.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

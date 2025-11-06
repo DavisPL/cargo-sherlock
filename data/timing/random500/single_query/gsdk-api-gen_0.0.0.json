@@ -1,4 +1,0 @@
-Solving for required assumptions to trust gsdk-api-gen-0.0.0...
-Trust Score for gsdk-api-gen-0.0.0: 1
-Assumptions Made:
-gsdk-api-gen-0.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

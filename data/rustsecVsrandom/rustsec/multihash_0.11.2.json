@@ -1,6 +1,0 @@
-Solving for required assumptions to trust multihash-0.11.2...
-Trust Score for multihash-0.11.2: 68
-Assumptions Made:
-multihash-0.11.2 has many downloads: 8 wt
-multihash-0.11.2 having many downloads implies it is safe: 10 wt
-multihash-0.11.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

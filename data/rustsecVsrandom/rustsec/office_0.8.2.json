@@ -1,6 +1,0 @@
-Solving for required assumptions to trust office-0.8.2...
-Trust Score for office-0.8.2: 66
-Assumptions Made:
-office-0.8.2 has many stars and forks: 1 wt
-office-0.8.2 having many stars and forks implies it is safe: 15 wt
-office-0.8.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

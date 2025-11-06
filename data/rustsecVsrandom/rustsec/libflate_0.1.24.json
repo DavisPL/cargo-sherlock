@@ -1,6 +1,0 @@
-Solving for required assumptions to trust libflate-0.1.24...
-Trust Score for libflate-0.1.24: 68
-Assumptions Made:
-libflate-0.1.24 has many downloads: 8 wt
-libflate-0.1.24 having many downloads implies it is safe: 10 wt
-libflate-0.1.24 appearing in RustSec implies it is less safe (score penalty): 50 weight

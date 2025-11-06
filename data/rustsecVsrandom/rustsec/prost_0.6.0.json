@@ -1,7 +1,0 @@
-Solving for required assumptions to trust prost-0.6.0...
-Trust Score for prost-0.6.0: 61
-Assumptions Made:
-prost-0.6.0 has many downloads: 1 wt
-prost-0.6.0 having many downloads implies it is safe: 10 wt
-prost-0.6.0 has many stars and forks: 0 wt
-prost-0.6.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

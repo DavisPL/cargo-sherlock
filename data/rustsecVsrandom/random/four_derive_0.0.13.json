@@ -1,5 +1,0 @@
-Solving for required assumptions to trust four_derive-0.0.13...
-Trust Score for four_derive-0.0.13: 33
-Assumptions Made:
-four_derive-0.0.13 has all safe dependencies: 32 wt
-four_derive-0.0.13 having no side effects and having all safe dependencies implies it is safe: 1 wt

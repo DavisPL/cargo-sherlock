@@ -1,7 +1,0 @@
-Solving for required assumptions to trust linked_list_allocator-0.10.1...
-Trust Score for linked_list_allocator-0.10.1: 92
-Assumptions Made:
-linked_list_allocator-0.10.1 has many downloads: 32 wt
-linked_list_allocator-0.10.1 having many downloads implies it is safe: 10 wt
-linked_list_allocator-0.10.1 has all safe dependencies: 0 wt
-linked_list_allocator-0.10.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

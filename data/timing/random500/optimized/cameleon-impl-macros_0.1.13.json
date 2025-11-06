@@ -1,5 +1,0 @@
-Solving for required assumptions to trust cameleon-impl-macros-0.1.13...
-Trust Score for cameleon-impl-macros-0.1.13: 10
-Assumptions Made:
-cameleon-impl-macros-0.1.13 has all safe dependencies: 9 wt
-cameleon-impl-macros-0.1.13 having no side effects and having all safe dependencies implies it is safe: 1 wt

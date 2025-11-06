@@ -1,6 +1,0 @@
-Solving for required assumptions to trust encoding-0.2.9...
-Trust Score for encoding-0.2.9: 61
-Assumptions Made:
-encoding-0.2.9 has all safe dependencies: 10 wt
-encoding-0.2.9 having no side effects and having all safe dependencies implies it is safe: 1 wt
-encoding-0.2.9 appearing in RustSec implies it is less safe (score penalty): 50 weight

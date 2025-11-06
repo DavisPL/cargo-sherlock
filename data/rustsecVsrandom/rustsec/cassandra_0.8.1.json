@@ -1,6 +1,0 @@
-Solving for required assumptions to trust cassandra-0.8.1...
-Trust Score for cassandra-0.8.1: 151
-Assumptions Made:
-cassandra-0.8.1 has many downloads: 91 wt
-cassandra-0.8.1 having many downloads implies it is safe: 10 wt
-cassandra-0.8.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

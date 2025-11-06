@@ -1,6 +1,0 @@
-Solving for required assumptions to trust cosmwasm-0.7.2...
-Trust Score for cosmwasm-0.7.2: 79
-Assumptions Made:
-cosmwasm-0.7.2 has many stars and forks: 14 wt
-cosmwasm-0.7.2 having many stars and forks implies it is safe: 15 wt
-cosmwasm-0.7.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

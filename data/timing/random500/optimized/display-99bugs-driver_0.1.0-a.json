@@ -1,5 +1,0 @@
-Solving for required assumptions to trust display-99bugs-driver-0.1.0-a...
-Trust Score for display-99bugs-driver-0.1.0-a: 31
-Assumptions Made:
-display-99bugs-driver-0.1.0-a has all safe dependencies: 30 wt
-display-99bugs-driver-0.1.0-a having no side effects and having all safe dependencies implies it is safe: 1 wt

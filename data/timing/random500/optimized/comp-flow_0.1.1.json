@@ -1,5 +1,0 @@
-Solving for required assumptions to trust comp-flow-0.1.1...
-Trust Score for comp-flow-0.1.1: 64
-Assumptions Made:
-comp-flow-0.1.1 has all safe dependencies: 63 wt
-comp-flow-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt

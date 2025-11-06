@@ -1,5 +1,0 @@
-Solving for required assumptions to trust drawbridge-byte-0.4.2...
-Trust Score for drawbridge-byte-0.4.2: 61
-Assumptions Made:
-drawbridge-byte-0.4.2 has all safe dependencies: 60 wt
-drawbridge-byte-0.4.2 having no side effects and having all safe dependencies implies it is safe: 1 wt

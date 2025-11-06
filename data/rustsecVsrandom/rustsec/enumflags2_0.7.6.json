@@ -1,6 +1,0 @@
-Solving for required assumptions to trust enumflags2-0.7.6...
-Trust Score for enumflags2-0.7.6: 66
-Assumptions Made:
-enumflags2-0.7.6 has many downloads: 6 wt
-enumflags2-0.7.6 having many downloads implies it is safe: 10 wt
-enumflags2-0.7.6 appearing in RustSec implies it is less safe (score penalty): 50 weight

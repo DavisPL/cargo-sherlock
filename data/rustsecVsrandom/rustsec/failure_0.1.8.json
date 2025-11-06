@@ -1,6 +1,0 @@
-Solving for required assumptions to trust failure-0.1.8...
-Trust Score for failure-0.1.8: 64
-Assumptions Made:
-failure-0.1.8 has many downloads: 4 wt
-failure-0.1.8 having many downloads implies it is safe: 10 wt
-failure-0.1.8 appearing in RustSec implies it is less safe (score penalty): 50 weight

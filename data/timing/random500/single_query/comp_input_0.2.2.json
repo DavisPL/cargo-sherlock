@@ -1,6 +1,0 @@
-Solving for required assumptions to trust comp_input-0.2.2...
-Trust Score for comp_input-0.2.2: 219
-Assumptions Made:
-comp_input-0.2.2 has many downloads: 209 wt
-comp_input-0.2.2 having many downloads implies it is safe: 10 wt
-memchr-2.7.4 has many downloads: 0 wt

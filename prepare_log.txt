@@ -1629,3 +1629,129 @@ PATCH OK 9/100: serde -> supply-chain-trust-example-crate-000009
 PATCH OK 91/100: tokio-util -> supply-chain-trust-example-crate-000091
 PATCH OK 99/100: windows_x86_64_gnu -> supply-chain-trust-example-crate-000099
 PATCH OK 64/100: toml -> supply-chain-trust-example-crate-000064
+OK   1/100: syn -> supply-chain-trust-example-crate-000001
+OK   2/100: bitflags -> supply-chain-trust-example-crate-000002
+OK   3/100: hashbrown -> supply-chain-trust-example-crate-000003
+OK   4/100: proc-macro2 -> supply-chain-trust-example-crate-000004
+OK   5/100: quote -> supply-chain-trust-example-crate-000005
+OK   6/100: libc -> supply-chain-trust-example-crate-000006
+OK   7/100: base64 -> supply-chain-trust-example-crate-000007
+OK   8/100: regex-syntax -> supply-chain-trust-example-crate-000008
+FAIL 9/100: serde -> supply-chain-trust-example-crate-000009: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   10/100: cfg-if -> supply-chain-trust-example-crate-000010
+OK   11/100: rand_core -> supply-chain-trust-example-crate-000011
+OK   12/100: rand -> supply-chain-trust-example-crate-000012
+OK   13/100: indexmap -> supply-chain-trust-example-crate-000013
+FAIL 14/100: serde_derive -> supply-chain-trust-example-crate-000014: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   15/100: autocfg -> supply-chain-trust-example-crate-000015
+OK   16/100: itoa -> supply-chain-trust-example-crate-000016
+OK   17/100: getrandom -> supply-chain-trust-example-crate-000017
+OK   18/100: memchr -> supply-chain-trust-example-crate-000018
+OK   19/100: serde_json -> supply-chain-trust-example-crate-000019
+OK   20/100: itertools -> supply-chain-trust-example-crate-000020
+OK   21/100: log -> supply-chain-trust-example-crate-000021
+OK   22/100: once_cell -> supply-chain-trust-example-crate-000022
+OK   23/100: regex -> supply-chain-trust-example-crate-000023
+OK   24/100: aho-corasick -> supply-chain-trust-example-crate-000024
+OK   25/100: rand_chacha -> supply-chain-trust-example-crate-000025
+OK   26/100: ryu -> supply-chain-trust-example-crate-000026
+OK   27/100: cc -> supply-chain-trust-example-crate-000027
+OK   28/100: parking_lot_core -> supply-chain-trust-example-crate-000028
+OK   29/100: heck -> supply-chain-trust-example-crate-000029
+OK   30/100: unicode-ident -> supply-chain-trust-example-crate-000030
+OK   31/100: clap -> supply-chain-trust-example-crate-000031
+OK   32/100: smallvec -> supply-chain-trust-example-crate-000032
+OK   33/100: regex-automata -> supply-chain-trust-example-crate-000033
+OK   34/100: lazy_static -> supply-chain-trust-example-crate-000034
+OK   35/100: parking_lot -> supply-chain-trust-example-crate-000035
+OK   36/100: strsim -> supply-chain-trust-example-crate-000036
+OK   37/100: thiserror-impl -> supply-chain-trust-example-crate-000037
+OK   38/100: thiserror -> supply-chain-trust-example-crate-000038
+OK   39/100: num-traits -> supply-chain-trust-example-crate-000039
+FAIL 40/100: time -> supply-chain-trust-example-crate-000040: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   41/100: semver -> supply-chain-trust-example-crate-000041
+OK   42/100: version_check -> supply-chain-trust-example-crate-000042
+OK   43/100: either -> supply-chain-trust-example-crate-000043
+FAIL 44/100: idna -> supply-chain-trust-example-crate-000044: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   45/100: lock_api -> supply-chain-trust-example-crate-000045
+OK   46/100: scopeguard -> supply-chain-trust-example-crate-000046
+FAIL 47/100: digest -> supply-chain-trust-example-crate-000047: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   48/100: bytes -> supply-chain-trust-example-crate-000048
+OK   49/100: socket2 -> supply-chain-trust-example-crate-000049
+FAIL 50/100: block-buffer -> supply-chain-trust-example-crate-000050: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   51/100: crossbeam-utils -> supply-chain-trust-example-crate-000051
+OK   52/100: pin-project-lite -> supply-chain-trust-example-crate-000052
+OK   53/100: memoffset -> supply-chain-trust-example-crate-000053
+OK   54/100: anyhow -> supply-chain-trust-example-crate-000054
+OK   55/100: mio -> supply-chain-trust-example-crate-000055
+FAIL 56/100: miniz_oxide -> supply-chain-trust-example-crate-000056: git clone failed: Command '['git', 'clone', '--depth', '1', 'https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide', './local_crates/typo/__tmp__supply-chain-trust-example-crate-000056']' returned non-zero exit status 128.
+FAIL 57/100: ppv-lite86 -> supply-chain-trust-example-crate-000057: rewrite/move failed: Missing [package] section in Cargo.toml
+FAIL 58/100: percent-encoding -> supply-chain-trust-example-crate-000058: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   59/100: byteorder -> supply-chain-trust-example-crate-000059
+FAIL 60/100: tokio -> supply-chain-trust-example-crate-000060: rewrite/move failed: Missing [package] section in Cargo.toml
+FAIL 61/100: url -> supply-chain-trust-example-crate-000061: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   62/100: generic-array -> supply-chain-trust-example-crate-000062
+OK   63/100: rustix -> supply-chain-trust-example-crate-000063
+FAIL 64/100: toml -> supply-chain-trust-example-crate-000064: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   65/100: fastrand -> supply-chain-trust-example-crate-000065
+OK   66/100: http -> supply-chain-trust-example-crate-000066
+OK   67/100: slab -> supply-chain-trust-example-crate-000067
+OK   68/100: hyper -> supply-chain-trust-example-crate-000068
+OK   69/100: ahash -> supply-chain-trust-example-crate-000069
+OK   70/100: num_cpus -> supply-chain-trust-example-crate-000070
+FAIL 71/100: futures-core -> supply-chain-trust-example-crate-000071: rewrite/move failed: Missing [package] section in Cargo.toml
+FAIL 72/100: windows-sys -> supply-chain-trust-example-crate-000072: rewrite/move failed: Missing [package] section in Cargo.toml
+FAIL 73/100: futures-util -> supply-chain-trust-example-crate-000073: rewrite/move failed: Missing [package] section in Cargo.toml
+FAIL 74/100: futures-task -> supply-chain-trust-example-crate-000074: rewrite/move failed: Missing [package] section in Cargo.toml
+FAIL 75/100: sha2 -> supply-chain-trust-example-crate-000075: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   76/100: chrono -> supply-chain-trust-example-crate-000076
+OK   77/100: unicode-normalization -> supply-chain-trust-example-crate-000077
+FAIL 78/100: futures-sink -> supply-chain-trust-example-crate-000078: rewrite/move failed: Missing [package] section in Cargo.toml
+FAIL 79/100: windows_x86_64_msvc -> supply-chain-trust-example-crate-000079: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   80/100: fnv -> supply-chain-trust-example-crate-000080
+FAIL 81/100: futures-channel -> supply-chain-trust-example-crate-000081: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   82/100: linux-raw-sys -> supply-chain-trust-example-crate-000082
+OK   83/100: typenum -> supply-chain-trust-example-crate-000083
+OK   84/100: spin -> supply-chain-trust-example-crate-000084
+FAIL 85/100: tracing -> supply-chain-trust-example-crate-000085: rewrite/move failed: Missing [package] section in Cargo.toml
+FAIL 86/100: tracing-core -> supply-chain-trust-example-crate-000086: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   87/100: num-integer -> supply-chain-trust-example-crate-000087
+FAIL 88/100: futures -> supply-chain-trust-example-crate-000088: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   89/100: unicode-xid -> supply-chain-trust-example-crate-000089
+OK   90/100: tinyvec -> supply-chain-trust-example-crate-000090
+FAIL 91/100: tokio-util -> supply-chain-trust-example-crate-000091: rewrite/move failed: Missing [package] section in Cargo.toml
+FAIL 92/100: rustls -> supply-chain-trust-example-crate-000092: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   93/100: pkg-config -> supply-chain-trust-example-crate-000093
+OK   94/100: tempfile -> supply-chain-trust-example-crate-000094
+FAIL 95/100: futures-io -> supply-chain-trust-example-crate-000095: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   96/100: rustc_version -> supply-chain-trust-example-crate-000096
+OK   97/100: unicode-bidi -> supply-chain-trust-example-crate-000097
+OK   98/100: pin-utils -> supply-chain-trust-example-crate-000098
+FAIL 99/100: windows_x86_64_gnu -> supply-chain-trust-example-crate-000099: rewrite/move failed: Missing [package] section in Cargo.toml
+OK   100/100: uuid -> supply-chain-trust-example-crate-000100
+PATCH OK 74/100: futures-task -> supply-chain-trust-example-crate-000074
+PATCH OK 73/100: futures-util -> supply-chain-trust-example-crate-000073
+PATCH OK 86/100: tracing-core -> supply-chain-trust-example-crate-000086
+PATCH OK 72/100: windows-sys -> supply-chain-trust-example-crate-000072
+PATCH OK 75/100: sha2 -> supply-chain-trust-example-crate-000075
+PATCH OK 81/100: futures-channel -> supply-chain-trust-example-crate-000081
+PATCH OK 88/100: futures -> supply-chain-trust-example-crate-000088
+PATCH OK 44/100: idna -> supply-chain-trust-example-crate-000044
+PATCH OK 92/100: rustls -> supply-chain-trust-example-crate-000092
+PATCH OK 61/100: url -> supply-chain-trust-example-crate-000061
+PATCH OK 95/100: futures-io -> supply-chain-trust-example-crate-000095
+PATCH OK 57/100: ppv-lite86 -> supply-chain-trust-example-crate-000057
+PATCH OK 50/100: block-buffer -> supply-chain-trust-example-crate-000050
+PATCH OK 60/100: tokio -> supply-chain-trust-example-crate-000060
+PATCH OK 58/100: percent-encoding -> supply-chain-trust-example-crate-000058
+PATCH OK 79/100: windows_x86_64_msvc -> supply-chain-trust-example-crate-000079
+PATCH OK 85/100: tracing -> supply-chain-trust-example-crate-000085
+PATCH OK 71/100: futures-core -> supply-chain-trust-example-crate-000071
+PATCH OK 78/100: futures-sink -> supply-chain-trust-example-crate-000078
+PATCH OK 47/100: digest -> supply-chain-trust-example-crate-000047
+PATCH OK 40/100: time -> supply-chain-trust-example-crate-000040
+PATCH OK 14/100: serde_derive -> supply-chain-trust-example-crate-000014
+PATCH OK 9/100: serde -> supply-chain-trust-example-crate-000009
+PATCH OK 91/100: tokio-util -> supply-chain-trust-example-crate-000091
+PATCH OK 99/100: windows_x86_64_gnu -> supply-chain-trust-example-crate-000099
+PATCH OK 64/100: toml -> supply-chain-trust-example-crate-000064

@@ -1,6 +1,0 @@
-Solving for required assumptions to trust sodiumoxide-0.2.7...
-Trust Score for sodiumoxide-0.2.7: 81
-Assumptions Made:
-sodiumoxide-0.2.7 has many downloads: 21 wt
-sodiumoxide-0.2.7 having many downloads implies it is safe: 10 wt
-sodiumoxide-0.2.7 appearing in RustSec implies it is less safe (score penalty): 50 weight

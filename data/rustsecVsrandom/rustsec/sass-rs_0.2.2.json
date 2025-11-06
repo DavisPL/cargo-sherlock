@@ -1,6 +1,0 @@
-Solving for required assumptions to trust sass-rs-0.2.2...
-Trust Score for sass-rs-0.2.2: 133
-Assumptions Made:
-sass-rs-0.2.2 has many downloads: 73 wt
-sass-rs-0.2.2 having many downloads implies it is safe: 10 wt
-sass-rs-0.2.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

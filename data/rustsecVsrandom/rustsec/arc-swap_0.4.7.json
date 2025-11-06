@@ -1,7 +1,0 @@
-Solving for required assumptions to trust arc-swap-0.4.7...
-Trust Score for arc-swap-0.4.7: 62
-Assumptions Made:
-arc-swap-0.4.7 has many downloads: 2 wt
-arc-swap-0.4.7 having many downloads implies it is safe: 10 wt
-arc-swap-0.4.7 has all safe dependencies: 0 wt
-arc-swap-0.4.7 appearing in RustSec implies it is less safe (score penalty): 50 weight

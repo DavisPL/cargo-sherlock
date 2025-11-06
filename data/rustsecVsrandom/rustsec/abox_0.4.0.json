@@ -1,7 +1,0 @@
-Solving for required assumptions to trust abox-0.4.0...
-Trust Score for abox-0.4.0: 251
-Assumptions Made:
-abox-0.4.0 has many downloads: 191 wt
-abox-0.4.0 having many downloads implies it is safe: 10 wt
-abox-0.4.0 has all safe dependencies: 0 wt
-abox-0.4.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

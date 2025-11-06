@@ -1,5 +1,0 @@
-Solving for required assumptions to trust axum_client_derive-0.1.0...
-Trust Score for axum_client_derive-0.1.0: 21
-Assumptions Made:
-axum_client_derive-0.1.0 has all safe dependencies: 20 wt
-axum_client_derive-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

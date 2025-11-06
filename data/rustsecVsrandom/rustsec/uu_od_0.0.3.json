@@ -1,6 +1,0 @@
-Solving for required assumptions to trust uu_od-0.0.3...
-Trust Score for uu_od-0.0.3: 65
-Assumptions Made:
-uu_od-0.0.3 has many stars and forks: 0 wt
-uu_od-0.0.3 having many stars and forks implies it is safe: 15 wt
-uu_od-0.0.3 appearing in RustSec implies it is less safe (score penalty): 50 weight

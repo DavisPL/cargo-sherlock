@@ -1,6 +1,0 @@
-Solving for required assumptions to trust grid-sim-0.3.0...
-Trust Score for grid-sim-0.3.0: 11
-Assumptions Made:
-rand-0.8.5 has many downloads: 0 wt
-rand-0.8.5 having many downloads implies it is safe: 10 wt
-grid-sim-0.3.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

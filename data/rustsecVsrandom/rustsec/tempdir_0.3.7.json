@@ -1,6 +1,0 @@
-Solving for required assumptions to trust tempdir-0.3.7...
-Trust Score for tempdir-0.3.7: 66
-Assumptions Made:
-tempdir-0.3.7 has many downloads: 6 wt
-tempdir-0.3.7 having many downloads implies it is safe: 10 wt
-tempdir-0.3.7 appearing in RustSec implies it is less safe (score penalty): 50 weight

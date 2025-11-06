@@ -1,7 +1,0 @@
-Solving for required assumptions to trust parc-1.0.1...
-Trust Score for parc-1.0.1: 295
-Assumptions Made:
-parc-1.0.1 has many downloads: 235 wt
-parc-1.0.1 having many downloads implies it is safe: 10 wt
-parc-1.0.1 has all safe dependencies: 0 wt
-parc-1.0.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

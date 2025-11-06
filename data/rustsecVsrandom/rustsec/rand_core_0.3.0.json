@@ -1,7 +1,0 @@
-Solving for required assumptions to trust rand_core-0.3.0...
-Trust Score for rand_core-0.3.0: 60
-Assumptions Made:
-rand_core-0.3.0 has many downloads: 0 wt
-rand_core-0.3.0 having many downloads implies it is safe: 10 wt
-rand_core-0.3.0 has all safe dependencies: 0 wt
-rand_core-0.3.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

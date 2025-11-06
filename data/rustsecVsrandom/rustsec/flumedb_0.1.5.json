@@ -1,6 +1,0 @@
-Solving for required assumptions to trust flumedb-0.1.5...
-Trust Score for flumedb-0.1.5: 261
-Assumptions Made:
-flumedb-0.1.5 has many downloads: 201 wt
-flumedb-0.1.5 having many downloads implies it is safe: 10 wt
-flumedb-0.1.5 appearing in RustSec implies it is less safe (score penalty): 50 weight

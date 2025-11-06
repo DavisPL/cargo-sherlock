@@ -1,6 +1,0 @@
-Solving for required assumptions to trust stdweb-0.4.9...
-Trust Score for stdweb-0.4.9: 65
-Assumptions Made:
-stdweb-0.4.9 has many stars and forks: 0 wt
-stdweb-0.4.9 having many stars and forks implies it is safe: 15 wt
-stdweb-0.4.9 appearing in RustSec implies it is less safe (score penalty): 50 weight

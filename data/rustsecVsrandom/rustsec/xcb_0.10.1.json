@@ -1,6 +1,0 @@
-Solving for required assumptions to trust xcb-0.10.1...
-Trust Score for xcb-0.10.1: 82
-Assumptions Made:
-xcb-0.10.1 has many downloads: 22 wt
-xcb-0.10.1 having many downloads implies it is safe: 10 wt
-xcb-0.10.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

@@ -1,6 +1,0 @@
-Solving for required assumptions to trust comrak-0.9.0...
-Trust Score for comrak-0.9.0: 74
-Assumptions Made:
-comrak-0.9.0 has many stars and forks: 9 wt
-comrak-0.9.0 having many stars and forks implies it is safe: 15 wt
-comrak-0.9.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

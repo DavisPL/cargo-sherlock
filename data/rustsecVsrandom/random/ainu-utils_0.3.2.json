@@ -1,5 +1,0 @@
-Solving for required assumptions to trust ainu-utils-0.3.2...
-Trust Score for ainu-utils-0.3.2: 122
-Assumptions Made:
-ainu-utils-0.3.2 has all safe dependencies: 121 wt
-ainu-utils-0.3.2 having no side effects and having all safe dependencies implies it is safe: 1 wt

@@ -1,6 +1,0 @@
-Solving for required assumptions to trust flatbuffers-0.9.0...
-Trust Score for flatbuffers-0.9.0: 65
-Assumptions Made:
-flatbuffers-0.9.0 has many stars and forks: 0 wt
-flatbuffers-0.9.0 having many stars and forks implies it is safe: 15 wt
-flatbuffers-0.9.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

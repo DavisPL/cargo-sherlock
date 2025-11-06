@@ -10,7 +10,7 @@ path = "benches/mod.rs"
 edition = "2024"
 rust-version = "1.85"
 name = "supply-chain-trust-example-crate-000075"
-version = "0.11.0-rc.2"
+version = "0.11.0-rc.3"
 authors = [ "Anonymous",]
 build = false
 autolib = false
@@ -39,14 +39,14 @@ path = "src/lib.rs"
 version = "1"
 
 [dependencies.digest]
-version = "0.11.0-rc.1"
+version = "0.11.0-rc.4"
 
 [dev-dependencies.base16ct]
 version = "0.3"
 features = [ "alloc",]
 
 [dev-dependencies.digest]
-version = "0.11.0-rc.1"
+version = "0.11.0-rc.4"
 features = [ "dev",]
 
 [dev-dependencies.hex-literal]

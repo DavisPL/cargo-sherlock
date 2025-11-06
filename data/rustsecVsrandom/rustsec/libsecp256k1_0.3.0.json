@@ -1,6 +1,0 @@
-Solving for required assumptions to trust libsecp256k1-0.3.0...
-Trust Score for libsecp256k1-0.3.0: 68
-Assumptions Made:
-libsecp256k1-0.3.0 has many downloads: 8 wt
-libsecp256k1-0.3.0 having many downloads implies it is safe: 10 wt
-libsecp256k1-0.3.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

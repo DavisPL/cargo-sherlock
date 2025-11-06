@@ -1,5 +1,0 @@
-Solving for required assumptions to trust calibre-db-0.1.1...
-Trust Score for calibre-db-0.1.1: 76
-Assumptions Made:
-calibre-db-0.1.1 has all safe dependencies: 75 wt
-calibre-db-0.1.1 having no side effects and having all safe dependencies implies it is safe: 1 wt

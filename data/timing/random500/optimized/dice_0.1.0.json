@@ -1,5 +1,0 @@
-Solving for required assumptions to trust dice-0.1.0...
-Trust Score for dice-0.1.0: 1
-Assumptions Made:
-dice-0.1.0 has all safe dependencies: 0 wt
-dice-0.1.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

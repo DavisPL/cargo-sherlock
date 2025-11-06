@@ -1,7 +1,0 @@
-Solving for required assumptions to trust mio-1.0.2...
-Trust Score for mio-1.0.2: 60
-Assumptions Made:
-mio-1.0.2 has many downloads: 0 wt
-mio-1.0.2 having many downloads implies it is safe: 10 wt
-mio-1.0.2 has many stars and forks: 0 wt
-mio-1.0.2 appearing in RustSec implies it is less safe (score penalty): 50 wt

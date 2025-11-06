@@ -1,7 +1,0 @@
-Solving for required assumptions to trust traitobject-0.1.0...
-Trust Score for traitobject-0.1.0: 71
-Assumptions Made:
-traitobject-0.1.0 has many downloads: 11 wt
-traitobject-0.1.0 having many downloads implies it is safe: 10 wt
-traitobject-0.1.0 has all safe dependencies: 0 wt
-traitobject-0.1.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

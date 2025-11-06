@@ -1,6 +1,0 @@
-Solving for required assumptions to trust supply-chain-trust-example-crate-000095-0.6.5...
-Trust Score for supply-chain-trust-example-crate-000095-0.6.5: 452
-Assumptions Made:
-supply-chain-trust-example-crate-000095-0.6.5 has all safe dependencies: 0 wt
-supply-chain-trust-example-crate-000095-0.6.5 having all trusted developers implies it is safe: 2 wt
-muhammad-hassnain is trusted: 450 wt

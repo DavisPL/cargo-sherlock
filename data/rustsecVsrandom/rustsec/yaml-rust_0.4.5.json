@@ -1,6 +1,0 @@
-Solving for required assumptions to trust yaml-rust-0.4.5...
-Trust Score for yaml-rust-0.4.5: 62
-Assumptions Made:
-yaml-rust-0.4.5 has many downloads: 2 wt
-yaml-rust-0.4.5 having many downloads implies it is safe: 10 wt
-yaml-rust-0.4.5 appearing in RustSec implies it is less safe (score penalty): 50 weight

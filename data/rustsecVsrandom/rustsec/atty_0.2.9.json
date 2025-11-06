@@ -1,6 +1,0 @@
-Solving for required assumptions to trust atty-0.2.9...
-Trust Score for atty-0.2.9: 61
-Assumptions Made:
-atty-0.2.9 has many downloads: 1 wt
-atty-0.2.9 having many downloads implies it is safe: 10 wt
-atty-0.2.9 appearing in RustSec implies it is less safe (score penalty): 50 weight

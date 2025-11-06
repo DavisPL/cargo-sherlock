@@ -1,7 +1,0 @@
-Solving for required assumptions to trust alg_ds-0.3.1...
-Trust Score for alg_ds-0.3.1: 239
-Assumptions Made:
-alg_ds-0.3.1 has many downloads: 179 wt
-alg_ds-0.3.1 having many downloads implies it is safe: 10 wt
-alg_ds-0.3.1 has all safe dependencies: 0 wt
-alg_ds-0.3.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

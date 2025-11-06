@@ -1,5 +1,0 @@
-Solving for required assumptions to trust rustc_version-0.4.1...
-Trust Score for rustc_version-0.4.1: 10
-Assumptions Made:
-rustc_version-0.4.1 has many downloads: 0 wt
-rustc_version-0.4.1 having many downloads implies it is safe: 10 wt

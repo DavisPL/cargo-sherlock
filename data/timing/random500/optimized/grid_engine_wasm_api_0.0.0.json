@@ -1,5 +1,0 @@
-Solving for required assumptions to trust grid_engine_wasm_api-0.0.0...
-Trust Score for grid_engine_wasm_api-0.0.0: 1
-Assumptions Made:
-grid_engine_wasm_api-0.0.0 has all safe dependencies: 0 wt
-grid_engine_wasm_api-0.0.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

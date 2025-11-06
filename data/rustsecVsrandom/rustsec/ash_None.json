@@ -1,7 +1,0 @@
-Solving for required assumptions to trust ash-0.38.0+1.3.281...
-Trust Score for ash-0.38.0+1.3.281: 66
-Assumptions Made:
-ash-0.38.0+1.3.281 has many stars and forks: 1 wt
-ash-0.38.0+1.3.281 having many stars and forks implies it is safe: 15 wt
-ash-0.38.0+1.3.281 has all safe dependencies: 0 wt
-ash-0.38.0+1.3.281 appearing in RustSec implies it is less safe (score penalty): 50 weight

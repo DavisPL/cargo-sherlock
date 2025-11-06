@@ -1,5 +1,0 @@
-Solving for required assumptions to trust camera_controllers-0.34.0...
-Trust Score for camera_controllers-0.34.0: 28
-Assumptions Made:
-camera_controllers-0.34.0 has all safe dependencies: 27 wt
-camera_controllers-0.34.0 having no side effects and having all safe dependencies implies it is safe: 1 wt

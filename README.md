@@ -160,9 +160,183 @@ This should run Cargo-Sherlock on 1000 random crates from crates.io using both a
 
 ## Directory structure
 
-The repository contains: `<TODO>`
+The repository contains:
 
-## Criteria for reusable badge
+1. The main script is in `sherlock.py`. This serves as the entry point for the tool. It takes command-line arguments to specify the crate and the mode to analyze. It uses various other modules which are listed below:
+   - `helpers/`: This directory contains the following helper modules:
+     - `assumption.py`: This file defines the Assumption class used to represent trust assumptions.
+     - `costs.py`: This file contains the smoothing functions used for parametric assumptions, Users can customize the costs for these assumptions here. It also contains the synthesizing function to combine the trust and distrust costs. 
+     - `crate_data.py`: This file defines the CrateVersion class and is called by sherlock.py to start collecting metadata for the specified crate. It uses some other modules to fetch metadata and format it into a json format.
+     - `logger.py` : This file is the core logic for collecting metdata about the crate, running static analsis tools and other related information.
+     - `rustsectry.py`: This file implements the logic to check whether the given crate appears on RustSec advisory database or not.
+     - `token.txt` : This file contains the GitHub personal access token, used to query GitHub API for fetching reposoitory related metadata.
+   - `scrapper.py`: This file is used to scrape RustSec and store the output in `helpers/data.txt`, which is used by `rustsectry.py` to check if a crate is listed in RustSec database.
+   - `solver.py`: This file contains the logic for encoding and solving the mintrust problem using Z3 SMT solver. It implements two algorithms: Horn and Naive. 
+
+2. `cargo-scan/` : This is a submodule containing the cargo-scan tool, which is used by Cargo-Sherlock to collect side effects of given crate.
+
+3. `audits/` : This directory contains the audit reports gathered from various organizations. 
+
+4. `logs/` : This directory contains both the logs of anlaysis for debugging purposes and the cached reports for crates analyzed during experiments.
+
+5. `processing/` : This directory is used by Cargo-Sherlock to store intermediate files during the analysis and is cleaned up after the analysis is complete.
+
+6. `evaluation/` : This directory is used to store the results of trust mode analysis for different research questions (RQ1, RQ2, RQ3, RQ4). Each RQ has its own subdirectory. These are populated by:
+    - `eval_rq1.py`: This script is used to replicate the experiments for RQ1 (Synthetic Typosquatted Attacks).
+    - `eval_rq2.py`: This script is used to replicate the experiments for RQ2 (Real-world Typosquatted Attacks).
+    - `eval_rq3.py`: This script is used to replicate the experiments for RQ3 (Tool Output on known vulnerable crates).
+    - `eval_rq4.py`: This script is used to replicate the experiments for RQ4 (Algorithm 1 and 2 scalability with respect to number of dependencies).
+
+7. `Makefile` : This file contains the commands to set up the Python virtual environment, install miri and build cargo-scan and do other tool setup related tasks. 
+
+## Running the tool on your own examples
+
+Cargo-Sherlock can be run on any Rust crate available on crates.io or on a local path. It has two modes: logs mode and trust mode.
+
+### Logs Mode
+
+Logs mode can be used to collect metadata, audit and other related information about the crate. You can run this by:
+
+```Bash
+python3 sherlock.py logs <crate-name> <crate-version>
+```
+The version is optional, and if not specified, the latest version will be used. You can run it on anyhow crate as follows:
+```Bash
+python3 sherlock.py logs anyhow
+```
+You should see the output similar to this:
+
+```
+Version not specified, fetching the Latest version for analysis.
+Latest version of anyhow is 1.0.100.
+Getting logging information About crate anyhow-1.0.100...
+Cache file not found, running cargo sherlock on anyhow-1.0.100...
+Logging information for anyhow-1.0.100:
+{'audits': [{'criteria': 'safe-to-deploy',
+             'delta': '1.0.62 -> 1.0.66',
+             'notes': 'This update looks to be related to minor fixes and '
+                      'mostly integrating with a\\nnightly feature in the '
+                      'standard library for backtrace integration. No '
+                      'undue\\n`unsafe` is added and nothing unsurprising for '
+                      'the `anyhow` crate is happening\\nhere.\\n',
+             'organization': 'bytecode-alliance',
+             'version': ''},
+            {'criteria': 'safe-to-deploy',
+             'delta': '1.0.69 -> 1.0.71',
+             'notes': '',
+             'organization': 'bytecode-alliance',
+             'version': ''},
+            ....
+            {'criteria': 'safe-to-deploy',
+             'delta': '1.0.95 -> 1.0.97',
+             'notes': '',
+             'organization': 'zcash',
+             'version': ''}],
+ 'dependencies': [],
+ 'developers': ['dtolnay'],
+ 'downloads': `450366800`,
+ 'failed_rudra': False,
+ 'forks': 172,
+ 'in_rust_sec': False,
+ 'in_rustsec_current': False,
+ 'in_rustsec_patched': False,
+ 'miri': False,
+ 'miri_details': {'failed': 0,
+                  'filtered_out': 0,
+                  'ignored': 0,
+                  'measured': 0,
+                  'passed': 26,
+                  'status': 'ok',
+                  'time_seconds': 0.62},
+ 'num_side_effects': 78,
+ 'num_unsafe_calls': 53,
+ 'passed_audit': False,
+ 'past_audit': True,
+ 'rustsec_label': 'Safe',
+ 'rustsec_tag': None,
+ 'stars': 6249}
+```
+
+The tool can also be run on a local path by providing the path instead of crate name:
+
+```Bash
+python3 sherlock.py logs <crate-name> <crate-version> --path <absolute-path-to-local-crate>
+```
+
+Here is an example run on the faster_log crate stored locally in this repository:
+
+```Bash
+python3 sherlock.py log faster_log -p /Users/hassnain/Desktop/final/cargo-sherlock-artifact/local_crates/faster_log
+```
+You should see the output similar to this:
+
+```
+Version not specified, assuming version to be 1.0.0 for local crate analysis.
+Getting logging information About crate faster_log-1.0.0...
+Cache file not found, running cargo sherlock on faster_log-1.0.0...
+This crate has not been audited by any organization.
+Logging information for faster_log-1.0.0:
+{'audits': [],
+ 'dependencies': [],
+ 'developers': ['zhuxiujia'],
+ 'downloads': 171,
+ 'failed_rudra': False,
+ 'forks': 21,
+ 'in_rust_sec': False,
+ 'in_rustsec_current': False,
+ 'in_rustsec_patched': False,
+ 'miri': False,
+ 'miri_details': {'failed': 0,
+                  'filtered_out': 0,
+                  'ignored': 0,
+                  'measured': 0,
+                  'passed': 0,
+                  'status': 'ok',
+                  'time_seconds': 0.0},
+ 'num_side_effects': 11,
+ 'num_unsafe_calls': 0,
+ 'passed_audit': False,
+ 'past_audit': False,
+ 'rustsec_label': 'Safe',
+ 'rustsec_tag': None,
+ 'stars': 266}
+```
+
+### Trust Mode 
+
+Trust mode builds on top of this logs mode and solves the mintrust problem for the given crate. You can run this by:
+
+```Bash
+python3 sherlock.py trust <crate-name> <crate-version>
+```
+
+For example, you can run it on anyhow crate as follows:
+```Bash
+python3 sherlock.py trust anyhow
+```
+
+You should see the output similar to this:
+![image here](anyhow.png "Screenshot from 11/06")
+
+The trust mode can also be run on a local path by providing the path instead of crate name:
+
+```Bash
+python3 sherlock.py trust <crate-name> <crate-version> --path <absolute-path-to-local-crate>
+```
+
+For example, you can run it on the faster_log crate stored locally in this repository as follows:
+
+```Bash
+python3 sherlock.py trust faster_log -p /Users/hassnain/Desktop/final/cargo-sherlock-artifact/local_crates/faster_log
+```
+You should see the output similar to this:
+![image here](faster_log.png "Screenshot from 11/06")
+
+
+## Reusing and Extending Cargo-Sherlock
+
+Cargo-Sherlock is open source and is easily reusable as shown in the previous section. It is also very customizable and extensible. Users can modify the trust costs, trusted author list and other parameters by editing the files listed in Directory structure section. Users can also extend the tool by adding new assumptions, more static or dynamic analysis tools, or by integrating it with other systems. Cargo-Sherlock features a MIT license which allows reuse and repurposing of the artifact. There is no specific system or VM requirement to run the tool beyond the installation steps mentioned above.
+<!-- ## Criteria for reusable badge
 
 <TODO>: mention the following
 
@@ -171,8 +345,6 @@ The repository contains: `<TODO>`
     Are all dependencies and used libraries well documented and up to date?
     Does the artifact README explain in sufficient detail how the artifact can be used beyond the paper?
     Does the artifact provide documented interfaces for extensions, or is the artifact open source?
-    Can the artifact be used in a different environment, e.g., built on another system, used outside of the VM image, etc.? -->
+    Can the artifact be used in a different environment, e.g., built on another system, used outside of the VM image, etc.? --> 
 
-### Running the tool on your own examples
 
-If you want to try the tool on your own examples, `<TODO>`

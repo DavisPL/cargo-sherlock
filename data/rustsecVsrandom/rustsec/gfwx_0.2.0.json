@@ -1,6 +1,0 @@
-Solving for required assumptions to trust gfwx-0.2.0...
-Trust Score for gfwx-0.2.0: 272
-Assumptions Made:
-gfwx-0.2.0 has many downloads: 212 wt
-gfwx-0.2.0 having many downloads implies it is safe: 10 wt
-gfwx-0.2.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

@@ -1,5 +1,0 @@
-Solving for required assumptions to trust eloquent_core-2.0.2...
-Trust Score for eloquent_core-2.0.2: 27
-Assumptions Made:
-eloquent_core-2.0.2 has all safe dependencies: 26 wt
-eloquent_core-2.0.2 having no side effects and having all safe dependencies implies it is safe: 1 wt

@@ -1,6 +1,0 @@
-Solving for required assumptions to trust abi_stable-0.9.0...
-Trust Score for abi_stable-0.9.0: 99
-Assumptions Made:
-abi_stable-0.9.0 has many downloads: 39 wt
-abi_stable-0.9.0 having many downloads implies it is safe: 10 wt
-abi_stable-0.9.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

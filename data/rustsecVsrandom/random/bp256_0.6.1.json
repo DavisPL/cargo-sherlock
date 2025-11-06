@@ -1,5 +1,0 @@
-Solving for required assumptions to trust bp256-0.6.1...
-Trust Score for bp256-0.6.1: 15
-Assumptions Made:
-bp256-0.6.1 has all safe dependencies: 14 wt
-bp256-0.6.1 having no side effects and having all safe dependencies implies it is safe: 1 wt

@@ -1,7 +1,0 @@
-Solving for required assumptions to trust filesystem-0.4.4...
-Trust Score for filesystem-0.4.4: 110
-Assumptions Made:
-filesystem-0.4.4 has many downloads: 50 wt
-filesystem-0.4.4 having many downloads implies it is safe: 10 wt
-filesystem-0.4.4 has all safe dependencies: 0 wt
-filesystem-0.4.4 appearing in RustSec implies it is less safe (score penalty): 50 weight

@@ -1,6 +1,0 @@
-Solving for required assumptions to trust qwutils-0.3.0...
-Trust Score for qwutils-0.3.0: 259
-Assumptions Made:
-qwutils-0.3.0 has many downloads: 199 wt
-qwutils-0.3.0 having many downloads implies it is safe: 10 wt
-qwutils-0.3.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

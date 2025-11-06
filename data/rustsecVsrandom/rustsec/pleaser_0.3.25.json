@@ -1,6 +1,0 @@
-Solving for required assumptions to trust pleaser-0.3.25...
-Trust Score for pleaser-0.3.25: 191
-Assumptions Made:
-pleaser-0.3.25 has many downloads: 131 wt
-pleaser-0.3.25 having many downloads implies it is safe: 10 wt
-pleaser-0.3.25 appearing in RustSec implies it is less safe (score penalty): 50 weight

@@ -1,7 +1,0 @@
-Solving for required assumptions to trust nano_arena-0.5.1...
-Trust Score for nano_arena-0.5.1: 250
-Assumptions Made:
-nano_arena-0.5.1 has many downloads: 190 wt
-nano_arena-0.5.1 having many downloads implies it is safe: 10 wt
-nano_arena-0.5.1 has all safe dependencies: 0 wt
-nano_arena-0.5.1 appearing in RustSec implies it is less safe (score penalty): 50 weight

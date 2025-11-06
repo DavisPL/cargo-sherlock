@@ -1,6 +1,0 @@
-Solving for required assumptions to trust socket2-0.3.15...
-Trust Score for socket2-0.3.15: 60
-Assumptions Made:
-socket2-0.3.15 has many downloads: 0 wt
-socket2-0.3.15 having many downloads implies it is safe: 10 wt
-socket2-0.3.15 appearing in RustSec implies it is less safe (score penalty): 50 weight

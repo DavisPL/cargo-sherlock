@@ -1,6 +1,0 @@
-Solving for required assumptions to trust lexer-0.1.9...
-Trust Score for lexer-0.1.9: 72
-Assumptions Made:
-lexer-0.1.9 has all safe dependencies: 21 wt
-lexer-0.1.9 having no side effects and having all safe dependencies implies it is safe: 1 wt
-lexer-0.1.9 appearing in RustSec implies it is less safe (score penalty): 50 weight

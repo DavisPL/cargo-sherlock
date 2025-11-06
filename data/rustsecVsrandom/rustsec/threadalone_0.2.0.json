@@ -1,6 +1,0 @@
-Solving for required assumptions to trust threadalone-0.2.0...
-Trust Score for threadalone-0.2.0: 308
-Assumptions Made:
-threadalone-0.2.0 has many downloads: 248 wt
-threadalone-0.2.0 having many downloads implies it is safe: 10 wt
-threadalone-0.2.0 appearing in RustSec implies it is less safe (score penalty): 50 weight

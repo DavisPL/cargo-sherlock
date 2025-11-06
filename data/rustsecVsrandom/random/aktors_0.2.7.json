@@ -1,5 +1,0 @@
-Solving for required assumptions to trust aktors-0.2.7...
-Trust Score for aktors-0.2.7: 72
-Assumptions Made:
-aktors-0.2.7 has all safe dependencies: 71 wt
-aktors-0.2.7 having no side effects and having all safe dependencies implies it is safe: 1 wt

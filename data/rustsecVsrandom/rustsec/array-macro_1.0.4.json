@@ -1,7 +1,0 @@
-Solving for required assumptions to trust array-macro-1.0.4...
-Trust Score for array-macro-1.0.4: 80
-Assumptions Made:
-array-macro-1.0.4 has many downloads: 20 wt
-array-macro-1.0.4 having many downloads implies it is safe: 10 wt
-array-macro-1.0.4 has all safe dependencies: 0 wt
-array-macro-1.0.4 appearing in RustSec implies it is less safe (score penalty): 50 weight

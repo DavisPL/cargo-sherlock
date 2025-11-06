@@ -1,6 +1,0 @@
-Solving for required assumptions to trust trust-dns-proto-0.4.2...
-Trust Score for trust-dns-proto-0.4.2: 64
-Assumptions Made:
-trust-dns-proto-0.4.2 has many downloads: 4 wt
-trust-dns-proto-0.4.2 having many downloads implies it is safe: 10 wt
-trust-dns-proto-0.4.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

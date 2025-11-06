@@ -1,5 +1,0 @@
-Solving for required assumptions to trust audita-0.0.1...
-Trust Score for audita-0.0.1: 1
-Assumptions Made:
-audita-0.0.1 has all safe dependencies: 0 wt
-audita-0.0.1 having no side effects and having all safe dependencies implies it is safe: 1 wt

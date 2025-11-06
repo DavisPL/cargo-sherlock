@@ -1,5 +1,0 @@
-Solving for required assumptions to trust cosmicbox-0.5.1...
-Trust Score for cosmicbox-0.5.1: 34
-Assumptions Made:
-cosmicbox-0.5.1 has all safe dependencies: 33 wt
-cosmicbox-0.5.1 having no side effects and having all safe dependencies implies it is safe: 1 wt

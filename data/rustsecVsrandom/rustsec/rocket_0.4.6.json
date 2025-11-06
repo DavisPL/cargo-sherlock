@@ -1,6 +1,0 @@
-Solving for required assumptions to trust rocket-0.4.6...
-Trust Score for rocket-0.4.6: 65
-Assumptions Made:
-rocket-0.4.6 has many stars and forks: 0 wt
-rocket-0.4.6 having many stars and forks implies it is safe: 15 wt
-rocket-0.4.6 appearing in RustSec implies it is less safe (score penalty): 50 weight

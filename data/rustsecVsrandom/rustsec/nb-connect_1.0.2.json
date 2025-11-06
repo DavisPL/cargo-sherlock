@@ -1,6 +1,0 @@
-Solving for required assumptions to trust nb-connect-1.0.2...
-Trust Score for nb-connect-1.0.2: 78
-Assumptions Made:
-nb-connect-1.0.2 has many downloads: 18 wt
-nb-connect-1.0.2 having many downloads implies it is safe: 10 wt
-nb-connect-1.0.2 appearing in RustSec implies it is less safe (score penalty): 50 weight

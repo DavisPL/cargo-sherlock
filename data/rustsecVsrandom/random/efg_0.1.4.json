@@ -1,5 +1,0 @@
-Solving for required assumptions to trust efg-0.1.4...
-Trust Score for efg-0.1.4: 1
-Assumptions Made:
-efg-0.1.4 has all safe dependencies: 0 wt
-efg-0.1.4 having no side effects and having all safe dependencies implies it is safe: 1 wt

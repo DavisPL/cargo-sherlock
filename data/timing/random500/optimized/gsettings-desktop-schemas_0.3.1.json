@@ -1,5 +1,0 @@
-Solving for required assumptions to trust gsettings-desktop-schemas-0.3.1...
-Trust Score for gsettings-desktop-schemas-0.3.1: 65
-Assumptions Made:
-gsettings-desktop-schemas-0.3.1 has all safe dependencies: 64 wt
-gsettings-desktop-schemas-0.3.1 having no side effects and having all safe dependencies implies it is safe: 1 wt
