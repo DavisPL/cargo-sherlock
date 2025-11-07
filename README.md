@@ -1,4 +1,4 @@
-# Cargo-Sherlock Artifact 🕵️
+# Cargo-Sherlock 🕵️
 
 This repository contains the artifact for "Cargo Sherlock: An SMT-Based Checker for Software Trust Costs" submitted to FORMALISE 2026.
 
