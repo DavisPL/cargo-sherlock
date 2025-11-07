@@ -45,15 +45,16 @@ You should now see a `(.venv)` prefix in your terminal indicating that the virtu
 
 If you are using the provided virtual machine, please download the VM file from [this link]() and import it into VirtualBox by following these steps:
 1. Open VirtualBox and go to `File` -> `Import Appliance`.
-2. Select the downloaded VM file and click `Next`.
-3. Review the settings and click `Import` to start the import process.
-4. Once the import is complete, select the VM in VirtualBox and click `Start` to launch it.
+2. Select the downloaded VM file and click `Finish`.
+3. This will import the virtual machine into VirtualBox.
+4. Once the import is complete, you should see a VM named `cargo-sherlock` in the list of available VMs.
+5. Select the `cargo-sherlock` VM and click on `Start` to launch it.
 
-The username is `vboxuser` and password is `1234`. The cargo-sherlock-artifact repository is already cloned and set up in the Desktop of the VM. You can open a terminal in the VM and navigate to the `cargo-sherlock-artifact` using the following command:
+The username is `vboxuser` and password is `1234`. The cargo-sherlock is already installed at Desktop of the VM. You can open a terminal in the VM and navigate to the `cargo-sherlock` using the following command:
 ```bash
-    cd ~/Desktop/cargo-sherlock-artifact
+    cd ~/Desktop/cargo-sherlock
 ```
-Even though we have pre-installed all dependencies in the VM, you still need your GitHub personal access token to run the tool. Please generate a GitHub personal access token from [token page](https://github.com/settings/tokens/new). Please select Generate new token (classic). Then, name your token, select an expiration date, and grant the token at least the `public_repo` scope by checking the box. Please save it in a file named `helpers/token.txt` in the `cargo-sherlock-artifact` directory.
+Even though we have pre-installed all dependencies in the VM, you still need your GitHub personal access token to run the tool. Please generate a GitHub personal access token from [token page](https://github.com/settings/tokens/new). Please select Generate new token (classic). Then, name your token, select an expiration date, and grant the token at least the `public_repo` scope by checking the box. Please save it at `/home/vboxuser/Desktop/cargo-sherlock/helpers/token.txt`.
 
 Now you can activate the python virtual environment by running the command below at root of the repository:
 ```bash
@@ -296,7 +297,7 @@ python3 sherlock.py logs <crate-name> <crate-version> --path <absolute-path-to-l
 Here is an example run on the faster_log crate stored locally in this repository:
 
 ```Bash
-python3 sherlock.py log faster_log -p /Users/hassnain/Desktop/final/cargo-sherlock-artifact/local_crates/faster_log
+python3 sherlock.py log faster_log -p /home/vboxuser/Desktop/final/cargo-sherlock/local_crates/faster_log
 ```
 You should see the output similar to this:
 
@@ -357,7 +358,7 @@ python3 sherlock.py trust <crate-name> <crate-version> --path <absolute-path-to-
 For example, you can run it on the faster_log crate stored locally in this repository as follows:
 
 ```Bash
-python3 sherlock.py trust faster_log -p /Users/hassnain/Desktop/final/cargo-sherlock-artifact/local_crates/faster_log
+python3 sherlock.py trust faster_log -p /home/vboxuser/Desktop/final/cargo-sherlock/local_crates/faster_log
 ```
 You should see the output similar to this:
 ![image here](faster_log.png "Screenshot from 11/06")

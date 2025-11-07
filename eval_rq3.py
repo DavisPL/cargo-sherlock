@@ -393,8 +393,8 @@ def plot_rustsec_download_distribution(cached=True):
     # Axis labels and title
     ax.set_xlabel("Top Percent of crates.io", fontsize=12)
     ax.set_ylabel("Percentage of RustSec Crates", fontsize=12)
-    ax.set_title("Distribution of crates in RustSec by downloads", 
-                fontsize=14, fontweight="bold")
+    # ax.set_title("Distribution of crates in RustSec by downloads", 
+                # fontsize=14, fontweight="bold")
 
     # Remove top/right spines for a cleaner look
     ax.spines["top"].set_visible(False)
@@ -546,7 +546,7 @@ def main():
     if mode == "full":
         print("Running in 'full' mode...")
         print("1) Running Cargo-Sherlock on RustSec crates...")
-        # run_sherlock_all()
+        run_sherlock_all()
         print("2) Compiling Results into a CSV...")
         build_rq3_csv()
         print("3) Building a CSV with RustSec advisories labels...")

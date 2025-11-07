@@ -7,6 +7,7 @@ typo_crates
 cloned_crates
 processing/*
 **/.git/
+local_crates/**/.git
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
