@@ -12,7 +12,7 @@ For the installation, please follow these steps below:
 
 1. Clone this repository and the [cargo-scan](https://github.com/PLSysSec/cargo-scan) submodule.
 ```Bash
-git clone --recurse-submodules https://github.com/muhammad-hassnain/cargo-sherlock-artifact
+git clone --recurse-submodules https://github.com/DavisPL/cargo-sherlock.git
 ```
 2. Install Rust via the [official website](https://www.rust-lang.org/tools/install). After installing Rust, you can verify the installation by running:
 ```Bash
