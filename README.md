@@ -1,8 +1,10 @@
 # Cargo-Sherlock Artifact 🕵️
 
-This repository contains the artifact for `TODO` submitted to FORMALISE 2026.
+This repository contains the artifact for "Cargo Sherlock: An SMT-Based Checker for Software Trust Costs" submitted to FORMALISE 2026.
 
 `Cargo-Sherlock` is a Python-based tool designed to enhance the security of Rust projects by leveraging different metadata information about Rust crates. It is an automated reasoning tool that attempts to determine the safety of Rust crates by quantifying trust.
+
+We provide a pre-configured virtual machine (VM) with all dependencies installed for ease of use. You can access the VM via [this link](). The VM is built using [VirtualBox](https://www.virtualbox.org/). If you prefer to set up the tool on your own machine, please follow the installation instructions below.
 
 ## Installation **(skip this step if you have the virtual machine)**
 
@@ -41,7 +43,23 @@ You should now see a `(.venv)` prefix in your terminal indicating that the virtu
 
 ## Running the virtual machine
 
-If you have the virtual machine, `<TODO>`
+If you are using the provided virtual machine, please download the VM file from [this link]() and import it into VirtualBox by following these steps:
+1. Open VirtualBox and go to `File` -> `Import Appliance`.
+2. Select the downloaded VM file and click `Next`.
+3. Review the settings and click `Import` to start the import process.
+4. Once the import is complete, select the VM in VirtualBox and click `Start` to launch it.
+
+The username is `vboxuser` and password is `1234`. The cargo-sherlock-artifact repository is already cloned and set up in the Desktop of the VM. You can open a terminal in the VM and navigate to the `cargo-sherlock-artifact` using the following command:
+```bash
+    cd ~/Desktop/cargo-sherlock-artifact
+```
+Even though we have pre-installed all dependencies in the VM, you still need your GitHub personal access token to run the tool. Please generate a GitHub personal access token from [token page](https://github.com/settings/tokens/new). Please select Generate new token (classic). Then, name your token, select an expiration date, and grant the token at least the `public_repo` scope by checking the box. Please save it in a file named `helpers/token.txt` in the `cargo-sherlock-artifact` directory.
+
+Now you can activate the python virtual environment by running the command below at root of the repository:
+```bash
+source .venv/bin/activate
+```
+You should now see a `(.venv)` prefix in your terminal indicating that the virtual environment is active. You can continue with the steps mentioned below to check that everything works and replicate the experiments.
 
 ## Checking that everything works
 
@@ -191,7 +209,7 @@ The repository contains:
 
 ## Running the tool on your own examples
 
-Cargo-Sherlock can be used to analyze any Rust crate available on crates.io or on a local path. It has two modes: logs mode and trust mode. The tool can be run as follows:
+Cargo-Sherlock can be used to analyze any Rust crate available on crates.io or on a local path. (Please refer to subsections below for examples on how to run). The command with all the options is as follows:
 
 ```Bash
 python3 sherlock.py <mode> <crate-name> <crate-version> [-p <absolute-path-to-local-crate>] [-o <output-file>] [-u] [--no-horn]
