@@ -1,0 +1,184 @@
+[
+    {
+        "id": 0,
+        "name": "CRATE_NAME is safe",
+        "cost": 100,
+        "type": "positive",
+        "target": "crate"
+    },
+    {
+        "id": 1,
+        "name": "CRATE_NAME has many downloads",
+        "cost": "parameterized",
+        "type": "positive",
+        "target": "crate"
+    },
+    {
+        "id": 2,
+        "name": "CRATE_NAME having many downloads implies it is safe",
+        "cost": 25,
+        "type": "positive",
+        "target": "crate"
+    },
+    {
+        "id": 3,
+        "name": "CRATE_NAME having a current audit implies it is safe",
+        "cost": 5,
+        "type": "positive",
+        "target": "crate"
+    },
+    {
+        "id": 4,
+        "name": "CRATE_NAME has a past audit implies it is safe",
+        "cost": 20,
+        "type": "positive",
+        "target": "crate"
+    },
+    {
+        "id": 5,
+        "name": "CRATE_NAME has many stars and forks",
+        "cost": "parameterized",
+        "type": "positive",
+        "target": "crate"
+    },
+    {
+        "id": 6,
+        "name": "CRATE_NAME having many stars and forks implies it is safe",
+        "cost": 20,
+        "type": "positive",
+        "target": "crate"
+    },
+    {
+        "id": 7,
+        "name": "CRATE_NAME having no side effects and having all safe dependencies implies it is safe",
+        "cost": 10,
+        "type": "positive",
+        "target": "crate"
+    },
+    {
+        "id": 8,
+        "name": "CRATE_NAME having all trusted developers implies it is safe",
+        "cost": 5,
+        "type": "positive",
+        "target": "crate"
+    },
+    {
+        "id": 9,
+        "name": "DEVELOPER_NAME is trusted",
+        "cost": 70,
+        "type": "positive",
+        "target": "developer"
+    },
+    {
+        "id": 10,
+        "name": "DEVELOPER_NAME being in the trusted list implies they are trusted",
+        "cost": 1,
+        "type": "positive",
+        "target": "developer"
+    },
+    {
+        "id": 11,
+        "name": "CRATE_NAME is unsafe",
+        "cost": 100,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 12,
+        "name": "CRATE_NAME previously being in RustSec implies it is unsafe",
+        "cost": 90,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 13,
+        "name": "CRATE_NAME having an info label in RustSec implies it is unsafe",
+        "cost": 60,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 14,
+        "name": "CRATE_NAME having a low severity label in RustSec implies it is unsafe",
+        "cost": 20,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 15,
+        "name": "CRATE_NAME having a medium severity label in RustSec implies it is unsafe",
+        "cost": 15,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 16,
+        "name": "CRATE_NAME having a high severity label in RustSec implies it is unsafe",
+        "cost": 10,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 17,
+        "name": "CRATE_NAME having a critical severity label in RustSec implies it is unsafe",
+        "cost": 5,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 18,
+        "name": "CRATE_NAME has an unsafe dependency implies it is unsafe",
+        "cost": 70,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 19,
+        "name": "CRATE_NAME has many side effects",
+        "cost": "parameterized",
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 20,
+        "name": "CRATE_NAME has many side effects implies it is unsafe",
+        "cost": 60,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 21,
+        "name": "CRATE_NAME failing a Miri test implies it is unsafe",
+        "cost": 50,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 22,
+        "name": "CRATE_NAME being uncategorized and having a vulnerability tag in RustSec implies it is unsafe",
+        "cost": 10,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 23,
+        "name": "CRATE_NAME being uncategorized and having a unsound tag in RustSec implies it is unsafe",
+        "cost": 20,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 24,
+        "name": "CRATE_NAME being uncategorized and having a notice tag in RustSec implies it is unsafe",
+        "cost": 60,
+        "type": "negative",
+        "target": "crate"
+    },
+    {
+        "id": 25,
+        "name": "CRATE_NAME being uncategorized and having a unmaintained tag in RustSec implies it is unsafe",
+        "cost": 50,
+        "type": "negative",
+        "target": "crate"
+    }
+]
