@@ -363,7 +363,7 @@ def plot_rustsec_download_distribution(cached=True):
                 "Top 50%", "Top 60%", "Top 70%", "Top 80%"
             ],
             "Percentage of RustSec Crates": [
-                63.62, 75.09, 86.28, 92.19, 95.36, 97.89, 99.37, 99.58, 100.00
+                63.6, 75.1, 86.3, 92.2, 95.4, 97.9, 99.4, 99.6, 100.0
             ]
         }
     else:
@@ -404,7 +404,7 @@ def plot_rustsec_download_distribution(cached=True):
     for bar in bars:
         height = bar.get_height()
         if height > 0:
-            ax.annotate(f"{height:.2f}%",
+            ax.annotate(f"{height:.1f}%",
                         xy=(bar.get_x() + bar.get_width() / 2, height),
                         xytext=(0, 3),  # 3 points vertical offset
                         textcoords="offset points",

@@ -1,6 +1,5 @@
 # This file contains the functions to get metadata for a given crate or user.
 import sys
-import ast
 import helpers.logger as logger
 from typing import NamedTuple, DefaultDict
 import csv
@@ -50,27 +49,6 @@ def get_crate_metadata(crate: CrateVersion , local=False) -> dict:
         json.dump(audit_summary, file_backup, indent=2)
     
     return audit_summary
-    
-def get_user_metadata(user: User) -> dict:
-    """
-    Returns the metadata for a given user.
-    """
-    # TODO (future work): Find a way to implement this function
-    if user == "dtolnay":
-        return {
-            "stars": 100,
-            "forks": 10
-        }
-    elif user == "alexcrichton":
-        return {
-            "stars": 125,
-            "forks": 3
-        }
-    else:
-        return {
-            "stars": 0,
-            "forks": 0
-        }
     
 def parse_single_file(file: str) -> list:
     csv.field_size_limit(sys.maxsize)

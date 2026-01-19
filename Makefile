@@ -2,7 +2,8 @@
 VENV = .venv
 PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip
-NIGHTLY_VERSION = nightly-2025-01-10 
+NIGHTLY_VERSION = nightly-2025-01-09
+PIP_VERSION = 25.0
 
 install: $(VENV)/bin/activate cargo-scan/Cargo.toml
 	git submodule init
@@ -34,6 +35,7 @@ activate: $(VENV)/bin/activate
 
 $(VENV)/bin/activate: requirements.txt
 	python3 -m venv $(VENV)
+	$(PIP) install --upgrade "pip==$(PIP_VERSION)"
 	$(PIP) install -r requirements.txt
 
 cargo-scan/Cargo.toml:

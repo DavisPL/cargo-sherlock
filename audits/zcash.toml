@@ -11,6 +11,13 @@ criteria = "safe-to-deploy"
 delta = "0.8.0 -> 0.8.2"
 aggregated-from = "https://raw.githubusercontent.com/zcash/wallet/main/supply-chain/audits.toml"
 
+[[audits.abscissa_tokio]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+version = "0.9.0"
+notes = "This crate uses `#![forbid(unsafe_code)]`, so there are no `unsafe` blocks. The code is a\nstraightforward combination of `abscissa_core` and `tokio`, with very little of its own\nlogic. No ambient capabilities are used directly, and the `tokio` runtime APIs appear to\nbe correctly used.\n"
+aggregated-from = "https://raw.githubusercontent.com/zcash/wallet/main/supply-chain/audits.toml"
+
 [[audits.addr2line]]
 who = "Jack Grigg <jack@z.cash>"
 criteria = "safe-to-deploy"
@@ -720,6 +727,20 @@ criteria = "safe-to-deploy"
 delta = "1.0.3 -> 1.0.4"
 aggregated-from = "https://raw.githubusercontent.com/zcash/wallet/main/supply-chain/audits.toml"
 
+[[audits.console-api]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "0.8.1 -> 0.9.0"
+notes = "Only changes are to generated code as a result of dependency and protobuf updates."
+aggregated-from = "https://raw.githubusercontent.com/zcash/wallet/main/supply-chain/audits.toml"
+
+[[audits.console-subscriber]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "0.4.1 -> 0.5.0"
+notes = "Adds support for Vsock addresses. Usages of `tokio-vsock` for I/O look correct."
+aggregated-from = "https://raw.githubusercontent.com/zcash/wallet/main/supply-chain/audits.toml"
+
 [[audits.const_format]]
 who = "Jack Grigg <jack@electriccoin.co>"
 criteria = "safe-to-deploy"
@@ -1313,6 +1334,12 @@ criteria = "safe-to-deploy"
 delta = "0.20.11 -> 0.21.3"
 aggregated-from = "https://raw.githubusercontent.com/zcash/wallet/main/supply-chain/audits.toml"
 
+[[audits.deadpool-sqlite]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "0.9.0 -> 0.12.1"
+aggregated-from = "https://raw.githubusercontent.com/zcash/wallet/main/supply-chain/audits.toml"
+
 [[audits.der]]
 who = "Daira-Emma Hopwood <daira@jacaranda.org>"
 criteria = "safe-to-deploy"
@@ -1426,6 +1453,13 @@ aggregated-from = "https://raw.githubusercontent.com/zcash/wallet/main/supply-ch
 who = "Jack Grigg <jack@electriccoin.co>"
 criteria = "safe-to-deploy"
 delta = "0.1.1 -> 0.2.0"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[audits.dynosaur]]
+who = "Jack Grigg <jack@electriccoin.co>"
+criteria = "safe-to-deploy"
+delta = "0.2.0 -> 0.3.0"
+notes = "Updates its proc macro dependency, no other changes."
 aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
 
 [[audits.ed25519]]
@@ -6145,6 +6179,20 @@ end = "2026-07-16"
 aggregated-from = "https://raw.githubusercontent.com/zcash/zcash/master/qa/supply-chain/audits.toml"
 
 [[trusted.halo2_proofs]]
+criteria = "safe-to-deploy"
+user-id = 6289
+start = "2022-01-20"
+end = "2026-12-04"
+aggregated-from = "https://raw.githubusercontent.com/zcash/wallet/main/supply-chain/audits.toml"
+
+[[trusted.halo2_proofs]]
+criteria = "safe-to-deploy"
+user-id = 6289
+start = "2022-01-20"
+end = "2026-12-05"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[trusted.halo2_proofs]]
 criteria = [ "safe-to-deploy", "crypto-reviewed",]
 user-id = 1244
 start = "2022-05-10"
@@ -6237,6 +6285,13 @@ aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/sup
 
 [[trusted.orchard]]
 criteria = "safe-to-deploy"
+user-id = 6289
+start = "2021-01-07"
+end = "2026-12-05"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[trusted.orchard]]
+criteria = "safe-to-deploy"
 user-id = 169181
 start = "2024-08-12"
 end = "2025-08-12"
@@ -6321,6 +6376,13 @@ aggregated-from = "https://raw.githubusercontent.com/zcash/wallet/main/supply-ch
 
 [[trusted.sapling-crypto]]
 criteria = "safe-to-deploy"
+user-id = 6289
+start = "2024-01-26"
+end = "2026-12-05"
+aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[trusted.sapling-crypto]]
+criteria = "safe-to-deploy"
 user-id = 169181
 start = "2024-08-12"
 end = "2025-08-12"
@@ -6374,6 +6436,13 @@ user-id = 6289
 start = "2024-10-15"
 end = "2026-10-26"
 aggregated-from = "https://raw.githubusercontent.com/zcash/librustzcash/main/supply-chain/audits.toml"
+
+[[trusted.schemerz-rusqlite]]
+criteria = "safe-to-deploy"
+user-id = 6289
+start = "2024-10-15"
+end = "2026-11-05"
+aggregated-from = "https://raw.githubusercontent.com/zcash/wallet/main/supply-chain/audits.toml"
 
 [[trusted.shardtree]]
 criteria = "safe-to-deploy"

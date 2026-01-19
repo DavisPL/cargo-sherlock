@@ -14,19 +14,25 @@ For the installation, please follow these steps below:
 ```Bash
 git clone --recurse-submodules https://github.com/DavisPL/cargo-sherlock.git
 ```
-2. Install Rust via the [official website](https://www.rust-lang.org/tools/install). After installing Rust, you can verify the installation by running:
+2. Install Rust via the [official website](https://www.rust-lang.org/tools/install). We have added a rust-toolchain file to ensure you use the correct Rust version. You can verify your Rust installation by running:
 ```Bash
 rustc --version
 ```
-This should display the installed Rust version.
+You should see something like:
+```Bash
+rustc 1.86.0-nightly (824759493 2025-01-09)
+```
 
-3. Ensure you have Python 3 installed. You can verify your Python installation by running:
+3. Ensure you have Python 3 installed. The build has been tested with Python 3.13.2. You can download this specific version from the [official website](https://www.python.org/downloads/). You can verify your Python installation by running:
 ```Bash
 python3 --version
 ```
-This should display the installed Python version. If not installed, you can download it from the [official website](https://www.python.org/downloads/).
+You should see:
+```Bash
+Python 3.13.2
+```
 
-4. Run `make` to create a Python virtual environment, this will install all Python dependencies, activate the virtual environment, and build cargo-scan.
+4. Run `make` to create a Python virtual environment, this will create the virtual environment, install all required Python packages listed in `requirements.txt` using pip `25.0`, install `miri` for Rust, and build the `cargo-scan` tool. 
 ```Bash
 make
 ```

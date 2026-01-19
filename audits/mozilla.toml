@@ -483,7 +483,7 @@ who = "Alex Franchuk <afranchuk@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 106639
 start = "2023-07-25"
-end = "2025-02-28"
+end = "2026-11-13"
 notes = "This crate is written and solely maintained by a mozilla employee."
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
@@ -573,7 +573,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 111105
 start = "2021-11-22"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi]]
@@ -581,7 +581,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 127697
 start = "2021-10-27"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_bindgen]]
@@ -616,7 +616,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 111105
 start = "2021-11-22"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_bindgen]]
@@ -624,7 +624,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 127697
 start = "2021-10-27"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_build]]
@@ -659,7 +659,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 111105
 start = "2021-11-22"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_build]]
@@ -667,7 +667,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 127697
 start = "2021-10-27"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_checksum_derive]]
@@ -702,7 +702,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 111105
 start = "2023-11-20"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_checksum_derive]]
@@ -710,7 +710,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 127697
 start = "2023-01-27"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_core]]
@@ -745,7 +745,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 111105
 start = "2023-11-20"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_core]]
@@ -753,7 +753,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 127697
 start = "2023-01-27"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_internal_macros]]
@@ -804,7 +804,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 111105
 start = "2021-11-22"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_macros]]
@@ -812,7 +812,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 127697
 start = "2021-10-27"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_meta]]
@@ -847,7 +847,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 111105
 start = "2023-11-20"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_meta]]
@@ -855,7 +855,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 127697
 start = "2022-09-13"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_pipeline]]
@@ -866,6 +866,15 @@ start = "2021-10-27"
 end = "2026-02-01"
 notes = "Maintained by the Glean and Application Services teams"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[wildcard-audits.uniffi_pipeline]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+user-id = 111105
+start = "2025-10-08"
+end = "2027-01-14"
+notes = "Maintained by the Glean and Application Services teams"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_testing]]
 who = "Ben Dean-Kawamura <bdk@mozilla.com>"
@@ -899,7 +908,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 111105
 start = "2023-11-20"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_testing]]
@@ -907,7 +916,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 127697
 start = "2023-01-27"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_udl]]
@@ -924,7 +933,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 111105
 start = "2023-11-20"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.uniffi_udl]]
@@ -932,7 +941,7 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 user-id = 127697
 start = "2023-10-18"
-end = "2026-01-13"
+end = "2027-01-08"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[wildcard-audits.utf8_iter]]
@@ -1272,6 +1281,12 @@ delta = "0.11.1 -> 0.12.0"
 notes = "No new unsafe usage, mostly dependency updates and smaller API changes"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
+[[audits.askama]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.13.1 -> 0.14.0"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
 [[audits.askama_derive]]
 who = "Ben Dean-Kawamura <bdk@mozilla.com>"
 criteria = "safe-to-deploy"
@@ -1286,12 +1301,24 @@ delta = "0.11.2 -> 0.12.1"
 notes = "Dependency updates, a new toml dependency and some API changes. No unsafe use."
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
+[[audits.askama_derive]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.13.1 -> 0.14.0"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
 [[audits.askama_parser]]
 who = "Ben Dean-Kawamura <bdk@mozilla.com>"
 criteria = "safe-to-deploy"
 version = "0.13.0"
 notes = "Template crate.  This is only used to generate the Rust/JS code for UniFFI.\n\nWe used to use askama, then we switched to rinja which was a fork.  Now rinja and\naskama have merged again.\n\nI did a quick scan of the current code and couldn't find any issues.\n"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.askama_parser]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.13.0 -> 0.14.0"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[audits.async-task]]
 who = "Nika Layzell <nika@thelayzells.com>"
@@ -1572,6 +1599,13 @@ aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-ch
 who = "Mike Hommey <mh+mozilla@glandium.org>"
 criteria = "safe-to-deploy"
 delta = "0.10.2 -> 0.10.3"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.block2]]
+who = "Andy Leiserson <aleiserson@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "0.6.2"
+notes = "Contains unsafe code to interoperate with the ObjC runtime."
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
 [[audits.borsh]]
@@ -2254,6 +2288,12 @@ delta = "0.35.0 -> 0.35.0@git:71b7cfe6f1cd85427ca905a41be31ca9f6af29a5"
 notes = "Only dependency bumps and one trivial change with no unsafe change."
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.cssparser]]
+who = "Diego Escalante <descalante@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.35.0 -> 0.36.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.cssparser-color]]
 who = "Emilio Cobos Álvarez <emilio@crisal.io>"
 criteria = "safe-to-deploy"
@@ -2876,6 +2916,12 @@ who = "Bobby Holley <bobbyholley@gmail.com>"
 criteria = "safe-to-deploy"
 version = "0.11.0"
 notes = "All code written or reviewed by Mozilla staff."
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.dwrote]]
+who = "Jonathan Kew <jfkthame@gmail.com>"
+criteria = "safe-to-deploy"
+delta = "0.11.0 -> 0.11.5"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
 [[audits.either]]
@@ -3635,6 +3681,13 @@ delta = "6.0.1 -> 6.0.2"
 notes = "I'm the author of the changes in this version of the crate."
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.glslopt]]
+who = "Emilio Cobos Álvarez <emilio@crisal.io>"
+criteria = "safe-to-deploy"
+delta = "0.1.11 -> 0.1.12"
+notes = "Only a minor build tweak."
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.goblin]]
 who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
@@ -3832,6 +3885,12 @@ aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-ch
 who = "Erich Gubler <erichdongubler@gmail.com>"
 criteria = "safe-to-deploy"
 delta = "0.9.1 -> 0.10.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.hashlink]]
+who = "Erich Gubler <erichdongubler@gmail.com>"
+criteria = "safe-to-deploy"
+delta = "0.10.0 -> 0.11.0"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
 [[audits.headers]]
@@ -4804,6 +4863,18 @@ criteria = "safe-to-deploy"
 version = "0.4.1"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.macro_rules_attribute]]
+who = "Andy Leiserson <aleiserson@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "0.2.2"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.macro_rules_attribute-proc_macro]]
+who = "Andy Leiserson <aleiserson@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "0.2.2"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.malloc_buf]]
 who = "Bobby Holley <bobbyholley@gmail.com>"
 criteria = "safe-to-deploy"
@@ -4993,6 +5064,12 @@ criteria = "safe-to-deploy"
 delta = "0.31.0 -> 0.32.0"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.metal]]
+who = "Jim Blandy <jimb@red-bean.com>"
+criteria = "safe-to-deploy"
+delta = "0.32.0 -> 0.33.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.midir]]
 who = "Bobby Holley <bobbyholley@gmail.com>"
 criteria = "safe-to-deploy"
@@ -5115,6 +5192,13 @@ who = "Chris Martin <cmartin@mozilla.com>"
 criteria = "safe-to-deploy"
 delta = "0.10.1 -> 0.10.2"
 notes = "This patch was written and reviewed by Mozilla employees"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.minidump-writer]]
+who = "Alex Franchuk <afranchuk@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.10.2 -> 0.11.0"
+notes = "A majority of these changes were made and reviewed by Mozilla employees. I've\nreviewed the others, as well as re-reviewed the broader changes. There was a\nlarge refactor which makes this changeset artificially large.\n"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
 [[audits.miniz_oxide]]
@@ -5373,6 +5457,12 @@ criteria = "safe-to-deploy"
 delta = "26.0.0 -> 27.0.0"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.naga]]
+who = [ "Andy Leiserson <aleiserson@mozilla.com>", "Teodor Tanasoaia <ttanasoaia@mozilla.com>", "Erich Gubler <erichdongubler@gmail.com>", "Jim Blandy <jimb@red-bean.com>",]
+criteria = "safe-to-deploy"
+delta = "27.0.0 -> 28.0.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.net2]]
 who = "Mike Hommey <mh+mozilla@glandium.org>"
 criteria = "safe-to-run"
@@ -5551,6 +5641,48 @@ criteria = "safe-to-deploy"
 delta = "1.14.0 -> 1.15.0"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.objc2]]
+who = "Andy Leiserson <aleiserson@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "0.6.3"
+notes = "Contains substantial unsafe code, as is typical for FFI.\n\nThe (non-published) `header-translator` crate that produces generated bindings\nappearing in other `objc2-*` crates was also reviewed, in lieu of a full review\nof the generated bindings.\n"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.objc2-core-foundation]]
+who = "Andy Leiserson <aleiserson@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "0.3.2"
+notes = "Contains substantial unsafe code, as is typical for FFI.\n\nThe (non-published) `header-translator` crate that produces generated bindings\nin this crate was also reviewed, in lieu of a full review of the generated\nbindings.\n\nUsers of this crate should be aware of the information in\nhttps://github.com/madsmtm/objc2/blob/main/crates/objc2/src/topics/frameworks_soundness.md.\n"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.objc2-encode]]
+who = "Andy Leiserson <aleiserson@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "4.1.0"
+notes = "Support library for objc2 with no unsafe code"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.objc2-foundation]]
+who = "Andy Leiserson <aleiserson@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "0.3.2"
+notes = "Contains substantial unsafe code, as is typical for FFI.\n\nThe (non-published) `header-translator` crate that produces generated bindings\nin this crate was also reviewed, in lieu of a full review of the generated\nbindings.\n\nUsers of this crate should be aware of the information in\nhttps://github.com/madsmtm/objc2/blob/main/crates/objc2/src/topics/frameworks_soundness.md.\n"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.objc2-io-surface]]
+who = "Andy Leiserson <aleiserson@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "0.3.2"
+notes = "Contains substantial unsafe code, as is typical for FFI.\n\nThe (non-published) `header-translator` crate that produces generated bindings\nin this crate was also reviewed, in lieu of a full review of the generated\nbindings.\n\nUsers of this crate should be aware of the information in\nhttps://github.com/madsmtm/objc2/blob/main/crates/objc2/src/topics/frameworks_soundness.md.\n"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.objc2-metal]]
+who = "Andy Leiserson <aleiserson@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "0.3.2"
+notes = "Contains substantial unsafe code, as is typical for FFI.\n\nThe (non-published) `header-translator` crate that produces generated bindings\nin this crate was also reviewed, in lieu of a full review of the generated\nbindings.\n\nUsers of this crate should be aware of the information in\nhttps://github.com/madsmtm/objc2/blob/main/crates/objc2/src/topics/frameworks_soundness.md.\n"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.object]]
 who = "Mike Hommey <mh+mozilla@glandium.org>"
 criteria = "safe-to-deploy"
@@ -5627,6 +5759,12 @@ version = "0.1.5@git:1f3c657c8073aec4f0b6ebac7be33b4851644745"
 notes = "Small crate, reviewed by bendk.  There is a decent amount of unsafe code, but it's well tested and the crate has been well-used over the years.\n\nThe git branch is my fork of the official code that removes the `loom` target to avoid pulling in that crate and its dependencies into moz-central.\nThis doesn't change any of the functionality -- the `loom` target is only used for testing.\n"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.oneshot]]
+who = "Bastian Gruber <foreach@me.com>"
+criteria = "safe-to-deploy"
+version = "0.1.11"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.oneshot-uniffi]]
 who = "Ben Dean-Kawamura <bdk@mozilla.com>"
 criteria = "safe-to-deploy"
@@ -5646,6 +5784,13 @@ who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 delta = "0.1.5 -> 0.1.6"
 notes = "Synced with the orginal crate, no new unsafe"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
+[[audits.oorandom]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-run"
+version = "11.1.5"
+notes = "Small random number generator, explicitly not cryptographically secure, no use of unsafe code, no dependencies"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[audits.option-ext]]
@@ -6425,6 +6570,12 @@ criteria = "safe-to-deploy"
 delta = "0.10.1 -> 0.11.0"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.ron]]
+who = "Jim Blandy <jimb@red-bean.com>"
+criteria = "safe-to-deploy"
+delta = "0.11.0 -> 0.12.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.rure]]
 who = "Nika Layzell <nika@thelayzells.com>"
 criteria = "safe-to-deploy"
@@ -6730,6 +6881,12 @@ delta = "1.0.163 -> 1.0.179"
 notes = "Internal refactorings and some new trait implementations"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
+[[audits.serde]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "1.0.227 -> 1.0.228"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
 [[audits.serde-value]]
 who = "Nika Layzell <nika@thelayzells.com>"
 criteria = "safe-to-deploy"
@@ -6772,6 +6929,12 @@ who = "Erich Gubler <erichdongubler@gmail.com>"
 criteria = "safe-to-deploy"
 delta = "1.0.226 -> 1.0.227"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.serde_core]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "1.0.227 -> 1.0.228"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[audits.serde_derive]]
 who = "Mike Hommey <mh+mozilla@glandium.org>"
@@ -6823,6 +6986,12 @@ delta = "1.0.163 -> 1.0.179"
 notes = "Internal refactorings and dependency updates"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
+[[audits.serde_derive]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "1.0.227 -> 1.0.228"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
 [[audits.serde_json]]
 who = "Mike Hommey <mh+mozilla@glandium.org>"
 criteria = "safe-to-deploy"
@@ -6870,6 +7039,20 @@ who = "Mike Hommey <mh+mozilla@glandium.org>"
 criteria = "safe-to-run"
 delta = "0.1.9 -> 0.1.10"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.serde_spanned]]
+who = "Ben Dean-Kawamura <bdk@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "1.0.3"
+notes = "Relatively simple Serde trait implementations.  No IO or unsafe code."
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.serde_spanned]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "1.0.3 -> 1.0.4"
+notes = "Unchanged"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[audits.serde_with]]
 who = "Mike Hommey <mh+mozilla@glandium.org>"
@@ -7567,6 +7750,19 @@ criteria = "safe-to-deploy"
 delta = "0.5.10 -> 0.5.11"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.toml_datetime]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "0.7.5+spec-1.1.0"
+notes = "Pure data type crate with some datetime parsing. No unsafe."
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
+[[audits.toml_writer]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+version = "1.0.6+spec-1.1.0"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
 [[audits.topological-sort]]
 who = "Bobby Holley <bobbyholley@gmail.com>"
 criteria = "safe-to-deploy"
@@ -8198,6 +8394,12 @@ criteria = "safe-to-deploy"
 delta = "0.4.0 -> 0.4.1"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.urlpattern]]
+who = "Ed Guloien <edgul@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.4.1 -> 0.4.2"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.utf16_iter]]
 who = "Henri Sivonen <hsivonen@hsivonen.fi>"
 criteria = "safe-to-deploy"
@@ -8287,6 +8489,13 @@ criteria = "safe-to-deploy"
 delta = "0.19.0 -> 0.19.1"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.wasm-encoder]]
+who = "Ben Visness <bvisness@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.243.0 -> 0.244.0"
+notes = "I made almost all the changes in this version, and the rest are straightforward, mostly deletions."
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.wasm-smith]]
 who = "Ryan Hunt <rhunt@eqrion.net>"
 criteria = "safe-to-deploy"
@@ -8312,6 +8521,19 @@ criteria = "safe-to-run"
 delta = "0.11.7 -> 0.11.8"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.wasm-smith]]
+who = "Yury Delendik <ydelendik@mozilla.com>"
+criteria = "safe-to-run"
+delta = "0.227.1 -> 0.243.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.wasm-smith]]
+who = "Ben Visness <bvisness@mozilla.com>"
+criteria = "safe-to-run"
+delta = "0.243.0 -> 0.244.0"
+notes = "I am the author of all the changes."
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.wasmparser]]
 who = "Ryan Hunt <rhunt@eqrion.net>"
 criteria = "safe-to-deploy"
@@ -8335,6 +8557,13 @@ aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-ch
 who = "Ryan Hunt <rhunt@eqrion.net>"
 criteria = "safe-to-deploy"
 delta = "0.93.0 -> 0.94.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.wasmparser]]
+who = "Ben Visness <bvisness@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.243.0 -> 0.244.0"
+notes = "I made most of these changes, and the rest were made by the Bytecode Alliance and seem fine to me."
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
 [[audits.wast]]
@@ -8372,6 +8601,13 @@ aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-ch
 who = "Ben Visness <bvisness@mozilla.com>"
 criteria = "safe-to-deploy"
 delta = "55.0.0 -> 56.0.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.wast]]
+who = "Ben Visness <bvisness@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "243.0.0 -> 244.0.0"
+notes = "I made most of the changes in this version, and the rest were made by the Bytecode Alliance and seem fine."
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
 [[audits.webrtc-sdp]]
@@ -8504,6 +8740,12 @@ criteria = "safe-to-deploy"
 delta = "26.0.0 -> 27.0.0"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.wgpu-core]]
+who = [ "Andy Leiserson <aleiserson@mozilla.com>", "Teodor Tanasoaia <ttanasoaia@mozilla.com>", "Erich Gubler <erichdongubler@gmail.com>", "Jim Blandy <jimb@red-bean.com>",]
+criteria = "safe-to-deploy"
+delta = "27.0.0 -> 28.0.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.wgpu-core-deps-apple]]
 who = "Erich Gubler <erichdongubler@gmail.com>"
 criteria = "safe-to-deploy"
@@ -8522,6 +8764,12 @@ criteria = "safe-to-deploy"
 delta = "26.0.0 -> 27.0.0"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.wgpu-core-deps-apple]]
+who = [ "Andy Leiserson <aleiserson@mozilla.com>", "Teodor Tanasoaia <ttanasoaia@mozilla.com>", "Erich Gubler <erichdongubler@gmail.com>", "Jim Blandy <jimb@red-bean.com>",]
+criteria = "safe-to-deploy"
+delta = "27.0.0 -> 28.0.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.wgpu-core-deps-windows-linux-android]]
 who = "Erich Gubler <erichdongubler@gmail.com>"
 criteria = "safe-to-deploy"
@@ -8538,6 +8786,12 @@ aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-ch
 who = [ "Andy Leiserson <aleiserson@mozilla.com>", "Teodor Tanasoaia <ttanasoaia@mozilla.com>", "Jim Blandy <jimb@red-bean.com>", "Erich Gubler <erichdongubler@gmail.com>",]
 criteria = "safe-to-deploy"
 delta = "26.0.0 -> 27.0.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.wgpu-core-deps-windows-linux-android]]
+who = [ "Andy Leiserson <aleiserson@mozilla.com>", "Teodor Tanasoaia <ttanasoaia@mozilla.com>", "Erich Gubler <erichdongubler@gmail.com>", "Jim Blandy <jimb@red-bean.com>",]
+criteria = "safe-to-deploy"
+delta = "27.0.0 -> 28.0.0"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
 [[audits.wgpu-hal]]
@@ -8638,6 +8892,12 @@ criteria = "safe-to-deploy"
 delta = "26.0.0 -> 27.0.0"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.wgpu-hal]]
+who = [ "Andy Leiserson <aleiserson@mozilla.com>", "Teodor Tanasoaia <ttanasoaia@mozilla.com>", "Erich Gubler <erichdongubler@gmail.com>", "Jim Blandy <jimb@red-bean.com>",]
+criteria = "safe-to-deploy"
+delta = "27.0.0 -> 28.0.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.wgpu-types]]
 who = "Dzmitry Malyshau <kvark@fastmail.com>"
 criteria = "safe-to-deploy"
@@ -8730,6 +8990,12 @@ criteria = "safe-to-deploy"
 delta = "26.0.0 -> 27.0.0"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.wgpu-types]]
+who = [ "Andy Leiserson <aleiserson@mozilla.com>", "Teodor Tanasoaia <ttanasoaia@mozilla.com>", "Erich Gubler <erichdongubler@gmail.com>", "Jim Blandy <jimb@red-bean.com>",]
+criteria = "safe-to-deploy"
+delta = "27.0.0 -> 28.0.0"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.whatsys]]
 who = "Bobby Holley <bobbyholley@gmail.com>"
 criteria = "safe-to-deploy"
@@ -8743,6 +9009,20 @@ criteria = "safe-to-deploy"
 delta = "0.1.2 -> 0.3.1"
 notes = "Maintained by me. I have written or reviewed all of the code."
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.whatsys]]
+who = "Emilio Cobos Álvarez <emilio@crisal.io>"
+criteria = "safe-to-deploy"
+delta = "0.3.1 -> 0.3.2"
+notes = "Minor tweak to avoid depending on min() macro which I authored."
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.whatsys]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.3.1 -> 0.3.2"
+notes = "Maintained by me. I have written or reviewed all of the code."
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[audits.windows-link]]
 who = "Mark Hammond <mhammond@skippinet.com.au>"
@@ -8862,11 +9142,25 @@ version = "0.7.32"
 notes = "This crate is `no_std` so doesn't use any side-effectful std functions. It\ncontains quite a lot of `unsafe` code, however. I verified portions of this. It\nalso has a large, thorough test suite. The project claims to run tests with\nMiri to have stronger soundness checks, and also claims to use formal\nverification tools to prove correctness.\n"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.zerocopy]]
+who = "Alex Franchuk <afranchuk@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.7.32 -> 0.8.27"
+notes = "These changes are enormous, however unsafe code is kept somewhat minimal in\ncomparison. The safety properties of unsafe code blocks, traits, and other\ntypes are thoroughly documented. The new build script is safe. All code is very\nthoroughly tested. I expect their test coverage is quite high.\n"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
 [[audits.zerocopy-derive]]
 who = "Alex Franchuk <afranchuk@mozilla.com>"
 criteria = "safe-to-deploy"
 version = "0.7.32"
 notes = "Clean, safe macros for zerocopy."
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.zerocopy-derive]]
+who = "Alex Franchuk <afranchuk@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.7.32 -> 0.8.27"
+notes = "There are a lot of changes here, however they look reasonable. Unsafe code is\nheavily documented, and there are extensive tests for the changes.\n"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
 [[audits.zerofrom]]
@@ -10084,8 +10378,29 @@ aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-ch
 criteria = "safe-to-deploy"
 user-id = 6743
 start = "2022-12-14"
+end = "2026-11-12"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[trusted.toml]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2022-12-14"
 end = "2026-06-02"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/cargo-vet/main/supply-chain/audits.toml"
+
+[[trusted.toml]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2022-12-14"
+end = "2027-01-08"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
+[[trusted.toml_datetime]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2022-10-21"
+end = "2026-11-12"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
 [[trusted.toml_datetime]]
 criteria = "safe-to-deploy"
@@ -10101,12 +10416,40 @@ start = "2021-09-13"
 end = "2025-09-12"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/cargo-vet/main/supply-chain/audits.toml"
 
+[[trusted.toml_parser]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2025-07-08"
+end = "2026-11-12"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[trusted.toml_parser]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2025-07-08"
+end = "2027-01-08"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
 [[trusted.toml_write]]
 criteria = "safe-to-deploy"
 user-id = 6743
 start = "2025-04-25"
 end = "2026-06-02"
 aggregated-from = "https://raw.githubusercontent.com/mozilla/cargo-vet/main/supply-chain/audits.toml"
+
+[[trusted.toml_writer]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2025-07-08"
+end = "2026-11-12"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[trusted.typeid]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2024-05-13"
+end = "2026-12-11"
+aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
 [[trusted.typeid]]
 criteria = "safe-to-deploy"

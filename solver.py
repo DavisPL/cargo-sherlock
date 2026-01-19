@@ -34,7 +34,7 @@ def get_developer_assumptions(developer: str, metadata: dict) -> tuple[list[z3.B
     """
     Returns a list of Z3 variables and possible assumptions for a given developer. 
     """
-    # TODO: Expand this function to include more assumptions about developers
+    # FUTURE WORK: This can be expanded to include more developer metadata.
 
     # Unknown variables
     trusted = z3.Bool(f"{developer}_trusted")  # developer is trusted

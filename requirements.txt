@@ -24,6 +24,6 @@ tzdata==2024.1
 urllib3==2.2.2
 z3-solver==4.13.0.0
 rich==14.2.0
-matplotlib
-seaborn
-scipy
+matplotlib==3.10.8
+seaborn==0.13.2
+scipy==1.17.0
