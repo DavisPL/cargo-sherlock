@@ -21,7 +21,7 @@ class Assumption:
             self.cost = cost
             return
         if Assumption.user_costs is None:
-            with open('helpers/parameters.json', 'r') as f:
+            with open('helpers/costs.json', 'r') as f:
                 Assumption.user_costs = json.load(f)
         try:
             self.cost = next((x for x in Assumption.user_costs if x.get('id') == id))['cost']
