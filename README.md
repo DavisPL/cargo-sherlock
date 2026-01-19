@@ -20,16 +20,21 @@ rustc --version
 ```
 You should see something like:
 ```Bash
-rustc 1.86.0-nightly (824759493 2025-01-09)
+rustc 1.86.0-nightly (824759493 2025-01-08)
 ```
 
-3. Ensure you have Python 3 installed. The build has been tested with Python 3.13.2. You can download this specific version from the [official website](https://www.python.org/downloads/). You can verify your Python installation by running:
+3. Ensure you have Python 3 installed. The build has been tested with Python 3.12.3. You can download this specific version from the [official website](https://www.python.org/downloads/). You can verify your Python installation by running:
 ```Bash
 python3 --version
 ```
 You should see:
 ```Bash
-Python 3.13.2
+Python 3.12.3
+```
+
+5. We also need to install ensurepip for venv. If you are on a Debian/Ubuntu system, you can install it using:
+```
+sudo apt install python3.12-venv
 ```
 
 4. Run `make` to create a Python virtual environment, this will create the virtual environment, install all required Python packages listed in `requirements.txt` using pip `25.0`, install `miri` for Rust, and build the `cargo-scan` tool. 
