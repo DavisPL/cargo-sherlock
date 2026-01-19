@@ -956,6 +956,40 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d5fe4ccb98d9c292d56fec89a5e07da7fc4cf0dc11e156b41793132775d3e591"
 
 [[package]]
+name = "supply-chain-trust-example-crate-000060"
+version = "1.48.0"
+dependencies = [
+ "async-stream",
+ "backtrace",
+ "bytes",
+ "futures",
+ "futures-concurrency",
+ "io-uring",
+ "libc",
+ "loom",
+ "mio",
+ "mio-aio",
+ "mockall",
+ "nix",
+ "parking_lot",
+ "pin-project-lite",
+ "proptest",
+ "rand",
+ "signal-hook-registry",
+ "slab",
+ "socket2",
+ "tempfile",
+ "tokio-macros",
+ "tokio-stream",
+ "tokio-test",
+ "tokio-util",
+ "tracing",
+ "tracing-mock",
+ "wasm-bindgen-test",
+ "windows-sys 0.61.2",
+]
+
+[[package]]
 name = "syn"
 version = "2.0.106"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1009,40 +1043,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "tokio"
-version = "1.48.0"
-dependencies = [
- "async-stream",
- "backtrace",
- "bytes",
- "futures",
- "futures-concurrency",
- "io-uring",
- "libc",
- "loom",
- "mio",
- "mio-aio",
- "mockall",
- "nix",
- "parking_lot",
- "pin-project-lite",
- "proptest",
- "rand",
- "signal-hook-registry",
- "slab",
- "socket2",
- "tempfile",
- "tokio-macros",
- "tokio-stream",
- "tokio-test",
- "tokio-util",
- "tracing",
- "tracing-mock",
- "wasm-bindgen-test",
- "windows-sys 0.61.2",
-]
-
-[[package]]
 name = "tokio-macros"
 version = "2.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1061,7 +1061,7 @@ checksum = "eca58d7bba4a75707817a2c44174253f9236b2d5fbd055602e9d5c07c139a047"
 dependencies = [
  "futures-core",
  "pin-project-lite",
- "tokio 1.47.1",
+ "tokio",
 ]
 
 [[package]]
@@ -1073,7 +1073,7 @@ dependencies = [
  "async-stream",
  "bytes",
  "futures-core",
- "tokio 1.47.1",
+ "tokio",
  "tokio-stream",
 ]
 
@@ -1088,7 +1088,7 @@ dependencies = [
  "futures-sink",
  "futures-util",
  "pin-project-lite",
- "tokio 1.47.1",
+ "tokio",
 ]
 
 [[package]]

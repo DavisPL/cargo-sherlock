@@ -343,6 +343,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
 
 [[package]]
+name = "supply-chain-trust-example-crate-000061"
+version = "2.5.7"
+dependencies = [
+ "bencher",
+ "form_urlencoded",
+ "idna",
+ "percent-encoding",
+ "serde",
+ "serde_json",
+ "wasm-bindgen-test",
+]
+
+[[package]]
 name = "syn"
 version = "2.0.77"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -379,19 +392,6 @@ name = "unicode-ident"
 version = "1.0.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e91b56cd4cadaeb79bbf1a5645f6b4f8dc5bde8834ad5894a8db35fda9efa1fe"
-
-[[package]]
-name = "url"
-version = "2.5.7"
-dependencies = [
- "bencher",
- "form_urlencoded",
- "idna",
- "percent-encoding",
- "serde",
- "serde_json",
- "wasm-bindgen-test",
-]
 
 [[package]]
 name = "utf16_iter"

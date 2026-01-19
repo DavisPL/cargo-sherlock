@@ -35,7 +35,7 @@ version = "1.0.227"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7a576275b607a2c86ea29e410193df32bc680303c82f31e275bbfcafe8b33be5"
 dependencies = [
- "serde_derive 1.0.227",
+ "serde_derive",
 ]
 
 [[package]]
@@ -50,7 +50,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "serde_derive"
+name = "supply-chain-trust-example-crate-000014"
 version = "1.0.228"
 dependencies = [
  "proc-macro2",

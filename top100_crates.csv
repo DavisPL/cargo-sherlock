@@ -70,7 +70,7 @@ hyper,hyper,1.6.0
 ahash,ahash,0.8.11
 num_cpus,num_cpus,1.16.0
 futures-core,futures-core,0.3.31
-windows-sys,windows-sys,0.59.0
+windows-sys,windows-sys,0.61.2
 futures-util,futures-util,0.3.31
 futures-task,futures-task,0.3.31
 sha2,sha2,0.10.8

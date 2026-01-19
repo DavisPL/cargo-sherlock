@@ -364,6 +364,29 @@ dependencies = [
 ]
 
 [[package]]
+name = "supply-chain-trust-example-crate-000091"
+version = "0.7.17"
+dependencies = [
+ "async-stream",
+ "bytes",
+ "futures",
+ "futures-core",
+ "futures-io",
+ "futures-sink",
+ "futures-test",
+ "futures-util",
+ "hashbrown",
+ "parking_lot",
+ "pin-project-lite",
+ "slab",
+ "tempfile",
+ "tokio",
+ "tokio-stream",
+ "tokio-test",
+ "tracing",
+]
+
+[[package]]
 name = "syn"
 version = "2.0.108"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -437,29 +460,6 @@ dependencies = [
  "futures-core",
  "tokio",
  "tokio-stream",
-]
-
-[[package]]
-name = "tokio-util"
-version = "0.7.17"
-dependencies = [
- "async-stream",
- "bytes",
- "futures",
- "futures-core",
- "futures-io",
- "futures-sink",
- "futures-test",
- "futures-util",
- "hashbrown",
- "parking_lot",
- "pin-project-lite",
- "slab",
- "tempfile",
- "tokio",
- "tokio-stream",
- "tokio-test",
- "tracing",
 ]
 
 [[package]]

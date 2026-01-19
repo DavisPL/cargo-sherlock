@@ -92,9 +92,7 @@ impl ConfigBuilder<ServerConfig, WantsServerCert> {
     ) -> Result<ServerConfig, Error> {
         let mut certified_key =
             CertifiedKey::from_der(cert_chain, key_der, self.crypto_provider())?;
-        if !ocsp.is_empty() {
-            certified_key.ocsp = Some(ocsp);
-        }
+        certified_key.ocsp = Some(ocsp);
         Ok(self.with_cert_resolver(Arc::new(SingleCertAndKey::from(certified_key))))
     }
 

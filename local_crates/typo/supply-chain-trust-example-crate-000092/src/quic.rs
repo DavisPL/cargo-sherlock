@@ -976,12 +976,11 @@ pub enum KeyChange {
 ///
 /// Governs version-specific behavior in the TLS layer
 #[non_exhaustive]
-#[derive(Clone, Copy, Debug, Default)]
+#[derive(Clone, Copy, Debug)]
 pub enum Version {
     /// Draft versions 29, 30, 31 and 32
     V1Draft,
     /// First stable RFC
-    #[default]
     V1,
     /// Anti-ossification variant of V1
     V2,
@@ -1037,6 +1036,12 @@ impl Version {
             Self::V1Draft | Self::V1 => b"quic ku",
             Self::V2 => b"quicv2 ku",
         }
+    }
+}
+
+impl Default for Version {
+    fn default() -> Self {
+        Self::V1
     }
 }
 

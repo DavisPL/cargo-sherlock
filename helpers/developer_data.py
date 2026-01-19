@@ -2,7 +2,7 @@ import os
 import requests
 import time
 
-TRUSTED_RUST_DEVELOPERS = ('dtolnay', 'alexcrichton')
+TRUSTED_RUST_DEVELOPERS = ('dtolnay', 'alexcrichton' )
 
 def get_developer_metadata(developer: str) -> dict:
     """
@@ -13,7 +13,7 @@ def get_developer_metadata(developer: str) -> dict:
     https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#list-repositories-for-a-user
 
     """
-    if developer == "Anonymous":
+    if developer == "Anonymous" or developer == "Annonymous":
         # this is for our typosquatted example crates, where the developer is unknown - skip API call to GitHub, as it will 404
         return {"stars": 0, "forks": 0, "in_trusted_list": False}
 

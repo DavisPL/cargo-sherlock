@@ -6,7 +6,7 @@ path = "tests/dummy_fixed.rs"
 edition = "2024"
 rust-version = "1.85"
 name = "supply-chain-trust-example-crate-000047"
-version = "0.11.0-rc.4"
+version = "0.11.0-rc.3"
 authors = [ "Anonymous",]
 build = false
 autolib = false
@@ -26,9 +26,9 @@ alloc = []
 block-api = [ "block-buffer",]
 default = [ "block-api",]
 dev = [ "blobby",]
-getrandom = [ "crypto-common/getrandom", "rand_core",]
 mac = [ "subtle",]
 oid = [ "const-oid",]
+os_rng = [ "crypto-common/rand_core", "rand_core",]
 rand_core = [ "crypto-common/rand_core",]
 zeroize = [ "dep:zeroize", "block-buffer?/zeroize",]
 
@@ -49,7 +49,7 @@ version = "0.10"
 optional = true
 
 [dependencies.crypto-common]
-version = "0.2.0-rc.5"
+version = "0.2.0-rc.4"
 
 [dependencies.subtle]
 version = "2.4"

@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "windows_x86_64_gnu"
+name = "supply-chain-trust-example-crate-000099"
 version = "0.53.1"
