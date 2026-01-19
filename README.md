@@ -61,12 +61,11 @@ If you are using the provided virtual machine, please download the VM file from 
 4. Once the import is complete, you should see a VM named `cargo-sherlock` in the list of available VMs.
 5. Select the `cargo-sherlock` VM and click on `Start` to launch it.
 
-The username is `vboxuser` and password is `1234`. The cargo-sherlock is already installed at Desktop of the VM. You can open a terminal in the VM and navigate to the `cargo-sherlock` using the following command:
+The username is `sherlock` and password is `1234`. The cargo-sherlock is already installed at Desktop of the VM. You can open a terminal in the VM and navigate to the `cargo-sherlock` using the following command:
 ```bash
     cd ~/Desktop/cargo-sherlock
 ```
-Even though we have pre-installed all dependencies in the VM, you still need your GitHub personal access token to run the tool. Please generate a GitHub personal access token from [token page](https://github.com/settings/tokens/new). Please select Generate new token (classic). Then, name your token, select an expiration date, and grant the token at least the `public_repo` scope by checking the box. Please save it at `/home/vboxuser/Desktop/cargo-sherlock/helpers/token.txt`.
-
+Even though we have pre-installed all dependencies in the VM, you still need your GitHub personal access token to run the tool. Please generate a GitHub personal access token from [token page](https://github.com/settings/tokens/new). Please select Generate new token (classic). Then, name your token, select an expiration date, and grant the token at least the `public_repo` scope by checking the box. Please save it at `/home/sherlock/Desktop/cargo-sherlock/helpers/token.txt`.
 Now you can activate the python virtual environment by running the command below at root of the repository:
 ```bash
 source .venv/bin/activate
