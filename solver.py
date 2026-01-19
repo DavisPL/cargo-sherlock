@@ -2,10 +2,10 @@
 import datetime
 import logging
 import z3
-import helpers.costs as costs
+import helpers.parameterized_costs as parameterized_costs
 import helpers.crate_data as crate_data
 import helpers.developer_data as developer_data
-from helpers.assumption import Assumption, CrateAssumptionSummary
+from helpers.assumption import Assumption, CrateAssumptionSummary, combine_costs
 from helpers.crate_data import CrateVersion
 from helpers.rustsectry import worst_label
 from rich.console import Console
@@ -44,8 +44,8 @@ def get_developer_assumptions(developer: str, metadata: dict) -> tuple[list[z3.B
     in_trusted_list = z3.BoolVal(metadata["in_trusted_list"])  # developer is in the list of trusted developers
 
     assumptions = [
-        Assumption(f"{developer} is trusted", trusted, 70),
-        Assumption(f"{developer} being in the trusted list implies they are trusted", z3.Implies(in_trusted_list, trusted), 1)
+        Assumption(9, f"{developer} is trusted", trusted),
+        Assumption(10, f"{developer} being in the trusted list implies they are trusted", z3.Implies(in_trusted_list, trusted))
     ]
 
     return (unknown_vars, assumptions)
@@ -73,15 +73,15 @@ def get_positive_assumptions(
     past_audit = z3.BoolVal(metadata["past_audit"])  # crate passed audit in the past
     
     assumptions = [
-        Assumption(f"{crate} is safe", safe, costs.MAX_COST),
-        Assumption(f"{crate} has many downloads", good_downloads, costs.downloads_cost(metadata["downloads"])),
-        Assumption(f"{crate} having many downloads implies it is safe", z3.Implies(good_downloads, safe), 25),
-        Assumption(f"{crate} having a current audit implies it is safe", z3.Implies(current_audit, safe), 5),
-        Assumption(f"{crate} has a past audit implies it is safe", z3.Implies(past_audit, safe), 20),
-        Assumption(f"{crate} has many stars and forks", good_repo_stats, costs.repo_stats_cost(metadata["stars"], metadata["forks"])),
-        Assumption(f"{crate} having many stars and forks implies it is safe", z3.Implies(good_repo_stats, safe), 20),
-        Assumption(f"{crate} having no side effects and having all safe dependencies implies it is safe", z3.Implies(z3.And(no_side_effects, z3.And(dependencies_safe)), safe), 10),
-        Assumption(f"{crate} having all trusted developers implies it is safe", z3.Implies(z3.And(developers_trusted), safe), 5),
+        Assumption(0, f"{crate} is safe", safe),
+        Assumption(1, f"{crate} has many downloads", good_downloads, cost = parameterized_costs.downloads_cost(metadata["downloads"])),
+        Assumption(2, f"{crate} having many downloads implies it is safe", z3.Implies(good_downloads, safe)),
+        Assumption(3, f"{crate} having a current audit implies it is safe", z3.Implies(current_audit, safe)),
+        Assumption(4, f"{crate} has a past audit implies it is safe", z3.Implies(past_audit, safe)),
+        Assumption(5, f"{crate} has many stars and forks", good_repo_stats, cost = parameterized_costs.repo_stats_cost(metadata["stars"], metadata["forks"])),
+        Assumption(6, f"{crate} having many stars and forks implies it is safe", z3.Implies(good_repo_stats, safe)),
+        Assumption(7, f"{crate} having no side effects and having all safe dependencies implies it is safe", z3.Implies(z3.And(no_side_effects, z3.And(dependencies_safe)), safe)),
+        Assumption(8, f"{crate} having all trusted developers implies it is safe", z3.Implies(z3.And(developers_trusted), safe)),
     ]
 
     analyzed_crates.add(crate)
@@ -135,17 +135,17 @@ def get_negative_assumptions(
     fails_miri = z3.BoolVal(metadata["miri_details"]['failed'] != 0) # crate fails Miri tests
 
     assumptions = [
-        Assumption(f"{crate} is unsafe", unsafe, costs.MAX_COST),
-        Assumption(f"{crate} previously being in RustSec implies it is unsafe", z3.Implies(previously_in_rustsec, unsafe), 90),
-        Assumption(f"{crate} having an info label in RustSec implies it is unsafe", z3.Implies(in_rustsec_info, unsafe), 60),
-        Assumption(f"{crate} having a low severity label in RustSec implies it is unsafe", z3.Implies(low_severity, unsafe), 20),
-        Assumption(f"{crate} having a medium severity label in RustSec implies it is unsafe", z3.Implies(med_severity, unsafe), 15),
-        Assumption(f"{crate} having a high severity label in RustSec implies it is unsafe", z3.Implies(high_severity, unsafe), 10),
-        Assumption(f"{crate} having a critical severity label in RustSec implies it is unsafe", z3.Implies(critical_severity, unsafe), 5),
-        Assumption(f"{crate} has an unsafe dependency implies it is unsafe", z3.Implies(z3.Or(dependencies_unsafe), unsafe), 70),
-        Assumption(f"{crate} has many side effects", many_side_effects, costs.side_effects_cost(metadata["num_side_effects"])),
-        Assumption(f"{crate} has many side effects implies it is unsafe", z3.Implies(many_side_effects, unsafe), 60),
-        Assumption(f"{crate} failing a Miri test implies it is unsafe", z3.Implies(fails_miri, unsafe), 50),
+        Assumption(11, f"{crate} is unsafe", unsafe),
+        Assumption(12, f"{crate} previously being in RustSec implies it is unsafe", z3.Implies(previously_in_rustsec, unsafe)),
+        Assumption(13, f"{crate} having an info label in RustSec implies it is unsafe", z3.Implies(in_rustsec_info, unsafe)),
+        Assumption(14, f"{crate} having a low severity label in RustSec implies it is unsafe", z3.Implies(low_severity, unsafe)),
+        Assumption(15, f"{crate} having a medium severity label in RustSec implies it is unsafe", z3.Implies(med_severity, unsafe)),
+        Assumption(16, f"{crate} having a high severity label in RustSec implies it is unsafe", z3.Implies(high_severity, unsafe)),
+        Assumption(17, f"{crate} having a critical severity label in RustSec implies it is unsafe", z3.Implies(critical_severity, unsafe)),
+        Assumption(18, f"{crate} has an unsafe dependency implies it is unsafe", z3.Implies(z3.Or(dependencies_unsafe), unsafe)),
+        Assumption(19, f"{crate} has many side effects", many_side_effects, cost = parameterized_costs.side_effects_cost(metadata["num_side_effects"])),
+        Assumption(20, f"{crate} has many side effects implies it is unsafe", z3.Implies(many_side_effects, unsafe)),
+        Assumption(21, f"{crate} failing a Miri test implies it is unsafe", z3.Implies(fails_miri, unsafe)),
     ]
 
     if metadata["rustsec_tag"] is not None:
@@ -154,10 +154,10 @@ def get_negative_assumptions(
         info_unmaintained_tag = z3.BoolVal("INFOUnmaintained" in metadata["rustsec_tag"]) # crate has an info unmaintained tag
         info_unsound_tag = z3.BoolVal("INFOUnsound" in metadata["rustsec_tag"]) # crate has an info unsound tag
         info_notice_tag = z3.BoolVal("INFONotice" in metadata["rustsec_tag"]) # crate has an info notice tag
-        assumptions.append(Assumption(f"{crate} being uncategorized and having a vulnerability tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, vulnerability_tag), unsafe), 10))
-        assumptions.append(Assumption(f"{crate} being uncategorized and having a unsound tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_unsound_tag), unsafe), 20))
-        assumptions.append(Assumption(f"{crate} being uncategorized and having a notice tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_notice_tag), unsafe), 60))
-        assumptions.append(Assumption(f"{crate} being uncategorized and having a unmaintained tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_unmaintained_tag), unsafe), 50))
+        assumptions.append(Assumption(22, f"{crate} being uncategorized and having a vulnerability tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, vulnerability_tag), unsafe)))
+        assumptions.append(Assumption(23, f"{crate} being uncategorized and having a unsound tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_unsound_tag), unsafe)))
+        assumptions.append(Assumption(24, f"{crate} being uncategorized and having a notice tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_notice_tag), unsafe)))
+        assumptions.append(Assumption(25, f"{crate} being uncategorized and having a unmaintained tag in RustSec implies it is unsafe", z3.Implies(z3.And(uncategorized, info_unmaintained_tag), unsafe)))
 
     analyzed_crates.add(crate)
     dependency: CrateVersion
@@ -426,7 +426,7 @@ def complete_analysis(crate: CrateVersion, horn_solver: bool, file = None , loca
     neg_model_result = solve_negative_mintrust(crate, crate_metadata, horn_solver)
     trust_cost = sum(a.cost for a in pos_model_result.assumptions_made)
     distrust_cost = sum(a.cost for a in neg_model_result.assumptions_made)
-    label = costs.combine_costs(trust_cost, distrust_cost)
+    label = combine_costs(trust_cost, distrust_cost)
 
     print_report_pretty(
         crate,

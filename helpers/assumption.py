@@ -1,17 +1,38 @@
 # This file contains the assumption classes.
+from enum import Enum
 from typing import NamedTuple
+import json
 import z3
 from helpers.crate_data import CrateVersion
-from helpers.costs import MAX_COST
+MAX_COST = 100
 class Assumption:
     """
     Class representing an assumption that can be made by the solver.
     """
-    def __init__(self, name: str, consequent: z3.BoolRef, cost: int):
+    user_costs: list[dict] | None = None
+    def __init__(self, id: int, name: str, consequent: z3.BoolRef, cost: int | None = None):
+        self.id = id
         self.name = name
         self.variable = z3.Bool(name)
         self.consequent = consequent
-        self.cost = cost
+        if cost is not None:
+            if cost < 0 or cost > MAX_COST:
+                print(f"WARNING: The cost {cost} on {name} is not consistent with the other assumptions.")
+            self.cost = cost
+            return
+        if Assumption.user_costs is None:
+            with open('helpers/costs.json', 'r') as f:
+                Assumption.user_costs = json.load(f)
+        try:
+            self.cost = next((x for x in Assumption.user_costs if x.get('id') == id))['cost']
+            if self.cost < 0 or self.cost > MAX_COST:
+                print(f"WARNING: The cost {self.cost} on {name} is not consistent with the other assumptions.")
+        except StopIteration:
+            print(f"WARNING: No cost found for assumption {name} with id {id}. Defaulting to MAX_COST.")
+            self.cost = MAX_COST
+        except Exception as e:
+            print(f"WARNING: Error loading cost for assumption {name} with id {id}: {e}. Defaulting to MAX_COST.")
+            self.cost = MAX_COST
     def __repr__(self) -> str:
         return f"Assumption({self.name}, {self.consequent}, {self.cost})"
     def __str__(self) -> str:
@@ -55,3 +76,23 @@ class CrateAssumptionSummary(NamedTuple):
     """
     crate: CrateVersion
     assumptions_made: list[Assumption]
+
+class CrateLabel(Enum):
+    """
+    Enum representing the labels that can be assigned to a crate.
+    """
+    SAFE = 0
+    LOW_SEVERITY = 1
+    MEDIUM_SEVERITY = 2
+    HIGH_SEVERITY = 3
+    CRITICAL = 4
+
+def combine_costs(positive_cost: int, negative_cost: int) -> CrateLabel:
+    """
+    Combines the positive and negative costs into a single cost.
+    """
+    issue_score = MAX_COST - negative_cost
+    for i in range(1, 5):
+        if positive_cost <= -i/10 * issue_score + 20*i:
+            return CrateLabel(i-1)
+    return CrateLabel.CRITICAL
