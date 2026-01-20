@@ -239,11 +239,11 @@ The flags are defined as follows:
 Logs mode can be used to collect metadata, audit and other related information about the crate. You can run this by:
 
 ```Bash
-python3 sherlock.py logs <crate-name> <crate-version>
+python3 sherlock.py log <crate-name> <crate-version>
 ```
 The version is optional, and if not specified, the latest version will be used. You can run it on anyhow crate as follows:
 ```Bash
-python3 sherlock.py logs anyhow
+python3 sherlock.py log anyhow
 ```
 You should see the output similar to this:
 
@@ -301,13 +301,13 @@ Logging information for anyhow-1.0.100:
 An example usage on a local crate is also shown below. You can run logs mode on a local path by providing the path instead of crate name:
 
 ```Bash
-python3 sherlock.py logs <crate-name> <crate-version> --path <absolute-path-to-local-crate>
+python3 sherlock.py log <crate-name> <crate-version> --path <absolute-path-to-local-crate>
 ```
 
 Here is an example run on the faster_log crate stored locally in this repository:
 
 ```Bash
-python3 sherlock.py log faster_log -p /home/vboxuser/Desktop/final/cargo-sherlock/local_crates/faster_log
+python3 sherlock.py log faster_log -p /home/sherlock/Desktop/cargo-sherlock/local_crates/faster_log
 ```
 You should see the output similar to this:
 
@@ -368,7 +368,7 @@ python3 sherlock.py trust <crate-name> <crate-version> --path <absolute-path-to-
 For example, you can run it on the faster_log crate stored locally in this repository as follows:
 
 ```Bash
-python3 sherlock.py trust faster_log -p /home/vboxuser/Desktop/final/cargo-sherlock/local_crates/faster_log
+python3 sherlock.py trust faster_log -p /home/sherlock/Desktop/cargo-sherlock/local_crates/faster_log
 ```
 You should see the output similar to this:
 ![image here](faster_log.png "Screenshot from 11/06")
