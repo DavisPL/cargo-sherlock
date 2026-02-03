@@ -378,7 +378,7 @@ You should see the output similar to this:
 
 Cargo-Sherlock is open source and is easily reusable as shown in the previous section. It is also very customizable and extensible. Users can modify the trust costs, trusted author list and other parameters by editing the files listed in Directory structure section. Users can also extend the tool by adding new assumptions, more static or dynamic analysis tools, or by integrating it with other systems. Cargo-Sherlock features a MIT license which allows reuse and repurposing of the artifact. There is no specific system or VM requirement to run the tool beyond the installation steps mentioned above. We encourage other researchers to build upon our work and contribute to the open-source community.
 
-## Citing our work
+## Citing Cargo Sherlock
 
 If you would like to cite Cargo Sherlock, please consider citing [our paper at FormaliSE'26](https://web.cs.ucdavis.edu/~cdstanford/doc/2026/FormaliSE26.pdf) (co-located with ICSE 2026):
 
