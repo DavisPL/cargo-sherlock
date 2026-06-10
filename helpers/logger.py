@@ -66,7 +66,10 @@ def get_stars_and_forks(crate_name: str , local) -> dict | None:
     else:
     # Get the repository URL for the crate
         url = f"https://crates.io/api/v1/crates/{crate_name}"
-        response = requests.get(url)
+        headers = {
+            "User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)",
+        }
+        response = requests.get(url, headers=headers )
         data = response.json()
         repository_url = data['crate']['repository']
         if repository_url == None: 
@@ -136,7 +139,7 @@ def normalize_version(version):
 
 def get_versions(dep_name: str):
     url = f"https://crates.io/api/v1/crates/{dep_name}/versions"
-    headers = {"User-Agent": "reqwest"}
+    headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
     response = requests.get(url, headers=headers)
     body = response.text
     data = json.loads(body)
@@ -606,7 +609,11 @@ def get_author(crate_name: str, local):
             return []
 
     url = f"https://crates.io/api/v1/crates/{crate_name}/owners"
-    response = requests.get(url)
+    # add headers to avoid 403 error
+    headers = {
+        "User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)",
+    }
+    response = requests.get(url, headers=headers)
 
     data = response.json()  # Parse JSON response
     owners = []
@@ -626,6 +633,7 @@ def get_author(crate_name: str, local):
             owners.append(temp)
         return owners
     else:
+        # print(f"Failed to retrieve data: {response.status_code}")
         return "Failed to retrieve crate data: HTTP Status Code {}".format(response.status_code)
 
 def get_downloads(crate_name: str , local):    
@@ -636,7 +644,10 @@ def get_downloads(crate_name: str , local):
         return 171
 
     url = f"https://crates.io/api/v1/crates/{crate_name}"
-    response = requests.get(url)
+    headers = {
+        "User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)",
+    }
+    response = requests.get(url, headers=headers )
     if response.status_code == 200:
         data = response.json()
         total_downloads = data['crate']['downloads']
@@ -730,9 +741,10 @@ def download_crate(crate_name: str, version: str):
 
     # Construct the URL for downloading
     url = f"https://crates.io/api/v1/crates/{crate_name}/{version}/download"
+    headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
 
     # Send a GET request to the URL
-    response = requests.get(url, allow_redirects=True)
+    response = requests.get(url, allow_redirects=True, headers=headers)
 
     # Check if the request was successful
     if response.status_code == 200:
@@ -860,7 +872,8 @@ def get_repo_url(crate_name):
     This function will clone the repo of the crate 
     '''
     url = f"https://crates.io/api/v1/crates/{crate_name}"
-    response = requests.get(url)
+    headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)",}
+    response = requests.get(url, headers=headers)
 
     data = response.json()  # Parse JSON response
     return data['crate']['repository']
@@ -918,7 +931,8 @@ def run_cargo_and_save(crate_name, crate_version, local):
 def get_dependencies(crate_name, version):
     # Fetch dependencies from crates.io API
     url = f"https://crates.io/api/v1/crates/{crate_name}/{version}/dependencies"
-    response = requests.get(url)
+    headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
+    response = requests.get(url, headers=headers)
     if response.status_code == 200:
         return response.json()['dependencies']
     else:
@@ -1340,7 +1354,8 @@ def rust_sec_logs():
 
 def get_crate_names(page, per_page):
     url = f'https://crates.io/api/v1/crates?page={page}&per_page={per_page}'
-    response = requests.get(url)
+    headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
+    response = requests.get(url, headers=headers)
     return response.json()['crates']
 
 def get_random_crates(count: int):
@@ -1367,7 +1382,8 @@ def get_random_crates(count: int):
     # Function to get the latest version of a crate
     def get_latest_version(crate_name):
         url = f'https://crates.io/api/v1/crates/{crate_name}'
-        response = requests.get(url)
+        headers = {"User-Agent": "cargo-sherlock ( https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
+        response = requests.get(url, headers=headers)
         crate_info = response.json()['crate']
         return crate_info['newest_version']
 
@@ -1444,7 +1460,8 @@ def get_dependencies(crate_name, version, local):
 
     try:
         url = f'https://crates.io/api/v1/crates/{crate_name}/{version}/dependencies'
-        response = requests.get(url)
+        headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
+        response = requests.get(url, headers=headers)
         return response.json()['dependencies']
     except:
         print(f"Failed to fetch dependencies for {crate_name} version {version}")

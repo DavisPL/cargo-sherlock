@@ -1,0 +1,775 @@
+[audits]
+[[audits.coap-handler]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+version = "0.2.1"
+
+[[audits.coap-handler-implementations]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+version = "0.6.2"
+
+[[audits.coap-scroll-ring-server]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+version = "0.2.1"
+
+[[audits.const-str]]
+who = "Antoine Lavandier <antoine.lavandier@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "0.7.0 -> 0.7.1"
+notes = "90+% of the changes are added tests or repository structure changes.\nThe rest is:\n- Compare -> Simple safe code\n- Repeat -> No Safety comment but the conditions that the bytes are valid are ensure by them coming from a &str\n- ToByteArray -> Simple safe code\n- ToCharArray -> Simple safe code\n- Unwrap -> Simple safe code\n- ascii.rs -> Simple safe code\n- CharEncodeUTF16 -> copied from RustLang + otherwise simple safe code\n"
+
+[[audits.const-str]]
+who = "Antoine Lavandier <antoine.lavandier@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "0.7.1 -> 1.1.0"
+notes = "No meaningful changes in the rust code or the dependencies"
+
+[[audits.crc]]
+who = "Antoine Lavandier <antoine.lavandier@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "3.3.0 -> 3.4.0"
+notes = "The only changes are:\n- Clippy lints\n- some functions are now const fn\n- MSRV was bumped from 1.65 to 1.83\n"
+
+[[audits.defmt]]
+who = "ROMemories <152802150+ROMemories@users.noreply.github.com>"
+criteria = "safe-to-deploy"
+delta = "1.0.1 -> 1.1.0"
+notes = "New tests have been added, `Format` has been implemented on a few extra types, and the `xtensa-esp32s2-none-elf` target has been marked as not having atomic CAS instructions, apparently allowing to use the `alloc` feature on that target."
+
+[[audits.defmt-rtt]]
+who = "ROMemories <152802150+ROMemories@users.noreply.github.com>"
+criteria = "safe-to-deploy"
+delta = "1.1.0 -> 1.2.0"
+notes = "Many `usize` types have been changed to `u32` for increased portability, and an arithmetic bug has been fixed and a test added for it."
+
+[[audits.embassy-net]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+delta = "0.9.1 -> 0.9.1@git:37683fe299f12028e5a77af9f742f496da08afcd"
+importable = false
+
+[[audits.embassy-net-tuntap]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+version = "0.1.0"
+
+[[audits.embassy-time]]
+who = "ROMemories <152802150+ROMemories@users.noreply.github.com>"
+criteria = "safe-to-deploy"
+delta = "0.5.0@git:32919cd38e4a5ad5fc21dfb339abd45a74bd1dc9 -> 0.5.1@git:3c1b5fbf28237ea7144ae970c3aec11c38023c3f"
+importable = false
+notes = "Nanosecond-related methods have been introduced, along with a new tick rate and dependency updates."
+
+[[audits.embassy-time-driver]]
+who = "ROMemories <152802150+ROMemories@users.noreply.github.com>"
+criteria = "safe-to-deploy"
+delta = "0.2.0 -> 0.2.1"
+notes = "A very minor update: only an extra tick setting is added, a few methods inlined, and the Cargo.lock is now distributed."
+
+[[audits.embassy-time-driver]]
+who = "ROMemories <152802150+ROMemories@users.noreply.github.com>"
+criteria = "safe-to-deploy"
+delta = "0.2.1 -> 0.2.2"
+notes = "Edition 2024 is now used, which requires a few extra `unsafe` keywords that do not affect the behavior in any way, and a new tick rate has been introduced."
+
+[[audits.embedded-io]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+delta = "0.6.1 -> 0.7.1"
+
+[[audits.embedded-io-adapters]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+version = "0.7.0"
+
+[[audits.extra-embedded-io-adapters]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+version = "0.1.0"
+
+[[audits.featurecomb]]
+who = "Antoine Lavandier <antoine.lavandier@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "0.1.3 -> 0.2.0"
+notes = "The source code was not changed at all"
+
+[[audits.futures-core]]
+who = "Nils Ponsard <nils.ponsard@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "0.3.31 -> 0.3.32"
+
+[[audits.futures-macro]]
+who = "Nils Ponsard <nils.ponsard@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "0.3.31 -> 0.3.32"
+
+[[audits.futures-sink]]
+who = "Nils Ponsard <nils.ponsard@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "0.3.31 -> 0.3.32"
+
+[[audits.futures-task]]
+who = "Nils Ponsard <nils.ponsard@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "0.3.31 -> 0.3.32"
+
+[[audits.futures-util]]
+who = "Nils Ponsard <nils.ponsard@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "0.3.31 -> 0.3.32"
+
+[[audits.litrs]]
+who = "Antoine Lavandier <antoine.lavandier@inria.fr>"
+criteria = "safe-to-deploy"
+version = "1.0.0"
+notes = "No new unsafe functions, most of the changes are formatting and the new functional code seems reasonable to me"
+
+[[audits.log]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+delta = "0.4.27 -> 0.4.28"
+
+[[audits.minicbor-adapters]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+delta = "0.0.4 -> 0.0.8"
+
+[[audits.nrf-modem]]
+who = "Nils Ponsard <nils.ponsard@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "0.10.1 -> 0.10.2"
+
+[[audits.nrfxlib-sys]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+delta = "2.9.2 -> 3.0.3+3.0.2"
+notes = "Review extends to the source of nrfxlib-sys only. The library ships also proprietary C components, which were not (and, due to being closed source, can not) be reviewed."
+
+[[audits.nrfxlib-sys]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+delta = "3.0.3+3.0.2 -> 3.1.0+3.3.0"
+notes = "Review extends to the source of nrfxlib-sys only. The library ships also proprietary C components, which were not (and, due to being closed source, can not) be reviewed."
+
+[[audits.num-conv]]
+who = "Nils Ponsard <nils.ponsard@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "0.2.0 -> 0.2.1"
+
+[[audits.pretty-hex]]
+who = "ROMemories <152802150+ROMemories@users.noreply.github.com>"
+criteria = "safe-to-deploy"
+delta = "0.3.0 -> 0.4.1"
+notes = "Small implementation changes that seem innocuous."
+
+[[audits.rand_pcg]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+delta = "0.3.1 -> 0.9.0"
+
+[[audits.scroll-ring]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+delta = "0.1.2 -> 0.1.3"
+notes = "Changes affect only a dependency version, whose safety is out of scope (vetted independently), and will not affect the operation of this crate."
+
+[[audits.slab]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+delta = "0.4.8 -> 0.4.11"
+
+[[audits.tee-embedded-io]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+version = "0.1.0"
+
+[[audits.tinyrlibc]]
+who = "Nils Ponsard <nils.ponsard@inria.fr>"
+criteria = "safe-to-deploy"
+delta = "0.5.0 -> 0.5.1"
+notes = "Documentation changes, no functional changes."
+
+[[audits.try-lock-portable-atomic]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+version = "0.2.5-patch0"
+notes = "Note that there are several deprecated functions that are documented to not be sound and deprecated; users need to heed those deprecation warnings to use the crate soundly."
+
+[[audits.windowed-infinity]]
+who = "chrysn <chrysn@fsfe.org>"
+criteria = "safe-to-deploy"
+version = "0.2.0"
+
+[trusted]
+[[trusted.aho-corasick]]
+criteria = "safe-to-deploy"
+user-id = 189
+start = "2019-03-28"
+end = "2026-09-01"
+
+[[trusted.anstream]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2023-03-16"
+end = "2026-09-01"
+
+[[trusted.anstyle]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2022-05-18"
+end = "2026-09-01"
+
+[[trusted.anstyle-parse]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2023-03-08"
+end = "2026-09-01"
+
+[[trusted.anstyle-query]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2023-04-13"
+end = "2026-09-01"
+
+[[trusted.anstyle-wincon]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2023-03-08"
+end = "2026-09-01"
+
+[[trusted.anyhow]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-10-05"
+end = "2026-09-01"
+
+[[trusted.basic-toml]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2023-01-25"
+end = "2026-09-01"
+
+[[trusted.build-rs]]
+criteria = "safe-to-deploy"
+user-id = 55123
+start = "2025-09-18"
+end = "2026-12-10"
+
+[[trusted.cc]]
+criteria = "safe-to-deploy"
+user-id = 1
+start = "2019-03-01"
+end = "2026-09-02"
+
+[[trusted.cc]]
+criteria = "safe-to-deploy"
+user-id = 2915
+start = "2024-02-20"
+end = "2026-09-02"
+
+[[trusted.clap]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2021-12-08"
+end = "2026-09-02"
+
+[[trusted.clap_builder]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2023-03-28"
+end = "2026-09-01"
+
+[[trusted.clap_derive]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2021-12-08"
+end = "2026-09-02"
+
+[[trusted.clap_lex]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2022-04-15"
+end = "2026-09-01"
+
+[[trusted.colorchoice]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2023-04-13"
+end = "2026-09-01"
+
+[[trusted.ff]]
+criteria = "safe-to-deploy"
+user-id = 6289
+start = "2021-08-11"
+end = "2026-09-02"
+
+[[trusted.group]]
+criteria = "safe-to-deploy"
+user-id = 6289
+start = "2022-10-13"
+end = "2026-09-02"
+
+[[trusted.hashbrown]]
+criteria = "safe-to-deploy"
+user-id = 55123
+start = "2025-04-30"
+end = "2026-09-01"
+
+[[trusted.httparse]]
+criteria = "safe-to-deploy"
+user-id = 359
+start = "2019-07-03"
+end = "2026-09-01"
+
+[[trusted.icu_properties]]
+criteria = "safe-to-deploy"
+user-id = 166196
+start = "2023-01-26"
+end = "2026-09-02"
+
+[[trusted.icu_properties_data]]
+criteria = "safe-to-deploy"
+user-id = 166196
+start = "2023-11-16"
+end = "2026-09-02"
+
+[[trusted.indexmap]]
+criteria = "safe-to-deploy"
+user-id = 539
+start = "2020-01-15"
+end = "2026-09-02"
+
+[[trusted.indoc]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-04-28"
+end = "2026-09-01"
+
+[[trusted.is-terminal]]
+criteria = "safe-to-deploy"
+user-id = 6825
+start = "2022-01-22"
+end = "2026-09-01"
+
+[[trusted.is_terminal_polyfill]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2024-05-02"
+end = "2026-09-01"
+
+[[trusted.js-sys]]
+criteria = "safe-to-deploy"
+user-id = 1
+start = "2019-03-04"
+end = "2026-09-02"
+
+[[trusted.libc]]
+criteria = "safe-to-deploy"
+user-id = 55123
+start = "2024-08-15"
+end = "2026-09-01"
+
+[[trusted.libm]]
+criteria = "safe-to-deploy"
+user-id = 55123
+start = "2024-10-26"
+end = "2026-09-01"
+
+[[trusted.linkme]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-08-18"
+end = "2026-09-01"
+
+[[trusted.linkme-impl]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-08-18"
+end = "2026-09-01"
+
+[[trusted.linux-raw-sys]]
+criteria = "safe-to-deploy"
+user-id = 6825
+start = "2021-06-12"
+end = "2026-09-01"
+
+[[trusted.lock_api]]
+criteria = "safe-to-deploy"
+user-id = 2915
+start = "2019-05-04"
+end = "2026-09-02"
+
+[[trusted.memchr]]
+criteria = "safe-to-deploy"
+user-id = 189
+start = "2019-07-07"
+end = "2026-09-01"
+
+[[trusted.new_debug_unreachable]]
+criteria = "safe-to-deploy"
+user-id = 2017
+start = "2019-02-26"
+end = "2026-09-02"
+
+[[trusted.num-bigint]]
+criteria = "safe-to-deploy"
+user-id = 539
+start = "2019-09-04"
+end = "2026-09-01"
+
+[[trusted.parking_lot]]
+criteria = "safe-to-deploy"
+user-id = 2915
+start = "2019-05-04"
+end = "2026-09-02"
+
+[[trusted.parking_lot_core]]
+criteria = "safe-to-deploy"
+user-id = 2915
+start = "2019-05-04"
+end = "2026-09-02"
+
+[[trusted.paste]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-03-19"
+end = "2026-09-01"
+
+[[trusted.phf]]
+criteria = "safe-to-deploy"
+user-id = 51017
+start = "2021-06-17"
+end = "2026-09-02"
+
+[[trusted.phf_generator]]
+criteria = "safe-to-deploy"
+user-id = 51017
+start = "2021-06-17"
+end = "2026-09-02"
+
+[[trusted.phf_macros]]
+criteria = "safe-to-deploy"
+user-id = 51017
+start = "2021-06-17"
+end = "2026-09-02"
+
+[[trusted.phf_shared]]
+criteria = "safe-to-deploy"
+user-id = 51017
+start = "2021-06-17"
+end = "2026-09-02"
+
+[[trusted.prettyplease]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2022-01-04"
+end = "2026-09-01"
+
+[[trusted.proc-macro2]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-04-23"
+end = "2026-09-01"
+
+[[trusted.quote]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-04-09"
+end = "2027-02-24"
+
+[[trusted.regex]]
+criteria = "safe-to-deploy"
+user-id = 189
+start = "2019-02-27"
+end = "2026-09-01"
+
+[[trusted.regex-automata]]
+criteria = "safe-to-deploy"
+user-id = 189
+start = "2019-02-25"
+end = "2026-09-01"
+
+[[trusted.rustix]]
+criteria = "safe-to-deploy"
+user-id = 6825
+start = "2021-10-29"
+end = "2026-09-01"
+
+[[trusted.ryu]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-05-02"
+end = "2026-09-01"
+
+[[trusted.same-file]]
+criteria = "safe-to-deploy"
+user-id = 189
+start = "2019-07-16"
+end = "2026-09-01"
+
+[[trusted.scopeguard]]
+criteria = "safe-to-deploy"
+user-id = 2915
+start = "2020-02-16"
+end = "2026-09-02"
+
+[[trusted.semver]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2021-05-25"
+end = "2026-09-02"
+
+[[trusted.serde_json]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-02-28"
+end = "2026-09-01"
+
+[[trusted.serde_spanned]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2023-01-20"
+end = "2026-09-01"
+
+[[trusted.serde_yaml]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-05-02"
+end = "2026-09-15"
+
+[[trusted.smallvec]]
+criteria = "safe-to-deploy"
+user-id = 2017
+start = "2019-10-28"
+end = "2026-09-02"
+
+[[trusted.syn]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-03-01"
+end = "2026-09-01"
+
+[[trusted.target-triple]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2023-12-21"
+end = "2026-09-01"
+
+[[trusted.termcolor]]
+criteria = "safe-to-deploy"
+user-id = 189
+start = "2019-06-04"
+end = "2026-09-01"
+
+[[trusted.thiserror]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-10-09"
+end = "2026-09-01"
+
+[[trusted.thiserror-impl]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-10-09"
+end = "2026-09-01"
+
+[[trusted.toml]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2022-12-14"
+end = "2026-09-02"
+
+[[trusted.toml_datetime]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2022-10-21"
+end = "2026-09-01"
+
+[[trusted.toml_edit]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2021-09-13"
+end = "2026-09-02"
+
+[[trusted.toml_parser]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2025-07-08"
+end = "2026-09-01"
+
+[[trusted.toml_write]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2025-04-25"
+end = "2026-09-01"
+
+[[trusted.toml_writer]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2025-07-08"
+end = "2026-09-01"
+
+[[trusted.trybuild]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2019-05-06"
+end = "2026-09-01"
+
+[[trusted.unicode-ident]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2021-10-02"
+end = "2027-03-11"
+
+[[trusted.unsafe-libyaml]]
+criteria = "safe-to-deploy"
+user-id = 3618
+start = "2022-07-03"
+end = "2026-09-15"
+
+[[trusted.walkdir]]
+criteria = "safe-to-deploy"
+user-id = 189
+start = "2019-06-09"
+end = "2026-09-01"
+
+[[trusted.wasi]]
+criteria = "safe-to-deploy"
+user-id = 1
+start = "2020-06-03"
+end = "2026-09-01"
+
+[[trusted.wasm-bindgen]]
+criteria = "safe-to-deploy"
+user-id = 1
+start = "2019-03-04"
+end = "2026-09-02"
+
+[[trusted.wasm-bindgen-backend]]
+criteria = "safe-to-deploy"
+user-id = 1
+start = "2019-03-04"
+end = "2026-09-02"
+
+[[trusted.wasm-bindgen-macro]]
+criteria = "safe-to-deploy"
+user-id = 1
+start = "2019-03-04"
+end = "2026-09-02"
+
+[[trusted.wasm-bindgen-macro-support]]
+criteria = "safe-to-deploy"
+user-id = 1
+start = "2019-03-04"
+end = "2026-09-02"
+
+[[trusted.wasm-bindgen-shared]]
+criteria = "safe-to-deploy"
+user-id = 1
+start = "2019-03-04"
+end = "2026-09-02"
+
+[[trusted.winapi-util]]
+criteria = "safe-to-deploy"
+user-id = 189
+start = "2020-01-11"
+end = "2026-09-01"
+
+[[trusted.windows-core]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2021-11-15"
+end = "2026-09-01"
+
+[[trusted.windows-implement]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2022-01-27"
+end = "2026-09-02"
+
+[[trusted.windows-interface]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2022-02-18"
+end = "2026-09-01"
+
+[[trusted.windows-result]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2024-02-02"
+end = "2026-09-01"
+
+[[trusted.windows-strings]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2024-02-02"
+end = "2026-09-01"
+
+[[trusted.windows-sys]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2021-11-15"
+end = "2026-09-02"
+
+[[trusted.windows-targets]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2022-09-09"
+end = "2026-09-01"
+
+[[trusted.windows_aarch64_gnullvm]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2022-09-01"
+end = "2026-09-01"
+
+[[trusted.windows_aarch64_msvc]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2021-11-05"
+end = "2026-09-02"
+
+[[trusted.windows_i686_gnu]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2021-10-28"
+end = "2026-09-02"
+
+[[trusted.windows_i686_gnullvm]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2024-04-02"
+end = "2026-09-01"
+
+[[trusted.windows_i686_msvc]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2021-10-27"
+end = "2026-09-02"
+
+[[trusted.windows_x86_64_gnu]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2021-10-28"
+end = "2026-09-02"
+
+[[trusted.windows_x86_64_gnullvm]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2022-09-01"
+end = "2026-09-01"
+
+[[trusted.windows_x86_64_msvc]]
+criteria = "safe-to-deploy"
+user-id = 64539
+start = "2021-10-27"
+end = "2026-09-02"
+
+[[trusted.winnow]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2023-02-22"
+end = "2026-09-01"
+
