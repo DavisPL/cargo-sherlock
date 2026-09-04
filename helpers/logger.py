@@ -20,6 +20,34 @@ from packaging.version import parse
 from email.utils import parseaddr
 
 
+def build_user_agent(contact_file: str = None) -> str:
+    """Build the User-Agent used for crates.io and GitHub requests.
+
+    crates.io's crawler policy (https://crates.io/policies) asks that
+    automated requests identify the application and provide a way to make
+    contact if the crates.io team ever needs to. The repository URL below
+    already satisfies that, so a contact email is entirely optional: it is
+    included only when the maintainer supplied one (via `make install`, or
+    by creating helpers/contact.txt). Otherwise we fall back to a generic
+    "academic research" note.
+    """
+    if contact_file is None:
+        contact_file = os.path.join(os.path.dirname(__file__), "contact.txt")
+    contact = "academic research"
+    try:
+        with open(contact_file, "r", encoding="utf-8") as f:
+            value = f.read().strip()
+        if value:
+            contact = value
+    except OSError:
+        pass
+    return f"cargo-sherlock (https://github.com/davispl/cargo-sherlock; {contact})"
+
+
+# Computed once at import; identifies cargo-sherlock to crates.io / GitHub.
+USER_AGENT = build_user_agent()
+
+
 def get_github_repo_stats(username: str, repository: str, token_file: str = 'token.txt') -> dict | None:
     if not os.path.exists(token_file):
             print(f"Error: Token file '{token_file}' not found. Please generate a GitHub token and save it to a file named 'token.txt'.")
@@ -67,7 +95,7 @@ def get_stars_and_forks(crate_name: str , local) -> dict | None:
     # Get the repository URL for the crate
         url = f"https://crates.io/api/v1/crates/{crate_name}"
         headers = {
-            "User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)",
+            "User-Agent": USER_AGENT,
         }
         response = requests.get(url, headers=headers )
         data = response.json()
@@ -139,7 +167,7 @@ def normalize_version(version):
 
 def get_versions(dep_name: str):
     url = f"https://crates.io/api/v1/crates/{dep_name}/versions"
-    headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
+    headers = {"User-Agent": USER_AGENT}
     response = requests.get(url, headers=headers)
     body = response.text
     data = json.loads(body)
@@ -611,7 +639,7 @@ def get_author(crate_name: str, local):
     url = f"https://crates.io/api/v1/crates/{crate_name}/owners"
     # add headers to avoid 403 error
     headers = {
-        "User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)",
+        "User-Agent": USER_AGENT,
     }
     response = requests.get(url, headers=headers)
 
@@ -645,7 +673,7 @@ def get_downloads(crate_name: str , local):
 
     url = f"https://crates.io/api/v1/crates/{crate_name}"
     headers = {
-        "User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)",
+        "User-Agent": USER_AGENT,
     }
     response = requests.get(url, headers=headers )
     if response.status_code == 200:
@@ -741,7 +769,7 @@ def download_crate(crate_name: str, version: str):
 
     # Construct the URL for downloading
     url = f"https://crates.io/api/v1/crates/{crate_name}/{version}/download"
-    headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
+    headers = {"User-Agent": USER_AGENT}
 
     # Send a GET request to the URL
     response = requests.get(url, allow_redirects=True, headers=headers)
@@ -872,7 +900,7 @@ def get_repo_url(crate_name):
     This function will clone the repo of the crate 
     '''
     url = f"https://crates.io/api/v1/crates/{crate_name}"
-    headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)",}
+    headers = {"User-Agent": USER_AGENT,}
     response = requests.get(url, headers=headers)
 
     data = response.json()  # Parse JSON response
@@ -931,7 +959,7 @@ def run_cargo_and_save(crate_name, crate_version, local):
 def get_dependencies(crate_name, version):
     # Fetch dependencies from crates.io API
     url = f"https://crates.io/api/v1/crates/{crate_name}/{version}/dependencies"
-    headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
+    headers = {"User-Agent": USER_AGENT}
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         return response.json()['dependencies']
@@ -1354,7 +1382,7 @@ def rust_sec_logs():
 
 def get_crate_names(page, per_page):
     url = f'https://crates.io/api/v1/crates?page={page}&per_page={per_page}'
-    headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
+    headers = {"User-Agent": USER_AGENT}
     response = requests.get(url, headers=headers)
     return response.json()['crates']
 
@@ -1382,7 +1410,7 @@ def get_random_crates(count: int):
     # Function to get the latest version of a crate
     def get_latest_version(crate_name):
         url = f'https://crates.io/api/v1/crates/{crate_name}'
-        headers = {"User-Agent": "cargo-sherlock ( https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
+        headers = {"User-Agent": USER_AGENT}
         response = requests.get(url, headers=headers)
         crate_info = response.json()['crate']
         return crate_info['newest_version']
@@ -1460,7 +1488,7 @@ def get_dependencies(crate_name, version, local):
 
     try:
         url = f'https://crates.io/api/v1/crates/{crate_name}/{version}/dependencies'
-        headers = {"User-Agent": "cargo-sherlock (https://github.com/davispl/cargo-sherlock; mhassnain@ucdavis.edu)"}
+        headers = {"User-Agent": USER_AGENT}
         response = requests.get(url, headers=headers)
         return response.json()['dependencies']
     except:

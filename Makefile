@@ -27,6 +27,20 @@ install: $(VENV)/bin/activate cargo-scan/Cargo.toml
 	else \
 		echo "No token entered. Please generate a GitHub personal access token and store it in helpers/token.txt manually."; \
 	fi
+	# Optional: contact email for the crates.io crawler policy.
+	# crates.io asks that automated requests identify the app and provide a
+	# way to contact you if their team ever needs to. The repository URL in
+	# the User-Agent already covers this, so an email is entirely optional.
+	# Leave blank to skip; if provided it is stored in helpers/contact.txt
+	# and added to the User-Agent for crates.io / GitHub requests.
+	@echo "Optional: enter a contact email for the crates.io crawler policy (press Enter to skip):"
+	@read contact; \
+	if [ ! -z "$$contact" ]; then \
+		echo "$$contact" > helpers/contact.txt; \
+		echo "Contact saved to helpers/contact.txt"; \
+	else \
+		echo "No contact entered. Requests will identify cargo-sherlock by its repository URL only."; \
+	fi
 	@echo "Press Enter to continue..."
 	@read dummy
 
